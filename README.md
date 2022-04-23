@@ -32,6 +32,10 @@ goto the [pire_fq_gz_processing](https://github.com/philippinespire/pire_fq_gz_p
 
 ## 4. Map your reads to your reference genome
 
+```bash
+#sbatch mkBAMwgs.sbatch InFilePattern RefGenomeFile OutDir
+sbatch mkBAMwgs.sbatch ./fq_fp1_clmp_fp2b_fqscrn_rprd/*R1.fq.gz ./GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna.gz ./mkBAM
+```
 
 ---
 

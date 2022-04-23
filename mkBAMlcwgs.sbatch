@@ -22,9 +22,9 @@ THREADS=40
 #FQEXT=.fq.gz
 FQEXT=$(ls $INPATTERN | grep -P "\.[Rr]*1\.f.*$" | head -n1 | sed 's/.*[Rr]1\(.*\)/\1/')
 #R1CODE=R1
-R1CODE=$(ls $INPATTERN | grep -P "\.[Rr]*1$FQEXT" | head -n1 | sed "s/.*\([Rr]*1\)$FQEXT/\1/")
+R1CODE=$(ls $INPATTERN | grep -P "\.[Rr]*1$FQEXT" | head -n1 | sed "s/.*\.\([Rr]*1\)$FQEXT/\1/")
 #R2CODE=R2
-R2CODE=$(ls $INPATTERN | grep -P "\.[Rr]*2$FQEXT" | head -n1 | sed "s/.*\([Rr]*2\)$FQEXT/\1/")
+R2CODE=$(ls $INPATTERN | grep -P "\.[Rr]*2$FQEXT" | head -n1 | sed "s/.*\.\([Rr]*2\)$FQEXT/\1/")
 
 R1EXT=$(echo .$R1CODE$FQEXT)
 

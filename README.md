@@ -27,7 +27,7 @@ goto the [pire_fq_gz_processing](https://github.com/philippinespire/pire_fq_gz_p
 
 ## 3. Get your reference genome
 
-Either download from ncbi:
+Either download from ncbi (example is given for Salarias fasciatus):
 
 ```bash
 # Download the genome

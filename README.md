@@ -73,6 +73,7 @@ sbatch mkBAMwgs.sbatch ./fq_fp1_clmp_fp2b_fqscrn_rprd/*R1.fq.gz ./GCF_902148845.
 as long as you used `mkBAMwgs.sbatch` to make the raw bam files, then `fltrBAMwgs.sbatch` is hardcoded to work correctly and you can run the following command
 
 ```bash
-sbatch fltrBAMwgs.sbatch
+#sbatch fltrBAMwgs.sbatch DirWithBamFiles
+sbatch fltrBAMwgs.sbatch ./mkBAM
 ```
 ---

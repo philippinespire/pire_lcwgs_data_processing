@@ -59,6 +59,8 @@ cp locationofrefgenome .
 
 ## 4. Map your reads to your reference genome
 
+this will take the fq.gz files you specify and map them to the reference genome that you specify
+
 ```bash
 #sbatch mkBAMwgs.sbatch InFilePattern RefGenomeFile OutDir
 sbatch mkBAMwgs.sbatch ./fq_fp1_clmp_fp2b_fqscrn_rprd/*R1.fq.gz ./GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna.gz ./mkBAM
@@ -68,5 +70,9 @@ sbatch mkBAMwgs.sbatch ./fq_fp1_clmp_fp2b_fqscrn_rprd/*R1.fq.gz ./GCF_902148845.
 
 ## 5. Filter the binary alignment maps
 
+as long as you used `mkBAMwgs.sbatch` to make the raw bam files, then `fltrBAMwgs.sbatch` is hardcoded to work correctly and you can run the following command
 
+```bash
+sbatch fltrBAMwgs.sbatch
+```
 ---

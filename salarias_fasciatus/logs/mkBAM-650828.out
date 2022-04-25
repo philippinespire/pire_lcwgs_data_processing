@@ -1,0 +1,92 @@
+
+
+In file pattern: 
+Out dir:
+Ref genome:
+Threads: 40
+In file extension:
+Reads 1 and 2 file codes: 1_genomic.fna.gz 2bit.64
+Read 1 in file extension: .1_genomic.fna.gz
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+Looking to launch executable "/opt/conda/bin/bwa-mem2.avx512bw", simd = .avx512bw
+Launching executable "/opt/conda/bin/bwa-mem2.avx512bw"
+Usage: bwa-mem2 index [-p prefix] <in.fasta>
+Total time taken: 0.0001
+
+Sat Apr 23 02:38:13 EDT 2022 ALIGNING GCA_902148845.1_fSalaFa1.1_genomic.fna.gz AND GCA_902148845.1_fSalaFa1.2bit.64 TO ...
+/var/spool/slurmd/job650828/slurm_script: line 56: /GCA_902148845.1_fSalaFa1_raw.bam: Permission denied
+Sat Apr 23 02:38:16 EDT 2022 SORTING /GCA_902148845.1_fSalaFa1_raw.bam ...
+[E::hts_open_format] Failed to open file "/GCA_902148845.1_fSalaFa1_raw.bam" : No such file or directory
+samtools sort: can't open "/GCA_902148845.1_fSalaFa1_raw.bam": No such file or directory
+Sat Apr 23 02:38:17 EDT 2022 INDEXING /GCA_902148845.1_fSalaFa1_raw.bam ...
+[E::hts_open_format] Failed to open file "/GCA_902148845.1_fSalaFa1_raw.bam" : No such file or directory
+samtools index: failed to open "/GCA_902148845.1_fSalaFa1_raw.bam": No such file or directory
+Sat Apr 23 02:38:19 EDT 2022 COMPLETED
+
+
+Sat Apr 23 02:38:19 EDT 2022 ALIGNING GCF_902148845.1_fSalaFa1.1_genomic.fna.gz AND GCF_902148845.1_fSalaFa1.2bit.64 TO ...
+/var/spool/slurmd/job650828/slurm_script: line 56: /GCF_902148845.1_fSalaFa1_raw.bam: Permission denied
+Sat Apr 23 02:38:24 EDT 2022 SORTING /GCF_902148845.1_fSalaFa1_raw.bam ...
+[E::hts_open_format] Failed to open file "/GCF_902148845.1_fSalaFa1_raw.bam" : No such file or directory
+samtools sort: can't open "/GCF_902148845.1_fSalaFa1_raw.bam": No such file or directory
+Sat Apr 23 02:38:25 EDT 2022 INDEXING /GCF_902148845.1_fSalaFa1_raw.bam ...
+[E::hts_open_format] Failed to open file "/GCF_902148845.1_fSalaFa1_raw.bam" : No such file or directory
+samtools index: failed to open "/GCF_902148845.1_fSalaFa1_raw.bam": No such file or directory
+Sat Apr 23 02:38:27 EDT 2022 COMPLETED
+
+
+Sat Apr 23 02:38:27 EDT 2022 ALIGNING GCF_902148845.1_fSalaFa1.1_genomic.fna.gz.0123 AND GCF_902148845.1_fSalaFa1.2bit.64.0123 TO ...
+/var/spool/slurmd/job650828/slurm_script: line 56: /GCF_902148845.1_fSalaFa1_raw.bam.0123: Permission denied
+Sat Apr 23 02:38:29 EDT 2022 SORTING /GCF_902148845.1_fSalaFa1_raw.bam.0123 ...
+[E::hts_open_format] Failed to open file "/GCF_902148845.1_fSalaFa1_raw.bam.0123" : No such file or directory
+samtools sort: can't open "/GCF_902148845.1_fSalaFa1_raw.bam.0123": No such file or directory
+Sat Apr 23 02:38:30 EDT 2022 INDEXING /GCF_902148845.1_fSalaFa1_raw.bam.0123 ...
+[E::hts_open_format] Failed to open file "/GCF_902148845.1_fSalaFa1_raw.bam.0123" : No such file or directory
+samtools index: failed to open "/GCF_902148845.1_fSalaFa1_raw.bam.0123": No such file or directory
+Sat Apr 23 02:38:32 EDT 2022 COMPLETED
+
+
+Sat Apr 23 02:38:32 EDT 2022 ALIGNING GCF_902148845.1_fSalaFa1.1_genomic.fna.gz.amb AND GCF_902148845.1_fSalaFa1.2bit.64.amb TO ...
+/var/spool/slurmd/job650828/slurm_script: line 56: /GCF_902148845.1_fSalaFa1_raw.bam.amb: Permission denied
+Sat Apr 23 02:38:34 EDT 2022 SORTING /GCF_902148845.1_fSalaFa1_raw.bam.amb ...
+[E::hts_open_format] Failed to open file "/GCF_902148845.1_fSalaFa1_raw.bam.amb" : No such file or directory
+samtools sort: can't open "/GCF_902148845.1_fSalaFa1_raw.bam.amb": No such file or directory
+Sat Apr 23 02:38:35 EDT 2022 INDEXING /GCF_902148845.1_fSalaFa1_raw.bam.amb ...
+[E::hts_open_format] Failed to open file "/GCF_902148845.1_fSalaFa1_raw.bam.amb" : No such file or directory
+samtools index: failed to open "/GCF_902148845.1_fSalaFa1_raw.bam.amb": No such file or directory
+Sat Apr 23 02:38:37 EDT 2022 COMPLETED
+
+
+Sat Apr 23 02:38:37 EDT 2022 ALIGNING GCF_902148845.1_fSalaFa1.1_genomic.fna.gz.ann AND GCF_902148845.1_fSalaFa1.2bit.64.ann TO ...
+/var/spool/slurmd/job650828/slurm_script: line 56: /GCF_902148845.1_fSalaFa1_raw.bam.ann: Permission denied
+Sat Apr 23 02:38:39 EDT 2022 SORTING /GCF_902148845.1_fSalaFa1_raw.bam.ann ...
+[E::hts_open_format] Failed to open file "/GCF_902148845.1_fSalaFa1_raw.bam.ann" : No such file or directory
+samtools sort: can't open "/GCF_902148845.1_fSalaFa1_raw.bam.ann": No such file or directory
+Sat Apr 23 02:38:40 EDT 2022 INDEXING /GCF_902148845.1_fSalaFa1_raw.bam.ann ...
+[E::hts_open_format] Failed to open file "/GCF_902148845.1_fSalaFa1_raw.bam.ann" : No such file or directory
+samtools index: failed to open "/GCF_902148845.1_fSalaFa1_raw.bam.ann": No such file or directory
+Sat Apr 23 02:38:42 EDT 2022 COMPLETED
+
+
+Sat Apr 23 02:38:42 EDT 2022 ALIGNING GCF_902148845.1_fSalaFa1.1_genomic.fna.gz.bwt.2bit.64 AND GCF_902148845.1_fSalaFa1.2bit.64.bwt.2bit.64 TO ...
+/var/spool/slurmd/job650828/slurm_script: line 56: /GCF_902148845.1_fSalaFa1_raw.bam.bwt.2bit.64: Permission denied
+Sat Apr 23 02:38:44 EDT 2022 SORTING /GCF_902148845.1_fSalaFa1_raw.bam.bwt.2bit.64 ...
+[E::hts_open_format] Failed to open file "/GCF_902148845.1_fSalaFa1_raw.bam.bwt.2bit.64" : No such file or directory
+samtools sort: can't open "/GCF_902148845.1_fSalaFa1_raw.bam.bwt.2bit.64": No such file or directory
+Sat Apr 23 02:38:46 EDT 2022 INDEXING /GCF_902148845.1_fSalaFa1_raw.bam.bwt.2bit.64 ...
+[E::hts_open_format] Failed to open file "/GCF_902148845.1_fSalaFa1_raw.bam.bwt.2bit.64" : No such file or directory
+samtools index: failed to open "/GCF_902148845.1_fSalaFa1_raw.bam.bwt.2bit.64": No such file or directory
+Sat Apr 23 02:38:47 EDT 2022 COMPLETED
+
+
+Sat Apr 23 02:38:47 EDT 2022 ALIGNING GCF_902148845.1_fSalaFa1.1_genomic.fna.gz.pac AND GCF_902148845.1_fSalaFa1.2bit.64.pac TO ...
+/var/spool/slurmd/job650828/slurm_script: line 56: /GCF_902148845.1_fSalaFa1_raw.bam.pac: Permission denied
+Sat Apr 23 02:38:49 EDT 2022 SORTING /GCF_902148845.1_fSalaFa1_raw.bam.pac ...
+[E::hts_open_format] Failed to open file "/GCF_902148845.1_fSalaFa1_raw.bam.pac" : No such file or directory
+samtools sort: can't open "/GCF_902148845.1_fSalaFa1_raw.bam.pac": No such file or directory
+Sat Apr 23 02:38:51 EDT 2022 INDEXING /GCF_902148845.1_fSalaFa1_raw.bam.pac ...
+[E::hts_open_format] Failed to open file "/GCF_902148845.1_fSalaFa1_raw.bam.pac" : No such file or directory
+samtools index: failed to open "/GCF_902148845.1_fSalaFa1_raw.bam.pac": No such file or directory
+Sat Apr 23 02:38:52 EDT 2022 COMPLETED
+

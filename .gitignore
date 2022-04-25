@@ -1,0 +1,36 @@
+# DNA files
+*.gfa
+*.fq
+*.fq.*
+*.fasta
+*.fasta.*
+*.fastq
+*.fastq.*
+*.fa
+*.fa.*
+*.bam
+*.bam.*
+*.sam
+*.vcf
+*.vcf.gz
+
+# BIG files
+*.gz
+*.tsv
+*.csv
+
+# Directories
+dDocentHPC/
+fltrVCF/
+rad_haplotyper/
+SPA*/
+SPAdes*/
+SPAdes_R1R2_noIsolate_decontam/
+busco_c*/
+busco_s*/
+busco_d*/
+*/logs/probes_ann*out
+probes_ann*
+
+# Allow these files to be synced
+! out_Sfa_ReadStats.tsv 

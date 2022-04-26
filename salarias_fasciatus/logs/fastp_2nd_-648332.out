@@ -1,0 +1,3983 @@
+
+mkdir: cannot create directory ‘fq_fp1_clmparray_fp2b’: File exists
+mkdir: cannot create directory ‘fq_fp1_clmparray_fp2b/failed’: File exists
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 7342630
+total bases: 929609800
+Q20 bases: 912100891(98.1165%)
+Q30 bases: 884978069(95.1989%)
+
+Read2 before filtering:
+total reads: 7342630
+total bases: 929646844
+Q20 bases: 911211359(98.0169%)
+Q30 bases: 878671552(94.5167%)
+
+Read1 after filtering:
+total reads: 7245988
+total bases: 806140213
+Q20 bases: 794448014(98.5496%)
+Q30 bases: 770807147(95.617%)
+
+Read2 aftering filtering:
+total reads: 7245988
+total bases: 804425153
+Q20 bases: 792183599(98.4782%)
+Q30 bases: 763656611(94.932%)
+
+Filtering result:
+reads passed filter: 14491976
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 193284
+reads with adapter trimmed: 10124286
+bases trimmed due to adapters: 2715312
+reads corrected by overlap analysis: 845488
+bases corrected by overlap analysis: 1400605
+
+Duplication rate: 4.37259%
+
+Insert size peak (evaluated by paired-end reads): 112
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_021_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_021_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_021_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_021_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_021_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_021_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_021_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_021_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_021_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_021_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_021_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 177 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 12855603
+total bases: 1704735598
+Q20 bases: 1672657952(98.1183%)
+Q30 bases: 1624404049(95.2877%)
+
+Read2 before filtering:
+total reads: 12855603
+total bases: 1704665203
+Q20 bases: 1667992621(97.8487%)
+Q30 bases: 1606389572(94.2349%)
+
+Read1 after filtering:
+total reads: 12707245
+total bases: 1485653652
+Q20 bases: 1465336168(98.6324%)
+Q30 bases: 1423967513(95.8479%)
+
+Read2 aftering filtering:
+total reads: 12707245
+total bases: 1482935218
+Q20 bases: 1458542621(98.3551%)
+Q30 bases: 1404696095(94.724%)
+
+Filtering result:
+reads passed filter: 25414490
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 296716
+reads with adapter trimmed: 14255724
+bases trimmed due to adapters: 5507185
+reads corrected by overlap analysis: 1702207
+bases corrected by overlap analysis: 2818908
+
+Duplication rate: 8.12391%
+
+Insert size peak (evaluated by paired-end reads): 116
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_020_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_020_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_020_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_020_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_020_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_020_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_020_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_020_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_020_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_020_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_020_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 308 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 13864197
+total bases: 1777337860
+Q20 bases: 1746407950(98.2598%)
+Q30 bases: 1698544513(95.5668%)
+
+Read2 before filtering:
+total reads: 13864197
+total bases: 1777339564
+Q20 bases: 1744988272(98.1798%)
+Q30 bases: 1689390615(95.0517%)
+
+Read1 after filtering:
+total reads: 13677324
+total bases: 1543216885
+Q20 bases: 1523855621(98.7454%)
+Q30 bases: 1482636522(96.0744%)
+
+Read2 aftering filtering:
+total reads: 13677324
+total bases: 1540577803
+Q20 bases: 1519762152(98.6488%)
+Q30 bases: 1471293217(95.5027%)
+
+Filtering result:
+reads passed filter: 27354648
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 373746
+reads with adapter trimmed: 17983680
+bases trimmed due to adapters: 5472853
+reads corrected by overlap analysis: 1608539
+bases corrected by overlap analysis: 2728372
+
+Duplication rate: 4.66607%
+
+Insert size peak (evaluated by paired-end reads): 110
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_014_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_014_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_014_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_014_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_014_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_014_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_014_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_014_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_014_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_014_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_014_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 339 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 15521497
+total bases: 1952761476
+Q20 bases: 1914510133(98.0412%)
+Q30 bases: 1856863867(95.0891%)
+
+Read2 before filtering:
+total reads: 15521497
+total bases: 1952841126
+Q20 bases: 1913341607(97.9773%)
+Q30 bases: 1845561508(94.5065%)
+
+Read1 after filtering:
+total reads: 15244985
+total bases: 1688482278
+Q20 bases: 1663436352(98.5167%)
+Q30 bases: 1613469862(95.5574%)
+
+Read2 aftering filtering:
+total reads: 15244985
+total bases: 1684813070
+Q20 bases: 1659167824(98.4779%)
+Q30 bases: 1599952817(94.9632%)
+
+Filtering result:
+reads passed filter: 30489970
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 553024
+reads with adapter trimmed: 20704042
+bases trimmed due to adapters: 6427117
+reads corrected by overlap analysis: 1974035
+bases corrected by overlap analysis: 3298769
+
+Duplication rate: 4.3823%
+
+Insert size peak (evaluated by paired-end reads): 117
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_023_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_023_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_023_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_023_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_023_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_023_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_023_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_023_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_023_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_023_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_023_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 355 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 16640632
+total bases: 2087722384
+Q20 bases: 2050659677(98.2247%)
+Q30 bases: 1993681332(95.4955%)
+
+Read2 before filtering:
+total reads: 16640632
+total bases: 2087754249
+Q20 bases: 2047826537(98.0875%)
+Q30 bases: 1978962080(94.789%)
+
+Read1 after filtering:
+total reads: 16356210
+total bases: 1805119713
+Q20 bases: 1781862996(98.7116%)
+Q30 bases: 1732864983(95.9972%)
+
+Read2 aftering filtering:
+total reads: 16356210
+total bases: 1801376388
+Q20 bases: 1775709497(98.5752%)
+Q30 bases: 1715736463(95.2459%)
+
+Filtering result:
+reads passed filter: 32712420
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 568844
+reads with adapter trimmed: 22988786
+bases trimmed due to adapters: 6615375
+reads corrected by overlap analysis: 1979377
+bases corrected by overlap analysis: 3299020
+
+Duplication rate: 4.24985%
+
+Insert size peak (evaluated by paired-end reads): 112
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_007_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_007_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_007_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_007_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_007_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_007_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_007_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_007_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_007_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_007_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_007_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 370 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 16983360
+total bases: 2063490681
+Q20 bases: 2029055332(98.3312%)
+Q30 bases: 1973218973(95.6253%)
+
+Read2 before filtering:
+total reads: 16983360
+total bases: 2063503360
+Q20 bases: 2025393642(98.1532%)
+Q30 bases: 1956990623(94.8383%)
+
+Read1 after filtering:
+total reads: 16619931
+total bases: 1776597001
+Q20 bases: 1754578713(98.7606%)
+Q30 bases: 1706173061(96.036%)
+
+Read2 aftering filtering:
+total reads: 16619931
+total bases: 1772883904
+Q20 bases: 1747835467(98.5871%)
+Q30 bases: 1687887727(95.2058%)
+
+Filtering result:
+reads passed filter: 33239862
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 726858
+reads with adapter trimmed: 24317350
+bases trimmed due to adapters: 5860866
+reads corrected by overlap analysis: 1872825
+bases corrected by overlap analysis: 3101270
+
+Duplication rate: 2.81516%
+
+Insert size peak (evaluated by paired-end reads): 115
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_006_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_006_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_006_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_006_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_006_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_006_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_006_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_006_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_006_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_006_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_006_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 392 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 18714744
+total bases: 2295806638
+Q20 bases: 2255609863(98.2491%)
+Q30 bases: 2191261163(95.4462%)
+
+Read2 before filtering:
+total reads: 18714744
+total bases: 2295890242
+Q20 bases: 2249727664(97.9893%)
+Q30 bases: 2168559882(94.454%)
+
+Read1 after filtering:
+total reads: 18346995
+total bases: 1978643935
+Q20 bases: 1952958991(98.7019%)
+Q30 bases: 1897082427(95.8779%)
+
+Read2 aftering filtering:
+total reads: 18346995
+total bases: 1973861673
+Q20 bases: 1943511562(98.4624%)
+Q30 bases: 1872355135(94.8575%)
+
+Filtering result:
+reads passed filter: 36693990
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 735498
+reads with adapter trimmed: 26870556
+bases trimmed due to adapters: 6563449
+reads corrected by overlap analysis: 2211272
+bases corrected by overlap analysis: 3694508
+
+Duplication rate: 3.25301%
+
+Insert size peak (evaluated by paired-end reads): 113
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_004_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_004_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_004_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_004_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_004_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_004_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_004_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_004_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_004_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_004_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_004_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 411 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 18233064
+total bases: 2295846003
+Q20 bases: 2255473290(98.2415%)
+Q30 bases: 2192456024(95.4967%)
+
+Read2 before filtering:
+total reads: 18233064
+total bases: 2295883796
+Q20 bases: 2252291221(98.1013%)
+Q30 bases: 2176386476(94.7951%)
+
+Read1 after filtering:
+total reads: 17911531
+total bases: 1986004578
+Q20 bases: 1960602967(98.721%)
+Q30 bases: 1906326508(95.988%)
+
+Read2 aftering filtering:
+total reads: 17911531
+total bases: 1982262918
+Q20 bases: 1954019098(98.5752%)
+Q30 bases: 1887760104(95.2326%)
+
+Filtering result:
+reads passed filter: 35823062
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 643066
+reads with adapter trimmed: 24231196
+bases trimmed due to adapters: 7104286
+reads corrected by overlap analysis: 2101679
+bases corrected by overlap analysis: 3491894
+
+Duplication rate: 3.99571%
+
+Insert size peak (evaluated by paired-end reads): 112
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_019_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_019_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_019_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_019_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_019_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_019_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_019_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_019_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_019_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_019_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_019_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 417 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 17909975
+total bases: 2301910868
+Q20 bases: 2260229665(98.1893%)
+Q30 bases: 2197529122(95.4654%)
+
+Read2 before filtering:
+total reads: 17909975
+total bases: 2301972256
+Q20 bases: 2251523103(97.8084%)
+Q30 bases: 2167527882(94.1596%)
+
+Read1 after filtering:
+total reads: 17625471
+total bases: 1995462097
+Q20 bases: 1969624377(98.7052%)
+Q30 bases: 1915926867(96.0142%)
+
+Read2 aftering filtering:
+total reads: 17625471
+total bases: 1990161686
+Q20 bases: 1957523153(98.36%)
+Q30 bases: 1884498840(94.6907%)
+
+Filtering result:
+reads passed filter: 35250942
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 569008
+reads with adapter trimmed: 22815126
+bases trimmed due to adapters: 7473205
+reads corrected by overlap analysis: 2370024
+bases corrected by overlap analysis: 3949791
+
+Duplication rate: 5.96781%
+
+Insert size peak (evaluated by paired-end reads): 119
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_016_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_016_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_016_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_016_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_016_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_016_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_016_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_016_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_016_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_016_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_016_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 419 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 18479738
+total bases: 2377032429
+Q20 bases: 2331368708(98.079%)
+Q30 bases: 2261177078(95.1261%)
+
+Read2 before filtering:
+total reads: 18479738
+total bases: 2377077813
+Q20 bases: 2329680235(98.0061%)
+Q30 bases: 2246966305(94.5264%)
+
+Read1 after filtering:
+total reads: 18243986
+total bases: 2064836035
+Q20 bases: 2034596663(98.5355%)
+Q30 bases: 1973440938(95.5737%)
+
+Read2 aftering filtering:
+total reads: 18243986
+total bases: 2060713741
+Q20 bases: 2029479213(98.4843%)
+Q30 bases: 1956923084(94.9634%)
+
+Filtering result:
+reads passed filter: 36487972
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 471504
+reads with adapter trimmed: 24181716
+bases trimmed due to adapters: 7197313
+reads corrected by overlap analysis: 2316327
+bases corrected by overlap analysis: 3852684
+
+Duplication rate: 4.96111%
+
+Insert size peak (evaluated by paired-end reads): 118
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_022_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_022_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_022_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_022_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_022_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_022_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_022_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_022_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_022_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_022_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_022_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 419 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 17507819
+total bases: 2220379905
+Q20 bases: 2182064410(98.2744%)
+Q30 bases: 2121699813(95.5557%)
+
+Read2 before filtering:
+total reads: 17507819
+total bases: 2220400946
+Q20 bases: 2175083011(97.959%)
+Q30 bases: 2096455602(94.4179%)
+
+Read1 after filtering:
+total reads: 17261393
+total bases: 1925071529
+Q20 bases: 1900777624(98.738%)
+Q30 bases: 1848632741(96.0293%)
+
+Read2 aftering filtering:
+total reads: 17261393
+total bases: 1920379280
+Q20 bases: 1890491028(98.4436%)
+Q30 bases: 1821714297(94.8622%)
+
+Filtering result:
+reads passed filter: 34522786
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 492852
+reads with adapter trimmed: 23941764
+bases trimmed due to adapters: 6635950
+reads corrected by overlap analysis: 2124679
+bases corrected by overlap analysis: 3523028
+
+Duplication rate: 4.58711%
+
+Insert size peak (evaluated by paired-end reads): 112
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_017_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_017_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_017_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_017_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_017_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_017_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_017_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_017_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_017_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_017_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_017_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 421 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 18461828
+total bases: 2419212976
+Q20 bases: 2373082127(98.0931%)
+Q30 bases: 2303286548(95.2081%)
+
+Read2 before filtering:
+total reads: 18461828
+total bases: 2419151458
+Q20 bases: 2367428189(97.8619%)
+Q30 bases: 2281659338(94.3165%)
+
+Read1 after filtering:
+total reads: 18212309
+total bases: 2102976913
+Q20 bases: 2074195713(98.6314%)
+Q30 bases: 2014221280(95.7795%)
+
+Read2 aftering filtering:
+total reads: 18212309
+total bases: 2098187781
+Q20 bases: 2064889637(98.413%)
+Q30 bases: 1990136985(94.8503%)
+
+Filtering result:
+reads passed filter: 36424618
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 499038
+reads with adapter trimmed: 22404870
+bases trimmed due to adapters: 8280889
+reads corrected by overlap analysis: 2559139
+bases corrected by overlap analysis: 4347591
+
+Duplication rate: 5.82192%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_008_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_008_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_008_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_008_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_008_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_008_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_008_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_008_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_008_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_008_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_008_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 422 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 20013450
+total bases: 2483998281
+Q20 bases: 2441379837(98.2843%)
+Q30 bases: 2373595214(95.5554%)
+
+Read2 before filtering:
+total reads: 20013450
+total bases: 2483990451
+Q20 bases: 2439667310(98.2156%)
+Q30 bases: 2361017186(95.0494%)
+
+Read1 after filtering:
+total reads: 19681586
+total bases: 2146869364
+Q20 bases: 2119723068(98.7355%)
+Q30 bases: 2060963601(95.9986%)
+
+Read2 aftering filtering:
+total reads: 19681586
+total bases: 2143072600
+Q20 bases: 2114233705(98.6543%)
+Q30 bases: 2045341236(95.4397%)
+
+Filtering result:
+reads passed filter: 39363172
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 663728
+reads with adapter trimmed: 28287576
+bases trimmed due to adapters: 7159715
+reads corrected by overlap analysis: 2203500
+bases corrected by overlap analysis: 3702010
+
+Duplication rate: 3.65429%
+
+Insert size peak (evaluated by paired-end reads): 116
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_003_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_003_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_003_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_003_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_003_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_003_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_003_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_003_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_003_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_003_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_003_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 444 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 18127730
+total bases: 2345097532
+Q20 bases: 2302579808(98.187%)
+Q30 bases: 2237157062(95.3972%)
+
+Read2 before filtering:
+total reads: 18127730
+total bases: 2345099565
+Q20 bases: 2296842690(97.9422%)
+Q30 bases: 2214250054(94.4203%)
+
+Read1 after filtering:
+total reads: 17872010
+total bases: 2036398415
+Q20 bases: 2009738856(98.6908%)
+Q30 bases: 1953327100(95.9207%)
+
+Read2 aftering filtering:
+total reads: 17872010
+total bases: 2031804929
+Q20 bases: 2000466020(98.4576%)
+Q30 bases: 1928264949(94.904%)
+
+Filtering result:
+reads passed filter: 35744020
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 511440
+reads with adapter trimmed: 23382296
+bases trimmed due to adapters: 7380665
+reads corrected by overlap analysis: 2294137
+bases corrected by overlap analysis: 3842369
+
+Duplication rate: 5.01834%
+
+Insert size peak (evaluated by paired-end reads): 120
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_018_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_018_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_018_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_018_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_018_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_018_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_018_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_018_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_018_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_018_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_018_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 445 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 19455735
+total bases: 2514783458
+Q20 bases: 2465093758(98.0241%)
+Q30 bases: 2392266966(95.1281%)
+
+Read2 before filtering:
+total reads: 19455735
+total bases: 2514994658
+Q20 bases: 2460618398(97.8379%)
+Q30 bases: 2369391887(94.2106%)
+
+Read1 after filtering:
+total reads: 19189049
+total bases: 2182644130
+Q20 bases: 2150859046(98.5437%)
+Q30 bases: 2088043155(95.6658%)
+
+Read2 aftering filtering:
+total reads: 19189049
+total bases: 2177138594
+Q20 bases: 2142154670(98.3931%)
+Q30 bases: 2062739393(94.7454%)
+
+Filtering result:
+reads passed filter: 38378098
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 533372
+reads with adapter trimmed: 25671174
+bases trimmed due to adapters: 9027690
+reads corrected by overlap analysis: 2724918
+bases corrected by overlap analysis: 4608940
+
+Duplication rate: 5.06659%
+
+Insert size peak (evaluated by paired-end reads): 120
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_009_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_009_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_009_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_009_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_009_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_009_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_009_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_009_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_009_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_009_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_009_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 447 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 20120108
+total bases: 2592364066
+Q20 bases: 2547540530(98.2709%)
+Q30 bases: 2477714769(95.5774%)
+
+Read2 before filtering:
+total reads: 20120108
+total bases: 2592339419
+Q20 bases: 2544079016(98.1383%)
+Q30 bases: 2460502276(94.9144%)
+
+Read1 after filtering:
+total reads: 19834091
+total bases: 2251753605
+Q20 bases: 2223544203(98.7472%)
+Q30 bases: 2163268189(96.0704%)
+
+Read2 aftering filtering:
+total reads: 19834091
+total bases: 2247335894
+Q20 bases: 2216205046(98.6148%)
+Q30 bases: 2143207997(95.3666%)
+
+Filtering result:
+reads passed filter: 39668182
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 572034
+reads with adapter trimmed: 25988764
+bases trimmed due to adapters: 7819250
+reads corrected by overlap analysis: 2348253
+bases corrected by overlap analysis: 3934658
+
+Duplication rate: 4.72254%
+
+Insert size peak (evaluated by paired-end reads): 120
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_013_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_013_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_013_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_013_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_013_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_013_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_013_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_013_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_013_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_013_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_013_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 448 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 19044493
+total bases: 2404679100
+Q20 bases: 2359385079(98.1164%)
+Q30 bases: 2289020640(95.1903%)
+
+Read2 before filtering:
+total reads: 19044493
+total bases: 2404771790
+Q20 bases: 2357136065(98.0191%)
+Q30 bases: 2272071226(94.4818%)
+
+Read1 after filtering:
+total reads: 18759600
+total bases: 2083629504
+Q20 bases: 2053310122(98.5449%)
+Q30 bases: 1991894902(95.5974%)
+
+Read2 aftering filtering:
+total reads: 18759600
+total bases: 2079710680
+Q20 bases: 2047764361(98.4639%)
+Q30 bases: 1972896727(94.864%)
+
+Filtering result:
+reads passed filter: 37519200
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 569786
+reads with adapter trimmed: 25574966
+bases trimmed due to adapters: 6768460
+reads corrected by overlap analysis: 2210617
+bases corrected by overlap analysis: 3641907
+
+Duplication rate: 4.31312%
+
+Insert size peak (evaluated by paired-end reads): 117
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_010_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_010_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_010_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_010_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_010_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_010_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_010_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_010_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_010_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_010_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_010_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 457 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 21481118
+total bases: 2572069315
+Q20 bases: 2528230534(98.2956%)
+Q30 bases: 2457585153(95.5489%)
+
+Read2 before filtering:
+total reads: 21481118
+total bases: 2572176679
+Q20 bases: 2523973716(98.126%)
+Q30 bases: 2438309060(94.7956%)
+
+Read1 after filtering:
+total reads: 20928230
+total bases: 2206366543
+Q20 bases: 2178422835(98.7335%)
+Q30 bases: 2117387039(95.9671%)
+
+Read2 aftering filtering:
+total reads: 20928230
+total bases: 2201774045
+Q20 bases: 2170248670(98.5682%)
+Q30 bases: 2095466795(95.1717%)
+
+Filtering result:
+reads passed filter: 41856460
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 1105776
+reads with adapter trimmed: 30500266
+bases trimmed due to adapters: 7335975
+reads corrected by overlap analysis: 2357166
+bases corrected by overlap analysis: 3898419
+
+Duplication rate: 2.82572%
+
+Insert size peak (evaluated by paired-end reads): 113
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_005_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_005_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_005_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_005_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_005_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_005_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_005_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_005_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_005_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_005_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_005_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 460 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 20695349
+total bases: 2624332853
+Q20 bases: 2579712127(98.2997%)
+Q30 bases: 2509207697(95.6132%)
+
+Read2 before filtering:
+total reads: 20695349
+total bases: 2624326787
+Q20 bases: 2575743349(98.1487%)
+Q30 bases: 2490760758(94.9105%)
+
+Read1 after filtering:
+total reads: 20348186
+total bases: 2274467737
+Q20 bases: 2246284406(98.7609%)
+Q30 bases: 2185287924(96.0791%)
+
+Read2 aftering filtering:
+total reads: 20348186
+total bases: 2270129353
+Q20 bases: 2238500521(98.6067%)
+Q30 bases: 2164081782(95.3286%)
+
+Filtering result:
+reads passed filter: 40696372
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 694326
+reads with adapter trimmed: 26462544
+bases trimmed due to adapters: 7577562
+reads corrected by overlap analysis: 2334820
+bases corrected by overlap analysis: 3958610
+
+Duplication rate: 3.9032%
+
+Insert size peak (evaluated by paired-end reads): 117
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_002_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_002_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_002_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_002_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_002_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_002_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_002_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_002_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_002_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_002_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_002_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 461 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 14481036
+total bases: 1889568410
+Q20 bases: 1852149915(98.0197%)
+Q30 bases: 1796660856(95.0831%)
+
+Read2 before filtering:
+total reads: 14481036
+total bases: 1889453863
+Q20 bases: 1850441879(97.9353%)
+Q30 bases: 1786031148(94.5263%)
+
+Read1 after filtering:
+total reads: 14281312
+total bases: 1640731076
+Q20 bases: 1617441324(98.5805%)
+Q30 bases: 1569957384(95.6865%)
+
+Read2 aftering filtering:
+total reads: 14281312
+total bases: 1637552511
+Q20 bases: 1612641525(98.4788%)
+Q30 bases: 1556761087(95.0663%)
+
+Filtering result:
+reads passed filter: 28562624
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 399448
+reads with adapter trimmed: 17680172
+bases trimmed due to adapters: 6606749
+reads corrected by overlap analysis: 1856854
+bases corrected by overlap analysis: 3169832
+
+Duplication rate: 5.9264%
+
+Insert size peak (evaluated by paired-end reads): 119
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_024_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_024_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_024_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_024_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_024_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_024_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_024_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_024_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_024_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_024_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_024_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 323 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 21872322
+total bases: 2688940619
+Q20 bases: 2644117268(98.333%)
+Q30 bases: 2573918897(95.7224%)
+
+Read2 before filtering:
+total reads: 21872322
+total bases: 2689075098
+Q20 bases: 2641248194(98.2214%)
+Q30 bases: 2556029806(95.0524%)
+
+Read1 after filtering:
+total reads: 21512092
+total bases: 2321228913
+Q20 bases: 2292957534(98.7821%)
+Q30 bases: 2232377358(96.1722%)
+
+Read2 aftering filtering:
+total reads: 21512092
+total bases: 2317185036
+Q20 bases: 2286048039(98.6563%)
+Q30 bases: 2211532900(95.4405%)
+
+Filtering result:
+reads passed filter: 43024184
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 720460
+reads with adapter trimmed: 31411802
+bases trimmed due to adapters: 7823697
+reads corrected by overlap analysis: 2319561
+bases corrected by overlap analysis: 3868612
+
+Duplication rate: 3.90382%
+
+Insert size peak (evaluated by paired-end reads): 111
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_001_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_001_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_001_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_001_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_001_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_001_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_001_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_001_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_001_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_001_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_001_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 503 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 4801079
+total bases: 695694023
+Q20 bases: 683842834(98.2965%)
+Q30 bases: 664438388(95.5073%)
+
+Read2 before filtering:
+total reads: 4801079
+total bases: 695673746
+Q20 bases: 681036644(97.896%)
+Q30 bases: 655760312(94.2626%)
+
+Read1 after filtering:
+total reads: 4766434
+total bases: 614489263
+Q20 bases: 606824293(98.7526%)
+Q30 bases: 589865337(95.9928%)
+
+Read2 aftering filtering:
+total reads: 4766434
+total bases: 613523523
+Q20 bases: 603594340(98.3816%)
+Q30 bases: 581250869(94.7398%)
+
+Filtering result:
+reads passed filter: 9532868
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 69290
+reads with adapter trimmed: 2126168
+bases trimmed due to adapters: 1098394
+reads corrected by overlap analysis: 475235
+bases corrected by overlap analysis: 827329
+
+Duplication rate: 5.21484%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_001_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_001_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_001_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_001_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_001_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_001_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_001_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_001_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_001_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_001_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_001_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 148 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 6069810
+total bases: 867627312
+Q20 bases: 852337683(98.2378%)
+Q30 bases: 827431460(95.3672%)
+
+Read2 before filtering:
+total reads: 6069810
+total bases: 867413175
+Q20 bases: 844696871(97.3811%)
+Q30 bases: 806420394(92.9684%)
+
+Read1 after filtering:
+total reads: 6021117
+total bases: 764137496
+Q20 bases: 754309856(98.7139%)
+Q30 bases: 732568723(95.8687%)
+
+Read2 aftering filtering:
+total reads: 6021117
+total bases: 761655775
+Q20 bases: 745963882(97.9398%)
+Q30 bases: 712166419(93.5024%)
+
+Filtering result:
+reads passed filter: 12042234
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 97386
+reads with adapter trimmed: 3532246
+bases trimmed due to adapters: 1420647
+reads corrected by overlap analysis: 680649
+bases corrected by overlap analysis: 1152807
+
+Duplication rate: 5.43089%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_002_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_002_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_002_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_002_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_002_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_002_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_002_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_002_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_002_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_002_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_002_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 170 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 5989091
+total bases: 857400487
+Q20 bases: 841696490(98.1684%)
+Q30 bases: 816185739(95.1931%)
+
+Read2 before filtering:
+total reads: 5989091
+total bases: 857267232
+Q20 bases: 835254229(97.4322%)
+Q30 bases: 798770757(93.1764%)
+
+Read1 after filtering:
+total reads: 5938625
+total bases: 754882722
+Q20 bases: 744743734(98.6569%)
+Q30 bases: 722477660(95.7073%)
+
+Read2 aftering filtering:
+total reads: 5938625
+total bases: 752573134
+Q20 bases: 737547923(98.0035%)
+Q30 bases: 705456581(93.7393%)
+
+Filtering result:
+reads passed filter: 11877250
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 100932
+reads with adapter trimmed: 3213136
+bases trimmed due to adapters: 1491706
+reads corrected by overlap analysis: 648692
+bases corrected by overlap analysis: 1113928
+
+Duplication rate: 5.23779%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_007_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_007_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_007_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_007_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_007_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_007_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_007_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_007_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_007_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_007_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_007_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 167 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 5967928
+total bases: 848680939
+Q20 bases: 833421152(98.2019%)
+Q30 bases: 808667781(95.2853%)
+
+Read2 before filtering:
+total reads: 5967928
+total bases: 848572740
+Q20 bases: 829481787(97.7502%)
+Q30 bases: 797271402(93.9544%)
+
+Read1 after filtering:
+total reads: 5919010
+total bases: 747003799
+Q20 bases: 737172612(98.6839%)
+Q30 bases: 715561656(95.7909%)
+
+Read2 aftering filtering:
+total reads: 5919010
+total bases: 745251993
+Q20 bases: 732433514(98.28%)
+Q30 bases: 704031092(94.4689%)
+
+Filtering result:
+reads passed filter: 11838020
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 97836
+reads with adapter trimmed: 3493514
+bases trimmed due to adapters: 1546960
+reads corrected by overlap analysis: 609484
+bases corrected by overlap analysis: 1052532
+
+Duplication rate: 4.65371%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_008_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_008_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_008_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_008_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_008_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_008_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_008_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_008_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_008_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_008_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_008_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 166 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 6601145
+total bases: 955608281
+Q20 bases: 938317182(98.1906%)
+Q30 bases: 910719072(95.3026%)
+
+Read2 before filtering:
+total reads: 6601145
+total bases: 955447387
+Q20 bases: 928994375(97.2313%)
+Q30 bases: 886136381(92.7457%)
+
+Read1 after filtering:
+total reads: 6540017
+total bases: 841781379
+Q20 bases: 830798320(98.6953%)
+Q30 bases: 806857314(95.8512%)
+
+Read2 aftering filtering:
+total reads: 6540017
+total bases: 838647174
+Q20 bases: 820625927(97.8512%)
+Q30 bases: 783037277(93.3691%)
+
+Filtering result:
+reads passed filter: 13080034
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 122256
+reads with adapter trimmed: 2726798
+bases trimmed due to adapters: 1466354
+reads corrected by overlap analysis: 659767
+bases corrected by overlap analysis: 1153011
+
+Duplication rate: 6.58524%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_006_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_006_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_006_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_006_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_006_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_006_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_006_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_006_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_006_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_006_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_006_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 196 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 6883017
+total bases: 999306331
+Q20 bases: 980886130(98.1567%)
+Q30 bases: 950866700(95.1527%)
+
+Read2 before filtering:
+total reads: 6883017
+total bases: 999048914
+Q20 bases: 969533650(97.0457%)
+Q30 bases: 921570628(92.2448%)
+
+Read1 after filtering:
+total reads: 6822849
+total bases: 880611811
+Q20 bases: 868726493(98.6503%)
+Q30 bases: 842578235(95.681%)
+
+Read2 aftering filtering:
+total reads: 6822849
+total bases: 877095477
+Q20 bases: 856612476(97.6647%)
+Q30 bases: 814567758(92.871%)
+
+Filtering result:
+reads passed filter: 13645698
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 120336
+reads with adapter trimmed: 2801196
+bases trimmed due to adapters: 1405466
+reads corrected by overlap analysis: 693792
+bases corrected by overlap analysis: 1181670
+
+Duplication rate: 6.42465%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_003_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_003_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_003_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_003_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_003_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_003_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_003_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_003_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_003_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_003_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_003_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 202 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 5169894
+total bases: 751433658
+Q20 bases: 737558897(98.1536%)
+Q30 bases: 715350986(95.1982%)
+
+Read2 before filtering:
+total reads: 5169894
+total bases: 751149975
+Q20 bases: 730658880(97.272%)
+Q30 bases: 697434299(92.8489%)
+
+Read1 after filtering:
+total reads: 5123731
+total bases: 662228394
+Q20 bases: 653339482(98.6577%)
+Q30 bases: 634032845(95.7423%)
+
+Read2 aftering filtering:
+total reads: 5123731
+total bases: 659755949
+Q20 bases: 645789282(97.8831%)
+Q30 bases: 616567385(93.4539%)
+
+Filtering result:
+reads passed filter: 10247462
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 92326
+reads with adapter trimmed: 1828858
+bases trimmed due to adapters: 1088119
+reads corrected by overlap analysis: 470573
+bases corrected by overlap analysis: 832226
+
+Duplication rate: 6.38147%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_014_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_014_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_014_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_014_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_014_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_014_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_014_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_014_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_014_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_014_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_014_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 151 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 7142776
+total bases: 1028414765
+Q20 bases: 1009378285(98.1489%)
+Q30 bases: 979329928(95.2271%)
+
+Read2 before filtering:
+total reads: 7142776
+total bases: 1028287668
+Q20 bases: 1000445159(97.2923%)
+Q30 bases: 955233039(92.8955%)
+
+Read1 after filtering:
+total reads: 7078454
+total bases: 905036292
+Q20 bases: 892979712(98.6678%)
+Q30 bases: 866879666(95.784%)
+
+Read2 aftering filtering:
+total reads: 7078454
+total bases: 901965263
+Q20 bases: 883118380(97.9105%)
+Q30 bases: 843467540(93.5144%)
+
+Filtering result:
+reads passed filter: 14156908
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 128644
+reads with adapter trimmed: 3504792
+bases trimmed due to adapters: 1752253
+reads corrected by overlap analysis: 760680
+bases corrected by overlap analysis: 1314407
+
+Duplication rate: 6.74328%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_009_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_009_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_009_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_009_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_009_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_009_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_009_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_009_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_009_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_009_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_009_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 206 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 17305081
+total bases: 1996060161
+Q20 bases: 1963866956(98.3872%)
+Q30 bases: 1912800083(95.8288%)
+
+Read2 before filtering:
+total reads: 17305081
+total bases: 1996184229
+Q20 bases: 1963692751(98.3723%)
+Q30 bases: 1905078423(95.436%)
+
+Read1 after filtering:
+total reads: 16679175
+total bases: 1699035694
+Q20 bases: 1678828352(98.8107%)
+Q30 bases: 1635134177(96.239%)
+
+Read2 aftering filtering:
+total reads: 16679175
+total bases: 1696478629
+Q20 bases: 1675614327(98.7701%)
+Q30 bases: 1624807022(95.7753%)
+
+Filtering result:
+reads passed filter: 33358350
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 1251812
+reads with adapter trimmed: 24824382
+bases trimmed due to adapters: 5732141
+reads corrected by overlap analysis: 1669557
+bases corrected by overlap analysis: 2768530
+
+Duplication rate: 2.30183%
+
+Insert size peak (evaluated by paired-end reads): 110
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_025_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_025_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_025_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_025_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_025_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_025_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_025_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_025_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_025_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_025_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_025_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 363 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 7063429
+total bases: 1010990769
+Q20 bases: 992535343(98.1745%)
+Q30 bases: 963545630(95.3071%)
+
+Read2 before filtering:
+total reads: 7063429
+total bases: 1010817822
+Q20 bases: 984939811(97.4399%)
+Q30 bases: 942517932(93.2431%)
+
+Read1 after filtering:
+total reads: 7004622
+total bases: 889562431
+Q20 bases: 877904136(98.6894%)
+Q30 bases: 852711433(95.8574%)
+
+Read2 aftering filtering:
+total reads: 7004622
+total bases: 886672024
+Q20 bases: 869324553(98.0435%)
+Q30 bases: 832065529(93.8414%)
+
+Filtering result:
+reads passed filter: 14009244
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 117614
+reads with adapter trimmed: 4157334
+bases trimmed due to adapters: 1933199
+reads corrected by overlap analysis: 803725
+bases corrected by overlap analysis: 1391158
+
+Duplication rate: 6.3497%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_010_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_010_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_010_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_010_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_010_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_010_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_010_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_010_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_010_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_010_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_010_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 178 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 14893293
+total bases: 1848173943
+Q20 bases: 1811912034(98.038%)
+Q30 bases: 1758350077(95.1399%)
+
+Read2 before filtering:
+total reads: 14893293
+total bases: 1848128726
+Q20 bases: 1811488865(98.0175%)
+Q30 bases: 1749948711(94.6876%)
+
+Read1 after filtering:
+total reads: 14645450
+total bases: 1593084136
+Q20 bases: 1570528792(98.5842%)
+Q30 bases: 1524667283(95.7054%)
+
+Read2 aftering filtering:
+total reads: 14645450
+total bases: 1589919285
+Q20 bases: 1566617293(98.5344%)
+Q30 bases: 1513252927(95.178%)
+
+Filtering result:
+reads passed filter: 29290900
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 495686
+reads with adapter trimmed: 21275110
+bases trimmed due to adapters: 6530794
+reads corrected by overlap analysis: 1803732
+bases corrected by overlap analysis: 3048668
+
+Duplication rate: 5.65186%
+
+Insert size peak (evaluated by paired-end reads): 107
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_035_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_035_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_035_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_035_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_035_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_035_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_035_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_035_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_035_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_035_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_035_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 316 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 18458474
+total bases: 2054243292
+Q20 bases: 2019410268(98.3043%)
+Q30 bases: 1963972434(95.6056%)
+
+Read2 before filtering:
+total reads: 18458474
+total bases: 2054418663
+Q20 bases: 2019207820(98.2861%)
+Q30 bases: 1956532402(95.2353%)
+
+Read1 after filtering:
+total reads: 17761079
+total bases: 1736009729
+Q20 bases: 1714088445(98.7373%)
+Q30 bases: 1666787966(96.0126%)
+
+Read2 aftering filtering:
+total reads: 17761079
+total bases: 1732944975
+Q20 bases: 1710563246(98.7085%)
+Q30 bases: 1656532965(95.5906%)
+
+Filtering result:
+reads passed filter: 35522158
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 1394790
+reads with adapter trimmed: 27428734
+bases trimmed due to adapters: 5897531
+reads corrected by overlap analysis: 1711117
+bases corrected by overlap analysis: 2792254
+
+Duplication rate: 2.33434%
+
+Insert size peak (evaluated by paired-end reads): 109
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_030_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_030_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_030_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_030_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_030_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_030_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_030_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_030_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_030_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_030_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_030_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 346 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 5903152
+total bases: 847920680
+Q20 bases: 832847205(98.2223%)
+Q30 bases: 808515455(95.3527%)
+
+Read2 before filtering:
+total reads: 5903152
+total bases: 847764956
+Q20 bases: 826932676(97.5427%)
+Q30 bases: 791783450(93.3966%)
+
+Read1 after filtering:
+total reads: 5857631
+total bases: 747292548
+Q20 bases: 737633056(98.7074%)
+Q30 bases: 716393398(95.8652%)
+
+Read2 aftering filtering:
+total reads: 5857631
+total bases: 745095738
+Q20 bases: 730919781(98.0974%)
+Q30 bases: 699897018(93.9338%)
+
+Filtering result:
+reads passed filter: 11715262
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 91042
+reads with adapter trimmed: 3537362
+bases trimmed due to adapters: 1602840
+reads corrected by overlap analysis: 668531
+bases corrected by overlap analysis: 1153751
+
+Duplication rate: 5.14402%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_015_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_015_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_015_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_015_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_015_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_015_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_015_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_015_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_015_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_015_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_015_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 166 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 17949206
+total bases: 2259007591
+Q20 bases: 2219536846(98.2527%)
+Q30 bases: 2156447946(95.46%)
+
+Read2 before filtering:
+total reads: 17949206
+total bases: 2259072606
+Q20 bases: 2212696428(97.9471%)
+Q30 bases: 2131771513(94.3649%)
+
+Read1 after filtering:
+total reads: 17603547
+total bases: 1954280865
+Q20 bases: 1929065968(98.7098%)
+Q30 bases: 1874420909(95.9136%)
+
+Read2 aftering filtering:
+total reads: 17603547
+total bases: 1949754534
+Q20 bases: 1919018230(98.4236%)
+Q30 bases: 1848083396(94.7854%)
+
+Filtering result:
+reads passed filter: 35207094
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 691318
+reads with adapter trimmed: 23569854
+bases trimmed due to adapters: 6829492
+reads corrected by overlap analysis: 2260872
+bases corrected by overlap analysis: 3748860
+
+Duplication rate: 3.70147%
+
+Insert size peak (evaluated by paired-end reads): 118
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_029_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_029_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_029_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_029_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_029_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_029_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_029_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_029_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_029_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_029_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_029_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 380 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 5176938
+total bases: 761089930
+Q20 bases: 746144626(98.0363%)
+Q30 bases: 722750012(94.9625%)
+
+Read2 before filtering:
+total reads: 5176938
+total bases: 760924395
+Q20 bases: 739914619(97.2389%)
+Q30 bases: 706664994(92.8693%)
+
+Read1 after filtering:
+total reads: 5127772
+total bases: 670636737
+Q20 bases: 661139284(98.5838%)
+Q30 bases: 640891542(95.5646%)
+
+Read2 aftering filtering:
+total reads: 5127772
+total bases: 668497494
+Q20 bases: 654378888(97.888%)
+Q30 bases: 625354638(93.5463%)
+
+Filtering result:
+reads passed filter: 10255544
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 98332
+reads with adapter trimmed: 1208584
+bases trimmed due to adapters: 1041036
+reads corrected by overlap analysis: 430033
+bases corrected by overlap analysis: 771647
+
+Duplication rate: 7.02307%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_019_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_019_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_019_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_019_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_019_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_019_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_019_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_019_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_019_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_019_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_019_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 149 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 17627588
+total bases: 2301681206
+Q20 bases: 2261452514(98.2522%)
+Q30 bases: 2198270423(95.5072%)
+
+Read2 before filtering:
+total reads: 17627588
+total bases: 2301673853
+Q20 bases: 2252373457(97.8581%)
+Q30 bases: 2167668793(94.1779%)
+
+Read1 after filtering:
+total reads: 17419156
+total bases: 2003583915
+Q20 bases: 1978113340(98.7287%)
+Q30 bases: 1923396764(95.9978%)
+
+Read2 aftering filtering:
+total reads: 17419156
+total bases: 1998497891
+Q20 bases: 1965902158(98.369%)
+Q30 bases: 1891568245(94.6495%)
+
+Filtering result:
+reads passed filter: 34838312
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 416864
+reads with adapter trimmed: 21926796
+bases trimmed due to adapters: 6690162
+reads corrected by overlap analysis: 2274667
+bases corrected by overlap analysis: 3809054
+
+Duplication rate: 4.96102%
+
+Insert size peak (evaluated by paired-end reads): 118
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_028_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_028_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_028_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_028_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_028_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_028_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_028_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_028_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_028_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_028_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_028_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 413 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 3620704
+total bases: 518039775
+Q20 bases: 508937660(98.243%)
+Q30 bases: 494546957(95.4651%)
+
+Read2 before filtering:
+total reads: 3620704
+total bases: 518018209
+Q20 bases: 507224869(97.9164%)
+Q30 bases: 488847454(94.3688%)
+
+Read1 after filtering:
+total reads: 3592769
+total bases: 456420085
+Q20 bases: 450670104(98.7402%)
+Q30 bases: 438147083(95.9965%)
+
+Read2 aftering filtering:
+total reads: 3592769
+total bases: 455652472
+Q20 bases: 448528128(98.4365%)
+Q30 bases: 432320958(94.8795%)
+
+Filtering result:
+reads passed filter: 7185538
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 55870
+reads with adapter trimmed: 2184316
+bases trimmed due to adapters: 1058997
+reads corrected by overlap analysis: 408428
+bases corrected by overlap analysis: 714847
+
+Duplication rate: 4.82721%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_027_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_027_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_027_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_027_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_027_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_027_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_027_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_027_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_027_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_027_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_027_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 110 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 5727644
+total bases: 842014637
+Q20 bases: 825898107(98.086%)
+Q30 bases: 800324167(95.0487%)
+
+Read2 before filtering:
+total reads: 5727644
+total bases: 841804194
+Q20 bases: 815618528(96.8893%)
+Q30 bases: 773930038(91.9371%)
+
+Read1 after filtering:
+total reads: 5672935
+total bases: 742143248
+Q20 bases: 731821188(98.6092%)
+Q30 bases: 709640255(95.6204%)
+
+Read2 aftering filtering:
+total reads: 5672935
+total bases: 738956806
+Q20 bases: 720882522(97.5541%)
+Q30 bases: 684358433(92.6114%)
+
+Filtering result:
+reads passed filter: 11345870
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 109418
+reads with adapter trimmed: 1425030
+bases trimmed due to adapters: 1069209
+reads corrected by overlap analysis: 515803
+bases corrected by overlap analysis: 899474
+
+Duplication rate: 7.29602%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_017_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_017_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_017_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_017_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_017_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_017_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_017_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_017_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_017_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_017_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_017_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 168 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 21447948
+total bases: 2724698854
+Q20 bases: 2676633955(98.236%)
+Q30 bases: 2602275071(95.5069%)
+
+Read2 before filtering:
+total reads: 21447948
+total bases: 2724657791
+Q20 bases: 2673222933(98.1122%)
+Q30 bases: 2584603671(94.8598%)
+
+Read1 after filtering:
+total reads: 21133028
+total bases: 2361541568
+Q20 bases: 2331311906(98.7199%)
+Q30 bases: 2267154211(96.0031%)
+
+Read2 aftering filtering:
+total reads: 21133028
+total bases: 2356885917
+Q20 bases: 2323636228(98.5893%)
+Q30 bases: 2246238251(95.3053%)
+
+Filtering result:
+reads passed filter: 42266056
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 629840
+reads with adapter trimmed: 28945002
+bases trimmed due to adapters: 8274222
+reads corrected by overlap analysis: 2466544
+bases corrected by overlap analysis: 4154021
+
+Duplication rate: 4.71719%
+
+Insert size peak (evaluated by paired-end reads): 115
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_026_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_026_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_026_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_026_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_026_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_026_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_026_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_026_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_026_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_026_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_026_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 458 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 18194553
+total bases: 2252699618
+Q20 bases: 2213228210(98.2478%)
+Q30 bases: 2150872746(95.4798%)
+
+Read2 before filtering:
+total reads: 18194553
+total bases: 2252660940
+Q20 bases: 2211550395(98.175%)
+Q30 bases: 2139496869(94.9764%)
+
+Read1 after filtering:
+total reads: 17807354
+total bases: 1943067157
+Q20 bases: 1918095463(98.7148%)
+Q30 bases: 1864235982(95.943%)
+
+Read2 aftering filtering:
+total reads: 17807354
+total bases: 1939437877
+Q20 bases: 1912943064(98.6339%)
+Q30 bases: 1849995676(95.3882%)
+
+Filtering result:
+reads passed filter: 35614708
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 774398
+reads with adapter trimmed: 24808312
+bases trimmed due to adapters: 6810184
+reads corrected by overlap analysis: 2079933
+bases corrected by overlap analysis: 3473272
+
+Duplication rate: 3.46671%
+
+Insert size peak (evaluated by paired-end reads): 119
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_032_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_032_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_032_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_032_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_032_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_032_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_032_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_032_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_032_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_032_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_032_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 380 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 5099690
+total bases: 743637156
+Q20 bases: 729453404(98.0927%)
+Q30 bases: 707164213(95.0953%)
+
+Read2 before filtering:
+total reads: 5099690
+total bases: 743410315
+Q20 bases: 723377858(97.3053%)
+Q30 bases: 691457732(93.0116%)
+
+Read1 after filtering:
+total reads: 5049764
+total bases: 655096738
+Q20 bases: 646102557(98.627%)
+Q30 bases: 626794054(95.6796%)
+
+Read2 aftering filtering:
+total reads: 5049764
+total bases: 652844827
+Q20 bases: 639394770(97.9398%)
+Q30 bases: 611455528(93.6602%)
+
+Filtering result:
+reads passed filter: 10099528
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 99852
+reads with adapter trimmed: 1551908
+bases trimmed due to adapters: 1160854
+reads corrected by overlap analysis: 462224
+bases corrected by overlap analysis: 835502
+
+Duplication rate: 6.26606%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_023_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_023_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_023_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_023_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_023_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_023_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_023_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_023_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_023_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_023_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_023_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 145 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 7721388
+total bases: 1127724255
+Q20 bases: 1106644339(98.1308%)
+Q30 bases: 1072954469(95.1433%)
+
+Read2 before filtering:
+total reads: 7721388
+total bases: 1127320698
+Q20 bases: 1094127434(97.0556%)
+Q30 bases: 1041581559(92.3944%)
+
+Read1 after filtering:
+total reads: 7644982
+total bases: 993858159
+Q20 bases: 980372985(98.6431%)
+Q30 bases: 951117344(95.6995%)
+
+Read2 aftering filtering:
+total reads: 7644982
+total bases: 989364669
+Q20 bases: 966802227(97.7195%)
+Q30 bases: 920837601(93.0736%)
+
+Filtering result:
+reads passed filter: 15289964
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 152812
+reads with adapter trimmed: 2257360
+bases trimmed due to adapters: 1738835
+reads corrected by overlap analysis: 751882
+bases corrected by overlap analysis: 1348920
+
+Duplication rate: 6.82838%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_016_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_016_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_016_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_016_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_016_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_016_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_016_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_016_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_016_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_016_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_016_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 198 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 6684229
+total bases: 959031921
+Q20 bases: 942123532(98.2369%)
+Q30 bases: 914416723(95.3479%)
+
+Read2 before filtering:
+total reads: 6684229
+total bases: 958896321
+Q20 bases: 935885328(97.6003%)
+Q30 bases: 897179387(93.5638%)
+
+Read1 after filtering:
+total reads: 6631273
+total bases: 845271836
+Q20 bases: 834361344(98.7092%)
+Q30 bases: 810147396(95.8446%)
+
+Read2 aftering filtering:
+total reads: 6631273
+total bases: 842883079
+Q20 bases: 827308909(98.1523%)
+Q30 bases: 793259438(94.1126%)
+
+Filtering result:
+reads passed filter: 13262546
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 105912
+reads with adapter trimmed: 3817338
+bases trimmed due to adapters: 1701159
+reads corrected by overlap analysis: 758567
+bases corrected by overlap analysis: 1289871
+
+Duplication rate: 4.95971%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_020_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_020_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_020_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_020_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_020_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_020_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_020_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_020_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_020_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_020_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_020_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 171 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 5577408
+total bases: 806196048
+Q20 bases: 790783000(98.0882%)
+Q30 bases: 766598363(95.0883%)
+
+Read2 before filtering:
+total reads: 5577408
+total bases: 806015455
+Q20 bases: 784760242(97.3629%)
+Q30 bases: 750875716(93.159%)
+
+Read1 after filtering:
+total reads: 5523203
+total bases: 709383102
+Q20 bases: 699650126(98.628%)
+Q30 bases: 678701866(95.6749%)
+
+Read2 aftering filtering:
+total reads: 5523203
+total bases: 706990345
+Q20 bases: 692855952(98.0008%)
+Q30 bases: 663180968(93.8034%)
+
+Filtering result:
+reads passed filter: 11046406
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 108410
+reads with adapter trimmed: 2255858
+bases trimmed due to adapters: 1474270
+reads corrected by overlap analysis: 581124
+bases corrected by overlap analysis: 1025704
+
+Duplication rate: 5.96718%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_025_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_025_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_025_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_025_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_025_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_025_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_025_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_025_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_025_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_025_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_025_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 154 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 6081751
+total bases: 884229116
+Q20 bases: 867539315(98.1125%)
+Q30 bases: 840814205(95.0901%)
+
+Read2 before filtering:
+total reads: 6081751
+total bases: 883973468
+Q20 bases: 859937099(97.2809%)
+Q30 bases: 820985668(92.8745%)
+
+Read1 after filtering:
+total reads: 6028690
+total bases: 779170430
+Q20 bases: 768441032(98.623%)
+Q30 bases: 745186202(95.6384%)
+
+Read2 aftering filtering:
+total reads: 6028690
+total bases: 776534626
+Q20 bases: 760127233(97.8871%)
+Q30 bases: 725889385(93.478%)
+
+Filtering result:
+reads passed filter: 12057380
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 106122
+reads with adapter trimmed: 2200666
+bases trimmed due to adapters: 1276565
+reads corrected by overlap analysis: 562845
+bases corrected by overlap analysis: 986260
+
+Duplication rate: 6.72347%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_021_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_021_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_021_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_021_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_021_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_021_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_021_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_021_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_021_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_021_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_021_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 173 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 20486037
+total bases: 2598377510
+Q20 bases: 2552464644(98.233%)
+Q30 bases: 2480107687(95.4483%)
+
+Read2 before filtering:
+total reads: 20486037
+total bases: 2598392024
+Q20 bases: 2541634984(97.8157%)
+Q30 bases: 2443715965(94.0472%)
+
+Read1 after filtering:
+total reads: 20096346
+total bases: 2248957694
+Q20 bases: 2219920863(98.7089%)
+Q30 bases: 2157201297(95.92%)
+
+Read2 aftering filtering:
+total reads: 20096346
+total bases: 2242896376
+Q20 bases: 2205437030(98.3299%)
+Q30 bases: 2119520798(94.4993%)
+
+Filtering result:
+reads passed filter: 40192692
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 779382
+reads with adapter trimmed: 26044798
+bases trimmed due to adapters: 7284298
+reads corrected by overlap analysis: 2627732
+bases corrected by overlap analysis: 4410153
+
+Duplication rate: 3.96858%
+
+Insert size peak (evaluated by paired-end reads): 121
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_027_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_027_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_027_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_027_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_027_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_027_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_027_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_027_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_027_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_027_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_027_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 472 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 20468214
+total bases: 2484290686
+Q20 bases: 2437867424(98.1313%)
+Q30 bases: 2366799881(95.2706%)
+
+Read2 before filtering:
+total reads: 20468214
+total bases: 2484486838
+Q20 bases: 2437601768(98.1129%)
+Q30 bases: 2353633976(94.7332%)
+
+Read1 after filtering:
+total reads: 19964283
+total bases: 2135651791
+Q20 bases: 2104786270(98.5547%)
+Q30 bases: 2043102851(95.6665%)
+
+Read2 aftering filtering:
+total reads: 19964283
+total bases: 2131457209
+Q20 bases: 2100716311(98.5578%)
+Q30 bases: 2027353379(95.1158%)
+
+Filtering result:
+reads passed filter: 39928566
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 1007862
+reads with adapter trimmed: 28782616
+bases trimmed due to adapters: 7179943
+reads corrected by overlap analysis: 2244297
+bases corrected by overlap analysis: 3685048
+
+Duplication rate: 2.97123%
+
+Insert size peak (evaluated by paired-end reads): 116
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_033_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_033_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_033_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_033_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_033_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_033_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_033_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_033_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_033_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_033_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_033_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 413 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 6536320
+total bases: 946138343
+Q20 bases: 927748073(98.0563%)
+Q30 bases: 899458954(95.0663%)
+
+Read2 before filtering:
+total reads: 6536320
+total bases: 946003009
+Q20 bases: 919436496(97.1917%)
+Q30 bases: 877618587(92.7712%)
+
+Read1 after filtering:
+total reads: 6473918
+total bases: 832129148
+Q20 bases: 820645380(98.62%)
+Q30 bases: 796208774(95.6833%)
+
+Read2 aftering filtering:
+total reads: 6473918
+total bases: 829199565
+Q20 bases: 811483570(97.8635%)
+Q30 bases: 775032829(93.4676%)
+
+Filtering result:
+reads passed filter: 12947836
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 124804
+reads with adapter trimmed: 2976808
+bases trimmed due to adapters: 1869363
+reads corrected by overlap analysis: 744745
+bases corrected by overlap analysis: 1312437
+
+Duplication rate: 7.18479%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_026_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_026_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_026_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_026_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_026_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_026_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_026_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_026_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_026_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_026_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_026_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 170 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 4070060
+total bases: 578231130
+Q20 bases: 568210879(98.2671%)
+Q30 bases: 552251343(95.507%)
+
+Read2 before filtering:
+total reads: 4070060
+total bases: 578218172
+Q20 bases: 566175705(97.9173%)
+Q30 bases: 545632173(94.3644%)
+
+Read1 after filtering:
+total reads: 4037102
+total bases: 509140840
+Q20 bases: 502791991(98.753%)
+Q30 bases: 488899586(96.0244%)
+
+Read2 aftering filtering:
+total reads: 4037102
+total bases: 508262930
+Q20 bases: 500275997(98.4286%)
+Q30 bases: 482163153(94.8649%)
+
+Filtering result:
+reads passed filter: 8074204
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 65916
+reads with adapter trimmed: 2541218
+bases trimmed due to adapters: 1171657
+reads corrected by overlap analysis: 449743
+bases corrected by overlap analysis: 786416
+
+Duplication rate: 4.80933%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_029_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_029_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_029_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_029_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_029_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_029_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_029_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_029_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_029_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_029_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_029_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 117 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 3927968
+total bases: 573093077
+Q20 bases: 562248825(98.1078%)
+Q30 bases: 544940916(95.0877%)
+
+Read2 before filtering:
+total reads: 3927968
+total bases: 572954760
+Q20 bases: 557417537(97.2882%)
+Q30 bases: 532329131(92.9095%)
+
+Read1 after filtering:
+total reads: 3894264
+total bases: 505155709
+Q20 bases: 498199167(98.6229%)
+Q30 bases: 483129070(95.6396%)
+
+Read2 aftering filtering:
+total reads: 3894264
+total bases: 503343520
+Q20 bases: 492816133(97.9085%)
+Q30 bases: 470759909(93.5266%)
+
+Filtering result:
+reads passed filter: 7788528
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 67408
+reads with adapter trimmed: 1381338
+bases trimmed due to adapters: 831585
+reads corrected by overlap analysis: 368893
+bases corrected by overlap analysis: 646654
+
+Duplication rate: 6.81894%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_030_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_030_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_030_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_030_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_030_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_030_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_030_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_030_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_030_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_030_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_030_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 121 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 3554016
+total bases: 518415923
+Q20 bases: 508633551(98.113%)
+Q30 bases: 493141813(95.1247%)
+
+Read2 before filtering:
+total reads: 3554016
+total bases: 518307203
+Q20 bases: 503452576(97.134%)
+Q30 bases: 479982152(92.6057%)
+
+Read1 after filtering:
+total reads: 3518622
+total bases: 456713579
+Q20 bases: 450504432(98.6405%)
+Q30 bases: 437084051(95.702%)
+
+Read2 aftering filtering:
+total reads: 3518622
+total bases: 454863120
+Q20 bases: 444863503(97.8016%)
+Q30 bases: 424357293(93.2934%)
+
+Filtering result:
+reads passed filter: 7037244
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 70788
+reads with adapter trimmed: 1137532
+bases trimmed due to adapters: 849550
+reads corrected by overlap analysis: 368749
+bases corrected by overlap analysis: 660310
+
+Duplication rate: 6.6622%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_031_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_031_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_031_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_031_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_031_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_031_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_031_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_031_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_031_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_031_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_031_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 111 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 5807099
+total bases: 844814353
+Q20 bases: 829307099(98.1644%)
+Q30 bases: 804500616(95.2281%)
+
+Read2 before filtering:
+total reads: 5807099
+total bases: 844639587
+Q20 bases: 823321084(97.476%)
+Q30 bases: 788508824(93.3545%)
+
+Read1 after filtering:
+total reads: 5757285
+total bases: 744904944
+Q20 bases: 734991285(98.6691%)
+Q30 bases: 713389254(95.7692%)
+
+Read2 aftering filtering:
+total reads: 5757285
+total bases: 742603787
+Q20 bases: 728274435(98.0704%)
+Q30 bases: 697645763(93.9459%)
+
+Filtering result:
+reads passed filter: 11514570
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 99628
+reads with adapter trimmed: 2256292
+bases trimmed due to adapters: 1345521
+reads corrected by overlap analysis: 586417
+bases corrected by overlap analysis: 1032226
+
+Duplication rate: 6.28491%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_028_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_028_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_028_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_028_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_028_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_028_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_028_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_028_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_028_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_028_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_028_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 154 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 23423432
+total bases: 2960731147
+Q20 bases: 2905812293(98.1451%)
+Q30 bases: 2819182186(95.2191%)
+
+Read2 before filtering:
+total reads: 23423432
+total bases: 2960812537
+Q20 bases: 2903359466(98.0596%)
+Q30 bases: 2800616879(94.5895%)
+
+Read1 after filtering:
+total reads: 23004116
+total bases: 2564560205
+Q20 bases: 2527878418(98.5697%)
+Q30 bases: 2452262569(95.6212%)
+
+Read2 aftering filtering:
+total reads: 23004116
+total bases: 2559679336
+Q20 bases: 2521426568(98.5056%)
+Q30 bases: 2431118428(94.9775%)
+
+Filtering result:
+reads passed filter: 46008232
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 838632
+reads with adapter trimmed: 30097896
+bases trimmed due to adapters: 8144394
+reads corrected by overlap analysis: 2760015
+bases corrected by overlap analysis: 4536388
+
+Duplication rate: 3.10169%
+
+Insert size peak (evaluated by paired-end reads): 120
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_034_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_034_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_034_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_034_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_034_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_034_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_034_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_034_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_034_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_034_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_034_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 487 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 5051285
+total bases: 739386280
+Q20 bases: 724858998(98.0352%)
+Q30 bases: 702263719(94.9793%)
+
+Read2 before filtering:
+total reads: 5051285
+total bases: 739182383
+Q20 bases: 716913544(96.9874%)
+Q30 bases: 682225797(92.2947%)
+
+Read1 after filtering:
+total reads: 4998519
+total bases: 650904688
+Q20 bases: 641694884(98.5851%)
+Q30 bases: 622159918(95.5839%)
+
+Read2 aftering filtering:
+total reads: 4998519
+total bases: 648023029
+Q20 bases: 633074036(97.6931%)
+Q30 bases: 602835763(93.0269%)
+
+Filtering result:
+reads passed filter: 9997038
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 105532
+reads with adapter trimmed: 1439740
+bases trimmed due to adapters: 1222307
+reads corrected by overlap analysis: 511081
+bases corrected by overlap analysis: 918233
+
+Duplication rate: 7.74854%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_033_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_033_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_033_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_033_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_033_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_033_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_033_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_033_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_033_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_033_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_033_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 147 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 3424959
+total bases: 500251288
+Q20 bases: 490891229(98.1289%)
+Q30 bases: 475998004(95.1518%)
+
+Read2 before filtering:
+total reads: 3424959
+total bases: 500095684
+Q20 bases: 484546381(96.8907%)
+Q30 bases: 459957618(91.9739%)
+
+Read1 after filtering:
+total reads: 3391170
+total bases: 440756218
+Q20 bases: 434783009(98.6448%)
+Q30 bases: 421891529(95.7199%)
+
+Read2 aftering filtering:
+total reads: 3391170
+total bases: 438708390
+Q20 bases: 428002203(97.5596%)
+Q30 bases: 406511241(92.6609%)
+
+Filtering result:
+reads passed filter: 6782340
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 67578
+reads with adapter trimmed: 1014630
+bases trimmed due to adapters: 723377
+reads corrected by overlap analysis: 322721
+bases corrected by overlap analysis: 576069
+
+Duplication rate: 7.39547%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_046_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_046_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_046_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_046_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_046_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_046_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_046_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_046_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_046_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_046_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_046_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 117 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 5195430
+total bases: 755284409
+Q20 bases: 740940890(98.1009%)
+Q30 bases: 718788315(95.1679%)
+
+Read2 before filtering:
+total reads: 5195430
+total bases: 755010688
+Q20 bases: 732380288(97.0026%)
+Q30 bases: 696707923(92.2779%)
+
+Read1 after filtering:
+total reads: 5142547
+total bases: 664725858
+Q20 bases: 655744211(98.6488%)
+Q30 bases: 636634787(95.774%)
+
+Read2 aftering filtering:
+total reads: 5142547
+total bases: 661711716
+Q20 bases: 646431748(97.6908%)
+Q30 bases: 615241521(92.9773%)
+
+Filtering result:
+reads passed filter: 10285094
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 105766
+reads with adapter trimmed: 1848486
+bases trimmed due to adapters: 1345157
+reads corrected by overlap analysis: 568854
+bases corrected by overlap analysis: 1015633
+
+Duplication rate: 7.07755%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_039_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_039_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_039_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_039_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_039_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_039_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_039_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_039_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_039_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_039_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_039_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 142 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 4464251
+total bases: 636311853
+Q20 bases: 625161341(98.2476%)
+Q30 bases: 606900540(95.3778%)
+
+Read2 before filtering:
+total reads: 4464251
+total bases: 636287393
+Q20 bases: 622029920(97.7593%)
+Q30 bases: 597484173(93.9016%)
+
+Read1 after filtering:
+total reads: 4431697
+total bases: 560751775
+Q20 bases: 553524383(98.7111%)
+Q30 bases: 537519095(95.8569%)
+
+Read2 aftering filtering:
+total reads: 4431697
+total bases: 559372382
+Q20 bases: 549755619(98.2808%)
+Q30 bases: 528062967(94.4028%)
+
+Filtering result:
+reads passed filter: 8863394
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 65108
+reads with adapter trimmed: 3067206
+bases trimmed due to adapters: 1237510
+reads corrected by overlap analysis: 532684
+bases corrected by overlap analysis: 903115
+
+Duplication rate: 4.45288%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_042_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_042_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_042_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_042_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_042_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_042_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_042_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_042_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_042_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_042_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_042_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 137 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 5716091
+total bases: 832621727
+Q20 bases: 816999616(98.1237%)
+Q30 bases: 792035151(95.1254%)
+
+Read2 before filtering:
+total reads: 5716091
+total bases: 832404216
+Q20 bases: 810786848(97.403%)
+Q30 bases: 775660613(93.1832%)
+
+Read1 after filtering:
+total reads: 5666544
+total bases: 734011191
+Q20 bases: 724001062(98.6362%)
+Q30 bases: 702280008(95.677%)
+
+Read2 aftering filtering:
+total reads: 5666544
+total bases: 731710171
+Q20 bases: 717123666(98.0065%)
+Q30 bases: 686340832(93.7995%)
+
+Filtering result:
+reads passed filter: 11333088
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 99094
+reads with adapter trimmed: 2085684
+bases trimmed due to adapters: 1215901
+reads corrected by overlap analysis: 531671
+bases corrected by overlap analysis: 938858
+
+Duplication rate: 6.40917%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_036_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_036_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_036_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_036_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_036_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_036_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_036_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_036_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_036_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_036_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_036_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 153 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 6731209
+total bases: 953629132
+Q20 bases: 936513581(98.2052%)
+Q30 bases: 908891566(95.3087%)
+
+Read2 before filtering:
+total reads: 6731209
+total bases: 953557396
+Q20 bases: 929971976(97.5266%)
+Q30 bases: 890432675(93.3801%)
+
+Read1 after filtering:
+total reads: 6674155
+total bases: 838725228
+Q20 bases: 827761455(98.6928%)
+Q30 bases: 803685314(95.8222%)
+
+Read2 aftering filtering:
+total reads: 6674155
+total bases: 836352139
+Q20 bases: 820328951(98.0842%)
+Q30 bases: 785504516(93.9203%)
+
+Filtering result:
+reads passed filter: 13348310
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 114108
+reads with adapter trimmed: 4287088
+bases trimmed due to adapters: 1850908
+reads corrected by overlap analysis: 759835
+bases corrected by overlap analysis: 1298672
+
+Duplication rate: 5.03077%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_032_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_032_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_032_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_032_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_032_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_032_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_032_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_032_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_032_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_032_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_032_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 175 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 5811256
+total bases: 827817621
+Q20 bases: 812646727(98.1674%)
+Q30 bases: 788316335(95.2283%)
+
+Read2 before filtering:
+total reads: 5811256
+total bases: 827753146
+Q20 bases: 807406893(97.542%)
+Q30 bases: 773478675(93.4432%)
+
+Read1 after filtering:
+total reads: 5764462
+total bases: 728358731
+Q20 bases: 718666258(98.6693%)
+Q30 bases: 697429159(95.7535%)
+
+Read2 aftering filtering:
+total reads: 5764462
+total bases: 726356075
+Q20 bases: 712644989(98.1123%)
+Q30 bases: 682821074(94.0064%)
+
+Filtering result:
+reads passed filter: 11528924
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 93588
+reads with adapter trimmed: 3683434
+bases trimmed due to adapters: 1531983
+reads corrected by overlap analysis: 671305
+bases corrected by overlap analysis: 1142014
+
+Duplication rate: 5.80298%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_041_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_041_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_041_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_041_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_041_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_041_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_041_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_041_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_041_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_041_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_041_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 155 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 4655787
+total bases: 682002595
+Q20 bases: 669038009(98.099%)
+Q30 bases: 648235088(95.0488%)
+
+Read2 before filtering:
+total reads: 4655787
+total bases: 681778462
+Q20 bases: 661135045(96.9721%)
+Q30 bases: 628578293(92.1969%)
+
+Read1 after filtering:
+total reads: 4611061
+total bases: 601067341
+Q20 bases: 592767473(98.6191%)
+Q30 bases: 574705571(95.6142%)
+
+Read2 aftering filtering:
+total reads: 4611061
+total bases: 598279950
+Q20 bases: 584156470(97.6393%)
+Q30 bases: 555657958(92.8759%)
+
+Filtering result:
+reads passed filter: 9222122
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 89452
+reads with adapter trimmed: 1308738
+bases trimmed due to adapters: 977096
+reads corrected by overlap analysis: 422879
+bases corrected by overlap analysis: 754982
+
+Duplication rate: 6.84063%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_059_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_059_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_059_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_059_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_059_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_059_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_059_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_059_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_059_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_059_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_059_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 136 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 5332521
+total bases: 780648806
+Q20 bases: 765931403(98.1147%)
+Q30 bases: 742464688(95.1087%)
+
+Read2 before filtering:
+total reads: 5332521
+total bases: 780349298
+Q20 bases: 755099522(96.7643%)
+Q30 bases: 715400847(91.677%)
+
+Read1 after filtering:
+total reads: 5279123
+total bases: 687752006
+Q20 bases: 678342218(98.6318%)
+Q30 bases: 658012612(95.6759%)
+
+Read2 aftering filtering:
+total reads: 5279123
+total bases: 684180007
+Q20 bases: 666749749(97.4524%)
+Q30 bases: 632024455(92.3769%)
+
+Filtering result:
+reads passed filter: 10558246
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 106796
+reads with adapter trimmed: 1485144
+bases trimmed due to adapters: 1104378
+reads corrected by overlap analysis: 490892
+bases corrected by overlap analysis: 873746
+
+Duplication rate: 7.88359%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_044_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_044_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_044_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_044_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_044_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_044_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_044_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_044_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_044_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_044_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_044_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 150 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 26092233
+total bases: 3400243396
+Q20 bases: 3345577089(98.3923%)
+Q30 bases: 3251151076(95.6152%)
+
+Read2 before filtering:
+total reads: 26092233
+total bases: 3399981809
+Q20 bases: 3336915475(98.1451%)
+Q30 bases: 3220032301(94.7073%)
+
+Read1 after filtering:
+total reads: 25651746
+total bases: 2961186583
+Q20 bases: 2925276441(98.7873%)
+Q30 bases: 2842885377(96.0049%)
+
+Read2 aftering filtering:
+total reads: 25651746
+total bases: 2956517592
+Q20 bases: 2913223631(98.5356%)
+Q30 bases: 2809917717(95.0415%)
+
+Filtering result:
+reads passed filter: 51303492
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 880974
+reads with adapter trimmed: 27516662
+bases trimmed due to adapters: 7934455
+reads corrected by overlap analysis: 2469428
+bases corrected by overlap analysis: 3906039
+
+Duplication rate: 3.10596%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-ABas_031_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-ABas_031_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-ABas_031_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-ABas_031_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-ABas_031_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-ABas_031_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_031_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-ABas_031_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-ABas_031_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-ABas_031_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-ABas_031_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 562 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 5913989
+total bases: 854803415
+Q20 bases: 838767512(98.124%)
+Q30 bases: 813654146(95.1861%)
+
+Read2 before filtering:
+total reads: 5913989
+total bases: 854570907
+Q20 bases: 833040005(97.4805%)
+Q30 bases: 798024594(93.3831%)
+
+Read1 after filtering:
+total reads: 5860302
+total bases: 752675320
+Q20 bases: 742542831(98.6538%)
+Q30 bases: 720768562(95.7609%)
+
+Read2 aftering filtering:
+total reads: 5860302
+total bases: 750441655
+Q20 bases: 736065170(98.0843%)
+Q30 bases: 705333026(93.9891%)
+
+Filtering result:
+reads passed filter: 11720604
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 107374
+reads with adapter trimmed: 2583962
+bases trimmed due to adapters: 1545181
+reads corrected by overlap analysis: 604351
+bases corrected by overlap analysis: 1069773
+
+Duplication rate: 5.52557%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_048_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_048_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_048_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_048_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_048_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_048_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_048_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_048_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_048_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_048_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_048_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 165 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 6382986
+total bases: 931967720
+Q20 bases: 914786301(98.1564%)
+Q30 bases: 887405888(95.2185%)
+
+Read2 before filtering:
+total reads: 6382986
+total bases: 931690370
+Q20 bases: 906774057(97.3257%)
+Q30 bases: 866901687(93.0461%)
+
+Read1 after filtering:
+total reads: 6322294
+total bases: 821708117
+Q20 bases: 810732577(98.6643%)
+Q30 bases: 786944109(95.7693%)
+
+Read2 aftering filtering:
+total reads: 6322294
+total bases: 818633813
+Q20 bases: 801905533(97.9566%)
+Q30 bases: 766949201(93.6865%)
+
+Filtering result:
+reads passed filter: 12644588
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 121384
+reads with adapter trimmed: 1948236
+bases trimmed due to adapters: 1435274
+reads corrected by overlap analysis: 622935
+bases corrected by overlap analysis: 1119463
+
+Duplication rate: 6.37221%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_056_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_056_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_056_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_056_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_056_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_056_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_056_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_056_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_056_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_056_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_056_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 174 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 8098898
+total bases: 1152524916
+Q20 bases: 1131765171(98.1988%)
+Q30 bases: 1098850236(95.3429%)
+
+Read2 before filtering:
+total reads: 8098898
+total bases: 1152440102
+Q20 bases: 1125280901(97.6433%)
+Q30 bases: 1080323874(93.7423%)
+
+Read1 after filtering:
+total reads: 8029729
+total bases: 1013947557
+Q20 bases: 1000820637(98.7054%)
+Q30 bases: 972181388(95.8808%)
+
+Read2 aftering filtering:
+total reads: 8029729
+total bases: 1011222117
+Q20 bases: 993219743(98.2197%)
+Q30 bases: 953766863(94.3182%)
+
+Filtering result:
+reads passed filter: 16059458
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 138338
+reads with adapter trimmed: 4965134
+bases trimmed due to adapters: 2271551
+reads corrected by overlap analysis: 951338
+bases corrected by overlap analysis: 1643305
+
+Duplication rate: 6.00353%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_043_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_043_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_043_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_043_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_043_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_043_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_043_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_043_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_043_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_043_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_043_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 201 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 6658584
+total bases: 965855121
+Q20 bases: 946500966(97.9962%)
+Q30 bases: 916876483(94.929%)
+
+Read2 before filtering:
+total reads: 6658584
+total bases: 965541306
+Q20 bases: 937006789(97.0447%)
+Q30 bases: 892550914(92.4405%)
+
+Read1 after filtering:
+total reads: 6589421
+total bases: 849218101
+Q20 bases: 837021724(98.5638%)
+Q30 bases: 811446388(95.5522%)
+
+Read2 aftering filtering:
+total reads: 6589421
+total bases: 845631431
+Q20 bases: 826592500(97.7486%)
+Q30 bases: 787899948(93.173%)
+
+Filtering result:
+reads passed filter: 13178842
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 138326
+reads with adapter trimmed: 2648094
+bases trimmed due to adapters: 1800630
+reads corrected by overlap analysis: 738202
+bases corrected by overlap analysis: 1308347
+
+Duplication rate: 6.80916%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_061_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_061_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_061_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_061_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_061_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_061_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_061_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_061_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_061_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_061_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_061_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 182 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 6332955
+total bases: 909352871
+Q20 bases: 891358920(98.0212%)
+Q30 bases: 864039051(95.0169%)
+
+Read2 before filtering:
+total reads: 6332955
+total bases: 909290564
+Q20 bases: 884934601(97.3214%)
+Q30 bases: 846667980(93.113%)
+
+Read1 after filtering:
+total reads: 6272310
+total bases: 798874002
+Q20 bases: 787730752(98.6051%)
+Q30 bases: 764145577(95.6528%)
+
+Read2 aftering filtering:
+total reads: 6272310
+total bases: 796172451
+Q20 bases: 780215545(97.9958%)
+Q30 bases: 746844752(93.8044%)
+
+Filtering result:
+reads passed filter: 12544620
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 121290
+reads with adapter trimmed: 3557488
+bases trimmed due to adapters: 2088681
+reads corrected by overlap analysis: 787363
+bases corrected by overlap analysis: 1399933
+
+Duplication rate: 6.97924%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_062_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_062_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_062_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_062_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_062_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_062_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_062_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_062_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_062_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_062_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_062_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 174 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 5346373
+total bases: 769599920
+Q20 bases: 755533823(98.1723%)
+Q30 bases: 733561412(95.3172%)
+
+Read2 before filtering:
+total reads: 5346373
+total bases: 769517889
+Q20 bases: 749200280(97.3597%)
+Q30 bases: 716259583(93.079%)
+
+Read1 after filtering:
+total reads: 5297385
+total bases: 677386520
+Q20 bases: 668590139(98.7014%)
+Q30 bases: 649589687(95.8965%)
+
+Read2 aftering filtering:
+total reads: 5297385
+total bases: 675134060
+Q20 bases: 661517027(97.9831%)
+Q30 bases: 632677841(93.7114%)
+
+Filtering result:
+reads passed filter: 10594770
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 97976
+reads with adapter trimmed: 2671044
+bases trimmed due to adapters: 1387609
+reads corrected by overlap analysis: 588451
+bases corrected by overlap analysis: 1029119
+
+Duplication rate: 5.9924%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_073_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_073_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_073_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_073_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_073_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_073_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_073_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_073_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_073_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_073_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_073_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 140 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 3281839
+total bases: 465260268
+Q20 bases: 457054492(98.2363%)
+Q30 bases: 444009342(95.4325%)
+
+Read2 before filtering:
+total reads: 3281839
+total bases: 465215788
+Q20 bases: 453655971(97.5152%)
+Q30 bases: 434291332(93.3527%)
+
+Read1 after filtering:
+total reads: 3255133
+total bases: 409332930
+Q20 bases: 404134462(98.73%)
+Q30 bases: 392804369(95.9621%)
+
+Read2 aftering filtering:
+total reads: 3255133
+total bases: 408143149
+Q20 bases: 400297056(98.0776%)
+Q30 bases: 383255519(93.9022%)
+
+Filtering result:
+reads passed filter: 6510266
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 53412
+reads with adapter trimmed: 2259524
+bases trimmed due to adapters: 954666
+reads corrected by overlap analysis: 407343
+bases corrected by overlap analysis: 695329
+
+Duplication rate: 5.72449%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_084_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_084_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_084_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_084_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_084_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_084_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_084_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_084_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_084_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_084_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_084_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 100 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 5755778
+total bases: 802882807
+Q20 bases: 787577837(98.0937%)
+Q30 bases: 763815233(95.1341%)
+
+Read2 before filtering:
+total reads: 5755778
+total bases: 802770255
+Q20 bases: 781847158(97.3936%)
+Q30 bases: 748067112(93.1857%)
+
+Read1 after filtering:
+total reads: 5699573
+total bases: 703549430
+Q20 bases: 694005042(98.6434%)
+Q30 bases: 673429721(95.7189%)
+
+Read2 aftering filtering:
+total reads: 5699573
+total bases: 701102227
+Q20 bases: 687264521(98.0263%)
+Q30 bases: 657734024(93.8143%)
+
+Filtering result:
+reads passed filter: 11399146
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 112410
+reads with adapter trimmed: 4342772
+bases trimmed due to adapters: 1906733
+reads corrected by overlap analysis: 735433
+bases corrected by overlap analysis: 1270907
+
+Duplication rate: 5.00849%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_067_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_067_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_067_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_067_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_067_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_067_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_067_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_067_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_067_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_067_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_067_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 147 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 5901023
+total bases: 836767855
+Q20 bases: 821792717(98.2104%)
+Q30 bases: 798205549(95.3915%)
+
+Read2 before filtering:
+total reads: 5901023
+total bases: 836649275
+Q20 bases: 816008952(97.533%)
+Q30 bases: 782174399(93.4889%)
+
+Read1 after filtering:
+total reads: 5848493
+total bases: 735815239
+Q20 bases: 726418514(98.723%)
+Q30 bases: 705994759(95.9473%)
+
+Read2 aftering filtering:
+total reads: 5848493
+total bases: 733562600
+Q20 bases: 719828204(98.1277%)
+Q30 bases: 690222118(94.0918%)
+
+Filtering result:
+reads passed filter: 11696986
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 105060
+reads with adapter trimmed: 4074078
+bases trimmed due to adapters: 1889548
+reads corrected by overlap analysis: 763668
+bases corrected by overlap analysis: 1322031
+
+Duplication rate: 5.30628%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_076_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_076_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_076_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_076_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_076_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_076_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_076_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_076_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_076_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_076_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_076_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 152 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 6393299
+total bases: 926857885
+Q20 bases: 908648922(98.0354%)
+Q30 bases: 880673906(95.0171%)
+
+Read2 before filtering:
+total reads: 6393299
+total bases: 926511974
+Q20 bases: 898665536(96.9945%)
+Q30 bases: 854944907(92.2756%)
+
+Read1 after filtering:
+total reads: 6326662
+total bases: 814993679
+Q20 bases: 803524793(98.5928%)
+Q30 bases: 779375533(95.6296%)
+
+Read2 aftering filtering:
+total reads: 6326662
+total bases: 811381304
+Q20 bases: 792634577(97.6895%)
+Q30 bases: 754485257(92.9878%)
+
+Filtering result:
+reads passed filter: 12653324
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 133274
+reads with adapter trimmed: 2400150
+bases trimmed due to adapters: 1627114
+reads corrected by overlap analysis: 656409
+bases corrected by overlap analysis: 1168177
+
+Duplication rate: 6.56431%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_066_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_066_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_066_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_066_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_066_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_066_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_066_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_066_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_066_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_066_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_066_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 171 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 3513888
+total bases: 516497389
+Q20 bases: 506329382(98.0314%)
+Q30 bases: 490683377(95.0021%)
+
+Read2 before filtering:
+total reads: 3513888
+total bases: 516289828
+Q20 bases: 499141297(96.6785%)
+Q30 bases: 472816596(91.5797%)
+
+Read1 after filtering:
+total reads: 3476301
+total bases: 454502306
+Q20 bases: 448161009(98.6048%)
+Q30 bases: 434704112(95.644%)
+
+Read2 aftering filtering:
+total reads: 3476301
+total bases: 452086753
+Q20 bases: 440460226(97.4283%)
+Q30 bases: 417555800(92.3619%)
+
+Filtering result:
+reads passed filter: 6952602
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 75174
+reads with adapter trimmed: 797232
+bases trimmed due to adapters: 715751
+reads corrected by overlap analysis: 317865
+bases corrected by overlap analysis: 573891
+
+Duplication rate: 8.73321%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_090_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_090_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_090_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_090_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_090_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_090_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_090_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_090_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_090_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_090_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_090_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 110 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 5706549
+total bases: 823633451
+Q20 bases: 807842606(98.0828%)
+Q30 bases: 783024632(95.0696%)
+
+Read2 before filtering:
+total reads: 5706549
+total bases: 823381946
+Q20 bases: 800942739(97.2748%)
+Q30 bases: 764807585(92.8861%)
+
+Read1 after filtering:
+total reads: 5651636
+total bases: 724678675
+Q20 bases: 714614555(98.6112%)
+Q30 bases: 693069514(95.6382%)
+
+Read2 aftering filtering:
+total reads: 5651636
+total bases: 722059806
+Q20 bases: 706990154(97.913%)
+Q30 bases: 675332700(93.5286%)
+
+Filtering result:
+reads passed filter: 11303272
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 109826
+reads with adapter trimmed: 2572954
+bases trimmed due to adapters: 1534027
+reads corrected by overlap analysis: 627356
+bases corrected by overlap analysis: 1092866
+
+Duplication rate: 6.00148%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_078_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_078_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_078_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_078_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_078_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_078_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_078_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_078_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_078_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_078_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_078_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 151 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 5067077
+total bases: 737405726
+Q20 bases: 723415030(98.1027%)
+Q30 bases: 701129528(95.0806%)
+
+Read2 before filtering:
+total reads: 5067077
+total bases: 737174918
+Q20 bases: 717281782(97.3014%)
+Q30 bases: 685344277(92.969%)
+
+Read1 after filtering:
+total reads: 5018133
+total bases: 649614088
+Q20 bases: 640678427(98.6245%)
+Q30 bases: 621345668(95.6484%)
+
+Read2 aftering filtering:
+total reads: 5018133
+total bases: 647412638
+Q20 bases: 633970275(97.9237%)
+Q30 bases: 606012322(93.6053%)
+
+Filtering result:
+reads passed filter: 10036266
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 97888
+reads with adapter trimmed: 1644418
+bases trimmed due to adapters: 1150335
+reads corrected by overlap analysis: 455346
+bases corrected by overlap analysis: 812145
+
+Duplication rate: 5.96278%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_086_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_086_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_086_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_086_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_086_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_086_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_086_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_086_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_086_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_086_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_086_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 137 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 5727005
+total bases: 815309306
+Q20 bases: 800258448(98.154%)
+Q30 bases: 776349783(95.2215%)
+
+Read2 before filtering:
+total reads: 5727005
+total bases: 815223805
+Q20 bases: 795113528(97.5332%)
+Q30 bases: 761475769(93.407%)
+
+Read1 after filtering:
+total reads: 5671305
+total bases: 717060726
+Q20 bases: 707355785(98.6466%)
+Q30 bases: 686515737(95.7403%)
+
+Read2 aftering filtering:
+total reads: 5671305
+total bases: 715081210
+Q20 bases: 701503291(98.1012%)
+Q30 bases: 671911592(93.963%)
+
+Filtering result:
+reads passed filter: 11342610
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 111400
+reads with adapter trimmed: 3217976
+bases trimmed due to adapters: 1481619
+reads corrected by overlap analysis: 632270
+bases corrected by overlap analysis: 1077383
+
+Duplication rate: 4.93212%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_088_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_088_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_088_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_088_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_088_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_088_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_088_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_088_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_088_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_088_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_088_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 140 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 6202499
+total bases: 892477496
+Q20 bases: 875977039(98.1512%)
+Q30 bases: 850012166(95.2419%)
+
+Read2 before filtering:
+total reads: 6202499
+total bases: 892478356
+Q20 bases: 872608753(97.7737%)
+Q30 bases: 839612824(94.0765%)
+
+Read1 after filtering:
+total reads: 6152326
+total bases: 786006701
+Q20 bases: 775589343(98.6746%)
+Q30 bases: 753005033(95.8014%)
+
+Read2 aftering filtering:
+total reads: 6152326
+total bases: 784506977
+Q20 bases: 771414499(98.3311%)
+Q30 bases: 742418571(94.6351%)
+
+Filtering result:
+reads passed filter: 12304652
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 100346
+reads with adapter trimmed: 3379044
+bases trimmed due to adapters: 1668118
+reads corrected by overlap analysis: 655005
+bases corrected by overlap analysis: 1144620
+
+Duplication rate: 5.27842%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_091_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_091_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_091_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_091_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_091_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_091_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_091_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_091_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_091_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_091_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_091_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 135 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 5997579
+total bases: 876378647
+Q20 bases: 859650732(98.0912%)
+Q30 bases: 833583690(95.1168%)
+
+Read2 before filtering:
+total reads: 5997579
+total bases: 876127851
+Q20 bases: 847886776(96.7766%)
+Q30 bases: 803873614(91.753%)
+
+Read1 after filtering:
+total reads: 5934499
+total bases: 771374590
+Q20 bases: 760867300(98.6378%)
+Q30 bases: 738405610(95.7259%)
+
+Read2 aftering filtering:
+total reads: 5934499
+total bases: 767564999
+Q20 bases: 748235839(97.4818%)
+Q30 bases: 709844287(92.48%)
+
+Filtering result:
+reads passed filter: 11868998
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 126160
+reads with adapter trimmed: 1748882
+bases trimmed due to adapters: 1287005
+reads corrected by overlap analysis: 558886
+bases corrected by overlap analysis: 1001428
+
+Duplication rate: 7.73954%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_092_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_092_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_092_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_092_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_092_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_092_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_092_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_092_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_092_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_092_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_092_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 137 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 6525160
+total bases: 939452534
+Q20 bases: 922841444(98.2318%)
+Q30 bases: 896445352(95.4221%)
+
+Read2 before filtering:
+total reads: 6525160
+total bases: 939224141
+Q20 bases: 916032826(97.5308%)
+Q30 bases: 877692423(93.4487%)
+
+Read1 after filtering:
+total reads: 6465850
+total bases: 827582411
+Q20 bases: 817106557(98.7342%)
+Q30 bases: 794194117(95.9656%)
+
+Read2 aftering filtering:
+total reads: 6465850
+total bases: 824980058
+Q20 bases: 809514128(98.1253%)
+Q30 bases: 775827097(94.0419%)
+
+Filtering result:
+reads passed filter: 12931700
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 118620
+reads with adapter trimmed: 3289986
+bases trimmed due to adapters: 1647317
+reads corrected by overlap analysis: 758945
+bases corrected by overlap analysis: 1316156
+
+Duplication rate: 5.56075%
+
+Insert size peak (evaluated by paired-end reads): 165
+
+JSON report: fq_fp1_clmparray_fp2b/Sfa-CBas_096_Ex1_L3_clmp.r1r2_fastp.json
+HTML report: fq_fp1_clmparray_fp2b/Sfa-CBas_096_Ex1_L3_clmp.r1r2_fastp.html
+
+fastp --in1 fq_fp1_clmparray/Sfa-CBas_096_Ex1_L3_clmp.r1.fq.gz --in2 fq_fp1_clmparray/Sfa-CBas_096_Ex1_L3_clmp.r2.fq.gz --out1 fq_fp1_clmparray_fp2b/Sfa-CBas_096_Ex1_L3_clmp.fp2_r1.fq.gz --out2 fq_fp1_clmparray_fp2b/Sfa-CBas_096_Ex1_L3_clmp.fp2_r2.fq.gz --unpaired1 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_096_Ex1_L3_clmp.fp2_unprd.fq.gz --unpaired2 fq_fp1_clmparray_fp2b/failed/Sfa-CBas_096_Ex1_L3_clmp.fp2_unprd.fq.gz --failed_out fq_fp1_clmparray_fp2b/failed/Sfa-CBas_096_Ex1_L3_clmp.fp2_fail.fq.gz -h fq_fp1_clmparray_fp2b/Sfa-CBas_096_Ex1_L3_clmp.r1r2_fastp.html -j fq_fp1_clmparray_fp2b/Sfa-CBas_096_Ex1_L3_clmp.r1r2_fastp.json --detect_adapter_for_pe --trim_front1 15 --trim_front2 15 --length_required 33 --cut_front --cut_front_window_size 1 --cut_front_mean_quality 20 --cut_right --cut_right_window_size 10 --cut_right_mean_quality 20 --disable_trim_poly_g --correction --disable_quality_filtering --unqualified_percent_limit 40 --report_title Second Trim R1R2 
+fastp v0.20.1, time used: 143 seconds
+[WARNING]         multiqc : MultiQC Version v1.12 now available!
+[INFO   ]         multiqc : This is MultiQC v1.9
+[INFO   ]         multiqc : Template    : default
+[INFO   ]         multiqc : Searching   : /home/e1garcia/shotgun_PIRE/pire_ssl_data_processing/salarias_fasciatus_lcwgs/fq_fp1_clmparray_fp2b
+[INFO   ]           fastp : Found 81 reports
+[INFO   ]         multiqc : Compressing plot data
+[WARNING]         multiqc : Previous MultiQC output found! Adjusting filenames..
+[WARNING]         multiqc : Use -f or --force to overwrite existing reports instead
+[INFO   ]         multiqc : Report      : fq_fp1_clmparray_fp2b/2nd_fastp_report_3.html
+[INFO   ]         multiqc : Data        : 2nd_fastp_report_data_3
+[INFO   ]         multiqc : MultiQC complete

@@ -10,8 +10,8 @@ I followed the [pire_fq_gq_processing](https://github.com/philippinespire/pire_f
 
 At the second fastp, we noticed a motif in the first 15 bp of the reads, so we split the data into 2 paths
 
-* fp2: not clipping the first 15 bp
-* fp2b: clipping off the first 15 bp
+* fp2: not clipping the first 14 bp
+* fp2b: clipping off the first 14 bp
 
 ---
 
@@ -42,3 +42,17 @@ cat NC_043745.1-NC_043751.1_chr1-7.fasta NC_043752.1-NC_043766.1_chr8-23.fasta N
 ## Mapping & Filtering Bams
 
 I followed the [pire_lcwgs_data_processing](https://github.com/philippinespire/pire_lcwgs_data_processing) repo instructions
+
+After step 5. 'Filter the binary alignment maps', seperate the filtered bam files from the raw bam files.
+
+```bash 
+code here 
+```
+
+---
+
+## Sequencing Calculations 
+
+I followed the [sequencing_calculations]() section B. repo instructions
+
+ 

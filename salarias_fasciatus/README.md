@@ -55,7 +55,7 @@ After step 5. 'Filter the binary alignment maps', separate the filtered bam file
 
 ## Sequencing Calculations 
 
-I cloned [rroberts_thesis](https://github.com/cbirdlab/rroberts_thesis) into `/home/e1garcia/shotgun_PIRE/` and accessed the sequencing calculations scripts from my species directory.
+I cloned [rroberts_thesis](https://github.com/cbirdlab/rroberts_thesis) into `/home/e1garcia/shotgun_PIRE/` on wahab.hpc.odu.edu server and accessed the sequencing calculations scripts from my species directory.
 
 I followed the [sequencing_calculations](https://github.com/cbirdlab/rroberts_thesis/tree/main/sequencing_calculations) section B. repo instructions.
 

@@ -46,7 +46,9 @@ I followed the [pire_lcwgs_data_processing](https://github.com/philippinespire/p
 After step 5. 'Filter the binary alignment maps', seperate the filtered bam files from the raw bam files.
 
 ```bash 
-code here 
+ cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
+ mkdir fltrBAM
+ mv mkBAM/*fltrd* fltrBAM/
 ```
 
 ---

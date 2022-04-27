@@ -63,6 +63,7 @@ Here are the visual results:
 
 ![](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/plots/pct_cov_meandepth_Sfa.png)
 
+![](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/plots/prop_seqs_mapped_Sfa.png)
 --- 
 
 ## 5. [PCAngsd](http://popgen.dk/software/index.php/PCAngsd)

@@ -20,7 +20,6 @@ FILTERS='-uniqueOnly 1 -skipTriallelic 1 -minMapQ 30 -minQ 30 -doHWE 1 -maxHetFr
 inDIR=$(echo $inDIR | sed "s/\/$//" )
 
 ls $inDIR/*fltrd.bam > bamNames.txt 
-mkdir $outDIR
 
 [ ! -f $REF.fai ] && crun gunzip -c $REF | crun bgzip -@ 40 -c > $REFbgz && REF=$REFbgz && crun samtools faidx $REF 
 

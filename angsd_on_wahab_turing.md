@@ -4,7 +4,7 @@ To use this package, please load module with command:
 
 ```bash
 enable_lmod
-module load container_nev ngsTools
+module load container_env ngsTools
 ```
 
 And as usual, run command with "crun" prepend to it, for example:

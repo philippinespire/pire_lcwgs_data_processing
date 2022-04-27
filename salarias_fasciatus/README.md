@@ -59,6 +59,8 @@ I cloned [rroberts_thesis](https://github.com/cbirdlab/rroberts_thesis) into `/h
 
 I followed the [sequencing_calculations](https://github.com/cbirdlab/rroberts_thesis/tree/main/sequencing_calculations) section B. repo instructions.
 
+![](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/plots/pct_cov_meandepth_Sfa.png)
+
 --- 
 
 

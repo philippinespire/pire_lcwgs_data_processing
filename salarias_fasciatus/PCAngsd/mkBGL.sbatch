@@ -7,6 +7,7 @@
 
 enable_lmod
 module load container_env ngsTools
+module load container_env bwa-mem2
 export SINGULARITY_BIND=/home/e1garcia
 
 inDIR=$1
@@ -20,6 +21,8 @@ inDIR=$(echo $inDIR | sed "s/\/$//" )
 
 ls $inDIR/*fltrd.bam > bamNames.txt 
 mkdir $outDIR
+
+[ ! -f $REF.fai ] && crun samtools faidx $REF 
 
 crun angsd -GL 1 \
   $TODO \

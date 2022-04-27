@@ -57,7 +57,9 @@ After step 5. 'Filter the binary alignment maps', separate the filtered bam file
 
 I cloned [rroberts_thesis](https://github.com/cbirdlab/rroberts_thesis) into `/home/e1garcia/shotgun_PIRE/` on wahab.hpc.odu.edu server to make the [`mappedReadStats.sbatch`](https://github.com/cbirdlab/rroberts_thesis/blob/main/scripts/bam_processing/mappedReadStats.sbatch) script easily accessible from any species directory.
 
-I followed the [sequencing_calculations](https://github.com/cbirdlab/rroberts_thesis/tree/main/sequencing_calculations) section B. repo instructions.
+I followed the [read_mapping_summary](https://github.com/cbirdlab/read_mapping_summary) section B. repo instructions.
+
+Here are the visual results:
 
 ![](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/plots/pct_cov_meandepth_Sfa.png)
 

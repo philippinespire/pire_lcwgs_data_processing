@@ -71,7 +71,11 @@ Here are the visual results:
 make beagle file
 
 ```bash
-sbatch PCAngsd/mkBGL.sbatch fltrBAM GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna.gz
+cd /home/e1garcia/sh.....fix me jordan
+mkdir mkBGL
+cd mkBGL
+sbatch mkBGL.sbatch fltrBAM GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna.gz
+cd ..
 ```
 
 run pcangsd

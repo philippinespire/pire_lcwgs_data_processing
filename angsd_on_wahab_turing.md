@@ -32,7 +32,7 @@ No problem, I added angsd 0.937. This new one is installed in /opt/angsd, while 
 
 Although I think it is very unlikely, ngsTools indeed called for that 0.929 version, so in case it breaks you can still explicitly call the 0.929 by using a full path:
 
-crun /opt/ngsTools/angsd/angsd
+    crun /opt/ngsTools/angsd/angsd
 
 
 Please give it a try.

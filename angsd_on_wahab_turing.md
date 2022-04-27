@@ -2,8 +2,10 @@ I built everything you asked for except for IBSrelate, it is not so much as a pa
 
 To use this package, please load module with command:
 
+```bash
 enable_lmod
 module load container_nev ngsTools
+```
 
 And as usual, run command with "crun" prepend to it, for example:
 

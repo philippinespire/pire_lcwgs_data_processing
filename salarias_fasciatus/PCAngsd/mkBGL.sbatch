@@ -23,7 +23,7 @@ inDIR=$(echo $inDIR | sed "s/\/$//" )
 ls $inDIR/*fltrd.bam > bamNames.txt 
 mkdir $outDIR
 
-[ ! -f $REF.fai ] && crun gunzip -c $REF | bgzip > $REFbgz && REF=$REFbgz && crun samtools faidx $REF 
+[ ! -f $REF.fai ] && crun gunzip -c $REF | crun bgzip -c > $REFbgz && REF=$REFbgz && crun samtools faidx $REF 
 
 crun angsd -GL 1 \
   $TODO \

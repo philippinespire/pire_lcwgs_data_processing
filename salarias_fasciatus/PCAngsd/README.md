@@ -34,7 +34,7 @@ crun angsd -GL 1 \
   -doPost 1 \
   -anc $REF \
   -ref $REF \
-  -out $outDIR 
+  -out ./$outDIR/$outDIR 
   -bam bamNames.txt 
   -nThreads 40 
 ```

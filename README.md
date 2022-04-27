@@ -86,6 +86,8 @@ coming soon!
 
 ## 7. PCAngsd
 
+ [see notes on using angsd and related program on ODU hpcs](angsd_on_wahab_turing.md)
+
 Coming soon!
 
 ---

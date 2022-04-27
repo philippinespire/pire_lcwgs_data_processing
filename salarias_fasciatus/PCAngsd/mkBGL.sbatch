@@ -14,7 +14,7 @@ REF=$2
 outDIR=mkBGL
 
 REFbgz=$(echo $REF | sed 's/\.gz$/\.bgz/' )
-TODO='-doMajorMinor 1 -doMaf 1 -dosnpstat 1 -doPost 2'
+TODO='-doMajorMinor 1 -doMaf 1 -dosnpstat 1 -doPost 2 -doGlf 2 -doSaf 1'
 FILTERS='-uniqueOnly 1 -skipTriallelic 1 -minMapQ 30 -minQ 30 -doHWE 1 -maxHetFreq 0.5 -hetbias_pval 1e-5 -minInd 30 -minMaf 0.0062'
 
 inDIR=$(echo $inDIR | sed "s/\/$//" )
@@ -29,11 +29,6 @@ module load container_env ngsTools
 crun angsd -GL 1 \
   $TODO \
   $FILTERS \
-  -doGlf 2 \
-  -doSaf 1 \
-  -doMajorMinor 1 \
-  -doMaf 1 \
-  -doPost 1 \
   -anc $REF \
   -ref $REF \
   -out $outDIR \

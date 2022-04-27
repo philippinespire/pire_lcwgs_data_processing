@@ -65,7 +65,13 @@ I followed the [sequencing_calculations](https://github.com/cbirdlab/rroberts_th
 
 ## 5. [PCAngsd](http://popgen.dk/software/index.php/PCAngsd)
 
+make beagle file
 
+```bash
+
+```
+
+run pcangsd
 
 ```bash
 

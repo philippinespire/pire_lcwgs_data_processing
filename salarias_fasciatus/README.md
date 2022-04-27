@@ -4,7 +4,7 @@ Jordan Rodriguez
 
 ---
 
-## Preprocessing FqGZ files
+## 1. Preprocessing FqGZ files
 
 I followed the [pire_fq_gq_processing](https://github.com/philippinespire/pire_fq_gz_processing) instructions and scripts
 
@@ -15,7 +15,7 @@ At the second fastp, we noticed a motif in the first 14 bp of the reads, so we s
 
 ---
 
-## Getting only the Chromosomes and mtGenome from the Genome Download
+## 2. Getting only the Chromosomes and mtGenome from the Genome Download
 
 ```bash
 # Download the genome 
@@ -39,7 +39,7 @@ cat NC_043745.1-NC_043751.1_chr1-7.fasta NC_043752.1-NC_043766.1_chr8-23.fasta N
 
 ---
 
-## Mapping & Filtering Bams
+## 3. Mapping & Filtering Bams
 
 I followed the [pire_lcwgs_data_processing](https://github.com/philippinespire/pire_lcwgs_data_processing) repo instructions
 
@@ -53,7 +53,7 @@ After step 5. 'Filter the binary alignment maps', separate the filtered bam file
 
 ---
 
-## Sequencing Calculations 
+## 4. Sequencing Calculations 
 
 I cloned [rroberts_thesis](https://github.com/cbirdlab/rroberts_thesis) into `/home/e1garcia/shotgun_PIRE/` on wahab.hpc.odu.edu server to make the [`mappedReadStats.sbatch`](https://github.com/cbirdlab/rroberts_thesis/blob/main/scripts/bam_processing/mappedReadStats.sbatch) script easily accessible from any species directory.
 
@@ -63,7 +63,13 @@ I followed the [sequencing_calculations](https://github.com/cbirdlab/rroberts_th
 
 --- 
 
+## 5. PCAngsd
 
+```bash
+
+```
+
+---
 
 
  

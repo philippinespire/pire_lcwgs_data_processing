@@ -24,13 +24,13 @@ mkdir $outDIR
 crun angsd -GL 1 \
   $TODO \
   $FILTERS \
-  -doGlf 2 \
-  -doSaf 1 \
-  -doMajorMinor 1 \
-  -doMaf 1 \
-  -doPost 1 \
-  -anc $REF \
-  -ref $REF \
-  -out $outDIR 
-  -bam bamNames.txt 
-  -nThreads 40 
+  --doGlf 2 \
+  --doSaf 1 \
+  --doMajorMinor 1 \
+  --doMaf 1 \
+  --doPost 1 \
+  --anc $REF \
+  --ref $REF \
+  --out $outDIR 
+  --bam bamNames.txt 
+  --nThreads 40 

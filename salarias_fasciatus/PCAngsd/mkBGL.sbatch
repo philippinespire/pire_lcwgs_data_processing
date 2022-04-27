@@ -6,7 +6,6 @@
 #SBATCH --cpus-per-task 40
 
 enable_lmod
-module load container_env ngsTools
 module load container_env bwa-mem2
 export SINGULARITY_BIND=/home/e1garcia
 
@@ -24,6 +23,8 @@ ls $inDIR/*fltrd.bam > bamNames.txt
 mkdir $outDIR
 
 [ ! -f $REF.fai ] && crun gunzip -c $REF | crun bgzip -@ 40 -c > $REFbgz && REF=$REFbgz && crun samtools faidx $REF 
+
+module load container_env ngsTools
 
 crun angsd -GL 1 \
   $TODO \

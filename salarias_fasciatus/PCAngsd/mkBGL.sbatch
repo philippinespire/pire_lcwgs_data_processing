@@ -14,6 +14,7 @@ inDIR=$1
 REF=$2
 outDIR=mkBGL
 
+REFbgz=$(echo $REF | sed 's/\.gz$/\.bgz/' )
 TODO='-doMajorMinor 1 -doMaf 1 -dosnpstat 1 -doPost 2'
 FILTERS='-uniqueOnly 1 -skipTriallelic 1 -minMapQ 30 -minQ 30 -doHWE 1 -maxHetFreq 0.5 -hetbias_pval 1e-5 -minInd 30 -minMaf 0.0062'
 
@@ -22,7 +23,7 @@ inDIR=$(echo $inDIR | sed "s/\/$//" )
 ls $inDIR/*fltrd.bam > bamNames.txt 
 mkdir $outDIR
 
-[ ! -f $REF.fai ] && crun samtools faidx $REF 
+[ ! -f $REF.fai ] && crun gunzip -c $REF | bgzip > $REFbgz && REF=$REFbgz && crun samtools faidx $REF 
 
 crun angsd -GL 1 \
   $TODO \

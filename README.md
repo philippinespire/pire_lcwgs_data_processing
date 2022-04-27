@@ -77,3 +77,15 @@ The fltrBAM script will remove unmapped reads, secondary and supplementary align
 sbatch fltrBAMwgs.sbatch ./mkBAM
 ```
 ---
+
+## 6. Summarize Read Mapping Performance
+
+coming soon!
+
+---
+
+## 7. PCAngsd
+
+Coming soon!
+
+---

@@ -71,7 +71,7 @@ Here are the visual results:
 make beagle file
 
 ```bash
-cd /home/e1garcia/sh.....fix me jordan
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 mkdir mkBGL
 cd mkBGL
 sbatch mkBGL.sbatch fltrBAM GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna.gz

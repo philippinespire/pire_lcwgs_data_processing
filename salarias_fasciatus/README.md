@@ -79,8 +79,16 @@ cd mkBGL
 sbatch mkBGL.sbatch fltrBAM GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna.gz
 cd ..
 ```
+You'll need to turn your BAM files into BGL files for pcangsd to accept them. After running the above script, you will have a large file ending in `sfa.gz` inside of your mkBGL dir. Change the name of this file to be more intuitive. 
+
+```bash 
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/mkBGL
+mv mkBGL.saf.gz GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd_bgl.saf.gz
+```
 
 run pcangsd
+
+The path to file that you have now intuitively renamed above will need to be set as the input in the script. Then run the script. 
 
 ```bash
 # login to user@wahab.hpc.odu.edu

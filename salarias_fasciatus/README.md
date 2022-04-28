@@ -71,6 +71,7 @@ Here are the visual results:
 make beagle file
 
 ```bash
+# login to user@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 mkdir mkBGL
 cd mkBGL
@@ -82,7 +83,9 @@ cd ..
 run pcangsd
 
 ```bash
-
+# login to user@wahab.hpc.odu.edu
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/PCAngsd
+sbatch runPCANGSD.sbatch
 ```
 
 ---

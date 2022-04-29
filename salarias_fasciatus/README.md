@@ -107,6 +107,8 @@ cd PCAngsd
 sbatch ../runPCANGSD.sbatch $bglFile
 ```
 
+When PCAngsd is complete you can use `processPCAngsd_out.R` to visualize the results
+
 ---
 
 

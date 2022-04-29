@@ -72,6 +72,8 @@ pval<-1-pchisq(s[,2],1)
 pval.maf<-1-pchisq(s_maf,1)
 ## read positions 
 p<-read.table(sites,colC=c("factor","integer"))
+#hack by ceb
+p<-tibble(repseq(1, length(s))
 names(p)<-c("chr","pos")
 ## make manhatten plot
 pdf("manhatten_plot_from_PCAngsd_BOS_filtered.selection.pdf")

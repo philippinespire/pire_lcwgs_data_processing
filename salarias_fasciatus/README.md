@@ -106,6 +106,8 @@ paste <( ls fltrBAM/*bam | sed -e 's/^.*\///' -e 's/_.*$//' ) <( ls fltrBAM/*bam
 
 ## 7. Run [PCAngsd](http://popgen.dk/software/index.php/PCAngsd)
 
+Tutorial: [http://www.popgen.dk/software/index.php/PCAngsdTutorial](http://www.popgen.dk/software/index.php/PCAngsdTutorial)
+
 The path to file that you have now intuitively renamed above will need to be set as the input in the `runPCANGSD.sbatch` script.  Make sure you've completed the previous step and you've saved the name of the beagle file into a variable named `bglFile`
 
 ```bash

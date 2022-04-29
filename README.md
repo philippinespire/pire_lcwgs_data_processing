@@ -82,12 +82,26 @@ sbatch fltrBAMwgs.sbatch ./mkBAM
 
 coming soon!
 
+```bash
+
+```
+
 ---
 
-## 7. PCAngsd
+## 7. Make a Beagle File with Angsd
+
+```bash
+
+```
+
+## 8. Use PCAngsd to Visualize Your Data
 
  [see notes on using angsd and related program on ODU hpcs](angsd_on_wahab_turing.md)
 
 Coming soon!
+
+```bash
+
+```
 
 ---

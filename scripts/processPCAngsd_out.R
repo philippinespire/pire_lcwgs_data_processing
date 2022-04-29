@@ -1,7 +1,11 @@
 ## Tsang modified from http://www.popgen.dk/software/index.php/PCAngsdTutorial
 
+#### INITIALIZE ####
 #setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 library(tidyverse)
+library(RcppCNPy) # Numpy library for R
+
+#### READ IN ARGUMENTS FROM COMMAND LINE ####
 args = commandArgs(trailingOnly=TRUE)
 # inFILECov="../salarias_fasciatus/PCAngsd/out_PCAgsd.cov"
 # inFILEsel="../salarias_fasciatus/PCAngsd/out_PCAgsd.selection.npy"
@@ -13,32 +17,41 @@ inFILEsel=args[2]
 inFILEmaf=args[3]
 popMAP=args[4]
 sites=args[5]
-#Cov plot
+
+#### Cov plot ####
 cov <- as.matrix(read.table(inFILECov))
-e<-eigen(cov)
-ID<-read.table(popMAP,head=T)
+e <- eigen(cov)
+ID <- read.table(popMAP,
+                 head=T)
 #setting color
-col_pop <- recode(ID$POP,SR="red",CT="green",AG="blue",ST="yellow",DT="pink",VL="cyan",TV="purple")
+col_pop <- recode(ID$POP,
+                  `Sfa-ABas`="red",
+                  `Sfa-CBas`="black")
+
 #Plotting
 pdf("PCAngsd_BOS_Cov_PC1.2.3.pdf")
 PC1 <- 100*e$values[1]/sum(e$values)
 PC2 <- 100*e$values[2]/sum(e$values)
 PC3 <- 100*e$values[3]/sum(e$values)
+
 #PC1.2
 plot(e$vectors[,1:2],pch=20, col=col_pop,cex=1.6, xlab=paste("PC-1 (",round(PC1,2),sep = " ","%)"), ylab=paste("PC-2 (",round(PC2,2),sep = " ","%)"))
-text(e$vectors[,1:2],ID$INDV, cex=0.35, pos=3)
-legend("topleft",legend=c("SR","CT","AG","ST","DT","VL","TV"),col=c("red","green","blue","yellow","pink","cyan","purple"),pch=20, cex=1)
+text(e$vectors[,1:2],ID$INDV, cex=0.5, pos=3)
+legend("topleft",legend=c("Sfa-ABas","Sfa-CBas"),col=c("red","black"),pch=20, cex=1)
+
 #PC2.3
 plot(e$vectors[,2:3],pch=20, col=col_pop,cex=1.6, xlab=paste("PC-2 (",round(PC2,2),sep = " ","%)"), ylab=paste("PC-3 (",round(PC3,2),sep = " ","%)"))
-text(e$vectors[,2:3],ID$INDV, cex=0.35, pos=3)
-legend("topleft",legend=c("SR","CT","AG","ST","DT","VL","TV"),col=c("red","green","blue","yellow","pink","cyan","purple"),pch=20, cex=1)
+text(e$vectors[,2:3],ID$INDV, cex=0.5, pos=3)
+legend("topleft",legend=c("Sfa-ABas","Sfa-CBas"),col=c("red","black"),pch=20, cex=1)
+
 #PC1.3
 plot(e$vectors[,c(1,3)],pch=20, col=col_pop,cex=1.6, xlab=paste("PC-1 (",round(PC1,2),sep = " ","%)"), ylab=paste("PC-3 (",round(PC3,2),sep = " ","%)"))
-text(e$vectors[,c(1,3)],ID$INDV, cex=0.35, pos=3)
-legend("topleft",legend=c("SR","CT","AG","ST","DT","VL","TV"),col=c("red","green","blue","yellow","pink","cyan","purple"),pch=20, cex=1)
+text(e$vectors[,c(1,3)],ID$INDV, cex=0.5, pos=3)
+legend("topleft",legend=c("Sfa-ABas","Sfa-CBas"),col=c("red","black"),pch=20, cex=1)
 dev.off()
+
 ################################
-library(RcppCNPy) # Numpy library for R
+
 ## function for QQplot
 qqchi<-function(x,...){
 lambda<-round(median(x)/qchisq(0.5,1),2)

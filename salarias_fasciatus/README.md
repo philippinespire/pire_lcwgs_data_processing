@@ -64,36 +64,47 @@ Here are the visual results:
 ![](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/plots/pct_cov_meandepth_Sfa.png)
 
 ![](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/plots/prop_seqs_mapped_Sfa.png)
+
 --- 
 
-## 5. [PCAngsd](http://popgen.dk/software/index.php/PCAngsd)
+## 5. Convert the Filtered BAM Files to a Beagle File Using Angsd
 
-make beagle file
+To make the beagle file, you can use the `mkBGL.sbatch` script which accepts the directory with the filtered BAM files and a gzipped reference genome. The script will make a bgzipped reference genome and an fai index file. If a valid bgzipped reference genome and matching fai index file already exists, then mkBGL.sbatch accepts the bgzipped reference genome. 
 
 ```bash
 # login to user@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
+
+# angsd outputs files to the present directory, so it's best to create an out dir and move there
 mkdir mkBGL
 cd mkBGL
-# $1 = InDir $2 = REF
-sbatch mkBGL.sbatch fltrBAM GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna.gz
-cd ..
-```
-You'll need to turn your BAM files into BGL files for pcangsd to accept them. After running the above script, you will have a large file ending in `sfa.gz` inside of your mkBGL dir. Change the name of this file to be more intuitive. 
 
-```bash 
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/mkBGL
-mv mkBGL.saf.gz GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd_bgl.saf.gz
+# sbatch mkBGL.sbatch FilteredBamDir GzippedRefGenome
+sbatch ../../mkBGL.sbatch fltrBAM GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna.gz
 ```
 
-run pcangsd
+It's a good idea to name the beagle file descriptively, so that it is easy to know the data that it contains.  Here, we used all filtered Sfa BAM files to make the beagle file.
 
-The path to file that you have now intuitively renamed above will need to be set as the input in the script. Then run the script. 
+```bash
+mv mkBGL.beagle.gz Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd.beagle.gz
+
+# if the file name is unweildy, such as the one above you could store it in an enviromental variable to make it easier to use later
+# you may need to enter bash for the following command to work
+bglFile=Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd.beagle.gz
+```
+
+---
+
+## 6. [PCAngsd](http://popgen.dk/software/index.php/PCAngsd)
+
+The path to file that you have now intuitively renamed above will need to be set as the input in the `runPCANGSD.sbatch` script.  Make sure you've completed the previous step and you've saved the name of the beagle file into a variable named `bglFile`
 
 ```bash
 # login to user@wahab.hpc.odu.edu
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/PCAngsd
-sbatch runPCANGSD.sbatch
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
+mkdir PCAngsd
+cd PCAngsd
+sbatch ../runPCANGSD.sbatch $bglFile
 ```
 
 ---

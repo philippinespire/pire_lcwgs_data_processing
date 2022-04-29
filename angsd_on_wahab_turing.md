@@ -39,3 +39,49 @@ Please give it a try.
 
 Best,
 Min Dong
+
+---
+
+Hi Dr. Bird, Jordan,
+
+Ok, all 4 packages you mentioned are already installed last time, you can launch them with following commands:
+
+      enable_lmod
+module load container_env ngsTools
+
+      crun NGSadmix
+      crun realSFS
+      crun ngsLD
+      crun ngsRelate
+
+pcangsd is also installed into ngsTools module, so no per user installation needed, here is how to launch it:
+
+      enable_lmod
+module load container_env ngsTools
+
+      crun pcangsd -b $input \
+        --threads 40 \
+        --out $outdir \
+        --selection \
+        --pcadapt \
+        --maf_save
+
+The command seems to be working correctly:
+
+PCAngsd v.1.10.
+Jonas Meisner and Anders Albrechtsen.
+Using 40 thread(s).
+…
+Saved covariance matrix as ./out_PCAgsd.cov (Text).
+
+Performing selection scan (FastPCA) for 1 PCs.
+Saved test statistics as ./out_PCAgsd.selection.npy (Binary).
+
+Performing selection scan (pcadapt) using 1 PCs.
+Saved z-scores as ./out_PCAgsd.pcadapt.zscores.npy (Binary).
+Use provided script for obtaining p-values (pcadapt.R).
+
+Saved minor allele frequencies as ./out_PCAgsd.maf.npy (Binary)
+
+I have updated your job script, please give it a try.
+

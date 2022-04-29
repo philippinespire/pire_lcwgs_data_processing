@@ -104,7 +104,7 @@ bash
 paste <( ls fltrBAM/*bam | sed -e 's/^.*\///' -e 's/_.*$//' ) <( ls fltrBAM/*bam | sed -e 's/^.*\///' -e 's/_L[1-8]_.*bam$//' -e 's/_Ex[1-9].*$//' ) > fltrBAM/popmap_sfa.tsv
 ```
 
-## 6. [PCAngsd](http://popgen.dk/software/index.php/PCAngsd)
+## 7. Run [PCAngsd](http://popgen.dk/software/index.php/PCAngsd)
 
 The path to file that you have now intuitively renamed above will need to be set as the input in the `runPCANGSD.sbatch` script.  Make sure you've completed the previous step and you've saved the name of the beagle file into a variable named `bglFile`
 
@@ -116,14 +116,36 @@ cd PCAngsd
 sbatch ../runPCANGSD.sbatch $bglFile
 ```
 
+---
+
+## 8. Wrangle Output from PCAngsd and Visualize Results
+
 When PCAngsd is complete you can use `processPCAngsd_out.R` to visualize the results
+
+But first, you have to make sure the correct packages are installed
+
+```bash
+enable_lmod
+module load container_env ngsTools
+module load R/4.1.3
+crun R
+```
+
+You are now in the R environment
+
+```R
+install.packages("tidyverse")  #this takes a while
+# say yes, and yes again,
+# if you have xming turned on an working (windows subsystem linux on windows) then a window will pop up, select first option, otherwise,
+# use mirror 1, say yes, wait for this to finish
+
+install.packages("RcppCNPy")
+```
+
 
 ```bash
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 Rscript ../processPCAngsd_out.R PCAngsd/out_PCAgsd.cov PCAngsd/out_PCAgsd.selection.npy PCAngsd/out_PCAgsd.maf.npy fltrBAM/popmap_sfa.tsv   
 ```
-
----
-
 
  

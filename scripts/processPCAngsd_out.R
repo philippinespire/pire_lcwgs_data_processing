@@ -1,11 +1,12 @@
 ## Tsang modified from http://www.popgen.dk/software/index.php/PCAngsdTutorial
-## Open R
+
+#setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 library(tidyverse)
 args = commandArgs(trailingOnly=TRUE)
-#inFILECov="../analysis/pcAngsd_filtered/PCAngsd_BOS_filtered.cov"
-#inFILEsel="../analysis/pcAngsd_filtered/PCAngsd_BOS_filtered.selection.npy"
-#inFILEmaf="../analysis/pcAngsd_filtered/PCAngsd_BOS_filtered.maf.npy"
-#popMAP="../data/popmap7pops"
+# inFILECov="../salarias_fasciatus/PCAngsd/out_PCAgsd.cov"
+# inFILEsel="../salarias_fasciatus/PCAngsd/out_PCAgsd.selection.npy"
+# inFILEmaf="../salarias_fasciatus/PCAngsd/out_PCAgsd.maf.npy"
+# popMAP="../salarias_fasciatus/fltrBAM/popmap_sfa.tsv"
 #sites="../data/sites"
 inFILECov=args[1]
 inFILEsel=args[2]

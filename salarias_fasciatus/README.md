@@ -150,4 +150,18 @@ cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 Rscript ../processPCAngsd_out.R PCAngsd/out_PCAgsd.cov PCAngsd/out_PCAgsd.selection.npy PCAngsd/out_PCAgsd.maf.npy fltrBAM/popmap_sfa.tsv   
 ```
 
+---
+
+## 9. Run Variants of PCAngsd: 'PCAngsd_allelefreq', 
+
+When applying different aspects of the [PCAngsd tutorial](http://www.popgen.dk/software/index.php/PCAngsdTutorial) to your dataset, make sure to make new directories to send your outputs to.
+
+Estimating Individual Allele Frequencies
+```bash
+# login to user@wahab.hpc.odu.edu
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
+mkdir PCAngsd_allelefreq
+cd PCAngsd_allelefreq
+sbatch ../runPCANGSD.sbatch $bglFile
+```
  

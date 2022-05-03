@@ -154,14 +154,26 @@ Rscript ../processPCAngsd_out.R PCAngsd/out_PCAgsd.cov PCAngsd/out_PCAgsd.select
 
 ## 9. Run Variants of PCAngsd: 'PCAngsd_allelefreq', 
 
-When applying different aspects of the [PCAngsd tutorial](http://www.popgen.dk/software/index.php/PCAngsdTutorial) to your dataset, make sure to make new directories to send your outputs to.
-
-Estimating Individual Allele Frequencies
+In your species directory, make a copy of the runPCAngsd.sbatch script and appropriately name it.
 ```bash
 # login to user@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
+# view the runPCAngsd.sbatch script and copy the code, then create a new script and paste the code.
+nano runPCAngsd_allelefreq.sbatch 
+# edit the script as needed and save the script
+```
+
+When applying different aspects of the [PCAngsd tutorial](http://www.popgen.dk/software/index.php/PCAngsdTutorial) to your dataset, make sure to make new directories to send your outputs to.
+
+I made intuitively named copies of the `runPCAngsd.sbatch` script and similarly named the paired out directory for the below PCAngsd variants.
+
+Estimating Individual Allele Frequencies
+```bash
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 mkdir PCAngsd_allelefreq
 cd PCAngsd_allelefreq
-sbatch ../runPCANGSD.sbatch $bglFile
+sbatch ../runPCANGSD_allelefreq.sbatch $bglFile
 ```
+
+
  

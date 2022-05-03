@@ -163,17 +163,28 @@ nano runPCAngsd_allelefreq.sbatch
 # edit the script as needed and save the script
 ```
 
-When applying different aspects of the [PCAngsd tutorial](http://www.popgen.dk/software/index.php/PCAngsdTutorial) to your dataset, make sure to make new directories to send your outputs to.
+When applying different aspects of the [PCAngsd tutorial](http://www.popgen.dk/software/index.php/PCAngsdTutorial) to your dataset, run the scripts from the species directory, the script will generate the out directory that you name as the second argument in the command line.
 
 I made intuitively named copies of the `runPCAngsd.sbatch` script and similarly named the paired out directory for the below PCAngsd variants.
 
-Estimating Individual Allele Frequencies
+Estimating Individual Allele Frequencies : `runPCANGSD_allelefreq.sbatch`
 ```bash
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
-mkdir PCAngsd_allelefreq
-cd PCAngsd_allelefreq
-sbatch ../runPCANGSD_allelefreq.sbatch $bglFile
+# $1 = bglFile $2 = outdir to be created $3 = outfile prefix
+sbatch runPCANGSD_allelefreq.sbatch ./mkBGL/$bglFile ./PCAngsd_allelefreq out_PCAngsd_allelefreq
 ```
+
+Without Estimating Individual Allele Frequencies : `runPCANGSD_noallelefreq.sbatch`
+```bash
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
+sbatch runPCANGSD_noallelefreq.sbatch ./mkBGL/$bglFile ./PCAngsd_noallelefreq out_PCAngsd_noallelefreq
+```
+
+Admixture based on two PC : `runPCANGSD_admix.sbatch`
+```bash
+
+```
+
 
 
  

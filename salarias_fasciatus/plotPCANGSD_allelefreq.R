@@ -1,5 +1,7 @@
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
+library(tidyverse)
+
 #open R
 pop<-read.table("fltrBAM/popmap_sfa.tsv",
                 header = TRUE)

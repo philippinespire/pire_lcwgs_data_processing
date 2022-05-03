@@ -18,9 +18,6 @@ mkdir -p $outdir
 
 #running
 #python $$pcangsd -b $input
-crun pcangsd -b $input -o \
+crun pcangsd --beagle $input \
         --threads 40 \
-        --out $outdir \
-        --selection \
-        --pcadapt \
-        --maf_save
+        --out $outdir 

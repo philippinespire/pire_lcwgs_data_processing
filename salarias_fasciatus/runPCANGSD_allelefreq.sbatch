@@ -12,6 +12,8 @@ export SINGULARITY_BIND=/home/e1garcia
 input=$1  # "../mkBGL/GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd.beagle.gz"
 outdir=$2  #"./out_PCAngsd"
 
+echo "outdir=$2"
+
 mkdir -p $outdir
 
 crun pcangsd --beagle $input \

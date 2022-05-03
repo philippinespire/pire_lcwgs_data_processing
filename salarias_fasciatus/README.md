@@ -185,6 +185,12 @@ Admixture based on two PC : `runPCANGSD_admix.sbatch`
 
 ```
 
+Inbreeding in the admixed individuals
+```bash
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
+sbatch runPCANGSD_inbred_admix.sbatch ./mkBGL/$bglFile ./PCAngsd_inbred_admix out_PCAngsd_inbred_admix
+```
+
 
 
  

@@ -13,6 +13,6 @@ inBEAGLE=$1  # ./mkBGL/GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fl
 outDIR=$2  #./PCAngsd_allelefreq
 outFilePREFIX=$3  #out_PCAngsd_allelefreq
 
-crun pcangsd --beagle $input \
+crun pcangsd --beagle $inBEAGLE \
         --threads 40 \
         --out $outDIR/$outFilePREFIX 

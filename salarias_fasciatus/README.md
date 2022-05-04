@@ -203,5 +203,25 @@ sbatch runPCANGSD_inbred_allelefreq.sbatch ./mkBGL/$bglFile ./PCAngsd_inbred_all
 
 ## 10. Wrangle Outputs from PCAngsd Variants and Visualize Results
 
+Like in step 8., when the PCAngsd variants are complete, you can use `processPCAngsd_out.R` to visualize the results
+
+Make sure the correct packages are installed
+
+```bash
+enable_lmod
+module load container_env ngsTools
+module load R/4.1.3
+crun R
+```
+
+```R
+install.packages("tidyverse")  #this takes a while
+# say yes, and yes again,
+# if you have xming turned on an working (windows subsystem linux on windows) then a window will pop up, select first option, otherwise,
+# use mirror 1, say yes, wait for this to finish
+
+install.packages("RcppCNPy")
+```
+
 
  

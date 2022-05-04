@@ -108,14 +108,13 @@ paste <( ls fltrBAM/*bam | sed -e 's/^.*\///' -e 's/_.*$//' ) <( ls fltrBAM/*bam
 
 Tutorial: [http://www.popgen.dk/software/index.php/PCAngsdTutorial](http://www.popgen.dk/software/index.php/PCAngsdTutorial)
 
-The path to file that you have now intuitively renamed above will need to be set as the input in the `runPCANGSD.sbatch` script.  Make sure you've completed the previous step and you've saved the name of the beagle file into a variable named `bglFile`
+The path to file that you have now intuitively renamed above will need to be set as the first argument in the command line when running the `runPCANGSD.sbatch` script.  Make sure you've completed the previous step and you've saved the name of the beagle file into a variable named `bglFile`. The second and third arguments will create the out directory and the prefix to the out files.
 
 ```bash
 # login to user@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
-mkdir PCAngsd
-cd PCAngsd
-sbatch ../runPCANGSD.sbatch $bglFile
+# $1=bglFile $2=OUTDIR $3=OUT_PREFIX
+sbatch runPCANGSD.sbatch ./mkBGL/$bglFile ./PCAngsd out_PCAngsd
 ```
 
 ---
@@ -150,27 +149,29 @@ cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 Rscript ../processPCAngsd_out.R PCAngsd/out_PCAgsd.cov PCAngsd/out_PCAgsd.selection.npy PCAngsd/out_PCAgsd.maf.npy fltrBAM/popmap_sfa.tsv   
 ```
 
+add visual here 
+
 ---
 
-## 9. Run Variants of PCAngsd: `runPCANGSD_allelefreq.sbatch, runPCANGSD_noallelefreq.sbatch, runPCANGSD_admix.sbatch, runPCANGSD_inbred_admix.sbatch, runPCANGSD_inbred_allelefreq.sbatch`
+## 9. Run Variants of PCAngsd 
 
-In your species directory, make a copy of the runPCAngsd.sbatch script and appropriately name it.
+In your species directory, make a copy of the runPCANGSD.sbatch script and appropriately name it.
 ```bash
 # login to user@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
-# view the runPCAngsd.sbatch script and copy the code, then create a new script and paste the code.
-nano runPCANGSD_allelefreq.sbatch 
+less runPCANGSD.sbatch # copy code
+nano runPCANGSD_allelefreq.sbatch # paste code & edit
 # edit the script as needed and save the script
 ```
 
 When applying different aspects of the [PCAngsd tutorial](http://www.popgen.dk/software/index.php/PCAngsdTutorial) to your dataset, run the scripts from the species directory; the script will generate the out directory that you name as the second argument in the command line.
 
-I made intuitively named copies of the `runPCAngsd.sbatch` script and similarly named the paired out directory for the below PCAngsd variants.
+I made intuitively named copies of the `runPCANGSD.sbatch` script and similarly named the paired out directory for the below PCAngsd variants.
 
 Estimating Individual Allele Frequencies : `runPCANGSD_allelefreq.sbatch`
 ```bash
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
-# $1=bglFile $2=outdir created $3=outfile prefix
+# $1=bglFile $2=OUTDIR $3=OUT_PREFIX
 sbatch runPCANGSD_allelefreq.sbatch ./mkBGL/$bglFile ./PCAngsd_allelefreq out_PCAngsd_allelefreq
 ```
 

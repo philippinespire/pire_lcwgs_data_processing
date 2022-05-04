@@ -1,7 +1,7 @@
 #!/bin/bash -l
 #SBATCH --job-name=PCAngsd
 #SBATCH -o PCAngsd-%j.out
-#SBATCH -e PCAngsd.err
+##SBATCH -e PCAngsd.err
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task 40
 
@@ -9,18 +9,15 @@ enable_lmod
 module load container_env ngsTools
 export SINGULARITY_BIND=/home/e1garcia
 
-#Soft
-#input and output beagle
-input=$1  # "../mkBGL/GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd.beagle.gz"
-outdir="./out_PCAngsd"
+inBEAGLE=$1  # ./mkBGL/GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd.beagle.gz
+outDIR=$2  #./PCAngsd_admix
+outFilePREFIX=$3  #out_PCAngsd_admix
 
-mkdir -p $outdir
+mkdir -p $outDIR
 
-#running
-#python $$pcangsd -b $input
-crun pcangsd -b $input -e 2 -o \
+crun pcangsd --beagle $inBEAGLE \
         --threads 40 \
-        --out $outdir -admix -admix_alpha 50 \
-        --selection \
-        --pcadapt \
-        --maf_save
+	-e 2 \
+        --out $outDIR/$outFilePREFIX \
+	--admix \
+	--admix_alpha 50 

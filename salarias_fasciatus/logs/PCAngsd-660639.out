@@ -1,3 +1,4 @@
+
 usage: pcangsd [-h] [--version] [-b FILE] [-p FILE-PREFIX] [-e INT] [-t INT]
                [-o OUTPUT] [--filter FILE] [--filterSites FILE]
                [--plink_error FLOAT] [--minMaf FLOAT] [--maf_iter INT]
@@ -10,4 +11,4 @@ usage: pcangsd [-h] [--version] [-b FILE] [-p FILE-PREFIX] [-e INT] [-t INT]
                [--admix_alpha FLOAT] [--admix_seed INT] [--admix_auto FLOAT]
                [--admix_depth INT] [--tree] [--tree_samples FILE] [--maf_save]
                [--pi_save] [--dosage_save] [--sites_save]
-pcangsd: error: argument -o/--out: expected one argument
+pcangsd: error: ambiguous option: --inbreed could match --inbreedSites, --inbreedSamples, --inbreed_iter, --inbreed_tole

@@ -152,25 +152,25 @@ Rscript ../processPCAngsd_out.R PCAngsd/out_PCAgsd.cov PCAngsd/out_PCAgsd.select
 
 ---
 
-## 9. Run Variants of PCAngsd: 'PCAngsd_allelefreq', 
+## 9. Run Variants of PCAngsd: `runPCANGSD_allelefreq.sbatch, runPCANGSD_noallelefreq.sbatch, runPCANGSD_admix.sbatch, runPCANGSD_inbred_admix.sbatch, runPCANGSD_inbred_allelefreq.sbatch`
 
 In your species directory, make a copy of the runPCAngsd.sbatch script and appropriately name it.
 ```bash
 # login to user@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 # view the runPCAngsd.sbatch script and copy the code, then create a new script and paste the code.
-nano runPCAngsd_allelefreq.sbatch 
+nano runPCANGSD_allelefreq.sbatch 
 # edit the script as needed and save the script
 ```
 
-When applying different aspects of the [PCAngsd tutorial](http://www.popgen.dk/software/index.php/PCAngsdTutorial) to your dataset, run the scripts from the species directory, the script will generate the out directory that you name as the second argument in the command line.
+When applying different aspects of the [PCAngsd tutorial](http://www.popgen.dk/software/index.php/PCAngsdTutorial) to your dataset, run the scripts from the species directory; the script will generate the out directory that you name as the second argument in the command line.
 
 I made intuitively named copies of the `runPCAngsd.sbatch` script and similarly named the paired out directory for the below PCAngsd variants.
 
 Estimating Individual Allele Frequencies : `runPCANGSD_allelefreq.sbatch`
 ```bash
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
-# $1 = bglFile $2 = outdir to be created $3 = outfile prefix
+# $1=bglFile $2=outdir created $3=outfile prefix
 sbatch runPCANGSD_allelefreq.sbatch ./mkBGL/$bglFile ./PCAngsd_allelefreq out_PCAngsd_allelefreq
 ```
 
@@ -182,19 +182,25 @@ sbatch runPCANGSD_noallelefreq.sbatch ./mkBGL/$bglFile ./PCAngsd_noallelefreq ou
 
 Admixture based on two PC : `runPCANGSD_admix.sbatch`
 ```bash
-
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
+sbatch runPCANGSD_admix.sbatch ./mkBGL/$bglFile ./PCAngsd_admix out_PCAngsd_admix
 ```
 
-Inbreeding in the admixed individuals
+Inbreeding in the admixed individuals : `runPCANGSD_inbred_admix.sbatch`
 ```bash
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 sbatch runPCANGSD_inbred_admix.sbatch ./mkBGL/$bglFile ./PCAngsd_inbred_admix out_PCAngsd_inbred_admix
 ```
 
-Inbreeding with individual allele frequencies
+Inbreeding with individual allele frequencies : `runPCANGSD_inbred_allelefreq.sbatch`
 ```bash
-
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
+sbatch runPCANGSD_inbred_allelefreq.sbatch ./mkBGL/$bglFile ./PCAngsd_inbred_allelefreq out_PCAngsd_inbred_allelefreq
 ```
+
+---
+
+## 10. Wrangle Outputs from PCAngsd Variants and Visualize Results
 
 
  

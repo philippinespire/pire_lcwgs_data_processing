@@ -281,6 +281,10 @@ done on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 sbatch runPCANGSD_selection.sbatch ./mkBGL/$bglFile ./PCAngsd_selection out_PCAngsd_selection
 ```
+### Visualize results using `plotPCANGSD_selection.R`
+
+results coming soon :)
+
 
 
 

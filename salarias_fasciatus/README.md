@@ -226,6 +226,15 @@ The `.tsv` pop map created above and the `.cov` out file from `runPCANGSD_allele
 
 Here were the results: 
 
+PC1 v PC2 
+![](PCAngsd_allelefreq1.pdf)
+
+PC1 v PC3
+![](PCAngsd_allelefreq2.pdf)
+
+PC2 v PC3
+![](PCAngsd_allelefreq3.pdf)
+
 
 
 

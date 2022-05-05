@@ -168,32 +168,32 @@ When applying different aspects of the [PCAngsd tutorial](http://www.popgen.dk/s
 
 I made intuitively named copies of the `runPCANGSD.sbatch` script and similarly named the paired out directory for the below PCAngsd variants.
 
-Estimating Individual Allele Frequencies : `runPCANGSD_allelefreq.sbatch`
+### Estimating Individual Allele Frequencies : `runPCANGSD_allelefreq.sbatch`
 ```bash
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 # $1=bglFile $2=OUTDIR $3=OUT_PREFIX
 sbatch runPCANGSD_allelefreq.sbatch ./mkBGL/$bglFile ./PCAngsd_allelefreq out_PCAngsd_allelefreq
 ```
 
-Without Estimating Individual Allele Frequencies : `runPCANGSD_noallelefreq.sbatch`
+### Without Estimating Individual Allele Frequencies : `runPCANGSD_noallelefreq.sbatch`
 ```bash
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 sbatch runPCANGSD_noallelefreq.sbatch ./mkBGL/$bglFile ./PCAngsd_noallelefreq out_PCAngsd_noallelefreq
 ```
 
-Admixture based on two PC : `runPCANGSD_admix.sbatch`
+### Admixture based on two PC : `runPCANGSD_admix.sbatch`
 ```bash
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 sbatch runPCANGSD_admix.sbatch ./mkBGL/$bglFile ./PCAngsd_admix out_PCAngsd_admix
 ```
 
-Inbreeding in the admixed individuals : `runPCANGSD_inbred_admix.sbatch`
+### Inbreeding in the admixed individuals : `runPCANGSD_inbred_admix.sbatch`
 ```bash
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 sbatch runPCANGSD_inbred_admix.sbatch ./mkBGL/$bglFile ./PCAngsd_inbred_admix out_PCAngsd_inbred_admix
 ```
 
-Inbreeding with individual allele frequencies : `runPCANGSD_inbred_allelefreq.sbatch`
+### Inbreeding with individual allele frequencies : `runPCANGSD_inbred_allelefreq.sbatch`
 ```bash
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 sbatch runPCANGSD_inbred_allelefreq.sbatch ./mkBGL/$bglFile ./PCAngsd_inbred_allelefreq out_PCAngsd_inbred_allelefreq
@@ -220,9 +220,12 @@ install.packages("tidyverse")  #this takes a while
 
 install.packages("RcppCNPy")
 ```
-Estimating Individual Allele Frequencies: `plotPCANGSD_allelefreq.R`
 
-The `.tsv` pop map created above and the `.cov` out file from `runPCANGSD_allelefreq.sbatch` script were read into the `plotPCANGSD_allelefreq.R` script
+Pull any changes to the species directory to your local computer and open `plotPCANGSD_allelefreq.R` in Rstudio.
+
+### Estimating Individual Allele Frequencies: `plotPCANGSD_allelefreq.R`
+
+I read in the `.tsv` pop map created above and the `.cov` out file from `runPCANGSD_allelefreq.sbatch` script into the `plotPCANGSD_allelefreq.R` script in Rstudio and ran the script.
 
 Here were the results: 
 
@@ -234,6 +237,28 @@ PC1 v PC3
 
 PC2 v PC3
 ![](PCAngsd_allelefreq3.png)
+
+### Without Estimating Individual Allele Frequencies: `plotPCANGSD_allelefreq.R`
+
+To visualize the results from the `runPCANGSD_noallelefreq.sbatch` script, we again used the `plotPCANGSD_allelefreq.R` script in Rstudio, but read in the `.cov` out file from the `runPCANGSD_noallelefreq.sbatch` script. 
+
+Here were the results: 
+
+PC1 v PC2 
+![](PCAngsd_noallelefreq1.png)
+
+PC1 v PC3
+![](PCAngsd_noallelefreq2.png)
+
+PC2 v PC3
+![](PCAngsd_noallelefreq3.png)
+
+### Admixture based on two PC: `plotPCANGSD_admix.R`
+
+coming soon!
+
+
+
 
 
 

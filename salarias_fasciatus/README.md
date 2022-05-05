@@ -255,7 +255,7 @@ PC2 v PC3
 
 ### Admixture based on two PC: `plotPCANGSD_admix.R`
 
-I created `plotPCANGSD_admix.R` by adapting the instructions from the [PCAngsd tutorial](http://www.popgen.dk/software/index.php/PCAngsdTutorial). To visualize results from the `runPCANGSD_admix.sbatch` script, I opened and ran `plotPCANGSD_admix.r` in Rstudio.
+I created `plotPCANGSD_admix.R` by adapting the instructions from the [PCAngsd tutorial](http://www.popgen.dk/software/index.php/PCAngsdTutorial). To visualize results from the `runPCANGSD_admix.sbatch` script, I opened and ran `plotPCANGSD_admix.R` in Rstudio.
 
 Here were the results: 
 

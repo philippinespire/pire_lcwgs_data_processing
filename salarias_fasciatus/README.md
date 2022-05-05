@@ -261,6 +261,35 @@ Here were the results:
 
 ![](PCAngsd_admix.png)
 
+---
+
+## 11. Selection
+
+Here, we followed the Demo 2 portion of the [PCAngsd tutorial](http://popgen.dk/software/index.php/PCAngsd)
+
+The objective is to use PCAngsd to estimate the covariance matrix while jointly estimating the individual allele frequencies.
+
+### Show the differences among individuals.
+
+I used the `.cov` out file from `runPCANGSD_allelefreq.sbatch` in the `xxxxx.R` script to visualize this.
+
+### Infer selection accross the genome:
+
+Now let's try to use the PC to infer selection along the genome based on the PCA.
+
+I made yet another version of the `runPCAngsd` script and named it `runPCAngsd_selection.sbatch`.
+
+This is the code I used:
+```bash 
+done on USER@wahab.hpc.odu.edu
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
+sbatch runPCANGSD_selection.sbatch ./mkBGL/$bglFile ./PCAngsd_selection out_PCAngsd_selection
+```
+
+
+
+
+
 
 
 

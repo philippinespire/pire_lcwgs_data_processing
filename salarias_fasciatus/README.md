@@ -269,10 +269,6 @@ Here, we followed the Demo 2 portion of the [PCAngsd tutorial](http://popgen.dk/
 
 The objective is to use PCAngsd to estimate the covariance matrix while jointly estimating the individual allele frequencies.
 
-### Show the differences among individuals.
-
-I used the `.cov` out file from `runPCANGSD_allelefreq.sbatch` in the `xxxxx.R` script to visualize this.
-
 ### Infer selection accross the genome:
 
 Now let's try to use the PC to infer selection along the genome based on the PCA.

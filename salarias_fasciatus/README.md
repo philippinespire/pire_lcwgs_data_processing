@@ -222,7 +222,7 @@ install.packages("RcppCNPy")
 ```
 Estimating Individual Allele Frequencies: `plotPCANGSD_allelefreq.R`
 
-The `.tsv` pop map created above and the `.cov` out file from `runPCANGSD_allelefreq.sbatch` script were read into the `plotPCANGSD_allelefreq.R` script
+I read in the `.tsv` pop map created above and the `.cov` out file from `runPCANGSD_allelefreq.sbatch` script into the `plotPCANGSD_allelefreq.R` script in Rstudio.
 
 Here were the results: 
 
@@ -234,6 +234,28 @@ PC1 v PC3
 
 PC2 v PC3
 ![](PCAngsd_allelefreq3.png)
+
+Without Estimating Individual Allele Frequencies: `plotPCANGSD_allelefreq.R`
+
+To visualize the results from the `runPCANGSD_noallelefreq.sbatch` script, we again used the `plotPCANGSD_allelefreq.R` script in Rstudio, but read in the `.cov` out file from the `runPCANGSD_noallelefreq.sbatch` script. 
+
+Here were the results: 
+
+PC1 v PC2 
+![](PCAngsd_noallelefreq1.png)
+
+PC1 v PC3
+![](PCAngsd_noallelefreq2.png)
+
+PC2 v PC3
+![](PCAngsd_noallelefreq3.png)
+
+Admixture based on two PC: `plotPCANGSD_admix.R`
+
+coming soon
+
+
+
 
 
 

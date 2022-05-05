@@ -41,6 +41,7 @@ data_pca %>%
                  "%)"))
 
 # pdf("PCAngsd_allelefreq1.pdf")
+ggsave("./PCAngsd_allelefreq1.png", units = "in", height = 4, width = 6)
 
 data_pca %>%
   ggplot(aes(x=PC1,
@@ -61,6 +62,7 @@ data_pca %>%
                  "%)"))
 
 # pdf("PCAngsd_allelefreq2.pdf")
+ggsave("./PCAngsd_allelefreq2.png", units = "in", height = 4, width = 6)
 
 data_pca %>%
   ggplot(aes(x=PC2,
@@ -82,6 +84,7 @@ data_pca %>%
                  "%)"))
 
  # pdf("PCAngsd_allelefreq3.pdf")
+ggsave("./PCAngsd_allelefreq3.png", units = "in", height = 4, width = 6)
 
 data_pca %>%
   ggplot(aes(y=value)) +

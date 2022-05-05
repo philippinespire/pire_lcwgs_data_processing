@@ -1,0 +1,34 @@
+library(RcppCNPy) # Numpy library for R
+
+## function for QQplot
+qqchi<-function(x,...){
+  lambda<-round(median(x)/qchisq(0.5,1),2)
+  qqplot(qchisq((1:length(x)-0.5)/(length(x)),1),x,ylab="Observed",xlab="Expected",...);abline(0,1,col=2,lwd=2)
+  legend("topleft",paste("lambda=",lambda))
+}
+
+### read in seleciton statistics (chi2 distributed)
+s<-npyLoad("PCAngsd_selection/out_PCAngsd_selection.selection.npy")
+
+## make QQ plot to QC the test statistics
+qqchi(s)
+
+# convert test statistic to p-value
+pval<-1-pchisq(s,1)
+
+## read positions (hg38)
+p<-read.table("PCAngsd_selection/out_PCAngsd_selection.sites",colC=c("factor","integer"),sep="_")
+
+names(p)<-c("chr","pos")
+
+## make manhatten plot
+plot(-log10(pval),col=p$chr,xlab="Chromosomes",main="Manhattan plot")
+
+
+## zoom into region
+w<-range(which(pval<1e-7)) + c(-100,100)
+keep<-w[1]:w[2]
+plot(p$pos[keep],-log10(pval[keep]),col=p$chr[keep],xlab="HG38 Position chr2")
+
+## see the position of the most significant SNP
+p$pos[which.max(s)]

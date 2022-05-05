@@ -203,8 +203,6 @@ sbatch runPCANGSD_inbred_allelefreq.sbatch ./mkBGL/$bglFile ./PCAngsd_inbred_all
 
 ## 10. Wrangle Outputs from PCAngsd Variants and Visualize Results
 
-Like in step 8., when the PCAngsd variants are complete, you can use `processPCAngsd_out.R` to visualize the results
-
 Make sure the correct packages are installed
 
 ```bash
@@ -222,6 +220,13 @@ install.packages("tidyverse")  #this takes a while
 
 install.packages("RcppCNPy")
 ```
+Estimating Individual Allele Frequencies: `plotPCANGSD_allelefreq.R`
+
+The `.tsv` pop map created above and the `.cov` out file from `runPCANGSD_allelefreq.sbatch` script were read into the `plotPCANGSD_allelefreq.R` script
+
+Here were the results: 
+
+
 
 
  

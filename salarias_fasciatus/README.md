@@ -281,6 +281,13 @@ done on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 sbatch runPCANGSD_selection.sbatch ./mkBGL/$bglFile ./PCAngsd_selection out_PCAngsd_selection
 ```
+Now check the `.sites` file in the `out_PCAngsd_selection` out dir. If the file contains only zeros, you will need to modify your beagle file and rerun the above command. The period in the chromosome identifier can be removed and renamed using the following code:
+*note: I made a copy of my beagle file to ensure I did not accidentally compromise the original file. I copied the bgl file into the Sfa dir. 
+```bash
+done on USER@wahab.hpc.odu.edu
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
+zcat Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd.beagle.gz | sed -e "s///" -e "s///"
+```
 ### Visualize results using `plotPCANGSD_selection.R`
 
 results coming soon :)

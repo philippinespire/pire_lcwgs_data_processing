@@ -312,7 +312,15 @@ sed -e "s/NC_043745\.1/CHR01/" \
 -e "s/NC_043766\.1/CHR23/" \
 -e "s/NC_004412\.1/MIT01/" | \
 less -S \
-> Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd_rnmd.beagle.gz
+> Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd_rnmd.beagle | \
+gzip Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd_rnmd.beagle
+```
+*note: The outputted beagle file will be unzipped, and thus will need to be rezipped with `gzip`. The command `gzip` will add the `.gz` to the end of your file, so don't include it in your redirect name. 
+
+*tip: if you are unsure if your file is gzipped, you can use the command `file`, see below. 
+
+```bash 
+file FILENAME 
 ```
 
 Now, rerun the `runPCAngsd_selection.sbatch` script with the modified beagle file and check to make sure the `.sites` file in the `out_PCAngsd_selection` out dir contains values. 

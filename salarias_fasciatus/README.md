@@ -286,7 +286,7 @@ Now check the `.sites` file in the `out_PCAngsd_selection` out dir. If the file 
 ```bash
 done on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
-zcat Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd.beagle.gz | sed -e "s///" -e "s///"
+zcat Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd.beagle.gz | Less -S | sed -e "s///" -e "s///"
 ```
 ### Visualize results using `plotPCANGSD_selection.R`
 

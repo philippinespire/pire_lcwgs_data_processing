@@ -281,13 +281,42 @@ done on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 sbatch runPCANGSD_selection.sbatch ./mkBGL/$bglFile ./PCAngsd_selection out_PCAngsd_selection
 ```
-Now check the `.sites` file in the `out_PCAngsd_selection` out dir. If the file contains only zeros, you will need to modify your beagle file and rerun the above command. The period in the chromosome identifier can be removed and renamed using the following code:
+Now check the `.sites` file in the `out_PCAngsd_selection` out dir. If the file contains only zeros, you will need to modify your beagle file and rerun the above command. The `.` in the default chromosome marker can be removed and replaced using the following code:
 *note: I made a copy of my beagle file to ensure I did not accidentally compromise the original file. I copied the bgl file into the Sfa dir. 
 ```bash
 done on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
-zcat Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd.beagle.gz | Less -S | sed -e "s///" -e "s///"
+zcat Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd.beagle.gz | \
+sed -e "s/NC_043745\.1/CHR01/" \
+-e "s/NC_043745\.1/CHR01/" \
+-e "s/NC_043746\.1/CHR02/" \
+-e "s/NC_043747\.1/CHR03/" \
+-e "s/NC_043748\.1/CHR04/" \
+-e "s/NC_043749\.1/CHR05/" \
+-e "s/NC_043750\.1/CHR06/" \
+-e "s/NC_043751\.1/CHR07/" \
+-e "s/NC_043752\.1/CHR08/" \
+-e "s/NC_043753\.1/CHR09/" \
+-e "s/NC_043754\.1/CHR10/" \
+-e "s/NC_043755\.1/CHR11/" \
+-e "s/NC_043756\.1/CHR12/" \
+-e "s/NC_043757\.1/CHR13/" \
+-e "s/NC_043758\.1/CHR14/" \
+-e "s/NC_043759\.1/CHR15/" \
+-e "s/NC_043760\.1/CHR16/" \
+-e "s/NC_043761\.1/CHR17/" \
+-e "s/NC_043762\.1/CHR18/" \
+-e "s/NC_043763\.1/CHR19/" \
+-e "s/NC_043764\.1/CHR20/" \
+-e "s/NC_043765\.1/CHR22/" \
+-e "s/NC_043766\.1/CHR23/" \
+-e "s/NC_004412\.1/MIT01/" | \
+less -S \
+> Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd_rnmd.beagle.gz
 ```
+
+Now, rerun the `runPCAngsd_selection.sbatch` script with the modified beagle file and check to make sure the `.sites` file in the `out_PCAngsd_selection` out dir contains values. 
+
 ### Visualize results using `plotPCANGSD_selection.R`
 
 results coming soon :)

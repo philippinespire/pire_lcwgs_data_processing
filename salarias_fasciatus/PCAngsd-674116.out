@@ -1,0 +1,16 @@
+
+
+gzip: ./Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd_rnmd.sites: not in gzip format
+PCAngsd v.1.10.
+Jonas Meisner and Anders Albrechtsen.
+Using 40 thread(s).
+
+Parsing Beagle file.
+Traceback (most recent call last):
+  File "/usr/local/bin/pcangsd", line 11, in <module>
+    load_entry_point('PCAngsd==1.10', 'console_scripts', 'pcangsd')()
+  File "/usr/local/lib64/python3.6/site-packages/pcangsd/pcangsd.py", line 161, in main
+    L = reader_cy.readBeagle(args.beagle)
+  File "pcangsd/reader_cy.pyx", line 15, in pcangsd.reader_cy.readBeagle
+  File "pcangsd/reader_cy.pyx", line 50, in pcangsd.reader_cy.readBeagle
+ValueError: negative dimensions are not allowed

@@ -18,5 +18,5 @@ mkdir -p $outDIR
 crun pcangsd --beagle $inBEAGLE \
         --threads 40 \
         --out $outDIR/$outFilePREFIX \
-	--minMaf 0.0 \
+	--minMaf 0.01 \
 	--selection

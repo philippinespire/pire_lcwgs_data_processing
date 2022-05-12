@@ -6,10 +6,10 @@ library(RcppCNPy) # Numpy library for R
 library(tidyverse)
 
 #### USER DEFINED VARIABLES ####
-npyFile = "PCAngsd_selection/out_PCAngsd_selection.selection.npy"
+npyFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf01.selection.npy"
 sitesFile = "Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd_rnmd.sites"
 popMap = "fltrBAM/popmap_sfa.tsv"
-covFile = "PCAngsd_selection/out_PCAngsd_selection.cov"
+covFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf01.cov"
 
 #### function for QQplot and other stuff from pcangsd tutorial ####
 qqchi<-function(x,...){
@@ -89,11 +89,7 @@ plot(p$pos[keep],-log10(pval[keep]),col=p$chr[keep],xlab="HG38 Position chr2")
 ## see the position of the most significant SNP
 p$pos[which.max(selection_stats)]
 
-#### visual pca ####
-
-
-# pop<-read.table(popMap,
-#                 header = TRUE)
+#### READ IN PCA DATA ####
 C <- as.matrix(read.table(covFile))
 e <- eigen(C)
 
@@ -110,7 +106,7 @@ data_pca_2 <-
   as_tibble(e$values) %>%
   mutate(pct_variation = 100 * value/sum(value))
 
-
+#### VISUALIZE PCA ####
 data_pca %>%
   ggplot(aes(x=PC1,
              y=PC2,

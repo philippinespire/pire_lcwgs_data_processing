@@ -12,11 +12,14 @@ export SINGULARITY_BIND=/home/e1garcia
 inBEAGLE=$1  # ./mkBGL/GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd.beagle.gz
 outDIR=$2  #./PCAngsd_selection
 outFilePREFIX=$3  #out_PCAngsd_selection
+minMaf=$4
+
+outFilePREFIX=$outFilePREFIX_minMaf$minMaf
 
 mkdir -p $outDIR
 
 crun pcangsd --beagle $inBEAGLE \
         --threads 40 \
         --out $outDIR/$outFilePREFIX \
-	--minMaf 0.01 \
+	--minMaf $minMaf \
 	--selection

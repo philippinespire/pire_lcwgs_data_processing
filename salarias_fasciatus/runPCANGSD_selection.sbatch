@@ -14,7 +14,7 @@ outDIR=$2  #./PCAngsd_selection
 outFilePREFIX=$3  #out_PCAngsd_selection
 minMaf=$4
 
-outFilePREFIX=$outFilePREFIX_minMaf$minMaf
+outFilePREFIX=${outFilePREFIX}_minMaf$minMaf
 
 mkdir -p $outDIR
 

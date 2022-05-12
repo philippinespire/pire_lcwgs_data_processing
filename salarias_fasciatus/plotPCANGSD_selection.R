@@ -6,10 +6,10 @@ library(RcppCNPy) # Numpy library for R
 library(tidyverse)
 
 #### USER DEFINED VARIABLES ####
-npyFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf01.selection.npy"
+npyFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf0.02.selection.npy"
 sitesFile = "Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd_rnmd.sites"
 popMap = "fltrBAM/popmap_sfa.tsv"
-covFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf01.cov"
+covFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf0.02.cov"
 
 #### function for QQplot and other stuff from pcangsd tutorial ####
 qqchi<-function(x,...){

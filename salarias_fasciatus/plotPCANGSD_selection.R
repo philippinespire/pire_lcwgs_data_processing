@@ -6,10 +6,10 @@ library(RcppCNPy) # Numpy library for R
 library(tidyverse)
 
 #### USER DEFINED VARIABLES ####
-npyFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf0.04.selection.npy"
+npyFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf0.05_e2.selection.npy"
 sitesFile = "mkBGL/Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd_rnmd.sites"
 popMap = "fltrBAM/popmap_sfa.tsv"
-covFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf0.04.cov"
+covFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf0.05_e2.cov"
 
 #### function for QQplot and other stuff from pcangsd tutorial ####
 qqchi<-function(x,...){
@@ -104,7 +104,22 @@ data_pca <-
 
 data_pca_2 <-
   as_tibble(e$values) %>%
-  mutate(pct_variation = 100 * value/sum(value))
+  # arrange(desc(value)) %>%
+  mutate(pct_variation = 100 * value/sum(value),
+         eigenvalue_id = row_number())
+
+#### SCREE PLOT ####
+# https://en.wikipedia.org/wiki/Scree_plot
+# use this as a way of evaluating the validity of the number of principle components used by PCAngsd
+# You can find the number of principle components used in the `*.out` file
+# by default, PCAngsd uses the MAP test https://www.nature.com/articles/hdy201126
+# you can also specify the number of principle components with the -e option in PCAngsd
+data_pca_2 %>%
+  ggplot(aes(x=eigenvalue_id,
+             y=pct_variation)) +
+  geom_point() +
+  geom_line() +
+  labs(title = "Scree Plot")
 
 #### VISUALIZE PCA ####
 data_pca %>%

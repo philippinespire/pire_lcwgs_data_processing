@@ -23,4 +23,7 @@ crun pcangsd --beagle $inBEAGLE \
         --out $outDIR/$outFilePREFIX \
 	-e $e \
 	--minMaf $minMaf \
+	--maf_save \
+	--pi_save \
+	--sites_save \
 	--selection

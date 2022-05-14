@@ -77,7 +77,6 @@ cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 
 # angsd outputs files to the present directory, so it's best to create an out dir and move there
 mkdir mkBGL
-cd mkBGL
 
 # sbatch mkBGL.sbatch FilteredBamDir GzippedRefGenome
 sbatch ../../mkBGL.sbatch fltrBAM GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna.gz

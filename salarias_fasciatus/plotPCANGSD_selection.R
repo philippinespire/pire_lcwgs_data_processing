@@ -7,11 +7,11 @@ library(tidyverse)
 
 #### USER DEFINED VARIABLES ####
 npyFile = "PCAngsd_selection/out_PCAngsd_selection_maptest_minMaf0.0_e.selection.npy"
-npyFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf0.0_e3.selection.npy"
+npyFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf0.025_e10.selection.npy"
 sitesFile = "mkBGL/Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd_rnmd.sites"
 popMap = "fltrBAM/popmap_sfa.tsv"
 covFile = "PCAngsd_selection/out_PCAngsd_selection_maptest_minMaf0.0_e.cov"
-covFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf0.0_e3.cov"
+covFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf0.025_e10.cov"
 
 #### function for QQplot and other stuff from pcangsd tutorial ####
 qqchi<-function(x,...){
@@ -148,23 +148,23 @@ data_pca %>%
 # pdf("PCAngsd_selection_pc3v1.pdf")
 # ggsave("./PCAngsd_selection_pc2v1.png", units = "in", height = 4, width = 6)
 
-data_pca %>%
-  ggplot(aes(x=PC1,
-             y=PC3,
-             color=POP)) +
-  geom_point(size=3) +
-  theme_classic() +
-  labs(x = str_c("PC1 (",
-                 data_pca_2$pct_variance_explained %>%
-                   head(1) %>%
-                   round(2),
-                 "%)"),
-       y = str_c("PC3 (",
-                 data_pca_2$pct_variance_explained %>%
-                   head(3) %>%
-                   tail(1) %>%
-                   round(2),
-                 "%)"))
+# data_pca %>%
+#   ggplot(aes(x=PC1,
+#              y=PC3,
+#              color=POP)) +
+#   geom_point(size=3) +
+#   theme_classic() +
+#   labs(x = str_c("PC1 (",
+#                  data_pca_2$pct_variance_explained %>%
+#                    head(1) %>%
+#                    round(2),
+#                  "%)"),
+#        y = str_c("PC3 (",
+#                  data_pca_2$pct_variance_explained %>%
+#                    head(3) %>%
+#                    tail(1) %>%
+#                    round(2),
+#                  "%)"))
 
 # pdf("PCAngsd_selection_pc3v1.pdf")
 # ggsave("./PCAngsd_selection_pc3v1.png", units = "in", height = 4, width = 6)

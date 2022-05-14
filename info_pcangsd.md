@@ -27,7 +27,7 @@ crun pcangsd --version
   * This is the version in the ngstools container on `wahab.hpc.odu.edu`  
 * [PCAngsd Publication](https://academic.oup.com/genetics/article/210/2/719/5931101?login=true)
 * [Publication on MAP test used by PCAngsd to Select Number of Eigenvalues](https://www.nature.com/articles/hdy201126)
-* [Publication on Applying PCA to SNP Data to Detect Population Structure](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.0020190)
+* [Publication on Applying PCA to SNP Data to Detect Population Structure, Used by Both Aforementioned Pubs](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.0020190)
 
 ---
 

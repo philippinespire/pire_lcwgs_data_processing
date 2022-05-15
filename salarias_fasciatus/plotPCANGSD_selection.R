@@ -1,17 +1,17 @@
 #### INITIALIZE ####
 
 #if in rstudio, run the next line, if not, don't run the next line
-#setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 library(RcppCNPy) # Numpy library for R
 library(tidyverse)
 
 #### USER DEFINED VARIABLES ####
-npyFile = "PCAngsd_selection/out_PCAngsd_selection_maptest_minMaf0.0_e.selection.npy"
-npyFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf0.025_e10.selection.npy"
+npyFile = "PCAngsd_selection/out_PCAngsd_selection_maptest_minMaf0.05.selection.npy"
+npyFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf0.05_e32.selection.npy"
 sitesFile = "mkBGL/Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd_rnmd.sites"
 popMap = "fltrBAM/popmap_sfa.tsv"
-covFile = "PCAngsd_selection/out_PCAngsd_selection_maptest_minMaf0.0_e.cov"
-covFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf0.025_e10.cov"
+covFile = "PCAngsd_selection/test02_PCAngsd_selection_maptest_minMaf0.05.cov"
+covFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf0.05_e32.cov"
 
 #### function for QQplot and other stuff from pcangsd tutorial ####
 qqchi<-function(x,...){

@@ -10,7 +10,7 @@ npyFile = "PCAngsd_selection/out_PCAngsd_selection_maptest_minMaf0.05.selection.
 npyFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf0.05_e32.selection.npy"
 sitesFile = "mkBGL/Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd_rnmd.sites"
 popMap = "fltrBAM/popmap_sfa.tsv"
-covFile = "PCAngsd_selection/test05_maptest_minMaf0.05.cov"
+covFile = "PCAngsd_selection/test04_fltrd_maptest_minMaf0.05.cov"
 covFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf0.05_e32.cov"
 
 #### function for QQplot and other stuff from pcangsd tutorial ####
@@ -133,6 +133,7 @@ data_pca %>%
              y=PC2,
              color=POP)) +
   geom_point(size=3) +
+  stat_ellipse() +
   theme_classic() +
   labs(x = str_c("PC1 (",
                  data_pca_2$pct_variance_explained %>%
@@ -149,23 +150,24 @@ data_pca %>%
 # pdf("PCAngsd_selection_pc3v1.pdf")
 # ggsave("./PCAngsd_selection_pc2v1.png", units = "in", height = 4, width = 6)
 
-# data_pca %>%
-#   ggplot(aes(x=PC1,
-#              y=PC3,
-#              color=POP)) +
-#   geom_point(size=3) +
-#   theme_classic() +
-#   labs(x = str_c("PC1 (",
-#                  data_pca_2$pct_variance_explained %>%
-#                    head(1) %>%
-#                    round(2),
-#                  "%)"),
-#        y = str_c("PC3 (",
-#                  data_pca_2$pct_variance_explained %>%
-#                    head(3) %>%
-#                    tail(1) %>%
-#                    round(2),
-#                  "%)"))
+data_pca %>%
+  ggplot(aes(x=PC1,
+             y=PC3,
+             color=POP)) +
+  geom_point(size=3) +
+  stat_ellipse() +
+  theme_classic() +
+  labs(x = str_c("PC1 (",
+                 data_pca_2$pct_variance_explained %>%
+                   head(1) %>%
+                   round(2),
+                 "%)"),
+       y = str_c("PC3 (",
+                 data_pca_2$pct_variance_explained %>%
+                   head(3) %>%
+                   tail(1) %>%
+                   round(2),
+                 "%)"))
 
 # pdf("PCAngsd_selection_pc3v1.pdf")
 # ggsave("./PCAngsd_selection_pc3v1.png", units = "in", height = 4, width = 6)
@@ -175,6 +177,7 @@ data_pca %>%
              y=PC3,
              color=POP)) +
   geom_point(size=3) +
+  stat_ellipse() +
   theme_classic() +
   labs(x = str_c("PC2 (",
                  data_pca_2$pct_variance_explained %>%

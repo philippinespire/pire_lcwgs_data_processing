@@ -23,7 +23,9 @@ cat $sitesFile | tr -s " " "_" > ${sitesFile}.txt
 # serial
 #cat <(zcat $bglFile | head -n1) <(zcat $bglFile | grep -w -f ${sitesFile}.txt) | gzip > ${outFile}.gz
 
-# parallel
-cat <(zcat $bglFile | head -n1) <(zcat $bglFile | parallel --pipe -N 50000 "grep -w -f $sitesFile.txt ") | gzip > ${outFile}.gz
+cat <(zcat $bglFile | head -n1) <(zcat $bglFile | awk 'NR==FNR{a[$1]=$1OFS$2;next}{$1=a[$1];print}' OFS='\t' $sitesFile.txt - | grep -Pv "^\t") | gzip > ${outFile}.gz
 
+# parallel
+#cat <(zcat $bglFile | head -n1) <(zcat $bglFile | parallel --pipe -N 50000 "grep -w -f $sitesFile.txt ") | gzip > ${outFile}.gz
+#
 rm  ${sitesFile}.txt

@@ -1,0 +1,6 @@
+	-> angsd version: 0.937 (htslib: 1.14-9-ge769401) build(Mar 25 2022 10:24:30)
+	-> angsd -beagle ./mkBGL/test03.beagle.gz -sites ./mkBGL/test03.minIndPerPop.sites -fai ./refGenome/GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna.bgz.fai -out ./mkBGL/test03_fltrd -nThreads 40 
+	-> Inputtype is beagle
+	-> [prep_sites.cpp] Reading binary representation of './mkBGL/test03.minIndPerPop.sites'
+	-> Binary file doesnt exists:./mkBGL/test03.minIndPerPop.sites.bin you should index:./mkBGL/test03.minIndPerPop.sites
+	-> like: 'angsd sites index ./mkBGL/test03.minIndPerPop.sites'

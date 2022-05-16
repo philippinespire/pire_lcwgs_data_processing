@@ -10,7 +10,7 @@ npyFile = "PCAngsd_selection/out_PCAngsd_selection_maptest_minMaf0.05.selection.
 npyFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf0.05_e32.selection.npy"
 sitesFile = "mkBGL/Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd_rnmd.sites"
 popMap = "fltrBAM/popmap_sfa.tsv"
-covFile = "PCAngsd_selection/test04_maptest_minMaf0.05.cov"
+covFile = "PCAngsd_selection/test05_maptest_minMaf0.05.cov"
 covFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf0.05_e32.cov"
 
 #### function for QQplot and other stuff from pcangsd tutorial ####

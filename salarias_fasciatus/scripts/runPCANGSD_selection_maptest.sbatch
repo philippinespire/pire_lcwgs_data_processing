@@ -22,4 +22,5 @@ crun pcangsd --beagle $inBEAGLE \
         --threads 40 \
         --out $outDIR/$outFilePREFIX \
 	--minMaf $minMaf \
-	--selection
+	--selection \
+	--sites_save

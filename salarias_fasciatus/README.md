@@ -95,6 +95,8 @@ bglFile=Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr
 ```
 In Downstream analysis, we realized that there were stringent default filters that were employed by angsd, removing data that we did not want to remove. To combat this, we made `mkBGL2.sbatch`, where we ran a series of 6 tests with different filter parameters. 
 
+Next, we will be creating files for the `initial_bgl_filters` and `final_bgl_filters` -- coming soon
+
 ```bash 
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 $1=fltrBAMdir $2=outPREFIX
@@ -125,7 +127,7 @@ The path to file that you have now intuitively renamed above will need to be set
 # login to user@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 # $1=bglFile $2=OUTDIR $3=OUT_PREFIX
-sbatch runPCANGSD.sbatch ./mkBGL/$bglFile ./PCAngsd out_PCAngsd
+sbatch scripts/runPCANGSD.sbatch ./mkBGL/$bglFile ./PCAngsd out_PCAngsd
 ```
 
 ---
@@ -183,31 +185,31 @@ I made intuitively named copies of the `runPCANGSD.sbatch` script and similarly 
 ```bash
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 # $1=bglFile $2=OUTDIR $3=OUT_PREFIX
-sbatch runPCANGSD_allelefreq.sbatch ./mkBGL/$bglFile ./PCAngsd_allelefreq out_PCAngsd_allelefreq
+sbatch scripts/runPCANGSD_allelefreq.sbatch ./mkBGL/$bglFile ./PCAngsd_allelefreq out_PCAngsd_allelefreq
 ```
 
 ### Without Estimating Individual Allele Frequencies : `runPCANGSD_noallelefreq.sbatch`
 ```bash
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
-sbatch runPCANGSD_noallelefreq.sbatch ./mkBGL/$bglFile ./PCAngsd_noallelefreq out_PCAngsd_noallelefreq
+sbatch scripts/runPCANGSD_noallelefreq.sbatch ./mkBGL/$bglFile ./PCAngsd_noallelefreq out_PCAngsd_noallelefreq
 ```
 
 ### Admixture based on two PC : `runPCANGSD_admix.sbatch`
 ```bash
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
-sbatch runPCANGSD_admix.sbatch ./mkBGL/$bglFile ./PCAngsd_admix out_PCAngsd_admix
+sbatch scripts/runPCANGSD_admix.sbatch ./mkBGL/$bglFile ./PCAngsd_admix out_PCAngsd_admix
 ```
 
 ### Inbreeding in the admixed individuals : `runPCANGSD_inbred_admix.sbatch`
 ```bash
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
-sbatch runPCANGSD_inbred_admix.sbatch ./mkBGL/$bglFile ./PCAngsd_inbred_admix out_PCAngsd_inbred_admix
+sbatch scripts/runPCANGSD_inbred_admix.sbatch ./mkBGL/$bglFile ./PCAngsd_inbred_admix out_PCAngsd_inbred_admix
 ```
 
 ### Inbreeding with individual allele frequencies : `runPCANGSD_inbred_allelefreq.sbatch`
 ```bash
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
-sbatch runPCANGSD_inbred_allelefreq.sbatch ./mkBGL/$bglFile ./PCAngsd_inbred_allelefreq out_PCAngsd_inbred_allelefreq
+sbatch scripts/runPCANGSD_inbred_allelefreq.sbatch ./mkBGL/$bglFile ./PCAngsd_inbred_allelefreq out_PCAngsd_inbred_allelefreq
 ```
 
 ---
@@ -290,7 +292,7 @@ This is the code I used:
 ```bash 
 done on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
-sbatch runPCANGSD_selection.sbatch ./mkBGL/$bglFile ./PCAngsd_selection out_PCAngsd_selection
+sbatch scripts/runPCANGSD_selection.sbatch ./mkBGL/$bglFile ./PCAngsd_selection out_PCAngsd_selection
 ```
 Now check the `.sites` file in the `out_PCAngsd_selection` out dir. If the file contains only zeros, you will need to modify your beagle file and rerun the above command. The `.` in the default chromosome marker can be removed and replaced using the following code:
 *note: I made a copy of my beagle file to ensure I did not accidentally compromise the original file. I copied the bgl file into the Sfa dir. 

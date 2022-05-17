@@ -69,6 +69,8 @@ Here are the visual results:
 
 ## 5. Convert the Filtered BAM Files to a Beagle File Using Angsd
 
+*Note: be mindful of the possible default filters employed by angsd.*
+
 To make the beagle file, you can use the `mkBGL.sbatch` script which accepts the directory with the filtered BAM files and a gzipped reference genome. The script will make a bgzipped reference genome and an fai index file. If a valid bgzipped reference genome and matching fai index file already exists, then mkBGL.sbatch accepts the bgzipped reference genome. 
 
 ```bash
@@ -91,6 +93,16 @@ mv mkBGL.beagle.gz Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_cl
 # you may need to enter bash for the following command to work
 bglFile=Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd.beagle.gz
 ```
+In Downstream analysis, we realized that there were stringent default filters that were employed by angsd, removing data that we did not want to remove. To combat this, we made `mkBGL2.sbatch`, where we ran a series of 6 tests with different filter parameters. 
+
+```bash 
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
+$1=fltrBAMdir $2=outPREFIX
+sbatch scripts/mkBGL2.sbatch fltrBAM test06
+```
+After running seven tests, we determined the final mkBGL settings that we believed fit best for *Salarias fasciatus*. 
+
+
 
 ---
 

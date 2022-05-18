@@ -5,7 +5,7 @@
 Jordan Rodriguez
 
 ---
-This repository outlines the roadmap we followed to get *Salarias fasciatus* through the [Low Coverage Whole Genome Sequencing Pipeline](../) and the analysis we did in order to gain insight on the historical population demography of this aquarium fish. 
+This repository outlines the roadmap we followed to get *Salarias fasciatus* through the [Low Coverage Whole Genome Sequencing Pipeline](https://github.com/philippinespire/pire_lcwgs_data_processing) and the analysis we did in order to gain insight on the historical population demography of this aquarium fish. 
 
 ---
 

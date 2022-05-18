@@ -307,7 +307,7 @@ The objective is to use PCAngsd to estimate the covariance matrix while jointly 
 
 ### Infer selection accross the genome:
 
-Now let's try to use the PC to infer selection along the genome based on the PCA.
+a. Now let's try to use the PC to infer selection along the genome based on the PCA.
 
 I made yet another version of the `runPCAngsd` script and named it `runPCAngsd_selection.sbatch`.
 
@@ -361,9 +361,25 @@ file FILENAME
 
 Now, rerun the `runPCAngsd_selection.sbatch` script with the modified beagle file and check to make sure the `.sites` file in the `out_PCAngsd_selection` out dir contains values. 
 
+b. Now, let's run `PCAngsd_selection_maptest.sbatch` on the test beagle files.
+```bash
+$1= InBGL $2=outDIR $3=outFilePREFIX $4=minMaf 
+sbatch scripts/runPCANGSD_selection_maptest.sbatch ./mkBGL/test06.beagle.gz ./PCAngsd_selection test06_PCAngsd_selection_maptest_minMaf0.05 0.05
+```
+After the script finishes running, view the `.out` file and report the # SNPs retained and # Principal Components:
+| test##   | # SNPs retained | # Principal Components |
+|----------|-----------------|------------------------|
+| test 01  |                 |                        |
+| test 02  |                 |                        |
+| test 03  |                 |                        | 
+| test 04  |                 |                        |
+| test 05  |                 |                        |
+| test 06  |     560777      |            1           | 
+
+
 ### Visualize results using `plotPCANGSD_selection.R`
 
-results coming soon :)
+
 
 
 

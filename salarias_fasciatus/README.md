@@ -74,44 +74,25 @@ Here are the visual results:
 
 ## 5. Convert the Filtered BAM Files to a Beagle File Using Angsd
 
-*Note: be mindful of the possible default filters employed by angsd. See section b.*
+It is important to note that there are stringent default filters that are employed by Angsd during the creation of the beagle file, which may remove data that we do not want to remove. To navigate this, we made `mkBGL2.sbatch`, where we ran a series of 6 tests with different filter parameters that are indicated in the script. 
 
-a. To make the beagle file, you can use the `mkBGL.sbatch` script which accepts the directory with the filtered BAM files and a gzipped reference genome. The script will make a bgzipped reference genome and an fai index file. If a valid bgzipped reference genome and matching fai index file already exists, then mkBGL.sbatch accepts the bgzipped reference genome. 
-
+To make the beagle file, you can use the `mkBGL2.sbatch` script which accepts the directory with the filtered BAM files. 
 ```bash
-# login to user@wahab.hpc.odu.edu
+# done on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
-
-# angsd outputs files to the present directory, so it's best to create an out dir and move there
+# Angsd outputs files to the mkBGL dir, so it may be usefiul to create this dir before running the script if you haven't already
 mkdir mkBGL
-
-# sbatch mkBGL.sbatch FilteredBamDir GzippedRefGenome
-sbatch ../../mkBGL.sbatch fltrBAM GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna.gz
-```
-
-It's a good idea to name the beagle file descriptively, so that it is easy to know the data that it contains.  Here, we used all filtered Sfa BAM files to make the beagle file.
-
-```bash
-mv mkBGL.beagle.gz Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd.beagle.gz
-
-# if the file name is unweildy, such as the one above you could store it in an enviromental variable to make it easier to use later
-# you may need to enter bash for the following command to work
-bglFile=Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd.beagle.gz
-```
-
-b. In Downstream analysis, we realized that there were stringent default filters that were employed by angsd during the creation of the beagle file, removing data that we did not want to remove. To combat this, we made `mkBGL2.sbatch`, where we ran a series of 7 tests with different filter parameters indicated in the script. 
-
-*Soon, we will be creating files for the `initial_bgl_filters` and `final_bgl_filters` for them to be fed to the script instead of hardcoded -- coming soon*
-
-```bash 
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
-$1=fltrBAMdir $2=outPREFIX
+# $1=fltrBAMdir $2=outPREFIX
 sbatch scripts/mkBGL2.sbatch fltrBAM test06
 ```
 
-After running seven tests, we determined the final mkBGL settings that we believed fit best for *Salarias fasciatus*. To do this, We first subset the data for easier handling and faster visualization in R using the following code for each test:
+*Soon, we will be creating files for the `initial_bgl_filters` and `final_bgl_filters` for them to be fed to the script instead of hardcoded -- coming soon*
 
-```bash 
+
+After running 6 tests, we determined the final mkBGL settings that we believed fit best for *Salarias fasciatus*. To do this, We first subset the data for easier handling and faster visualization in R using the following code for each test:
+
+```bash
+# here, we take only the first 100000 rows of our data and redirect that into a new file
 zcat test06.snpStat.gz | head -n 100000 > test06.100k.snpStat
 ```
 
@@ -119,16 +100,14 @@ Next, edit the `.gitignore` file located in the parent dir to allow the subsette
 
 You are now in the R environment:
 
-After loading the needed librarys and data, make sure to change the `numInd` and `minInd` to the appropriate values for your dataset.
+After loading the needed librarys and data, make sure to change the `numInd` and `minInd` to the appropriate values for your dataset. Here, we use 81 and 41.
 ```R
 numInd=81
 minInd=41
 ```
 This script will output a series of 12 plots: Positive Strand Read Counts, Negative Strand Read Counts, Positive Strand Minor AF, Negative Strand Minor AF, Strand Bias 1, Strand Bias 2, Strand Bias 3, HWE P Value, Base Quality P Value, Mapping Quality P Value, Edge P Value, and Het Stat P Value.
 
-These plots, along with the PCA plots, will help us to determine the final beagle file parameters. 
-
-See step 11 b. to see how we made the PCA plots for the test runs. 
+These plots, along with the PCA plots, will help us to determine the final beagle file parameters needeed.  
 
 ### Filter the Beagle File: Removing sites that dont pass 
 

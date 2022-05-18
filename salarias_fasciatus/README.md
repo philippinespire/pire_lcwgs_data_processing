@@ -114,9 +114,11 @@ Next, edit the `.gitignore` file located in the parent dir to allow the subsette
 
 You are now in the R environment:
 
-
-
-
+After loading the needed librarys and data, make sure to change the `numInd` and `minInd` to the appropriate values for your dataset.
+```R
+numInd=81
+minInd=30
+```
 
 ---
 

@@ -110,7 +110,7 @@ After running seven tests, we determined the final mkBGL settings that we believ
 zcat test06.snpStat.gz | head -n 100000 > test06.100k.snpStat
 ```
 
-Next, edit the `.gitignore` file to allow the subsetted txt file through when pushing changes. Pull the changes to your local computer and open the `processSnpStat.R` script.
+Next, edit the `.gitignore` file located in the parent dir to allow the subsetted txt file through when pushing changes. Pull the changes to your local computer and open the `processSnpStat.R` script.
 
 You are now in the R environment:
 

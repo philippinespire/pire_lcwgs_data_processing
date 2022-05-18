@@ -109,7 +109,7 @@ $1=fltrBAMdir $2=outPREFIX
 sbatch scripts/mkBGL2.sbatch fltrBAM test06
 ```
 
-After running seven tests, we determined the final mkBGL settings that we believed fit best for *Salarias fasciatus*. We first subset the data for easier handling and faster visualization in R using the following code:
+After running seven tests, we determined the final mkBGL settings that we believed fit best for *Salarias fasciatus*. To do this, We first subset the data for easier handling and faster visualization in R using the following code for each test:
 
 ```bash 
 zcat test06.snpStat.gz | head -n 100000 > test06.100k.snpStat
@@ -122,12 +122,20 @@ You are now in the R environment:
 After loading the needed librarys and data, make sure to change the `numInd` and `minInd` to the appropriate values for your dataset.
 ```R
 numInd=81
-minInd=30
+minInd=41
 ```
 This script will output a series of 12 plots: Positive Strand Read Counts, Negative Strand Read Counts, Positive Strand Minor AF, Negative Strand Minor AF, Strand Bias 1, Strand Bias 2, Strand Bias 3, HWE P Value, Base Quality P Value, Mapping Quality P Value, Edge P Value, and Het Stat P Value.
 
 These plots, along with the PCA plots, will help us to determine the final beagle file parameters. 
 
+See step 11 b. to see how we made the PCA plots for the test runs. 
+
+### Filter the Beagle File: Removing sites that dont pass 
+
+```bash
+$1=inFILE $2=outFILE
+sbatch scripts/findSitesWithMinIndPerPop.bash test06.geno.gz mkBGL/test06.minINdPerPop20.sites
+```
 
 ---
 
@@ -317,8 +325,11 @@ done on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 sbatch scripts/runPCANGSD_selection.sbatch ./mkBGL/$bglFile ./PCAngsd_selection out_PCAngsd_selection
 ```
+
 Now check the `.sites` file in the `out_PCAngsd_selection` out dir. If the file contains only zeros, you will need to modify your beagle file and rerun the above command. The `.` in the default chromosome marker can be removed and replaced using the following code:
+
 *note: I made a copy of my beagle file to ensure I did not accidentally compromise the original file. I copied the bgl file into the Sfa dir. 
+
 ```bash
 done on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
@@ -351,17 +362,18 @@ less -S \
 > Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd_rnmd.beagle | \
 gzip Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd_rnmd.beagle
 ```
-*note: The outputted beagle file will be unzipped, and thus will need to be rezipped with `gzip`. The command `gzip` will add the `.gz` to the end of your file, so don't include it in your redirect name. 
+*note: The outputted beagle file will be unzipped, and thus will need to be rezipped with `gzip`. The command `gzip` will add the `.gz` to the end of your file, so don't include it in your redirect name.*
 
-*tip: if you are unsure if your file is gzipped, you can use the command `file`, see below. 
+*tip: if you are unsure if your file is gzipped, you can use the command `file`, see below.*
 
 ```bash 
 file FILENAME 
 ```
 
-Now, rerun the `runPCAngsd_selection.sbatch` script with the modified beagle file and check to make sure the `.sites` file in the `out_PCAngsd_selection` out dir contains values. 
+Now, rerun the `runPCAngsd_selection.sbatch` script with the modified beagle file and check to make sure the `.sites` file in the `out_PCAngsd_selection` out dir contains values...
 
-b. Now, let's run `PCAngsd_selection_maptest.sbatch` on the test beagle files.
+
+b. Now, let's run `runPCANGSD_selection_maptest.sbatch` on the test beagle files.
 ```bash
 $1= InBGL $2=outDIR $3=outFilePREFIX $4=minMaf 
 sbatch scripts/runPCANGSD_selection_maptest.sbatch ./mkBGL/test06.beagle.gz ./PCAngsd_selection test06_PCAngsd_selection_maptest_minMaf0.05 0.05
@@ -376,10 +388,15 @@ After the script finishes running, view the `.out` file and report the # SNPs re
 | test 05  |                 |                        |
 | test 06  |     560777      |            1           | 
 
-
 ### Visualize results using `plotPCANGSD_selection.R`
 
+Pull changes to your local computer and open `plotPCANGSD_selection.R` 
 
+We only wanted to see the various PCAs for our test beagle files, so we read in the `.cov` from  file and the `popmap_sfa.tsv` file, and skipped to the portion titiled `#### visual pca ####` 
+
+3 resulting PCAs are generated 
+
+---
 
 
 

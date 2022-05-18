@@ -61,17 +61,17 @@ I followed the [read_mapping_summary](https://github.com/cbirdlab/read_mapping_s
 
 Here are the visual results:
 
-![](pct_cov_meandepth_Sfa.png)
+![](plots/pct_cov_meandepth_Sfa.png)
 
-![](prop_seqs_mapped_Sfa.png)
+![](plots/prop_seqs_mapped_Sfa.png)
 
 --- 
 
 ## 5. Convert the Filtered BAM Files to a Beagle File Using Angsd
 
-*Note: be mindful of the possible default filters employed by angsd.*
+*Note: be mindful of the possible default filters employed by angsd. See section b.*
 
-To make the beagle file, you can use the `mkBGL.sbatch` script which accepts the directory with the filtered BAM files and a gzipped reference genome. The script will make a bgzipped reference genome and an fai index file. If a valid bgzipped reference genome and matching fai index file already exists, then mkBGL.sbatch accepts the bgzipped reference genome. 
+a. To make the beagle file, you can use the `mkBGL.sbatch` script which accepts the directory with the filtered BAM files and a gzipped reference genome. The script will make a bgzipped reference genome and an fai index file. If a valid bgzipped reference genome and matching fai index file already exists, then mkBGL.sbatch accepts the bgzipped reference genome. 
 
 ```bash
 # login to user@wahab.hpc.odu.edu
@@ -93,16 +93,28 @@ mv mkBGL.beagle.gz Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_cl
 # you may need to enter bash for the following command to work
 bglFile=Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd.beagle.gz
 ```
-In Downstream analysis, we realized that there were stringent default filters that were employed by angsd, removing data that we did not want to remove. To combat this, we made `mkBGL2.sbatch`, where we ran a series of 6 tests with different filter parameters. 
 
-Next, we will be creating files for the `initial_bgl_filters` and `final_bgl_filters` -- coming soon
+b. In Downstream analysis, we realized that there were stringent default filters that were employed by angsd during the creation of the beagle file, removing data that we did not want to remove. To combat this, we made `mkBGL2.sbatch`, where we ran a series of 7 tests with different filter parameters indicated in the script. 
+
+*Soon, we will be creating files for the `initial_bgl_filters` and `final_bgl_filters` for them to be fed to the script instead of hardcoded -- coming soon*
 
 ```bash 
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 $1=fltrBAMdir $2=outPREFIX
 sbatch scripts/mkBGL2.sbatch fltrBAM test06
 ```
-After running seven tests, we determined the final mkBGL settings that we believed fit best for *Salarias fasciatus*. 
+
+After running seven tests, we determined the final mkBGL settings that we believed fit best for *Salarias fasciatus*. We first subset the data for easier handling and faster visualization in R using the following code:
+
+```bash 
+zcat test06.snpStat.gz | head -n 100000 > test06.100k.snpStat
+```
+
+Next, edit the `.gitignore` file to allow the subsetted txt file through when pushing changes. Pull the changes to your local computer and open the `processSnpStat.R` script.
+
+You are now in the R environment:
+
+
 
 
 
@@ -243,13 +255,13 @@ I read in the `.tsv` pop map created above and the `.cov` out file from `runPCAN
 Here were the results: 
 
 PC1 v PC2 
-![](PCAngsd_allelefreq1.png)
+![](plots/PCAngsd_allelefreq1.png)
 
 PC1 v PC3
-![](PCAngsd_allelefreq2.png)
+![](plots/PCAngsd_allelefreq2.png)
 
 PC2 v PC3
-![](PCAngsd_allelefreq3.png)
+![](plots/PCAngsd_allelefreq3.png)
 
 ### Without Estimating Individual Allele Frequencies: `plotPCANGSD_allelefreq.R`
 
@@ -258,13 +270,13 @@ To visualize the results from the `runPCANGSD_noallelefreq.sbatch` script, we ag
 Here were the results: 
 
 PC1 v PC2 
-![](PCAngsd_noallelefreq1.png)
+![](plots/PCAngsd_noallelefreq1.png)
 
 PC1 v PC3
-![](PCAngsd_noallelefreq2.png)
+![](plots/PCAngsd_noallelefreq2.png)
 
 PC2 v PC3
-![](PCAngsd_noallelefreq3.png)
+![](plots/PCAngsd_noallelefreq3.png)
 
 ### Admixture based on two PC: `plotPCANGSD_admix.R`
 
@@ -272,7 +284,7 @@ I created `plotPCANGSD_admix.R` by adapting the instructions from the [PCAngsd t
 
 Here were the results: 
 
-![](PCAngsd_admix.png)
+![](plots/PCAngsd_admix.png)
 
 ---
 

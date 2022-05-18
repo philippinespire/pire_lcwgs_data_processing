@@ -124,6 +124,10 @@ After loading the needed librarys and data, make sure to change the `numInd` and
 numInd=81
 minInd=30
 ```
+This script will output a series of 12 plots: Positive Strand Read Counts, Negative Strand Read Counts, Positive Strand Minor AF, Negative Strand Minor AF, Strand Bias 1, Strand Bias 2, Strand Bias 3, HWE P Value, Base Quality P Value, Mapping Quality P Value, Edge P Value, and Het Stat P Value.
+
+These plots, along with the PCA plots, will help us to determine the final beagle file parameters. 
+
 
 ---
 

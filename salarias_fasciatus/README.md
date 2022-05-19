@@ -156,11 +156,30 @@ We only wanted to see the various PCAs for our test beagle files, so we read in 
 
 ---
 
-## 9. Filter the Beagle File: Removing sites that dont pass 
+## 9. Filter the Beagle File: Removing sites that dont pass
+
+run `findSitesWithMinIndPerPop.bash`
 
 ```bash
 $1=inFILE $2=outFILE
-sbatch scripts/findSitesWithMinIndPerPop.bash test06.geno.gz mkBGL/test06.minINdPerPop20.sites
+sbatch scripts/findSitesWithMinIndPerPop.bash test06.geno.gz mkBGL/test06.minIndPerPop20.sites
+```
+This will output a `.sites` file that describes sites where there at least 20 individualts per pop. This file will be used for argument 2 of `fltrBGL2.sbatch`. See code. 
+
+run `fltrBGL2.sbatch`
+
+```bash 
+$1=bglFile $2=sitesFile
+sbatch scripts/fltrBGL2.sbatch mkBGL/test06.beagle.gz mkBGL/test06.minIndPerPop20.sites
+```
+This will output a `*_fltrd.beagle.gz` file that can be used in step 7. Go back and run `runPCANGSD_selection_maptest.sbatch` on the filtered data. 
+
+## 10. Run `runPCANGSD_selection_maptest.sbatch` on filtered data
+
+Here, I ran `runPCANGSD_selection_maptest.sbatch` on test06 with minMaf = 0.05, 0.0, 0.1, 0.2, and 0.3. 
+
+```bash 
+
 ```
 
 

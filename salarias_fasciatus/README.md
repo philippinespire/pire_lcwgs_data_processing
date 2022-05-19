@@ -87,7 +87,7 @@ paste <( ls fltrBAM/*bam | sed -e 's/^.*\///' -e 's/_.*$//' ) <( ls fltrBAM/*bam
 
 It is important to note that there are stringent default filters that are employed by Angsd during the creation of the beagle file, which may remove data that we do not want to remove. To navigate this, we made `mkBGL.sbatch`, where we ran a series of 6 tests ranging from lenient filtering to stringent filtering. The last assigned `TODO` and `FILTERS` are the parameters that will be applied when the script is ran. 
 
-To make the beagle file, run the `mkBGL.sbatch` script from the species directry. Here is the code I used when running test06: 
+To make the beagle file, run the `mkBGL.sbatch` script from the species directory. Here is the code I used when running test06: 
 ```bash
 # done on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus

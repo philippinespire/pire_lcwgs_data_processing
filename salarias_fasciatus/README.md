@@ -194,6 +194,8 @@ Here are the `.out` file stats for test06_fltrd_maptest with different minMaf se
 |   0.2    |     145575      |            1           |
 |   0.3    |     78719       |            1           | 
 
+Now, return to step 8. and visualize the plots for the filtered data using `plotPCANGSD_selection.R`
+
 ---
 
 

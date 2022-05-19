@@ -174,6 +174,8 @@ sbatch scripts/fltrBGL2.sbatch mkBGL/test06.beagle.gz mkBGL/test06.minIndPerPop2
 ```
 This will output a `*_fltrd.beagle.gz` file that can be used in step 7. Go back and run `runPCANGSD_selection_maptest.sbatch` on the filtered data. 
 
+---
+
 ## 10. Run `runPCANGSD_selection_maptest.sbatch` on filtered data
 
 Here, I ran `runPCANGSD_selection_maptest.sbatch` on test06 with minMaf = 0.05, 0.0, 0.1, 0.2, and 0.3. 

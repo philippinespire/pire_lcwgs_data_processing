@@ -130,7 +130,7 @@ After following Demo 1 and 2 of the [PCAngsd tutorial](http://popgen.dk/software
 Run `runPCANGSD_selection_maptest.sbatch` on the test beagle file. Here is the code I used for test06:
 ```bash
 $1= InBGL $2=outDIR $3=outFilePREFIX $4=minMaf 
-sbatch scripts/runPCANGSD_selection_maptest.sbatch ./mkBGL/test06.beagle.gz ./PCAngsd_selection test06_PCAngsd_selection_maptest_minMaf0.05 0.05
+sbatch scripts/runPCANGSD_selection_maptest.sbatch ./mkBGL/test06.beagle.gz ./PCAngsd_selection test06_PCAngsd_selection_maptest 0.05
 ```
 
 After the script finishes running, view the `.out` file and report the # SNPs retained and # Principal Components. Here are the stats for the tests we ran (minMaf 0.05):
@@ -178,10 +178,11 @@ This will output a `*_fltrd.beagle.gz` file that can be used in step 7. Go back 
 
 ## 10. Run `runPCANGSD_selection_maptest.sbatch` on filtered data
 
-Here, I ran `runPCANGSD_selection_maptest.sbatch` on test06 with minMaf = 0.05, 0.0, 0.1, 0.2, and 0.3. 
+Here, I ran `runPCANGSD_selection_maptest.sbatch` on test06 filtered data with minMaf = 0.05, 0.0, 0.1, 0.2, and 0.3. This is the code I ran with a minMaf = 0.05:
 
 ```bash 
-
+$1= InBGL $2=outDIR $3=outFilePREFIX $4=minMaf 
+sbatch scripts/runPCANGSD_selection_maptest.sbatch ./mkBGL/test06_fltrd.beagle.gz ./PCAngsd_selection test06_fltrd_maptest 0.05 
 ```
 
 

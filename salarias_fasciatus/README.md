@@ -184,9 +184,17 @@ Here, I ran `runPCANGSD_selection_maptest.sbatch` on test06 filtered data with m
 $1= InBGL $2=outDIR $3=outFilePREFIX $4=minMaf 
 sbatch scripts/runPCANGSD_selection_maptest.sbatch ./mkBGL/test06_fltrd.beagle.gz ./PCAngsd_selection test06_fltrd_maptest 0.05 
 ```
+Here are the `.out` file stats for test06_fltrd_maptest with different minMaf settings: 
 
+|  minMaf  | # SNPs retained | # Principal Components |
+|----------|-----------------|------------------------|
+|   0.0    |     2184249     |            1           |
+|   0.05   |     505308      |            1           |
+|   0.1    |     287167      |            1           | 
+|   0.2    |     145575      |            1           |
+|   0.3    |     78719       |            1           | 
 
-
+---
 
 
 

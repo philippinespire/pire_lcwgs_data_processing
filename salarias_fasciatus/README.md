@@ -81,6 +81,8 @@ bash
 paste <( ls fltrBAM/*bam | sed -e 's/^.*\///' -e 's/_.*$//' ) <( ls fltrBAM/*bam | sed -e 's/^.*\///' -e 's/_L[1-8]_.*bam$//' -e 's/_Ex[1-9].*$//' ) > fltrBAM/popmap_sfa.tsv
 ```
 
+---
+
 ## 6. Convert the Filtered BAM Files to a Beagle File Using Angsd
 
 It is important to note that there are stringent default filters that are employed by Angsd during the creation of the beagle file, which may remove data that we do not want to remove. To navigate this, we made `mkBGL.sbatch`, where we ran a series of 6 tests ranging from lenient filtering to stringent filtering. The last assigned `TODO` and `FILTERS` are the parameters that will be applied when the script is ran. 

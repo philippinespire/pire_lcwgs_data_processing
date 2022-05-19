@@ -133,15 +133,15 @@ $1= InBGL $2=outDIR $3=outFilePREFIX $4=minMaf
 sbatch scripts/runPCANGSD_selection_maptest.sbatch ./mkBGL/test06.beagle.gz ./PCAngsd_selection test06_PCAngsd_selection_maptest_minMaf0.05 0.05
 ```
 
-After the script finishes running, view the `.out` file and report the # SNPs retained and # Principal Components. Here are the stats for the tests we ran:
+After the script finishes running, view the `.out` file and report the # SNPs retained and # Principal Components. Here are the stats for the tests we ran (minMaf 0.05):
 
 | test##   | # SNPs retained | # Principal Components |
 |----------|-----------------|------------------------|
-| test 01  |                 |                        |
-| test 02  |                 |                        |
-| test 03  |                 |                        | 
-| test 04  |                 |                        |
-| test 05  |                 |                        |
+| test 01  |     13345151    |            1           |
+| test 02  |     7876119     |            1           |
+| test 03  |     7780498     |            1           | 
+| test 04  |     701713      |            1           |
+| test 05  |     2772817     |            1           |
 | test 06  |     560777      |            1           | 
 
 ---

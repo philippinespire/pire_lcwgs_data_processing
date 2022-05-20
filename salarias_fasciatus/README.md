@@ -85,9 +85,13 @@ paste <( ls fltrBAM/*bam | sed -e 's/^.*\///' -e 's/_.*$//' ) <( ls fltrBAM/*bam
 
 ## 6. Convert the Filtered BAM Files to a Beagle File Using Angsd
 
-It is important to note that there are stringent default filters that are employed by Angsd during the creation of the beagle file, which may remove data that we do not want to remove. To navigate this, we made `mkBGL.sbatch`, where we ran a series of 6 tests ranging from lenient filtering to stringent filtering. The last assigned `TODO` and `FILTERS` are the parameters that will be applied when the script is ran. 
+It is important to note that there are stringent default filters that are employed by Angsd during the creation of the beagle file, which will remove data that we do not want to remove. To navigate this, we made `mkBGL.sbatch`, where we ran a series of 6 tests ranging from lenient filtering to stringent filtering. The last assigned `TODO` and `FILTERS` are the parameters that will be applied when the script is ran. 
 
-To make the beagle file, run the `mkBGL.sbatch` script from the species directory. Here is the code I used when running test06: 
+### a. Make beagle file with minimal filters 
+
+You must first minimally filter the data so that you can accurately set the filter parameters for the filtered beagle file. 
+
+To make the minimally filtered beagle file, run the `mkBGL.sbatch` script with minimal `TODO` and `FILTERS` settings. Here is the code I used when running test06: 
 ```bash
 # done on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
@@ -96,12 +100,13 @@ mkdir mkBGL
 # $1=fltrBAMdir $2=outPREFIX
 sbatch scripts/mkBGL.sbatch fltrBAM test06
 ```
+*Note: check the `.args` and the `err` files to see what filters were applied to the run (double check that the ones you indicated are the ones listed), and which errors might have occurred during the run*
 
 *Soon, we will be creating files for the `initial_bgl_filters` and `final_bgl_filters` for them to be fed to the script instead of hardcoded -- coming soon*
 
 ### Determining final `mkBGL.sbatch` settings
 
-After running 6 tests, we determined the final mkBGL settings that we believed fit best for *Salarias fasciatus*. To do this, We first subset the data for easier handling and faster visualization in R using the following code for each test:
+Now that we have a minimally filtered beagle file, we can begin to visualize this data in order to determine the final filter settings. To do this, We first subsetted the `snpStat.gz` out file for easier handling and faster visualization in R using the following code for each test:
 
 ```bash
 # here, we take only the first 100000 rows of our data and redirect that into a new file

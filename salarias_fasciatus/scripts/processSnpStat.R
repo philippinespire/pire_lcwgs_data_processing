@@ -9,7 +9,7 @@ library(magrittr)
 inFILE="../mkBGL/mkBGL.snpStat.gz"
 inFILE="../mkBGL/test03.100k.snpStat"
 numInd=81
-minInd=30
+minInd=41
 maxDP=numInd*5
 
 #### WRANGLE SNP STATS ####
@@ -83,138 +83,142 @@ pos_minor_prop_max = max(data_snp$pos_minor_prop,
                           na.rm = TRUE)
 
 #### VISUALIZE SNP STATS ####
-data_snp %>%
-  ggplot(aes(x=pos_minor+pos_major)) +
-  geom_histogram(bins = 101) +
-  geom_vline(xintercept = minInd,
-             linetype = "dashed",
-             color = "red3") +
-  geom_vline(xintercept = maxDP,
-             linetype = "dashed",
-             color = "red3") +
-  scale_y_continuous(trans='log10') +
-  scale_x_continuous(trans='log10') +
-  theme_classic() +
-  labs(title = "Positive Strand Read Counts",
-       subtitle = "Threshold = minInd (min 1 read per ind)") 
-
-data_snp %>%
-  ggplot(aes(x=neg_minor+neg_major)) +
-  geom_histogram(bins = 101) +
-  geom_vline(xintercept = minInd,
-             linetype = "dashed",
-             color = "red3") +
-  geom_vline(xintercept = maxDP,
-             linetype = "dashed",
-             color = "red3") +
-  # scale_y_continuous(trans='log10') +
-  scale_x_continuous(trans='log10') +
-  theme_classic() +
-  labs(title = "Negative Strand Read Counts",
-       subtitle = "Lower Threshold = minInd (min 1 read per ind)") 
-
-data_snp %>%
-  ggplot(aes(x=pos_minor_prop)) +
-  geom_histogram(bins = 101) +
-  geom_vline(xintercept = 1 / (numInd*2),
-             linetype = "dashed",
-             color = "red3") +
-  scale_y_continuous(trans='log10') +
-  scale_x_continuous(trans='log10') +
-  theme_classic() +
-  labs(title = "Positive Strand Minor AF",
-       subtitle = "Threshold = 1 Minor Allele") 
-
-data_snp %>%
-  ggplot(aes(x=neg_minor_prop)) +
-  geom_histogram(bins = 101) +
-  geom_vline(xintercept = 1 / (numInd*2),
-             linetype = "dashed",
-             color = "red3") +
-  scale_y_continuous(trans='log10') +
-  scale_x_continuous(trans='log10') +
-  theme_classic() +
-  labs(title = "Negative Strand Minor AF",
-       subtitle = "Threshold = 1 Minor Allele") 
-
-data_snp %>%
-  ggplot(aes(x=as.numeric(strand_bias_1))) +
-  geom_histogram() +
-  scale_y_continuous(trans='log10') +
-  theme_classic() +
-  labs(title = "Strand Bias 1") 
-
-data_snp %>%
-  ggplot(aes(x=strand_bias_2)) +
-  geom_histogram() +
-  scale_y_continuous(trans='log10') +
-  scale_x_continuous(trans='log10') +
-  theme_classic() +
-  labs(title = "Strand Bias 2") 
-
-data_snp %>%
-  ggplot(aes(x=strand_bias_3)) +
-  geom_histogram() +
-  geom_vline(xintercept = 0.5,
-             linetype = "dashed",
-             color = "red3") +
-  # scale_y_continuous(trans='log10') +
-  scale_x_continuous(trans='log10') +
-  theme_classic() +
-  labs(title = "Strand Bias 3") 
-
-data_snp %>%
-  ggplot(aes(x=hwe_pval)) +
-  geom_histogram() +
-  geom_vline(xintercept = 0.1,
-             linetype = "dashed",
-             color = "red3") +
-  # scale_y_continuous(trans='log10') +
-  scale_x_continuous(trans='log10') +
-  theme_classic() +
-  labs(title = "HWE P Value",
-       subtitle = "Above Threshold = In HWE") 
-
-data_snp %>%
-  ggplot(aes(x=base_qual_pval)) +
-  geom_histogram() +
-  geom_vline(xintercept = 0.5,
-             linetype = "dashed",
-             color = "red3") +
-  # scale_y_continuous(trans='log10') +
-  scale_x_continuous(trans='log10') +
-  theme_classic() +
-  labs(title = "Base Quality P Value") 
-
-data_snp %>%
-  ggplot(aes(x=map_qual_pval)) +
-  geom_histogram() +
-  geom_vline(xintercept = 0.1,
-             linetype = "dashed",
-             color = "red3") +
-  # scale_y_continuous(trans='log10') +
-  scale_x_continuous(trans='log10') +
-  theme_classic() +
-  labs(title = "Mapping Quality P Value") 
-
-data_snp %>%
-  ggplot(aes(x=edge_pval)) +
-  geom_histogram() +
-  geom_vline(xintercept = 0.1,
-             linetype = "dashed",
-             color = "red3") +
-  # scale_y_continuous(trans='log10') +
-  scale_x_continuous(trans='log10') +
-  theme_classic() +
-  labs(title = "Edge P Value") 
-
-data_snp %>%
-  ggplot(aes(x=het_stat_pval)) +
-  geom_histogram() +
-  geom_vline(xintercept = 0.1,
-             linetype = "dashed",
-             color = "red3") +
-  # scale_y_continuous(trans='log10') +
-  scale_x_continuous(trans='log10') +
-  theme_classic() +
-  labs(title = "Het Stat P Value") 
+# pdf(str_c(inFile,
+#           ".pdf",
+#           sep=""))
+  data_snp %>%
+    ggplot(aes(x=pos_minor+pos_major)) +
+    geom_histogram(bins = 101) +
+    geom_vline(xintercept = minInd,
+               linetype = "dashed",
+               color = "red3") +
+    geom_vline(xintercept = maxDP,
+               linetype = "dashed",
+               color = "red3") +
+    scale_y_continuous(trans='log10') +
+    scale_x_continuous(trans='log10') +
+    theme_classic() +
+    labs(title = "Positive Strand Read Counts",
+         subtitle = "Threshold = minInd (min 1 read per ind)") 
+  
+  data_snp %>%
+    ggplot(aes(x=neg_minor+neg_major)) +
+    geom_histogram(bins = 101) +
+    geom_vline(xintercept = minInd,
+               linetype = "dashed",
+               color = "red3") +
+    geom_vline(xintercept = maxDP,
+               linetype = "dashed",
+               color = "red3") +
+    # scale_y_continuous(trans='log10') +
+    scale_x_continuous(trans='log10') +
+    theme_classic() +
+    labs(title = "Negative Strand Read Counts",
+         subtitle = "Lower Threshold = minInd (min 1 read per ind)") 
+  
+  data_snp %>%
+    ggplot(aes(x=pos_minor_prop)) +
+    geom_histogram(bins = 101) +
+    geom_vline(xintercept = 1 / (numInd*2),
+               linetype = "dashed",
+               color = "red3") +
+    scale_y_continuous(trans='log10') +
+    scale_x_continuous(trans='log10') +
+    theme_classic() +
+    labs(title = "Positive Strand Minor AF",
+         subtitle = "Threshold = 1 Minor Allele") 
+  
+  data_snp %>%
+    ggplot(aes(x=neg_minor_prop)) +
+    geom_histogram(bins = 101) +
+    geom_vline(xintercept = 1 / (numInd*2),
+               linetype = "dashed",
+               color = "red3") +
+    # scale_y_continuous(trans='log10') +
+    scale_x_continuous(trans='log10') +
+    theme_classic() +
+    labs(title = "Negative Strand Minor AF",
+         subtitle = "Threshold = 1 Minor Allele") 
+  
+  data_snp %>%
+    ggplot(aes(x=as.numeric(strand_bias_1))) +
+    geom_histogram() +
+    scale_y_continuous(trans='log10') +
+    theme_classic() +
+    labs(title = "Strand Bias 1") 
+  
+  data_snp %>%
+    ggplot(aes(x=strand_bias_2)) +
+    geom_histogram() +
+    scale_y_continuous(trans='log10') +
+    scale_x_continuous(trans='log10') +
+    theme_classic() +
+    labs(title = "Strand Bias 2") 
+  
+  data_snp %>%
+    ggplot(aes(x=strand_bias_3)) +
+    geom_histogram() +
+    geom_vline(xintercept = 0.5,
+               linetype = "dashed",
+               color = "red3") +
+    # scale_y_continuous(trans='log10') +
+    scale_x_continuous(trans='log10') +
+    theme_classic() +
+    labs(title = "Strand Bias 3") 
+  
+  data_snp %>%
+    ggplot(aes(x=hwe_pval)) +
+    geom_histogram() +
+    geom_vline(xintercept = 0.1,
+               linetype = "dashed",
+               color = "red3") +
+    # scale_y_continuous(trans='log10') +
+    scale_x_continuous(trans='log10') +
+    theme_classic() +
+    labs(title = "HWE P Value",
+         subtitle = "Above Threshold = In HWE") 
+  
+  data_snp %>%
+    ggplot(aes(x=base_qual_pval)) +
+    geom_histogram() +
+    geom_vline(xintercept = 0.9,
+               linetype = "dashed",
+               color = "red3") +
+    # scale_y_continuous(trans='log10') +
+    scale_x_continuous(trans='log10') +
+    theme_classic() +
+    labs(title = "Base Quality P Value") 
+  
+  data_snp %>%
+    ggplot(aes(x=map_qual_pval)) +
+    geom_histogram() +
+    geom_vline(xintercept = 0.5,
+               linetype = "dashed",
+               color = "red3") +
+    # scale_y_continuous(trans='log10') +
+    scale_x_continuous(trans='log10') +
+    theme_classic() +
+    labs(title = "Mapping Quality P Value") 
+  
+  data_snp %>%
+    ggplot(aes(x=edge_pval)) +
+    geom_histogram() +
+    geom_vline(xintercept = 0.1,
+               linetype = "dashed",
+               color = "red3") +
+    # scale_y_continuous(trans='log10') +
+    scale_x_continuous(trans='log10') +
+    theme_classic() +
+    labs(title = "Edge P Value") 
+  
+  data_snp %>%
+    ggplot(aes(x=het_stat_pval)) +
+    geom_histogram() +
+    geom_vline(xintercept = 0.1,
+               linetype = "dashed",
+               color = "red3") +
+    # scale_y_continuous(trans='log10') +
+    scale_x_continuous(trans='log10') +
+    theme_classic() +
+    labs(title = "Het Stat P Value") 
+# dev.off()

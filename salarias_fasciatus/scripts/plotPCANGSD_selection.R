@@ -1,15 +1,17 @@
 #### INITIALIZE ####
 
 #if in rstudio, run the next line, if not, don't run the next line
-#setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 library(RcppCNPy) # Numpy library for R
 library(tidyverse)
 
 #### USER DEFINED VARIABLES ####
-npyFile = "PCAngsd_selection/out_PCAngsd_selection.selection.npy"
-sitesFile = "Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd_rnmd.sites"
+npyFile = "PCAngsd_selection/out_PCAngsd_selection_maptest_minMaf0.05.selection.npy"
+npyFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf0.05_e32.selection.npy"
+sitesFile = "mkBGL/Sfa-ABas-CBas_all-GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen_clmp_fp2_repr_fltrd_rnmd.sites"
 popMap = "fltrBAM/popmap_sfa.tsv"
-covFile = "PCAngsd_selection/out_PCAngsd_selection.cov"
+covFile = "PCAngsd_selection/test05_fltrd_maptest_minMaf0.3.cov"
+covFile = "PCAngsd_selection/out_PCAngsd_selection_minMaf0.05_e32.cov"
 
 #### function for QQplot and other stuff from pcangsd tutorial ####
 qqchi<-function(x,...){
@@ -89,11 +91,7 @@ plot(p$pos[keep],-log10(pval[keep]),col=p$chr[keep],xlab="HG38 Position chr2")
 ## see the position of the most significant SNP
 p$pos[which.max(selection_stats)]
 
-#### visual pca ####
-
-
-# pop<-read.table(popMap,
-#                 header = TRUE)
+#### READ IN PCA DATA ####
 C <- as.matrix(read.table(covFile))
 e <- eigen(C)
 
@@ -108,22 +106,42 @@ data_pca <-
 
 data_pca_2 <-
   as_tibble(e$values) %>%
-  mutate(pct_variation = 100 * value/sum(value))
+  # arrange(desc(value)) %>%
+  mutate(pct_variance_explained = 100 * value/sum(value),
+         principle_component = row_number())
+
+#### SCREE PLOT ####
+# https://en.wikipedia.org/wiki/Scree_plot
+# use this as a way of evaluating the validity of the number of principle components used by PCAngsd
+# You can find the number of principle components used in the `*.out` file
+# by default, PCAngsd uses the MAP test https://www.nature.com/articles/hdy201126
+# you can also specify the number of principle components with the -e option in PCAngsd
+# it should be noted that PCAngsd uses a covariance matrix of eigen values in the MAP test that we don't have access to (eq 3 in https://academic.oup.com/genetics/article/210/2/719/5931101?login=true)
+# so here, we use the final covariance matrix of eigenvalues as a proxy
+
+data_pca_2 %>%
+  ggplot(aes(x=principle_component,
+             y=pct_variance_explained)) +
+  geom_point() +
+  geom_line() +
+  labs(title = "Scree Plot")
 
 
+#### VISUALIZE PCA ####
 data_pca %>%
   ggplot(aes(x=PC1,
              y=PC2,
              color=POP)) +
   geom_point(size=3) +
+  stat_ellipse() +
   theme_classic() +
   labs(x = str_c("PC1 (",
-                 data_pca_2$pct_variation %>%
+                 data_pca_2$pct_variance_explained %>%
                    head(1) %>%
                    round(2),
                  "%)"),
        y = str_c("PC2 (",
-                 data_pca_2$pct_variation %>%
+                 data_pca_2$pct_variance_explained %>%
                    head(2) %>%
                    tail(1) %>%
                    round(2),
@@ -137,14 +155,15 @@ data_pca %>%
              y=PC3,
              color=POP)) +
   geom_point(size=3) +
+  stat_ellipse() +
   theme_classic() +
   labs(x = str_c("PC1 (",
-                 data_pca_2$pct_variation %>%
+                 data_pca_2$pct_variance_explained %>%
                    head(1) %>%
                    round(2),
                  "%)"),
        y = str_c("PC3 (",
-                 data_pca_2$pct_variation %>%
+                 data_pca_2$pct_variance_explained %>%
                    head(3) %>%
                    tail(1) %>%
                    round(2),
@@ -158,15 +177,16 @@ data_pca %>%
              y=PC3,
              color=POP)) +
   geom_point(size=3) +
+  stat_ellipse() +
   theme_classic() +
   labs(x = str_c("PC2 (",
-                 data_pca_2$pct_variation %>%
+                 data_pca_2$pct_variance_explained %>%
                    head(2) %>%
                    tail(1) %>%
                    round(2),
                  "%)"),
        y = str_c("PC3 (",
-                 data_pca_2$pct_variation %>%
+                 data_pca_2$pct_variance_explained %>%
                    head(3) %>%
                    tail(1) %>%
                    round(2),

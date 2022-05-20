@@ -1,7 +1,7 @@
 #!/bin/bash -l
 #SBATCH --job-name=PCAngsd
 #SBATCH -o PCAngsd_MAP-%j.out
-##SBATCH -e PCAngsd.err
+##SBATCH -e PCAngsd_MAP-%j.err
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task 40
 

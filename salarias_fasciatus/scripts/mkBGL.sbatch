@@ -24,7 +24,7 @@ TODO='-doGlf 2 -doMajorMinor 1 -doMaf 1 -doSnpStat 1 -doHWE 1 -doGeno 3 -doPost 
 #test03
 TODO='-doGlf 2 -doMajorMinor 1 -doMaf 1 -doSnpStat 1 -doHWE 1 -doGeno 3 -doPost 2 -doCounts 1 -doDepth 1 -doQsDist 1 '
 #test04
-TODO='-doGlf 2 -doMajorMinor 1 -doMaf 1 -doSnpStat 1 -doHWE 1 -doGeno 3 -doPost 2 -doCounts 1 -doDepth 1 -doQsDist 1 -doEBD 1'
+TODO='-doGlf 2 -doMajorMinor 1 -doMaf 1 -doSnpStat 1 -doHWE 1 -doGeno 3 -doPost 2 -doCounts 1 -doDepth 1 -doQsDist 1 -doEBD 1 '
 
 
 #from sang, probably from misha matz
@@ -40,7 +40,7 @@ FILTERS='-uniqueOnly 1 -rmTriallelic 0.1 -SNP_pval 0.000001 -minMapQ 50 -minQ 30
 #test05
 FILTERS='-uniqueOnly 1 -rmTriallelic 0.1 -SNP_pval 1e-5 -minMapQ 50 -minQ 30 -minHWEpval 0.1 -maxHetFreq 0.5 -hetbias_pval 0.05 -sb_pval 0.5 -edge_pval 0.1 -mapQ_pval 0.1 -qscore_pval 0.5 -minInd 41 -setMaxDepth 405 -minMaf 0.0062 '
 #test06
-FILTERS='-uniqueOnly 1 -rmTriallelic 0.1 -SNP_pval 1e-6 -minMapQ 50 -minQ 30 -minHWEpval 0.2 -maxHetFreq 0.5 -hetbias_pval 0.5 -sb_pval 0.5 -edge_pval 0.5 -mapQ_pval 0.5 -qscore_pval 0.9 -minInd 41 -minMaf 0.0062'
+FILTERS='-uniqueOnly 1 -rmTriallelic 0.1 -SNP_pval 1e-6 -minMapQ 50 -minQ 30 -minHWEpval 0.2 -maxHetFreq 0.5 -hetbias_pval 0.5 -sb_pval 0.5 -edge_pval 0.5 -mapQ_pval 0.5 -qscore_pval 0.9 -minInd 41 -minMaf 0.0062 '
 inDIR=$(echo $inDIR | sed "s/\/$//" )
 
 ls $inDIR/*fltrd.bam > ${inDIR}/bamNames.txt 

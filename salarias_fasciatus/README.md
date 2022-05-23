@@ -85,21 +85,23 @@ paste <( ls fltrBAM/*bam | sed -e 's/^.*\///' -e 's/_.*$//' ) <( ls fltrBAM/*bam
 
 ## 6. Convert the Filtered BAM Files to a Beagle File Using Angsd
 
-It is important to note that there are stringent default filters that are employed by Angsd during the creation of the beagle file, which will remove data that we do not want to remove. To navigate this, we made `mkBGL.sbatch`, where we ran a series of 6 tests ranging from lenient filtering to stringent filtering. The last assigned `TODO` and `FILTERS` are the parameters that will be applied when the script is ran. 
+It is important to note that there are stringent default filters that are employed by Angsd during the creation of the beagle file, which will remove data that we do not want to remove. To navigate this, we made `mkBGL.sbatch`, where we ran a series of 6 tests ranging from lenient to stringent filtering. The last assigned `TODO` and `FILTERS` are the parameters that will be applied when the script is ran. Optimally, you should only have to make two beagle files; the first beagle file gives insight to the appropriate filter parameters needed for the second and final beagle file. You may need to make additional beagle files if the filters need to be adjusted. 
 
 ### a. Make beagle file with minimal filters 
 
 You must first minimally filter the data so that you can accurately set the filter parameters for the filtered beagle file. 
 
-To make the minimally filtered beagle file, run the `mkBGL.sbatch` script with minimal `TODO` and `FILTERS` settings. Here is the code I used when running test06: 
+To make the minimally filtered beagle file, run the `mkBGL.sbatch` script with minimal `TODO` and `FILTERS` settings. Here is the code I used when making the `initial.beagle.gz` file: 
 ```bash
 # done on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 # Angsd outputs files to the mkBGL dir, so it may be usefiul to create this dir before running the script if you haven't already
 mkdir mkBGL
 # $1=fltrBAMdir $2=outPREFIX
-sbatch scripts/mkBGL.sbatch fltrBAM test06
+sbatch scripts/mkBGL.sbatch fltrBAM Sfa-ABas-CBas_all_initial
 ```
+When running the above code again for the final beagle file, make sure to replace "initial" to "final" when naming the prefix.  
+
 *Note: check the `.args` and the `err` files to see what filters were applied to the run (double check that the ones you indicated are the ones listed), and which errors might have occurred during the run*
 
 *Soon, we will be creating files for the `initial_bgl_filters` and `final_bgl_filters` for them to be fed to the script instead of hardcoded -- coming soon*
@@ -110,7 +112,7 @@ Now that we have a minimally filtered beagle file, we can begin to visualize thi
 
 ```bash
 # here, we take only the first 100000 rows of our data and redirect that into a new file
-zcat test06.snpStat.gz | head -n 100000 > test06.100k.snpStat
+zcat Sfa-ABas-CBas_all_initial.snpStat.gz | head -n 100000 > Sfa-ABas-CBas_all_initial.100k.snpStat
 ```
 
 Next, edit the `.gitignore` file located in the parent dir to allow the subsetted txt file through when pushing changes. Pull the changes to your local computer and open the `processSnpStat.R` script.
@@ -124,7 +126,7 @@ minInd=41
 ```
 This script will output a series of 12 plots: Positive Strand Read Counts, Negative Strand Read Counts, Positive Strand Minor AF, Negative Strand Minor AF, Strand Bias 1, Strand Bias 2, Strand Bias 3, HWE P Value, Base Quality P Value, Mapping Quality P Value, Edge P Value, and Het Stat P Value.
 
-These plots, along with the PCA plots (created in step. 9), helped us to determine the final beagle file parameters needeed. If you are not satisfied with the plots, return to the `mkBGL.sbatch` script and modify the filters at this time. Continue to change the settings until you are satisfied.
+These plots, along with the PCA plots (created in step. 8), helped us to determine the final beagle file parameters needeed. If you are not satisfied with the plots, return to the `mkBGL.sbatch` script and modify the filters at this time. Continue to change the settings until you are satisfied.
 
 ---
 
@@ -132,22 +134,22 @@ These plots, along with the PCA plots (created in step. 9), helped us to determi
 
 After following Demo 1 and 2 of the [PCAngsd tutorial](http://popgen.dk/software/index.php/PCAngsd), we created `runPCANGSD_selection_maptest`. The objective is to use PCAngsd to estimate the covariance matrix while jointly estimating the individual allele frequencies. 
 
-Run `runPCANGSD_selection_maptest.sbatch` on the test beagle file. Here is the code I used for test06:
+Run `runPCANGSD_selection_maptest.sbatch` on the beagle file. Here is the code I used for the initial beagle file:
 ```bash
 $1= InBGL $2=outDIR $3=outFilePREFIX $4=minMaf 
-sbatch scripts/runPCANGSD_selection_maptest.sbatch ./mkBGL/test06.beagle.gz ./PCAngsd_selection test06_PCAngsd_selection_maptest 0.05
+sbatch scripts/runPCANGSD_selection_maptest.sbatch ./mkBGL/Sfa-ABas-CBas_all_initial.beagle.gz ./PCAngsd_selection  Sfa-ABas-CBas_all_initial_PCAngsd_selection_maptest 0.05
 ```
 
 After the script finishes running, view the `.out` file and report the # SNPs retained and # Principal Components. Here are the stats for the tests we ran (minMaf 0.05):
 
-| test##   | # SNPs retained | # Principal Components |
-|----------|-----------------|------------------------|
-| test 01  |     13345151    |            1           |
-| test 02  |     7876119     |            1           |
-| test 03  |     7780498     |            1           | 
-| test 04  |     701713      |            1           |
-| test 05  |     2772817     |            1           |
-| test 06  |     560777      |            1           | 
+| test##             | # SNPs retained | # Principal Components |
+|--------------------|-----------------|------------------------|
+| test 01 (initial)  |     13345151    |            1           |
+| test 02            |     7876119     |            1           |
+| test 03            |     7780498     |            1           | 
+| test 04            |     701713      |            1           |
+| test 05            |     2772817     |            1           |
+| test 06 (final)    |     560777      |            1           | 
 
 ---
 
@@ -155,9 +157,9 @@ After the script finishes running, view the `.out` file and report the # SNPs re
 
 Pull changes to your local computer and open `plotPCANGSD_selection.R` in Rstudio.
 
-We only wanted to see the various PCAs for our test beagle files, so we read in the `.cov` from  file and the `popmap_sfa.tsv` file, and skipped to the portion titiled `#### visual pca ####` 
+We wanted to see the various PCAs for our initial beagle file (and subsequently the final beagle file), so we read in the `.cov` file and the `popmap_sfa.tsv` file, and skipped to the portion titiled `#### visual pca ####`. Run everything from here down.
 
-3 resulting PCAs are generated. 
+3 resulting PCAs are generated. If you are not satisfied with the PCA plots, return to step 6. and filter the data further until you are satisfied. Ideally, you'll want to move on to step 9. with ONLY the final beagle file. The final beagle file for *Salarias fasciatus* is named Sfa-ABas-CBas_all_final.beagle.gz
 
 ---
 
@@ -166,8 +168,9 @@ We only wanted to see the various PCAs for our test beagle files, so we read in 
 run `findSitesWithMinIndPerPop.bash`
 
 ```bash
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 $1=inFILE $2=outFILE
-sbatch scripts/findSitesWithMinIndPerPop.bash test06.geno.gz mkBGL/test06.minIndPerPop20.sites
+sbatch scripts/findSitesWithMinIndPerPop.bash Sfa-ABas-CBas_all_final.geno.gz mkBGL/Sfa-ABas-CBas_all_final.minIndPerPop20.sites
 ```
 This will output a `.sites` file that describes sites where there at least 20 individualts per pop. This file will be used for argument 2 of `fltrBGL2.sbatch`. See code. 
 
@@ -175,21 +178,21 @@ run `fltrBGL2.sbatch`
 
 ```bash 
 $1=bglFile $2=sitesFile
-sbatch scripts/fltrBGL2.sbatch mkBGL/test06.beagle.gz mkBGL/test06.minIndPerPop20.sites
+sbatch scripts/fltrBGL2.sbatch mkBGL/Sfa-ABas-CBas_all_final.beagle.gz mkBGL/Sfa-ABas-CBas_all_final.minIndPerPop20.sites
 ```
-This will output a `*_fltrd.beagle.gz` file that can be used in step 7. Go back and run `runPCANGSD_selection_maptest.sbatch` on the filtered data. 
+This will output a `*_fltrd.beagle.gz` file that can be used in step 7. Run `runPCANGSD_selection_maptest.sbatch` on the filtered data. 
 
 ---
 
 ## 10. Run `runPCANGSD_selection_maptest.sbatch` on filtered data
 
-Here, I ran `runPCANGSD_selection_maptest.sbatch` on test06 filtered data with minMaf = 0.05, 0.0, 0.1, 0.2, and 0.3. This is the code I ran with a minMaf = 0.05:
+Here, I ran `runPCANGSD_selection_maptest.sbatch` on the final filtered data with minMaf = 0.05, 0.0, 0.1, 0.2, and 0.3. This is the code I ran with a minMaf = 0.05:
 
 ```bash 
 $1= InBGL $2=outDIR $3=outFilePREFIX $4=minMaf 
-sbatch scripts/runPCANGSD_selection_maptest.sbatch ./mkBGL/test06_fltrd.beagle.gz ./PCAngsd_selection test06_fltrd_maptest 0.05 
+sbatch scripts/runPCANGSD_selection_maptest.sbatch ./mkBGL/_fltrd.beagle.gz ./PCAngsd_selection Sfa-ABas-CBas_all_final_fltrd_maptest 0.05 
 ```
-Here are the `.out` file stats for test06_fltrd_maptest with different minMaf settings: 
+Here are the `.out` file stats for Sfa-ABas-CBas_all_final_fltrd_maptest with different minMaf settings: 
 
 |  minMaf  | # SNPs retained | # Principal Components |
 |----------|-----------------|------------------------|
@@ -199,7 +202,7 @@ Here are the `.out` file stats for test06_fltrd_maptest with different minMaf se
 |   0.2    |     145575      |            1           |
 |   0.3    |     78719       |            1           | 
 
-Now, return to step 8. and visualize the plots for the filtered data using `plotPCANGSD_selection.R`
+Now, return to the instructions in step 8. and visualize the plots for the filtered data using `plotPCANGSD_selection.R`
 
 ---
 

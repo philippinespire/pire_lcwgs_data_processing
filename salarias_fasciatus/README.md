@@ -89,7 +89,7 @@ It is important to note that there are stringent default filters that are employ
 
 ### a. Make beagle file with minimal filters 
 
-You must first minimally filter the data so that you can accurately set the filter parameters for the filtered beagle file. 
+You must first minimally filter the data so that you can accurately set the filter parameters for the final beagle file. 
 
 To make the minimally filtered beagle file, run the `mkBGL.sbatch` script with minimal `TODO` and `FILTERS` settings. Here is the code I used when making the `initial.beagle.gz` file: 
 ```bash

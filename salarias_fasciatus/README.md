@@ -190,7 +190,7 @@ Here, I ran `runPCANGSD_selection_maptest.sbatch` on the final filtered data wit
 
 ```bash 
 $1= InBGL $2=outDIR $3=outFilePREFIX $4=minMaf 
-sbatch scripts/runPCANGSD_selection_maptest.sbatch ./mkBGL/_fltrd.beagle.gz ./PCAngsd_selection Sfa-ABas-CBas_all_final_fltrd_maptest 0.05 
+sbatch scripts/runPCANGSD_selection_maptest.sbatch ./mkBGL/Sfa-ABas-CBas_all_final_fltrd.beagle.gz ./PCAngsd_selection Sfa-ABas-CBas_all_final_fltrd_maptest 0.05 
 ```
 Here are the `.out` file stats for Sfa-ABas-CBas_all_final_fltrd_maptest with different minMaf settings: 
 

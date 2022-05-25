@@ -180,7 +180,7 @@ run `fltrBGL2.sbatch`
 $1=bglFile $2=sitesFile
 sbatch scripts/fltrBGL2.sbatch mkBGL/Sfa-ABas-CBas_all_final.beagle.gz mkBGL/Sfa-ABas-CBas_all_final.minIndPerPop20.sites
 ```
-This will output a `*_fltrd.beagle.gz` file that can be used in step 7. Run `runPCANGSD_selection_maptest.sbatch` on the filtered data. 
+This will output a `*_fltrd.beagle.gz` file that can be used in step 10. Run `runPCANGSD_selection_maptest.sbatch` on the filtered data. 
 
 ---
 

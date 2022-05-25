@@ -11,7 +11,7 @@ This repository outlines the roadmap we followed to get *Salarias fasciatus* thr
 
 ## 1. Preprocessing FqGZ files
 
-I followed the [pire_fq_gq_processing](https://github.com/philippinespire/pire_fq_gz_processing) instructions and scripts
+I followed the [pire_fq_gz_processing](https://github.com/philippinespire/pire_fq_gz_processing) instructions and scripts
 
 At the second fastp, we noticed a motif in the first 14 bp of the reads, so we split the data into 2 paths
 

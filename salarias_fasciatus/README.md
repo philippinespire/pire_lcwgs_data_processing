@@ -106,7 +106,7 @@ When running the above code again for the final beagle file, make sure to replac
 
 *Soon, we will be creating files for the `initial_bgl_filters` and `final_bgl_filters` for them to be fed to the script instead of hardcoded -- coming soon*
 
-### Determining final `mkBGL.sbatch` settings
+### b. Determine final `mkBGL.sbatch` settings
 
 Now that we have a minimally filtered beagle file, we can begin to visualize this data in order to determine the final filter settings. To do this, We first subsetted the `snpStat.gz` out file for easier handling and faster visualization in R using the following code for each test:
 

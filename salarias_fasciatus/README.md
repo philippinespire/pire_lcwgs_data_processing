@@ -206,7 +206,42 @@ Now, return to the instructions in step 8. and visualize the plots for the filte
 
 ---
 
+## 11. Making PCA's for each chromosome:
 
+To observe the principle component analyses per chromosome, we first renamed the rows of `final_fltrd.beagle.gz` file from the NCBI chromosome identification starting with "NC_" to something more intuitive: "CHR01_, CHR02_, ..."
+
+I named the new beagle file Sfa-ABas-CBas_all_final_fltrd_rnmd.beagle
+
+### a. Making bgl for each chromosome 
+```bash
+done on USER@wahab.hpc.odu.edu
+cd /home/e1garcia/shotgun_pire/pire_lcwgs_data_processing/salarias_fasciatus/mkBGL
+
+#CHR01:
+cat <(zcat Sfa-ABas-CBas_all_final_fltrd_rnmd.beagle.gz | \
+head -n1) <(zcat Sfa-ABas-CBas_all_final_fltrd_rnmd.beagle.gz | \
+grep "^CHR01") | \
+gzip > CHR01.beagle.gz
+
+
+CHR02:
+cat <(zcat Sfa-ABas-CBas_all_final_fltrd_rnmd.beagle.gz | \
+head -n1) <(zcat Sfa-ABas-CBas_all_final_fltrd_rnmd.beagle.gz | \
+grep "^CHR02") | \
+gzip > CHR02.beagle.gz
+```
+all of the new beagle files will output to the mkBGL dir. 
+
+### b. Running PCAngsd on each beagle 
+
+following the code in step 7., we ran `runPCANGSD_selection` on each chromosome beagle file. Here is the code I used for the first chromosome:
+
+```bash
+$1= InBGL $2=outDIR $3=outFilePREFIX $4=minMaf 
+sbatch scripts/runPCANGSD_selection_maptest.sbatch ./mkBGL/CHR01.beagle.gz ./PCAngsd_selection  CHR01_PCAngsd_selection_maptest 0.05
+```
+
+---
 
 
 

@@ -1,0 +1,29 @@
+
+/usr/local/lib64/python3.6/site-packages/pcangsd/covariance.py:44: RuntimeWarning: invalid value encountered in true_divide
+  C = np.dot(E.T, E)/float(m)
+/usr/local/lib64/python3.6/site-packages/pcangsd/covariance.py:45: RuntimeWarning: invalid value encountered in true_divide
+  np.fill_diagonal(C, dCov/float(m))
+PCAngsd v.1.10.
+Jonas Meisner and Anders Albrechtsen.
+Using 40 thread(s).
+
+Parsing Beagle file.
+Loaded 1 sites and 81 individuals.
+Estimating minor allele frequencies.
+EM (MAF) converged at iteration: 4
+Number of sites after MAF filtering (0.05): 0
+
+Estimating covariance matrix.
+Using 1 principal components (MAP test).
+Traceback (most recent call last):
+  File "/usr/local/bin/pcangsd", line 11, in <module>
+    load_entry_point('PCAngsd==1.10', 'console_scripts', 'pcangsd')()
+  File "/usr/local/lib64/python3.6/site-packages/pcangsd/pcangsd.py", line 249, in main
+    C, P, K = covariance.emPCA(L, f, args.n_eig, args.iter, args.tole, args.threads)
+  File "/usr/local/lib64/python3.6/site-packages/pcangsd/covariance.py", line 82, in emPCA
+    P, Vt = estimatePi(E, K, P, f)
+  File "/usr/local/lib64/python3.6/site-packages/pcangsd/covariance.py", line 25, in estimatePi
+    U, s, Vt = svds(E, k=K)
+  File "/usr/local/lib64/python3.6/site-packages/scipy/sparse/linalg/eigen/arpack/arpack.py", line 1817, in svds
+    raise ValueError("k must be between 1 and min(A.shape), k=%d" % k)
+ValueError: k must be between 1 and min(A.shape), k=1

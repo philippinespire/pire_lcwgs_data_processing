@@ -224,7 +224,7 @@ grep "^CHR01") | \
 gzip > CHR01.beagle.gz
 
 
-CHR02:
+#CHR02:
 cat <(zcat Sfa-ABas-CBas_all_final_fltrd_rnmd.beagle.gz | \
 head -n1) <(zcat Sfa-ABas-CBas_all_final_fltrd_rnmd.beagle.gz | \
 grep "^CHR02") | \
@@ -240,6 +240,11 @@ following the code in step 7., we ran `runPCANGSD_selection` on each chromosome 
 $1= InBGL $2=outDIR $3=outFilePREFIX $4=minMaf 
 sbatch scripts/runPCANGSD_selection_maptest.sbatch ./mkBGL/CHR01.beagle.gz ./PCAngsd_selection  CHR01_PCAngsd_selection_maptest 0.05
 ```
+
+### c. Visualize the results using `plotPCAngsd_selection.R`. 
+
+Pull changes to your local computer and follow step 8. visualize the scree plot and all three PCAs for each chromosome. The script allows you to save these as either .png files or as pdfs, if you wish to save these plots.  
+
 
 ---
 

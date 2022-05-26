@@ -102,7 +102,7 @@ sbatch scripts/mkBGL.sbatch fltrBAM Sfa-ABas-CBas_all_initial
 ```
 When running the above code again for the final beagle file, make sure to replace "initial" to "final" when naming the prefix.  
 
-*Note: check the `.args` and the `err` files to see what filters were applied to the run (double check that the ones you indicated are the ones listed), and which errors might have occurred during the run*
+*Note: check the `.args` and the `.err` files to see what filters were applied to the run (double check that the ones you indicated are the ones listed), and which errors might have occurred during the run*
 
 *Soon, we will be creating files for the `initial_bgl_filters` and `final_bgl_filters` for them to be fed to the script instead of hardcoded -- coming soon*
 
@@ -157,7 +157,7 @@ After the script finishes running, view the `.out` file and report the # SNPs re
 
 Pull changes to your local computer and open `plotPCANGSD_selection.R` in Rstudio.
 
-We wanted to see the various PCAs for our initial beagle file (and subsequently the final beagle file), so we read in the `.cov` file and the `popmap_sfa.tsv` file, and skipped to the portion titiled `#### visual pca ####`. Run everything from here down.
+We wanted to see the various PCAs for our initial beagle file (and subsequently the final beagle file), so we read in the `.cov` file and the `popmap_sfa.tsv` file, and skipped to the portion titiled `#### READ IN PCA DATA ####`. Run everything from here down.
 
 3 resulting PCAs are generated. If you are not satisfied with the PCA plots, return to step 6. and filter the data further until you are satisfied. Ideally, you'll want to move on to step 9. with ONLY the final beagle file. The final beagle file for *Salarias fasciatus* is named Sfa-ABas-CBas_all_final.beagle.gz
 

@@ -150,6 +150,8 @@ After the script finishes running, view the `.out` file and report the # SNPs re
 | test 05            |     2772817     |            1           |
 | test 06 (final)    |     560777      |            1           | 
 
+*Chris Bird will be creating a script that culls this information from the outfiles and inputs into a .tsv so that it does not need to be manually entered. Coming soon!
+
 ---
 
 ## 8. Visualize results using `plotPCANGSD_selection.R`

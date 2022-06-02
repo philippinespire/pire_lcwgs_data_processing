@@ -5,14 +5,13 @@
 Jordan Rodriguez
 
 ---
-This repository outlines the roadmap we followed to get *Salarias fasciatus* through the [Low Coverage Whole Genome Sequencing Pipeline](https://github.com/philippinespire/pire_lcwgs_data_processing) and the analysis we did in order to gain insight on the historical population demography of this aquarium fish. 
+This repository outlines the roadmap we followed to move *Salarias fasciatus* through the [Low Coverage Whole Genome Sequencing Pipeline](https://github.com/philippinespire/pire_lcwgs_data_processing) and the analysis we did in order to gain insight on the historical population demography of this popular aquarium fish species, also known as the jewelled blenny. 
 
 ---
 
 ## 1. Preprocessing FqGZ files
 
 I followed the [pire_fq_gz_processing](https://github.com/philippinespire/pire_fq_gz_processing) instructions and scripts
-
 At the second fastp, we noticed a motif in the first 14 bp of the reads, so we split the data into 2 paths
 
 * fp2: not clipping the first 14 bp
@@ -206,7 +205,7 @@ Now, return to the instructions in step 8. and visualize the plots for the filte
 
 ---
 
-## 11. Making PCA's for each chromosome:
+## 11. Run `runPCANGSD_selection_maptest.sbatch` on filtered data by chromosome:
 
 To observe the principle component analyses per chromosome, we first renamed the rows of `final_fltrd.beagle.gz` file from the NCBI chromosome identification starting with "NC_" to something more intuitive: "CHR01_, CHR02_, ..."
 
@@ -234,7 +233,7 @@ all of the new beagle files will output to the mkBGL dir.
 
 ### b. Running PCAngsd on each beagle 
 
-following the code in step 7., we ran `runPCANGSD_selection` on each chromosome beagle file. Here is the code I used for the first chromosome:
+following the code in step 7., we ran `runPCANGSD_selection_maptest.sbatch` on each chromosome beagle file. Here is the code I used for the first chromosome:
 
 ```bash
 $1= InBGL $2=outDIR $3=outFilePREFIX $4=minMaf 

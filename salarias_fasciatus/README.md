@@ -158,6 +158,8 @@ Pull changes to your local computer and open `plotPCANGSD_selection.R` in Rstudi
 
 We wanted to see the various PCAs for our initial beagle file (and subsequently the final beagle file), so we read in the `.cov` file and the `popmap_sfa.tsv` file, and skipped to the portion titiled `#### READ IN PCA DATA ####`. Run everything from here down.
 
+**Chris will be creating a script for the Manhattan plots that you currently see but skip over in the current script, coming soon!**
+
 3 resulting PCAs are generated. If you are not satisfied with the PCA plots, return to step 6. and filter the data further until you are satisfied. Ideally, you'll want to move on to step 9. with ONLY the final beagle file. The final beagle file for *Salarias fasciatus* is named Sfa-ABas-CBas_all_final.beagle.gz
 
 ---

@@ -252,13 +252,13 @@ Pull changes to your local computer and follow step 8. visualize the scree plot 
 
 ---
 
-## 12. run `runANGSD_ngsRelate.sbatch` on genotype likliehoods data:
+## 12. run `runNGSRELATE.sbatch` on genotype likliehoods data:
 
 NgsRelate is used to infer relatedness, inbreeding coefficients, & other summary statistics for pairs of individuals by using genotype likeliehoods. We obtained our likelihood file in step 6., when we used ANGSD to output a beagle file. 
 
 I followed example 1. of the [`ANGSD/NgsRelate` Repository](https://github.com/ANGSD/NgsRelate)
 
-NgsRelate accepts two (2) input files: the file containing allele frequencies ending in `.maf.gz` and the genotype likliehoods file ending in `beagle.gz`
+NgsRelate accepts two (2) input files: the file containing allele frequencies ending in `.maf.gz` and the genotype likliehoods file ending in `beagle.gz`. 
 
 First, we extracted the frequency column from the allele frequency file and removed the header to make it in the format that NgsRelate needs. 
 
@@ -273,9 +273,11 @@ The beagle file is already in the format that NgsRelate needs, so we can now run
 ```bash
 on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_pire/pire_lcwgs_data_processing/salarias_fasciatus
-
+$1=inBEAGLE $2=inFreqFILE $3=outDIR $4=outFilePREFIX
+sbatch scripts/runNGSRELATE.sbatch mkBGL/Sfa-ABas-CBas_all_final.beagle.gz mkBGL/Sfa-ABas-CBas_all_final_freqs ./ngsRelate out_NgsRelate
 ```
 
+---
 
 
  

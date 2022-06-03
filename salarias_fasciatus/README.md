@@ -252,7 +252,7 @@ Pull changes to your local computer and follow step 8. visualize the scree plot 
 
 ---
 
-## 12. run `runNGSRELATE.sbatch` on genotype likliehoods data:
+## 12. run `runNGSRELATE.sbatch` on genotype likelihoods data:
 
 NgsRelate is used to infer relatedness, inbreeding coefficients, & other summary statistics for pairs of individuals by using genotype likeliehoods. We obtained our likelihood file in step 6., when we used ANGSD to output a beagle file. 
 

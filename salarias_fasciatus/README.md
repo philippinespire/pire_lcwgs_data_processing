@@ -258,8 +258,23 @@ NgsRelate is used to infer relatedness, inbreeding coefficients, & other summary
 
 I followed example 1. of the [`ANGSD/NgsRelate` Repository](https://github.com/ANGSD/NgsRelate)
 
-Here was the code I used: 
+NgsRelate accepts two (2) input files: the file containing allele frequencies ending in `.maf.gz` and the genotype likliehoods file ending in `beagle.gz`
 
+First, we extracted the frequency column from the allele frequency file and removed the header to make it in the format that NgsRelate needs. 
+
+Here was the code I used: 
+```bash
+on USER@wahab.hpc.odu.edu
+cd /home/e1garcia/shotgun_pire/pire_lcwgs_data_processing/salarias_fasciatus/mkBGL
+zcat Sfa-ABas-CBas_all_final.mafs.gz | cut -f5 | sed 1d >Sfa-ABas-CBas_all_final_freqs
+```
+
+The beagle file is already in the format that NgsRelate needs, so we can now run NgsRelate. Here was the code I used:
+```bash
+on USER@wahab.hpc.odu.edu
+cd /home/e1garcia/shotgun_pire/pire_lcwgs_data_processing/salarias_fasciatus
+
+```
 
 
 

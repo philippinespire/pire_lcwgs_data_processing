@@ -256,7 +256,7 @@ Pull changes to your local computer and follow step 8. visualize the scree plot 
 
 NgsRelate is used to infer relatedness, inbreeding coefficients, & other summary statistics for pairs of individuals by using genotype likeliehoods. We obtained our likelihood file in step 6., when we used ANGSD to output a beagle file. 
 
-I followed example 1. of the (`ANGSD/NgsRelate` Repository)[https://github.com/ANGSD/NgsRelate]
+I followed example 1. of the [`ANGSD/NgsRelate` Repository](https://github.com/ANGSD/NgsRelate)
 
 Here was the code I used: 
 

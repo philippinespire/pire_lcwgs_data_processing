@@ -248,9 +248,17 @@ sbatch scripts/runPCANGSD_selection_maptest.sbatch ./mkBGL/CHR01.beagle.gz ./PCA
 
 Pull changes to your local computer and follow step 8. visualize the scree plot and all three PCAs for each chromosome. The script allows you to save these as either .png files or as pdfs, if you wish to save these plots.  
 
+*Need to add table here with stats by chromosome, will use script that has yet to be made (Chris will make) to cull this from the .out files (currently located in the PCAngsd_selection dir*
 
 ---
 
+## 12. run `runANGSD_ngsRelate.sbatch` on genotype likliehoods data:
+
+NgsRelate is used to infer relatedness, inbreeding coefficients, & other summary statistics for pairs of individuals by using genotype likeliehoods. We obtained our likelihood file in step 6., when we used ANGSD to output a beagle file. 
+
+I followed example 1. of the (`ANGSD/NgsRelate` Repository)[https://github.com/ANGSD/NgsRelate]
+
+Here was the code I used: 
 
 
 

@@ -274,7 +274,7 @@ The beagle file is already in the format that NgsRelate needs, so we can now run
 on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_pire/pire_lcwgs_data_processing/salarias_fasciatus
 $1=inBEAGLE $2=inFreqFILE $3=numLIBS $4=outDIR $5=outFilePREFIX
-sbatch scripts/runNGSRELATE.sbatch mkBGL/Sfa-ABas-CBas_all_final.beagle.gz mkBGL/Sfa-ABas-CBas_all_final_freqs 81 ./ngsRelate out_NgsRelate
+sbatch scripts/runNGSRELATE.sbatch mkBGL/Sfa-ABas-CBas_all_final_fltrd.beagle.gz mkBGL/Sfa-ABas-CBas_all_final_fltrd.mafs.gz 81 ./ngsRelate out_NgsRelate
 ```
 
 ---

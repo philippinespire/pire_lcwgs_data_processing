@@ -17,7 +17,7 @@ mafsFile=$2
 sitesFile=$3
 
 outBglFile=$(echo $bglFile | sed 's/\.beagle\.gz/_fltrd\.beagle/')
-outMafsFile=$(echo $bglFile | sed 's/\.mafs\.gz/_fltrd\.mafs/')
+outMafsFile=$(echo $mafsFile | sed 's/\.mafs\.gz/_fltrd\.mafs/')
 
 # comm <(gunzip $bglFile) $sitesFile | gzip > ${outFile}.gz
 

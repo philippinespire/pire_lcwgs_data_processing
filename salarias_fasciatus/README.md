@@ -213,7 +213,41 @@ Now, return to the instructions in step 8. and visualize the plots for the filte
 
 To observe the principle component analyses per chromosome, we first renamed the rows of `final_fltrd.beagle.gz` file from the NCBI chromosome identification starting with "NC_" to something more intuitive: "CHR01_, CHR02_, ..."
 
-I named the new beagle file Sfa-ABas-CBas_all_final_fltrd_rnmd.beagle
+here was the code I used:
+```bash
+done on USER@wahab.hpc.odu.edu
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
+zcat mkBGL/Sfa-ABas-CBas_all_final_fltrd.beagle.gz | \
+sed -e "s/NC_043745\.1/CHR01/" \
+-e "s/NC_043745\.1/CHR01/" \
+-e "s/NC_043746\.1/CHR02/" \
+-e "s/NC_043747\.1/CHR03/" \
+-e "s/NC_043748\.1/CHR04/" \
+-e "s/NC_043749\.1/CHR05/" \
+-e "s/NC_043750\.1/CHR06/" \
+-e "s/NC_043751\.1/CHR07/" \
+-e "s/NC_043752\.1/CHR08/" \
+-e "s/NC_043753\.1/CHR09/" \
+-e "s/NC_043754\.1/CHR10/" \
+-e "s/NC_043755\.1/CHR11/" \
+-e "s/NC_043756\.1/CHR12/" \
+-e "s/NC_043757\.1/CHR13/" \
+-e "s/NC_043758\.1/CHR14/" \
+-e "s/NC_043759\.1/CHR15/" \
+-e "s/NC_043760\.1/CHR16/" \
+-e "s/NC_043761\.1/CHR17/" \
+-e "s/NC_043762\.1/CHR18/" \
+-e "s/NC_043763\.1/CHR19/" \
+-e "s/NC_043764\.1/CHR20/" \
+-e "s/NC_043765\.1/CHR22/" \
+-e "s/NC_043766\.1/CHR23/" \
+-e "s/NC_004412\.1/MIT01/" | \
+less -S \
+> Sfa-ABas-CBas_all_final_fltrd_rnmd.beagle
+# gzip the above file
+```
+
+*note: I gzipped the renamed beagle and the final file name appears Sfa-ABas-CBas_all_final_fltrd_rnmd.beagle.gz
 
 ### a. Making bgl for each chromosome 
 ```bash
@@ -258,7 +292,7 @@ NgsRelate is used to infer relatedness, inbreeding coefficients, & other summary
 
 I followed example 1. of the [`ANGSD/NgsRelate` Repository](https://github.com/ANGSD/NgsRelate)
 
-NgsRelate accepts two (2) input files: the file containing allele frequencies ending in `.maf.gz` and the genotype likliehoods file ending in `beagle.gz`. 
+NgsRelate accepts two (2) input files: the file containing allele frequencies ending in `.maf.gz` and the genotype likliehoods file ending in `glf.gz`. 
 
 First, we extracted the frequency column from the allele frequency file and removed the header to make it in the format that NgsRelate needs. 
 

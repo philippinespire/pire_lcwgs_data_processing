@@ -9,14 +9,25 @@ enable_lmod
 module load container_env ngsTools
 export SINGULARITY_BIND=/home/e1garcia
 
-inBEAGLE=$1  #Sfa-ABas-CBas_all_final.beagle.gz
-inFreqFILE=$2  #Sfa-ABas-CBas_all_final_freqs
-outDIR=$3  #./ngsRelate
-outFilePREFIX=$4  #out_NgsRelate
+#inGlfFILE=$1  #mkGLF/Sfa-ABas-CBas_all_final_fltrd.glf.gz
+inBEAGLE=$1   #mkBGL/Sfa-ABas-CBas_all_final_fltrd.beagle.gz
+inMafsFILE=$2  #mkBGL/Sfa-ABas-CBas_all_final_fltrd.mafs.gz
+#inFreqFILE=$2  #Sfa-ABas-CBas_all_final_fltrd.freq
+numLIBS=$3      #81 
+outDIR=$4   #./ngsRelate
+outFilePREFIX=$5  #out_ngsRelate
+
+freqFILE=$(echo $inMafsFILE | sed -e "s/\.mafs\.gz/\.freq/" )
+
+zcat $inMafsFILE | cut -f5 | sed 1d > $freqFILE
 
 mkdir -p $outDIR
 
-crun ngsrelate --g $inBEAGLE \
-	--f $inFreqFILE \
-	--n 81 \
-	--O $outDIR/$outFilePREFIX
+crun ngsRelate -G $inBEAGLE -f $freqFILE -n $numLIBS -O $outDIR/$outFilePREFIX
+
+#crun ngsRelate -g $inGlfFILE \
+#        -f $freqFILE \
+#        -n $numLIBS \
+#        -O $outDIR/$outFilePREFIX
+
+#rm $freqFILE

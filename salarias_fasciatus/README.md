@@ -65,9 +65,9 @@ I followed the [read_mapping_summary](https://github.com/cbirdlab/read_mapping_s
 
 Here are the visual results:
 
-![](plots/pct_cov_meandepth_Sfa.png)
+[Percent Coverage & Mean Depth Plot](plots/pct_cov_meandepth_Sfa.png)
 
-![](plots/prop_seqs_mapped_Sfa.png)
+[Proportion of Mapped Sequences Plot](plots/prop_seqs_mapped_Sfa.png)
 
 --- 
 
@@ -84,7 +84,7 @@ paste <( ls fltrBAM/*bam | sed -e 's/^.*\///' -e 's/_.*$//' ) <( ls fltrBAM/*bam
 
 ## 6. Convert the Filtered BAM Files to a Beagle File Using Angsd
 
-It is important to note that there are stringent default filters that are employed by Angsd during the creation of the beagle file, which will remove data that we do not want to remove. To navigate this, we made `mkBGL.sbatch`, where we ran a series of 6 tests ranging from lenient to stringent filtering. The last assigned `TODO` and `FILTERS` are the parameters that will be applied when the script is ran. Optimally, you should only have to make two beagle files; the first beagle file gives insight to the appropriate filter parameters needed for the second and final beagle file. You may need to make additional beagle files if the filters need to be adjusted. 
+It is important to note that there are stringent default filters that are employed by ANGSD during the creation of the beagle file, which will remove data that we do not want to remove. To navigate this, we made `mkBGL.sbatch`, where we ran a series of 6 tests ranging from lenient to stringent filtering. The last assigned `TODO` and `FILTERS` are the parameters that will be applied when the script is ran. Optimally, you should only have to make two beagle files; the first beagle file gives insight to the appropriate filter parameters needed for the second and final beagle file. You may need to make additional beagle files if the filters need to be adjusted. 
 
 ### a. Make beagle file with minimal filters 
 
@@ -94,7 +94,7 @@ To make the minimally filtered beagle file, run the `mkBGL.sbatch` script with m
 ```bash
 # done on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
-# Angsd outputs files to the mkBGL dir, so it may be usefiul to create this dir before running the script if you haven't already
+# ANGSD outputs files to the mkBGL dir, so it may be usefiul to create this dir before running the script if you haven't already
 mkdir mkBGL
 # $1=fltrBAMdir $2=outPREFIX
 sbatch scripts/mkBGL.sbatch fltrBAM Sfa-ABas-CBas_all_initial
@@ -133,10 +133,10 @@ These plots, along with the PCA plots (created in step. 8), helped us to determi
 
 After following Demo 1 and 2 of the [PCAngsd tutorial](http://popgen.dk/software/index.php/PCAngsd), we created `runPCANGSD_selection_maptest`. The objective is to use PCAngsd to estimate the covariance matrix while jointly estimating the individual allele frequencies. 
 
-Run `runPCANGSD_selection_maptest.sbatch` on the beagle file. Here is the code I used for the initial beagle file:
+Run `runPCANGSD_selection_maptest.sbatch` on the beagle file. Here is the code I used for the final beagle file:
 ```bash
 $1= InBGL $2=outDIR $3=outFilePREFIX $4=minMaf 
-sbatch scripts/runPCANGSD_selection_maptest.sbatch ./mkBGL/Sfa-ABas-CBas_all_initial.beagle.gz ./PCAngsd_selection  Sfa-ABas-CBas_all_initial_PCAngsd_selection_maptest 0.05
+sbatch scripts/runPCANGSD_selection_maptest.sbatch ./mkBGL/Sfa-ABas-CBas_all_final.beagle.gz ./PCAngsd_selection  Sfa-ABas-CBas_all_final_PCAngsd_selection_maptest 0.05
 ```
 
 After the script finishes running, view the `.out` file and report the # SNPs retained and # Principal Components. Here are the stats for the tests we ran (minMaf 0.05):
@@ -160,7 +160,7 @@ Pull changes to your local computer and open `plotPCANGSD_selection.R` in Rstudi
 
 We wanted to see the various PCAs for our initial beagle file (and subsequently the final beagle file), so we read in the `.cov` file and the `popmap_sfa.tsv` file, and skipped to the portion titiled `#### READ IN PCA DATA ####`. Run everything from here down.
 
-**Chris will be creating a script for the Manhattan plots that you currently see but skip over in the current script, coming soon!**
+*Chris will be creating a script for the Manhattan plots that you currently see but skip over in the current script, coming soon!*
 
 3 resulting PCAs are generated. If you are not satisfied with the PCA plots, return to step 6. and filter the data further until you are satisfied. Ideally, you'll want to move on to step 9. with ONLY the final beagle file. The final beagle file for *Salarias fasciatus* is named Sfa-ABas-CBas_all_final.beagle.gz
 
@@ -175,7 +175,7 @@ cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 $1=inFILE $2=outFILE
 sbatch scripts/findSitesWithMinIndPerPop.bash mkBGL/Sfa-ABas-CBas_all_final.geno.gz mkBGL/Sfa-ABas-CBas_all_final.minIndPerPop20.sites
 ```
-This will output a `.sites` file that describes sites where there at least 20 individualts per pop. This file will be used for argument 2 of `fltrBGL2.sbatch`. See code. 
+This will output a `.sites` file that describes sites where there are at least 20 individuals. This file will be used for argument 2 of `fltrBGL2.sbatch`. See code. 
 
 run `fltrBGL2.sbatch`
 
@@ -290,35 +290,31 @@ Pull changes to your local computer and follow step 8. visualize the scree plot 
 
 NgsRelate is used to infer relatedness, inbreeding coefficients, & other summary statistics for pairs of individuals by using genotype likeliehoods. The genotype likelihoods file needed for ngsRelate is a `.glf.gz` file. We obtained another likelihood file in step 6. when we used angsd to output a beagle file, which will also work in the new version of ngsRelate with the option`-G` instead of `-g`. We used the reccommended `glf.gz` file input for our analysis.
 
-### a. Creating a glf 
+### a. Creating a `.glf.gz` file
 
 We ran the `mkGLF.sbatch` to output this file. here is the code we used:
 ```bash
 done on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/
-sbatch scripts/mkGLF.sbatch fltrBAM/
+$1=inDIR $2=sitesFILE
+sbatch scripts/mkGLF.sbatch fltrBAM/ mkBGL/Sfa-ABas-CBas_all_final.minIndPerPop20.sites
 ```
+This will output a `.glf.gz` genotype likelihoods file located in the `mkGLF` dir.
 
+### b. Run `runNGSRELATEglf.sbatch` using `.glf.gz` and `.mafs.gz` files
 
 I followed example 1. of the [`ANGSD/NgsRelate` Repository](https://github.com/ANGSD/NgsRelate)
 
-NgsRelate accepts two (2) input files: the file containing allele frequencies ending in `.maf.gz` and the genotype likliehoods file ending in `glf.gz`. 
+NgsRelate accepts two (2) input files: the file containing allele frequencies ending in `.mafs.gz` and the genotype likliehoods file ending in `.glf.gz`. 
 
-First, we extracted the frequency column from the allele frequency file and removed the header to make it in the format that NgsRelate needs. 
+the `ANGSD/NgsRelate` repo indicated that we needed to extract the frequency column from the allele frequency file (`.mafs.gz`) and remove the header to make it in the format that NgsRelate needs. We included this code in our `runNGSRELATE.sbatch` scripts to remove this extra step. 
 
-Here was the code I used: 
-```bash
-on USER@wahab.hpc.odu.edu
-cd /home/e1garcia/shotgun_pire/pire_lcwgs_data_processing/salarias_fasciatus/mkBGL
-zcat Sfa-ABas-CBas_all_final.mafs.gz | cut -f5 | sed 1d >Sfa-ABas-CBas_all_final_freqs
-```
-
-The beagle file is already in the format that NgsRelate needs, so we can now run NgsRelate. Here was the code I used:
+Using our `.glf.gz` genotype likelihoods file and `mafs.gz` allele freqs file, we used the following code to run NgsRelate:
 ```bash
 on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_pire/pire_lcwgs_data_processing/salarias_fasciatus
-$1=inBEAGLE $2=inFreqFILE $3=numLIBS $4=outDIR $5=outFilePREFIX
-sbatch scripts/runNGSRELATE.sbatch mkBGL/Sfa-ABas-CBas_all_final_fltrd.beagle.gz mkBGL/Sfa-ABas-CBas_all_final_fltrd.mafs.gz 81 ./ngsRelate out_NgsRelate
+$1=inGlfFILE $2=inMafsFILE $3=numLIBS $4=outDIR $5=outFilePREFIX
+sbatch scripts/runNGSRELATE.sbatch mkGLF/Sfa-ABas-CBas_all_final_fltrd.glf.gz mkBGL/Sfa-ABas-CBas_all_final_fltrd.mafs.gz 81 ./ngsRelate out_NgsRelate
 ```
 
 ---

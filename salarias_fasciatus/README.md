@@ -325,6 +325,12 @@ sbatch scripts/runNGSRELATE.sbatch mkGLF/Sfa-ABas-CBas_all_final_fltrd.glf.gz mk
 
 NgsLD is a program that calculates pairwise Linkage Disequilibrium (LD) under a probabilistic framework. It does so by avoiding genotype calling and using genotype likelihoods or posterior probabilities.
 
-
+This was the code I used:
+```bash 
+done on USER@wahab.hpc.odu.edu
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
+$1=inGlfFILE $2=numLIBS $3=numSITES $4=outDIR $5=outFilePREFIX
+sbatch scripts/runNGSLD.sbatch mkGLF/Sfa-ABas-CBas_all_final_fltrd.glf.gz 81 2184249 ./ngsLD out_ngsLD 
+```
 
  

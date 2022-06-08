@@ -286,9 +286,11 @@ Pull changes to your local computer and follow step 8. visualize the scree plot 
 
 ---
 
-## 12. run `runNGSRELATEglf.sbatch` on genotype likelihoods data:
+## 12. run [ANGSD/NgsRelate](https://github.com/ANGSD/NgsRelate):
 
 NgsRelate is used to infer relatedness, inbreeding coefficients, & other summary statistics for pairs of individuals by using genotype likeliehoods. The genotype likelihoods file needed for ngsRelate is a `.glf.gz` file. We obtained another likelihood file in step 6. when we used angsd to output a beagle file, which will also work in the new version of ngsRelate with the option`-G` instead of `-g`. We used the reccommended `glf.gz` file input for our analysis.
+
+*Note: We made a `runNGSRELATEbgl.sbatch` script for running ngsRelate with `.bgl.gz` file input. Original script is named `runNGSRELATE.sbatch` -- we may delete.*
 
 ### a. Creating a `.glf.gz` file
 

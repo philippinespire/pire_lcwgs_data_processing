@@ -321,5 +321,10 @@ sbatch scripts/runNGSRELATE.sbatch mkGLF/Sfa-ABas-CBas_all_final_fltrd.glf.gz mk
 
 ---
 
+## 13. Run [fgvieira/ngsLD](https://github.com/fgvieira/ngsLD)
+
+NgsLD is a program that calculates pairwise Linkage Disequilibrium (LD) under a probabilistic framework. It does so by avoiding genotype calling and using genotype likelihoods or posterior probabilities.
+
+
 
  

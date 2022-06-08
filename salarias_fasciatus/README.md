@@ -329,8 +329,8 @@ This was the code I used:
 ```bash 
 done on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
-$1=inGlfFILE $2=numLIBS $3=numSITES $4=outDIR $5=outFilePREFIX
-sbatch scripts/runNGSLD.sbatch mkGLF/Sfa-ABas-CBas_all_final_fltrd.glf.gz 81 2184249 ./ngsLD out_ngsLD 
+$1=inGlfFILE $2=numLIBS $3=numSITES $4=sitesFILE $5=outDIR $6=outFilePREFIX
+sbatch scripts/runNGSLD.sbatch mkGLF/Sfa-ABas-CBas_all_final_fltrd.glf.gz 81 2184249 mkBGL/Sfa-ABas-CBas_all_final.minIndPerPop20.sites ./ngsLD out_ngsLD 
 ```
 
  

@@ -327,10 +327,11 @@ NgsLD is a program that calculates pairwise Linkage Disequilibrium (LD) under a 
 
 This was the code I used:
 ```bash 
-done on USER@wahab.hpc.odu.edu
+# done on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
-$1=inGlfFILE $2=numLIBS $3=numSITES $4=sitesFILE $5=outDIR $6=outFilePREFIX
-sbatch scripts/runNGSLD.sbatch mkGLF/Sfa-ABas-CBas_all_final_fltrd.glf 81 2184249 mkGLF/Sfa-ABas-CBas_all_final_fltrd.glf.pos ./ngsLD out_ngsLD 
+# $1=inGlfFILE $2=numLIBS $3=numSITES $4=sitesFILE $5=outDIR $6=outFilePREFIX
+# needed to guzip the glf.gz file because, just because
+sbatch ./scripts/runNGSLD.sbatch mkGLF/Sfa-ABas-CBas_all_final_fltrd.glf 81 509340 mkGLF/Sfa-ABas-CBas_all_final_fltrd.glf.pos.gz ./ngsLD Sfa-ABas-CBas_all_final_fltrd.glf.ld 
 ```
 
  

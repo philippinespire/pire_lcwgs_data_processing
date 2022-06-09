@@ -1,0 +1,7 @@
+	-> angsd version: 0.937 (htslib: 1.14-9-ge769401) build(Mar 25 2022 10:24:30)
+	-> angsd -GL 1 -doGlf 3 -doMajorMinor 1 -doMaf 1 -doPost 2 -minMaf 0.05 -out ./mkGLF/Sfa-ABas-CBas_all_final_fltrd_glf -bam fltrBAM/bamNames.txt -nThreads 40 -sites Sfa-ABas-CBas_all_final.minIndPerPop20.sites 
+	-> Inputtype is BAM/CRAM
+[multiReader] 81 samples in 81 input files
+	-> [prep_sites.cpp] Reading binary representation of 'Sfa-ABas-CBas_all_final.minIndPerPop20.sites'
+	-> Binary file doesnt exists:Sfa-ABas-CBas_all_final.minIndPerPop20.sites.bin you should index:Sfa-ABas-CBas_all_final.minIndPerPop20.sites
+	-> like: 'angsd sites index Sfa-ABas-CBas_all_final.minIndPerPop20.sites'

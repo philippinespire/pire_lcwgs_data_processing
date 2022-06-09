@@ -25,6 +25,6 @@ cat $sitesFile | tr -s " " "_" > ${sitesFile}.txt
 cat $sitesFile | tr -s " " "\t" > ${sitesFile}.tsv
 
 cat <(zcat $bglFile | head -n1) <(zcat $bglFile | awk 'NR==FNR{a[$1]=$1OFS$2;next}{$1=a[$1];print}' OFS='\t' $sitesFile.txt - | grep -Pv "^\t") | gzip > ${outBglFile}.gz
-cat <(zcat $mafsFile | head -n1) <(zcat $mafsFile | awk 'NR==FNR{a[$1,$2]=$1OFS$2;next}{$1=a[$1,$2];print}' OFS='\t' $sitesFile.tsv - | grep -Pv "^\t") | gzip > ${outMafsFile}.gz
+cat <(zcat $mafsFile | head -n1) <(zcat $mafsFile | awk 'NR==FNR{a[$1,$2]=$1OFS$2;next}{$1=a[$1,$2];print}' OFS='\t' $sitesFile.tsv - | grep -Pv "^\t" | cut -f1-2,4-) | gzip > ${outMafsFile}.gz
 
 rm  ${sitesFile}.t[xs][tv]

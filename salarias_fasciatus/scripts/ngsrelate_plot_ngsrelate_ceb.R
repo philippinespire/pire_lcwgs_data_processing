@@ -84,6 +84,16 @@ boxplot(l,horizontal=T, las=2, space=0.01, cex.axis=0.3, cex=0.1, ylim=c(0,1),sp
 abline(v = c(0.0, 0.05, 0.1, 0.25, 0.5, 1),lwd=0.1,lty='dotted')
 dev.off()
 
+df.inbreeding %>%
+    mutate(name = as.numeric(name),
+           era = case_when(name <= 31 ~ "A",
+                           TRUE ~ "C")) %>%
+    ggplot(aes(y=F,
+               x=name,
+               group=name,
+               fill = era)) +
+    geom_boxplot()
+
 
 ################
 ## R0 R1 KING ##

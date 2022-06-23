@@ -130,7 +130,7 @@ These plots, along with the PCA plots (created in step. 8), helped us to determi
 
 ---
 
-## 7. Run [PCAngsd](http://popgen.dk/software/index.php/PCAngsd) : `runPCANGSD_selection_maptest.sbatch`
+## 7. Run [PCAngsd](http://popgen.dk/software/index.php/PCAngsd) : [`runPCANGSD_selection_maptest.sbatch`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/runPCANGSD_selection_maptest.sbatch)
 
 After following Demo 1 and 2 of the [PCAngsd tutorial](http://popgen.dk/software/index.php/PCAngsd), we created [`runPCANGSD_selection_maptest`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/runPCANGSD_selection_maptest.sbatch). The objective is to use PCAngsd to estimate the covariance matrix while jointly estimating the individual allele frequencies. 
 
@@ -176,9 +176,9 @@ cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 $1=inFILE $2=outFILE
 sbatch scripts/findSitesWithMinIndPerPop.bash mkBGL/Sfa-ABas-CBas_all_final.geno.gz mkBGL/Sfa-ABas-CBas_all_final.minIndPerPop20.sites
 ```
-This will output a `.sites` file that describes sites where there are at least 20 individuals. This file will be used for argument 2 of `fltrBGL2.sbatch`. See code. 
+This will output a `.sites` file that describes sites where there are at least 20 individuals. This file will be used for argument 2 of [`fltrBGL2.sbatch`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/fltrBGL2.sbatch). See code. 
 
-run `fltrBGL2.sbatch`
+run [`fltrBGL2.sbatch`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/fltrBGL2.sbatch)
 
 ```bash 
 $1=bglFile $2=sitesFile
@@ -188,9 +188,9 @@ This will output a `*_fltrd.beagle.gz` file that can be used in step 10. Run `ru
 
 ---
 
-## 10. Run `runPCANGSD_selection_maptest.sbatch` on filtered data
+## 10. Run [`runPCANGSD_selection_maptest.sbatch`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/runPCANGSD_selection_maptest.sbatch) on filtered data
 
-Here, I ran `runPCANGSD_selection_maptest.sbatch` on the final filtered data with minMaf = 0.05, 0.0, 0.1, 0.2, and 0.3. This is the code I ran with a minMaf = 0.05:
+Here, I ran [`runPCANGSD_selection_maptest.sbatch`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/runPCANGSD_selection_maptest.sbatch) on the final filtered data with minMaf = 0.05, 0.0, 0.1, 0.2, and 0.3. This is the code I ran with a minMaf = 0.05:
 
 ```bash 
 $1= InBGL $2=outDIR $3=outFilePREFIX $4=minMaf 
@@ -206,11 +206,11 @@ Here are the `.out` file stats for Sfa-ABas-CBas_all_final_fltrd_maptest with di
 |   0.2    |     145575      |            1           |
 |   0.3    |     78719       |            1           | 
 
-Now, return to the instructions in step 8. and visualize the plots for the filtered data using `plotPCANGSD_selection.R`
+Now, return to the instructions in step 8. and visualize the plots for the filtered data using [`plotPCANGSD_selection.R`]
 
 ---
 
-## 11. Run `runPCANGSD_selection_maptest.sbatch` on filtered data by chromosome:
+## 11. Run [`runPCANGSD_selection_maptest.sbatch`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/runPCANGSD_selection_maptest.sbatch) on filtered data by chromosome:
 
 To observe the principle component analyses per chromosome, we first renamed the rows of `final_fltrd.beagle.gz` file from the NCBI chromosome identification starting with "NC_" to something more intuitive: "CHR01_, CHR02_, ..."
 
@@ -272,30 +272,58 @@ all of the new beagle files will output to the mkBGL dir.
 
 ### b. Running PCAngsd on each beagle 
 
-following the code in step 7., we ran `runPCANGSD_selection_maptest.sbatch` on each chromosome beagle file. Here is the code I used for the first chromosome:
+following the code in step 7., we ran [`runPCANGSD_selection_maptest.sbatch`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/runPCANGSD_selection_maptest.sbatch) on each chromosome beagle file. Here is the code I used for the first chromosome:
 
 ```bash
 $1= InBGL $2=outDIR $3=outFilePREFIX $4=minMaf 
 sbatch scripts/runPCANGSD_selection_maptest.sbatch ./mkBGL/CHR01.beagle.gz ./PCAngsd_selection  CHR01_PCAngsd_selection_maptest 0.05
 ```
 
-### c. Visualize the results using `plotPCAngsd_selection.R`. 
+Here are the `.out` file stats for each chromosome with a minmaf setting of 0.05:
+
+|  CHR##   | # SNPs retained | # Principal Components |
+|----------|-----------------|------------------------|
+|    1     |     29307       |            1           |
+|    2     |     25286       |            1           |
+|    3     |     19537       |            1           | 
+|    4     |     26160       |            1           |
+|    5     |     27400       |            1           | 
+|    6     |     29689       |            1           |
+|    7     |     22719       |            1           |
+|    8     |     16591       |            1           | 
+|    9     |     20014       |            1           |
+|   10     |     22804       |            1           | 
+|   11     |     24756       |            1           |
+|   12     |     25087       |            1           |
+|   13     |     23686       |            1           | 
+|   14     |     29783       |            1           |
+|   15     |     22196       |            1           | 
+|   16     |     24272       |            1           |
+|   17     |     14125       |            1           |
+|   18     |     24300       |            1           | 
+|   19     |     20924       |            1           |
+|   20     |     25549       |            1           | 
+|   22     |     23016       |            1           | 
+|   23     |     8090        |            1           |
+|  MIT0    |     0           |            0           | 
+
+*Chris will make a script to cull this info from the .out files (currently located in the PCAngsd_selection dir)* 
+
+### c. Visualize the results using [`plotPCANGSD_selection.R`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/plotPCANGSD_selection.R). 
 
 Pull changes to your local computer and follow step 8. visualize the scree plot and all three PCAs for each chromosome. The script allows you to save these as either .png files or as pdfs, if you wish to save these plots.  
-
-*Need to add table here with stats by chromosome, will use script that has yet to be made (Chris will make) to cull this from the .out files (currently located in the PCAngsd_selection dir*
 
 ---
 
 ## 12. run [ANGSD/NgsRelate](https://github.com/ANGSD/NgsRelate):
 
-NgsRelate is used to infer relatedness, inbreeding coefficients, & other summary statistics for pairs of individuals by using genotype likeliehoods. The genotype likelihoods file needed for ngsRelate is a `.glf.gz` file. We obtained another likelihood file in step 6. when we used angsd to output a beagle file, which will also work in the new version of ngsRelate with the option`-G` instead of `-g`. We used the reccommended `glf.gz` file input for our analysis.
+NgsRelate is used to infer relatedness, inbreeding coefficients, & other summary statistics for pairs of individuals by using genotype likelihoods. The genotype likelihoods file needed for ngsRelate is a `.glf.gz` file. We obtained another likelihood file in step 6. when we used angsd to output a beagle file, which will also work in the new version of ngsRelate with the option`-G` instead of `-g`. We used the reccommended `glf.gz` file input for our analysis.
 
 *Note: We made a `runNGSRELATEbgl.sbatch` script for running ngsRelate with `.bgl.gz` file input. Original script is named `runNGSRELATE.sbatch` -- we may delete.*
 
 ### a. Creating a `.glf.gz` file
 
-We ran the `mkGLF.sbatch` to output this file. here is the code we used:
+We ran the [`mkGLF.sbatch`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/mkGLF.sbatch) to output this file. here is the code we used:
 ```bash
 done on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/
@@ -304,20 +332,20 @@ sbatch scripts/mkGLF.sbatch fltrBAM/ mkBGL/Sfa-ABas-CBas_all_final.minIndPerPop2
 ```
 This will output a `.glf.gz` genotype likelihoods file located in the `mkGLF` dir.
 
-### b. Run `runNGSRELATEglf.sbatch` using `.glf.gz` and `.mafs.gz` files
+### b. Run [`runNGSRELATEglf.sbatch`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/runNGSRELATEglf.sbatch) using `.glf.gz` and `.mafs.gz` files
 
 I followed example 1. of the [`ANGSD/NgsRelate` Repository](https://github.com/ANGSD/NgsRelate)
 
 NgsRelate accepts two (2) input files: the file containing allele frequencies ending in `.mafs.gz` and the genotype likliehoods file ending in `.glf.gz`. 
 
-the `ANGSD/NgsRelate` repo indicated that we needed to extract the frequency column from the allele frequency file (`.mafs.gz`) and remove the header to make it in the format that NgsRelate needs. We included this code in our `runNGSRELATE.sbatch` scripts to remove this extra step. 
+the `ANGSD/NgsRelate` repo indicated that we needed to extract the frequency column from the allele frequency file (`.mafs.gz`) and remove the header to make it in the format that NgsRelate needs. We included this code in our [`runNGSRELATEglf.sbatch`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/runNGSRELATEglf.sbatch) scripts to remove this extra step. 
 
 Using our `.glf.gz` genotype likelihoods file and `mafs.gz` allele freqs file, we used the following code to run NgsRelate:
 ```bash
 on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_pire/pire_lcwgs_data_processing/salarias_fasciatus
 $1=inGlfFILE $2=inMafsFILE $3=numLIBS $4=outDIR $5=outFilePREFIX
-sbatch scripts/runNGSRELATE.sbatch mkGLF/Sfa-ABas-CBas_all_final_fltrd.glf.gz mkBGL/Sfa-ABas-CBas_all_final_fltrd.mafs.gz 81 ./ngsRelate out_NgsRelate
+sbatch scripts/runNGSRELATEglf.sbatch mkGLF/Sfa-ABas-CBas_all_final_fltrd.glf.gz mkBGL/Sfa-ABas-CBas_all_final_fltrd.mafs.gz 81 ./ngsRelate out_NgsRelate
 ```
 
 ---
@@ -335,6 +363,8 @@ cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 sbatch ./scripts/runNGSLD.sbatch mkGLF/Sfa-ABas-CBas_all_final_fltrd.glf 81 509340 mkGLF/Sfa-ABas-CBas_all_final_fltrd.glf.pos.gz ./ngsLD Sfa-ABas-CBas_all_final_fltrd.glf.ld 
 ```
 
+*need to visualize these results*
+
  ---
  
-## 14. 
+## 14. Run SNeP:

@@ -85,13 +85,13 @@ paste <( ls fltrBAM/*bam | sed -e 's/^.*\///' -e 's/_.*$//' ) <( ls fltrBAM/*bam
 
 ## 6. Convert the Filtered BAM Files to a Beagle File Using Angsd
 
-It is important to note that there are stringent default filters that are employed by ANGSD during the creation of the beagle file, which will remove data that we do not want to remove. To navigate this, we made [`mkBGL.sbatch`](../../scripts/mkBGL.sbatch), where we ran a series of 6 tests ranging from lenient to stringent filtering. The last assigned `TODO` and `FILTERS` are the parameters that will be applied when the script is ran. Optimally, you should only have to make two beagle files; the first beagle file gives insight to the appropriate filter parameters needed for the second and final beagle file. You may need to make additional beagle files if the filters need to be adjusted. 
+It is important to note that there are stringent default filters that are employed by ANGSD during the creation of the beagle file, which will remove data that we do not want to remove. To navigate this, we made [`mkBGL.sbatch`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/mkBGL.sbatch), where we ran a series of 6 tests ranging from lenient to stringent filtering. The last assigned `TODO` and `FILTERS` are the parameters that will be applied when the script is ran. Optimally, you should only have to make two beagle files; the first beagle file gives insight to the appropriate filter parameters needed for the second and final beagle file. You may need to make additional beagle files if the filters need to be adjusted. 
 
 ### a. Make beagle file with minimal filters 
 
 You must first minimally filter the data so that you can accurately set the filter parameters for the final beagle file. 
 
-To make the minimally filtered beagle file, run the `mkBGL.sbatch` script with minimal `TODO` and `FILTERS` settings. Here is the code I used when making the `initial.beagle.gz` file: 
+To make the minimally filtered beagle file, run the [`mkBGL.sbatch`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/mkBGL.sbatch) script with minimal `TODO` and `FILTERS` settings. Here is the code I used when making the `initial.beagle.gz` file: 
 ```bash
 # done on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
@@ -106,7 +106,7 @@ When running the above code again for the final beagle file, make sure to replac
 
 *Soon, we will be creating files for the `initial_bgl_filters` and `final_bgl_filters` for them to be fed to the script instead of hardcoded -- coming soon*
 
-### b. Determine final `mkBGL.sbatch` settings
+### b. Determine final [`mkBGL.sbatch`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/mkBGL.sbatch) settings
 
 Now that we have a minimally filtered beagle file, we can begin to visualize this data in order to determine the final filter settings. To do this, We first subsetted the `snpStat.gz` out file for easier handling and faster visualization in R using the following code for each test:
 
@@ -115,7 +115,7 @@ Now that we have a minimally filtered beagle file, we can begin to visualize thi
 zcat Sfa-ABas-CBas_all_initial.snpStat.gz | head -n 100000 > Sfa-ABas-CBas_all_initial.100k.snpStat
 ```
 
-Next, edit the `.gitignore` file located in the parent dir to allow the subsetted txt file through when pushing changes. Pull the changes to your local computer and open the `processSnpStat.R` script.
+Next, edit the `.gitignore` file located in the parent dir to allow the subsetted txt file through when pushing changes. Pull the changes to your local computer and open the [`processSnpStat.R`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/processSnpStat.R) script.
 
 You are now in the R environment:
 
@@ -126,15 +126,15 @@ minInd=41
 ```
 This script will output a series of 12 plots: Positive Strand Read Counts, Negative Strand Read Counts, Positive Strand Minor AF, Negative Strand Minor AF, Strand Bias 1, Strand Bias 2, Strand Bias 3, HWE P Value, Base Quality P Value, Mapping Quality P Value, Edge P Value, and Het Stat P Value.
 
-These plots, along with the PCA plots (created in step. 8), helped us to determine the final beagle file parameters needeed. If you are not satisfied with the plots, return to the `mkBGL.sbatch` script and modify the filters at this time. Continue to change the settings until you are satisfied.
+These plots, along with the PCA plots (created in step. 8), helped us to determine the final beagle file parameters needeed. If you are not satisfied with the plots, return to the [`mkBGL.sbatch`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/mkBGL.sbatch) script and modify the filters at this time. Continue to change the settings until you are satisfied.
 
 ---
 
 ## 7. Run [PCAngsd](http://popgen.dk/software/index.php/PCAngsd) : `runPCANGSD_selection_maptest.sbatch`
 
-After following Demo 1 and 2 of the [PCAngsd tutorial](http://popgen.dk/software/index.php/PCAngsd), we created `runPCANGSD_selection_maptest`. The objective is to use PCAngsd to estimate the covariance matrix while jointly estimating the individual allele frequencies. 
+After following Demo 1 and 2 of the [PCAngsd tutorial](http://popgen.dk/software/index.php/PCAngsd), we created [`runPCANGSD_selection_maptest`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/runPCANGSD_selection_maptest.sbatch). The objective is to use PCAngsd to estimate the covariance matrix while jointly estimating the individual allele frequencies. 
 
-Run `runPCANGSD_selection_maptest.sbatch` on the beagle file. Here is the code I used for the final beagle file:
+Run [`runPCANGSD_selection_maptest.sbatch`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/runPCANGSD_selection_maptest.sbatch) on the beagle file. Here is the code I used for the final beagle file:
 ```bash
 $1= InBGL $2=outDIR $3=outFilePREFIX $4=minMaf 
 sbatch scripts/runPCANGSD_selection_maptest.sbatch ./mkBGL/Sfa-ABas-CBas_all_final.beagle.gz ./PCAngsd_selection  Sfa-ABas-CBas_all_final_PCAngsd_selection_maptest 0.05
@@ -155,21 +155,21 @@ After the script finishes running, view the `.out` file and report the # SNPs re
 
 ---
 
-## 8. Visualize results using `plotPCANGSD_selection.R`
+## 8. Visualize results using [`plotPCANGSD_selection.R`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/plotPCANGSD_selection.R)
 
-Pull changes to your local computer and open `plotPCANGSD_selection.R` in Rstudio.
+Pull changes to your local computer and open [`plotPCANGSD_selection.R`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/plotPCANGSD_selection.R) in Rstudio.
 
 We wanted to see the various PCAs for our initial beagle file (and subsequently the final beagle file), so we read in the `.cov` file and the `popmap_sfa.tsv` file, and skipped to the portion titiled `#### READ IN PCA DATA ####`. Run everything from here down.
 
 *Chris will be creating a script for the Manhattan plots that you currently see but skip over in the current script, coming soon!*
 
-3 resulting PCAs are generated. If you are not satisfied with the PCA plots, return to step 6. and filter the data further until you are satisfied. Ideally, you'll want to move on to step 9. with ONLY the final beagle file. The final beagle file for *Salarias fasciatus* is named Sfa-ABas-CBas_all_final.beagle.gz
+3 resulting PCAs are generated. If you are not satisfied with the PCA plots, return to step 6. and filter the data further until you are satisfied. Ideally, you'll want to move on to step 9. with ONLY the final beagle file. The final beagle file for *Salarias fasciatus* is named Sfa-ABas-CBas_all_final.beagle.gz and is located in the mkBGL dir.
 
 ---
 
 ## 9. Filter the Beagle File: Removing sites that dont pass
 
-run `findSitesWithMinIndPerPop.bash`
+run [`findSitesWithMinIndPerPop.bash`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/findSitesWithMinIndPerPop.bash)
 
 ```bash
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus

@@ -45,15 +45,17 @@ ngsRelate <- read_tsv("../ngsRelate/out_ngsRelate") %>%
          b = b+1) %>%
   full_join(decode_a) %>%
   full_join(decode_b) %>%
-  mutate(era_a = case_when(str_detect(ID_a, "ABas") ~ "H",
-                           str_detect(ID_a, "CBas") ~ "C"),
-         era_b = case_when(str_detect(ID_b, "ABas") ~ "H",
-                           str_detect(ID_b, "CBas") ~ "C")) %>%
+  mutate(era_a = case_when(str_detect(ID_a, "ABas") ~ "Historical",
+                           str_detect(ID_a, "CBas") ~ "Contemporary"),
+         era_b = case_when(str_detect(ID_b, "ABas") ~ "Historical",
+                           str_detect(ID_b, "CBas") ~ "Contemporary")) %>%
   unite("era_comparison", c(era_a, era_b), sep = "-", remove = FALSE) %>%
   drop_na() %>% 
-  mutate(era_comparison = factor(era_comparison, levels = c("H-H", "H-C", "C-C")),
-         era_a = factor(era_a, levels = c("H", "C")),
-         era_b = factor(era_b, levels = c("H", "C")))
+  mutate(era_comparison = factor(era_comparison, levels = c("Historical-Historical", 
+                                                            "Historical-Contemporary", 
+                                                            "Contemporary-Contemporary")),
+         era_a = factor(era_a, levels = c("Historical", "Contemporary")),
+         era_b = factor(era_b, levels = c("Historical", "Contemporary")))
 
 IB_coeff <- ngsRelate %>% 
   mutate(name = a,
@@ -63,10 +65,10 @@ IB_coeff <- ngsRelate %>%
               mutate(name = b,
                      F = fb) %>%
               select(name, F, era_comparison)) %>%
-  mutate(era = case_when(name <= 32 ~ "H",
-                         name > 32 ~ "C")) %>%
+  mutate(era = case_when(name <= 32 ~ "Historical",
+                         name > 32 ~ "Contemporary")) %>%
   left_join(decode_a, by = c("name" ="a")) %>%
-  mutate(era = factor(era, levels = c("H", "C")))
+  mutate(era = factor(era, levels = c("Historical", "Contemporary")))
 
 #ngsLD <- read_tsv("../ngsLD/out_ngsLD")
 
@@ -79,7 +81,9 @@ IB_coeff <- ngsRelate %>%
    labs(fill = "Pairwise Era\nComparison") +
    xlab("Pairwise Relatedness") + 
    ylab("Counts") + 
-   plot_theme)
+   plot_theme +
+   theme(legend.position = "bottom",
+         strip.text = element_text(colour = 'black', size = 16)))
 
 ggsave(plot = Relatedness_Histogram,
        filename = "../plots/ATBC_Relatedness_Histogrm.png", 
@@ -274,3 +278,8 @@ ngsRelate %>%
 #   labs(color = "Pairwise\nEra Comparison") +
 #   plot_theme
   
+
+#### PCAngst ####
+
+library(RcppCNPy)
+

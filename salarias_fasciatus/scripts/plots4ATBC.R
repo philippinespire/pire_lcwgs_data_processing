@@ -279,7 +279,72 @@ ngsRelate %>%
 #   plot_theme
   
 
-#### PCAngst ####
+#### Plot PCANGSD ####
 
 library(RcppCNPy)
+
+## User Defined Variables ## 
+popMap = "../fltrBAM/popmap_sfa.tsv"
+covFile = "../PCAngsd_selection/Sfa-ABas-CBas_all_final_PCAngsd_selection_maptest_minMaf0.05.cov" #WG
+covFile = "../PCAngsd_selection/CHR01_PCAngsd_selection_maptest_minMaf0.05.cov" #CHR01
+covFile = "../PCAngsd_selection/CHR04_PCAngsd_selection_maptest_minMaf0.05.cov" #CHR04
+
+
+## READ IN PCA DATA ##
+C <- as.matrix(read.table(covFile))
+e <- eigen(C)
+
+data_pca <-
+  read_tsv(popMap,
+           col_names = TRUE) %>%
+  bind_cols(as_tibble(e$vectors)) %>%
+  rename_with(.cols = starts_with("V"),
+              .fn = ~str_replace(.,
+                                 "^V",
+                                 "PC"))
+
+data_pca_2 <-
+  as_tibble(e$values) %>%
+  # arrange(desc(value)) %>%
+  mutate(pct_variance_explained = 100 * value/sum(value),
+         principle_component = row_number())
+
+
+
+
+## VISUALIZE PCA ##
+data_pca %>%
+  mutate(era = case_when(POP == "Sfa-ABas" ~ "Historical",
+                         POP == "Sfa-CBas" ~ "Contemporary")) %>%
+  ggplot(aes(x=PC1,
+             y=PC2,
+             color=era)) +
+  geom_point(size=3) +
+  theme_classic() +
+  labs(x = str_c("PC1 (",
+                 data_pca_2$pct_variance_explained %>%
+                   head(1) %>%
+                   round(2),
+                 "%)"),
+       y = str_c("PC2 (",
+                 data_pca_2$pct_variance_explained %>%
+                   head(2) %>%
+                   tail(1) %>%
+                   round(2),
+                 "%)"),
+       color = "Era") +
+  theme(axis.text = element_text(colour = 'black', size = 18),
+        legend.text = element_text(colour = 'black', size = 16),
+        legend.title = element_text(colour = 'black', size = 20),
+        axis.title = element_text(colour = 'black', size = 24),
+        legend.position = "bottom")
+
+
+ggsave("../plots/ATBC_WG_PCA_noelip.png", units = "in", height = 4, width = 6)
+#ggsave("../plots/ATBC_CHR01_PCA_noelip.png", units = "in", height = 4, width = 6)
+#ggsave("../plots/ATBC_CHR04_PCA_noelip.png", units = "in", height = 4, width = 6)
+
+
+
+
 

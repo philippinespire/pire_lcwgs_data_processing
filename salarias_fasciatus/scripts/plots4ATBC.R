@@ -420,7 +420,8 @@ data_all %>%
        #title = "Title",
        color = "era") +
   theme(legend.position = "none",
-        axis.text = element_text(colour = 'black', size = 18))
+        axis.text = element_text(colour = 'black', size = 14),
+        axis.title = element_text(colour = 'black', size = 16))
 
 ggsave("../plots/ATCB_prop_seqs_mapped_Sfa.png", units = "in", height = 4, width = 6)
 
@@ -446,6 +447,7 @@ data_all %>%
        #title = "Title",
        color = "Era") +
   theme(legend.position = "none",
-        axis.text = element_text(colour = 'black', size = 18))
+        axis.text = element_text(colour = 'black', size = 14),
+        axis.title = element_text(colour = 'black', size = 16))
 
 ggsave("../plots/ATBC_pct_cov_meandepth_Sfa.png", units = "in", height = 4, width = 6)

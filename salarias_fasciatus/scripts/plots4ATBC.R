@@ -345,6 +345,107 @@ ggsave("../plots/ATBC_WG_PCA_noelip.png", units = "in", height = 4, width = 6)
 #ggsave("../plots/ATBC_CHR04_PCA_noelip.png", units = "in", height = 4, width = 6)
 
 
+#### Bam Stats stuff ####
+
+indir_fastqc = "../Multi_FASTQC/multiqc_report_fq.gz_data/"
+indir_readstats = "../BAM_metrics/"
+
+FILE1 = "multiqc_general_stats.txt"
+FILE2 = "multiqc_fastqc.txt"
+
+source("../../../rroberts_thesis/wrangling_data_ssl/read_data_ssl.R")
+
+data_fastqc <- read_tsv(paste(indir_fastqc, FILE1, sep = "")) %>%
+  inner_join(read_tsv(paste(indir_fastqc, FILE2, sep = ""))) %>%
+  clean_names() %>%
+  filter(!str_detect(sample, 'Undet')) %>%
+  filter(str_detect(sample,
+                    "_1$"))
+
+data_mapped_read_stats <- 
+  read_bam_reads(indir_readstats) %>%
+  mutate(sample = str_replace(filename,
+                              "_clmp\\.fp2.*$",
+                              "_1"),
+         # change numreads to new var name when this breaks
+         num_seqs_mapped = num_mapped_reads / 2)
+
+
+data_all <-
+  data_fastqc %>%
+  left_join(data_mapped_read_stats,
+            by = c("sample")) %>%
+  mutate(prop_seqs_mapped = num_seqs_mapped / total_sequences,
+         prop_seqs_unmapped = 1 - prop_seqs_mapped,
+         era = case_when(str_detect(sample,
+                                    "\\-A") ~ "Historical",
+                         str_detect(sample,
+                                    "\\-C") ~ "Contemporary",
+                         TRUE ~ NA_character_),
+         era = factor(era, levels = c("Historical", "Contemporary")))
+
+remove(data_fastqc,
+       data_mapped_read_stats)
+
+## Poisson Dist ##
+pois_prediction <- 
+  tibble(seq(1,81)) %>%
+  rename(dp_mean = `seq(1, 81)`) %>%
+  mutate(pct_pos_w_cvg = (1- dpois(0,
+                                   dp_mean))*100)
+
+pois_prediction %>%
+  ggplot(aes(x=dp_mean,
+             y=pct_pos_w_cvg)) +
+  geom_line(size = 3,
+            linetype = "dashed") +
+  geom_smooth(span = 1,
+              se=FALSE)
+
+
+#### VISUALIZE ####
+data_all %>%
+  ggplot(aes(x=era,
+             y=prop_seqs_mapped,
+             fill = era)) +
+  geom_boxplot() +
+  stat_summary(
+    aes(label = round(stat(y), 1)),
+    geom = "text", 
+    fun = function(y) { o <- boxplot.stats(y)$out; if(length(o) == 0) NA else o },
+    hjust = -1) +
+  plot_theme +
+  labs(y = "Proportion Sequences Mapped",
+       x = "Era",
+       #title = "Title",
+       color = "era") +
+  theme(legend.position = "none",
+        axis.text = element_text(colour = 'black', size = 18))
+
+ggsave("../plots/ATCB_prop_seqs_mapped_Sfa.png", units = "in", height = 4, width = 6)
 
 
 
+data_all %>%
+  ggplot(aes(y=pctpos_wcvg,
+             x=meandepth,
+             color = era)) +
+  geom_point() +
+  geom_smooth() +
+  geom_line(data = pois_prediction,
+            aes(x=dp_mean,
+                y=pct_pos_w_cvg),
+            size = 1,
+            linetype = "dashed",
+            color = "grey") +
+  xlim(0,3) +
+  ylim(0,100) +
+  plot_theme +
+  labs(y = "Percent Positons with Coverage",
+       x = "Mean Depth",
+       #title = "Title",
+       color = "Era") +
+  theme(legend.position = "none",
+        axis.text = element_text(colour = 'black', size = 18))
+
+ggsave("../plots/ATBC_pct_cov_meandepth_Sfa.png", units = "in", height = 4, width = 6)

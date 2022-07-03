@@ -97,7 +97,15 @@ ggsave(plot = Relatedness_Histogram,
     xlab("Pairwise Era Comparison") +
     ylab("Pairwise Relatedness") +
     plot_theme +
-    theme(legend.position = "none"))
+    theme(legend.position = "none",
+          axis.text.x = element_blank()) +
+    facet_grid(~era_comparison, scales = "free_x"))
+
+ggsave(plot = Relatedness_Boxplot,
+       filename = "../plots/ATBC_Relatedness_Boxplot.png", 
+       units = "in", 
+       height = 4, 
+       width = 6)
 
 ngsRelate %>% 
   ggplot(aes(sample=rab)) +

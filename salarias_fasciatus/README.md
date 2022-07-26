@@ -363,8 +363,18 @@ cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 sbatch ./scripts/runNGSLD.sbatch mkGLF/Sfa-ABas-CBas_all_final_fltrd.glf 81 509340 mkGLF/Sfa-ABas-CBas_all_final_fltrd.glf.pos.gz ./ngsLD Sfa-ABas-CBas_all_final_fltrd.glf.ld 
 ```
 
-*need to visualize these results*
+The output from ngsLD is a tsv file that contains plenty of great information, but to make the output compatible with SNeP,we need to reformat the file. To do this, we ran [LD2SNeP.R](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/LD2SNeP.R) in Rstudio.
+
+Once the correctly formatted tsv file is obtained, save the file to the ngsLD directory and run SNeP on the hpc.
 
  ---
  
-## 14. Run SNeP:
+## 14. Run [SNeP](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/runSNeP.sbatch):
+
+This was the code I ran:
+```bash 
+Done on USER@wahab.hpc.odu.edu
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/SNeP
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/SNeP_infile.tsv ./Sfa-ABas-CBas_all_final_fltrd_
+```
+

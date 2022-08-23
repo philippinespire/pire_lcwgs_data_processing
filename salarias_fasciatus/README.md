@@ -376,6 +376,7 @@ Once the correctly formatted tsv file is obtained, save the file to the ngsLD di
 - position file needed for each (will be created with each glf)
 - glf for each
 -wc -l the pos file for numsites input for LD
+-awk??
 
 Analysis To Do:
 

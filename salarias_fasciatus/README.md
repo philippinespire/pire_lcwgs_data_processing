@@ -371,9 +371,17 @@ Once the correctly formatted tsv file is obtained, save the file to the ngsLD di
 -- ignore_miss_data
 -- max_kb_dist 0
 
-run seperate for hist and contemp
-position file needed for each (aready made and good for both)
-glf for each 
+- run seperate for hist and contemp
+-   -we would rather split the current glf instead of run again. If we run again, "bamnames.txt" needs to be split
+- position file needed for each (aready made and good for both)
+- glf for each (possibly grep the one that has already been made)
+
+Analysis To Do:
+
+LD Decay (would need to add flag --rnd_sample)
+LD Blocks 
+
+for methods: add "we used 2x -4x because in ngsLD, anything below 1x is 
 
  ---
  

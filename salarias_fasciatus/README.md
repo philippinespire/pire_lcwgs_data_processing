@@ -373,12 +373,13 @@ Once the correctly formatted tsv file is obtained, save the file to the ngsLD di
 
 - run seperate for hist and contemp
 -   -we would rather split the current glf instead of run again. If we run again, "bamnames.txt" needs to be split
-- position file needed for each (aready made and good for both)
-- glf for each (possibly grep the one that has already been made)
+- position file needed for each (will be created with each glf)
+- glf for each
+-wc -l the pos file for numsites input for LD
 
 Analysis To Do:
 
-LD Decay (would need to add flag --rnd_sample)
+LD Decay (would need to add flag --rmd_sample)
 LD Blocks 
 
 for methods: add "we used 2x -4x because in ngsLD, anything below 1x is 

@@ -372,7 +372,7 @@ Once the correctly formatted tsv file is obtained, save the file to the ngsLD di
 -- max_kb_dist 0
 
 run seperate for hist and contemp
-position file needed for each 
+position file needed for each (aready made and good for both)
 glf for each 
 
  ---

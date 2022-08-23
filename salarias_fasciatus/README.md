@@ -367,6 +367,14 @@ The output from ngsLD is a tsv file that contains plenty of great information, b
 
 Once the correctly formatted tsv file is obtained, save the file to the ngsLD directory and run SNeP on the hpc.
 
+*Changes need to be made*: adding flags 
+-- ignore_miss_data
+-- max_kb_dist 0
+
+run seperate for hist and contemp
+position file needed for each 
+glf for each 
+
  ---
  
 ## 14. Run [SNeP](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/runSNeP.sbatch):

@@ -382,7 +382,15 @@ sbatch scripts/mkGLF_fromScratch.sbatch fltrBAM/ Sfa-ABas_only_final_fltrd_minin
 sbatch scripts/mkGLF_fromScratch.sbatch fltrBAM/ Sfa-ABas_only_final_fltrd_minind16_redo "*ABas*bam" 16
 ```
 
-*Changes need to be made*: adding flags 
+We then considered using the previously made chro by chro beagle files to further refine our observation. Since we already made beagle files for each chromosome, we needed to split those by era, then run each through ngsLD.
+
+first, I explored how to make the chromosome beagle file compatible with ngsLD and ran it this way:
+```bash 
+
+
+```
+
+*Changes need to be made to LD script*: adding flags 
 -- ignore_miss_data
 -- max_kb_dist 0
 

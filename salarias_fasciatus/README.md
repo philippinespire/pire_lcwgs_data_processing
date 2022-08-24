@@ -386,7 +386,7 @@ We then considered using the previously made chro by chro beagle files to furthe
 
 first, I explored how to make the chromosome beagle file compatible with ngsLD and ran it this way:
 ```bash 
-
+sbatch scripts/runNGSLD.sbatch mkBGL/CHR01.beagle.gz 81 509340 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd.glf.pos.gz ./ngsLD Sfa-ABas-CBas_all_final_fltrd_TEST.glf.ld
 
 ```
 

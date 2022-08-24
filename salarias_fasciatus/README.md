@@ -382,25 +382,23 @@ sbatch scripts/mkGLF_fromScratch.sbatch fltrBAM/ Sfa-ABas_only_final_fltrd_minin
 sbatch scripts/mkGLF_fromScratch.sbatch fltrBAM/ Sfa-ABas_only_final_fltrd_minind16_redo "*ABas*bam" 16
 ```
 
+**This Is Where We Are Currently Working::** !!!
+
 We then considered using the previously made chro by chro beagle files to further refine our observation. Since we already made beagle files for each chromosome, we needed to split those by era, then run each through ngsLD.
 
-first, I explored how to make the chromosome beagle file compatible with ngsLD and ran it this way:
+I used the code in step 11 to rename the .pos file (I created a copy of `Sfa-ABas-CBas_all_final_fltrd.glf.pos.gz` and named it `Sfa-ABas-CBas_all_final_fltrd_rnmd.glf.pos.gz`), and then I ran the following code to create a new file with just the first CHR0:
+```bash 
+zcat mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd.glf.pos.gz | grep CHR01 > mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR01.glf.pos
+```
+dont forget to gzip this file again.
+
+Then I ran this code:
 ```bash 
 sbatch scripts/runNGSLD.sbatch mkBGL/CHR01.beagle.gz 81 29508 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR01.glf.pos.gz ./ngsLD Sfa-ABas-CBas_all_final_fltrd_TEST.glf.ld
-
 ```
 
-*Changes need to be made to LD script*: adding flags 
--- ignore_miss_data
--- max_kb_dist 0
 
-- run seperate for hist and contemp
--   -we would rather split the current glf instead of run again. If we run again, "bamnames.txt" needs to be split
-- position file needed for each (will be created with each glf)
-- glf for each
--wc -l the pos file for numsites input for LD
--awk??
-
+---
 Analysis To Do:
 
 LD Decay (would need to add flag --rmd_sample)

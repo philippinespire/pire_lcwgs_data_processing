@@ -13,15 +13,16 @@ inDIR=$1
 sitesFILE=$2
 outDIR=./mkGLF
 outFilePREFIX=$3
-
+bamPATTERN=$4
 
 TODO='-doGlf 3 -doMajorMinor 1 -doMaf 1 -doPost 2'
 FILTERS='-minMaf 0.05'
 
 inDIR=$(echo $inDIR | sed "s/\/$//" )
+bamFileNAME=$(echo $bamPATTERN | sed 's/\*//g')
+bamFileNAME=$(echo bamNames_${bamFileNAME}.txt)
 
-ls $inDIR/*fltrd.bam > ${inDIR}/bamNames.txt
-
+ls $inDIR/$bamPATTERN > ${inDIR}/$bamFileNAME
 
 module load container_env ngsTools
 
@@ -31,6 +32,6 @@ crun angsd -GL 1 \
   $TODO \
   $FILTERS \
   -out ${outDIR}/$outFilePREFIX \
-  -bam ${inDIR}/bamNames.txt \
+  -bam ${inDIR}/$bamFileNAME \
   -nThreads 40 \
   -sites $sitesFILE

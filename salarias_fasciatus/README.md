@@ -369,7 +369,18 @@ Once the correctly formatted tsv file is obtained, save the file to the ngsLD di
 
 After running SNeP with this data, we ran into some issues that we believe will be solved through seperating the historical from the contemporary samples and creating LD output for both.
 
+One way we approached this was to revert back to the .glf file creation, and create a seperate .glf for Historical and Contemp. To do this, we modified and used used `mkGLF.sbatch` and ran the following code. note that new bamNames.txt files are created in the fltrBAM dir for each era. 
+```bash 
+sbatch scripts/mkGLF.sbatch fltrBAM/ mkBGL/Sfa-ABas-CBas_all_final.minIndPerPop20.sites Sfa-CBas_only_final_fltrd "*CBas*bam"
 
+sbatch scripts/mkGLF.sbatch fltrBAM/ mkBGL/Sfa-ABas-CBas_all_final.minIndPerPop20.sites Sfa-ABas_only_final_fltrd_redo "*ABas*bam"
+```
+Then, we considered creating a more "from scratch" script to do this same thing, so we created `mkGLF_fromScratch.sbatch` and ran the following code:
+```bash 
+sbatch scripts/mkGLF_fromScratch.sbatch fltrBAM/ Sfa-CBas_only_final_fltrd_minind20_redo "*CBas*bam" 20
+sbatch scripts/mkGLF_fromScratch.sbatch fltrBAM/ Sfa-ABas_only_final_fltrd_minind20_redo "*ABas*bam" 20
+sbatch scripts/mkGLF_fromScratch.sbatch fltrBAM/ Sfa-ABas_only_final_fltrd_minind16_redo "*ABas*bam" 16
+```
 
 *Changes need to be made*: adding flags 
 -- ignore_miss_data

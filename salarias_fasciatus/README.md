@@ -367,6 +367,10 @@ The output from ngsLD is a tsv file that contains plenty of great information, b
 
 Once the correctly formatted tsv file is obtained, save the file to the ngsLD directory and run SNeP on the hpc.
 
+After running SNeP with this data, we ran into some issues that we believe will be solved through seperating the historical from the contemporary samples and creating LD output for both.
+
+
+
 *Changes need to be made*: adding flags 
 -- ignore_miss_data
 -- max_kb_dist 0
@@ -383,7 +387,7 @@ Analysis To Do:
 LD Decay (would need to add flag --rmd_sample)
 LD Blocks 
 
-for methods: add "we used 2x -4x because in ngsLD, anything below 1x is 
+for methods: add "we used 2x -4x because in ngsLD, anything below 1x is comprimised"
 
  ---
  

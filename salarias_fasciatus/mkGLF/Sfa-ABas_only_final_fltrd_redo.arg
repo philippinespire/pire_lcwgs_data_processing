@@ -182,4 +182,20 @@ Filters:
 Extras:
 	-ref	(null)	(Filename for fasta reference)
 	-anc	(null)	(Filename for fasta ancestral)
-	-eps	0.001000 [On
+	-eps	0.001000 [Only used for -doMaf &8]
+	-beagleProb	0 (Dump beagle style postprobs)
+	-indFname	(null) (file containing individual inbreedcoeficients)
+	-underFlowProtect	0 (file containing individual inbreedcoeficients)
+NB These frequency estimators requires major/minor -doMajorMinor
+------------------------
+abcHetPlas.cpp:
+	-doHetPlas=0 (Perform hetplasmid analysis)
+	-maxIter=100	(Max number of iterations)
+	-minLRT=-1.000000
+		->"./mkGLF/Sfa-ABas_only_final_fltrd_redo.arg"
+		->"./mkGLF/Sfa-ABas_only_final_fltrd_redo.glf.gz"
+		->"./mkGLF/Sfa-ABas_only_final_fltrd_redo.glf.pos.gz"
+		->"./mkGLF/Sfa-ABas_only_final_fltrd_redo.mafs.gz"
+
+	[ALL done] cpu-time used =  15470.59 sec
+	[ALL done] walltime used =  10955.00 sec

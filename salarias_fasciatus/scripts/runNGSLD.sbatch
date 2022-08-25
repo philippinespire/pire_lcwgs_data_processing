@@ -16,7 +16,7 @@ numSITES=$3     #509340
 posFILE=$4     #mkGLF/Sfa-ABas-CBas_all_final_fltrd.glf.pos.gz #compatible w bgl naming: Sfa-ABas-CBas_all_final_fltrd_rnmd.glf.pos.gz
 outDIR=$5   #./ngsLD
 outFilePREFIX=$6  #Sfa-ABas-CBas_all_final_fltrd.glf.ld
-
+minMaf=$7 # 0.1 0.2 0.3
 
 mkdir -p $outDIR
 
@@ -32,4 +32,6 @@ crun ngsLD \
 	--n_ind $numLIBS \
 	--pos $posFILE \
 	--n_sites $numSITES \
-	--out ${outDIR}/$outFilePREFIX 
+	--out ${outDIR}/$outFilePREFIX \
+	--min_maf $minMaf \
+	--rnd_sample

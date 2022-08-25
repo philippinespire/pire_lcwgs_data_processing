@@ -383,7 +383,6 @@ sbatch scripts/mkGLF_fromScratch.sbatch fltrBAM/ Sfa-ABas_only_final_fltrd_minin
 sbatch scripts/mkGLF_fromScratch.sbatch fltrBAM/ Sfa-ABas_only_final_fltrd_minind16_redo "*ABas*bam" 16
 ```
 
-**This Is Where We Are Currently Working::** !!!
 
 We then considered using the previously made chromosome by chromosome beagle files to further refine our observation. Since we already made beagle files for each chromosome (Step 11a.), we needed to split those by era, then run each through ngsLD.
 

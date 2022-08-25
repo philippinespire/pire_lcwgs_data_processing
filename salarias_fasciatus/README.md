@@ -369,10 +369,11 @@ Once the correctly formatted tsv file is obtained, save the file to the ngsLD di
 
 After running SNeP with this data, we ran into some issues that we believe will be solved through seperating the historical from the contemporary samples and creating LD output for both.
 
-One way we approached this was to revert back to the .glf file creation, and create a seperate .glf for Historical and Contemp. To do this, we modified and used used `mkGLF.sbatch` and ran the following code. note that new bamNames.txt files are created in the fltrBAM dir for each era. 
+One way we approached this was to revert back to the .glf file creation (Step. 12a), and create a seperate .glf for Historical and Contemp. To do this, we modified and used used `mkGLF.sbatch` and ran the following code. note that new bamNames.txt files are created in the fltrBAM dir for each era. 
 ```bash 
+Done on wahab
+cd /home/e1garcia/shotgun_pire_pire_lcwgs_data_processing/salarias_fasciatus/
 sbatch scripts/mkGLF.sbatch fltrBAM/ mkBGL/Sfa-ABas-CBas_all_final.minIndPerPop20.sites Sfa-CBas_only_final_fltrd "*CBas*bam"
-
 sbatch scripts/mkGLF.sbatch fltrBAM/ mkBGL/Sfa-ABas-CBas_all_final.minIndPerPop20.sites Sfa-ABas_only_final_fltrd_redo "*ABas*bam"
 ```
 Then, we considered creating a more "from scratch" script to do this same thing, so we created `mkGLF_fromScratch.sbatch` and ran the following code:
@@ -384,21 +385,80 @@ sbatch scripts/mkGLF_fromScratch.sbatch fltrBAM/ Sfa-ABas_only_final_fltrd_minin
 
 **This Is Where We Are Currently Working::** !!!
 
-We then considered using the previously made chro by chro beagle files to further refine our observation. Since we already made beagle files for each chromosome, we needed to split those by era, then run each through ngsLD.
+We then considered using the previously made chromosome by chromosome beagle files to further refine our observation. Since we already made beagle files for each chromosome (Step 11a.), we needed to split those by era, then run each through ngsLD.
 
-I used the code in step 11 to rename the .pos file (I created a copy of `Sfa-ABas-CBas_all_final_fltrd.glf.pos.gz` and named it `Sfa-ABas-CBas_all_final_fltrd_rnmd.glf.pos.gz`), and then I ran the following code to create a new file with just the first CHR0:
+I used the code in step 11 to rename the .pos file (I created a copy of `Sfa-ABas-CBas_all_final_fltrd.glf.pos.gz` and named it `Sfa-ABas-CBas_all_final_fltrd_rnmd.glf.pos.gz`) in mkGLF dir, and then I ran the following code to create a new file with just the first CHR0:
 ```bash 
 zcat mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd.glf.pos.gz | grep CHR01 > mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR01.glf.pos
+#dont forget to gzip this file again.
 ```
-dont forget to gzip this file again.
+I did this for each CHR0#.
 
-Then I ran this code:
+I ran a test with this code:
 ```bash 
 sbatch scripts/runNGSLD.sbatch mkBGL/CHR01.beagle.gz 81 29508 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR01.glf.pos.gz ./ngsLD Sfa-ABas-CBas_all_final_fltrd_TEST.glf.ld
 ```
+We ran into issues becaue the .pos files and the chromosome beagles were not filtered the same (bgls missing minMAF filter)
 
+Chris Bird was able to filter each chromosome bgl to be compatible with our .pos files (code here), so I was able to run the following code:
 
+Historical Era Chromosomes 1-23 (omit 21): 
+I ran a test on ABas_CHR01 with the "--ignore_miss_data" flag removed from the ngsLD script to see what would change. the name of this output is `Sfa-ABas_only_final_fltrd_CHR01_wMissData.beagle.ld`, located in the ngsLD dir. 
+```bash 
+Done on wahab 
+cd /home/e1garcia/shotgun_pire_pire_lcwgs_data_processing/salarias_fasciatus/
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_CHR01_fltrd.beagle.gz 32 29508 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR01.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR01.glf.ld *need to rename this file when done 
+sbatch scripts/runNGSLD_withMissData.sbatch mkBGL/ABas_CHR01_fltrd.beagle.gz 32 29508 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR01.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR01_wMissData.beagle.ld 
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_CHR02_fltrd.beagle.gz 32 25469 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR02.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR02.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_CHR03_fltrd.beagle.gz 32 19835 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR03.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR03.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_CHR04_fltrd.beagle.gz 32 26318 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR04.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR04.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_CHR05_fltrd.beagle.gz 32 27549 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR05.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR05.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_CHR06_fltrd.beagle.gz 32 29879 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR06.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR06.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_CHR07_fltrd.beagle.gz 32 22855 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR07.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR07.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_CHR08_fltrd.beagle.gz 32 16704 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR08.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR08.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_CHR09_fltrd.beagle.gz 32 20152 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR09.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR09.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_CHR10_fltrd.beagle.gz 32 22998 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR10.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR10.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_CHR11_fltrd.beagle.gz 32 24994 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR11.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR11.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_CHR12_fltrd.beagle.gz 32 25181 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR12.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR12.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_CHR13_fltrd.beagle.gz 32 23816 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR13.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR13.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_CHR14_fltrd.beagle.gz 32 30115 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR14.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR14.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_CHR15_fltrd.beagle.gz 32 22452 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR15.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR15.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_CHR16_fltrd.beagle.gz 32 24399 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR16.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR16.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_CHR17_fltrd.beagle.gz 32 14225 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR17.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR17.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_CHR18_fltrd.beagle.gz 32 24543 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR18.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR18.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_CHR19_fltrd.beagle.gz 32 21021 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR19.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR19.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_CHR20_fltrd.beagle.gz 32 25776 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR20.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR20.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_CHR22_fltrd.beagle.gz 32 23221 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR22.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR22.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_CHR23_fltrd.beagle.gz 32 8330 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR23.glf.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_CHR23.beagle.ld
+```
+
+Then I did this for the Contemporary era: 1-23 (omit 21)
+```
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR01_fltrd.beagle.gz 49 29508 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR02.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR02.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR02_fltrd.beagle.gz 49 25469 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR02.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR02.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR03_fltrd.beagle.gz 49 19835 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR03.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR03.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR04_fltrd.beagle.gz 49 26318 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR04.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR04.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR05_fltrd.beagle.gz 49 27549 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR05.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR05.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR06_fltrd.beagle.gz 49 29879 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR06.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR06.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR07_fltrd.beagle.gz 49 22855 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR07.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR07.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR08_fltrd.beagle.gz 49 16704 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR08.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR08.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR09_fltrd.beagle.gz 49 20152 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR09.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR09.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR10_fltrd.beagle.gz 49 22998 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR10.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR10.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR11_fltrd.beagle.gz 49 24994 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR11.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR11.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR12_fltrd.beagle.gz 49 25181 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR12.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR12.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR13_fltrd.beagle.gz 49 23816 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR13.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR13.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR14_fltrd.beagle.gz 49 30115 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR14.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR14.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR15_fltrd.beagle.gz 49 22452 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR15.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR15.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR16_fltrd.beagle.gz 49 24399 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR16.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR16.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR17_fltrd.beagle.gz 49 14225 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR17.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR17.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR18_fltrd.beagle.gz 49 24543 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR18.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR18.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR19_fltrd.beagle.gz 49 21021 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR19.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR19.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR20_fltrd.beagle.gz 49 25776 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR20.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR20.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR22_fltrd.beagle.gz 49 23221 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR22.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR22.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR23_fltrd.beagle.gz 49 8330 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR23.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR23.beagle.ld
+```
 ---
+
 Analysis To Do:
 
 LD Decay (would need to add flag --rmd_sample)

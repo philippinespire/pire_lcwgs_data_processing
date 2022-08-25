@@ -469,6 +469,16 @@ for methods: add "we used 2x -4x because in ngsLD, anything below 1x is comprimi
  
 ## 14. Run [SNeP](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/runSNeP.sbatch):
 
+### a. LD output to SNeP input. 
+this is the code used to transform
+
+```bash for i in $(ls Sfa*CHR??.beagle.ld); do
+cat <(echo -e "CHR\tdist (bp)\tr2") \
+<(cat $i | tr ":" "\t" | cut -f1,9-10 | grep -v 'nan') > \
+$i.snep_in
+done
+```
+
 This was the code I ran:
 ```bash 
 Done on USER@wahab.hpc.odu.edu

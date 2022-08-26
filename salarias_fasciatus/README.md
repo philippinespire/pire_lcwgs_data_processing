@@ -526,6 +526,16 @@ $i.snep_in
 done
 ```
 
+I ran the above code with these modifications for Alb. & Contemp. CHR01 minmaf 0.1, 0.2, 0.3
+
+```bash 
+for i in $(ls Sfa*maf0.*CHR??.beagle.ld); do 
+cat <(echo -e "CHR\tdist (bp)\tr2") \
+<(cat $i | tr ":" "\t" | cut -f1,9-10 | grep -v 'nan') > \
+$i.snep_in 
+done
+```
+
 This was the code I ran:
 ```bash 
 Done on USER@wahab.hpc.odu.edu

@@ -457,7 +457,7 @@ sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR22_fltrd.beagle.gz 49 23221 mkGLF/S
 sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR23_fltrd.beagle.gz 49 8330 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR23.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR23.beagle.ld
 ```
 
-Then, we removed the `--rnd_sample` and `--min_maf` flags in the `ngsLD.sbatch` script, (Chris remade each beagle and pos file for Alb. and Contemp. with minmaf settings of 0.1, 0.2, 0.3 for each chromosome. 
+Then, we removed the `--rnd_sample` and `--min_maf` flags in the `ngsLD.sbatch` script, (Chris remade each beagle and pos file for Alb. and Contemp. with minmaf settings of 0.1, 0.2, 0.3 for each chromosome in mkBGL dir.) 
 
 To test the resolution of these settings, we first ran `ngsLD.sbatch` on CHR01 with minMaf settings of 0.1, 0.2, & 0.3 for Alb. and Contemp. samples. 
 This is the code I ran:

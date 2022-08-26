@@ -480,6 +480,7 @@ sbatch scripts/runNGSLD.sbatch mkBGL/CBas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf
 ```
 ---
 
+
 Analysis To Do:
 
 LD Decay (would need to add flag --rmd_sample)

@@ -457,7 +457,30 @@ sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR22_fltrd.beagle.gz 49 23221 mkGLF/S
 sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR23_fltrd.beagle.gz 49 8330 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR23.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR23.beagle.ld
 ```
 
-Then, we removed the `--rnd_sample` and `--min_maf` flags in the `ngsLD.sbatch` script, (Chris remade each beagle and pos file for Alb. and Contemp. with minmaf settings of 0.1, 0.2, 0.3 for each chromosome in mkBGL dir.) 
+Then, we removed the `--rnd_sample` and `--min_maf` flags in the `ngsLD.sbatch` script, (Chris remade each beagle and pos file for Alb. and Contemp. with minmaf settings of 0.1, 0.2, 0.3 for each chromosome in mkBGL dir.) see below code:
+```bash
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/mkBGL
+
+zcat Sfa-ABas-CBas_all_final_fltrd_rnmd.glf.pos.gz | cut -f1-2 | tr "\t" "_" > Sfa-ABas-CBas_all_final_fltrd_rnmd.glf.snp_list.txt
+
+for i in $(ls CHR??.beagle.gz); do
+
+# bglFile=CHR01.beagle.gz
+bglFile=$i
+outBglFile=$(echo $bglFile | sed 's/\.beagle\.gz/_fltrd\.beagle/')
+snpListFile=../mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd.glf.snp_list.txt
+snpListFile=$(echo $snpListFile | sed "s/\.txt$//")
+
+cat <(zcat $bglFile | head -n1) <(zcat $bglFile | awk 'NR==FNR{a[$1]=$1OFS$2;next}{$1=a[$1];print}' OFS='\t' $snpListFile.txt - | grep -Pv "^\t") | gzip > ${outBglFile}.gz
+# cat <(zcat $mafsFile | head -n1) <(zcat $mafsFile | awk 'NR==FNR{a[$1,$2]=$1OFS$2;next}{$1=a[$1,$2];print}' OFS='\t' $snpListFile.tsv - | grep -Pv "^\t" | cut -f1-2,4-) | gzip > ${outMafsFile}.gz
+
+zcat $outBglFile | cut -f1-99 | gzip > ABas_${outBglFile}.gz
+zcat $outBglFile | cut -f1-3,100- | gzip > CBas_${outBglFile}.gz
+
+done
+```
+
+
 
 To test the resolution of these settings, we first ran `ngsLD.sbatch` on CHR01 with minMaf settings of 0.1, 0.2, & 0.3 for Alb. and Contemp. samples. 
 This is the code I ran:

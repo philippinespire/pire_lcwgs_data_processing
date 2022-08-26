@@ -479,7 +479,7 @@ zcat $outBglFile | cut -f1-3,100- | gzip > CBas_${outBglFile}.gz
 
 done
 ```
-
+The files created by this script use the `Sfa-ABas-CBas_all_final_fltrd_rnmd.pos.gz`
 
 
 To test the resolution of these settings, we first ran `ngsLD.sbatch` on CHR01 with minMaf settings of 0.1, 0.2, & 0.3 for Alb. and Contemp. samples. 

@@ -456,6 +456,28 @@ sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR20_fltrd.beagle.gz 49 25776 mkGLF/S
 sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR22_fltrd.beagle.gz 49 23221 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR22.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR22.beagle.ld
 sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR23_fltrd.beagle.gz 49 8330 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR23.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR23.beagle.ld
 ```
+
+Then, we removed the `--rnd_sample` and `--min_maf` flags in the `ngsLD.sbatch` script, (Chris remade each beagle and pos file for Alb. and Contemp. with minmaf settings of 0.1, 0.2, 0.3 for each chromosome. 
+
+To test the resolution of these settings, we first ran `ngsLD.sbatch` on CHR01 with minMaf settings of 0.1, 0.2, & 0.3 for Alb. and Contemp. samples. 
+This is the code I ran:
+
+```bash
+#Done on USER@wahab.hpc.odu.edu
+/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
+$1=InBGL $2=numLIBS $3=numSITES $4=posFILE $5=outDIR $6=outFilePREFIX 
+#minMaf 0.1 A&C
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.1_CHR01.beagle.gz 32 16822 mkBGL/Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.1_CHR01.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_maf0.1_CHR01.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.1_CHR01.beagle.gz 49 16822 mkBGL/Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.1_CHR01.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_maf0.1_CHR01.beagle.ld
+
+#minMaf 0.2 A&C
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.2_CHR01.beagle.gz 32 8371 mkBGL/Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.2_CHR01.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_maf0.2_CHR01.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.2_CHR01.beagle.gz 49 8371 mkBGL/Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.2_CHR01.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_maf0.2_CHR01.beagle.ld
+
+#minMaf 0.3 A&C
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.3_CHR01.beagle.gz 32 4528 mkBGL/Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.3_CHR01.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_maf0.3_CHR01.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.3_CHR01.beagle.gz 49 4528 mkBGL/Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.3_CHR01.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_maf0.3_CHR01.beagle.ld
+```
 ---
 
 Analysis To Do:

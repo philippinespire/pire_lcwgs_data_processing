@@ -518,7 +518,8 @@ for methods: add "we used 2x -4x because in ngsLD, anything below 1x is comprimi
 ### a. LD output to SNeP input. 
 this is the code used to transform
 
-```bash for i in $(ls Sfa*CHR??.beagle.ld); do
+```bash 
+for i in $(ls Sfa*CHR??.beagle.ld); do
 cat <(echo -e "CHR\tdist (bp)\tr2") \
 <(cat $i | tr ":" "\t" | cut -f1,9-10 | grep -v 'nan') > \
 $i.snep_in

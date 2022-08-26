@@ -536,10 +536,20 @@ $i.snep_in
 done
 ```
 
-This was the code I ran:
+This was the code I ran (originally):
 ```bash 
 Done on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/SNeP
 sbatch ../scripts/runSNeP.sbatch ../ngsLD/SNeP_infile.tsv ./Sfa-ABas-CBas_all_final_fltrd_
 ```
-
+8/26/22 This is the code I ran for the transformed ld files (CHR01, maf 0.1, 0.2, 0.3, Alb & Contemp.)
+```bash 
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/SNeP
+#CHR01 minMaf 0.1, 0.2, 0.3 A & C
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-ABas_only_final_fltrd_maf0.1_CHR01.beagle.ld.snep_in ./Sfa-ABas_only_final_fltrd_maf0.1_CHR01.beagle.ld.snep_out
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-CBas_only_final_fltrd_maf0.1_CHR01.beagle.ld.snep_in ./Sfa-CBas_only_final_fltrd_maf0.1_CHR01.beagle.ld.snep_out
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-ABas_only_final_fltrd_maf0.2_CHR01.beagle.ld.snep_in ./Sfa-ABas_only_final_fltrd_maf0.2_CHR01.beagle.ld.snep_out
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-CBas_only_final_fltrd_maf0.2_CHR01.beagle.ld.snep_in ./Sfa-CBas_only_final_fltrd_maf0.2_CHR01.beagle.ld.snep_out
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-ABas_only_final_fltrd_maf0.3_CHR01.beagle.ld.snep_in ./Sfa-ABas_only_final_fltrd_maf0.3_CHR01.beagle.ld.snep_out
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-CBas_only_final_fltrd_maf0.3_CHR01.beagle.ld.snep_in ./Sfa-CBas_only_final_fltrd_maf0.3_CHR01.beagle.ld.snep_out
+```

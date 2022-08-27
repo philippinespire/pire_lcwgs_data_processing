@@ -513,7 +513,21 @@ Then I ran `ngsLD.sbatch` on CHR04 beagles with minMaf settings of 0.1, 0.2, & 0
 This was the code I ran:
 
 ```bash 
+#maf 0.05
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.05_CHR04.beagle.gz 32 25851 mkBGL/Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.05_CHR04.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_maf0.05_CHR04.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.05_CHR04.beagle.gz 49 25851 mkBGL/Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.05_CHR04.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_maf0.05_CHR04.beagle.ld
 
+#maf 0.01
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.1_CHR04.beagle.gz 32 16126 mkBGL/Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.1_CHR04.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_maf0.1_CHR04.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.1_CHR04.beagle.gz 49 16126 mkBGL/Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.1_CHR04.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_maf0.1_CHR04.beagle.ld
+                                                                                                              
+#maf 0.02
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.2_CHR04.beagle.gz 32 9114 mkBGL/Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.2_CHR04.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_maf0.2_CHR04.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.2_CHR04.beagle.gz 49 9114 mkBGL/Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.2_CHR04.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_maf0.2_CHR04.beagle.ld
+
+#maf 0.03
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.3_CHR04.beagle.gz 32 5342 mkBGL/Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.3_CHR04.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_maf0.3_CHR04.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.3_CHR04.beagle.gz 49 5342 mkBGL/Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.3_CHR04.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_maf0.3_CHR04.beagle.ld
 ```
 
 ---

@@ -483,6 +483,9 @@ The files created by this script use the `Sfa-ABas-CBas_all_final_fltrd_rnmd.pos
 
 
 To test the resolution of these settings, we first ran `ngsLD.sbatch` on CHR01 beagles with minMaf settings of 0.05, 0.1, 0.2, & 0.3 for Alb. and Contemp. samples. 
+
+*Note: $NumSITES is found from counting the number of lines in the .pos file (wc -l)
+
 This is the code I ran:
 
 ```bash

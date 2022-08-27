@@ -457,7 +457,7 @@ sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR22_fltrd.beagle.gz 49 23221 mkGLF/S
 sbatch scripts/runNGSLD.sbatch mkBGL/CBas_CHR23_fltrd.beagle.gz 49 8330 mkGLF/Sfa-ABas-CBas_all_final_fltrd_rnmd_CHR23.glf.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_CHR23.beagle.ld
 ```
 
-Then, we removed the `--rnd_sample` and `--min_maf` flags in the `ngsLD.sbatch` script, (Chris remade each beagle and pos file for Alb. and Contemp. with minmaf settings of 0.1, 0.2, 0.3 for each chromosome in mkBGL dir.) see below code:
+Then, we removed the `--rnd_sample` and `--min_maf` flags in the `ngsLD.sbatch` script, (Chris remade each beagle and pos file for Alb. and Contemp. with minmaf settings of 0.5, 0.1, 0.2, 0.3 for each chromosome in mkBGL dir.) see below code:
 ```bash
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/mkBGL
 
@@ -482,13 +482,17 @@ done
 The files created by this script use the `Sfa-ABas-CBas_all_final_fltrd_rnmd.pos.gz`
 
 
-To test the resolution of these settings, we first ran `ngsLD.sbatch` on CHR01 with minMaf settings of 0.1, 0.2, & 0.3 for Alb. and Contemp. samples. 
+To test the resolution of these settings, we first ran `ngsLD.sbatch` on CHR01 beagles with minMaf settings of 0.05, 0.1, 0.2, & 0.3 for Alb. and Contemp. samples. 
 This is the code I ran:
 
 ```bash
 #Done on USER@wahab.hpc.odu.edu
 /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 $1=InBGL $2=numLIBS $3=numSITES $4=posFILE $5=outDIR $6=outFilePREFIX 
+#minMaf 0.05 A&C
+sbatch scripts/runNGSLD.sbatch mkBGL/ABas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.05_CHR01.beagle.gz 32 28901 mkBGL/Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.05_CHR01.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_maf0.05_CHR01.beagle.ld
+sbatch scripts/runNGSLD.sbatch mkBGL/CBas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.05_CHR01.beagle.gz 49 28901 mkBGL/Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.05_CHR01.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_maf0.5_CHR01.beagle.ld
+
 #minMaf 0.1 A&C
 sbatch scripts/runNGSLD.sbatch mkBGL/ABas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.1_CHR01.beagle.gz 32 16822 mkBGL/Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.1_CHR01.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_maf0.1_CHR01.beagle.ld
 sbatch scripts/runNGSLD.sbatch mkBGL/CBas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.1_CHR01.beagle.gz 49 16822 mkBGL/Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.1_CHR01.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_maf0.1_CHR01.beagle.ld
@@ -501,11 +505,17 @@ sbatch scripts/runNGSLD.sbatch mkBGL/CBas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf
 sbatch scripts/runNGSLD.sbatch mkBGL/ABas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.3_CHR01.beagle.gz 32 4528 mkBGL/Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.3_CHR01.pos.gz ./ngsLD Sfa-ABas_only_final_fltrd_maf0.3_CHR01.beagle.ld
 sbatch scripts/runNGSLD.sbatch mkBGL/CBas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.3_CHR01.beagle.gz 49 4528 mkBGL/Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.3_CHR01.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_maf0.3_CHR01.beagle.ld
 ```
+
+Then I ran `ngsLD.sbatch` on CHR04 beagles with minMaf settings of 0.1, 0.2, & 0.3 for Alb. and Contemp. samples (beagles are already filtered, the minMaf setting in ngsLD was off).
+This was the code I ran:
+
+```bash 
+
+```
+
 ---
-
-
-Analysis To Do:
-
+Analysis To Do (up next):
+Linkage Blocks 
 LD Decay (would need to add flag --rmd_sample)
 LD Blocks 
 

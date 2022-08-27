@@ -542,14 +542,14 @@ for methods: add "we used 2x -4x because in ngsLD, anything below 1x is comprimi
  
 ## 14. Run [SNeP](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/runSNeP.sbatch):
 
-### a. LD output to SNeP input. 
+### a. LD output to SNeP input (r2_pearson). 
 this is the code used to transform
 
 ```bash 
 for i in $(ls Sfa*CHR??.beagle.ld); do
 cat <(echo -e "CHR\tdist (bp)\tr2") \
 <(cat $i | tr ":" "\t" | cut -f1,9-10 | grep -v 'nan') > \
-$i.snep_in
+$i.snep_in.pearsonr2
 done
 ```
 
@@ -562,14 +562,14 @@ cat <(echo -e "CHR\tdist (bp)\tr2") \
 $i.snep_in 
 done
 ```
-
+## run `runSNeP.sbatch` on transformed files 
 This was the code I ran (originally):
 ```bash 
 Done on USER@wahab.hpc.odu.edu
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/SNeP
 sbatch ../scripts/runSNeP.sbatch ../ngsLD/SNeP_infile.tsv ./Sfa-ABas-CBas_all_final_fltrd_
 ```
-8/26/22 This is the code I ran for the transformed ld files (CHR01, maf 0.1, 0.2, 0.3, Alb & Contemp.)
+8/26/22 This is the code I ran (CHR01, maf 0.1, 0.2, 0.3, Alb & Contemp.)(r2 pearson)
 ```bash 
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/SNeP
 #CHR01 minMaf 0.1, 0.2, 0.3 A & C
@@ -580,3 +580,26 @@ sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-CBas_only_final_fltrd_maf0.2_CHR01
 sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-ABas_only_final_fltrd_maf0.3_CHR01.beagle.ld.snep_in ./Sfa-ABas_only_final_fltrd_maf0.3_CHR01.beagle.ld.snep_out
 sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-CBas_only_final_fltrd_maf0.3_CHR01.beagle.ld.snep_in ./Sfa-CBas_only_final_fltrd_maf0.3_CHR01.beagle.ld.snep_out
 ```
+
+### b. LD output to SNeP input (r2)
+8/27/22 We decided to move forward with r2 output from SNeP instead of r2_pearson, so we transformed the CHR04 LD outputs using this code:
+```bash 
+for i in $(ls Sfa*CHR??.beagle.ld); do
+cat <(echo -e "CHR\tdist (bp)\tr2") \
+<(cat $i | tr ":" "\t" | cut -f1,9,13 | grep -v 'nan') > \
+$i.snep_in.r2
+done
+```
+Then I ran SNeP on CHR04 with the following code:
+```
+```
+
+Then I renamed the CHR01 LD outputs that used the r2_pearson outputs (before we decided to go with r2) from `Sfa-CBas_only_final_fltrd_maf0.?_CHR01.beagle.ld.snep_in` to `Sfa-CBas_only_final_fltrd_maf0.?_CHR01.beagle.ld.snep_in.pearsonr2`
+
+
+THen I ran SNeP on CHR01 with the following code:
+```
+```
+
+
+

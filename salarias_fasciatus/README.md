@@ -591,7 +591,18 @@ $i.snep_in.r2
 done
 ```
 Then I ran SNeP on CHR04 with the following code:
-```
+```bash 
+Done on USER@wahab
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/SNeP
+#CHR04 minMaf 0.5, 0.1, 0.2, 0.3 A & C
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-ABas_only_final_fltrd_maf0.05_CHR04.beagle.ld.snep_in.r2 ./Sfa-ABas_only_final_fltrd_maf0.05_CHR04.beagle.ld.snep_out
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-CBas_only_final_fltrd_maf0.05_CHR04.beagle.ld.snep_in.r2 ./Sfa-CBas_only_final_fltrd_maf0.05_CHR04.beagle.ld.snep_out
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-ABas_only_final_fltrd_maf0.1_CHR04.beagle.ld.snep_in.r2 ./Sfa-ABas_only_final_fltrd_maf0.1_CHR04.beagle.ld.snep_out
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-CBas_only_final_fltrd_maf0.1_CHR04.beagle.ld.snep_in.r2 ./Sfa-CBas_only_final_fltrd_maf0.1_CHR04.beagle.ld.snep_out
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-ABas_only_final_fltrd_maf0.2_CHR04.beagle.ld.snep_in.r2 ./Sfa-ABas_only_final_fltrd_maf0.2_CHR04.beagle.ld.snep_out
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-CBas_only_final_fltrd_maf0.2_CHR04.beagle.ld.snep_in.r2 ./Sfa-CBas_only_final_fltrd_maf0.2_CHR04.beagle.ld.snep_out
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-ABas_only_final_fltrd_maf0.3_CHR04.beagle.ld.snep_in.r2 ./Sfa-ABas_only_final_fltrd_maf0.3_CHR04.beagle.ld.snep_out
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-CBas_only_final_fltrd_maf0.3_CHR04.beagle.ld.snep_in.r2 ./Sfa-CBas_only_final_fltrd_maf0.3_CHR04.beagle.ld.snep_out
 ```
 
 Then I renamed the CHR01 LD outputs that used the r2_pearson outputs (before we decided to go with r2) from `Sfa-CBas_only_final_fltrd_maf0.?_CHR01.beagle.ld.snep_in` to `Sfa-CBas_only_final_fltrd_maf0.?_CHR01.beagle.ld.snep_in.pearsonr2`

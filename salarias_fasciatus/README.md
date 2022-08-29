@@ -607,11 +607,23 @@ sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-CBas_only_final_fltrd_maf0.3_CHR04
 
 Then I renamed the CHR01 LD outputs that used the r2_pearson outputs (before we decided to go with r2) from `Sfa-CBas_only_final_fltrd_maf0.?_CHR01.beagle.ld.snep_in` to `Sfa-CBas_only_final_fltrd_maf0.?_CHR01.beagle.ld.snep_in.pearsonr2`
 
-Then I transformed the LD outputs for CHR01 using the above code to obtain SNep input with the r2 value.
+I also renamed the SNeP outputs from the pearson run to include `pearsonr2` in the outfile name. All subsequent runs are assumed to be ran with the `r2` column from LD output.
 
+Then I transformed the LD outputs for CHR01 using the above code (14 b.) to obtain SNeP input with the r2 value.
 
 Then I ran SNeP on CHR01 with the following code:
-```
+```bash 
+Done on USER@wahab
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/SNeP
+#CHR01 minMaf 0.5, 0.1, 0.2, 0.3 A & C
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-ABas_only_final_fltrd_maf0.05_CHR01.beagle.ld.snep_in.r2 ./Sfa-ABas_only_final_fltrd_maf0.05_CHR01.beagle.ld.snep_out
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-CBas_only_final_fltrd_maf0.05_CHR01.beagle.ld.snep_in.r2 ./Sfa-CBas_only_final_fltrd_maf0.05_CHR01.beagle.ld.snep_out
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-ABas_only_final_fltrd_maf0.1_CHR01.beagle.ld.snep_in.r2 ./Sfa-ABas_only_final_fltrd_maf0.1_CHR01.beagle.ld.snep_out
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-CBas_only_final_fltrd_maf0.1_CHR01.beagle.ld.snep_in.r2 ./Sfa-CBas_only_final_fltrd_maf0.1_CHR01.beagle.ld.snep_out
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-ABas_only_final_fltrd_maf0.2_CHR01.beagle.ld.snep_in.r2 ./Sfa-ABas_only_final_fltrd_maf0.2_CHR01.beagle.ld.snep_out
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-CBas_only_final_fltrd_maf0.2_CHR01.beagle.ld.snep_in.r2 ./Sfa-CBas_only_final_fltrd_maf0.2_CHR01.beagle.ld.snep_out
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-ABas_only_final_fltrd_maf0.3_CHR01.beagle.ld.snep_in.r2 ./Sfa-ABas_only_final_fltrd_maf0.3_CHR01.beagle.ld.snep_out
+sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-CBas_only_final_fltrd_maf0.3_CHR01.beagle.ld.snep_in.r2 ./Sfa-CBas_only_final_fltrd_maf0.3_CHR01.beagle.ld.snep_out
 ```
 
 

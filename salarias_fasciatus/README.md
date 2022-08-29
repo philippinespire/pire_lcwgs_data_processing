@@ -607,8 +607,10 @@ sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-CBas_only_final_fltrd_maf0.3_CHR04
 
 Then I renamed the CHR01 LD outputs that used the r2_pearson outputs (before we decided to go with r2) from `Sfa-CBas_only_final_fltrd_maf0.?_CHR01.beagle.ld.snep_in` to `Sfa-CBas_only_final_fltrd_maf0.?_CHR01.beagle.ld.snep_in.pearsonr2`
 
+Then I transformed the LD outputs for CHR01 using the above code to obtain SNep input with the r2 value.
 
-THen I ran SNeP on CHR01 with the following code:
+
+Then I ran SNeP on CHR01 with the following code:
 ```
 ```
 

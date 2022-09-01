@@ -20,6 +20,13 @@ perl -ne 'print if (rand() < .0001)' Sfa-CBas_only_final_fltrd_CHR01.beagle.ld >
 
 # a little slower, but should return about 10000 lines every time
 awk -v n="$(wc -l Sfa-CBas_only_final_fltrd_CHR01.beagle.ld)" -v p=10000 'BEGIN {srand()} rand() * n-- < p {p--; print}' Sfa-CBas_only_final_fltrd_CHR01.beagle.ld > Sfa-CBas_only_final_fltrd_CHR01_10000.beagle.ld
+
+# do alot of files
+for i in $(ls Sfa-[AC]Bas_only_final_fltrd_maf0*.beagle.ld ); do
+ldFile=$(echo $i | sed "s/\.ld//")
+grep -v "nan" $ldFile.ld > $ldFile.noNaN.ld
+awk -v n="$(wc -l $ldFile.noNaN.ld)" -v p=10000 'BEGIN {srand()} rand() * n-- < p {p--; print}' $ldFile.noNaN.ld > $ldFile.noNaN.10000.ld
+done
 ```
 
 ---

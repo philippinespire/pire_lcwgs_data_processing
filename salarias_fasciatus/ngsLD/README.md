@@ -4,6 +4,9 @@
 ---
 
 # Convert ngsLD out to SNeP input
+
+bash code snippets
+
 ```
 for i in $(ls Sfa*CHR??.beagle.ld); do
 cat <(echo -e "CHR\tdist (bp)\tr2") \
@@ -13,6 +16,8 @@ done
 ```
 
 # Subsample LD Output Files for Linkage decay figs
+
+bash code snippets
 
 ```
 # supposed to be faster, but only a proportion of all lines can be specified
@@ -32,6 +37,8 @@ done
 ---
 
 # Visualize Linkage Decay
+
+r code 
 
 ```r
 #### INITIALIZATION ####

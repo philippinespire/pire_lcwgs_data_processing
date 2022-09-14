@@ -637,7 +637,7 @@ Done on USER@wahab.hpc.odu.edu
 /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/ngsLD
 cat Sfa-CBas_only_final_fltrd_maf0.05_CHR04.beagle.ld | sbatch ../scripts/LD_blocks.sbatch CHR04 5000 200000
 ```
-
+I also tried the ranges: (5000, 20000), (935, 26786) <-- start and end positions in the CHR04 .pos file, but the error of no SNP's found persisted. 
 
 
 

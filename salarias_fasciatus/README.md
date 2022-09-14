@@ -626,5 +626,18 @@ sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-ABas_only_final_fltrd_maf0.3_CHR01
 sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-CBas_only_final_fltrd_maf0.3_CHR01.beagle.ld.snep_in.r2 ./Sfa-CBas_only_final_fltrd_maf0.3_CHR01.beagle.ld.snep_out
 ```
 
+### c. Plot LD Blocks using `LD_Blocks.sbatch` script
+
+Linkage Disequilibrium blocks are sometimes referred to as haplotype blocks, and they refer to region's in an organims geome that shows little evidence of historical genetic recombination (containing only a small number of distinct haplotypes).
+
+We used a version of ngsLD's `LD_blocks.sh` script, named `LD_blocks.sbatch`
+this was the code I ran: 
+```bash 
+Done on USER@wahab.hpc.odu.edu
+/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/ngsLD
+cat Sfa-CBas_only_final_fltrd_maf0.05_CHR04.beagle.ld | sbatch ../scripts/LD_blocks.sbatch CHR04 5000 200000
+```
+
+
 
 

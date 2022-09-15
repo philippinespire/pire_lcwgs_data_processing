@@ -534,31 +534,63 @@ sbatch scripts/runNGSLD.sbatch mkBGL/CBas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf
 
 Linkage Disequilibrium blocks are sometimes referred to as haplotype blocks, and they refer to regions in an organims geome that show little evidence of historical genetic recombination (containing only a small number of distinct haplotypes.)
 
-We started by modifying & running the `LD_bocks.sh` script from [/fgvieira/ngsLD/](https://github.com/fgvieira/ngsLD/blob/master/scripts/LD_blocks.sh)
-We used a version of ngsLD's `LD_blocks.sh` script, named `LD_blocks.sbatch`
-this was the code I ran: 
-```bash 
+We started by modifying & running the `LD_blocks.sh` script from [/fgvieira/ngsLD/](https://github.com/fgvieira/ngsLD/blob/master/scripts/LD_blocks.sh)
+
+Before the script will run, you'll need to run the following code:
+```bash
 Done on USER@wahab.hpc.odu.edu
-/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/ngsLD
-cat Sfa-CBas_only_final_fltrd_maf0.05_CHR04.beagle.ld | sbatch ../scripts/LD_blocks.sbatch CHR04 5000 200000
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/ngsLD
+salloc #move to a compute node
+enable_lmod
+module load container_env ngsTools
+crun R
 ```
-I also tried the ranges: (5000, 20000), (935, 26786) <-- start and end positions in the CHR04 .pos file, but the error of no SNP's found persisted. 
 
-Updates:
+Note: if you run into the issue of R not loading, try using the long form of the crun command to send your command to the intended container. In this case, you'd use `crun.ngsTools R`. 
 
-```bash 
-cat Sfa-CBas_only_final_fltrd_maf0.05_CHR04.beagle.ld | bash ../scripts/LD_blocks.sh CHR04 5000 200000
+
+Once in R:
+
+```R
+install.packages("gtools")
+install.packages("reshape2")
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("snpStats")
+Install.packages(“LDheatmap”)
 ```
-```bash 
-crun ../scripts/LD_blocks.sh CHR04 0 100000000 Sfa-CBas_only_final_fltrd_maf0.05_CHR04.beagle.ld
-screen crun ../scripts/LD_blocks.sh CHR01 0 100000000 Sfa-CBas_only_final_fltrd_maf0.05_CHR01.beagle.ld
 
+Exit R
 
+We found that running it this way `cat Sfa-CBas_only_final_fltrd_maf0.05_CHR04.beagle.ld | bash ../scripts/LD_blocks.sh CHR04 5000 200000` , as shown in the [/fgvieira/ngsLD/](https://github.com/fgvieira/ngsLD/blob/master/scripts/LD_blocks.sh) guide, led to no SNPs being found. Instead of piping the data in, we edited the script to call it in at the command line. This was the code that we ran:
 
+Note: Check that your script is running properly by checking the tmp file being output during the analysis. Use this code `ls -l /tmp/*LD_blocks` while in the ngsLD dir and look at file size. 
 
+```bash
+Done on USER@wahab.hpc.odu.edu
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/ngsLD
+#you should still be on a compute node, if not, salloc
+bash
+export SINGULARITY_BIND=/home/e1garcia
+crun bash ../scripts/LD_blocks.sh CHR04 0 100000000 Sfa-CBas_only_final_fltrd_maf0.05_CHR04.beagle.ld #we opened up the range to maximize snps captured, may change
+ls -l /tmp/*blocks #to check files
+```
 
+Now, another (faster) way to do this was cooked up by Dr. Bird. Instead of running the R stuff with the bash stuff, just run the following code and then 
+crun R and run the Rscript lines line by line. (path to tmp file needed to read in data to R on the hpc).
 
+```bash
+#CHR04 - Contemp.
+cat <(echo -e "snp1\tsnp2\tdist\tr2p\tD\tDp\tr2") <(cut -f 1,4,7-11 Sfa-CBas_only_final_fltrd_maf0.05_CHR04.beagle.ld) > /tmp/chr04.LD_blocks
+#CHR01 - Contemp.
+cat <(echo -e "snp1\tsnp2\tdist\tr2p\tD\tDp\tr2") <(cut -f 1,4,7-11 Sfa-CBas_only_final_fltrd_maf0.05_CHR01.beagle.ld) > /tmp/chr01.LD_blocks
+#CHR04 - Alb.
+cat <(echo -e "snp1\tsnp2\tdist\tr2p\tD\tDp\tr2") <(cut -f 1,4,7-11 Sfa-ABas_only_final_fltrd_maf0.05_CHR04.beagle.ld) > /tmp/Alb_chr04.LD_blocks
+#CHR01 - Alb.
+cat <(echo -e "snp1\tsnp2\tdist\tr2p\tD\tDp\tr2") <(cut -f 1,4,7-11 Sfa-ABas_only_final_fltrd_maf0.05_CHR01.beagle.ld) > /tmp/Alb_chr01.LD_blocks
+```
 
+Note: use the `screen` command before your code to run the job offline.
 
 ---
 Analysis To Do (up next):

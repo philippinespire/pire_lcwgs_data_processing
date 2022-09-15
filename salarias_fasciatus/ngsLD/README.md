@@ -76,7 +76,7 @@ data %>%
              scales = "free_y")
 ```
 
-### a. plotting Linkage Blocks using script `LD_blocks.sh` and R.
+# Plot Linkage Blocks 
 
 Linkage Disequilibrium blocks are sometimes referred to as haplotype blocks, and they refer to regions in an organims genome that show little evidence of historical genetic recombination (containing only a small number of distinct haplotypes.)
 

@@ -639,5 +639,9 @@ cat Sfa-CBas_only_final_fltrd_maf0.05_CHR04.beagle.ld | sbatch ../scripts/LD_blo
 ```
 I also tried the ranges: (5000, 20000), (935, 26786) <-- start and end positions in the CHR04 .pos file, but the error of no SNP's found persisted. 
 
+Update:
 
+```bash 
+cat Sfa-CBas_only_final_fltrd_maf0.05_CHR04.beagle.ld | bash ../scripts/LD_blocks.sh CHR04 5000 200000
+```
 

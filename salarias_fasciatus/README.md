@@ -530,9 +530,38 @@ sbatch scripts/runNGSLD.sbatch mkBGL/ABas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf
 sbatch scripts/runNGSLD.sbatch mkBGL/CBas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.3_CHR04.beagle.gz 49 5342 mkBGL/Sfa-ABas-CBas_all_final_fltrd_rnmd_maf0.3_CHR04.pos.gz ./ngsLD Sfa-CBas_only_final_fltrd_maf0.3_CHR04.beagle.ld
 ```
 
+### a. plotting Linkage Blocks using script `LD_blocks.sh` and R.
+
+Linkage Disequilibrium blocks are sometimes referred to as haplotype blocks, and they refer to regions in an organims geome that show little evidence of historical genetic recombination (containing only a small number of distinct haplotypes.)
+
+We started by modifying & running the `LD_bocks.sh` script from [/fgvieira/ngsLD/](https://github.com/fgvieira/ngsLD/blob/master/scripts/LD_blocks.sh)
+We used a version of ngsLD's `LD_blocks.sh` script, named `LD_blocks.sbatch`
+this was the code I ran: 
+```bash 
+Done on USER@wahab.hpc.odu.edu
+/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/ngsLD
+cat Sfa-CBas_only_final_fltrd_maf0.05_CHR04.beagle.ld | sbatch ../scripts/LD_blocks.sbatch CHR04 5000 200000
+```
+I also tried the ranges: (5000, 20000), (935, 26786) <-- start and end positions in the CHR04 .pos file, but the error of no SNP's found persisted. 
+
+Updates:
+
+```bash 
+cat Sfa-CBas_only_final_fltrd_maf0.05_CHR04.beagle.ld | bash ../scripts/LD_blocks.sh CHR04 5000 200000
+```
+```bash 
+crun ../scripts/LD_blocks.sh CHR04 0 100000000 Sfa-CBas_only_final_fltrd_maf0.05_CHR04.beagle.ld
+screen crun ../scripts/LD_blocks.sh CHR01 0 100000000 Sfa-CBas_only_final_fltrd_maf0.05_CHR01.beagle.ld
+
+
+
+
+
+
+
+
 ---
 Analysis To Do (up next):
-Linkage Blocks 
 LD Decay (would need to add flag --rmd_sample)
 LD Blocks 
 
@@ -625,23 +654,3 @@ sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-CBas_only_final_fltrd_maf0.2_CHR01
 sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-ABas_only_final_fltrd_maf0.3_CHR01.beagle.ld.snep_in.r2 ./Sfa-ABas_only_final_fltrd_maf0.3_CHR01.beagle.ld.snep_out
 sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-CBas_only_final_fltrd_maf0.3_CHR01.beagle.ld.snep_in.r2 ./Sfa-CBas_only_final_fltrd_maf0.3_CHR01.beagle.ld.snep_out
 ```
-
-### c. Plot LD Blocks using `LD_Blocks.sbatch` script
-
-Linkage Disequilibrium blocks are sometimes referred to as haplotype blocks, and they refer to region's in an organims geome that shows little evidence of historical genetic recombination (containing only a small number of distinct haplotypes).
-
-We used a version of ngsLD's `LD_blocks.sh` script, named `LD_blocks.sbatch`
-this was the code I ran: 
-```bash 
-Done on USER@wahab.hpc.odu.edu
-/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/ngsLD
-cat Sfa-CBas_only_final_fltrd_maf0.05_CHR04.beagle.ld | sbatch ../scripts/LD_blocks.sbatch CHR04 5000 200000
-```
-I also tried the ranges: (5000, 20000), (935, 26786) <-- start and end positions in the CHR04 .pos file, but the error of no SNP's found persisted. 
-
-Update:
-
-```bash 
-cat Sfa-CBas_only_final_fltrd_maf0.05_CHR04.beagle.ld | bash ../scripts/LD_blocks.sh CHR04 5000 200000
-```
-

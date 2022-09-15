@@ -12,7 +12,7 @@ fi
 
 # Extract sites from input file
 TMP_FILE=`mktemp --suffix .LD_blocks`
-awk -v chr=$CHR -v min=$START_POS -v max=$END_POS 'BEGIN{print "snp1\tsnp2\tdist\tr2p\tD\tDp\tr2"} {split($1,pos1,":"); split($4,pos2,":")} pos1[1]==chr && pos1[2]>=min && pos1[2]<=max && pos2[1]==chr && pos2[2]>=min && pos2[2]<=max' $IN_FILE | cut -f 1-7 > $TMP_FILE
+awk -v chr=$CHR -v min=$START_POS -v max=$END_POS 'BEGIN{print "snp1\tmajnuc1\tminnuc1\tsnp2\tmajnuc2\tminnuc2\tdist\tr2p\tD\tDp\tr2"} {split($1,pos1,":"); split($4,pos2,":")} pos1[1]==chr && pos1[2]>=min && pos1[2]<=max && pos2[1]==chr && pos2[2]>=min && pos2[2]<=max' $IN_FILE | cut -f 1,4,7-11 > $TMP_FILE
 N=$((`cat $TMP_FILE | wc -l`-1))
 if [[ $N -le 0 ]]; then
     echo "ERROR: no SNPs found in region." >&2

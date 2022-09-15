@@ -532,7 +532,7 @@ sbatch scripts/runNGSLD.sbatch mkBGL/CBas_Sfa-ABas-CBas_all_final_fltrd_rnmd_maf
 
 ### a. plotting Linkage Blocks using script `LD_blocks.sh` and R.
 
-Linkage Disequilibrium blocks are sometimes referred to as haplotype blocks, and they refer to regions in an organims geome that show little evidence of historical genetic recombination (containing only a small number of distinct haplotypes.)
+Linkage Disequilibrium blocks are sometimes referred to as haplotype blocks, and they refer to regions in an organims genome that show little evidence of historical genetic recombination (containing only a small number of distinct haplotypes.)
 
 We started by modifying & running the `LD_blocks.sh` script from [/fgvieira/ngsLD/](https://github.com/fgvieira/ngsLD/blob/master/scripts/LD_blocks.sh)
 

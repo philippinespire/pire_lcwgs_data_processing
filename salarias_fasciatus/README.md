@@ -591,6 +591,10 @@ cat <(echo -e "snp1\tsnp2\tdist\tr2p\tD\tDp\tr2") <(cut -f 1,4,7-11 Sfa-ABas_onl
 ```
 
 Note: use the `screen` command before your code to run the job offline.
+Note: the temp files created this way will disappear after a while, so move straight into the R script after each one runs. running the R code will take a very. very long time. patience! (I am testing if output to ngsLD dir id better than temp folder currently)
+
+Output:
+
 
 ---
 Analysis To Do (up next):

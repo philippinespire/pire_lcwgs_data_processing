@@ -15,3 +15,6 @@ mkdir mkSFS
 # $1=fltrBAMdir $2=outPREFIX
 sbatch scripts/mkSFS.sbatch fltrBAM Sfa-ABas-CBas_all_SFS
 ```
+
+Current updates:
+-doSaf 1 wants -anc ancestral.fasta, where we provide the ancestral state ,, i'm still trying to figure out how to get this to run. 

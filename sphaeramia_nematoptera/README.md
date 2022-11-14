@@ -22,11 +22,6 @@ Potential issues:
 *gc content - reasonable
 **48-62%
 
-*quality - good
-**sequence quality and per sequence qual both good
-
-*high adapter content - All (165 of 165) failed
-
 *number of reads
 **Albatross - 24-91.9 M; Contemporary - 1.5-75.8 M
 
@@ -34,23 +29,34 @@ Potential issues:
 1st FASTP [Report] (link here)
 Potential issues:
 *% duplication - moderate to high, but only for 1-3 individuals
-**13-43% in Albatross
-**7-30%, one w/ 69%in Contemporary
+**13-43% Albatross
+**7-30%, one w/ 69% in Contemporary
 
 *gc content - reasonable
 **36-65% in Albatross, 37-41% in Contemporary
 
-*passing filter
-Albatross - 77-96%, Contemporary 74-98% 
-
-*% adapter content - 39-86% Albatross,29-65% Contemporary
-
+*Passing filter
+**Alb: 77-96%, Contemp: 74.5-98%%
+*% adapter 
+**Alb: 39.8-87.1%, Contemp: 29-64.7%%
 *number of reads
 **Albatross - 49-175 M, at least 50 M for majority; Contemporary - 2-275 M, less reads for Contemporary
 
-Clumpify
+Clumpify [Report] (link here)
 
+```
+#Ran clumpify in the species directory
+bash ../../pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1 fq_fp1_clmp /scratch/jbald004 20
 
+#copied the checkClumpify_EG.R file to the fq_fp1_clmp folder after running clumpify
+cp /home/e1garcia/shotgun_PIRE/pire_cssl_data_processing/leiognathus_equula/fq_fp1_clmp/checkClumpify_EG.R .
+#ran checkClumpify_EG.R in the fq_fp1_clmp folder
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/fq_fp1_clmp
+salloc
+enable_lmod
+module load container_env mapdamage2
+crun R <checkClumpify_EG.R --no-save
+```
 
 Fastp2
 Similar to what Jordan did for *Salarias fasciatus*, I split the data into 2 paths

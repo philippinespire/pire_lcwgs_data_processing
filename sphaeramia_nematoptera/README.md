@@ -62,10 +62,41 @@ Fastp2
 Similar to what Jordan did for *Salarias fasciatus*, I split the data into 2 paths
 
 * fp2: not clipping the first 14 bp
+```
+sbatch ../../pire_fq_gz_processing/runFASTP_2_ssl.sbatch fq_fp1_clmp fq_fp1_clmp_fp2
+```
+RESULTS:
+Potential issues:
+
+% duplication -
+Alb: XX%, Contemp: XX%
+GC content -
+Alb: XX%, Contemp: XX%
+passing filter -
+Alb: XX%, Contemp: XX%
+% adapter -
+Alb: XX%, Contemp: XX%
+number of reads -
+Alb: XX mil, Contemp: XX mil
+
 * fp2b: clipping off the first 14 bp
+```
+sbatch ../../pire_fq_gz_processing/runFASTP_2_ssl.sbatch fq_fp1_clmp fq_fp1_clmp_fp2b 14
+```
+RESULTS:
+Potential issues:
 
+% duplication -
+Alb: XX%, Contemp: XX%
+GC content -
+Alb: XX%, Contemp: XX%
+passing filter -
+Alb: XX%, Contemp: XX%
+% adapter -
+Alb: XX%, Contemp: XX%
+number of reads -
+Alb: XX mil, Contemp: XX mil
 
-STOPPED HERE
 ---
 
 ## 2. Getting only the Chromosomes and mtGenome from the Genome Download

@@ -69,15 +69,15 @@ RESULTS:
 Potential issues:
 
 % duplication -
-Alb: XX%, Contemp: XX%
+Alb: 2-11%, Contemp: 0.7-28%
 GC content -
-Alb: XX%, Contemp: XX%
+Alb: 37-66%, Contemp: 37-44%
 passing filter -
-Alb: XX%, Contemp: XX%
+Alb: 16-65%, Contemp: 33-72%
 % adapter -
-Alb: XX%, Contemp: XX%
+Alb: 0.5-1.3%, Contemp: 0.5-1.7%
 number of reads -
-Alb: XX mil, Contemp: XX mil
+Alb: 7-79 mil, Contemp: 0.6-121 mil
 
 * fp2b: clipping off the first 14 bp
 ```
@@ -87,15 +87,15 @@ RESULTS:
 Potential issues:
 
 % duplication -
-Alb: XX%, Contemp: XX%
+Alb: 2.4-11%, Contemp: 1-28%
 GC content -
-Alb: XX%, Contemp: XX%
+Alb: 37-66%, Contemp: 37-43%
 passing filter -
-Alb: XX%, Contemp: XX%
+Alb: 16-75%, Contemp: 33-72%
 % adapter -
-Alb: XX%, Contemp: XX%
+Alb: 32-82%, Contemp: 32-62%
 number of reads -
-Alb: XX mil, Contemp: XX mil
+Alb: 5-34 mil, Contemp: 0.6-121 mil
 
 ---
 

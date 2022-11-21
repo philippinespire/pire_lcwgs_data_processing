@@ -110,7 +110,7 @@ Potential issues:
 ```
 </p>
 </details>
----
+
 
 ## 2. Mapped FASTQ to reference genome
 

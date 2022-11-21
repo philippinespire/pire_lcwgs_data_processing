@@ -5,49 +5,59 @@
 Jem Baldisimo
 
 ---
-This repository outlines the roadmap we followed to move *Sphaeramia nematoptera* through the [Low Coverage Whole Genome Sequencing Pipeline](https://github.com/philippinespire/pire_lcwgs_data_processing). This builds on previous work already done by Jordan Rodriguez for analyzing lcWGS for [*Salarias fasciatus*] (https://github.com/philippinespire/pire_lcwgs_data_processing/tree/main/salarias_fasciatus). This provides steps taken & analysis we did to gain insight on the historical population demography of this very popular aquarium fish, also known as the pajama cardinalfish.
+This repository outlines the roadmap we followed to move *Sphaeramia nematoptera* through the [Low Coverage Whole Genome Sequencing Pipeline](https://github.com/philippinespire/pire_lcwgs_data_processing). This builds on previous work already done by Jordan Rodriguez for analyzing lcWGS for [*Salarias fasciatus*](https://github.com/philippinespire/pire_lcwgs_data_processing/tree/main/salarias_fasciatus). This provides steps taken & analysis we did to gain insight on the historical population demography of this very popular aquarium fish, also known as the pajama cardinalfish.
 
 ---
 
-## 1. Preprocessing FqGZ files
+## 1. Completed fq.gz pre-processing
 
 The [pire_fq_gz_processing](https://github.com/philippinespire/pire_fq_gz_processing) instructions and scripts (Garcia et al 2021) were used. The purpose of the preprocessing pipeline was to Trim, deduplicate, decontaminate, and repair the raw `fq.gz` files.
 
-After running the Multi_FASTQC.sh script and getting this [Report] (link here)
+<details><summary><i>Checked quality of data using Multi_FASTQC</i></summary>
+<p>
+
+
+
+ Multi_FASTQC [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/fq_raw_lcwgs/fqc_raw_report.html)
+```
 Potential issues:
-*% duplication - moderate to high, but only for 1-3 individuals
-**17.8-60% in Albatross
-**10.4-71% in Contemporary
+ * duplication - moderate to high, but only for 1-3 individuals
+   * Alb: 17.8-60%, Contemp: 10.4-71%
+ * gc content - reasonable
+   * 48-62%
+ *number of reads
+   *Albatross - 24-91.9 M; Contemporary - 1.5-75.8 M
+```
+</p>
+</details>
 
-*gc content - reasonable
-**48-62%
+<details><summary><i>1st trim</i></i></summary>
+<p>
 
-*number of reads
-**Albatross - 24-91.9 M; Contemporary - 1.5-75.8 M
-
-
-1st FASTP [Report] (link here)
+ 1st FASTP [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/fq_fp1/1st_fastp_report.html)
+```
 Potential issues:
-*% duplication - moderate to high, but only for 1-3 individuals
-**13-43% Albatross
-**7-30%, one w/ 69% in Contemporary
+ * duplication - moderate to high, but only for 1-3 individuals
+   * Alb: 13-43%, Contemp: 7-30%, one w/ 69%
+ * gc content - reasonable
+   * Alb: 36-65%, Contemp: 37-41%
+ * Passing filter
+   * Alb: 77-96%, Contemp: 74.5-98%%
+ * % adapter 
+   * Alb: 39.8-87.1%, Contemp: 29-64.7%%
+ * number of reads
+   * Albatross - 49-175 M, at least 50 M for majority; Contemp - 2-275 M, less reads for Contemporary
+```
+</p>
+</details>
 
-*gc content - reasonable
-**36-65% in Albatross, 37-41% in Contemporary
+<details><summary><i>Clumpify</i></summary>
+<p>
 
-*Passing filter
-**Alb: 77-96%, Contemp: 74.5-98%%
-*% adapter 
-**Alb: 39.8-87.1%, Contemp: 29-64.7%%
-*number of reads
-**Albatross - 49-175 M, at least 50 M for majority; Contemporary - 2-275 M, less reads for Contemporary
-
-Clumpify [Report] (link here)
+ Clumpify [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/fq_fp1_clmp/fqc_clmp_report.html)
 
 ```
-#Ran clumpify in the species directory
 bash ../../pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1 fq_fp1_clmp /scratch/jbald004 20
-
 #copied the checkClumpify_EG.R file to the fq_fp1_clmp folder after running clumpify
 cp /home/e1garcia/shotgun_PIRE/pire_cssl_data_processing/leiognathus_equula/fq_fp1_clmp/checkClumpify_EG.R .
 #ran checkClumpify_EG.R in the fq_fp1_clmp folder
@@ -57,47 +67,54 @@ enable_lmod
 module load container_env mapdamage2
 crun R <checkClumpify_EG.R --no-save
 ```
+Clumpify worked well so I moved on to the next step
+</p>
+</details>
 
-Fastp2
+<details><summary><i>2nd Trim</i></summary>
+<p>
 
-* fp2 Step
 ```
 sbatch ../../pire_fq_gz_processing/runFASTP_2_ssl.sbatch fq_fp1_clmp fq_fp1_clmp_fp2
 ```
-RESULTS:
+
+Fastp2 [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/fq_fp1_clmp_fp2/2nd_fastp_report.html)
+```
 Potential issues:
+  * % duplication -
+    * Alb: 2-11%, Contemp: 0.7-28%
+  * GC content -
+    * Alb: 37-66%, Contemp: 37-44%
+  * passing filter -
+    * Alb: 16-65%, Contemp: 33-72%
+  * % adapter -
+    * Alb: 0.5-1.3%, Contemp: 0.5-1.7%
+  * number of reads -
+    * Alb: 7-79 mil, Contemp: 0.6-121 mil
+```
+</p>
+</details>
 
-% duplication -
-Alb: 2-11%, Contemp: 0.7-28%
-GC content -
-Alb: 37-66%, Contemp: 37-44%
-passing filter -
-Alb: 16-65%, Contemp: 33-72%
-% adapter -
-Alb: 0.5-1.3%, Contemp: 0.5-1.7%
-number of reads -
-Alb: 7-79 mil, Contemp: 0.6-121 mil
+<details><summary><i>Checked Fastqscreen repaired files</i></summary>
+<p>
+ MultiQC [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/fq_fp1_clmp_fp2_fqscrn_rprd/fqc_rprd_report.html)
 
-FQSCRN Repaired
-MultiQC
+```
 Potential issues:
+  * % duplication -
+     Alb: 3-37%, Contemp: 0.9-22.2%
+  * GC content -
+    * Alb: 35-64%, Contemp: 37-41%
+  * number of reads -
+    * Alb: 1.7-22.5 mil, Contemp: 0.3-56.4 mil
+```
+</p>
+</details>
 
-% duplication -
-Alb: 3-37%, Contemp: 0.9-22.2%
-GC content -
-Alb: 35-64%, Contemp: 37-41%
-number of reads -
-Alb: 1.7-22.5 mil, Contemp: 0.3-56.4 mil
 
-READS LOST:
-fastp1 dropped XX% of the reads
-XX% of reads were duplicates and were dropped by Clumpify
-fastp2 dropped XX% of the reads after deduplication
----
+## 2. Mapped FASTQ to reference genome
 
-## 2. Mapped reads to reference genome
-
-I used the reference genome we assembled for Sphaeramia nematoptera.
+I mapped the repaired fqscrn files to the reference genome we assembled for Sphaeramia nematoptera
 
 ```bash
 sbatch ../scripts/mkBAMlcwgs.sbatch "fq_fp1_clmp_fp2_fqscrn_rprd/*fq.gz" "/home/e1garcia/shotgun_PIRE/pire_ssl_data_processing/sphaeramia_nematoptera/probe_design/Sne_scaffolds_allLibs_decontam_R1R2_noIsolate.fasta" mkBAM
@@ -105,26 +122,21 @@ sbatch ../scripts/mkBAMlcwgs.sbatch "fq_fp1_clmp_fp2_fqscrn_rprd/*fq.gz" "/home/
 
 ---
 
-## 3. Mapping & Filtering Bams
-
-I followed the [pire_lcwgs_data_processing](https://github.com/philippinespire/pire_lcwgs_data_processing) repo instructions (Bird et al. 2022).
-
-After step 5. 'Filter the binary alignment maps', I separated the filtered bam files from the raw bam files.
+## 3. Filtered Raw Bam Files
 
 ```bash 
- cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
- mkdir fltrBAM
- mv mkBAM/*fltrd* fltrBAM/
+ sbatch ../scripts/fltrBAMwgs.sbatch mkBAM
 ```
 
 ---
 
 ## 4. Sequencing Calculations 
 
-I cloned [rroberts_thesis](https://github.com/cbirdlab/rroberts_thesis) into `/home/e1garcia/shotgun_PIRE/` on wahab.hpc.odu.edu server to make the [`mappedReadStats.sbatch`](https://github.com/cbirdlab/rroberts_thesis/blob/main/scripts/bam_processing/mappedReadStats.sbatch) script easily accessible from any species directory.
+```bash
+sbatch ../../pire_fq_gz_processing/mappedReadStats.sbatch mkBAM mkBAM/coverageMappedReads "_fltrd.bam" #_fltrd.bam added to accommodated for filtered bam file extension
+```
 
-I followed the [read_mapping_summary](https://github.com/cbirdlab/read_mapping_summary) section B. repo instructions.
-
+##STOPPED EDITING HERE
 Here are the visual results:
 
 [Percent Coverage & Mean Depth Plot](plots/pct_cov_meandepth_Sfa.png)

@@ -74,7 +74,7 @@ The fltrBAM script will remove unmapped reads, secondary and supplementary align
 
 ```bash
 #sbatch fltrBAMwgs.sbatch DirWithBamFiles
-sbatch fltrBAMwgs.sbatch ./mkBAM
+sbatch ../scripts/fltrBAMwgs.sbatch mkBAM
 ```
 ---
 

@@ -63,7 +63,7 @@ this will take the fq.gz files you specify and map them to the reference genome 
 
 ```bash
 #sbatch mkBAMwgs.sbatch InFilePattern RefGenomeFile OutDir
-sbatch mkBAMwgs.sbatch "./fq_fp1_clmp_fp2b_fqscrn_rprd/*.fq.gz" ./GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna.gz ./mkBAM
+sbatch ./scripts/mkBAMlcwgs.sbatch "./fq_fp1_clmp_fp2b_fqscrn_rprd/*.fq.gz" ./GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna.gz ./mkBAM
 ```
 
 ---

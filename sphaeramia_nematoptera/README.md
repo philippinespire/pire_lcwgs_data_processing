@@ -13,7 +13,10 @@ This repository outlines the roadmap we followed to move *Sphaeramia nematoptera
 
 The [pire_fq_gz_processing](https://github.com/philippinespire/pire_fq_gz_processing) instructions and scripts (Garcia et al 2021) were used. The purpose of the preprocessing pipeline was to Trim, deduplicate, decontaminate, and repair the raw `fq.gz` files.
 
-<i>Checked quality of data using Multi_FASTQC</i>
+<details><summary><i>Checked quality of data using Multi_FASTQC</i></summary>
+<p>
+
+
 
  Multi_FASTQC [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/fq_raw_lcwgs/fqc_raw_report.html)
 ```
@@ -25,8 +28,11 @@ Potential issues:
  *number of reads
    *Albatross - 24-91.9 M; Contemporary - 1.5-75.8 M
 ```
+</p>
+</details>
 
-<i>1st trim</i>
+<details><summary><i>1st trim</i></i></summary>
+<p>
 
  1st FASTP [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/fq_fp1/1st_fastp_report.html)
 ```
@@ -42,8 +48,11 @@ Potential issues:
  * number of reads
    * Albatross - 49-175 M, at least 50 M for majority; Contemp - 2-275 M, less reads for Contemporary
 ```
+</p>
+</details>
 
-<i>Clumpify</i>
+<details><summary><i>Clumpify</i></summary>
+<p>
 
  Clumpify [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/fq_fp1_clmp/fqc_clmp_report.html)
 
@@ -59,14 +68,17 @@ module load container_env mapdamage2
 crun R <checkClumpify_EG.R --no-save
 ```
 Clumpify worked well so I moved on to the next step
+</p>
+</details>
 
-<i>2nd Trim</i>
+<details><summary><i>2nd Trim</i></summary>
+<p>
 
 ```
 sbatch ../../pire_fq_gz_processing/runFASTP_2_ssl.sbatch fq_fp1_clmp fq_fp1_clmp_fp2
 ```
-Fastp2 [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/fq_fp1_clmp_fp2/2nd_fastp_report.html)
 
+Fastp2 [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/fq_fp1_clmp_fp2/2nd_fastp_report.html)
 ```
 Potential issues:
   * % duplication -
@@ -80,7 +92,11 @@ Potential issues:
   * number of reads -
     * Alb: 7-79 mil, Contemp: 0.6-121 mil
 ```
-<i>Checked Fastqscreen repaired files</i>
+</p>
+</details>
+
+<details><summary><i>Checked Fastqscreen repaired files</i></summary>
+<p>
  MultiQC [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/fq_fp1_clmp_fp2_fqscrn_rprd/fqc_rprd_report.html)
 
 ```
@@ -92,12 +108,13 @@ Potential issues:
   * number of reads -
     * Alb: 1.7-22.5 mil, Contemp: 0.3-56.4 mil
 ```
-
+</p>
+</details>
 ---
 
 ## 2. Mapped FASTQ to reference genome
 
-I maaped the repaired fqscrn files to the reference genome we assembled for Sphaeramia nematoptera
+I mapped the repaired fqscrn files to the reference genome we assembled for Sphaeramia nematoptera
 
 ```bash
 sbatch ../scripts/mkBAMlcwgs.sbatch "fq_fp1_clmp_fp2_fqscrn_rprd/*fq.gz" "/home/e1garcia/shotgun_PIRE/pire_ssl_data_processing/sphaeramia_nematoptera/probe_design/Sne_scaffolds_allLibs_decontam_R1R2_noIsolate.fasta" mkBAM

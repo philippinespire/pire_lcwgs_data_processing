@@ -59,9 +59,8 @@ crun R <checkClumpify_EG.R --no-save
 ```
 
 Fastp2
-Similar to what Jordan did for *Salarias fasciatus*, I split the data into 2 paths
 
-* fp2: not clipping the first 14 bp
+* fp2 Step
 ```
 sbatch ../../pire_fq_gz_processing/runFASTP_2_ssl.sbatch fq_fp1_clmp fq_fp1_clmp_fp2
 ```
@@ -79,46 +78,29 @@ Alb: 0.5-1.3%, Contemp: 0.5-1.7%
 number of reads -
 Alb: 7-79 mil, Contemp: 0.6-121 mil
 
-* fp2b: clipping off the first 14 bp
-```
-sbatch ../../pire_fq_gz_processing/runFASTP_2_ssl.sbatch fq_fp1_clmp fq_fp1_clmp_fp2b 14
-```
-RESULTS:
+FQSCRN Repaired
+MultiQC
 Potential issues:
 
 % duplication -
-Alb: 2.4-11%, Contemp: 1-28%
+Alb: 3-37%, Contemp: 0.9-22.2%
 GC content -
-Alb: 37-66%, Contemp: 37-43%
-passing filter -
-Alb: 16-75%, Contemp: 33-72%
-% adapter -
-Alb: 32-82%, Contemp: 32-62%
+Alb: 35-64%, Contemp: 37-41%
 number of reads -
-Alb: 5-34 mil, Contemp: 0.6-121 mil
+Alb: 1.7-22.5 mil, Contemp: 0.3-56.4 mil
 
+READS LOST:
+fastp1 dropped XX% of the reads
+XX% of reads were duplicates and were dropped by Clumpify
+fastp2 dropped XX% of the reads after deduplication
 ---
 
-## 2. Getting only the Chromosomes and mtGenome from the Genome Download
+## 2. Mapped reads to reference genome
+
+I used the reference genome we assembled for Sphaeramia nematoptera.
 
 ```bash
-# Download the genome 
-wget https://ftp.ncbi.nih.gov/genomes/refseq/vertebrate_other/Salarias_fasciatus/all_assembly_versions/GCF_902148845.1_fSalaFa1.1/GCF_902148845.1_fSalaFa1.1_genomic.fna.gz
-
-# get the line num for every chrom, contig, and scaffold in the genome download and save to file
-zgrep -n '^>' GCF_902148845.1_fSalaFa1.1_genomic.fna.gz > GCF_902148845.1_fSalaFa1.1_genomic_linenums.txt
-
-# get mitogenome, which starts on line 9968937, and save to file
-zcat GCF_902148845.1_fSalaFa1.1_genomic.fna.gz | tail -n +9968937 > NC_004412.1_mtgenome.fasta
-
-# get chromes 1-7 and save to file
-zcat GCF_902148845.1_fSalaFa1.1_genomic.fna.gz | head -n 3077487 > NC_043745.1-NC_043751.1_chr1-7.fasta
-
-# get chromes 8-23, theres no 21, and save to file
-zcat GCF_902148845.1_fSalaFa1.1_genomic.fna.gz | tail -n +3431318 | head -n 5857623 > NC_043752.1-NC_043766.1_chr8-23.fasta
-
-# concatenating and gzipping the chromosomes and mitogenome into one file
-cat NC_043745.1-NC_043751.1_chr1-7.fasta NC_043752.1-NC_043766.1_chr8-23.fasta NC_004412.1_mtgenome.fasta | gzip > GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna.gz
+sbatch ../scripts/mkBAMlcwgs.sbatch "fq_fp1_clmp_fp2_fqscrn_rprd/*fq.gz" "/home/e1garcia/shotgun_PIRE/pire_ssl_data_processing/sphaeramia_nematoptera/probe_design/Sne_scaffolds_allLibs_decontam_R1R2_noIsolate.fasta" mkBAM
 ```
 
 ---

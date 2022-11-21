@@ -11,5 +11,5 @@ export SINGULARITY_BIND=/home/e1garcia
 
 bamDIR=$1
 # only pick one
-crun ./fltrBAM.bash $bamDIR
+crun /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/fltrBAMwgs.bash $bamDIR
 

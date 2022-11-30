@@ -139,9 +139,9 @@ sbatch ../../pire_fq_gz_processing/mappedReadStats.sbatch mkBAM mkBAM/coverageMa
 ##STOPPED EDITING HERE
 Here are the visual results:
 
-[Percent Coverage & Mean Depth Plot](plots/pct_cov_meandepth_Sfa.png)
+[Percent Coverage & Mean Depth Plot](Ask Chris how)
 
-[Proportion of Mapped Sequences Plot](plots/prop_seqs_mapped_Sfa.png)
+[Proportion of Mapped Sequences Plot] (Ask Chris how))
 
 --- 
 
@@ -151,7 +151,7 @@ We need to make a popmap file that has 2 columns, populationID and IndiviudalID,
 
 ```bash
 bash
-paste <( ls fltrBAM/*bam | sed -e 's/^.*\///' -e 's/_.*$//' ) <( ls fltrBAM/*bam | sed -e 's/^.*\///' -e 's/_L[1-8]_.*bam$//' -e 's/_Ex[1-9].*$//' ) > fltrBAM/popmap_sfa.tsv
+paste <( ls mkBAM/*_fltrd.bam | sed -e 's/^.*\///' -e 's/_.*$//' ) <( ls mkBAM/*_fltrd.bam | sed -e 's/^.*\///' -e 's/_L[1-8]_.*_fltrd.bam$//' -e 's/_Ex[1-9].*$//' ) > mkBAM/popmap_sne.tsv
 ```
 
 ---

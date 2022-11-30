@@ -696,7 +696,7 @@ Jem Baldisimo tweaked the ANGSD script to calculate error in samples for each er
 
 The ANGSD page for Error estimates describes two methods [here](http://www.popgen.dk/angsd/index.php/Error_estimation)
 
-To estimate error from polymorphic sites per era, the script was run together with a list of Albatross filtered bam files. 
+To estimate error from polymorphic sites per era, the script was run together with a list of Albatross filtered bam files and then a list of Contemporary filtered bam files.
 ```bash
 #sbatch <ErrAngsdscript> <filtered bamfilelist> <outputfolder>
 sbatch /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/runErrANGSD.sbatch AlbbamNames.txt AlbErr

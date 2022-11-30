@@ -690,14 +690,20 @@ sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-CBas_only_final_fltrd_maf0.2_CHR01
 sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-ABas_only_final_fltrd_maf0.3_CHR01.beagle.ld.snep_in.r2 ./Sfa-ABas_only_final_fltrd_maf0.3_CHR01.beagle.ld.snep_out
 sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-CBas_only_final_fltrd_maf0.3_CHR01.beagle.ld.snep_in.r2 ./Sfa-CBas_only_final_fltrd_maf0.3_CHR01.beagle.ld.snep_out
 ```
-## 15. Calculating Error via ANGSD
+##  Error estimation in  ANGSD
 
+Jem Baldisimo tweaked the ANGSD script to calculate error in samples for each era.
+
+The ANGSD page for Error estimates describes two methods [here](http://www.popgen.dk/angsd/index.php/Error_estimation)
+
+To estimate error from polymorphic sites per era, the script was run together with a list of Albatross filtered bam files. 
 ```bash
 #sbatch <ErrAngsdscript> <filtered bamfilelist> <outputfolder>
 sbatch /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/runErrANGSD.sbatch AlbbamNames.txt AlbErr
 sbatch /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/runErrANGSD.sbatch ContempbamNames.txt ContempErr
 ```
 
-Download output files (with suffix .chunkunordered) and visualize in R using this [script](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/Err/ErrBar_graph.R)
+Output files (with suffix .chunkunordered) were downloaded and visualized in R using this [script](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/Err/ErrBar_graph.R)
 
+The resulting graphs are found here for [Albatross](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/Err/Sfa_Err_lcWGS_Alb.png) and [Contemporary](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/Err/Sfa_Err_lcWGS_Contemp.png)
 ###

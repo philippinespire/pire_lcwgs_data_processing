@@ -693,4 +693,11 @@ sbatch ../scripts/runSNeP.sbatch ../ngsLD/Sfa-CBas_only_final_fltrd_maf0.3_CHR01
 ## 15. Calculating Error via ANGSD
 
 ```bash
-#sbatch 
+#sbatch <ErrAngsdscript> <filtered bamfilelist> <outputfolder>
+sbatch /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/runErrANGSD.sbatch AlbbamNames.txt AlbErr
+sbatch /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/runErrANGSD.sbatch ContempbamNames.txt ContempErr
+```
+
+Download output files (with suffix .chunkunordered) and visualize in R using this [script](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/Err/ErrBar_graph.R)
+
+###

@@ -2,11 +2,17 @@
 
 #set working directory
 #setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-setwd("~/Documents/PIRE Project/Salarias_fasciatus CSSL")
+setwd("~/Documents/PIRE Project/Salarias_fasciatus LCWGS")
 getwd()
 
 #Read in data table 
-Err <- as.numeric(read.table("out_Errtest.error.chunkunordered.csv", nrow=1))
+AlbErr <- as.numeric(read.table("AlbErr.error.chunkunordered.csv", nrow=1))
 DNA<-c("A","C","G","T")
-names(Err) <- as.vector((sapply(1:4,function(x) paste(DNA[x],DNA,sep="->"))))
-barplot(Err, main = "Salarias fasciatus CSSL", xlab = "Bases", ylab = "Error", cex.axis = 0.75, cex.names = 0.5)
+names(AlbErr) <- as.vector((sapply(1:4,function(x) paste(DNA[x],DNA,sep="->"))))
+barplot(AlbErr, main = "Salarias fasciatus lcWGS Alb", xlab = "Bases", ylab = "Error", cex.axis = 0.75, cex.names = 0.5)
+
+#Read in data table 
+ContempErr <- as.numeric(read.table("ContempErr.error.chunkunordered.csv", nrow=1))
+DNA<-c("A","C","G","T")
+names(ContempErr) <- as.vector((sapply(1:4,function(x) paste(DNA[x],DNA,sep="->"))))
+barplot(ContempErr, main = "Salarias fasciatus lcWGS Contemp", xlab = "Bases", ylab = "Error", cex.axis = 0.75, cex.names = 0.5)

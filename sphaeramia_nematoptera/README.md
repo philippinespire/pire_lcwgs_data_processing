@@ -136,7 +136,6 @@ sbatch ../scripts/mkBAMlcwgs.sbatch "fq_fp1_clmp_fp2_fqscrn_rprd/*fq.gz" "/home/
 sbatch ../../pire_fq_gz_processing/mappedReadStats.sbatch mkBAM mkBAM/coverageMappedReads "_fltrd.bam" #_fltrd.bam added to accommodated for filtered bam file extension
 ```
 
-##STOPPED EDITING HERE
 Here are the visual results:
 
 [Percent Coverage & Mean Depth Plot](Ask Chris how)
@@ -158,26 +157,25 @@ paste <( ls mkBAM/*_fltrd.bam | sed -e 's/^.*\///' -e 's/_.*$//' ) <( ls mkBAM/*
 
 ## 6. Convert the Filtered BAM Files to a Beagle File Using Angsd
 
-It is important to note that there are stringent default filters that are employed by ANGSD during the creation of the beagle file, which will remove data that we do not want to remove. To navigate this, we made [`mkBGL.sbatch`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/mkBGL.sbatch), where we ran a series of 6 tests ranging from lenient to stringent filtering. The last assigned `TODO` and `FILTERS` are the parameters that will be applied when the script is ran. Optimally, you should only have to make two beagle files; the first beagle file gives insight to the appropriate filter parameters needed for the second and final beagle file. You may need to make additional beagle files if the filters need to be adjusted. 
+I followed how Jordan first made a beagle file with minimal filters, then determined the final filter settings.
 
 ### a. Make beagle file with minimal filters 
 
-You must first minimally filter the data so that you can accurately set the filter parameters for the final beagle file. 
-
-To make the minimally filtered beagle file, run the [`mkBGL.sbatch`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/mkBGL.sbatch) script with minimal `TODO` and `FILTERS` settings. Here is the code I used when making the `initial.beagle.gz` file: 
 ```bash
 # done on USER@wahab.hpc.odu.edu
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera
 # ANGSD outputs files to the mkBGL dir, so it may be usefiul to create this dir before running the script if you haven't already
 mkdir mkBGL
 # $1=fltrBAMdir $2=outPREFIX
-sbatch scripts/mkBGL.sbatch fltrBAM Sfa-ABas-CBas_all_initial
+sbatch scripts/mkBGL.sbatch mkBAM Sne-ATaw-CTaw_all_initial
 ```
 When running the above code again for the final beagle file, make sure to replace "initial" to "final" when naming the prefix.  
 
 *Note: check the `.args` and the `.err` files to see what filters were applied to the run (double check that the ones you indicated are the ones listed), and which errors might have occurred during the run*
 
 *Soon, we will be creating files for the `initial_bgl_filters` and `final_bgl_filters` for them to be fed to the script instead of hardcoded -- coming soon*
+
+STOPPED HERE - mkBGL running 11/30/2022
 
 ### b. Determine final [`mkBGL.sbatch`](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/scripts/mkBGL.sbatch) settings
 

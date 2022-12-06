@@ -11,7 +11,7 @@
 nodes=$2    # eg 32 - running 4 at a time?
 
 INDIR=$1                 #example= /home/e1garcia/shotgun_PIRE/pire_cssl_data_processing/siganus_spinus/fq_fp1_clmp_fp2
-FQPATTERN=*_clmp.fp2_r1.fq.gz        #forward reads
+FQPATTERN=*_clmp.fp2_repr.R1.fq.gz        #forward reads
 
 SCRIPTPATH=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 

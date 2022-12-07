@@ -25,4 +25,4 @@ echo ${sample_name}
 
 cd ${SPDIR}/mt_error
 
-crun bbmap.sh ref=${SPDIR}/mterror/${sample_name}_clmp.fp2_repr_fltrd.bam_mtseq.fa in1=${SPDIR}/${FQDIR}/${sample_name}_clmp.fp2_repr.R1.fq.gz  in1=${SPDIR}/${FQDIR}/${sample_name}_clmp.fp2_repr.R2.fq.gz out=${SPDIR}/mterror/${sample_name}_mapped.sam mhist=${SPDIR}/mterror/${sample_name}_mhist.txt ehist=${SPDIR}/mterror/${sample_name}_ehist.txt indelhist=${SPDIR}/mterror/${sample_name}_indelhist.txt
+crun bbmap.sh ref=${SPDIR}/mt_error/${sample_name}_clmp.fp2_repr_fltrd.bam_mtseq.fa in1=${SPDIR}/${FQDIR}/${sample_name}_clmp.fp2_repr.R1.fq.gz  in1=${SPDIR}/${FQDIR}/${sample_name}_clmp.fp2_repr.R2.fq.gz out=${SPDIR}/mt_error/${sample_name}_mapped.sam mhist=${SPDIR}/mt_error/${sample_name}_mhist.txt ehist=${SPDIR}/mt_error/${sample_name}_ehist.txt indelhist=${SPDIR}/mt_error/${sample_name}_indelhist.txt

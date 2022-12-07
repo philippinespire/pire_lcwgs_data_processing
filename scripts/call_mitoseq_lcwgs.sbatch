@@ -31,6 +31,6 @@ mkdir -p ${SPDIR}/mt_error/joblog
 
 cd ${SPDIR}/mt_error/
 
-crun samtools mpileup -C50 -r ${MTSEQ} -uf ${SPDIR}/${REFLOC} ${SPDIR}/mkBAM/${sample_name}_clmp.fp2_repr_fltrd.bam | crun bcftools call --ploidy 1 -c - | crun vcfutils.pl vcf2fq -d 10 > ${SPDIR}/mt_error/${sample_name}_mtseq.fq
+crun samtools mpileup -C50 -r ${MTSEQ} -uf ${SPDIR}/${REFLOC} ${SPDIR}/mkBAM/${sample_name} | crun bcftools call --ploidy 1 -c - | crun vcfutils.pl vcf2fq -d 10 > ${SPDIR}/mt_error/${sample_name}_mtseq.fq
 
 mv call_mitoseq_lcwgs-%j.out  ${SPDIR}/mt_error/joblog

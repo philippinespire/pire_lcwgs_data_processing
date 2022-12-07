@@ -6,7 +6,7 @@
 #SBATCH --output MitoZ-%j.out
 #SBATCH -p main
 #SBATCH --time=48:00:00
-#SBATCH -c 8
+#SBATCH -c 16
 #SBATCH --exclusive=user
 
 enable_lmod
@@ -25,6 +25,6 @@ echo ${sample_name}
 mkdir ${INDIR}/${sample_name}_MitoZ
 cd ${INDIR}/${sample_name}_MitoZ
 
-crun MitoZ.py all2 --genetic_code 2 --clade Chordata --outprefix ${sample_name} --thread_number 8 --fastq1 ${INDIR}/${sample_name}_clmp.fp2_repr.R1.fq.gz --fastq2 ${INDIR}/${sample_name}_clmp.fp2_repr.R2.fq.gz --fastq_read_length 150
+crun MitoZ.py all2 --genetic_code 2 --clade Chordata --outprefix ${sample_name} --thread_number 16 --fastq1 ${INDIR}/${sample_name}_clmp.fp2_repr.R1.fq.gz --fastq2 ${INDIR}/${sample_name}_clmp.fp2_repr.R2.fq.gz --fastq_read_length 150
 
 rm -r tmp

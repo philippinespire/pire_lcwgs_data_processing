@@ -1,7 +1,7 @@
 #!/bin/bash -l
 
-#SBATCH --job-name=call_mitoseq_lcwgs
-#SBATCH -o call_mitoseq_lcwgs-%j.out 
+#SBATCH --job-name=bbmap_mitoerror_lcwgs
+#SBATCH -o bbmap_mitoerror_lcwgs-%j.out 
 #SBATCH --mem 2000 #most runs should be under 1 GB but we'll add a buffer
 #SBATCH -p main 
 #SBATCH -n 1 #each chromosome will be processed on a single core (-n 1)  
@@ -25,4 +25,4 @@ echo ${sample_name}
 
 cd ${SPDIR}/mt_error
 
-bbmap.sh ref=${SPDIR}/mterror/${sample_name}_clmp.fp2_repr_fltrd.bam_mtseq.fa in1=${SPDIR}/${FQDIR}/${sample_name}_clmp.fp2_repr.R1.fq.gz  in1=${SPDIR}/${FQDIR}/${sample_name}_clmp.fp2_repr.R2.fq.gz out=${SPDIR}/mterror/${sample_name}_mapped.sam mhist=${SPDIR}/mterror/${sample_name}_mhist.txt ehist=${SPDIR}/mterror/${sample_name}_ehist.txt indelhist=${SPDIR}/mterror/${sample_name}_indelhist.txt
+crun bbmap.sh ref=${SPDIR}/mterror/${sample_name}_clmp.fp2_repr_fltrd.bam_mtseq.fa in1=${SPDIR}/${FQDIR}/${sample_name}_clmp.fp2_repr.R1.fq.gz  in1=${SPDIR}/${FQDIR}/${sample_name}_clmp.fp2_repr.R2.fq.gz out=${SPDIR}/mterror/${sample_name}_mapped.sam mhist=${SPDIR}/mterror/${sample_name}_mhist.txt ehist=${SPDIR}/mterror/${sample_name}_ehist.txt indelhist=${SPDIR}/mterror/${sample_name}_indelhist.txt

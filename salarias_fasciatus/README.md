@@ -705,5 +705,5 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/runErrANGS
 
 Output files (with suffix .chunkunordered) were downloaded and visualized in R using this [script](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/Err/ErrBar_graph.R)
 
-The resulting graphs are found here for [Albatross](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/Err/Sfa_Err_lcWGS_Alb.png) and [Contemporary](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/Err/Sfa_Err_lcWGS_Contemp.png)
+The resulting graphs are found here for [Albatross](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/Err/Sfa_Err_lcWGS_Alb.png), [Contemporary](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/Err/Sfa_Err_lcWGS_Contemp.png), and [both] (https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/salarias_fasciatus/Err/Sfa_Err_lcWGS.png)
 ###

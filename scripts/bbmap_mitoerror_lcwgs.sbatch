@@ -28,3 +28,5 @@ mkdir -p ${SPDIR}/mt_error/${sample_name}
 cd ${SPDIR}/mt_error/${sample_name}
 
 crun bbmap.sh ref=${SPDIR}/mt_error/${sample_name}_clmp.fp2_repr_fltrd.bam_mtseq.fa in1=${SPDIR}/${FQDIR}/${sample_name}_clmp.fp2_repr.R1.fq.gz  in1=${SPDIR}/${FQDIR}/${sample_name}_clmp.fp2_repr.R2.fq.gz out=${SPDIR}/mt_error/${sample_name}/${sample_name}_mapped.sam mhist=${SPDIR}/mt_error/${sample_name}/${sample_name}_mhist.txt ehist=${SPDIR}/mt_error/${sample_name}/${sample_name}_ehist.txt indelhist=${SPDIR}/mt_error/${sample_name}/${sample_name}_indelhist.txt
+
+rm ${SPDIR}/mt_error/${sample_name}/${sample_name}_mapped.sam

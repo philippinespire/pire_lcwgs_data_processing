@@ -17,7 +17,7 @@ FQDIR=$2
 
 FQPATTERN=*_clmp.fp2_repr.R1.fq.gz
 
-all_samples=$(ls $SPDIR/mkBAM/$FQPATTERN | sed -e 's/_clmp.fp2_repr.R1\.fq/\.gz/' -e 's/.*\///g')
+all_samples=$(ls $SPDIR/$FQDIR/$FQPATTERN | sed -e 's/_clmp.fp2_repr.R1.fq.gz//' -e 's/.*\///g')
 all_samples=($all_samples)
 
 sample_name=${all_samples[${SLURM_ARRAY_TASK_ID}]}

@@ -3,7 +3,7 @@
 #script to call mitochondrial sequence, based on aligned sequences and a refrence mitochondrial genome
 
 
-SPDIR=$1		#species directory. example= /home/e1garcia/shotgun_PIRE/pire_cssl_data_processing/salarias_fasciatus
+SPDIR=$1		#species directory. example= /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus
 REFLOC=$2	#reference that files were aligned to. example= refGenome/GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna.gz
 MTSEQ=$3		#name of mitochondrial scaffold in reference. example= NC_004412.1
 

@@ -75,7 +75,7 @@ Clumpify worked well so I moved on to the next step
 <p>
 
 ```
-sbatch ../../pire_fq_gz_processing/runFASTP_2_ssl.sbatch fq_fp1_clmp fq_fp1_clmp_fp2
+sbatch ../../pire_fq_gz_processing/runFASTP_2_cssl.sbatch fq_fp1_clmp fq_fp1_clmp_fp2
 ```
 
 Fastp2 [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/fq_fp1_clmp_fp2/2nd_fastp_report.html)
@@ -84,13 +84,13 @@ Potential issues:
   * % duplication -
     * Alb: 2-11%, Contemp: 0.7-28%
   * GC content -
-    * Alb: 37-66%, Contemp: 37-44%
+    * Alb: 36.2-65%, Contemp: 37.3-41.8%
   * passing filter -
-    * Alb: 16-65%, Contemp: 33-72%
+    * Alb: 98.5-99.2%, Contemp: 98.6-99.4%
   * % adapter -
-    * Alb: 0.5-1.3%, Contemp: 0.5-1.7%
+    * Alb: 0.5-1.1%, Contemp: 0.5-1.7%
   * number of reads -
-    * Alb: 7-79 mil, Contemp: 0.6-121 mil
+    * Alb: 34-105 mil, Contemp: 1-173 mil
 ```
 </p>
 </details>

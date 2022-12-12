@@ -100,6 +100,7 @@ Potential issues:
  MultiQC [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/fq_fp1_clmp_fp2_fqscrn_rprd/fqc_rprd_report.html)
 
 ```
+EDIT THIS:
 Potential issues:
   * % duplication -
      Alb: 3-37%, Contemp: 0.9-22.2%

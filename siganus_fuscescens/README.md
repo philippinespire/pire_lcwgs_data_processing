@@ -1,0 +1,200 @@
+# Siganus fuscescens lcWGS 
+### Kevin Labrador
+#
+
+
+##1. Pre-processing
+
+
+This follows the instructions from [pire_fq_gz_processing](https://github.com/philippinespire/pire_fq_gz_processing/blob/main/README.md).
+
+<details>
+	<summary>Housekeeping</summary>
+
+1. Setup Computer 
+	- Computer set-up following C.Bird's [instructions](https://github.com/kllabrador/TAMUCC_GCL_Bioinformatics/blob/main/ComputerSetUp.md)
+  
+2. Go to [pire_fq_gz_processing](https://github.com/philippinespire/pire_fq_gz_processing/blob/main/README.md). Follow instructions.
+
+3. Identify HPC being used: Wahab
+  
+4. Log-in to Wahab
+
+```bash
+ssh hpc-0289@wahab.hpc.odu.edu
+# Refer to private notes for password
+```
+</details>
+
+
+<details>
+	<summary>Set up directory</summary>
+	
+- Go to E.Garcia's directory 
+- All directories have already been prepared beforehand, so there is no need to create a personal subdirectory.
+
+```bash
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens
+```
+
+- Go to the assigned working directories and create the following subdirs:
+  
+```bash
+mkdir fq_fp1 fq_fp1_clmp fq_fp1_clmp_fp2 fq_fp1_clmp_fp2_fqscrn fq_fp1_clmp_fp2_fqscrn_rprd
+```
+</details>
+
+
+<details>
+	<summary>Download data from TAMUCC grid</summary>
+
+> This was already done by E.Garcia.
+
+</details>
+
+
+<details>
+	<summary>Proofread the decode file(s)</summary>
+
+- Review the decode file
+
+```bash
+cd ./fq_raw
+less *SequenceNameDecode.txt
+```
+
+>The naming convention for the decode file's Extraction_ID was not followed. Details are as follows:
+>> two underscores used (e.g., `Sfu-ABai_005_Ex1-1A-lcwgs-1-1`)
+
+> Is the dataset complete?
+>> Yes (n = 8)
+
+> Are there duplicate of libraries?
+>> No	
+
+</details>
+
+
+<details>
+	<summary>Edit the decode file</summary>
+
+> Decode file was renamed (*original_deprecated.txt), and copy was then created (*fixed.txt) and edited as per naming convention.
+>> Second underscore was changed into a dash
+    
+```
+mv Sfu_lcwgs_SequenceNameDecode.txt Sfu_lcwgs_SequenceNameDecode_original_deprecated.txt
+cp *deprecated.txt Sfu_lcwgs_SequenceNameDecode_fixed.txt
+
+sed "s/_Ex/-Ex/" *fixed.txt
+
+# Check if the naming error is fixed. If so,
+sed -i "s/_Ex/-Ex/" *fixed.txt
+```
+</details>
+
+
+<details>
+	<summary>Make a copy for the fq_raw files prior to renaming.</summary>
+
+```
+mkdir /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens
+mkdir /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens/fq_raw
+```
+
+- Permission denied. Cannot access RC directory.
+- Skip this part and move on to renaming.
+</details>
+
+
+<details>
+	<summary>Perform a renaming dry run</summary>
+
+- Use the fixed decode file to rename the raw `fq.gz` files. Use the pre-written bash script for renaming.
+  
+```bash
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens/fq_raw
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/renameFQGZ.bash Sfu_lcwgs_SequenceNameDecode_fixed.txt
+```
+
+> Permission denied
+>> chmod 770 the fixed file I made.
+>> did not work 
+>> I might have write privileges, but not execute (C.Bird)
+>> Wait for permission to be granted. 
+
+> C.Bird did this part
+
+</details>
+
+
+<details>
+	<summary>Rename the files for real</summary>
+
+```bash
+
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens/fq_raw
+
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/renameFQGZ.bash  *fixed.txt rename
+			
+#you will need to say y 2X
+```
+> C.Bird did this part
+
+</details>
+
+
+<details>
+	<summary> Check the quality of the data. Run `fastqc`</summary>
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens>
+sbatch --mail-user=klabrador@islander.tamucc.edu --mail-type=END /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw" "fqc_raw_report" "fq.gz"
+```
+
+> Unable to *.sh file. Request for permission.
+
+> Was able to submit job on second attempt.
+>> jobID: 1223883
+>> jobFinished; Runtime = 00:07:29
+
+### MultiQC output
+
+```
+Potential Issues:
+	* % duplication 
+		* Alb: 16.50 - 28.20%
+	* GC Content 
+		* Alb: 46 - 47%
+	* number of reads 
+		* Alb: 18 - 31.7 M
+```
+> Ask Chris how to detect "potential issues".
+
+</details>
+
+
+<details>
+	<summary>First trim</summary>
+
+- Execute `runFASTP_1st_trim.sbatch`
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens
+
+sbatch --mail-user=klabrador@islander.tamucc.edu --mail-type=END ../../pire_fq_gz_processing/runFASTP_1st_trim.sbatch fq_raw fq_fp1
+
+```
+> sbatch error. 
+>> "This does not look like a batch script."
+>> But... the script looks like a batch script to me.
+>> Forwarded issue to CBird.
+
+> Job submitted on second run
+>> jobID: 1224232
+>> job finished; Runtime: 
+
+
+</details>
+
+
+

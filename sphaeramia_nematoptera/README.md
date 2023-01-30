@@ -95,23 +95,51 @@ Potential issues:
 </p>
 </details>
 
-<details><summary><i>Checked Fastqscreen repaired files</i></summary>
+<details><summary><i>Checked Fastqscreen files</i></summary>
 <p>
- MultiQC [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/fq_fp1_clmp_fp2_fqscrn_rprd/fqc_rprd_report.html)
+ MultiQC [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/fq_fp1_clmp_fp2_fqscrn/fastq_screen_report.html)
 
 ```
-EDIT THIS:
 Potential issues:
-  * % duplication -
-     Alb: 3-37%, Contemp: 0.9-22.2%
-  * GC content -
-    * Alb: 35-64%, Contemp: 37-41%
-  * number of reads -
-    * Alb: 1.7-22.5 mil, Contemp: 0.3-56.4 mil
+  * one hit, one genome, no ID -
+     Alb: %, Contemp: %
+  * no one hit, one genome to any potential contaminators (bacteria, virus, human, etc) -
+    * Alb: %, Contemp: %
 ```
 </p>
 </details>
 
+
+<details><summary><i>Reviewed Fastqscreen repaired files</i></summary>
+<p>
+ MultiQC [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/fq_fp1_clmp_fp2_fqscrn_rprd/fqc_rprd_report.html)
+```
+Potential issues:
+  * % duplication -
+     Alb: 3-30%, Contemp: 0.8-22.4%
+  * GC content -
+    * Alb: 36-61%, Contemp: 37-41%
+  * number of reads -
+    * Alb: 4.5-31.9 mil, Contemp: 0.5-79.0 mil
+```
+</p>
+</details>
+
+<details><summary><i>	Calculated % of reads lost in each step</i></summary>
+<p>
+
+```
+Reads lost::
+  * fastp1 dropped XX% of the reads
+  * XX% of reads were duplicates and were dropped by clumpify
+  * fastp2 dropped xx% of the reads after deduplication
+
+Reads remaining:
+
+Total reads remaining: XX%
+```
+</p>
+</details>
 
 ## 2. Mapped FASTQ to reference genome
 

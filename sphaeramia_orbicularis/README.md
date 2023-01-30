@@ -183,7 +183,7 @@ sbatch --mail-user=klabrador@islander.tamucc.edu --mail-type=END /home/e1garcia/
 ```
 > Job submitted
 >> jobID: 1224222
->> jobFinished; Runtime = 
+>> job finished; runtime not recorded 
 
 ### MultiQC output
 
@@ -213,7 +213,7 @@ sbatch --mail-user=klabrador@islander.tamucc.edu --mail-type=END ../../pire_fq_g
 ```
 > Job submitted
 >> jobID: 1224228
-
+>> job finished; runtime: 00:14:33
 
 
 </details>

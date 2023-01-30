@@ -24,6 +24,19 @@ This follows the instructions from [pire_fq_gz_processing](https://github.com/ph
 ssh hpc-0289@wahab.hpc.odu.edu
 # Refer to private notes for password
 ```
+5. Check if git username and email address are registered on Wahab. If not, follow [instructions](https://linuxize.com/post/how-to-configure-git-username-and-email/)
+
+```
+git config -l
+
+# If not configured properly, do the following:
+
+git config --global user.name "kllabrador"
+git config --global user.email "kllabrador@up.edu.ph"
+```
+
+6. Make sure to `git pull` before each session, and then `add`, `commit`, and `push` after each session.
+
 </details>
 
 
@@ -191,7 +204,7 @@ sbatch --mail-user=klabrador@islander.tamucc.edu --mail-type=END ../../pire_fq_g
 
 > Job submitted on second run
 >> jobID: 1224232
->> job finished; Runtime: 
+>> job finished; Runtime: 00:07:44
 
 
 </details>

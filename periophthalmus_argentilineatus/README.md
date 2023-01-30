@@ -1,4 +1,4 @@
-# 
+# periophthalmus_argentilineatus lcwgs
 
 ---
 
@@ -7,7 +7,20 @@
 ### Steps 1-8
 
 * Run by cbird on 2023-01-28
+* completed gracefully
+* results generally look good given this is a test lane
 
 ### Step 9
 
-* Running, set up by cbird on 2023-01-29
+* Run by cbird on 2023-01-29
+* completed gracefully
+
+### Steps 9b-c
+
+* Run by cbird on 2023-01-30
+* completed gracefully
+
+### Step 10
+
+* Run by cbird on 2023-01-30
+

@@ -3,7 +3,7 @@
 #
 
 
-##1. Pre-processing
+## 1.Pre-processing
 
 
 This follows the instructions from [pire_fq_gz_processing](https://github.com/philippinespire/pire_fq_gz_processing/blob/main/README.md).
@@ -198,16 +198,42 @@ sbatch --mail-user=klabrador@islander.tamucc.edu --mail-type=END ../../pire_fq_g
 
 ```
 > sbatch error. 
+
 >> "This does not look like a batch script."
+
 >> But... the script looks like a batch script to me.
+
 >> Forwarded issue to CBird.
 
 > Job submitted on second run
+
 >> jobID: 1224232
+
 >> job finished; Runtime: 00:07:44
+
+- Check for potential issues
+
+Potential issues:
+	- % duplication
+	- GC content
+	- passing filter
+	- % adapter
+	- number of reads
 
 
 </details>
 
 
+<details>
+        <summary>Remove Duplicates</summary>
 
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens 
+bash ../../pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1 fq_fp1_clmp /scratch/kllabrador 4
+
+# check to be sure the job is running
+watch squeue -u hpc-0289
+
+```
+> Job submitted
+>> jobID: 1224681

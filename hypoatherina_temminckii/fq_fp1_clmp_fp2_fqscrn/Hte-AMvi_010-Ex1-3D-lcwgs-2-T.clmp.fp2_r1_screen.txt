@@ -1,0 +1,16 @@
+#Fastq_screen version: 0.14.0	#Aligner: bowtie2	#Processing all reads in FASTQ files
+Genome	#Reads_processed	#Unmapped	%Unmapped	#One_hit_one_genome	%One_hit_one_genome	#Multiple_hits_one_genome	%Multiple_hits_one_genome	#One_hit_multiple_genomes	%One_hit_multiple_genomes	Multiple_hits_multiple_genomes	%Multiple_hits_multiple_genomes
+Human	6117	5858	95.77	14	0.23	2	0.03	14	0.23	229	3.74
+Ecoli	6117	6117	100.00	0	0.00	0	0.00	0	0.00	0	0.00
+PhiX	6117	6117	100.00	0	0.00	0	0.00	0	0.00	0	0.00
+Contamnts_Adaptrs	6117	6113	99.93	0	0.00	0	0.00	0	0.00	4	0.07
+Vectors	6117	6109	99.87	0	0.00	0	0.00	1	0.02	7	0.11
+Bacteria_24k	6117	5741	93.86	36	0.59	71	1.16	7	0.11	262	4.28
+Protists_1k	6117	5756	94.09	11	0.18	15	0.25	34	0.56	301	4.92
+Viruses	6117	5927	96.90	2	0.03	0	0.00	8	0.13	180	2.94
+Fungi_RefSeq_release	6117	5872	95.99	1	0.02	1	0.02	14	0.23	229	3.74
+Coral	6117	5922	96.81	1	0.02	0	0.00	9	0.15	185	3.02
+Bird	6117	5907	96.56	3	0.05	0	0.00	15	0.25	192	3.14
+Plant	6117	5937	97.06	0	0.00	1	0.02	5	0.08	174	2.84
+
+%Hit_no_genomes: 91.79

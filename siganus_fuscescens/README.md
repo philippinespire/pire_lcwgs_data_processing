@@ -41,7 +41,7 @@ git config --global user.email "kllabrador@up.edu.ph"
 
 
 <details>
-	<summary>Set up directory</summary>
+	<summary>0. Set up directory</summary>
 	
 - Go to E.Garcia's directory 
 - All directories have already been prepared beforehand, so there is no need to create a personal subdirectory.
@@ -59,7 +59,7 @@ mkdir fq_fp1 fq_fp1_clmp fq_fp1_clmp_fp2 fq_fp1_clmp_fp2_fqscrn fq_fp1_clmp_fp2_
 
 
 <details>
-	<summary>Download data from TAMUCC grid</summary>
+	<summary>1. Download data from TAMUCC grid</summary>
 
 > This was already done by E.Garcia.
 
@@ -67,7 +67,7 @@ mkdir fq_fp1 fq_fp1_clmp fq_fp1_clmp_fp2 fq_fp1_clmp_fp2_fqscrn fq_fp1_clmp_fp2_
 
 
 <details>
-	<summary>Proofread the decode file(s)</summary>
+	<summary>2. Proofread the decode file(s)</summary>
 
 - Review the decode file
 
@@ -89,7 +89,7 @@ less *SequenceNameDecode.txt
 
 
 <details>
-	<summary>Edit the decode file</summary>
+	<summary>3. Edit the decode file</summary>
 
 > Decode file was renamed (*original_deprecated.txt), and copy was then created (*fixed.txt) and edited as per naming convention.
 >> Second underscore was changed into a dash
@@ -107,7 +107,7 @@ sed -i "s/_Ex/-Ex/" *fixed.txt
 
 
 <details>
-	<summary>Make a copy for the fq_raw files prior to renaming.</summary>
+	<summary>4. Make a copy for the fq_raw files prior to renaming.</summary>
 
 ```
 mkdir /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens
@@ -120,7 +120,7 @@ mkdir /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/siga
 
 
 <details>
-	<summary>Perform a renaming dry run</summary>
+	<summary>5. Perform a renaming dry run</summary>
 
 - Use the fixed decode file to rename the raw `fq.gz` files. Use the pre-written bash script for renaming.
   
@@ -141,7 +141,7 @@ bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/renameFQGZ.bash Sfu_lcwgs
 
 
 <details>
-	<summary>Rename the files for real</summary>
+	<summary>6. Rename the files for real</summary>
 
 ```bash
 
@@ -157,16 +157,16 @@ bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/renameFQGZ.bash  *fixed.t
 
 
 <details>
-	<summary> Check the quality of the data. Run `fastqc`</summary>
+	<summary>7. Check the quality of the data. Run `fastqc`</summary>
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens>
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens
 sbatch --mail-user=klabrador@islander.tamucc.edu --mail-type=END /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw" "fqc_raw_report" "fq.gz"
 ```
 
 > Unable to *.sh file. Request for permission.
 
-> Was able to submit job on second attempt.
+> Was able to submit job on second attempt on 2023-01-29
 >> jobID: 1223883
 >> jobFinished; Runtime = 00:07:29
 
@@ -187,7 +187,7 @@ Potential Issues:
 
 
 <details>
-	<summary>First trim</summary>
+	<summary>8. First trim</summary>
 
 - Execute `runFASTP_1st_trim.sbatch`
 
@@ -198,42 +198,46 @@ sbatch --mail-user=klabrador@islander.tamucc.edu --mail-type=END ../../pire_fq_g
 
 ```
 > sbatch error. 
-
->> "This does not look like a batch script."
-
->> But... the script looks like a batch script to me.
-
+>> "This does not look like a batch script."\
+>> But... the script looks like a batch script to me.\
 >> Forwarded issue to CBird.
 
-> Job submitted on second run
-
->> jobID: 1224232
-
+> Job submitted on second run on 2023-01-29
+>> jobID: 1224232\
 >> job finished; Runtime: 00:07:44
 
 - Check for potential issues
 
 Potential issues:
-	- % duplication
-	- GC content
-	- passing filter
-	- % adapter
-	- number of reads
-
+	* % duplication
+		* Alb: 11.30 - 16.60%
+	* GC content
+		* Alb: 40.00 - 45.00%
+	* passing filter
+		* Alb: 98.40 - 99.10%
+	* % adapter
+		* Alb: 66.60 - 93.60%
+	* number of reads
+		* Alb: 35.60 - 62.50 M
 
 </details>
 
-
 <details>
-        <summary>Remove Duplicates</summary>
+        <summary>9a. Remove Duplicates</summary>
 
 ```
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens 
-bash ../../pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1 fq_fp1_clmp /scratch/kllabrador 4
+bash ../../pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1 fq_fp1_clmp /scratch/hpc-0289 8
 
 # check to be sure the job is running
 watch squeue -u hpc-0289
 
 ```
-> Job submitted
+> Job submitted on 2023-01-29
 >> jobID: 1224681
+
+> Job cancelled on 2023-02-01
+>> Something is wrong. There are no files in the destination dir. - C.Bird
+
+> Job resubmitted on 2023-02-01
+>> jobID: 1229386

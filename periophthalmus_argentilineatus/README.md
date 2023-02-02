@@ -10,7 +10,7 @@
 * completed gracefully
 * results generally look good given this is a test lane
 
-### Step 9
+### Step 9 deduplicate
 
 * Run by cbird on 2023-01-29
 * completed gracefully
@@ -20,7 +20,12 @@
 * Run by cbird on 2023-01-30
 * completed gracefully
 
-### Step 10
+### Step 10-11 fp2 & decontam
 
 * Run by cbird on 2023-01-30
+
+### Step 12  Repair fq files
+
+* Run by cbird on 2023-01-31
+
 

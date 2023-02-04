@@ -308,6 +308,7 @@ sbatch --mail-user=klabrador@islander.tamucc.edu --mail-type=END /home/e1garcia/
 
 <details>
         <summary>10. Second trim. Execute `runFASTP_2.sbatch`</summary>
+
 ```
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_orbicularis
 

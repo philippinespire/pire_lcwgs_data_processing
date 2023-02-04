@@ -246,7 +246,7 @@ watch squeue -u hpc-0289
 </details>
 
 <details>
-        <summary>9b. Check duplicate removal success<summary>
+        <summary>9b. Check duplicate removal success</summary>
 
 ```
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens
@@ -264,7 +264,7 @@ exit #to relinquish the interactive node
 
 
 <details>
-        <summary>9c. Generate metadata on deduplicated FASTQ files>
+        <summary>9c. Generate metadata on deduplicated FASTQ files</summary>
 
 ```
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens

@@ -240,4 +240,75 @@ watch squeue -u hpc-0289
 >> Something is wrong. There are no files in the destination dir. - C.Bird
 
 > Job resubmitted on 2023-02-01
->> jobID: 1229386
+>> jobID: 1229386\
+>> job finished; runtime: not recorded
+
+</details>
+
+<details>
+        <summary>9b. Check duplicate removal success<summary>
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens
+
+salloc #because R is interactive and takes a decent amount of memory, we want to grab an interactive node to run this
+enable_lmod
+module load container_env mapdamage2
+
+crun R < /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/checkClumpify_EG.R --no-save
+exit #to relinquish the interactive node
+```
+> Clumpify successfully worked on all samples.
+
+</details>
+
+
+<details>
+        <summary>9c. Generate metadata on deduplicated FASTQ files>
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1_clmp" "fqc_clmp_report"  "fq.gz"
+
+# check to be sure the job is running
+watch squeue -u hpc-0289
+```
+
+> Job submitted on 2023-02-02
+>> jobID: 1233901
+>> job finished; runtime: not recorded
+
+</details>
+
+
+<details>
+        <summary>10. Second trim</summary>
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens
+
+sbatch ../../pire_fq_gz_processing/runFASTP_2_cssl.sbatch fq_fp1_clmp fq_fp1_clmp_fp2
+```
+
+> Job submitted on 2023-02-02
+>> jobID: 1233939\
+>> job finished; runtime: not recorded 
+
+Note to self: start recording runtime as well.
+
+
+</details>
+
+
+<details>
+        <summary>11. Decontaminate files</summary>
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens
+bash ../../pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2 fq_fp1_clmp_fp2_fqscrn 20
+
+watch squeue -u hpc-0289
+```
+
+> Job submittede on 2023-02-03 @ 21:50
+>> jobID: 1237860

@@ -1,11 +1,17 @@
 Looking to launch executable "/opt/conda/bin/bwa-meme_mode3.avx512bw", simd = _mode3.avx512bw
 Launching executable "/opt/conda/bin/bwa-meme_mode3.avx512bw"
-[M::bwa_idx_build_Learned_index] Building Index for bwa-meme...
-Warning: we recommend to use more number of threads(ex. 8, 16 or 32) to build index quickly.
-[Build-Index-MEME] pac2nt function...
-[Build-Index-MEME] ref seq len = 32992
-[Build-Index-MEME] padded ref len = 33000
-[Build-Index-MEME] Building Suffix array with sais library
-[Build-Index-MEME] Building Suffix array with sais library took 0.00 sec
-[Build-Index-MEME] Writing pos_packed file and suffixarray file took 0.02 sec
-Total time taken: 0.0534
+[bwa_index] Pack FASTA... 0.00 sec
+* Entering FMI_search
+init ticks = 10102714
+ref seq len = 32992
+binary seq ticks = 1388126
+build suffix-array ticks = 6524268
+ref_seq_len = 32992
+count = 0, 8838, 16496, 24154, 32992
+BWT[19729] = 4
+CP_SHIFT = 6, CP_MASK = 63
+sizeof CP_OCC = 64
+pos: 4125, ref_seq_len__: 4124
+max_occ_ind = 515
+build fm-index ticks = 16050086
+Total time taken: 0.0294

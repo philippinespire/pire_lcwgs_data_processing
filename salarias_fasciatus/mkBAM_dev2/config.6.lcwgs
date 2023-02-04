@@ -42,7 +42,7 @@ Make sure the cutoffs above match the reference*fasta!
 ------------------------------------------------------------------------------------------------------------------
 
 ----------fltrBAM: Settings for filtering mapping alignments in the *bam files---------------
-20		samtools view -q 		Mapping_Min_Quality (integer)    									Remove reads with mapping qual less than this value
+30		samtools view -q 		Mapping_Min_Quality (integer)    									Remove reads with mapping qual less than this value
 yes		samtools view -F 4 		Remove_unmapped_reads? (yes,no)   									Since the reads aren't mapped, we generally don't need to filter them
 no		samtools view -F 8 		Remove_read_pair_if_one_is_unmapped? (yes,no)    					If either read in a pair does not map, then the other is also removed
 yes		samtools view -F 256 	Remove_secondary_alignments? (yes,no)     							Secondary alignments are reads that also map to other contigs in the reference genome

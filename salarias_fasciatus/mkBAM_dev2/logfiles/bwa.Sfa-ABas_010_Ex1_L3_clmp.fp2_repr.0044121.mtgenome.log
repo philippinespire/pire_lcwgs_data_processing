@@ -37,19 +37,19 @@ Executing in AVX512 mode!!
 [0000] read_chunk: 400000000, work_chunk_size: 0, nseq: 0
 [0000] Computation ends..
 No. of OMP threads: 40
-Processor is running @2394.675706 MHz
+Processor is running @2394.664118 MHz
 Runtime profile:
 
-	Time taken for main_mem function: 4.00 sec
+	Time taken for main_mem function: 4.18 sec
 
 	IO times (sec) :
-	Reading IO time (reads) avg: 0.00, (0.00, 0.00)
+	Reading IO time (reads) avg: 0.03, (0.03, 0.03)
 	Writing IO time (SAM) avg: 0.00, (0.00, 0.00)
 	Reading IO time (Reference Genome) avg: 0.00, (0.00, 0.00)
 	Index read time avg: 0.00, (0.00, 0.00)
 
 	Overall time (sec) (Excluding Index reading time):
-	PROCESS() (Total compute time + (read + SAM) IO time) : 4.00
+	PROCESS() (Total compute time + (read + SAM) IO time) : 4.18
 	MEM_PROCESS_SEQ() (Total compute time (Kernel + SAM)), avg: 0.00, (0.00, 0.00)
 
 	 SAM Processing time (sec):

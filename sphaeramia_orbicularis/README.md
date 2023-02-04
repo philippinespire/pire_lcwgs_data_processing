@@ -368,43 +368,68 @@ mv *.out logs
 > To rerun just those 4 libraries that got stuck, I would make a new dir: fq_fp1_clmp_fp2_stragglers. Then, use mv to move the 4 libraries that didn't complete into that new dir. Then, run fqscrn again with the new stragglers dir and the same fq_fp1_clmp_fqscrn destination dir
 
 ```
-# How to identify the stuck libraries?
-## Go to fq_fp1_clmp_fp2, then ls -lh.
-## Count from the top down to the 19th lib.
-## Then, take a look in fq_fp1_clmp_fp2_fqscrn.
-## Confirm that the files for the lib are either missing or really small in size compared to the previous libs.
+mkdir fq_fp1_clmp_fp2_stragglers
+```
 
-# List of stragglers
-## Sor-ABur_007-Ex1-12G-lcwgs-1-T
-## Sor-ABur_010-Ex1-3H-lcwgs-1-T
-## Sor-ABur_011-Ex1-3H-lcwgs-1-T
-## Sor-ABur_012-Ex1-3H-lcwgs-1-T
+> How to identify the stuck libraries?
+>> Go to fq_fp1_clmp_fp2, then ls -lh.\
+>> Count from the top down to the 19th lib.\
+>> Then, take a look in fq_fp1_clmp_fp2_fqscrn.\
+>> Confirm that the files for the lib are either missing or really small in size compared to the previous libs.
+```
+
+> Created a bash script to move selected files into the *stragglers directory.
+
+
 ```
 #!bin/bash
 
-sequence_dir="/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaer$
-#seqID=("SoC0301809F" "SoC0301809G" "SoC0301809H") # This only records G an$
-seqID=("SoC0301809")
-outfile="delete_seq.out"
+# Used in: Step 11. Decontaminate
+## The jobs were stuck and there was no writing in the destination directory for some time now.
+## Stragglers were identified by looking at both the indir ("../fq_fp1_clmp_fp2") and outdir ("../fq_fp1_clmp_fp2_fqscrn").
+## These are the missing files:
 
-for file in $(find $sequence_dir -name "*.fq.gz"); do
-        for seqID in "${seqID[@]}"; do
-                if [[ $file =~ $seqID ]]; then
-                        echo "Deleting file: $file" >> $outfile
-                        rm -i $file
-                        break
-                fi
+### Sor-ABur_007-Ex1-12G-lcwgs-1-T.clmp.fp2_r2
+### Sor-ABur_010-Ex1-3H-lcwgs-1-T.clmp.fp2_r2
+### Sor-ABur_011-Ex1-4H-lcwgs-1-T.clmp.fp2_r1
+### Sor-ABur_011-Ex1-4H-lcwgs-1-T.clmp.fp2_r2
+### Sor-ABur_012-Ex1-5H-lcwgs-1-T.clmp.fp2_r2
+
+indir="/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_orbicularis/fq_fp1_clmp_fp2"
+outdir="/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_orbicularis/fq_fp1_clmp_fp2_stragglers"
+id=("ABur_007" "ABur_010" "ABur_011" "ABur_012")
+
+for id in "${id[@]}"; do
+        files=$(find $indir -name "*$id*clmp.fp2_r*.fq.gz")
+
+        for file in "${files[@]}"; do
+                mv $file $outdir
         done
+
+        echo "${files[@]}" >> $indir/list_of_stragglers.txt
 done
-
 ```
 
+Rerun FQSCRN.
 ```
-mkdir fq_fp1_clmp_fp2_stragglers
-
-mv ...
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_orbicularis
 bash ../../pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2_stragglers fq_fp1_clmp_fp2_fqscrn 20
+
+# check to be sure the job is running
+watch squeue -u hpc-0289
+
 ```
+> Job submitted on 2023-02-02
+>> jobID: 1233935/36 \
+>> All finished except for Sor-ABur_010-Ex1-3H-lcwgs-1-T.clmp.fp2_r1\
+>> Cancel job and redo run for the remaining straggler.\
+>> Job cancelled on 2023-02-03
 
+Redo subdir creation and rerun FQSCRN on second set of stragglers.
 
-
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_orbicularis
+bash ../../pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2_stragglers2 fq_fp1_clmp_fp2_fqscrn 20
+```
+> Job submitted on 2023-02-03
+>> jobID: 1237853/54 \

@@ -319,6 +319,7 @@ sbatch --mail-user=klabrador@islander.tamucc.edu --mail-type=END ../../pire_fq_g
 >> jobID: 1225355\
 >> job finished; runtime: 00:13:41
 
+
 ### MultiQC Report
 
 Potential issues:
@@ -331,8 +332,8 @@ Potential issues:
 		* Alb: 97.70 - 99.60%, Contemp: 97.60 - 99.40%
 	* % adapter -
 		* Alb: 0.30 - 2.00%, Contemp: 0.20 - 1.60%
-	- number of reads 
-		- Alb: 0.079 - 9.76 M, Contemp: 0.675 - 12.31 M
+	* number of reads 
+		* Alb: 0.079 - 9.76 M, Contemp: 0.675 - 12.31 M
 
 </details>
 
@@ -503,6 +504,16 @@ sbatch ../../pire_fq_gz_processing/runMULTIQC.sbatch fq_fp1_clmp_fp2_fqscrn fast
 >> jobID: not recorded 
 >> jobFinished on 2023-02-05 @ ~ 00:10
 
+### MultiQC Report
+
+Potential issues:
+
+        * one hit, one genome, no ID -
+                * Alb: , Contemp: 
+        * no one hit, one genome to any potential contaminators (bacteria, virus, human, etc) -
+                * Alb: , Contemp: 
+
+
 </details>
 
 
@@ -532,6 +543,17 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_f
 >> jobID: 1238236 \
 >> jobFinished on 2023-02-05 @ 00:22
 
+
+### MultiQC Report
+
+Potential issues:
+
+	* % duplication -
+		* Alb: 0.10 - 5.00%, Contemp: 0.80 - 3.30%
+	* GC content -
+		* Alb: 34 - 54%, Contemp: 37 - 41%
+	* number of reads -
+		* Alb: 0 - 4.4 M, Contemp: 0.3 - 5.5 M
 
 </details>
 

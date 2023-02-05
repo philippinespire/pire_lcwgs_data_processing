@@ -327,8 +327,16 @@ bash ../../pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2_stragglers fq_
 
 ```
 
-> Job submitted91/92  
->> jobID: 1238192
+> Job submitted on 2023-02-05 @ ~ 00:00  
+>> jobID: 1238191/92 \
+>> job still struggling... it has been 15h now and there is no progress... \
+>> Third time's the charm (?) \
+>> job cancelled on 2023-02-05 @ 10:53
+
+> Job resubmitted on 2023-02-25 @ 10:54 
+>> jobID: 1239151/52
+
+
 
 
 Check if all files were successfully completed

@@ -434,3 +434,126 @@ bash ../../pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2_stragglers2 fq
 ```
 > Job submitted on 2023-02-03
 >> jobID: 1237853/54 \
+>> job finished on 2023-02-03 @ 23:24
+
+I found another straggler: Sor-ACan_022-Ex1-10B-lcwgs-1-T.clmp.fp2_r1
+Process the straggler.
+
+> To organize the stragglers, I decided to create subdirectories within the *straggler directory.
+
+
+```
+# Organize stragglers subirectory.
+mkdir /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_orbicularis/fq_fp1_clmp_fp2_stragglers/batch02
+mv /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_orbicularis/fq_fp1_clmp_fp2_stragglers2/* /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_orbicularis/fq_fp1_clmp_fp2_stragglers/batch02
+
+# Move Sor-ACan_022-Ex1-10B stragglers to batch03 directory
+mkdir /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_orbicularis/fq_fp1_clmp_fp2_stragglers/batch03
+mv /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_orbicularis/fq_fp1_clmp_fp2/Sor-ACan_022-Ex1-10B-lcwgs-1-T.clmp.fp2_r*.fq.gz /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_orbicularis/fq_fp1_clmp_fp2_stragglers/batch03
+
+# Rerun FQSCRN on batch03 stragglers.
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_orbicularis
+bash ../../pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2_stragglers/batch03 fq_fp1_clmp_fp2_fqscrn 20
+```
+
+> Job submitted on 2023-02-04 @ 20:12
+>> jobID: 1238185/86
+>> job finished on 2023-02-04 @ 21:52
+
+Check if all files were successfully completed.
+
+```
+ls fq_fp1_clmp_fp2_fqscrn/*tagged.fastq.gz | wc -l
+# 442
+
+ls fq_fp1_clmp_fp2_fqscrn/*tagged_filter.fastq.gz | wc -l 
+# 442
+
+ls fq_fp1_clmp_fp2_fqscrn/*screen.txt | wc -l
+# 442
+
+ls fq_fp1_clmp_fp2_fqscrn/*screen.png | wc -l
+# 442
+
+ls fq_fp1_clmp_fp2_fqscrn/*screen.html | wc -l
+# 442
+
+```
+
+Check out files for errors
+
+```
+grep 'error' slurm-fqscrn.*out
+# Enumerates all the cancelled job: 1225383, 1233935
+
+grep 'No reads in' slurm-fqscrn.*out
+# None returned
+
+```
+
+Run MULTIQC for the *fqscrn output.
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_orbicularis
+
+sbatch ../../pire_fq_gz_processing/runMULTIQC.sbatch fq_fp1_clmp_fp2_fqscrn fastq_screen_report
+```
+
+> Job submitted on 2023-02-04 @ 23:52
+>> jobID: not recorded 
+>> jobFinished on 2023-02-05 @ ~ 00:10
+
+</details>
+
+
+<details>
+        <summary>12. Repair FASTQ Files messed up by FASTQ_SCREEN</summary>
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_orbicularis
+
+sbatch ../../pire_fq_gz_processing/runREPAIR.sbatch fq_fp1_clmp_fp2_fqscrn fq_fp1_clmp_fp2_fqscrn_rprd 40
+
+```
+
+> Job submitted on 2023-02-04 @ 23:57
+>> jobID: 1238233 \
+>> jobFinished on 2023-02-05 @ 00:08
+
+Run Multi_FASTQ.sh on output files.
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_orbicularis
+
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_fp1_clmp_fp2_fqscrn_rprd" "fqc_rprd_report" "fq.gz"
+```
+
+> Job submitted on 2023-02-05 @ 00:10
+>> jobID: 1238236 \
+>> jobFinished on 2023-02-05 @ 00:22
+
+
+</details>
+
+
+<details>
+        <summary>13. Calculate the percent of reads lost in each step</summary>
+
+This is now accomplished in another way using the process_sequencing_metadata repo. Move onto the next step.
+
+</details>
+
+
+<details>
+        <summary>14. Clean Up</summary>
+
+Move `*.out` files into `logs` directory
+
+```
+cd 
+mv *out logs/
+```
+
+
+
+

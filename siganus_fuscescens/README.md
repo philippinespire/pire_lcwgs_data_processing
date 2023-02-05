@@ -310,5 +310,42 @@ bash ../../pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2 fq_fp1_clmp_fp
 watch squeue -u hpc-0289
 ```
 
-> Job submittede on 2023-02-03 @ 21:50
+> Job submitted on 2023-02-03 @ 21:50
 >> jobID: 1237860
+>> straggler identified: Sfu-ABai_005-Ex1-1A-lcwgs-1-1.clmp.fp2_r1
+
+I should ask Chris why I get a lot of stragglers on my runs...
+
+```
+# Create a straggler subdir, then move Sfu-ABai_005*.fq.gz samples to the subdir.
+mkdir /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens/fq_fp1_clmp_fp2_stragglers
+mv /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens/fq_fp1_clmp_fp2/Sfu-ABai_005*.fq.gz /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens/fq_fp1_clmp_fp2_stragglers
+
+# Rerun fastqscrn
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens
+bash ../../pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2_stragglers fq_fp1_clmp_fp2_fqscrn 20 
+
+```
+
+> Job submitted91/92  
+>> jobID: 1238192
+
+
+Check if all files were successfully completed
+
+```
+ls fq_fp1_clmp_fp2_fqscrn/*tagged.fastq.gz | wc -l
+
+
+ls fq_fp1_clmp_fp2_fqscrn/*tagged_filter.fastq.gz | wc -l 
+
+
+ls fq_fp1_clmp_fp2_fqscrn/*screen.txt | wc -l
+
+
+ls fq_fp1_clmp_fp2_fqscrn/*screen.png | wc -l
+
+
+ls fq_fp1_clmp_fp2_fqscrn/*screen.html | wc -l
+
+```

@@ -368,6 +368,7 @@ mv *.out logs
 
 > To rerun just those 4 libraries that got stuck, I would make a new dir: fq_fp1_clmp_fp2_stragglers. Then, use mv to move the 4 libraries that didn't complete into that new dir. Then, run fqscrn again with the new stragglers dir and the same fq_fp1_clmp_fqscrn destination dir
 
+
 ```
 mkdir fq_fp1_clmp_fp2_stragglers
 ```
@@ -377,10 +378,8 @@ mkdir fq_fp1_clmp_fp2_stragglers
 >> Count from the top down to the 19th lib.\
 >> Then, take a look in fq_fp1_clmp_fp2_fqscrn.\
 >> Confirm that the files for the lib are either missing or really small in size compared to the previous libs.
-```
 
 > Created a bash script to move selected files into the *stragglers directory.
-
 
 ```
 #!bin/bash
@@ -412,6 +411,7 @@ done
 ```
 
 Rerun FQSCRN.
+
 ```
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_orbicularis
 bash ../../pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2_stragglers fq_fp1_clmp_fp2_fqscrn 20

@@ -91,7 +91,7 @@ sbatch ./runMULTIQC.sbatch "fq_raw" "fqc_raw_report" "fq.gz"
 ```
 
 > Job submitted on 2023-02-07 @ 11:23
->> jobID: 1240249
+>> jobID: 1240249 \
 >> job finished successfully.
 
 Trying cbird's solution:
@@ -101,7 +101,7 @@ Trying cbird's solution:
 sbatch ./runMULTIQC.sbatch "fq_raw" "fqc_raw_report" "fq.gz"
 ```
 > Job submitted on 2023-02-07 @ 11:36
->> jobID: 1240269 
+>> jobID: 1240269 \
 >> job finished successfully.
 
 > Script modification worked. I am now comfortable in changing the script at its original location.

@@ -105,5 +105,35 @@ sbatch ./runMULTIQC.sbatch "fq_raw" "fqc_raw_report" "fq.gz"
 >> job finished successfully.
 
 > Script modification worked. I am now comfortable in changing the script at its original location.
->> Cannot modify script at `pire_fq_gz_processing/` directory due to permission issues.
+>> Cannot modify script at `pire_fq_gz_processing/` directory due to permission issues. \
+>> cbird modified the script.
+
+### Rerun MultiQC
+* Run by klabrador on 2023-02-07
+
+``` 
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/hypoatherina_temminckii>
+
+# fq_fp1
+sbatch ../../pire_fq_gz_processing/runMULTIQC.sbatch "fq_fp1" "1st_fastp_report" "fq.gz"
+## jobID: 1240320
+
+# fq_fp1_clmp
+sbatch ../../pire_fq_gz_processing/runMULTIQC.sbatch "fq_fp1_clmp" "fqc_clmp_report" "fq.gz"
+## jobID: 1240321
+
+# fq_fp1_clmp_fp2
+sbatch ../../pire_fq_gz_processing/runMULTIQC.sbatch "fq_fp1_clmp_fp2" "2nd_fastp_report" "fq.gz"
+## jobID: 1240322
+
+# fq_fp1_clmp_fp2_fqscrn
+sbatch ../../pire_fq_gz_processing/runMULTIQC.sbatch "fq_fp1_clmp_fp2_fqscrn" "fastq_screen_report" "fq.gz"
+## jobID: 1240323
+
+# fq_fp1_clmp_fp2_fqscrn_rprd
+sbatch ../../pire_fq_gz_processing/runMULTIQC.sbatch "fq_fp1_clmp_fp2_fqscrn_rprd" "fqc_rprd_report" "fq.gz"
+## jobID: 1240324
+
+## All jobs finished successfully.
+```
 

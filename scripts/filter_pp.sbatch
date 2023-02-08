@@ -25,12 +25,14 @@ echo ${sample_name}
 
 mkdir -p $OUTDIR
 
-samtools view -f 0x2 -b ${INDIR}/${sample_name}_clmp.fp2_repr_fltrd.bam  > ${OUTDIR}/${sample_name}.filt.bam
+samtools sort -n -o ${OUTDIR}/${sample_name}.sort.bam ${INDIR}/${sample_name}_clmp.fp2_repr_fltrd.bam
+samtools view -f 0x2 -b ${INDIR}/${sample_name}.sort.bam  > ${OUTDIR}/${sample_name}.filt.bam
 samtools fixmate -m ${OUTDIR}/${sample_name}.filt.bam ${OUTDIR}/${sample_name}.fixmate.bam
 samtools sort -o ${OUTDIR}/${sample_name}.positionsort.bam ${OUTDIR}/${sample_name}.fixmate.bam
 samtools markdup -r ${OUTDIR}/${sample_name}.positionsort.bam ${OUTDIR}/${sample_name}.rmdup.bam
 samtools index ${OUTDIR}/${sample_name}.rmdup.bam
 
+rm ${INDIR}/${sample_name}.sort.bam
 rm ${OUTDIR}/${sample_name}.filt.bam
 rm ${OUTDIR}/${sample_name}.fixmate.bam
 rm ${OUTDIR}/${sample_name}.positionsort.bam

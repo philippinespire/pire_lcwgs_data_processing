@@ -25,12 +25,12 @@ echo ${sample_name}
 
 mkdir -p $OUTDIR
 
-samtools view -f 0x2 -b ${INDIR}/${sample_name}_clmp.fp2_repr_fltrd.bam  > ${OUDIR}/${sample_name}.filt.bam
-samtools fixmate -m ${OUDIR}/${sample_name}.filt.bam ${OUDIR}/${sample_name}.fixmate.bam
-samtools sort -o ${OUDIR}/${sample_name}.positionsort.bam ${OUDIR}/${sample_name}.fixmate.bam
-samtools markdup -r ${OUDIR}/${sample_name}.positionsort.bam ${OUDIR}/${sample_name}.rmdup.bam
-samtools index ${OUDIR}/${sample_name}.rmdup.bam
+samtools view -f 0x2 -b ${INDIR}/${sample_name}_clmp.fp2_repr_fltrd.bam  > ${OUTDIR}/${sample_name}.filt.bam
+samtools fixmate -m ${OUTDIR}/${sample_name}.filt.bam ${OUTDIR}/${sample_name}.fixmate.bam
+samtools sort -o ${OUTDIR}/${sample_name}.positionsort.bam ${OUTDIR}/${sample_name}.fixmate.bam
+samtools markdup -r ${OUTDIR}/${sample_name}.positionsort.bam ${OUTDIR}/${sample_name}.rmdup.bam
+samtools index ${OUTDIR}/${sample_name}.rmdup.bam
 
-rm ${OUDIR}/${sample_name}.filt.bam
-rm ${OUDIR}/${sample_name}.fixmate.bam
-rm ${OUDIR}/${sample_name}.positionsort.bam
+rm ${OUTDIR}/${sample_name}.filt.bam
+rm ${OUTDIR}/${sample_name}.fixmate.bam
+rm ${OUTDIR}/${sample_name}.positionsort.bam

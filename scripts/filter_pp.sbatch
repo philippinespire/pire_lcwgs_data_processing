@@ -13,6 +13,8 @@ INDIR=$2
 OUTDIR=$3
 THREADS=40
 
+cd $SPDIR
+
 BAMPATTERN=*_clmp.fp2_repr_fltrd.bam
 
 all_samples=$(ls ./mkBAM/$BAMPATTERN | sed -e 's/_clmp.fp2_repr_fltrd\.bam//' -e 's/.*\///g')
@@ -21,16 +23,14 @@ all_samples=($all_samples)
 sample_name=${all_samples[${SLURM_ARRAY_TASK_ID}]}
 echo ${sample_name}
 
-cd $SPDIR
-
 mkdir -p $OUTDIR
 
-samtools view -f 0x2 -b ${INDIR}/mkBAM/${sample_name}_clmp.fp2_repr_fltrd.bam  > ${OUDIR}/mkBAM/${sample_name}.filt.bam
-samtools fixmate -m ${OUDIR}/mkBAM/${sample_name}.filt.bam ${OUDIR}/mkBAM/${sample_name}.fixmate.bam
-samtools sort -o ${OUDIR}/mkBAM/${sample_name}.positionsort.bam ${OUDIR}/mkBAM/${sample_name}.fixmate.bam
-samtools markdup -r ${OUDIR}/mkBAM/${sample_name}.positionsort.bam ${OUDIR}/mkBAM/${sample_name}.rmdup.bam
-samtools index ${OUDIR}/mkBAM/${sample_name}.rmdup.bam
+samtools view -f 0x2 -b ${INDIR}/${sample_name}_clmp.fp2_repr_fltrd.bam  > ${OUDIR}/${sample_name}.filt.bam
+samtools fixmate -m ${OUDIR}/${sample_name}.filt.bam ${OUDIR}/${sample_name}.fixmate.bam
+samtools sort -o ${OUDIR}/${sample_name}.positionsort.bam ${OUDIR}/${sample_name}.fixmate.bam
+samtools markdup -r ${OUDIR}/${sample_name}.positionsort.bam ${OUDIR}/${sample_name}.rmdup.bam
+samtools index ${OUDIR}/${sample_name}.rmdup.bam
 
-rm ${OUDIR}/mkBAM/${sample_name}.filt.bam
-rm ${OUDIR}/mkBAM/${sample_name}.fixmate.bam
-rm ${OUDIR}/mkBAM/${sample_name}.positionsort.bam
+rm ${OUDIR}/${sample_name}.filt.bam
+rm ${OUDIR}/${sample_name}.fixmate.bam
+rm ${OUDIR}/${sample_name}.positionsort.bam

@@ -14,4 +14,4 @@ SCRIPTPATH=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 all_samples=$(ls $SPDIR/fltrBAM_pp/$BAMPATTERN | sed -e 's/\.rmdup\.bam//' -e 's/.*\///g')
 all_samples=($all_samples)
 
-sbatch --array=0-$((${#all_samples[@]}-1))%${nodes} $SCRIPTPATH/atlas_pmd_array.sbatch ${SPDIR} ${REFLOC}
+sbatch --array=0-$((${#all_samples[@]}-1))%${nodes} $SCRIPTPATH/atlas_pmd_flt_array.sbatch ${SPDIR} ${REFLOC}

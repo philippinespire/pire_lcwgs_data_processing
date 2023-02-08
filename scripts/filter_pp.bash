@@ -7,8 +7,9 @@
 #OUTDIR=./fltrBAM_pp
 #THREADS=40
 
-INDIR=$1
-OUTDIR=$2
+SPDIR=$1
+INDIR=$2
+OUTDIR=$3
 THREADS=40
 
 BAMPATTERN=*_clmp.fp2_repr_fltrd.bam
@@ -18,4 +19,4 @@ SCRIPTPATH=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 all_samples=$(ls ./mkBAM/$BAMPATTERN | sed -e 's/_clmp.fp2_repr_fltrd\.bam//' -e 's/.*\///g')
 all_samples=($all_samples)
 
-sbatch --array=0-$((${#all_samples[@]}-1))%${nodes} $SCRIPTPATH/filter_pp.sbatch ${INDIR} ${OUTDIR} ${THREADS}
+sbatch --array=0-$((${#all_samples[@]}-1))%${nodes} $SCRIPTPATH/filter_pp.sbatch ${SPDIR} ${INDIR} ${OUTDIR} ${THREADS}

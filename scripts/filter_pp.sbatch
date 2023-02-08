@@ -8,8 +8,9 @@ enable_lmod
 module load samtools
 export SINGULARITY_BIND=/home/e1garcia
 
-INDIR=$1
-OUTDIR=$2
+SPDIR=$1
+INDIR=$2
+OUTDIR=$3
 THREADS=40
 
 BAMPATTERN=*_clmp.fp2_repr_fltrd.bam
@@ -19,6 +20,8 @@ all_samples=($all_samples)
 
 sample_name=${all_samples[${SLURM_ARRAY_TASK_ID}]}
 echo ${sample_name}
+
+cd $SPDIR
 
 mkdir -p $OUTDIR
 

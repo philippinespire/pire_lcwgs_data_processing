@@ -32,7 +32,7 @@ samtools sort -o ${OUTDIR}/${sample_name}.positionsort.bam ${OUTDIR}/${sample_na
 samtools markdup -r ${OUTDIR}/${sample_name}.positionsort.bam ${OUTDIR}/${sample_name}.rmdup.bam
 samtools index ${OUTDIR}/${sample_name}.rmdup.bam
 
-rm ${INDIR}/${sample_name}.sort.bam
+rm ${OUTDIR}/${sample_name}.sort.bam
 rm ${OUTDIR}/${sample_name}.filt.bam
 rm ${OUTDIR}/${sample_name}.fixmate.bam
 rm ${OUTDIR}/${sample_name}.positionsort.bam

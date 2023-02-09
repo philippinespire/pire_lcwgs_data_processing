@@ -333,9 +333,10 @@ bash ../../pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2_stragglers fq_
 >> Third time's the charm (?) \
 >> job cancelled on 2023-02-05 @ 10:53
 
-> Job resubmitted on 2023-02-25 @ 10:54 
->> jobID: 1239151/52
-
+> Job resubmitted on 2023-02-05 @ 10:54 
+>> jobID: 1239151/52 \
+>> job has been running for 3 days now. \
+>> job cancelled on 2023-02-05 @ 20:07
 
 
 
@@ -343,17 +344,21 @@ Check if all files were successfully completed
 
 ```
 ls fq_fp1_clmp_fp2_fqscrn/*tagged.fastq.gz | wc -l
-
+# 16
 
 ls fq_fp1_clmp_fp2_fqscrn/*tagged_filter.fastq.gz | wc -l 
-
+# 16
 
 ls fq_fp1_clmp_fp2_fqscrn/*screen.txt | wc -l
-
+# 16
 
 ls fq_fp1_clmp_fp2_fqscrn/*screen.png | wc -l
-
+# 16
 
 ls fq_fp1_clmp_fp2_fqscrn/*screen.html | wc -l
+# 16
 
 ```
+
+> All files seems to have completed succesfully, but the MultiQC did not seem to work. Check with Chris if I can rerun the QC later.
+

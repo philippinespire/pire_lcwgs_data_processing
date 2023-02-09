@@ -23,7 +23,7 @@ Reading other elements of the index from files reference.0044121.mtgenome.fasta
 [M::memoryAllocLearned::MEME] Reading suffix array into memory
 [M::memoryAllocLearned::MEME] Loading pos_packed file took 0.247 sec
 [M::memoryAllocLearned::MEME] Generating SA and 64-bit Suffix in memory
-[M::memoryAllocLearned::MEME] Runtime-build-index took 0.067 sec
+[M::memoryAllocLearned::MEME] Runtime-build-index took 0.065 sec
 3. Memory pre-allocation for BWT: 643.8196 MB
 ------------------------------------------
 * Threads used (compute): 40
@@ -46,7 +46,7 @@ Reading other elements of the index from files reference.0044121.mtgenome.fasta
 [0000][PE] skip orientation RF as there are not enough pairs
 [0000][PE] skip orientation RR as there are not enough pairs
 [0000] 3. Calling kt_for - worker_sam
-	[0000][ M::mem_process_seqs] Processed 2777320 reads in 105.025 CPU sec, 2.922 real sec
+	[0000][ M::mem_process_seqs] Processed 2777320 reads in 107.202 CPU sec, 2.792 real sec
 [0000] read_chunk: 400000000, work_chunk_size: 400000266, nseq: 2777026
 	[0000][ M::kt_pipeline] read 2777026 sequences (400000266 bp)...
 [0000] Calling mem_process_seqs.., task: 1
@@ -63,7 +63,7 @@ Reading other elements of the index from files reference.0044121.mtgenome.fasta
 [0000][PE] skip orientation RF as there are not enough pairs
 [0000][PE] skip orientation RR as there are not enough pairs
 [0000] 3. Calling kt_for - worker_sam
-	[0000][ M::mem_process_seqs] Processed 2777026 reads in 101.583 CPU sec, 2.669 real sec
+	[0000][ M::mem_process_seqs] Processed 2777026 reads in 102.028 CPU sec, 2.666 real sec
 [0000] read_chunk: 400000000, work_chunk_size: 400000155, nseq: 2777128
 	[0000][ M::kt_pipeline] read 2777128 sequences (400000155 bp)...
 [0000] Calling mem_process_seqs.., task: 2
@@ -80,7 +80,7 @@ Reading other elements of the index from files reference.0044121.mtgenome.fasta
 [0000][PE] skip orientation RF as there are not enough pairs
 [0000][PE] skip orientation RR as there are not enough pairs
 [0000] 3. Calling kt_for - worker_sam
-	[0000][ M::mem_process_seqs] Processed 2777128 reads in 103.643 CPU sec, 2.773 real sec
+	[0000][ M::mem_process_seqs] Processed 2777128 reads in 104.265 CPU sec, 2.697 real sec
 [0000] read_chunk: 400000000, work_chunk_size: 400000164, nseq: 2777512
 	[0000][ M::kt_pipeline] read 2777512 sequences (400000164 bp)...
 [0000] Reallocating initial memory allocations!!
@@ -100,7 +100,7 @@ Reading other elements of the index from files reference.0044121.mtgenome.fasta
 [0000][PE] skip orientation RF as there are not enough pairs
 [0000][PE] skip orientation RR as there are not enough pairs
 [0000] 3. Calling kt_for - worker_sam
-	[0000][ M::mem_process_seqs] Processed 2777512 reads in 102.581 CPU sec, 2.712 real sec
+	[0000][ M::mem_process_seqs] Processed 2777512 reads in 101.862 CPU sec, 2.649 real sec
 [0000] Calling mem_process_seqs.., task: 4
 [0000] 1. Calling kt_for - worker_bwt
 [0000] 2. Calling kt_for - worker_aln
@@ -115,40 +115,40 @@ Reading other elements of the index from files reference.0044121.mtgenome.fasta
 [0000][PE] skip orientation RF as there are not enough pairs
 [0000][PE] skip orientation RR as there are not enough pairs
 [0000] 3. Calling kt_for - worker_sam
-	[0000][ M::mem_process_seqs] Processed 1514816 reads in 54.653 CPU sec, 1.471 real sec
+	[0000][ M::mem_process_seqs] Processed 1514816 reads in 54.939 CPU sec, 1.480 real sec
 [0000] read_chunk: 400000000, work_chunk_size: 0, nseq: 0
 [0000] read_chunk: 400000000, work_chunk_size: 0, nseq: 0
 [0000] Computation ends..
 No. of OMP threads: 40
-Processor is running @2394.650284 MHz
+Processor is running @2394.659710 MHz
 Runtime profile:
 
-	Time taken for main_mem function: 51.46 sec
+	Time taken for main_mem function: 51.89 sec
 
 	IO times (sec) :
-	Reading IO time (reads) avg: 40.78, (40.78, 40.78)
-	Writing IO time (SAM) avg: 7.45, (7.45, 7.45)
+	Reading IO time (reads) avg: 41.27, (41.27, 41.27)
+	Writing IO time (SAM) avg: 7.73, (7.73, 7.73)
 	Reading IO time (Reference Genome) avg: 0.00, (0.00, 0.00)
 	Index read time avg: 0.00, (0.00, 0.00)
 
 	Overall time (sec) (Excluding Index reading time):
-	PROCESS() (Total compute time + (read + SAM) IO time) : 51.46
-	MEM_PROCESS_SEQ() (Total compute time (Kernel + SAM)), avg: 12.54, (12.54, 12.54)
+	PROCESS() (Total compute time + (read + SAM) IO time) : 51.88
+	MEM_PROCESS_SEQ() (Total compute time (Kernel + SAM)), avg: 12.28, (12.28, 12.28)
 
 	 SAM Processing time (sec):
-	--WORKER_SAM avg: 0.69, (0.69, 0.69)
+	--WORKER_SAM avg: 0.70, (0.70, 0.70)
 
 	Kernels' compute time (sec):
-	Total kernel (smem+sal+bsw) time avg: 11.77, (11.77, 11.77)
+	Total kernel (smem+sal+bsw) time avg: 11.49, (11.49, 11.49)
 		MEM_ALN_CHAIN_FLT avg: 0.00, (0.00, 0.00)
 		MEM_ALN_CHAIN_SEED avg: 0.00, (0.00, 0.00)
 		ERT_SEED_CHAIN avg: 0.00, (0.00, 0.00)
-	LEARNED_SEED_CHAIN avg: 11.18, (11.21, 11.14)
+	LEARNED_SEED_CHAIN avg: 10.89, (10.94, 10.86)
 		SMEM compute avg: 0.00, (0.00, 0.00)
 		SAL compute avg: 0.00, (0.00, 0.00)
 				MEM_SA avg: 0.00, (0.00, 0.00)
 
-		BSW time, avg: 0.35, (0.39, 0.32)
+		BSW time, avg: 0.35, (0.37, 0.32)
 
 Important parameter settings: 
 	BATCH_SIZE: 512

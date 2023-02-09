@@ -90,4 +90,71 @@ bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.ba
 
 > Job submitted on 2023-02-08 @ 10:30 
 >> jobID: 1241299 \
+>> job completed sucessfully. 
+
+
+</details>
+
+
+<details>
+        <summary>9b. Check duplicate removal success</summary>
+* Run by klabrador on 2023-0208
+* Clumpify successfully worked on all samples.
+
+</details>
+
+
+<details>
+        <summary>9c. Generate metadata on deduplicated FASTQ files</summary>
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/2nd_sequencing_run
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1_clmp" "fqc_clmp_report"  "fq.gz"
+
+```
+> Job submitted on 2023-02-08 @ 20:00
+>> jobID: 1241803 \
+>> job completed successfully
+
+</details>
+
+
+<details>
+        <summary>10. Second trim</summary> 
+* Run by klabrador on 2023-02-08
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/2nd_sequencing_run
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_2_cssl.sbatch fq_fp1_clmp fq_fp1_clmp_fp2
+
+```
+> Job submitted on 2023-02-08 @ 20:05
+>> jobID: 1241806 \
+>> job completed successfully.
+
+</details>
+
+
+<details>
+        <summary>11. Decontaminate files</summary>
+* Run by klabrador on 2023-02-08
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/2nd_sequencing_run
+bash  /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2 fq_fp1_clmp_fp2_fqscrn 20
+
+```
+> Job submitted on 2023-02-08 @ 20:19
+>> jobID: 1241813 \
+>> fqscrn_mqc is lagging behind (similar to what I encountered with Sfu. \
+
+
+* Check if files are complete or if there are errors
+** All *fqscrn outfiles returned n = 197. There should be 198.
+*** Straggler identified: Sfa-ABas_002-Ex1-7D-lcwgs-1-T.clmp.fp2_r1.fq.gz
+** No errors in log (*.out) files.
+** MultiQC log shows that run has completed, but it is still running in hpc node.
+
+
+
 

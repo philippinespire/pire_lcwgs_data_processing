@@ -360,5 +360,50 @@ ls fq_fp1_clmp_fp2_fqscrn/*screen.html | wc -l
 
 ```
 
-> All files seems to have completed succesfully, but the MultiQC did not seem to work. Check with Chris if I can rerun the QC later.
+* All files seems to have completed succesfully, but the MultiQC did not seem to work. Check with Chris if I can rerun the QC later.
 
+
+* Rerun MultiQC
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runMULTIQC.sbatch "fq_fp1_clmp_fp2_fqscrn" "fastq_screen_report" "fq.gz"
+``
+> Job submitted on 2023-02-09 @ 20:17
+>> jobID: 1242935 \
+
+</details>
+
+
+<details>
+        <summary>12. Repair FASTQ files</summary>
+* Run by klabrador on 2023-02-09
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runREPAIR.sbatch fq_fp1_clmp_fp2_fqscrn fq_fp1_clmp_fp2_fqscrn_rprd 40
+```
+> Job submitted on 2023-02-09 @ 20:17
+>> jobID: 1242942 \
+>> job completed succesfully
+
+Run MultiQC
+
+```
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_fp1_clmp_fp2_fqscrn_rprd" "fqc_rprd_report" "fq.gz"
+```
+> Job submitted on 2023-02-09 @ 20:22
+>> jobID: 1242946 \
+>> job completed succesfully
+
+</details>
+
+
+<details>
+        <summary>13. Calculate % reads lost in each step</summary>
+* Not done
+
+</details>
+
+
+<details>
+        <summary>14. Clean up</summary>
+* Run by klabrador on 2023-02-09

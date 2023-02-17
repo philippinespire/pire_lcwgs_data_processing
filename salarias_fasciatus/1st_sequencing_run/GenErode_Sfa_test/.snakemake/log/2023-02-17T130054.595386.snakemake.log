@@ -1,0 +1,15 @@
+WorkflowError in file /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_Sfa_test/workflow/rules/common.smk, line 131:
+Error validating row 0 of data frame.
+ValidationError: 'Sfa-ABas_001_Ex1_L3' does not match '(^[A-Za-z0-9]+_[A-Za-z0-9]+_[A-Za-z0-9]+$)'
+
+Failed validating 'pattern' in schema['properties']['samplename_index_lane']:
+    OrderedDict([('type', 'string'),
+                 ('pattern', '(^[A-Za-z0-9]+_[A-Za-z0-9]+_[A-Za-z0-9]+$)'),
+                 ('description',
+                  'sample identifier. Must contain sample id, library '
+                  'index and lane number, separated by underscore.')])
+
+On instance['samplename_index_lane']:
+    'Sfa-ABas_001_Ex1_L3'
+  File "/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_Sfa_test/Snakefile", line 25, in <module>
+  File "/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_Sfa_test/workflow/rules/common.smk", line 131, in <module>

@@ -3,7 +3,7 @@
 #
 
 
-## 1.Pre-processing
+## 1. Pre-processing
 
 
 This follows the instructions from [pire_fq_gz_processing](https://github.com/philippinespire/pire_fq_gz_processing/blob/main/README.md).
@@ -407,3 +407,90 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_f
 <details>
         <summary>14. Clean up</summary>
 * Run by klabrador on 2023-02-09
+
+</details>
+
+## 2. Mapping to Reference Mitogenome
+
+This maps the repaired `*fq.gz` files to a reference genome. As per cbird's instructions, I should map Sfu to the mtDNA genome of the most closely related species for which there's an mtgenome on GenBank.
+
+This follows the instructions on [pire_lcwgs_data_processing](https://github.com/philippinespire/pire_lcwgs_data_processing).
+
+
+<details>
+        <summary>1. Complete fq.gz preprocessing</summary>
+* Completed on 2023-02-09
+
+</details>
+
+<details>
+
+        <summary>2. Get the reference genome</summary>
+* Run by klabrador on 2023-02-17
+
+
+```
+# Make a refGenome directory
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens
+mkdir refGenome
+
+# In the refGenome directory, download the mitogenome of the species that is most closely related to Sfu
+## There is no reference genome for the study species on NCBI's database.
+## There are no available genomes for any Siganid species on the database.
+## There is a published complete mtgenome of the study species ([Oh et al., 2007](https://doi.org/10.1080/10425170701248525); accession no. EF025185.1)
+cd refGenome
+wget "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=NC_009572.1&db=nuccore&report=fasta&retmode=text" -O NC_009572.1
+
+# Zip the file
+cat NC_009572.1 | gzip > NC_009572.1_Sfu_mtgen.fna.gz
+
+```
+
+
+</details>
+
+<details>
+
+        <summary>3. Map reads to reference genome</summary>
+* Run by klabrador on 2023-02-17
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens
+sbatch ../scripts/mkBAM.sbatch "fq_fp1_clmp_fp2_fqscrn_rprd/*.fq.gz" ./refGenome/NC_009572.1_Sfu_mtgen.fna.gz ./mkBAM
+```
+
+> Job submitted on 2023-02-17 @ 11:40 
+>> jobID: 1260784 \
+>> job completed, but with warnings: 
+	* "Cannot index files compressed with gzip." 
+	* "Failed to build index file for reference file.
+
+> rroberts suggested using the reference's raw fasta file, not the zip file.
+>> Redo job using the fasta file.
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens
+sbatch ../scripts/mkBAM.sbatch "fq_fp1_clmp_fp2_fqscrn_rprd/*.fq.gz" ./refGenome/NC_009572.1.fasta ./mkBAM
+```
+
+> Job submitted on 2023-02-17 @ 12:31
+>> jobID: 1260955 \
+>> job completed successfully.
+
+</details>
+
+
+<details>
+
+        <summary>4. Filter BAM files</summary>
+* Run by klabrador on 2023-02-17
+
+```
+sbatch ../scripts/fltrBAM.sbatch ./mkBAM
+```
+> Job submitted on 2023-02-17 @ 12:10 
+>> jobID: 1260871 \
+>> job failed \ 
+>> Error: The sbatch file searches for the script at /home/e1garcia/shotgun_PIRE/home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/fltrBAM.bash. The said script has already been deprecated on the said directory. The *.bash script directory should be redirected.
+
+

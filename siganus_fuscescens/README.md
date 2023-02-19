@@ -419,6 +419,7 @@ This follows the instructions on [pire_lcwgs_data_processing](https://github.com
 
 <details>
         <summary>1. Complete fq.gz preprocessing</summary>
+
 * Completed on 2023-02-09
 
 </details>
@@ -426,8 +427,8 @@ This follows the instructions on [pire_lcwgs_data_processing](https://github.com
 <details>
 
         <summary>2. Get the reference genome</summary>
-* Run by klabrador on 2023-02-17
 
+* Run by klabrador on 2023-02-17
 
 ```
 # Make a refGenome directory
@@ -443,15 +444,15 @@ wget "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=NC_009572.1&db=nuccore
 
 # Zip the file
 cat NC_009572.1 | gzip > NC_009572.1_Sfu_mtgen.fna.gz
-
 ```
 
-
 </details>
+
 
 <details>
 
         <summary>3. Map reads to reference genome</summary>
+
 * Run by klabrador on 2023-02-17
 
 ```
@@ -488,6 +489,7 @@ sbatch ../scripts/mkBAM.sbatch "fq_fp1_clmp_fp2_fqscrn_rprd/*.fq.gz" ./refGenome
 ```
 sbatch ../scripts/fltrBAM.sbatch ./mkBAM
 ```
+
 > Job submitted on 2023-02-17 @ 12:10 
 >> jobID: 1260871 \
 >> job failed \ 

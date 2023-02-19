@@ -49,15 +49,15 @@ File format + header: samplename_index_lane readgroup_id readgroup_platform path
 
 ```
 samplename_index_lane readgroup_id readgroup_platform path_to_R1_fastq_file path_to_R2_fastq_file
-Sfa-ABas-001_Ex1_L3 HK7K2DSX3:3 illumina historical/Sfa-ABas_001_Ex1_L3_clmp.fp2_repr.R1.fq.gz historical/Sfa-ABas_001_Ex1_L3_clmp.fp2_repr.R1.fq.gz
-Sfa-ABas-002_Ex1_L3 HK7K2DSX3:3 illumina historical/Sfa-ABas_002_Ex1_L3_clmp.fp2_repr.R1.fq.gz historical/Sfa-ABas_002_Ex1_L3_clmp.fp2_repr.R1.fq.gz
-Sfa-ABas-003_Ex1_L3 HK7K2DSX3:3 illumina historical/Sfa-ABas_003_Ex1_L3_clmp.fp2_repr.R1.fq.gz historical/Sfa-ABas_003_Ex1_L3_clmp.fp2_repr.R1.fq.gz
-Sfa-ABas-004_Ex1_L3 HK7K2DSX3:3 illumina historical/Sfa-ABas_004_Ex1_L3_clmp.fp2_repr.R1.fq.gz historical/Sfa-ABas_004_Ex1_L3_clmp.fp2_repr.R1.fq.gz
-Sfa-ABas-005_Ex1_L3 HK7K2DSX3:3 illumina historical/Sfa-ABas_005_Ex1_L3_clmp.fp2_repr.R1.fq.gz historical/Sfa-ABas_005_Ex1_L3_clmp.fp2_repr.R1.fq.gz
-Sfa-ABas-006_Ex1_L3 HK7K2DSX3:3 illumina historical/Sfa-ABas_006_Ex1_L3_clmp.fp2_repr.R1.fq.gz historical/Sfa-ABas_006_Ex1_L3_clmp.fp2_repr.R1.fq.gz
-Sfa-ABas-007_Ex1_L3 HK7K2DSX3:3 illumina historical/Sfa-ABas_007_Ex1_L3_clmp.fp2_repr.R1.fq.gz historical/Sfa-ABas_007_Ex1_L3_clmp.fp2_repr.R1.fq.gz
-Sfa-ABas-008_Ex1_L3 HK7K2DSX3:3 illumina historical/Sfa-ABas_008_Ex1_L3_clmp.fp2_repr.R1.fq.gz historical/Sfa-ABas_008_Ex1_L3_clmp.fp2_repr.R1.fq.gz
-Sfa-ABas-009_Ex1_L3 HK7K2DSX3:3 illumina historical/Sfa-ABas_009_Ex1_L3_clmp.fp2_repr.R1.fq.gz historical/Sfa-ABas_009_Ex1_L3_clmp.fp2_repr.R1.fq.gz
+SfaABas001_Ex1_L3 HK7K2DSX3:3 illumina historical/Sfa-ABas_001_Ex1_L3_clmp.fp2_repr.R1.fq.gz historical/Sfa-ABas_001_Ex1_L3_clmp.fp2_repr.R1.fq.gz
+SfaABas002_Ex1_L3 HK7K2DSX3:3 illumina historical/Sfa-ABas_002_Ex1_L3_clmp.fp2_repr.R1.fq.gz historical/Sfa-ABas_002_Ex1_L3_clmp.fp2_repr.R1.fq.gz
+SfaABas003_Ex1_L3 HK7K2DSX3:3 illumina historical/Sfa-ABas_003_Ex1_L3_clmp.fp2_repr.R1.fq.gz historical/Sfa-ABas_003_Ex1_L3_clmp.fp2_repr.R1.fq.gz
+SfaABas004_Ex1_L3 HK7K2DSX3:3 illumina historical/Sfa-ABas_004_Ex1_L3_clmp.fp2_repr.R1.fq.gz historical/Sfa-ABas_004_Ex1_L3_clmp.fp2_repr.R1.fq.gz
+SfaABas005_Ex1_L3 HK7K2DSX3:3 illumina historical/Sfa-ABas_005_Ex1_L3_clmp.fp2_repr.R1.fq.gz historical/Sfa-ABas_005_Ex1_L3_clmp.fp2_repr.R1.fq.gz
+SfaABas006_Ex1_L3 HK7K2DSX3:3 illumina historical/Sfa-ABas_006_Ex1_L3_clmp.fp2_repr.R1.fq.gz historical/Sfa-ABas_006_Ex1_L3_clmp.fp2_repr.R1.fq.gz
+SfaABas007_Ex1_L3 HK7K2DSX3:3 illumina historical/Sfa-ABas_007_Ex1_L3_clmp.fp2_repr.R1.fq.gz historical/Sfa-ABas_007_Ex1_L3_clmp.fp2_repr.R1.fq.gz
+SfaABas008_Ex1_L3 HK7K2DSX3:3 illumina historical/Sfa-ABas_008_Ex1_L3_clmp.fp2_repr.R1.fq.gz historical/Sfa-ABas_008_Ex1_L3_clmp.fp2_repr.R1.fq.gz
+SfaABas009_Ex1_L3 HK7K2DSX3:3 illumina historical/Sfa-ABas_009_Ex1_L3_clmp.fp2_repr.R1.fq.gz historical/Sfa-ABas_009_Ex1_L3_clmp.fp2_repr.R1.fq.gz
 ```
 
 Create the files providing path info for modern samples.
@@ -70,13 +70,13 @@ File format + header: samplename_index_lane readgroup_id readgroup_platform path
 
 ```
 samplename_index_lane readgroup_id readgroup_platform path_to_R1_fastq_file path_to_R2_fastq_file
-Sfa-CBas-001_Ex1_L3 HK7K2DSX3:3 illumina modern/Sfa-CBas_001_Ex1_L3_clmp.fp2_repr.R1.fq.gz modern/Sfa-CBas_001_Ex1_L3_clmp.fp2_repr.R1.fq.gz
-Sfa-CBas-002_Ex1_L3 HK7K2DSX3:3 illumina modern/Sfa-CBas_002_Ex1_L3_clmp.fp2_repr.R1.fq.gz modern/Sfa-CBas_002_Ex1_L3_clmp.fp2_repr.R1.fq.gz
-Sfa-CBas-003_Ex1_L3 HK7K2DSX3:3 illumina modern/Sfa-CBas_003_Ex1_L3_clmp.fp2_repr.R1.fq.gz modern/Sfa-CBas_003_Ex1_L3_clmp.fp2_repr.R1.fq.gz
-Sfa-CBas-004_Ex1_L3 HK7K2DSX3:3 illumina modern/Sfa-CBas_006_Ex1_L3_clmp.fp2_repr.R1.fq.gz modern/Sfa-CBas_006_Ex1_L3_clmp.fp2_repr.R1.fq.gz
-Sfa-CBas-007_Ex1_L3 HK7K2DSX3:3 illumina modern/Sfa-CBas_007_Ex1_L3_clmp.fp2_repr.R1.fq.gz modern/Sfa-CBas_007_Ex1_L3_clmp.fp2_repr.R1.fq.gz
-Sfa-CBas-008_Ex1_L3 HK7K2DSX3:3 illumina modern/Sfa-CBas_008_Ex1_L3_clmp.fp2_repr.R1.fq.gz modern/Sfa-CBas_008_Ex1_L3_clmp.fp2_repr.R1.fq.gz
-Sfa-CBas-009_Ex1_L3 HK7K2DSX3:3 illumina modern/Sfa-CBas_009_Ex1_L3_clmp.fp2_repr.R1.fq.gz modern/Sfa-CBas_009_Ex1_L3_clmp.fp2_repr.R1.fq.gz
+SfaCBas001_Ex1_L3 HK7K2DSX3:3 illumina modern/Sfa-CBas_001_Ex1_L3_clmp.fp2_repr.R1.fq.gz modern/Sfa-CBas_001_Ex1_L3_clmp.fp2_repr.R1.fq.gz
+SfaCBas002_Ex1_L3 HK7K2DSX3:3 illumina modern/Sfa-CBas_002_Ex1_L3_clmp.fp2_repr.R1.fq.gz modern/Sfa-CBas_002_Ex1_L3_clmp.fp2_repr.R1.fq.gz
+SfaCBas003_Ex1_L3 HK7K2DSX3:3 illumina modern/Sfa-CBas_003_Ex1_L3_clmp.fp2_repr.R1.fq.gz modern/Sfa-CBas_003_Ex1_L3_clmp.fp2_repr.R1.fq.gz
+SfaCBas004_Ex1_L3 HK7K2DSX3:3 illumina modern/Sfa-CBas_006_Ex1_L3_clmp.fp2_repr.R1.fq.gz modern/Sfa-CBas_006_Ex1_L3_clmp.fp2_repr.R1.fq.gz
+SfaCBas007_Ex1_L3 HK7K2DSX3:3 illumina modern/Sfa-CBas_007_Ex1_L3_clmp.fp2_repr.R1.fq.gz modern/Sfa-CBas_007_Ex1_L3_clmp.fp2_repr.R1.fq.gz
+SfaCBas008_Ex1_L3 HK7K2DSX3:3 illumina modern/Sfa-CBas_008_Ex1_L3_clmp.fp2_repr.R1.fq.gz modern/Sfa-CBas_008_Ex1_L3_clmp.fp2_repr.R1.fq.gz
+SfaCBas009_Ex1_L3 HK7K2DSX3:3 illumina modern/Sfa-CBas_009_Ex1_L3_clmp.fp2_repr.R1.fq.gz modern/Sfa-CBas_009_Ex1_L3_clmp.fp2_repr.R1.fq.gz
 ```
 
 Edit config file.
@@ -91,7 +91,7 @@ Changes:
 * line 32 - modern_samples = "config/Sfa_7_modern_samples.txt" 
 * line 109 - mapping = True
 * line 165 - historical_bam_mapDamage = TRUE
-* line 173 - historical_rescaled_samplenames = ["Sfa-ABas_001_Ex1_L3","Sfa-ABas_002_Ex1_L3","Sfa-ABas_003_Ex1_L3","Sfa-ABas_004_Ex1_L3","Sfa-ABas_005_Ex1_L3","Sfa-ABas_006_Ex1_L3","Sfa-ABas_007_Ex1_L3","Sfa-ABas_008_Ex1_L3","Sfa-ABas_009_Ex1_L3"]
+* line 173 - historical_rescaled_samplenames = ["SfaABas001","SfaABas002","SfaABas003","SfaABas004","SfaABas005","SfaABas006","SfaABas007","SfaABas008","SfaABas009"]
 
 ### Try to run!
 

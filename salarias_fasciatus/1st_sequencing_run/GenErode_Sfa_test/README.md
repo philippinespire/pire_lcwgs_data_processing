@@ -1,52 +1,52 @@
-# GenErode pipeline
+## GenErode test run for Sfa
 
-<img src="docs/source/img/logga_viridis2.png" alt="logo" width="25%"/> 
+### Set up your analysis folder
 
-GitHub repository for GenErode, a Snakemake pipeline for the analysis 
-of whole-genome sequencing data from historical and modern samples to 
-study patterns of genome erosion.
+Make a copy of the template folder, renaming it according to your species name.
 
-## Documentation
+```
+cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_Wahab/GenErode_templatedir /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_Sfa_test
+```
 
-The full pipeline documentation can be found on the [repository wiki](https://github.com/NBISweden/GenErode/wiki).
+I replaced the GenErode readme with another README.md file to track work within this directory.
 
-## Citation
+Make directories within this directory to hold your config file, historical, modern, and reference genome.
 
-If you've used GenErode to produce results, please cite our paper:
+```
+mkdir /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_Sfa_test/config
+mkdir /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_Sfa_test/historical
+mkdir /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_Sfa_test/modern
+mkdir /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_Sfa_test/reference
+```
 
-Kutschera VE, Kierczak M, van der Valk T, von Seth J, Dussex N, Lord E, Dehasque M, Stanton DWG, Emami P, Nystedt B, Dalén L, Díez-del-Molino D (2022) GenErode: a bioinformatics pipeline to investigate genome erosion in endangered and extinct species. BMC Bioinformatics 23, 228 https://doi.org/10.1186/s12859-022-04757-0
+For the test - copy the first few historical/contemp fq.gz samples to the appropriate subdirectories. Copy the reference genome to the reference folder.
 
-## Pipeline overview
+```
+cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/fq_fp1_clmp_fp2b_fqscrn_rprd/Sfa-ABas_00*.fq.gz /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_Sfa_test/historical
 
-<img src="docs/source/img/figure_1_generode_pipeline_v7.png" alt="processing" width="75%"/>
+cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/fq_fp1_clmp_fp2b_fqscrn_rprd/Sfa-CBas_00*.fq.gz /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_Sfa_test/modern
 
-Figure 1: Overview of the GenErode pipeline data processing tracks. Input 
-and output files formats, dependencies between steps, and main software used
-are shown. Optional steps are highlighted in red. 
+cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/refGenome/GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna.gz /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_Sfa_test/reference
 
-<img src="docs/source/img/figure_2_generode_pipeline_v7.png" alt="analysis" width="75%"/>
+gunzip /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_Sfa_test/reference/GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna.gz
+```
 
-Figure 2: Overview of the GenErode pipeline data analysis tracks and final reports.
-Input file formats and main software used are shown.
+### Copy / edit config files
 
+Copying the Sumatran rhino test config file.
 
-## Licence information
+```
+cp /home/breid/GenErode_testdata/config/config_sum_rhino.yaml /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_Sfa_test/config/config.yaml
+```
 
-GenErode pipeline
+Create the files providing path info for historic samples.
 
-Copyright (C) 2022  Verena Kutschera
+```
+vi /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_Sfa_test/config/Sfa_9_historical_samples.txt
+```
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+File format + header: samplename_index_lane readgroup_id readgroup_platform path_to_R1_fastq_file path_to_R2_fastq_file. Note that the 3-underscore convention in sample_index_lane must be followed must remove hyphens/underscores from sample names.
 
-<<<<<<< HEAD
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-=======
 ```
 samplename_index_lane readgroup_id readgroup_platform path_to_R1_fastq_file path_to_R2_fastq_file
 SfaABas001_Ex1_L3 HK7K2DSX3:3 illumina historical/Sfa-ABas_001_Ex1_L3_clmp.fp2_repr.R1.fq.gz historical/Sfa-ABas_001_Ex1_L3_clmp.fp2_repr.R1.fq.gz
@@ -59,15 +59,7 @@ SfaABas007_Ex1_L3 HK7K2DSX3:3 illumina historical/Sfa-ABas_007_Ex1_L3_clmp.fp2_r
 SfaABas008_Ex1_L3 HK7K2DSX3:3 illumina historical/Sfa-ABas_008_Ex1_L3_clmp.fp2_repr.R1.fq.gz historical/Sfa-ABas_008_Ex1_L3_clmp.fp2_repr.R1.fq.gz
 SfaABas009_Ex1_L3 HK7K2DSX3:3 illumina historical/Sfa-ABas_009_Ex1_L3_clmp.fp2_repr.R1.fq.gz historical/Sfa-ABas_009_Ex1_L3_clmp.fp2_repr.R1.fq.gz
 ```
->>>>>>> 77d17572a89e49540756e221d3ec28d4688f0510
 
-You should have received a copy of the GNU General Public License
-along with this program. If not, see <https://www.gnu.org/licenses/>.
-
-
-<<<<<<< HEAD
-Logo: Jonas Söderberg
-=======
 File format + header: samplename_index_lane readgroup_id readgroup_platform path_to_R1_fastq_file path_to_R2_fastq_file
 
 ```
@@ -106,4 +98,3 @@ cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st
 
 sbatch run_GenErode.sbatch 
 ```
->>>>>>> 77d17572a89e49540756e221d3ec28d4688f0510

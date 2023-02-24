@@ -495,4 +495,38 @@ sbatch ../scripts/fltrBAM.sbatch ./mkBAM
 >> job failed \ 
 >> Error: The sbatch file searches for the script at /home/e1garcia/shotgun_PIRE/home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/fltrBAM.bash. The said script has already been deprecated on the said directory. The *.bash script directory should be redirected.
 
+</details>
 
+So, it looks like I have been doing the assembly wrong. I should have used the (cbird's dDocent scripts)[https://github.com/cbirdlab/dDocentHPC].
+
+
+<details>
+
+        <summary>5. Prepare directory for dDocent runs</summary>
+* Run by klabrador on 2023-02-24
+
+I renamed the "mkBAM" directory to "mkBAM_dev". I then created a subdirectory, "scratch_dir", which contains the old *bam* files. 
+The "mkBAM_dev" will serve as my "project directory".
+
+I copied several files from the dDocentHPC directory to the mkBAM_dev directory.
+These were the same files that I found in the Sfa mkBAM_dev2 directory:
+
+	* config.6.lcwgs
+	* dDocentHPC_dev.sbatch
+	* dDocentHPC_dev2.sbatch
+ 
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens/mkBAM_dev
+cp ../../../dDocentHPC/configs/config.6.lcwgs .
+cp ../../../dDocentHPC/dDocentHPC_dev.sbatch .
+cp ../../../dDocentHPC/dDocentHPC_dev2.sbatch .
+```
+
+Copy the repaired *R1/R2.fq.gz files to the project directory.
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens
+cp fq_fp1_clmp_fp2_fqscrn_rprd/*fq.gz mkBAM_dev/
+```
+
+... to be continued

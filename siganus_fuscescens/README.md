@@ -427,7 +427,6 @@ This follows the instructions on [pire_lcwgs_data_processing](https://github.com
 
 
 <details>
-
         <summary>2. Get the reference genome</summary>
 
 * Run by klabrador on 2023-02-17
@@ -452,7 +451,6 @@ cat NC_009572.1 | gzip > NC_009572.1_Sfu_mtgen.fna.gz
 
 
 <details>
-
         <summary>3. Map reads to reference genome</summary>
 
 * Run by klabrador on 2023-02-17
@@ -484,7 +482,6 @@ sbatch ../scripts/mkBAM.sbatch "fq_fp1_clmp_fp2_fqscrn_rprd/*.fq.gz" ./refGenome
 
 
 <details>
-
         <summary>4. Filter BAM files</summary>
 * Run by klabrador on 2023-02-17
 
@@ -503,7 +500,6 @@ So, it looks like I have been doing the assembly wrong. I should have used the (
 
 
 <details>
-
         <summary>5. Prepare directory for dDocent runs</summary>
 * Run by klabrador on 2023-02-24
 

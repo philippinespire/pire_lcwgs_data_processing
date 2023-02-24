@@ -496,7 +496,7 @@ sbatch ../scripts/fltrBAM.sbatch ./mkBAM
 
 </details>
 
-So, it looks like I have been doing the assembly wrong. I should have used the (cbird's dDocent scripts)[https://github.com/cbirdlab/dDocentHPC].
+So, it looks like I have been doing the assembly wrong. I should have used the [cbird's dDocent scripts](https://github.com/cbirdlab/dDocentHPC).
 
 
 <details>

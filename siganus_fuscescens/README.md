@@ -506,6 +506,18 @@ So, it looks like I have been doing the assembly wrong. I should have used the [
 I renamed the "mkBAM" directory to "mkBAM_dev". I then created a subdirectory, "scratch_dir", which contains the old *bam* files. 
 The "mkBAM_dev" will serve as my "project directory".
 
+
+Copy the repaired *R1/R2.fq.gz files to the project directory.
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescenscp fq_fp1_clmp_fp2_fqscrn_rprd/*fq.gz mkBAM_dev/
+```
+
+Copy the reference mitogenome to the project directory. Rename accordingly.
+
+        * naming convention: "reference.[AccessionNo].mtgenome.fasta"
+
+
 I copied several files from the dDocentHPC directory to the mkBAM_dev directory.
 These were the same files that I found in the Sfa mkBAM_dev2 directory:
 
@@ -518,6 +530,13 @@ cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens/mkB
 cp ../../../dDocentHPC/configs/config.6.lcwgs .
 cp ../../../dDocentHPC/dDocentHPC_dev.sbatch .
 cp ../../../dDocentHPC/dDocentHPC_dev2.sbatch .
+
+# Edit the *sbatch script to change the path where the *.bash script is called.
+## crun.ddocent bash ../../../dDocentHPC/dDocentHPC_dev.bash $FUNCTION $CONFIG
+
+# Edit the config file to assign the correct reference mtgenome
+## under "mkREF", set Cutoff1 to 009572
+
 ```
 
 Copy the repaired *R1/R2.fq.gz files to the project directory.
@@ -527,4 +546,26 @@ cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens
 cp fq_fp1_clmp_fp2_fqscrn_rprd/*fq.gz mkBAM_dev/
 ```
 
-... to be continued
+Copy the reference mitogenome to the project directory. Rename accordingly.
+
+	* naming convention: "reference.[AccessionNo].mtgenome.fasta"
+
+
+</details>
+
+
+
+<details>
+        <summary>6. Run mkBAM</summary>
+
+* Run by klabrador on 2023-02-27
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens/mkBAM_dev
+sbatch dDocentHPC_dev.sbatch mkBAM config.6.lcwgs
+```
+
+> Job submitteed on 2023-02-27 @ 12:25 PM
+>> jobID: 1295094
+
+

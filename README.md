@@ -78,7 +78,7 @@ cp locationofrefgenome .
 
 Before embarking upon mapping, it is a good idea to curate your reference genome. 
 
-For a chromosome scale genome, we
+For a chromosome scale genome, rename the chromosomes in the FASTA files to be intuitive (chr01, chr01, ...) while retaining the accession number
 
 ```bash
 # Download the genome

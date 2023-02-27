@@ -64,7 +64,7 @@ vi /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st
 ```
 
 Changes:
-*
+* line 103: map_unmerged_reads: True
 
 ### Try to run!
 

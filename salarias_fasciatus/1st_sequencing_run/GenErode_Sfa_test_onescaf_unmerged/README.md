@@ -38,7 +38,7 @@ sed 's/ .*//g' GCF_902148845.1_fSalaFa1.1_chr1.fna > GCF_902148845.1_fSalaFa1.1_
 
 rm GCF_902148845.1_fSalaFa1.1_chr1.fna
 
-rm GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna.fna
+rm GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna
 
 
 ```
@@ -77,5 +77,3 @@ cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st
 
 sbatch run_GenErode.sbatch
 ```
-
-

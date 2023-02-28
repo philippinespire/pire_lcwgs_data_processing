@@ -567,5 +567,24 @@ sbatch dDocentHPC_dev.sbatch mkBAM config.6.lcwgs
 
 > Job submitteed on 2023-02-27 @ 12:25 PM
 >> jobID: 1295094
+>> job completed successfully
 
 
+</details>
+
+
+
+<details>
+        <summary>6. Run fltrBAM</summary>
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens/mkBAM_dev
+sbatch dDocentHPC_dev.sbatch fltrBAM config.6.lcwgs
+
+```
+
+> Job submitteed on 2023-02-28 @ 12:06 PM
+>> jobID: 1302130
+>> 
+
+</details>

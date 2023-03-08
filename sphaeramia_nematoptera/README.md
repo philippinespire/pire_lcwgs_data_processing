@@ -122,24 +122,6 @@ Potential issues:
   * number of reads -
     * Alb: 4.5-31.9 mil, Contemp: 0.5-79.0 mil
 ```
-</p>
-</details>
-
-<details><summary><i>	Calculated % of reads lost in each step</i></summary>
-<p>
-
-```
-Reads lost::
-  * fastp1 dropped XX% of the reads
-  * XX% of reads were duplicates and were dropped by clumpify
-  * fastp2 dropped xx% of the reads after deduplication
-
-Reads remaining:
-
-Total reads remaining: XX%
-```
-</p>
-</details>
 
 ## 2. Mapped FASTQ to reference genome
 

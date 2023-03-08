@@ -125,3 +125,11 @@ Potential issues:
 ```
 </p>
 
+---
+
+## 2. Copied the Reference Genome into the species folder
+
+I made the refGenome folder in the directory and copied the genome assembled from the SSL processing repo for this species.
+
+---
+## 3. 

@@ -124,6 +124,7 @@ Potential issues:
     * Alb: 4.5-31.9 mil, Contemp: 0.5-79.0 mil
 ```
 </p>
+</details>
 
 ---
 

@@ -112,7 +112,7 @@ Potential issues:
 
 <details><summary><i>Reviewed Fastqscreen repaired files</i></summary>
 <p>
- MultiQC [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/fq_fp1_clmp_fp2_fqscrn_rprd/fqc_rprd_report.html)
+MultiQC [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/fq_fp1_clmp_fp2_fqscrn_rprd/fqc_rprd_report.html)
 
  ```
 Potential issues:

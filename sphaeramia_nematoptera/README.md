@@ -113,7 +113,8 @@ Potential issues:
 <details><summary><i>Reviewed Fastqscreen repaired files</i></summary>
 <p>
  MultiQC [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/fq_fp1_clmp_fp2_fqscrn_rprd/fqc_rprd_report.html)
-```
+
+ ```
 Potential issues:
   * % duplication -
      Alb: 3-30%, Contemp: 0.8-22.4%
@@ -122,6 +123,7 @@ Potential issues:
   * number of reads -
     * Alb: 4.5-31.9 mil, Contemp: 0.5-79.0 mil
 ```
+</p>
 
 ## 2. Mapped FASTQ to reference genome
 

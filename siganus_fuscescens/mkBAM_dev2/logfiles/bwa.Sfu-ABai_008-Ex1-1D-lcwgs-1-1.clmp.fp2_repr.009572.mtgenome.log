@@ -1,0 +1,416 @@
+Looking to launch executable "/opt/conda/bin/bwa-meme_mode3.avx512bw", simd = _mode3.avx512bw
+Launching executable "/opt/conda/bin/bwa-meme_mode3.avx512bw"
+-----------------------------
+Executing in AVX512 mode!!
+-----------------------------
+* SA compression enabled with xfactor: 8
+* Ref file: reference.009572.mtgenome.fasta
+* Entering FMI_search
+Reading other elements of the index from files reference.009572.mtgenome.fasta
+* Index prefix: reference.009572.mtgenome.fasta
+* Read 0 ALT contigs
+* Reading reference genome..
+* Binary seq file = reference.009572.mtgenome.fasta.0123
+* Reference genome size: 32982 bp
+* Done reading reference genome !!
+
+------------------------------------------
+1. Memory pre-allocation for Chaining: 2839.7559 MB
+2. Memory pre-allocation for BSW: 4792.3405 MB
+[M::memoryAllocLearned::MEME] Reading Learned-index models into memory
+[Learned-Config] MODE:3 SEARCH_METHOD: 1 MEM_TRADEOFF:1 EXPONENTIAL_SMEMSEARCH: 1 DEBUG_MODE:0 Num 2nd Models:16777216 PWL Bits Used:24
+[M::memoryAllocLearned::MEME] Loading RMI model and Pac reference file took 0.240 sec
+[M::memoryAllocLearned::MEME] Reading suffix array into memory
+[M::memoryAllocLearned::MEME] Loading pos_packed file took 0.240 sec
+[M::memoryAllocLearned::MEME] Generating SA, 64-bit Suffix and ISA in memory
+[M::memoryAllocLearned::MEME] Runtime-build-index took 0.003 sec
+3. Memory pre-allocation for BWT: 321.8603 MB
+------------------------------------------
+* Threads used (compute): 20
+* No. of pipeline threads: 2
+
+[0000] read_chunk: 200000000, work_chunk_size: 200000002, nseq: 1987140
+	[0000][ M::kt_pipeline] read 1987140 sequences (200000002 bp)...
+[0000] Reallocating initial memory allocations!!
+[0000] Calling mem_process_seqs.., task: 0
+[0000] 1. Calling kt_for - worker_bwt
+[0000] read_chunk: 200000000, work_chunk_size: 200000097, nseq: 1969368
+[0000] 2. Calling kt_for - worker_aln
+[0000] Inferring insert size distribution of PE reads from data, l_pac: 16491, n: 1987140
+	[0000][ M::kt_pipeline] read 1969368 sequences (200000097 bp)...
+[0000][PE] # candidate unique pairs for (FF, FR, RF, RR): (0, 810, 0, 0)
+[0000][PE] skip orientation FF as there are not enough pairs
+[0000][PE] analyzing insert size distribution for orientation FR...
+[0000][PE] (25, 50, 75) percentile: (75, 93, 125)
+[0000][PE] low and high boundaries for computing mean and std.dev: (1, 225)
+[0000][PE] mean and std.dev: (93.82, 34.09)
+[0000][PE] low and high boundaries for proper pairs: (1, 275)
+[0000][PE] skip orientation RF as there are not enough pairs
+[0000][PE] skip orientation RR as there are not enough pairs
+[0000] 3. Calling kt_for - worker_sam
+	[0000][ M::mem_process_seqs] Processed 1987140 reads in 46.083 CPU sec, 2.385 real sec
+[0000] Calling mem_process_seqs.., task: 1
+[0000] 1. Calling kt_for - worker_bwt
+[0000] 2. Calling kt_for - worker_aln
+[0000] Inferring insert size distribution of PE reads from data, l_pac: 16491, n: 1969368
+[0000][PE] # candidate unique pairs for (FF, FR, RF, RR): (0, 495, 0, 0)
+[0000][PE] skip orientation FF as there are not enough pairs
+[0000][PE] analyzing insert size distribution for orientation FR...
+[0000][PE] (25, 50, 75) percentile: (64, 89, 116)
+[0000][PE] low and high boundaries for computing mean and std.dev: (1, 220)
+[0000][PE] mean and std.dev: (91.81, 33.97)
+[0000][PE] low and high boundaries for proper pairs: (1, 272)
+[0000][PE] skip orientation RF as there are not enough pairs
+[0000][PE] skip orientation RR as there are not enough pairs
+[0000] 3. Calling kt_for - worker_sam
+	[0000][ M::mem_process_seqs] Processed 1969368 reads in 46.731 CPU sec, 2.367 real sec
+[0000] read_chunk: 200000000, work_chunk_size: 200000154, nseq: 1978484
+	[0000][ M::kt_pipeline] read 1978484 sequences (200000154 bp)...
+[0000] Calling mem_process_seqs.., task: 2
+[0000] 1. Calling kt_for - worker_bwt
+[0000] 2. Calling kt_for - worker_aln
+[0000] Inferring insert size distribution of PE reads from data, l_pac: 16491, n: 1978484
+[0000][PE] # candidate unique pairs for (FF, FR, RF, RR): (0, 765, 0, 0)
+[0000][PE] skip orientation FF as there are not enough pairs
+[0000][PE] analyzing insert size distribution for orientation FR...
+[0000][PE] (25, 50, 75) percentile: (63, 94, 125)
+[0000][PE] low and high boundaries for computing mean and std.dev: (1, 249)
+[0000][PE] mean and std.dev: (99.13, 47.22)
+[0000][PE] low and high boundaries for proper pairs: (1, 311)
+[0000][PE] skip orientation RF as there are not enough pairs
+[0000][PE] skip orientation RR as there are not enough pairs
+[0000] 3. Calling kt_for - worker_sam
+	[0000][ M::mem_process_seqs] Processed 1978484 reads in 47.401 CPU sec, 2.392 real sec
+[0000] read_chunk: 200000000, work_chunk_size: 200000231, nseq: 1985186
+	[0000][ M::kt_pipeline] read 1985186 sequences (200000231 bp)...
+[0000] Calling mem_process_seqs.., task: 3
+[0000] 1. Calling kt_for - worker_bwt
+[0000] 2. Calling kt_for - worker_aln
+[0000] Inferring insert size distribution of PE reads from data, l_pac: 16491, n: 1985186
+[0000][PE] # candidate unique pairs for (FF, FR, RF, RR): (0, 508, 0, 0)
+[0000][PE] skip orientation FF as there are not enough pairs
+[0000][PE] analyzing insert size distribution for orientation FR...
+[0000][PE] (25, 50, 75) percentile: (63, 84, 102)
+[0000][PE] low and high boundaries for computing mean and std.dev: (1, 180)
+[0000][PE] mean and std.dev: (83.98, 28.81)
+[0000][PE] low and high boundaries for proper pairs: (1, 219)
+[0000][PE] skip orientation RF as there are not enough pairs
+[0000][PE] skip orientation RR as there are not enough pairs
+[0000] 3. Calling kt_for - worker_sam
+	[0000][ M::mem_process_seqs] Processed 1985186 reads in 48.202 CPU sec, 2.550 real sec
+[0000] read_chunk: 200000000, work_chunk_size: 200000099, nseq: 1977736
+	[0000][ M::kt_pipeline] read 1977736 sequences (200000099 bp)...
+[0000] Calling mem_process_seqs.., task: 4
+[0000] 1. Calling kt_for - worker_bwt
+[0000] 2. Calling kt_for - worker_aln
+[0000] Inferring insert size distribution of PE reads from data, l_pac: 16491, n: 1977736
+[0000][PE] # candidate unique pairs for (FF, FR, RF, RR): (0, 1195, 0, 0)
+[0000][PE] skip orientation FF as there are not enough pairs
+[0000][PE] analyzing insert size distribution for orientation FR...
+[0000][PE] (25, 50, 75) percentile: (49, 93, 147)
+[0000][PE] low and high boundaries for computing mean and std.dev: (1, 343)
+[0000][PE] mean and std.dev: (107.11, 62.23)
+[0000][PE] low and high boundaries for proper pairs: (1, 441)
+[0000][PE] skip orientation RF as there are not enough pairs
+[0000][PE] skip orientation RR as there are not enough pairs
+[0000] 3. Calling kt_for - worker_sam
+	[0000][ M::mem_process_seqs] Processed 1977736 reads in 47.750 CPU sec, 2.503 real sec
+[0000] read_chunk: 200000000, work_chunk_size: 200000127, nseq: 1973056
+	[0000][ M::kt_pipeline] read 1973056 sequences (200000127 bp)...
+[0000] Calling mem_process_seqs.., task: 5
+[0000] 1. Calling kt_for - worker_bwt
+[0000] 2. Calling kt_for - worker_aln
+[0000] Inferring insert size distribution of PE reads from data, l_pac: 16491, n: 1973056
+[0000][PE] # candidate unique pairs for (FF, FR, RF, RR): (0, 586, 0, 0)
+[0000][PE] skip orientation FF as there are not enough pairs
+[0000][PE] analyzing insert size distribution for orientation FR...
+[0000][PE] (25, 50, 75) percentile: (70, 92, 127)
+[0000][PE] low and high boundaries for computing mean and std.dev: (1, 241)
+[0000][PE] mean and std.dev: (104.21, 46.99)
+[0000][PE] low and high boundaries for proper pairs: (1, 298)
+[0000][PE] skip orientation RF as there are not enough pairs
+[0000][PE] skip orientation RR as there are not enough pairs
+[0000] 3. Calling kt_for - worker_sam
+	[0000][ M::mem_process_seqs] Processed 1973056 reads in 47.627 CPU sec, 2.797 real sec
+[0000] read_chunk: 200000000, work_chunk_size: 200000045, nseq: 1974160
+	[0000][ M::kt_pipeline] read 1974160 sequences (200000045 bp)...
+[0000] Calling mem_process_seqs.., task: 6
+[0000] 1. Calling kt_for - worker_bwt
+[0000] 2. Calling kt_for - worker_aln
+[0000] Inferring insert size distribution of PE reads from data, l_pac: 16491, n: 1974160
+[0000][PE] # candidate unique pairs for (FF, FR, RF, RR): (0, 438, 0, 0)
+[0000][PE] skip orientation FF as there are not enough pairs
+[0000][PE] analyzing insert size distribution for orientation FR...
+[0000][PE] (25, 50, 75) percentile: (59, 81, 104)
+[0000][PE] low and high boundaries for computing mean and std.dev: (1, 194)
+[0000][PE] mean and std.dev: (84.13, 31.20)
+[0000][PE] low and high boundaries for proper pairs: (1, 239)
+[0000][PE] skip orientation RF as there are not enough pairs
+[0000][PE] skip orientation RR as there are not enough pairs
+[0000] 3. Calling kt_for - worker_sam
+	[0000][ M::mem_process_seqs] Processed 1974160 reads in 47.744 CPU sec, 2.410 real sec
+[0000] read_chunk: 200000000, work_chunk_size: 200000132, nseq: 1987068
+	[0000][ M::kt_pipeline] read 1987068 sequences (200000132 bp)...
+[0000] Calling mem_process_seqs.., task: 7
+[0000] 1. Calling kt_for - worker_bwt
+[0000] 2. Calling kt_for - worker_aln
+[0000] Inferring insert size distribution of PE reads from data, l_pac: 16491, n: 1987068
+[0000][PE] # candidate unique pairs for (FF, FR, RF, RR): (0, 924, 0, 0)
+[0000][PE] skip orientation FF as there are not enough pairs
+[0000][PE] analyzing insert size distribution for orientation FR...
+[0000][PE] (25, 50, 75) percentile: (65, 90, 120)
+[0000][PE] low and high boundaries for computing mean and std.dev: (1, 230)
+[0000][PE] mean and std.dev: (89.67, 34.73)
+[0000][PE] low and high boundaries for proper pairs: (1, 285)
+[0000][PE] skip orientation RF as there are not enough pairs
+[0000][PE] skip orientation RR as there are not enough pairs
+[0000] 3. Calling kt_for - worker_sam
+	[0000][ M::mem_process_seqs] Processed 1987068 reads in 45.241 CPU sec, 2.222 real sec
+[0000] read_chunk: 200000000, work_chunk_size: 200000114, nseq: 1979032
+	[0000][ M::kt_pipeline] read 1979032 sequences (200000114 bp)...
+[0000] Calling mem_process_seqs.., task: 8
+[0000] 1. Calling kt_for - worker_bwt
+[0000] 2. Calling kt_for - worker_aln
+[0000] Inferring insert size distribution of PE reads from data, l_pac: 16491, n: 1979032
+[0000][PE] # candidate unique pairs for (FF, FR, RF, RR): (0, 572, 0, 0)
+[0000][PE] skip orientation FF as there are not enough pairs
+[0000][PE] analyzing insert size distribution for orientation FR...
+[0000][PE] (25, 50, 75) percentile: (61, 80, 112)
+[0000][PE] low and high boundaries for computing mean and std.dev: (1, 214)
+[0000][PE] mean and std.dev: (85.44, 38.56)
+[0000][PE] low and high boundaries for proper pairs: (1, 265)
+[0000][PE] skip orientation RF as there are not enough pairs
+[0000][PE] skip orientation RR as there are not enough pairs
+[0000] 3. Calling kt_for - worker_sam
+	[0000][ M::mem_process_seqs] Processed 1979032 reads in 44.692 CPU sec, 2.178 real sec
+[0000] read_chunk: 200000000, work_chunk_size: 200000044, nseq: 1983974
+	[0000][ M::kt_pipeline] read 1983974 sequences (200000044 bp)...
+[0000] Calling mem_process_seqs.., task: 9
+[0000] 1. Calling kt_for - worker_bwt
+[0000] 2. Calling kt_for - worker_aln
+[0000] Inferring insert size distribution of PE reads from data, l_pac: 16491, n: 1983974
+[0000][PE] # candidate unique pairs for (FF, FR, RF, RR): (0, 857, 0, 0)
+[0000][PE] skip orientation FF as there are not enough pairs
+[0000][PE] analyzing insert size distribution for orientation FR...
+[0000][PE] (25, 50, 75) percentile: (71, 98, 140)
+[0000][PE] low and high boundaries for computing mean and std.dev: (1, 278)
+[0000][PE] mean and std.dev: (107.10, 51.43)
+[0000][PE] low and high boundaries for proper pairs: (1, 347)
+[0000][PE] skip orientation RF as there are not enough pairs
+[0000][PE] skip orientation RR as there are not enough pairs
+[0000] 3. Calling kt_for - worker_sam
+	[0000][ M::mem_process_seqs] Processed 1983974 reads in 44.493 CPU sec, 2.173 real sec
+[0000] read_chunk: 200000000, work_chunk_size: 200000097, nseq: 1976402
+	[0000][ M::kt_pipeline] read 1976402 sequences (200000097 bp)...
+[0000] Calling mem_process_seqs.., task: 10
+[0000] 1. Calling kt_for - worker_bwt
+[0000] 2. Calling kt_for - worker_aln
+[0000] Inferring insert size distribution of PE reads from data, l_pac: 16491, n: 1976402
+[0000][PE] # candidate unique pairs for (FF, FR, RF, RR): (0, 540, 0, 0)
+[0000][PE] skip orientation FF as there are not enough pairs
+[0000][PE] analyzing insert size distribution for orientation FR...
+[0000][PE] (25, 50, 75) percentile: (61, 82, 116)
+[0000][PE] low and high boundaries for computing mean and std.dev: (1, 226)
+[0000][PE] mean and std.dev: (91.33, 40.01)
+[0000][PE] low and high boundaries for proper pairs: (1, 281)
+[0000][PE] skip orientation RF as there are not enough pairs
+[0000][PE] skip orientation RR as there are not enough pairs
+[0000] 3. Calling kt_for - worker_sam
+	[0000][ M::mem_process_seqs] Processed 1976402 reads in 46.632 CPU sec, 2.286 real sec
+[0000] read_chunk: 200000000, work_chunk_size: 200000032, nseq: 1982922
+	[0000][ M::kt_pipeline] read 1982922 sequences (200000032 bp)...
+[0000] Calling mem_process_seqs.., task: 11
+[0000] 1. Calling kt_for - worker_bwt
+[0000] 2. Calling kt_for - worker_aln
+[0000] Inferring insert size distribution of PE reads from data, l_pac: 16491, n: 1982922
+[0000][PE] # candidate unique pairs for (FF, FR, RF, RR): (0, 781, 0, 0)
+[0000][PE] skip orientation FF as there are not enough pairs
+[0000][PE] analyzing insert size distribution for orientation FR...
+[0000][PE] (25, 50, 75) percentile: (68, 92, 118)
+[0000][PE] low and high boundaries for computing mean and std.dev: (1, 218)
+[0000][PE] mean and std.dev: (92.92, 33.86)
+[0000][PE] low and high boundaries for proper pairs: (1, 268)
+[0000][PE] skip orientation RF as there are not enough pairs
+[0000][PE] skip orientation RR as there are not enough pairs
+[0000] 3. Calling kt_for - worker_sam
+	[0000][ M::mem_process_seqs] Processed 1982922 reads in 44.366 CPU sec, 2.161 real sec
+[0000] read_chunk: 200000000, work_chunk_size: 200000068, nseq: 1982006
+	[0000][ M::kt_pipeline] read 1982006 sequences (200000068 bp)...
+[0000] Calling mem_process_seqs.., task: 12
+[0000] 1. Calling kt_for - worker_bwt
+[0000] 2. Calling kt_for - worker_aln
+[0000] Inferring insert size distribution of PE reads from data, l_pac: 16491, n: 1982006
+[0000][PE] # candidate unique pairs for (FF, FR, RF, RR): (0, 774, 0, 0)
+[0000][PE] skip orientation FF as there are not enough pairs
+[0000][PE] analyzing insert size distribution for orientation FR...
+[0000][PE] (25, 50, 75) percentile: (49, 68, 102)
+[0000][PE] low and high boundaries for computing mean and std.dev: (1, 208)
+[0000][PE] mean and std.dev: (77.25, 35.01)
+[0000][PE] low and high boundaries for proper pairs: (1, 261)
+[0000][PE] skip orientation RF as there are not enough pairs
+[0000][PE] skip orientation RR as there are not enough pairs
+[0000] 3. Calling kt_for - worker_sam
+	[0000][ M::mem_process_seqs] Processed 1982006 reads in 45.127 CPU sec, 2.192 real sec
+[0000] read_chunk: 200000000, work_chunk_size: 200000069, nseq: 1989732
+	[0000][ M::kt_pipeline] read 1989732 sequences (200000069 bp)...
+[0000] Reallocating initial memory allocations!!
+[0000] Calling mem_process_seqs.., task: 13
+[0000] 1. Calling kt_for - worker_bwt
+[0000] read_chunk: 200000000, work_chunk_size: 200000023, nseq: 1984030
+[0000] 2. Calling kt_for - worker_aln
+	[0000][ M::kt_pipeline] read 1984030 sequences (200000023 bp)...
+[0000] Inferring insert size distribution of PE reads from data, l_pac: 16491, n: 1989732
+[0000][PE] # candidate unique pairs for (FF, FR, RF, RR): (0, 753, 0, 0)
+[0000][PE] skip orientation FF as there are not enough pairs
+[0000][PE] analyzing insert size distribution for orientation FR...
+[0000][PE] (25, 50, 75) percentile: (62, 83, 126)
+[0000][PE] low and high boundaries for computing mean and std.dev: (1, 254)
+[0000][PE] mean and std.dev: (92.32, 39.58)
+[0000][PE] low and high boundaries for proper pairs: (1, 318)
+[0000][PE] skip orientation RF as there are not enough pairs
+[0000][PE] skip orientation RR as there are not enough pairs
+[0000] 3. Calling kt_for - worker_sam
+	[0000][ M::mem_process_seqs] Processed 1989732 reads in 44.222 CPU sec, 2.180 real sec
+[0000] Calling mem_process_seqs.., task: 14
+[0000] 1. Calling kt_for - worker_bwt
+[0000] 2. Calling kt_for - worker_aln
+[0000] Inferring insert size distribution of PE reads from data, l_pac: 16491, n: 1984030
+[0000][PE] # candidate unique pairs for (FF, FR, RF, RR): (0, 526, 0, 0)
+[0000][PE] skip orientation FF as there are not enough pairs
+[0000][PE] analyzing insert size distribution for orientation FR...
+[0000][PE] (25, 50, 75) percentile: (61, 78, 100)
+[0000][PE] low and high boundaries for computing mean and std.dev: (1, 178)
+[0000][PE] mean and std.dev: (80.30, 26.21)
+[0000][PE] low and high boundaries for proper pairs: (1, 217)
+[0000][PE] skip orientation RF as there are not enough pairs
+[0000][PE] skip orientation RR as there are not enough pairs
+[0000] 3. Calling kt_for - worker_sam
+	[0000][ M::mem_process_seqs] Processed 1984030 reads in 44.938 CPU sec, 2.187 real sec
+[0000] read_chunk: 200000000, work_chunk_size: 200000214, nseq: 1982720
+	[0000][ M::kt_pipeline] read 1982720 sequences (200000214 bp)...
+[0000] Calling mem_process_seqs.., task: 15
+[0000] 1. Calling kt_for - worker_bwt
+[0000] 2. Calling kt_for - worker_aln
+[0000] Inferring insert size distribution of PE reads from data, l_pac: 16491, n: 1982720
+[0000][PE] # candidate unique pairs for (FF, FR, RF, RR): (0, 505, 0, 0)
+[0000][PE] skip orientation FF as there are not enough pairs
+[0000][PE] analyzing insert size distribution for orientation FR...
+[0000][PE] (25, 50, 75) percentile: (63, 86, 113)
+[0000][PE] low and high boundaries for computing mean and std.dev: (1, 213)
+[0000][PE] mean and std.dev: (89.14, 33.10)
+[0000][PE] low and high boundaries for proper pairs: (1, 263)
+[0000][PE] skip orientation RF as there are not enough pairs
+[0000][PE] skip orientation RR as there are not enough pairs
+[0000] 3. Calling kt_for - worker_sam
+	[0000][ M::mem_process_seqs] Processed 1982720 reads in 42.546 CPU sec, 2.312 real sec
+[0000] read_chunk: 200000000, work_chunk_size: 200000055, nseq: 1982324
+	[0000][ M::kt_pipeline] read 1982324 sequences (200000055 bp)...
+[0000] Calling mem_process_seqs.., task: 16
+[0000] 1. Calling kt_for - worker_bwt
+[0000] 2. Calling kt_for - worker_aln
+[0000] Inferring insert size distribution of PE reads from data, l_pac: 16491, n: 1982324
+[0000][PE] # candidate unique pairs for (FF, FR, RF, RR): (0, 932, 0, 0)
+[0000][PE] skip orientation FF as there are not enough pairs
+[0000][PE] analyzing insert size distribution for orientation FR...
+[0000][PE] (25, 50, 75) percentile: (66, 89, 132)
+[0000][PE] low and high boundaries for computing mean and std.dev: (1, 264)
+[0000][PE] mean and std.dev: (93.66, 42.04)
+[0000][PE] low and high boundaries for proper pairs: (1, 330)
+[0000][PE] skip orientation RF as there are not enough pairs
+[0000][PE] skip orientation RR as there are not enough pairs
+[0000] 3. Calling kt_for - worker_sam
+	[0000][ M::mem_process_seqs] Processed 1982324 reads in 43.147 CPU sec, 2.276 real sec
+[0000] read_chunk: 200000000, work_chunk_size: 200000258, nseq: 1971830
+	[0000][ M::kt_pipeline] read 1971830 sequences (200000258 bp)...
+[0000] Calling mem_process_seqs.., task: 17
+[0000] 1. Calling kt_for - worker_bwt
+[0000] 2. Calling kt_for - worker_aln
+[0000] Inferring insert size distribution of PE reads from data, l_pac: 16491, n: 1971830
+[0000][PE] # candidate unique pairs for (FF, FR, RF, RR): (0, 447, 0, 0)
+[0000][PE] skip orientation FF as there are not enough pairs
+[0000][PE] analyzing insert size distribution for orientation FR...
+[0000][PE] (25, 50, 75) percentile: (64, 88, 117)
+[0000][PE] low and high boundaries for computing mean and std.dev: (1, 223)
+[0000][PE] mean and std.dev: (91.63, 36.87)
+[0000][PE] low and high boundaries for proper pairs: (1, 276)
+[0000][PE] skip orientation RF as there are not enough pairs
+[0000][PE] skip orientation RR as there are not enough pairs
+[0000] 3. Calling kt_for - worker_sam
+	[0000][ M::mem_process_seqs] Processed 1971830 reads in 47.226 CPU sec, 2.664 real sec
+[0000] read_chunk: 200000000, work_chunk_size: 200000097, nseq: 1989078
+	[0000][ M::kt_pipeline] read 1989078 sequences (200000097 bp)...
+[0000] Calling mem_process_seqs.., task: 18
+[0000] 1. Calling kt_for - worker_bwt
+[0000] read_chunk: 200000000, work_chunk_size: 68249192, nseq: 679442
+	[0000][ M::kt_pipeline] read 679442 sequences (68249192 bp)...
+[0000] 2. Calling kt_for - worker_aln
+[0000] Inferring insert size distribution of PE reads from data, l_pac: 16491, n: 1989078
+[0000][PE] # candidate unique pairs for (FF, FR, RF, RR): (0, 579, 0, 0)
+[0000][PE] skip orientation FF as there are not enough pairs
+[0000][PE] analyzing insert size distribution for orientation FR...
+[0000][PE] (25, 50, 75) percentile: (64, 85, 113)
+[0000][PE] low and high boundaries for computing mean and std.dev: (1, 211)
+[0000][PE] mean and std.dev: (91.32, 38.21)
+[0000][PE] low and high boundaries for proper pairs: (1, 260)
+[0000][PE] skip orientation RF as there are not enough pairs
+[0000][PE] skip orientation RR as there are not enough pairs
+[0000] 3. Calling kt_for - worker_sam
+	[0000][ M::mem_process_seqs] Processed 1989078 reads in 43.114 CPU sec, 2.136 real sec
+[0000] Calling mem_process_seqs.., task: 19
+[0000] 1. Calling kt_for - worker_bwt
+[0000] 2. Calling kt_for - worker_aln
+[0000] Inferring insert size distribution of PE reads from data, l_pac: 16491, n: 679442
+[0000][PE] # candidate unique pairs for (FF, FR, RF, RR): (0, 225, 0, 0)
+[0000][PE] skip orientation FF as there are not enough pairs
+[0000][PE] analyzing insert size distribution for orientation FR...
+[0000][PE] (25, 50, 75) percentile: (62, 90, 127)
+[0000][PE] low and high boundaries for computing mean and std.dev: (1, 257)
+[0000][PE] mean and std.dev: (97.33, 42.35)
+[0000][PE] low and high boundaries for proper pairs: (1, 322)
+[0000][PE] skip orientation RF as there are not enough pairs
+[0000][PE] skip orientation RR as there are not enough pairs
+[0000] 3. Calling kt_for - worker_sam
+	[0000][ M::mem_process_seqs] Processed 679442 reads in 15.011 CPU sec, 0.810 real sec
+[0000] read_chunk: 200000000, work_chunk_size: 0, nseq: 0
+[0000] read_chunk: 200000000, work_chunk_size: 0, nseq: 0
+[0000] Computation ends..
+No. of OMP threads: 20
+Processor is running @2394.647406 MHz
+Runtime profile:
+
+	Time taken for main_mem function: 103.67 sec
+
+	IO times (sec) :
+	Reading IO time (reads) avg: 95.15, (95.15, 95.15)
+	Writing IO time (SAM) avg: 15.96, (15.96, 15.96)
+	Reading IO time (Reference Genome) avg: 0.00, (0.00, 0.00)
+	Index read time avg: 0.00, (0.00, 0.00)
+
+	Overall time (sec) (Excluding Index reading time):
+	PROCESS() (Total compute time + (read + SAM) IO time) : 103.66
+	MEM_PROCESS_SEQ() (Total compute time (Kernel + SAM)), avg: 45.18, (45.18, 45.18)
+
+	 SAM Processing time (sec):
+	--WORKER_SAM avg: 2.98, (2.98, 2.98)
+
+	Kernels' compute time (sec):
+	Total kernel (smem+sal+bsw) time avg: 41.97, (41.97, 41.97)
+		MEM_ALN_CHAIN_FLT avg: 0.00, (0.00, 0.00)
+		MEM_ALN_CHAIN_SEED avg: 0.00, (0.00, 0.00)
+		ERT_SEED_CHAIN avg: 0.00, (0.00, 0.00)
+	LEARNED_SEED_CHAIN avg: 39.92, (40.02, 39.74)
+		SMEM compute avg: 0.00, (0.00, 0.00)
+		SAL compute avg: 0.00, (0.00, 0.00)
+				MEM_SA avg: 0.00, (0.00, 0.00)
+
+		BSW time, avg: 1.34, (1.37, 1.30)
+
+Important parameter settings: 
+	BATCH_SIZE: 512
+	MAX_SEQ_LEN_REF: 256
+	MAX_SEQ_LEN_QER: 128
+	MAX_SEQ_LEN8: 128
+	SEEDS_PER_READ: 500
+	SIMD_WIDTH8 X: 64
+	SIMD_WIDTH16 X: 32
+	AVG_SEEDS_PER_READ: 64

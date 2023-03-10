@@ -565,26 +565,61 @@ cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens/mkB
 sbatch dDocentHPC_dev.sbatch mkBAM config.6.lcwgs
 ```
 
-> Job submitteed on 2023-02-27 @ 12:25 PM
->> jobID: 1295094
->> job completed successfully
+> Job submitted on 2023-02-27 @ 12:25 PM
+>> jobID: 1295094\
+>> job completed successfully\
 
+
+I should use mkBAM_dev2
+
+* Run mkBAM_dev2 
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens/mkBAM_dev
+# Create mkBAM_dev2 directory
+mkdir mkBAM_dev2
+
+# Soft link the re-paired *fq.gz files
+ln *rprd/*fq.gz mkBAM_dev2
+
+# Copy all the needed files/scripts to mkBAM_dev2 directory
+cp mkBAM_dev/reference.009572.mtgenome.fasta mkBAM_dev2
+cp ../../dDocentHPC/dDocentHPC_dev2.sbatch ./mkBAM_dev2/
+cp ../../dDocentHPC/configs/config.6.lcwgs ./mkBAM_dev2/
+## Make sure to edit the config.6.lcwgs (cutoff value for reference) and dDocentHPC_dev2.sbatch (path to correct *.bash file).
+
+cd mkBAM_dev2/
+sbatch dDocentHPC_dev2.sbatch mkBAM config.6.lcwgs
+```
+> Job submitteed on 2023-03-10 @ 09:16 AM
+>> jobID: 1327614\
+>> job completed successfully on 2023-03-10 @ 09:25 AM\
 
 </details>
 
 
 
 <details>
-        <summary>6. Run fltrBAM</summary>
+        <summary>7. Run fltrBAM</summary>
 
 ```
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/siganus_fuscescens/mkBAM_dev
 sbatch dDocentHPC_dev.sbatch fltrBAM config.6.lcwgs
-
 ```
 
 > Job submitteed on 2023-02-28 @ 12:06 PM
 >> jobID: 1302130
->> 
+>> job finished on 2023-02-28 @ 4:33 PM
+
+
+* dev2 fltrBAM 
+```
+sbatch dDocentHPC_dev2.sbatch fltrBAM config.6.lcwgs 
+```
+> Job submitteed on 2023-03-10 @ 09:47 AM
+>> jobID: 1327616\
+>> job completed successfully on 2023-03-10 @ 09:48 AM\
 
 </details>
+
+

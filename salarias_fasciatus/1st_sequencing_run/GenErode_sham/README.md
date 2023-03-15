@@ -1,53 +1,64 @@
-# GenErode pipeline
+## GenErode reassign modern as historical for MapDamage
 
-<img src="docs/source/img/logga_viridis2.png" alt="logo" width="25%"/> 
+### Get / setup directory
 
-GitHub repository for GenErode, a Snakemake pipeline for the analysis 
-of whole-genome sequencing data from historical and modern samples to 
-study patterns of genome erosion.
+```
+cp -r /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_Wahab/GenErode_templatedir /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_sham
+```
 
-## Documentation
+Make directories within this directory to hold your config file, "historical", and reference genome.
 
-The full pipeline documentation can be found on the [repository wiki](https://github.com/NBISweden/GenErode/wiki).
+```
+mkdir /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_sham/config
+mkdir /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_sham/historical
+mkdir /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_sham/reference
+```
 
-## Citation
+For the test - copy the first few contemp fq.gz samples to the appropriate subdirectories (labelled historic). Copy the reference genome to the reference folder.
 
-If you've used GenErode to produce results, please cite our paper:
+```
+cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/fq_raw/Sfa-CBas_00*.fq.gz /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_sham/historical
 
-Kutschera VE, Kierczak M, van der Valk T, von Seth J, Dussex N, Lord E, Dehasque M, Stanton DWG, Emami P, Nystedt B, Dalén L, Díez-del-Molino D (2022) GenErode: a bioinformatics pipeline to investigate genome erosion in endangered and extinct species. BMC Bioinformatics 23, 228 https://doi.org/10.1186/s12859-022-04757-0
+cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/refGenome/GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna.gz /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_sham/reference
 
-## Pipeline overview
+gunzip /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_sham/reference/GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna.gz
+```
 
-<img src="docs/source/img/figure_1_generode_pipeline_v7.png" alt="processing" width="75%"/>
+Rename to only include the scaffold names in FASTA description (>) lines. Retain only the first scaffold.
 
-Figure 1: Overview of the GenErode pipeline data processing tracks. Input 
-and output files formats, dependencies between steps, and main software used
-are shown. Optional steps are highlighted in red. 
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_sham/reference
 
-<img src="docs/source/img/figure_2_generode_pipeline_v7.png" alt="analysis" width="75%"/>
+sed -n '/>NC_043746.1/q;p' GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna > GCF_902148845.1_fSalaFa1.1_chr1.fna
 
-Figure 2: Overview of the GenErode pipeline data analysis tracks and final reports.
-Input file formats and main software used are shown.
+sed 's/ .*//g' GCF_902148845.1_fSalaFa1.1_chr1.fna > GCF_902148845.1_fSalaFa1.1_chr1_rename.fna
 
+rm GCF_902148845.1_fSalaFa1.1_chr1.fna
 
-## Licence information
+rm GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna
+```
 
-GenErode pipeline
+### Copy / edit config files
 
-Copyright (C) 2022  Verena Kutschera
+Copying the config files from the previous test run.
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+```
+cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_raw/config/config.yaml /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_sham/config
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_raw/config/Sfa_7_modern_samples.txt /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_sham/config/Sfa_7_pseudohistoric_samples.txt
+```
 
-You should have received a copy of the GNU General Public License
-along with this program. If not, see <https://www.gnu.org/licenses/>.
+Edit with names of "historic" samples.
 
 
-Logo: Jonas Söderberg
+### Try to run!
+
+Copy and run the sbatch file.
+
+```
+cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_Wahab/run_GenErode.sbatch /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_sham
+
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_sham
+
+sbatch run_GenErode.sbatch
+```

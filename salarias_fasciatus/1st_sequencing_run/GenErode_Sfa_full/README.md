@@ -88,7 +88,7 @@ cp /home/breid/GenErode_testdata/config/config_sum_rhino.yaml /home/e1garcia/sho
 
 Create the files providing path info for historic samples.
 
-``
+```
 vi /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_Sfa_full/config/Sfa_32_historical_samples.txt
 ```
 
@@ -132,7 +132,7 @@ SfaABas035_Ex1_L3	HK7K2DSX3:3	illumina 	historical/Sfa-ABas_035_Ex1_L3_1.fq.gz	h
 
 Create the files providing path info for modern samples.
 
-``
+```
 vi /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_Sfa_full/config/Sfa_32_historical_samples.txt
 ```
 

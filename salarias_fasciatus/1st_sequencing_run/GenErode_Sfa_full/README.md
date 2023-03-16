@@ -95,6 +95,7 @@ vi /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st
 File format + header: samplename_index_lane readgroup_id readgroup_platform path_to_R1_fastq_file path_to_R2_fastq_file. Note that the 3-underscore convention in sample_index_lane must be followed must remove hyphens/underscores from sample names.
 
 ```
+samplename_index_lane readgroup_id readgroup_platform path_to_R1_fastq_file path_to_R2_fastq_file
 SfaABas001_Ex1_L3	HK7K2DSX3:3	illumina 	historical/Sfa-ABas_001_Ex1_L3_1.fq.gz	historical/Sfa-ABas_001_Ex1_L3_2.fq.gz
 SfaABas002_Ex1_L3	HK7K2DSX3:3	illumina 	historical/Sfa-ABas_002_Ex1_L3_1.fq.gz	historical/Sfa-ABas_002_Ex1_L3_2.fq.gz
 SfaABas003_Ex1_L3	HK7K2DSX3:3	illumina 	historical/Sfa-ABas_003_Ex1_L3_1.fq.gz	historical/Sfa-ABas_003_Ex1_L3_2.fq.gz

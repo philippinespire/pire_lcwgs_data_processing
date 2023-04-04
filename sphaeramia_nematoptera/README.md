@@ -102,9 +102,9 @@ Potential issues:
 ```
 Potential issues:
   * one hit, one genome, no ID -
-     Alb: %, Contemp: %
+     Alb: 43-92%, Contemp: 93-94%
   * no one hit, one genome to any potential contaminators (bacteria, virus, human, etc) -
-    * Alb: %, Contemp: %
+    * Alb: 3.7-21%, Contemp: 1.9-7%%
 ```
 </p>
 </details>

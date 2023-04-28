@@ -1,17 +1,17 @@
 Looking to launch executable "/opt/conda/bin/bwa-meme_mode3.avx512bw", simd = _mode3.avx512bw
 Launching executable "/opt/conda/bin/bwa-meme_mode3.avx512bw"
-[bwa_index] Pack FASTA... 8.32 sec
+[bwa_index] Pack FASTA... 10.39 sec
 * Entering FMI_search
-init ticks = 6078636
-ref seq len = 0
-binary seq ticks = 31310
-build suffix-array ticks = 522
-ref_seq_len = 0
-count = 0, 0, 0, 0, 0
-BWT[0] = 4
+init ticks = 133905473708
+ref seq len = 2897756732
+binary seq ticks = 73737165286
+build suffix-array ticks = 2240213278260
+ref_seq_len = 2897756732
+count = 0, 895477252, 1448878366, 2002279480, 2897756732
+BWT[133786390] = 4
 CP_SHIFT = 6, CP_MASK = 63
 sizeof CP_OCC = 64
-pos: 1, ref_seq_len__: 0
-max_occ_ind = 0
-build fm-index ticks = 10157574
-Total time taken: 21.3540
+pos: 362219592, ref_seq_len__: 362219591
+max_occ_ind = 45277448
+build fm-index ticks = 397792214392
+Total time taken: 1203.9984

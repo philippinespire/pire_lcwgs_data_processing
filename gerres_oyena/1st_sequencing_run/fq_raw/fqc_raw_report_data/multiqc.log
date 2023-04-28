@@ -1,0 +1,913 @@
+[2023-04-28 13:32:30,345] multiqc                                            [DEBUG  ]  No MultiQC config found: /opt/conda/lib/python3.7/site-packages/multiqc_config.yaml
+[2023-04-28 13:32:30,345] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/cbird/.multiqc_config.yaml
+[2023-04-28 13:32:30,346] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
+[2023-04-28 13:32:30,346] multiqc                                            [DEBUG  ]  Found command line config: {'max_table_rows': 3000}
+[2023-04-28 13:32:30,346] multiqc                                            [DEBUG  ]  New config 'max_table_rows': 3000
+[2023-04-28 13:32:30,347] multiqc                                            [DEBUG  ]  Command used: /opt/conda/bin/multiqc -v -p -ip -f --data-dir --data-format tsv --cl-config max_table_rows: 3000 --filename fqc_raw_report --outdir fq_raw fq_raw
+[2023-04-28 13:32:30,450] multiqc                                            [DEBUG  ]  Could not connect to multiqc.info for version check: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1076)>
+[2023-04-28 13:32:30,451] multiqc                                            [INFO   ]  This is MultiQC v1.9
+[2023-04-28 13:32:30,451] multiqc                                            [DEBUG  ]  Command     : /opt/conda/bin/multiqc -v -p -ip -f --data-dir --data-format tsv --cl-config max_table_rows: 3000 --filename fqc_raw_report --outdir fq_raw fq_raw
+[2023-04-28 13:32:30,451] multiqc                                            [DEBUG  ]  Working dir : /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gerres_oyena/1st_sequencing_run
+[2023-04-28 13:32:30,451] multiqc                                            [INFO   ]  Template    : default
+[2023-04-28 13:32:30,451] multiqc                                            [DEBUG  ]  Running Python 3.7.7 (default, Jun 26 2020, 05:10:03)  [GCC 7.3.0]
+[2023-04-28 13:32:30,451] multiqc                                            [INFO   ]  Searching   : /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gerres_oyena/1st_sequencing_run/fq_raw
+[2023-04-28 13:32:30,452] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, conpair, peddy, somalier, methylQA, mosdepth, phantompeakqualtools, qualimap, preseq, quast, qorts, rna_seqc, rockhopper, rsem, rseqc, busco, goleft_indexcov, disambiguate, supernova, deeptools, sargasso, verifybamid, mirtrace, happy, mirtop, homer, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, fgbio, dragen, dedup, damageprofiler, biobambam2, mtnucratio, picard, prokka, samblaster, samtools, sexdeterrmine, bamtools, jellyfish, vcftools, longranger, stacks, varscan2, bbmap, bismark, biscuit, hicexplorer, hicup, hicpro, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, snpsplit, kat, leehom, adapterRemoval, clipandmerge, cutadapt, flexbar, kaiju, kraken, malt, trimmomatic, sickle, skewer, sortmerna, biobloomtools, fastq_screen, afterqc, fastp, fastqc, pycoqc, minionqc, multivcfanalyzer, clusterflow, bcl2fastq, interop, ivar, flash, seqyclean
+[2023-04-28 13:32:30,452] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmpzmfgvclc
+[2023-04-28 13:32:30,658] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_048-Ex1-6H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:30,664] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_048-Ex1-6H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:30,719] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_042-Ex1-6B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:30,724] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_042-Ex1-6B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:30,776] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_040-Ex1-5H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:30,781] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_040-Ex1-5H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:30,823] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_007-Ex1-8E-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:30,835] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_047-Ex1-6E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:30,840] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_047-Ex1-6E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:30,881] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_024-Ex1-3H-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:30,881] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_048-Ex1-6H-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:30,893] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: tamucc_files.txt
+[2023-04-28 13:32:30,898] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: tamucc_files.txt
+[2023-04-28 13:32:30,924] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_014-Ex1-4H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:30,929] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_014-Ex1-4H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:30,980] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_060-Ex1-8D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:30,985] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_060-Ex1-8D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:31,026] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_052-Ex1-3D-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:31,026] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_013-Ex1-7H-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:31,027] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_054-Ex1-1B-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:31,028] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_055-Ex1-7G-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:31,028] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_038-Ex1-6F-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:31,039] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_038-Ex1-6F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:31,044] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_038-Ex1-6F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:31,095] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_072-Ex1-4D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:31,101] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_072-Ex1-4D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:31,140] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_025-Ex1-4A-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:31,151] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_067-Ex1-9C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:31,156] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_067-Ex1-9C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:31,208] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_063-Ex1-8G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:31,213] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_063-Ex1-8G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:31,265] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_009-Ex1-8H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:31,269] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_009-Ex1-8H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:31,309] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_009-Ex1-8H-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:31,309] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_067-Ex1-9C-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:31,310] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_022-Ex1-3F-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:31,310] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_066-Ex1-9B-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:31,321] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_026-Ex1-2F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:31,326] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_026-Ex1-2F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:31,378] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_023-Ex1-3G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:31,383] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_023-Ex1-3G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:31,424] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_052-Ex1-7D-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:31,435] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_073-Ex1-4C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:31,441] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_073-Ex1-4C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:31,492] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_058-Ex1-8B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:31,497] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_058-Ex1-8B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:31,538] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_031-Ex1-4G-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:31,549] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_037-Ex1-3H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:31,554] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_037-Ex1-3H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:31,597] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_014-Ex1-4H-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:31,608] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_002-Ex1-5C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:31,613] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_002-Ex1-5C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:31,653] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_008-Ex1-4B-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:31,664] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_092-Ex1-4A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:31,669] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_092-Ex1-4A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:31,710] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_037-Ex1-5E-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:31,711] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_008-Ex1-4B-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:31,722] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_073-Ex1-4C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:31,727] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_073-Ex1-4C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:31,767] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_053-Ex1-2E-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:31,778] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_038-Ex1-6F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:31,784] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_038-Ex1-6F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:31,834] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_049-Ex1-7A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:31,839] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_049-Ex1-7A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:31,882] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_091-Ex1-4G-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:31,883] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_013-Ex1-2E-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:31,883] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_058-Ex1-8B-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:31,895] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_041-Ex1-3C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:31,900] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_041-Ex1-3C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:31,940] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_053-Ex1-7E-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:31,952] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_066-Ex1-9B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:31,957] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_066-Ex1-9B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:31,998] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_042-Ex1-3B-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:32,009] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_056-Ex1-3G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:32,014] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_056-Ex1-3G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:32,064] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_004-Ex1-2D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:32,069] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_004-Ex1-2D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:32,119] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_041-Ex1-6A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:32,124] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_041-Ex1-6A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:32,177] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_012-Ex1-2D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:32,182] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_012-Ex1-2D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:32,224] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_010-Ex1-2B-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:32,235] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_040-Ex1-7A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:32,240] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_040-Ex1-7A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:32,280] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_008-Ex1-1H-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:32,280] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_031-Ex1-4G-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:32,281] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_072-Ex1-4D-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:32,292] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_027-Ex1-4C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:32,297] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_027-Ex1-4C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:32,350] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_025-Ex1-4A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:32,355] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_025-Ex1-4A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:32,407] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_042-Ex1-3B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:32,412] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_042-Ex1-3B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:32,451] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_073-Ex1-4C-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:32,451] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_039-Ex1-8A-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:32,452] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_071-Ex1-3E-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:32,452] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_062-Ex1-8F-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:32,463] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_033-Ex1-2B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:32,468] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_033-Ex1-2B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:32,519] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_027-Ex1-2H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:32,524] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_027-Ex1-2H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:32,576] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_061-Ex1-7E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:32,581] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_061-Ex1-7E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:32,632] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_053-Ex1-2E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:32,637] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_053-Ex1-2E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:32,677] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_013-Ex1-7H-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:32,677] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_002-Ex1-1B-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:32,678] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_026-Ex1-2F-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:32,690] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_004-Ex1-2D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:32,695] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_004-Ex1-2D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:32,735] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_002-Ex1-5C-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:32,747] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_021-Ex1-3E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:32,752] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_021-Ex1-3E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:32,804] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_050-Ex1-7B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:32,810] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_050-Ex1-7B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:32,861] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_061-Ex1-8E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:32,866] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_061-Ex1-8E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:32,919] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_017-Ex1-5H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:32,924] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_017-Ex1-5H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:32,965] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_061-Ex1-8E-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:32,965] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_057-Ex1-8A-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:32,977] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_044-Ex1-4E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:32,982] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_044-Ex1-4E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:33,022] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_044-Ex1-6D-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:33,022] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_032-Ex1-4H-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:33,034] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_033-Ex1-2B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:33,038] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_033-Ex1-2B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:33,089] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_022-Ex1-3F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:33,094] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_022-Ex1-3F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:33,146] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_029-Ex1-4E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:33,151] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_029-Ex1-4E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:33,203] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_086-Ex1-5F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:33,207] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_086-Ex1-5F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:33,247] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_054-Ex1-7F-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:33,247] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_016-Ex1-2H-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:33,258] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_025-Ex1-5D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:33,263] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_025-Ex1-5D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:33,314] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_008-Ex1-4B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:33,319] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_008-Ex1-4B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:33,358] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_060-Ex1-7D-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:33,369] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: origFileNames.txt
+[2023-04-28 13:32:33,374] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: origFileNames.txt
+[2023-04-28 13:32:33,397] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_032-Ex1-4H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:33,402] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_032-Ex1-4H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:33,454] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_092-Ex1-4A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:33,459] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_092-Ex1-4A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:33,510] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_053-Ex1-7E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:33,515] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_053-Ex1-7E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:33,557] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_052-Ex1-7D-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:33,558] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_028-Ex1-4D-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:33,558] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_087-Ex1-6C-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:33,571] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_024-Ex1-3H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:33,576] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_024-Ex1-3H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:33,618] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_014-Ex1-4H-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:33,629] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_059-Ex1-8G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:33,634] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_059-Ex1-8G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:33,674] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_004-Ex1-2D-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:33,686] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_040-Ex1-7A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:33,691] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_040-Ex1-7A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:33,743] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_090-Ex1-5G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:33,748] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_090-Ex1-5G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:33,791] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_057-Ex1-8A-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:33,791] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_010-Ex1-6D-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:33,803] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_052-Ex1-3D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:33,808] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_052-Ex1-3D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:33,859] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_022-Ex1-3F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:33,864] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_022-Ex1-3F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:33,918] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_036-Ex1-5D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:33,923] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_036-Ex1-5D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:33,964] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_010-Ex1-2B-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:33,964] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_040-Ex1-5H-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:33,975] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_057-Ex1-4F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:33,981] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_057-Ex1-4F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:34,020] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_058-Ex1-1G-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:34,021] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_047-Ex1-6E-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:34,032] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_095-Ex1-5A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:34,038] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_095-Ex1-5A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:34,089] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_074-Ex1-1C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:34,094] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_074-Ex1-1C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:34,134] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_001-Ex1-1A-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:34,134] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_042-Ex1-6B-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:34,145] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_014-Ex1-2F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:34,150] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_014-Ex1-2F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:34,203] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_067-Ex1-9C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:34,208] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_067-Ex1-9C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:34,259] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_028-Ex1-4D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:34,264] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_028-Ex1-4D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:34,306] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_071-Ex1-3E-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:34,317] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_066-Ex1-9B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:34,322] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_066-Ex1-9B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:34,374] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_009-Ex1-8H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:34,379] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_009-Ex1-8H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:34,429] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_032-Ex1-4H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:34,434] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_032-Ex1-4H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:34,475] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_060-Ex1-7D-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:34,476] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_072-Ex1-4D-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:34,476] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_039-Ex1-8A-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:34,476] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_003-Ex1-1C-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:34,488] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_031-Ex1-1F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:34,492] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_031-Ex1-1F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:34,543] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_011-Ex1-2C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:34,548] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_011-Ex1-2C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:34,589] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_041-Ex1-3C-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:34,590] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_025-Ex1-4A-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:34,601] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_054-Ex1-7F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:34,605] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_054-Ex1-7F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:34,647] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_003-Ex1-7G-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:34,658] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_040-Ex1-5H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:34,662] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_040-Ex1-5H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:34,714] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_064-Ex1-8H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:34,719] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_064-Ex1-8H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:34,760] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_037-Ex1-5E-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:34,773] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_015-Ex1-1E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:34,778] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_015-Ex1-1E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:34,818] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_088-Ex1-6H-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:34,818] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_020-Ex1-3D-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:34,830] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_012-Ex1-2D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:34,835] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_012-Ex1-2D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:34,888] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_046-Ex1-6F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:34,893] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_046-Ex1-6F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:34,936] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_020-Ex1-5B-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:34,949] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_054-Ex1-1B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:34,954] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_054-Ex1-1B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:35,005] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_047-Ex1-6G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:35,010] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_047-Ex1-6G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:35,051] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_015-Ex1-2G-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:35,063] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_011-Ex1-2C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:35,068] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_011-Ex1-2C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:35,110] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_039-Ex1-5G-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:35,137] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_086-Ex1-5F-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:35,137] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_036-Ex1-5D-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:35,138] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_095-Ex1-5A-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:35,150] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_005-Ex1-6A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:35,155] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_005-Ex1-6A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:35,195] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_067-Ex1-9C-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:35,195] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_021-Ex1-3E-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:35,208] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_010-Ex1-6D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:35,213] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_010-Ex1-6D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:35,253] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_055-Ex1-7G-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:35,266] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_003-Ex1-1C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:35,272] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_003-Ex1-1C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:35,325] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_035-Ex1-3A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:35,331] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_035-Ex1-3A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:35,371] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_051-Ex1-7C-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:35,371] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_058-Ex1-8B-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:35,372] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_066-Ex1-9B-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:35,372] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_001-Ex1-7F-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:35,372] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_065-Ex1-9A-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:35,384] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_087-Ex1-6C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:35,389] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_087-Ex1-6C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:35,429] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_026-Ex1-2F-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:35,440] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_054-Ex1-1B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:35,445] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_054-Ex1-1B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:35,497] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_038-Ex1-5F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:35,501] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_038-Ex1-5F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:35,553] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_060-Ex1-7D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:35,558] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_060-Ex1-7D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:35,598] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_035-Ex1-3A-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:35,600] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_015-Ex1-2G-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:35,600] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_041-Ex1-6A-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:35,600] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_032-Ex1-4H-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:35,600] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_029-Ex1-4E-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:35,601] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_070-Ex1-1A-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:35,612] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_056-Ex1-3G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:35,616] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_056-Ex1-3G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:35,656] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_087-Ex1-6C-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:35,667] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_023-Ex1-3G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:35,671] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_023-Ex1-3G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:35,713] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_013-Ex1-2E-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:35,713] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_062-Ex1-3F-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:35,713] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_041-Ex1-6A-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:35,724] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_028-Ex1-4D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:35,729] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_028-Ex1-4D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:35,770] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_092-Ex1-4A-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:35,781] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_045-Ex1-6E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:35,786] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_045-Ex1-6E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:35,826] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_019-Ex1-3C-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:35,827] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_016-Ex1-7C-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:35,837] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_002-Ex1-5C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:35,842] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_002-Ex1-5C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:35,881] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_054-Ex1-7F-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:35,893] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_025-Ex1-5D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:35,898] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_025-Ex1-5D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:35,948] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_012-Ex1-1H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:35,953] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_012-Ex1-1H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:35,994] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_017-Ex1-3A-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:35,994] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_031-Ex1-1F-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:35,994] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_007-Ex1-1G-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:35,994] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_047-Ex1-6E-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:35,995] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_059-Ex1-8C-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:36,007] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_030-Ex1-4F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:36,011] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_030-Ex1-4F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:36,052] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_017-Ex1-5H-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:36,052] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_015-Ex1-1E-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:36,052] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_046-Ex1-6F-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:36,063] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_017-Ex1-3A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:36,068] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_017-Ex1-3A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:36,120] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_052-Ex1-7D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:36,125] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_052-Ex1-7D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:36,177] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_088-Ex1-6H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:36,182] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_088-Ex1-6H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:36,233] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_036-Ex1-7B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:36,238] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_036-Ex1-7B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:36,279] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_004-Ex1-1D-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:36,279] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_031-Ex1-1F-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:36,280] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_038-Ex1-6F-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:36,291] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_070-Ex1-1A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:36,296] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_070-Ex1-1A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:36,336] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_049-Ex1-7A-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:36,336] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_090-Ex1-5G-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:36,348] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_071-Ex1-3E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:36,353] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_071-Ex1-3E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:36,403] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_044-Ex1-4E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:36,408] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_044-Ex1-4E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:36,447] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_040-Ex1-7A-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:36,448] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_037-Ex1-3H-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:36,448] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_003-Ex1-1C-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:36,459] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_051-Ex1-7C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:36,464] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_051-Ex1-7C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:36,505] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_044-Ex1-4E-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:36,506] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_032-Ex1-1D-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:36,506] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_073-Ex1-4C-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:36,517] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_062-Ex1-8F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:36,522] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_062-Ex1-8F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:36,563] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_016-Ex1-2H-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:36,575] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_074-Ex1-1C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:36,579] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_074-Ex1-1C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:36,619] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_027-Ex1-2H-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:36,630] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_046-Ex1-6F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:36,635] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_046-Ex1-6F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:36,676] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_036-Ex1-5D-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:36,688] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_026-Ex1-4B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:36,693] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_026-Ex1-4B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:36,745] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_084-Ex1-5E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:36,750] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_084-Ex1-5E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:36,800] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_019-Ex1-3C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:36,805] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_019-Ex1-3C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:36,856] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_085-Ex1-6G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:36,861] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_085-Ex1-6G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:36,911] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_016-Ex1-7C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:36,916] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_016-Ex1-7C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:36,966] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_058-Ex1-1G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:36,970] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_058-Ex1-1G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:37,023] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_004-Ex1-1D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:37,028] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_004-Ex1-1D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:37,080] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_008-Ex1-1H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:37,086] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_008-Ex1-1H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:37,128] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_050-Ex1-8F-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:37,128] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_049-Ex1-7A-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:37,143] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: newFileNames.txt
+[2023-04-28 13:32:37,155] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_036-Ex1-7B-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:37,166] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_008-Ex1-1H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:37,171] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_008-Ex1-1H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:37,223] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_006-Ex1-1F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:37,227] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_006-Ex1-1F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:37,279] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_052-Ex1-7D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:37,284] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_052-Ex1-7D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:37,338] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_084-Ex1-5E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:37,343] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_084-Ex1-5E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:37,394] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_048-Ex1-6H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:37,399] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_048-Ex1-6H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:37,451] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_013-Ex1-2E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:37,457] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_013-Ex1-2E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:37,499] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_027-Ex1-2H-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:37,510] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_020-Ex1-5B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:37,515] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_020-Ex1-5B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:37,555] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_016-Ex1-7C-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:37,566] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_086-Ex1-5F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:37,571] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_086-Ex1-5F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:37,622] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_048-Ex1-8B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:37,628] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_048-Ex1-8B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:37,667] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_057-Ex1-4F-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:37,679] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_072-Ex1-4D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:37,684] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_072-Ex1-4D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:37,735] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_063-Ex1-8G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:37,740] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_063-Ex1-8G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:37,792] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_016-Ex1-7C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:37,797] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_016-Ex1-7C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:37,836] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_056-Ex1-3G-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:37,836] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_044-Ex1-6D-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:37,836] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_089-Ex1-6B-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:37,847] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_003-Ex1-7G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:37,852] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_003-Ex1-7G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:37,903] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_043-Ex1-6C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:37,908] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_043-Ex1-6C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:37,960] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_062-Ex1-3F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:37,965] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_062-Ex1-3F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,014] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_010-Ex1-6D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,019] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_010-Ex1-6D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,069] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_003-Ex1-7G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:38,073] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_003-Ex1-7G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:38,124] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_057-Ex1-8A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,129] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_057-Ex1-8A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,181] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_058-Ex1-1G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:38,186] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_058-Ex1-1G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:38,226] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_020-Ex1-5B-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:38,226] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_037-Ex1-3H-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:38,226] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_007-Ex1-1G-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:38,238] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_065-Ex1-9A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,243] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_065-Ex1-9A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,285] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_007-Ex1-8E-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:38,286] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_033-Ex1-5A-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:38,286] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_060-Ex1-8D-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:38,287] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_043-Ex1-6C-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:38,288] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_029-Ex1-4E-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:38,300] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_031-Ex1-1F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,304] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_031-Ex1-1F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,356] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_039-Ex1-8A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:38,361] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_039-Ex1-8A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:38,401] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_084-Ex1-5E-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:38,412] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_068-Ex1-2A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:38,417] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_068-Ex1-2A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:38,468] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_014-Ex1-2F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:38,473] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_014-Ex1-2F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:38,527] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_039-Ex1-5G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,533] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_039-Ex1-5G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,574] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_021-Ex1-3E-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:38,574] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_038-Ex1-5F-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:38,575] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_012-Ex1-2D-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:38,587] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_059-Ex1-8C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,592] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_059-Ex1-8C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,644] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_044-Ex1-6D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,649] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_044-Ex1-6D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,690] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_056-Ex1-7H-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:38,690] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_056-Ex1-3G-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:38,691] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_053-Ex1-2E-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:38,691] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_018-Ex1-3B-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:38,702] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_061-Ex1-8E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:38,708] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_061-Ex1-8E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:38,761] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_007-Ex1-8E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,766] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_007-Ex1-8E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,816] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_034-Ex1-5B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,821] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_034-Ex1-5B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,872] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_091-Ex1-4G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,877] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_091-Ex1-4G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,916] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_063-Ex1-8G-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:38,928] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_087-Ex1-6C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,933] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_087-Ex1-6C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,984] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_054-Ex1-7F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:38,989] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_054-Ex1-7F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:39,041] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_090-Ex1-5G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:39,045] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_090-Ex1-5G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:39,085] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_018-Ex1-3B-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:39,096] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_042-Ex1-6B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:39,101] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_042-Ex1-6B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:39,142] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_019-Ex1-3C-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:39,153] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_049-Ex1-7A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:39,158] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_049-Ex1-7A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:39,200] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_063-Ex1-2G-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:39,200] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_044-Ex1-4E-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:39,200] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_065-Ex1-9A-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:39,200] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_061-Ex1-8E-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:39,201] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_036-Ex1-7B-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:39,201] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_068-Ex1-2A-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:39,213] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_033-Ex1-5A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:39,217] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_033-Ex1-5A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:39,269] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_055-Ex1-7G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:39,274] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_055-Ex1-7G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:39,326] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_029-Ex1-4E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:39,331] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_029-Ex1-4E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:39,371] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_095-Ex1-5A-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:39,371] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_017-Ex1-3A-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:39,371] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_062-Ex1-8F-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:39,371] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_050-Ex1-8F-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:39,372] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_035-Ex1-3A-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:39,383] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_036-Ex1-7B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:39,388] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_036-Ex1-7B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:39,440] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_016-Ex1-2H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:39,445] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_016-Ex1-2H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:39,498] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_037-Ex1-3H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:39,503] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_037-Ex1-3H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:39,542] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_041-Ex1-3C-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:39,543] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_085-Ex1-6G-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:39,554] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: old_new_filenames.log
+[2023-04-28 13:32:39,559] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: old_new_filenames.log
+[2023-04-28 13:32:39,575] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_009-Ex1-8H-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:39,586] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_051-Ex1-7C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:39,591] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_051-Ex1-7C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:39,633] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_059-Ex1-8G-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:39,634] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_005-Ex1-6A-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:39,635] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_064-Ex1-8D-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:39,635] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_028-Ex1-4D-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:39,647] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_061-Ex1-7E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:39,652] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_061-Ex1-7E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:39,706] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_006-Ex1-1F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:39,711] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_006-Ex1-1F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:39,753] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_001-Ex1-7F-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:39,765] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_053-Ex1-2E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:39,771] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_053-Ex1-2E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:39,823] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_034-Ex1-5B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:39,828] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_034-Ex1-5B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:39,880] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_001-Ex1-7F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:39,885] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_001-Ex1-7F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:39,924] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_002-Ex1-5C-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:39,924] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_006-Ex1-1F-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:39,936] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_020-Ex1-3D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:39,941] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_020-Ex1-3D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:39,991] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_052-Ex1-3D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:39,996] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_052-Ex1-3D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:40,035] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_005-Ex1-6A-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:40,035] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_017-Ex1-5H-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:40,035] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_068-Ex1-2A-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:40,036] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_026-Ex1-4B-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:40,036] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_047-Ex1-6G-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:40,048] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_012-Ex1-1H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:40,052] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_012-Ex1-1H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:40,093] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_026-Ex1-4B-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:40,093] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_085-Ex1-6G-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:40,105] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_050-Ex1-7B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:40,110] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_050-Ex1-7B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:40,161] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_060-Ex1-8D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:40,166] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_060-Ex1-8D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:40,218] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_060-Ex1-7D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:40,223] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_060-Ex1-7D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:40,273] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_015-Ex1-2G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:40,277] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_015-Ex1-2G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:40,332] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_003-Ex1-1C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:40,337] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_003-Ex1-1C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:40,378] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_048-Ex1-8B-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:40,391] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_013-Ex1-7H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:40,397] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_013-Ex1-7H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:40,448] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_055-Ex1-7G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:40,453] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_055-Ex1-7G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:40,507] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_047-Ex1-6G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:40,512] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_047-Ex1-6G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:40,565] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_035-Ex1-5C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:40,570] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_035-Ex1-5C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:40,612] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_039-Ex1-5G-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:40,613] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_035-Ex1-5C-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:40,628] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_053-Ex1-7E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:40,633] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_053-Ex1-7E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:40,677] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_040-Ex1-7A-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:40,689] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_039-Ex1-8A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:40,695] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_039-Ex1-8A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:40,748] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_044-Ex1-6D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:40,754] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_044-Ex1-6D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:40,808] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_019-Ex1-3C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:40,813] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_019-Ex1-3C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:40,866] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_071-Ex1-3E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:40,872] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_071-Ex1-3E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:40,913] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_049-Ex1-8C-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:40,914] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_057-Ex1-4F-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:40,926] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_063-Ex1-2G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:40,932] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_063-Ex1-2G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:40,972] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_054-Ex1-1B-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:40,973] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_005-Ex1-1E-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:40,973] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_049-Ex1-8C-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:40,973] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_011-Ex1-2C-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:40,986] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_002-Ex1-1B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:40,991] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_002-Ex1-1B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:41,044] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_048-Ex1-8B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:41,049] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_048-Ex1-8B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:41,089] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_061-Ex1-7E-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:41,089] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_034-Ex1-5B-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:41,090] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_020-Ex1-3D-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:41,091] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_056-Ex1-7H-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:41,091] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_058-Ex1-1G-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:41,091] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_062-Ex1-3F-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:41,091] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_027-Ex1-4C-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:41,103] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_045-Ex1-6E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:41,108] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_045-Ex1-6E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:41,151] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_090-Ex1-5G-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:41,163] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_049-Ex1-8C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:41,167] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_049-Ex1-8C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:41,219] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_065-Ex1-9A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:41,224] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_065-Ex1-9A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:41,277] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_006-Ex1-2C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:41,282] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_006-Ex1-2C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:41,334] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_043-Ex1-6C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:41,339] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_043-Ex1-6C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:41,392] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_064-Ex1-8H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:41,397] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_064-Ex1-8H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:41,439] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_034-Ex1-5B-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:41,439] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_003-Ex1-7G-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:41,439] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_002-Ex1-1B-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:41,452] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_013-Ex1-2E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:41,457] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_013-Ex1-2E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:41,512] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_031-Ex1-4G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:41,518] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_031-Ex1-4G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:41,559] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_088-Ex1-6H-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:41,571] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_032-Ex1-1D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:41,576] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_032-Ex1-1D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:41,616] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_033-Ex1-2B-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:41,617] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_032-Ex1-1D-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:41,628] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_056-Ex1-7H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:41,633] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_056-Ex1-7H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:41,687] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_005-Ex1-1E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:41,692] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_005-Ex1-1E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:41,745] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_013-Ex1-7H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:41,750] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_013-Ex1-7H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:41,791] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_030-Ex1-4F-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:41,803] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_026-Ex1-4B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:41,808] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_026-Ex1-4B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:41,861] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy_LCWGS-TestLane_SequenceNameDecode.tsv
+[2023-04-28 13:32:41,866] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy_LCWGS-TestLane_SequenceNameDecode.tsv
+[2023-04-28 13:32:41,878] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_033-Ex1-2B-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:41,889] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_037-Ex1-5E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:41,894] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_037-Ex1-5E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:41,936] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_052-Ex1-3D-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:41,948] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_017-Ex1-3A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:41,953] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_017-Ex1-3A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:41,996] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_047-Ex1-6G-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:42,007] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_006-Ex1-2C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:42,012] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_006-Ex1-2C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:42,053] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_001-Ex1-1A-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:42,054] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_008-Ex1-1H-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:42,068] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_018-Ex1-3B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:42,073] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_018-Ex1-3B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:42,114] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_074-Ex1-1C-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:42,126] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_089-Ex1-6B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:42,131] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_089-Ex1-6B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:42,183] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_064-Ex1-8D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:42,189] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_064-Ex1-8D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:42,229] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_059-Ex1-8G-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:42,240] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_024-Ex1-3H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:42,245] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_024-Ex1-3H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:42,298] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_009-Ex1-2A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:42,304] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_009-Ex1-2A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:42,359] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_030-Ex1-4F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:42,364] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_030-Ex1-4F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:42,405] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_023-Ex1-3G-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:42,405] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_022-Ex1-3F-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:42,417] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_016-Ex1-2H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:42,422] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_016-Ex1-2H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:42,476] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_031-Ex1-4G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:42,481] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_031-Ex1-4G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:42,535] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_038-Ex1-5F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:42,540] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_038-Ex1-5F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:42,593] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_008-Ex1-4B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:42,598] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_008-Ex1-4B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:42,638] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_070-Ex1-1A-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:42,638] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_006-Ex1-1F-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:42,650] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_041-Ex1-3C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:42,655] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_041-Ex1-3C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:42,706] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_068-Ex1-2A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:42,711] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_068-Ex1-2A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:42,761] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_063-Ex1-2G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:42,766] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_063-Ex1-2G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:42,817] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_070-Ex1-1A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:42,822] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_070-Ex1-1A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:42,862] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_012-Ex1-2D-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:42,863] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_061-Ex1-7E-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:42,875] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_056-Ex1-7H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:42,880] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_056-Ex1-7H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:42,932] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_010-Ex1-2B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:42,937] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_010-Ex1-2B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:42,978] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_009-Ex1-2A-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:42,978] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_064-Ex1-8H-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:42,990] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_007-Ex1-1G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:42,995] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_007-Ex1-1G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:43,038] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_014-Ex1-2F-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:43,038] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_023-Ex1-3G-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:43,039] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_050-Ex1-7B-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:43,050] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_049-Ex1-8C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:43,055] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_049-Ex1-8C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:43,105] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_005-Ex1-1E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:43,110] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_005-Ex1-1E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:43,161] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_089-Ex1-6B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:43,166] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_089-Ex1-6B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:43,218] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_032-Ex1-1D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:43,223] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_032-Ex1-1D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:43,264] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_089-Ex1-6B-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:43,276] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_035-Ex1-5C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:43,281] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_035-Ex1-5C-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:43,323] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_063-Ex1-8G-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:43,335] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_027-Ex1-4C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:43,340] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_027-Ex1-4C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:43,393] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_059-Ex1-8G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:43,398] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_059-Ex1-8G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:43,438] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_015-Ex1-1E-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:43,449] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_041-Ex1-6A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:43,454] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_041-Ex1-6A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:43,506] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_095-Ex1-5A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:43,511] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_095-Ex1-5A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:43,561] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_027-Ex1-2H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:43,566] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_027-Ex1-2H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:43,616] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_004-Ex1-1D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:43,621] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_004-Ex1-1D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:43,661] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_033-Ex1-5A-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:43,673] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_035-Ex1-3A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:43,678] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_035-Ex1-3A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:43,717] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_012-Ex1-1H-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:43,729] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_020-Ex1-5B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:43,734] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_020-Ex1-5B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:43,773] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_051-Ex1-7C-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:43,774] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_084-Ex1-5E-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:43,786] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_007-Ex1-1G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:43,790] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_007-Ex1-1G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:43,831] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_045-Ex1-6E-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:43,832] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_048-Ex1-6H-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:43,833] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_086-Ex1-5F-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:43,845] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_037-Ex1-5E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:43,850] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_037-Ex1-5E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:43,902] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_026-Ex1-2F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:43,907] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_026-Ex1-2F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:43,948] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_024-Ex1-3H-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:43,958] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_033-Ex1-5A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:43,963] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_033-Ex1-5A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:44,004] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_046-Ex1-6F-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:44,005] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_042-Ex1-3B-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:44,005] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_038-Ex1-5F-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:44,016] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_085-Ex1-6G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:44,021] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_085-Ex1-6G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:44,061] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_027-Ex1-4C-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:44,062] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_048-Ex1-8B-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:44,072] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_062-Ex1-8F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:44,077] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_062-Ex1-8F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:44,118] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_035-Ex1-5C-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:44,129] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_088-Ex1-6H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:44,134] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_088-Ex1-6H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:44,173] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_060-Ex1-8D-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:44,174] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_025-Ex1-5D-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:44,185] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_002-Ex1-1B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:44,190] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_002-Ex1-1B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:44,231] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_014-Ex1-2F-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:44,243] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_021-Ex1-3E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:44,248] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_021-Ex1-3E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:44,289] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_010-Ex1-6D-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:44,300] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_057-Ex1-8A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:44,305] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_057-Ex1-8A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:44,347] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_042-Ex1-6B-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:44,359] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_001-Ex1-1A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:44,365] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_001-Ex1-1A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:44,419] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_025-Ex1-4A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:44,424] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_025-Ex1-4A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:44,466] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_059-Ex1-8C-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:44,477] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: decode_sedlist.txt
+[2023-04-28 13:32:44,482] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: decode_sedlist.txt
+[2023-04-28 13:32:44,495] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_004-Ex1-1D-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:44,508] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_010-Ex1-2B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:44,513] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_010-Ex1-2B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:44,555] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_006-Ex1-2C-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:44,568] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_018-Ex1-3B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:44,573] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_018-Ex1-3B-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:44,613] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_006-Ex1-2C-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:44,625] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_036-Ex1-5D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:44,630] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_036-Ex1-5D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:44,683] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_058-Ex1-8B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:44,688] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_058-Ex1-8B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:44,740] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_009-Ex1-2A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:44,745] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_009-Ex1-2A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:44,787] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_043-Ex1-6C-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:44,799] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_014-Ex1-4H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:44,804] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_014-Ex1-4H-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:44,844] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_030-Ex1-4F-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:44,855] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_039-Ex1-5G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:44,859] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_039-Ex1-5G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:44,901] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_074-Ex1-1C-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:44,913] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_015-Ex1-2G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:44,917] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_015-Ex1-2G-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:44,972] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_057-Ex1-4F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:44,977] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_057-Ex1-4F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:45,029] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_007-Ex1-8E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:45,034] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_007-Ex1-8E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:45,074] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_009-Ex1-2A-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:45,074] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_053-Ex1-7E-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:45,085] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_017-Ex1-5H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:45,090] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_017-Ex1-5H-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:45,142] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_001-Ex1-1A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:45,147] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_001-Ex1-1A-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:45,200] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_001-Ex1-7F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:45,205] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_001-Ex1-7F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:45,244] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_092-Ex1-4A-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:45,256] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_047-Ex1-6E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:45,261] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_047-Ex1-6E-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:45,301] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_005-Ex1-1E-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:45,313] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_059-Ex1-8C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:45,318] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_059-Ex1-8C-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:45,370] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_064-Ex1-8D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:45,375] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_064-Ex1-8D-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:45,415] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_050-Ex1-7B-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:45,427] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_015-Ex1-1E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:45,432] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_015-Ex1-1E-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:45,472] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_063-Ex1-2G-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:45,484] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_005-Ex1-6A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:45,488] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_005-Ex1-6A-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:45,528] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_011-Ex1-2C-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:45,528] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_040-Ex1-5H-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:45,541] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_062-Ex1-3F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:45,546] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_062-Ex1-3F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:45,586] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_025-Ex1-5D-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:45,598] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_042-Ex1-3B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:45,603] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_042-Ex1-3B-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:45,642] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_064-Ex1-8D-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:45,653] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_050-Ex1-8F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:45,658] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_050-Ex1-8F-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:45,709] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-APnd_020-Ex1-3D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:45,714] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-APnd_020-Ex1-3D-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:45,755] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_091-Ex1-4G-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:45,756] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_064-Ex1-8H-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:45,767] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_091-Ex1-4G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:45,772] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_091-Ex1-4G-lcwgs-1-T.1_fastqc.html
+[2023-04-28 13:32:45,814] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-APnd_045-Ex1-6E-lcwgs-1-T.1.fq.gz
+[2023-04-28 13:32:45,817] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_004-Ex1-2D-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:45,817] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Goy-CPnd_012-Ex1-1H-lcwgs-1-T.2.fq.gz
+[2023-04-28 13:32:45,829] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Goy-CPnd_050-Ex1-8F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:45,833] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Goy-CPnd_050-Ex1-8F-lcwgs-1-T.2_fastqc.html
+[2023-04-28 13:32:46,419] multiqc.plots.bargraph                             [DEBUG  ]  Using matplotlib version 3.1.2
+[2023-04-28 13:32:46,420] multiqc.plots.linegraph                            [DEBUG  ]  Using matplotlib version 3.1.2
+[2023-04-28 13:32:46,421] multiqc                                            [DEBUG  ]  No samples found: custom_content
+[2023-04-28 13:32:46,426] multiqc                                            [DEBUG  ]  No samples found: conpair
+[2023-04-28 13:32:46,430] multiqc                                            [DEBUG  ]  No samples found: peddy
+[2023-04-28 13:32:46,435] multiqc                                            [DEBUG  ]  No samples found: somalier
+[2023-04-28 13:32:46,439] multiqc                                            [DEBUG  ]  No samples found: methylQA
+[2023-04-28 13:32:46,445] multiqc                                            [DEBUG  ]  No samples found: mosdepth
+[2023-04-28 13:32:46,449] multiqc                                            [DEBUG  ]  No samples found: phantompeakqualtools
+[2023-04-28 13:32:46,452] multiqc                                            [DEBUG  ]  No samples found: qualimap
+[2023-04-28 13:32:46,456] multiqc                                            [DEBUG  ]  No samples found: preseq
+[2023-04-28 13:32:46,460] multiqc                                            [DEBUG  ]  No samples found: quast
+[2023-04-28 13:32:46,464] multiqc                                            [DEBUG  ]  No samples found: qorts
+[2023-04-28 13:32:46,468] multiqc                                            [DEBUG  ]  No samples found: rna_seqc
+[2023-04-28 13:32:46,472] multiqc                                            [DEBUG  ]  No samples found: rockhopper
+[2023-04-28 13:32:46,475] multiqc                                            [DEBUG  ]  No samples found: rsem
+[2023-04-28 13:32:46,480] multiqc                                            [DEBUG  ]  No samples found: rseqc
+[2023-04-28 13:32:46,484] multiqc                                            [DEBUG  ]  No samples found: busco
+[2023-04-28 13:32:46,488] multiqc                                            [DEBUG  ]  No samples found: goleft_indexcov
+[2023-04-28 13:32:46,493] multiqc                                            [DEBUG  ]  No samples found: disambiguate
+[2023-04-28 13:32:46,497] multiqc                                            [DEBUG  ]  No samples found: supernova
+[2023-04-28 13:32:46,504] multiqc                                            [DEBUG  ]  No samples found: deeptools
+[2023-04-28 13:32:46,508] multiqc                                            [DEBUG  ]  No samples found: sargasso
+[2023-04-28 13:32:46,512] multiqc                                            [DEBUG  ]  No samples found: verifybamid
+[2023-04-28 13:32:46,516] multiqc                                            [DEBUG  ]  No samples found: mirtrace
+[2023-04-28 13:32:46,521] multiqc                                            [DEBUG  ]  No samples found: happy
+[2023-04-28 13:32:46,525] multiqc                                            [DEBUG  ]  No samples found: mirtop
+[2023-04-28 13:32:46,530] multiqc                                            [DEBUG  ]  No samples found: homer
+[2023-04-28 13:32:46,533] multiqc                                            [DEBUG  ]  No samples found: macs2
+[2023-04-28 13:32:46,537] multiqc                                            [DEBUG  ]  No samples found: theta2
+[2023-04-28 13:32:46,541] multiqc                                            [DEBUG  ]  No samples found: snpeff
+[2023-04-28 13:32:46,546] multiqc                                            [DEBUG  ]  No samples found: gatk
+[2023-04-28 13:32:46,550] multiqc                                            [DEBUG  ]  No samples found: htseq
+[2023-04-28 13:32:46,554] multiqc                                            [DEBUG  ]  No samples found: bcftools
+[2023-04-28 13:32:46,558] multiqc                                            [DEBUG  ]  No samples found: featureCounts
+[2023-04-28 13:32:46,562] multiqc                                            [DEBUG  ]  No samples found: fgbio
+[2023-04-28 13:32:46,569] multiqc                                            [DEBUG  ]  No samples found: dragen
+[2023-04-28 13:32:46,573] multiqc                                            [DEBUG  ]  No samples found: dedup
+[2023-04-28 13:32:46,576] multiqc                                            [DEBUG  ]  No samples found: damageprofiler
+[2023-04-28 13:32:46,587] multiqc                                            [DEBUG  ]  No samples found: biobambam2
+[2023-04-28 13:32:46,591] multiqc                                            [DEBUG  ]  No samples found: mtnucratio
+[2023-04-28 13:32:46,593] multiqc                                            [DEBUG  ]  No samples found: picard
+[2023-04-28 13:32:46,597] multiqc                                            [DEBUG  ]  No samples found: prokka
+[2023-04-28 13:32:46,601] multiqc                                            [DEBUG  ]  No samples found: samblaster
+[2023-04-28 13:32:46,605] multiqc                                            [DEBUG  ]  No samples found: samtools
+[2023-04-28 13:32:46,609] multiqc                                            [DEBUG  ]  No samples found: sexdeterrmine
+[2023-04-28 13:32:46,614] multiqc                                            [DEBUG  ]  No samples found: bamtools
+[2023-04-28 13:32:46,618] multiqc                                            [DEBUG  ]  No samples found: jellyfish
+[2023-04-28 13:32:46,623] multiqc                                            [DEBUG  ]  No samples found: vcftools
+[2023-04-28 13:32:46,627] multiqc                                            [DEBUG  ]  No samples found: longranger
+[2023-04-28 13:32:46,632] multiqc                                            [DEBUG  ]  No samples found: stacks
+[2023-04-28 13:32:46,635] multiqc                                            [DEBUG  ]  No samples found: varscan2
+[2023-04-28 13:32:46,642] multiqc                                            [DEBUG  ]  No samples found: bbmap
+[2023-04-28 13:32:46,646] multiqc                                            [DEBUG  ]  No samples found: bismark
+[2023-04-28 13:32:46,651] multiqc                                            [DEBUG  ]  No samples found: biscuit
+[2023-04-28 13:32:46,654] multiqc                                            [DEBUG  ]  No samples found: hicexplorer
+[2023-04-28 13:32:46,658] multiqc                                            [DEBUG  ]  No samples found: hicup
+[2023-04-28 13:32:46,662] multiqc                                            [DEBUG  ]  No samples found: hicpro
+[2023-04-28 13:32:46,666] multiqc                                            [DEBUG  ]  No samples found: salmon
+[2023-04-28 13:32:46,669] multiqc                                            [DEBUG  ]  No samples found: kallisto
+[2023-04-28 13:32:46,673] multiqc                                            [DEBUG  ]  No samples found: slamdunk
+[2023-04-28 13:32:46,677] multiqc                                            [DEBUG  ]  No samples found: star
+[2023-04-28 13:32:46,681] multiqc                                            [DEBUG  ]  No samples found: hisat2
+[2023-04-28 13:32:46,685] multiqc                                            [DEBUG  ]  No samples found: tophat
+[2023-04-28 13:32:46,689] multiqc                                            [DEBUG  ]  No samples found: bowtie2
+[2023-04-28 13:32:46,692] multiqc                                            [DEBUG  ]  No samples found: bowtie1
+[2023-04-28 13:32:46,696] multiqc                                            [DEBUG  ]  No samples found: snpsplit
+[2023-04-28 13:32:46,700] multiqc                                            [DEBUG  ]  No samples found: kat
+[2023-04-28 13:32:46,703] multiqc                                            [DEBUG  ]  No samples found: leehom
+[2023-04-28 13:32:46,707] multiqc                                            [DEBUG  ]  No samples found: adapterRemoval
+[2023-04-28 13:32:46,711] multiqc                                            [DEBUG  ]  No samples found: clipandmerge
+[2023-04-28 13:32:46,716] multiqc                                            [DEBUG  ]  No samples found: cutadapt
+[2023-04-28 13:32:46,720] multiqc                                            [DEBUG  ]  No samples found: flexbar
+[2023-04-28 13:32:46,725] multiqc                                            [DEBUG  ]  No samples found: kaiju
+[2023-04-28 13:32:46,728] multiqc                                            [DEBUG  ]  No samples found: kraken
+[2023-04-28 13:32:46,732] multiqc                                            [DEBUG  ]  No samples found: malt
+[2023-04-28 13:32:46,736] multiqc                                            [DEBUG  ]  No samples found: trimmomatic
+[2023-04-28 13:32:46,739] multiqc                                            [DEBUG  ]  No samples found: sickle
+[2023-04-28 13:32:46,743] multiqc                                            [DEBUG  ]  No samples found: skewer
+[2023-04-28 13:32:46,747] multiqc                                            [DEBUG  ]  No samples found: sortmerna
+[2023-04-28 13:32:46,750] multiqc                                            [DEBUG  ]  No samples found: biobloomtools
+[2023-04-28 13:32:46,755] multiqc                                            [DEBUG  ]  No samples found: fastq_screen
+[2023-04-28 13:32:46,759] multiqc                                            [DEBUG  ]  No samples found: afterqc
+[2023-04-28 13:32:46,763] multiqc                                            [DEBUG  ]  No samples found: fastp
+[2023-04-28 13:32:51,285] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 262 reports
+[2023-04-28 13:33:43,757] multiqc                                            [DEBUG  ]  No samples found: pycoqc
+[2023-04-28 13:33:43,762] multiqc                                            [DEBUG  ]  No samples found: minionqc
+[2023-04-28 13:33:43,767] multiqc                                            [DEBUG  ]  No samples found: multivcfanalyzer
+[2023-04-28 13:33:43,772] multiqc                                            [DEBUG  ]  No samples found: clusterflow
+[2023-04-28 13:33:43,775] multiqc                                            [DEBUG  ]  No samples found: bcl2fastq
+[2023-04-28 13:33:43,780] multiqc                                            [DEBUG  ]  No samples found: interop
+[2023-04-28 13:33:43,783] multiqc                                            [DEBUG  ]  No samples found: ivar
+[2023-04-28 13:33:43,787] multiqc                                            [DEBUG  ]  No samples found: flash
+[2023-04-28 13:33:43,791] multiqc                                            [DEBUG  ]  No samples found: seqyclean
+[2023-04-28 13:33:44,143] multiqc                                            [INFO   ]  Compressing plot data
+[2023-04-28 13:33:48,980] multiqc                                            [INFO   ]  Report      : fq_raw/fqc_raw_report.html
+[2023-04-28 13:33:48,980] multiqc                                            [INFO   ]  Data        : fq_raw/fqc_raw_report_data
+[2023-04-28 13:33:48,980] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpzmfgvclc/multiqc_data' to 'fq_raw/fqc_raw_report_data'
+[2023-04-28 13:33:49,231] multiqc                                            [INFO   ]  Plots       : fq_raw/fqc_raw_report_plots
+[2023-04-28 13:33:49,231] multiqc                                            [DEBUG  ]  Moving plots directory from '/tmp/tmpzmfgvclc/multiqc_plots' to 'fq_raw/fqc_raw_report_plots'
+[2023-04-28 13:33:49,644] multiqc                                            [INFO   ]  MultiQC complete

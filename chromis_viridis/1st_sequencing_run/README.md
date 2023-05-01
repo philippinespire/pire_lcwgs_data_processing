@@ -117,6 +117,133 @@ Run by klabrador on 2023-04-28
 bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/renameFQGZ.bash Cvi_LCWGS-TestLane_SequenceNameDecode.tsv rename
 ```
 
+</details>
 
 
+<details>
+        <summary>7. Check data quality</summary>
 
+Run by klabrador on 2023-04-28
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/chromis_viridis/1st_sequencing_run
+
+#sbatch Multi_FASTQC.sh "<indir>" "<mqc report name>" "<file extension to qc>"
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw" "fqc_raw_report"  "fq.gz"
+
+```
+
+- job submitted; job ID not recorded.
+- job finished successfully
+
+</details>
+
+
+<details>
+        <summary>7. Check data quality</summary>
+
+Run by klabrador on 2023-04-28
+
+</details>
+
+
+<details>
+        <summary>8. First trim</summary>
+
+Run by klabrador on 2023-04-28
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/chromis_viridis/1st_sequencing_run
+sbatch ../../../pire_fq_gz_processing/runFASTP_1st_trim.sbatch fq_raw fq_fp1
+```
+
+- job submitted: 1508250
+- job finished successfully
+
+</details>
+
+
+<details>
+        <summary>9a. Remove duplicates</summary>
+
+Run by klabrador on 2023-04-28
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/chromis_viridis/1st_sequencing_run
+bash ../../../pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1 fq_fp1_clmp /scratch/hpc-0289 20
+```
+
+- job submitted: 1508297
+- job finished successfully
+
+</details>
+
+
+<details>
+        <summary>9b. Check duplicate removal success</summary>
+
+Run by klabrador on 2023-04-29
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/chromis_viridis/1st_sequencing_run
+
+salloc
+enable_lmod
+module load container_env mapdamage2
+
+crun R < /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/checkClumpify_EG.R --no-save
+exit
+```
+
+- Clumpify succesfully worked on all samples.
+
+</details>
+
+
+<details>
+        <summary>9c. Generate metadata on deduplicated FASTQ files</summary>
+
+Run by klabrador on 2023-04-29
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/chromis_viridis/1st_sequencing_run
+
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1_clmp" "fqc_clmp_report"  "fq.gz"
+
+```
+
+- job submitted: 1510092
+- job finished successfully
+
+</details>
+
+
+<details>
+        <summary>10. Second Trim</summary>
+
+Run by klabrador on 2023-05-01
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/chromis_viridis/1st_sequencing_run
+
+# Run cssl script for lcwgs.
+sbatch ../../../pire_fq_gz_processing/runFASTP_2_cssl.sbatch fq_fp1_clmp fq_fp1_clmp_fp2
+```
+
+- job submitted: 1511955
+- job finished successfully
+
+</details>
+
+<details>
+        <summary>11. Decontaminate files</summary>
+
+Run by klabrador on 2023-05-01
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/chromis_viridis/1st_sequencing_run
+
+bash ../../../pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2 fq_fp1_clmp_fp2_fqscrn 20
+```
+
+- job submitted: 1511991

@@ -247,3 +247,44 @@ bash ../../../pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2 fq_fp1_clmp
 ```
 
 - job submitted: 1511991
+
+Confirm if all files were successfully completed. 
+```
+# Check file count.
+ls fq_fp1_clmp_fp2_fqscrn/*tagged.fastq.gz | wc -l
+ls fq_fp1_clmp_fp2_fqscrn/*tagged_filter.fastq.gz | wc -l 
+ls fq_fp1_clmp_fp2_fqscrn/*screen.txt | wc -l
+ls fq_fp1_clmp_fp2_fqscrn/*screen.png | wc -l
+ls fq_fp1_clmp_fp2_fqscrn/*screen.html | wc -l
+## n = 208 for all outfiles
+
+# Check for errors
+grep 'error' slurm-fqscrn.*out
+grep 'No reads in' slurm-fqscrn.*out
+## No errors/no-reads found.
+```
+
+- Run MultiQC for fqscrn output.
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/chromis_viridis/1st_sequencing_run
+sbatch ../../../pire_fq_gz_processing/runMULTIQC.sbatch fq_fp1_clmp_fp2_fqscrn fastq_screen_report
+```
+
+- job submitted: 1572125
+- job finished successfully
+
+</details>
+
+
+<details>
+        <summary>12. Execute `runRepair`</summary>
+
+Run by klabrador on 2023-05-02
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/chromis_viridis/1st_sequencing_run
+
+sbatch ../../../pire_fq_gz_processing/runREPAIR.sbatch fq_fp1_clmp_fp2_fqscrn fq_fp1_clmp_fp2_fqscrn_rprd 40
+```
+
+- job submitted: 1573171

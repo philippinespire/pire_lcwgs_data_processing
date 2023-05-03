@@ -303,3 +303,16 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_f
 ```
 
 - job submitted: 1590137
+- job finished successfully
+
+</details>
+
+
+<details>
+        <summary>13. Clean Up</summary>
+
+```
+mkdir logs
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/ambassis_buruensis/1st_sequencing_run
+mv *out logs/
+```

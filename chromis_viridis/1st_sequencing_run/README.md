@@ -288,3 +288,26 @@ sbatch ../../../pire_fq_gz_processing/runREPAIR.sbatch fq_fp1_clmp_fp2_fqscrn fq
 ```
 
 - job submitted: 1573171
+- job finished successfully
+
+
+Run `Multi_FASTQC.sh`
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/chromis_viridis/1st_sequencing_run
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_fp1_clmp_fp2_fqscrn_rprd" "fqc_rprd_report" "fq.gz"
+```
+
+- job submitted: 1590138
+- job finished successfully
+
+</details>
+
+
+<details>
+        <summary>13. Clean Up</summary>
+
+```
+mkdir logs
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/chromis_viridis/1st_sequencing_run
+mv *out logs/
+```

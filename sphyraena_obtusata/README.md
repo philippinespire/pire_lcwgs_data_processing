@@ -859,3 +859,178 @@ Sob-CPnd_092-Ex1-3H-lcwgs-1-T.clmp.r2	4.7%	45%	131 bp	15.6
   
 </p>
 </details>
+
+## 10. Second trim.
+Executed `runFASTP_2_cssl.sbatch`, complete.
+
+<details><summary>Expand for MultiQC Output.</summary>
+
+```bash
+Sample Name	% Duplication	GC content	% PF	% Adapter
+Sob-APnd_001-Ex1-1A-lcwgs-1-T.clmp.r1r2_fastp	0.9%	42.2%	98.7%	6.9%
+Sob-APnd_002-Ex1-2A-lcwgs-1-T.clmp.r1r2_fastp	0.8%	44.4%	98.2%	6.7%
+Sob-APnd_003-Ex1-3A-lcwgs-1-T.clmp.r1r2_fastp	0.2%	43.3%	97.6%	5.2%
+Sob-APnd_004-Ex1-4A-lcwgs-1-T.clmp.r1r2_fastp	0.9%	42.2%	98.6%	7.1%
+Sob-APnd_005-Ex1-5A-lcwgs-1-T.clmp.r1r2_fastp	0.9%	46.0%	98.3%	6.9%
+Sob-APnd_006-Ex1-6A-lcwgs-1-T.clmp.r1r2_fastp	1.2%	44.1%	99.1%	7.5%
+Sob-APnd_007-Ex1-7A-lcwgs-1-T.clmp.r1r2_fastp	1.9%	44.4%	99.1%	7.1%
+Sob-APnd_008-Ex1-8A-lcwgs-1-T.clmp.r1r2_fastp	0.9%	42.8%	98.4%	6.8%
+Sob-APnd_009-Ex1-9A-lcwgs-1-T.clmp.r1r2_fastp	0.7%	42.9%	98.6%	7.3%
+Sob-APnd_010-Ex1-10A-lcwgs-1-T.clmp.r1r2_fastp	1.2%	39.2%	99.2%	7.6%
+Sob-APnd_011-Ex1-11A-lcwgs-1-T.clmp.r1r2_fastp	0.7%	42.0%	98.9%	7.3%
+Sob-APnd_012-Ex1-12A-lcwgs-1-T.clmp.r1r2_fastp	1.0%	43.1%	99.0%	7.3%
+Sob-APnd_013-Ex1-1B-lcwgs-1-T.clmp.r1r2_fastp	1.1%	42.6%	99.1%	7.5%
+Sob-APnd_014-Ex1-2B-lcwgs-1-T.clmp.r1r2_fastp	1.6%	39.8%	99.2%	7.3%
+Sob-APnd_015-Ex1-3B-lcwgs-1-T.clmp.r1r2_fastp	0.8%	44.2%	98.6%	6.4%
+Sob-APnd_016-Ex1-4B-lcwgs-1-T.clmp.r1r2_fastp	1.4%	37.6%	99.2%	7.5%
+Sob-APnd_017-Ex1-5B-lcwgs-1-T.clmp.r1r2_fastp	0.9%	45.2%	98.8%	7.5%
+Sob-APnd_018-Ex1-6B-lcwgs-1-T.clmp.r1r2_fastp	1.6%	51.7%	98.4%	5.3%
+Sob-APnd_019-Ex1-7B-lcwgs-1-T.clmp.r1r2_fastp	1.2%	43.9%	98.9%	7.3%
+Sob-APnd_020-Ex1-8B-lcwgs-1-T.clmp.r1r2_fastp	1.4%	42.9%	99.2%	7.5%
+Sob-APnd_021-Ex1-9B-lcwgs-1-T.clmp.r1r2_fastp	1.1%	47.3%	99.0%	7.6%
+Sob-APnd_022-Ex1-10B-lcwgs-1-T.clmp.r1r2_fastp	0.8%	43.6%	98.4%	7.0%
+Sob-APnd_023-Ex1-11B-lcwgs-1-T.clmp.r1r2_fastp	0.3%	42.9%	98.2%	6.8%
+Sob-APnd_024-Ex1-12B-lcwgs-1-T.clmp.r1r2_fastp	1.4%	48.3%	99.0%	6.9%
+Sob-APnd_025-Ex1-1C-lcwgs-1-T.clmp.r1r2_fastp	1.3%	46.5%	99.1%	7.2%
+Sob-APnd_026-Ex1-2C-lcwgs-1-T.clmp.r1r2_fastp	0.4%	45.0%	98.1%	5.7%
+Sob-APnd_027-Ex1-3C-lcwgs-1-T.clmp.r1r2_fastp	1.0%	43.9%	98.9%	6.6%
+Sob-APnd_028-Ex1-4C-lcwgs-1-T.clmp.r1r2_fastp	1.0%	41.0%	98.9%	6.7%
+Sob-APnd_029-Ex1-5C-lcwgs-1-T.clmp.r1r2_fastp	0.4%	44.3%	96.7%	6.4%
+Sob-APnd_030-Ex1-6C-lcwgs-1-T.clmp.r1r2_fastp	1.4%	48.3%	98.8%	6.5%
+Sob-APnd_031-Ex1-7C-lcwgs-1-T.clmp.r1r2_fastp	0.9%	44.8%	98.7%	6.8%
+Sob-APnd_032-Ex1-8C-lcwgs-1-T.clmp.r1r2_fastp	1.2%	49.6%	98.2%	5.2%
+Sob-APnd_033-Ex1-9C-lcwgs-1-T.clmp.r1r2_fastp	2.1%	55.5%	99.0%	5.3%
+Sob-APnd_034-Ex1-10C-lcwgs-1-T.clmp.r1r2_fastp	0.7%	42.4%	98.8%	7.2%
+Sob-APnd_035-Ex1-11C-lcwgs-1-T.clmp.r1r2_fastp	1.5%	48.6%	99.2%	6.4%
+Sob-APnd_036-Ex1-12C-lcwgs-1-T.clmp.r1r2_fastp	1.1%	40.9%	99.2%	7.3%
+Sob-APnd_037-Ex1-1D-lcwgs-1-T.clmp.r1r2_fastp	1.2%	39.5%	99.2%	7.5%
+Sob-APnd_038-Ex1-2D-lcwgs-1-T.clmp.r1r2_fastp	0.3%	44.3%	98.5%	6.8%
+Sob-APnd_039-Ex1-3D-lcwgs-1-T.clmp.r1r2_fastp	0.7%	40.7%	98.9%	6.9%
+Sob-APnd_040-Ex1-4D-lcwgs-1-T.clmp.r1r2_fastp	1.4%	47.4%	98.8%	6.2%
+Sob-APnd_041-Ex1-5D-lcwgs-1-T.clmp.r1r2_fastp	0.6%	42.2%	98.7%	7.6%
+Sob-APnd_042-Ex1-6D-lcwgs-1-T.clmp.r1r2_fastp	0.8%	41.3%	99.3%	7.8%
+Sob-APnd_043-Ex1-7D-lcwgs-1-T.clmp.r1r2_fastp	0.4%	42.4%	98.8%	8.2%
+Sob-APnd_044-Ex1-8D-lcwgs-1-T.clmp.r1r2_fastp	1.7%	43.2%	99.2%	6.8%
+Sob-APnd_045-Ex1-9D-lcwgs-1-T.clmp.r1r2_fastp	2.6%	54.7%	98.9%	5.1%
+Sob-APnd_046-Ex1-10D-lcwgs-1-T.clmp.r1r2_fastp	0.8%	40.6%	98.9%	7.5%
+Sob-APnd_047-Ex1-11D-lcwgs-1-T.clmp.r1r2_fastp	0.9%	40.4%	99.3%	7.5%
+Sob-APnd_048-Ex1-12D-lcwgs-1-T.clmp.r1r2_fastp	0.6%	43.8%	98.9%	7.8%
+Sob-APnd_049-Ex1-1E-lcwgs-1-T.clmp.r1r2_fastp	0.9%	41.0%	99.2%	7.7%
+Sob-APnd_050-Ex1-2E-lcwgs-1-T.clmp.r1r2_fastp	0.6%	41.1%	99.1%	7.7%
+Sob-APnd_051-Ex1-3E-lcwgs-1-T.clmp.r1r2_fastp	0.9%	41.9%	99.0%	7.1%
+Sob-APnd_052-Ex1-4E-lcwgs-1-T.clmp.r1r2_fastp	0.7%	41.6%	98.7%	7.6%
+Sob-APnd_053-Ex1-5E-lcwgs-1-T.clmp.r1r2_fastp	0.5%	42.0%	98.6%	8.3%
+Sob-APnd_054-Ex1-6E-lcwgs-1-T.clmp.r1r2_fastp	1.4%	45.4%	99.2%	7.3%
+Sob-APnd_055-Ex1-7E-lcwgs-1-T.clmp.r1r2_fastp	0.9%	39.7%	99.3%	7.8%
+Sob-APnd_056-Ex1-8E-lcwgs-1-T.clmp.r1r2_fastp	1.2%	40.0%	99.3%	7.7%
+Sob-APnd_057-Ex1-9E-lcwgs-1-T.clmp.r1r2_fastp	0.5%	42.9%	98.7%	8.0%
+Sob-APnd_058-Ex1-10E-lcwgs-1-T.clmp.r1r2_fastp	1.1%	38.5%	99.2%	7.7%
+Sob-APnd_059-Ex1-11E-lcwgs-1-T.clmp.r1r2_fastp	0.6%	41.3%	99.0%	8.3%
+Sob-APnd_060-Ex1-12E-lcwgs-1-T.clmp.r1r2_fastp	1.0%	40.7%	99.2%	7.8%
+Sob-APnd_061-Ex1-1F-lcwgs-1-T.clmp.r1r2_fastp	1.0%	46.2%	99.0%	7.1%
+Sob-APnd_062-Ex1-2F-lcwgs-1-T.clmp.r1r2_fastp	1.1%	45.3%	99.0%	7.2%
+Sob-APnd_063-Ex1-3F-lcwgs-1-T.clmp.r1r2_fastp	0.4%	43.2%	98.5%	6.6%
+Sob-APnd_064-Ex1-4F-lcwgs-1-T.clmp.r1r2_fastp	0.7%	41.5%	98.6%	7.1%
+Sob-APnd_065-Ex1-5F-lcwgs-1-T.clmp.r1r2_fastp	2.1%	45.4%	99.1%	6.6%
+Sob-APnd_066-Ex1-6F-lcwgs-1-T.clmp.r1r2_fastp	0.2%	42.4%	98.6%	8.2%
+Sob-APnd_067-Ex1-7F-lcwgs-1-T.clmp.r1r2_fastp	1.0%	42.4%	99.2%	7.7%
+Sob-APnd_068-Ex1-8F-lcwgs-1-T.clmp.r1r2_fastp	1.1%	41.5%	99.0%	7.6%
+Sob-APnd_069-Ex1-9F-lcwgs-1-T.clmp.r1r2_fastp	0.8%	44.1%	98.6%	7.3%
+Sob-APnd_070-Ex1-10F-lcwgs-1-T.clmp.r1r2_fastp	0.9%	40.9%	99.2%	7.6%
+Sob-APnd_071-Ex1-11F-lcwgs-1-T.clmp.r1r2_fastp	0.3%	44.8%	98.2%	7.3%
+Sob-APnd_072-Ex1-12F-lcwgs-1-T.clmp.r1r2_fastp	1.0%	41.9%	99.2%	7.7%
+Sob-APnd_073-Ex1-1G-lcwgs-1-T.clmp.r1r2_fastp	1.2%	43.4%	99.1%	7.4%
+Sob-APnd_074-Ex1-2G-lcwgs-1-T.clmp.r1r2_fastp	0.9%	42.4%	98.7%	7.4%
+Sob-APnd_075-Ex1-3G-lcwgs-1-T.clmp.r1r2_fastp	0.5%	42.5%	98.8%	7.1%
+Sob-APnd_076-Ex1-4G-lcwgs-1-T.clmp.r1r2_fastp	0.6%	42.4%	98.8%	7.8%
+Sob-APnd_077-Ex1-6G-lcwgs-1-T.clmp.r1r2_fastp	0.8%	41.2%	99.0%	7.8%
+Sob-APnd_078-Ex1-5G-lcwgs-1-T.clmp.r1r2_fastp	1.2%	49.8%	98.6%	6.6%
+Sob-APnd_079-Ex1-7G-lcwgs-1-T.clmp.r1r2_fastp	1.0%	41.9%	99.3%	7.8%
+Sob-APnd_080-Ex1-8G-lcwgs-1-T.clmp.r1r2_fastp	1.5%	40.2%	99.2%	7.2%
+Sob-APnd_081-Ex1-9G-lcwgs-1-T.clmp.r1r2_fastp	1.2%	41.3%	99.2%	7.7%
+Sob-APnd_082-Ex1-10G-lcwgs-1-T.clmp.r1r2_fastp	1.2%	41.6%	99.2%	7.5%
+Sob-APnd_083-Ex1-11G-lcwgs-1-T.clmp.r1r2_fastp	1.3%	42.1%	99.2%	7.4%
+Sob-APnd_084-Ex1-12G-lcwgs-1-T.clmp.r1r2_fastp	1.2%	44.8%	99.1%	7.5%
+Sob-APnd_085-Ex1-1H-lcwgs-1-T.clmp.r1r2_fastp	0.8%	42.9%	98.8%	7.0%
+Sob-APnd_086-Ex1-2H-lcwgs-1-T.clmp.r1r2_fastp	1.2%	43.0%	99.1%	7.0%
+Sob-APnd_087-Ex1-3H-lcwgs-1-T.clmp.r1r2_fastp	1.2%	43.2%	99.0%	6.9%
+Sob-APnd_088-Ex1-4H-lcwgs-1-T.clmp.r1r2_fastp	2.1%	50.7%	99.1%	5.7%
+Sob-APnd_089-Ex1-6H-lcwgs-1-T.clmp.r1r2_fastp	1.0%	48.1%	99.0%	7.2%
+Sob-APnd_090-Ex1-5H-lcwgs-1-T.clmp.r1r2_fastp	1.2%	42.5%	99.2%	7.4%
+Sob-APnd_091-Ex1-7H-lcwgs-1-T.clmp.r1r2_fastp	1.0%	41.0%	99.3%	7.6%
+Sob-APnd_092-Ex1-8H-lcwgs-1-T.clmp.r1r2_fastp	1.2%	38.4%	99.3%	7.7%
+Sob-APnd_093-Ex1-9H-lcwgs-1-T.clmp.r1r2_fastp	1.2%	41.8%	99.3%	7.7%
+Sob-APnd_094-Ex1-10H-lcwgs-1-T.clmp.r1r2_fastp	1.1%	42.8%	99.2%	7.6%
+Sob-APnd_095-Ex1-11H-lcwgs-1-T.clmp.r1r2_fastp	1.1%	43.7%	99.1%	7.4%
+Sob-APnd_096-Ex1-12H-lcwgs-1-T.clmp.r1r2_fastp	1.1%	44.4%	99.2%	7.5%
+Sob-CPnd_001-Ex1-12B-lcwgs-1-T.clmp.r1r2_fastp	2.3%	46.1%	99.0%	4.5%
+Sob-CPnd_002-Ex1-12E-lcwgs-1-T.clmp.r1r2_fastp	2.1%	45.3%	98.9%	5.0%
+Sob-CPnd_003-Ex1-2D-lcwgs-1-T.clmp.r1r2_fastp	1.7%	46.1%	99.0%	5.5%
+Sob-CPnd_004-Ex1-12D-lcwgs-1-T.clmp.r1r2_fastp	2.0%	45.8%	99.0%	5.2%
+Sob-CPnd_005-Ex1-10D-lcwgs-1-T.clmp.r1r2_fastp	1.5%	45.8%	99.0%	5.2%
+Sob-CPnd_006-Ex1-9H-lcwgs-1-T.clmp.r1r2_fastp	1.9%	46.6%	98.2%	3.5%
+Sob-CPnd_009-Ex1-11E-lcwgs-1-T.clmp.r1r2_fastp	2.3%	46.6%	98.8%	4.2%
+Sob-CPnd_010-Ex1-12A-lcwgs-1-T.clmp.r1r2_fastp	2.3%	46.3%	98.9%	4.2%
+Sob-CPnd_011-Ex1-4A-lcwgs-1-T.clmp.r1r2_fastp	2.8%	46.0%	98.4%	2.3%
+Sob-CPnd_012-Ex1-1C-lcwgs-1-T.clmp.r1r2_fastp	1.7%	46.2%	98.6%	4.2%
+Sob-CPnd_013-Ex1-1D-lcwgs-1-T.clmp.r1r2_fastp	2.1%	45.4%	98.4%	3.0%
+Sob-CPnd_014-Ex1-9B-lcwgs-1-T.clmp.r1r2_fastp	2.1%	46.3%	98.9%	4.2%
+Sob-CPnd_015-Ex1-1E-lcwgs-1-T.clmp.r1r2_fastp	1.8%	43.2%	98.9%	5.0%
+Sob-CPnd_017-Ex1-10A-lcwgs-1-T.clmp.r1r2_fastp	2.3%	45.8%	98.9%	3.7%
+Sob-CPnd_018-Ex1-10H-lcwgs-1-T.clmp.r1r2_fastp	1.9%	45.2%	98.9%	4.9%
+Sob-CPnd_019-Ex1-11C-lcwgs-1-T.clmp.r1r2_fastp	2.4%	45.8%	98.6%	3.3%
+Sob-CPnd_021-Ex1-12G-lcwgs-1-T.clmp.r1r2_fastp	2.3%	46.2%	98.9%	4.1%
+Sob-CPnd_022-Ex1-11H-lcwgs-1-T.clmp.r1r2_fastp	1.8%	45.3%	98.9%	5.1%
+Sob-CPnd_023-Ex1-9E-lcwgs-1-T.clmp.r1r2_fastp	2.4%	46.2%	98.6%	3.3%
+Sob-CPnd_024-Ex1-12C-lcwgs-1-T.clmp.r1r2_fastp	2.1%	45.8%	99.0%	4.6%
+Sob-CPnd_025-Ex1-10B-lcwgs-1-T.clmp.r1r2_fastp	3.0%	46.1%	98.5%	1.6%
+Sob-CPnd_026-Ex1-12F-lcwgs-1-T.clmp.r1r2_fastp	2.0%	45.9%	99.0%	4.8%
+Sob-CPnd_027-Ex1-10F-lcwgs-1-T.clmp.r1r2_fastp	2.0%	44.7%	98.7%	4.4%
+Sob-CPnd_028-Ex1-2B-lcwgs-1-T.clmp.r1r2_fastp	1.8%	46.3%	98.9%	4.8%
+Sob-CPnd_029-Ex1-10E-lcwgs-1-T.clmp.r1r2_fastp	1.5%	42.4%	99.0%	5.6%
+Sob-CPnd_030-Ex1-10G-lcwgs-1-T.clmp.r1r2_fastp	1.9%	46.5%	98.8%	4.4%
+Sob-CPnd_031-Ex1-11B-lcwgs-1-T.clmp.r1r2_fastp	2.2%	45.5%	98.9%	4.1%
+Sob-CPnd_032-Ex1-2C-lcwgs-1-T.clmp.r1r2_fastp	1.7%	46.2%	98.9%	4.8%
+Sob-CPnd_033-Ex1-11G-lcwgs-1-T.clmp.r1r2_fastp	2.1%	46.5%	98.8%	3.7%
+Sob-CPnd_034-Ex1-9A-lcwgs-1-T.clmp.r1r2_fastp	2.5%	46.2%	98.7%	3.3%
+Sob-CPnd_035-Ex1-9F-lcwgs-1-T.clmp.r1r2_fastp	2.4%	45.7%	98.5%	3.1%
+Sob-CPnd_036-Ex1-9D-lcwgs-1-T.clmp.r1r2_fastp	1.7%	46.6%	98.8%	4.9%
+Sob-CPnd_037-Ex1-1A-lcwgs-1-T.clmp.r1r2_fastp	3.1%	45.0%	98.3%	1.7%
+Sob-CPnd_038-Ex1-1F-lcwgs-1-T.clmp.r1r2_fastp	1.8%	45.2%	98.9%	5.2%
+Sob-CPnd_039-Ex1-1G-lcwgs-1-T.clmp.r1r2_fastp	0.5%	44.6%	98.3%	5.3%
+Sob-CPnd_040-Ex1-10C-lcwgs-1-T.clmp.r1r2_fastp	2.0%	45.5%	98.5%	3.8%
+Sob-CPnd_041-Ex1-1B-lcwgs-1-T.clmp.r1r2_fastp	1.7%	46.4%	98.9%	5.0%
+Sob-CPnd_042-Ex1-1H-lcwgs-1-T.clmp.r1r2_fastp	1.3%	45.7%	98.7%	5.0%
+Sob-CPnd_043-Ex1-9G-lcwgs-1-T.clmp.r1r2_fastp	2.8%	45.6%	98.6%	3.1%
+Sob-CPnd_044-Ex1-11A-lcwgs-1-T.clmp.r1r2_fastp	2.5%	46.4%	98.8%	3.5%
+Sob-CPnd_045-Ex1-12H-lcwgs-1-T.clmp.r1r2_fastp	2.1%	45.8%	98.6%	3.9%
+Sob-CPnd_046-Ex1-9C-lcwgs-1-T.clmp.r1r2_fastp	3.0%	45.7%	98.4%	2.2%
+Sob-CPnd_047-Ex1-11D-lcwgs-1-T.clmp.r1r2_fastp	2.1%	45.7%	98.9%	4.5%
+Sob-CPnd_049-Ex1-2A-lcwgs-1-T.clmp.r1r2_fastp	2.9%	46.2%	98.4%	2.2%
+Sob-CPnd_050-Ex1-11F-lcwgs-1-T.clmp.r1r2_fastp	2.5%	46.4%	98.7%	2.7%
+Sob-CPnd_051-Ex1-4E-lcwgs-1-T.clmp.r1r2_fastp	0.9%	45.2%	98.6%	5.7%
+Sob-CPnd_052-Ex1-4H-lcwgs-1-T.clmp.r1r2_fastp	0.5%	44.5%	98.4%	5.5%
+Sob-CPnd_053-Ex1-4F-lcwgs-1-T.clmp.r1r2_fastp	1.6%	46.2%	99.0%	5.7%
+Sob-CPnd_055-Ex1-4B-lcwgs-1-T.clmp.r1r2_fastp	2.2%	45.3%	98.5%	3.5%
+Sob-CPnd_056-Ex1-4G-lcwgs-1-T.clmp.r1r2_fastp	1.8%	44.7%	99.0%	4.9%
+Sob-CPnd_057-Ex1-3B-lcwgs-1-T.clmp.r1r2_fastp	2.1%	44.8%	98.4%	3.3%
+Sob-CPnd_058-Ex1-2E-lcwgs-1-T.clmp.r1r2_fastp	1.5%	44.3%	99.1%	5.7%
+Sob-CPnd_059-Ex1-3C-lcwgs-1-T.clmp.r1r2_fastp	2.3%	46.4%	98.9%	4.2%
+Sob-CPnd_062-Ex1-3F-lcwgs-1-T.clmp.r1r2_fastp	2.3%	44.9%	98.7%	3.2%
+Sob-CPnd_071-Ex1-2G-lcwgs-1-T.clmp.r1r2_fastp	2.1%	45.2%	98.8%	3.9%
+Sob-CPnd_077-Ex1-2F-lcwgs-1-T.clmp.r1r2_fastp	2.8%	46.7%	98.6%	2.9%
+Sob-CPnd_078-Ex1-2H-lcwgs-1-T.clmp.r1r2_fastp	2.6%	45.6%	98.6%	2.8%
+Sob-CPnd_083-Ex1-3E-lcwgs-1-T.clmp.r1r2_fastp	2.6%	44.4%	98.7%	2.9%
+Sob-CPnd_086-Ex1-3A-lcwgs-1-T.clmp.r1r2_fastp	2.5%	44.2%	98.7%	3.3%
+Sob-CPnd_087-Ex1-3D-lcwgs-1-T.clmp.r1r2_fastp	2.4%	44.4%	98.8%	3.5%
+Sob-CPnd_088-Ex1-4D-lcwgs-1-T.clmp.r1r2_fastp	1.2%	44.9%	98.8%	5.6%
+Sob-CPnd_089-Ex1-4C-lcwgs-1-T.clmp.r1r2_fastp	2.3%	44.4%	98.7%	3.3%
+Sob-CPnd_090-Ex1-3G-lcwgs-1-T.clmp.r1r2_fastp	2.4%	46.5%	98.5%	3.0%
+Sob-CPnd_092-Ex1-3H-lcwgs-1-T.clmp.r1r2_fastp	2.5%	45.8%	98.8%	3.8%
+```
+
+</p>
+</details>
+
+## 11. Decontaminate files.
+Executed `runFQSCRN_6.bash`. In the queue to start running.

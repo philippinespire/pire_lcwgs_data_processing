@@ -716,3 +716,149 @@ Goy-CPnd_095-Ex1-5A-lcwgs-1-T.clmp.r2	5.0%	44%	135 bp	1.6
 
 </p>
 </details>
+
+## 10. Second trim.
+Executed `runFASTP_2_cssl.sbatch`, complete.
+
+<details><summary>Expand for MultiQC Output.</summary>
+
+```bash
+Sample Name	% Duplication	GC content	% PF	% Adapter
+Goy-APnd_001-Ex1-1A-lcwgs-1-T.clmp.r1r2_fastp	2.7%	40.8%	99.0%	1.4%
+Goy-APnd_002-Ex1-1B-lcwgs-1-T.clmp.r1r2_fastp	3.4%	40.0%	99.1%	1.2%
+Goy-APnd_003-Ex1-1C-lcwgs-1-T.clmp.r1r2_fastp	3.3%	40.8%	99.0%	1.3%
+Goy-APnd_004-Ex1-1D-lcwgs-1-T.clmp.r1r2_fastp	2.4%	41.2%	99.2%	1.4%
+Goy-APnd_005-Ex1-1E-lcwgs-1-T.clmp.r1r2_fastp	4.6%	39.7%	99.0%	1.1%
+Goy-APnd_006-Ex1-1F-lcwgs-1-T.clmp.r1r2_fastp	2.2%	40.7%	99.1%	1.5%
+Goy-APnd_007-Ex1-1G-lcwgs-1-T.clmp.r1r2_fastp	2.0%	41.9%	99.2%	1.5%
+Goy-APnd_008-Ex1-1H-lcwgs-1-T.clmp.r1r2_fastp	1.8%	42.7%	99.2%	1.5%
+Goy-APnd_009-Ex1-2A-lcwgs-1-T.clmp.r1r2_fastp	2.3%	39.9%	99.1%	1.5%
+Goy-APnd_010-Ex1-2B-lcwgs-1-T.clmp.r1r2_fastp	1.9%	41.9%	99.2%	1.5%
+Goy-APnd_011-Ex1-2C-lcwgs-1-T.clmp.r1r2_fastp	2.3%	41.2%	99.2%	1.4%
+Goy-APnd_012-Ex1-2D-lcwgs-1-T.clmp.r1r2_fastp	2.1%	41.2%	99.3%	1.4%
+Goy-APnd_013-Ex1-2E-lcwgs-1-T.clmp.r1r2_fastp	1.6%	41.8%	99.3%	1.5%
+Goy-APnd_014-Ex1-2F-lcwgs-1-T.clmp.r1r2_fastp	1.9%	42.2%	99.2%	1.5%
+Goy-APnd_015-Ex1-2G-lcwgs-1-T.clmp.r1r2_fastp	1.8%	41.4%	99.3%	1.5%
+Goy-APnd_016-Ex1-2H-lcwgs-1-T.clmp.r1r2_fastp	1.6%	43.5%	99.3%	1.5%
+Goy-APnd_017-Ex1-3A-lcwgs-1-T.clmp.r1r2_fastp	2.8%	40.8%	98.9%	1.4%
+Goy-APnd_018-Ex1-3B-lcwgs-1-T.clmp.r1r2_fastp	3.1%	39.9%	99.1%	1.2%
+Goy-APnd_019-Ex1-3C-lcwgs-1-T.clmp.r1r2_fastp	2.9%	41.5%	99.1%	1.3%
+Goy-APnd_020-Ex1-3D-lcwgs-1-T.clmp.r1r2_fastp	2.8%	40.6%	99.2%	1.2%
+Goy-APnd_021-Ex1-3E-lcwgs-1-T.clmp.r1r2_fastp	2.3%	41.4%	99.2%	1.4%
+Goy-APnd_022-Ex1-3F-lcwgs-1-T.clmp.r1r2_fastp	2.4%	42.6%	99.1%	1.4%
+Goy-APnd_023-Ex1-3G-lcwgs-1-T.clmp.r1r2_fastp	2.3%	41.0%	99.2%	1.4%
+Goy-APnd_024-Ex1-3H-lcwgs-1-T.clmp.r1r2_fastp	2.1%	41.8%	99.3%	1.4%
+Goy-APnd_025-Ex1-4A-lcwgs-1-T.clmp.r1r2_fastp	3.7%	42.6%	99.0%	1.2%
+Goy-APnd_026-Ex1-4B-lcwgs-1-T.clmp.r1r2_fastp	4.2%	41.1%	99.0%	1.1%
+Goy-APnd_027-Ex1-4C-lcwgs-1-T.clmp.r1r2_fastp	2.0%	41.5%	99.2%	1.5%
+Goy-APnd_028-Ex1-4D-lcwgs-1-T.clmp.r1r2_fastp	4.0%	41.5%	99.1%	1.1%
+Goy-APnd_029-Ex1-4E-lcwgs-1-T.clmp.r1r2_fastp	3.5%	43.3%	99.0%	1.2%
+Goy-APnd_030-Ex1-4F-lcwgs-1-T.clmp.r1r2_fastp	6.4%	46.8%	98.8%	0.9%
+Goy-APnd_031-Ex1-4G-lcwgs-1-T.clmp.r1r2_fastp	4.7%	48.4%	97.6%	1.9%
+Goy-APnd_032-Ex1-4H-lcwgs-1-T.clmp.r1r2_fastp	1.8%	42.9%	99.2%	1.5%
+Goy-APnd_033-Ex1-5A-lcwgs-1-T.clmp.r1r2_fastp	3.6%	41.6%	99.0%	1.3%
+Goy-APnd_034-Ex1-5B-lcwgs-1-T.clmp.r1r2_fastp	8.4%	55.3%	97.6%	1.1%
+Goy-APnd_035-Ex1-5C-lcwgs-1-T.clmp.r1r2_fastp	2.2%	43.7%	99.1%	1.5%
+Goy-APnd_036-Ex1-5D-lcwgs-1-T.clmp.r1r2_fastp	2.1%	43.5%	99.1%	1.5%
+Goy-APnd_037-Ex1-5E-lcwgs-1-T.clmp.r1r2_fastp	3.5%	45.3%	98.9%	1.2%
+Goy-APnd_038-Ex1-5F-lcwgs-1-T.clmp.r1r2_fastp	2.3%	44.4%	99.0%	1.4%
+Goy-APnd_039-Ex1-5G-lcwgs-1-T.clmp.r1r2_fastp	1.7%	41.8%	99.2%	1.5%
+Goy-APnd_040-Ex1-5H-lcwgs-1-T.clmp.r1r2_fastp	1.9%	43.2%	99.2%	1.5%
+Goy-APnd_041-Ex1-6A-lcwgs-1-T.clmp.r1r2_fastp	1.9%	42.7%	98.9%	1.5%
+Goy-APnd_042-Ex1-6B-lcwgs-1-T.clmp.r1r2_fastp	2.3%	41.1%	99.0%	1.5%
+Goy-APnd_043-Ex1-6C-lcwgs-1-T.clmp.r1r2_fastp	2.7%	43.8%	98.9%	1.3%
+Goy-APnd_044-Ex1-6D-lcwgs-1-T.clmp.r1r2_fastp	2.5%	42.8%	99.1%	1.3%
+Goy-APnd_045-Ex1-6E-lcwgs-1-T.clmp.r1r2_fastp	2.6%	41.4%	99.0%	1.3%
+Goy-APnd_046-Ex1-6F-lcwgs-1-T.clmp.r1r2_fastp	2.5%	42.7%	99.0%	1.3%
+Goy-APnd_047-Ex1-6G-lcwgs-1-T.clmp.r1r2_fastp	0.8%	43.4%	98.9%	1.8%
+Goy-APnd_048-Ex1-6H-lcwgs-1-T.clmp.r1r2_fastp	2.6%	42.1%	99.1%	1.3%
+Goy-APnd_049-Ex1-7A-lcwgs-1-T.clmp.r1r2_fastp	4.8%	44.6%	98.6%	1.2%
+Goy-APnd_050-Ex1-7B-lcwgs-1-T.clmp.r1r2_fastp	2.8%	40.9%	99.1%	1.3%
+Goy-APnd_051-Ex1-7C-lcwgs-1-T.clmp.r1r2_fastp	2.4%	41.5%	99.1%	1.4%
+Goy-APnd_052-Ex1-7D-lcwgs-1-T.clmp.r1r2_fastp	2.2%	41.0%	99.2%	1.4%
+Goy-APnd_053-Ex1-7E-lcwgs-1-T.clmp.r1r2_fastp	2.3%	42.4%	99.1%	1.4%
+Goy-APnd_054-Ex1-7F-lcwgs-1-T.clmp.r1r2_fastp	2.2%	42.0%	99.0%	1.4%
+Goy-APnd_055-Ex1-7G-lcwgs-1-T.clmp.r1r2_fastp	2.8%	44.4%	99.0%	1.3%
+Goy-APnd_056-Ex1-7H-lcwgs-1-T.clmp.r1r2_fastp	2.9%	44.1%	99.1%	1.3%
+Goy-APnd_057-Ex1-8A-lcwgs-1-T.clmp.r1r2_fastp	3.0%	43.2%	99.0%	1.3%
+Goy-APnd_058-Ex1-8B-lcwgs-1-T.clmp.r1r2_fastp	2.9%	42.6%	99.1%	1.3%
+Goy-APnd_059-Ex1-8C-lcwgs-1-T.clmp.r1r2_fastp	2.3%	42.3%	99.2%	1.4%
+Goy-APnd_060-Ex1-8D-lcwgs-1-T.clmp.r1r2_fastp	2.6%	41.9%	99.2%	1.3%
+Goy-APnd_061-Ex1-8E-lcwgs-1-T.clmp.r1r2_fastp	2.0%	41.1%	99.3%	1.5%
+Goy-APnd_062-Ex1-8F-lcwgs-1-T.clmp.r1r2_fastp	2.6%	43.3%	99.1%	1.3%
+Goy-APnd_063-Ex1-8G-lcwgs-1-T.clmp.r1r2_fastp	2.3%	42.4%	99.2%	1.4%
+Goy-APnd_064-Ex1-8H-lcwgs-1-T.clmp.r1r2_fastp	3.4%	43.7%	99.0%	1.2%
+Goy-APnd_065-Ex1-9A-lcwgs-1-T.clmp.r1r2_fastp	2.8%	42.8%	99.1%	1.3%
+Goy-APnd_066-Ex1-9B-lcwgs-1-T.clmp.r1r2_fastp	2.9%	42.2%	99.1%	1.3%
+Goy-APnd_067-Ex1-9C-lcwgs-1-T.clmp.r1r2_fastp	2.7%	43.6%	99.1%	1.4%
+Goy-CPnd_001-Ex1-7F-lcwgs-1-T.clmp.r1r2_fastp	5.9%	44.9%	97.8%	0.5%
+Goy-CPnd_002-Ex1-5C-lcwgs-1-T.clmp.r1r2_fastp	4.9%	45.1%	98.2%	0.7%
+Goy-CPnd_003-Ex1-7G-lcwgs-1-T.clmp.r1r2_fastp	5.2%	44.6%	97.9%	0.6%
+Goy-CPnd_004-Ex1-2D-lcwgs-1-T.clmp.r1r2_fastp	6.0%	43.6%	97.8%	0.4%
+Goy-CPnd_005-Ex1-6A-lcwgs-1-T.clmp.r1r2_fastp	6.7%	43.5%	97.8%	0.4%
+Goy-CPnd_006-Ex1-2C-lcwgs-1-T.clmp.r1r2_fastp	6.0%	43.7%	97.9%	0.5%
+Goy-CPnd_007-Ex1-8E-lcwgs-1-T.clmp.r1r2_fastp	5.9%	44.2%	97.8%	0.6%
+Goy-CPnd_008-Ex1-4B-lcwgs-1-T.clmp.r1r2_fastp	7.9%	43.7%	97.2%	0.3%
+Goy-CPnd_009-Ex1-8H-lcwgs-1-T.clmp.r1r2_fastp	5.3%	43.7%	98.0%	0.6%
+Goy-CPnd_010-Ex1-6D-lcwgs-1-T.clmp.r1r2_fastp	6.6%	44.9%	98.1%	0.5%
+Goy-CPnd_012-Ex1-1H-lcwgs-1-T.clmp.r1r2_fastp	2.3%	47.6%	97.4%	0.6%
+Goy-CPnd_013-Ex1-7H-lcwgs-1-T.clmp.r1r2_fastp	3.8%	44.1%	98.2%	0.7%
+Goy-CPnd_014-Ex1-4H-lcwgs-1-T.clmp.r1r2_fastp	4.7%	44.4%	98.0%	0.6%
+Goy-CPnd_015-Ex1-1E-lcwgs-1-T.clmp.r1r2_fastp	6.8%	43.9%	97.2%	0.2%
+Goy-CPnd_016-Ex1-7C-lcwgs-1-T.clmp.r1r2_fastp	5.6%	43.9%	97.9%	0.5%
+Goy-CPnd_017-Ex1-5H-lcwgs-1-T.clmp.r1r2_fastp	3.0%	46.3%	98.9%	1.1%
+Goy-CPnd_020-Ex1-5B-lcwgs-1-T.clmp.r1r2_fastp	4.8%	44.1%	98.3%	0.8%
+Goy-CPnd_025-Ex1-5D-lcwgs-1-T.clmp.r1r2_fastp	5.2%	43.6%	98.2%	0.6%
+Goy-CPnd_026-Ex1-2F-lcwgs-1-T.clmp.r1r2_fastp	6.8%	43.6%	97.5%	0.3%
+Goy-CPnd_027-Ex1-2H-lcwgs-1-T.clmp.r1r2_fastp	5.8%	43.6%	97.9%	0.5%
+Goy-CPnd_031-Ex1-1F-lcwgs-1-T.clmp.r1r2_fastp	7.8%	44.6%	97.2%	0.3%
+Goy-CPnd_032-Ex1-1D-lcwgs-1-T.clmp.r1r2_fastp	6.1%	44.3%	97.5%	0.4%
+Goy-CPnd_033-Ex1-2B-lcwgs-1-T.clmp.r1r2_fastp	4.6%	43.7%	98.3%	0.8%
+Goy-CPnd_035-Ex1-3A-lcwgs-1-T.clmp.r1r2_fastp	4.4%	43.5%	98.3%	0.8%
+Goy-CPnd_036-Ex1-7B-lcwgs-1-T.clmp.r1r2_fastp	8.8%	56.8%	97.3%	0.2%
+Goy-CPnd_037-Ex1-3H-lcwgs-1-T.clmp.r1r2_fastp	5.6%	43.9%	97.9%	0.6%
+Goy-CPnd_038-Ex1-6F-lcwgs-1-T.clmp.r1r2_fastp	8.0%	44.5%	97.3%	0.2%
+Goy-CPnd_039-Ex1-8A-lcwgs-1-T.clmp.r1r2_fastp	7.6%	43.3%	97.1%	0.2%
+Goy-CPnd_040-Ex1-7A-lcwgs-1-T.clmp.r1r2_fastp	2.6%	43.1%	98.5%	1.1%
+Goy-CPnd_041-Ex1-3C-lcwgs-1-T.clmp.r1r2_fastp	7.3%	44.1%	97.3%	0.3%
+Goy-CPnd_042-Ex1-3B-lcwgs-1-T.clmp.r1r2_fastp	5.9%	43.4%	97.9%	0.5%
+Goy-CPnd_044-Ex1-4E-lcwgs-1-T.clmp.r1r2_fastp	2.0%	43.2%	97.2%	1.0%
+Goy-CPnd_047-Ex1-6E-lcwgs-1-T.clmp.r1r2_fastp	8.9%	44.3%	97.0%	0.2%
+Goy-CPnd_048-Ex1-8B-lcwgs-1-T.clmp.r1r2_fastp	5.8%	43.6%	97.9%	0.4%
+Goy-CPnd_049-Ex1-8C-lcwgs-1-T.clmp.r1r2_fastp	4.6%	44.2%	98.2%	0.7%
+Goy-CPnd_050-Ex1-8F-lcwgs-1-T.clmp.r1r2_fastp	5.2%	44.1%	98.0%	0.6%
+Goy-CPnd_052-Ex1-3D-lcwgs-1-T.clmp.r1r2_fastp	6.0%	43.8%	97.8%	0.4%
+Goy-CPnd_053-Ex1-2E-lcwgs-1-T.clmp.r1r2_fastp	5.8%	43.7%	97.9%	0.5%
+Goy-CPnd_054-Ex1-1B-lcwgs-1-T.clmp.r1r2_fastp	5.4%	44.4%	97.6%	0.5%
+Goy-CPnd_056-Ex1-3G-lcwgs-1-T.clmp.r1r2_fastp	7.8%	43.8%	97.1%	0.2%
+Goy-CPnd_057-Ex1-4F-lcwgs-1-T.clmp.r1r2_fastp	7.7%	43.7%	97.4%	0.3%
+Goy-CPnd_058-Ex1-1G-lcwgs-1-T.clmp.r1r2_fastp	5.1%	43.9%	97.1%	0.4%
+Goy-CPnd_059-Ex1-8G-lcwgs-1-T.clmp.r1r2_fastp	5.3%	44.0%	98.0%	0.6%
+Goy-CPnd_060-Ex1-7D-lcwgs-1-T.clmp.r1r2_fastp	5.0%	44.3%	98.2%	0.6%
+Goy-CPnd_061-Ex1-7E-lcwgs-1-T.clmp.r1r2_fastp	5.2%	43.9%	98.0%	0.6%
+Goy-CPnd_062-Ex1-3F-lcwgs-1-T.clmp.r1r2_fastp	6.8%	43.4%	97.6%	0.4%
+Goy-CPnd_063-Ex1-2G-lcwgs-1-T.clmp.r1r2_fastp	6.7%	44.2%	97.5%	0.4%
+Goy-CPnd_064-Ex1-8D-lcwgs-1-T.clmp.r1r2_fastp	6.0%	44.0%	98.0%	0.5%
+Goy-CPnd_068-Ex1-2A-lcwgs-1-T.clmp.r1r2_fastp	6.9%	43.7%	97.7%	0.4%
+Goy-CPnd_070-Ex1-1A-lcwgs-1-T.clmp.r1r2_fastp	7.6%	43.6%	97.2%	0.2%
+Goy-CPnd_071-Ex1-3E-lcwgs-1-T.clmp.r1r2_fastp	6.2%	43.7%	97.7%	0.4%
+Goy-CPnd_072-Ex1-4D-lcwgs-1-T.clmp.r1r2_fastp	5.3%	43.7%	98.0%	0.5%
+Goy-CPnd_073-Ex1-4C-lcwgs-1-T.clmp.r1r2_fastp	5.1%	44.0%	98.1%	0.6%
+Goy-CPnd_074-Ex1-1C-lcwgs-1-T.clmp.r1r2_fastp	6.0%	43.9%	97.7%	0.4%
+Goy-CPnd_084-Ex1-5E-lcwgs-1-T.clmp.r1r2_fastp	7.3%	43.8%	97.5%	0.3%
+Goy-CPnd_085-Ex1-6G-lcwgs-1-T.clmp.r1r2_fastp	6.0%	44.3%	98.0%	0.6%
+Goy-CPnd_086-Ex1-5F-lcwgs-1-T.clmp.r1r2_fastp	5.4%	44.2%	98.0%	0.6%
+Goy-CPnd_087-Ex1-6C-lcwgs-1-T.clmp.r1r2_fastp	5.4%	44.1%	98.2%	0.6%
+Goy-CPnd_088-Ex1-6H-lcwgs-1-T.clmp.r1r2_fastp	7.0%	43.8%	97.7%	0.4%
+Goy-CPnd_089-Ex1-6B-lcwgs-1-T.clmp.r1r2_fastp	5.1%	44.3%	98.1%	0.8%
+Goy-CPnd_090-Ex1-5G-lcwgs-1-T.clmp.r1r2_fastp	6.1%	43.6%	97.6%	0.4%
+Goy-CPnd_091-Ex1-4G-lcwgs-1-T.clmp.r1r2_fastp	7.1%	43.6%	97.1%	0.2%
+Goy-CPnd_092-Ex1-4A-lcwgs-1-T.clmp.r1r2_fastp	5.8%	45.5%	97.9%	0.6%
+Goy-CPnd_095-Ex1-5A-lcwgs-1-T.clmp.r1r2_fastp	5.7%	44.6%	98.1%	0.7%
+```
+
+</p>
+</details>
+
+## 11. Decontaminate files.
+Executed `runFQSCRN_6.bash`. In the queue to start running.

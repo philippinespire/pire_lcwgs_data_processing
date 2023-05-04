@@ -878,3 +878,20 @@ insert multiqc output here
 
 </p>
 </details>
+
+## 12. Execute RePair
+Executed `runREPAIR.sbatch`, complete.
+
+`Multi_FASTQC.sh` executed.
+
+<details><summary>Expand for MultiQC Output.</summary>
+
+```bash
+insert multiqc output here
+```
+
+</p>
+</details>
+
+## 14. Clean up
+`logs` directory created, `*out` files moved to `logs`.

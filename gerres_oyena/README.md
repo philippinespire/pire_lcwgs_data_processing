@@ -861,4 +861,7 @@ Goy-CPnd_095-Ex1-5A-lcwgs-1-T.clmp.r1r2_fastp	5.7%	44.6%	98.1%	0.7%
 </details>
 
 ## 11. Decontaminate files.
-Executed `runFQSCRN_6.bash`. In the queue to start running.
+Executed `runFQSCRN_6.bash`. In the queue to start running. 
+Still running. 5/3
+Finished running. 5/4
+261 files for each file type, matching number of `fq.gz` files. No errors found by grep.

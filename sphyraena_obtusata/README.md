@@ -1034,3 +1034,20 @@ Sob-CPnd_092-Ex1-3H-lcwgs-1-T.clmp.r1r2_fastp	2.5%	45.8%	98.8%	3.8%
 
 ## 11. Decontaminate files.
 Executed `runFQSCRN_6.bash`. In the queue to start running.
+Still running. 5/3
+
+Finished running. 5/4
+
+320 files for each file type, matching number of `fq.gz` files. No errors found by grep.
+
+`runMULTIQC.sbatch` executed.
+
+<details><summary>Expand for MultiQC Output.</summary>
+
+```bash
+
+```
+
+</p>
+</details>
+

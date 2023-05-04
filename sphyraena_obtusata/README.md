@@ -1045,7 +1045,7 @@ Finished running. 5/4
 <details><summary>Expand for MultiQC Output.</summary>
 
 ```bash
-
+insert multiqc output here
 ```
 
 </p>

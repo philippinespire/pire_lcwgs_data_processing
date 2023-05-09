@@ -74,6 +74,8 @@ sed -i 's/Salarias_fasciatus/GCF_902148845.1_fSalaFa1.1_chr1-23_rename.fna/g' ge
 
 Get mitochondrial sequence files.
 
+!! Note - GenErode only seems to check against a standard set of 5 mitochondrial genomes (human/pig/chicken/cow/mouse) even if others are provided in the folder containing mitochondrial reference genomes. I've contacted the developer but they are on leave until August!!
+
 ```
 while read file; do cp "$file" /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_Sfa_full/data/mitogenomes; done < mitolocs
 ```

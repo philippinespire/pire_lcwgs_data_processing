@@ -135,6 +135,7 @@ I made the refGenome folder in the directory and copied the genome assembled fro
 ---
 ## 3. Mapped & Filtered BAM files
 
+<details><summary><i>mkBAM step</i></summary>
 Created mkBAM folder & linked fq.gz files from fq_fp1_clmp_fp2_fqscrn_repaired:
 
 ```
@@ -154,10 +155,18 @@ After changing the settings, I executed this command:
 sbatch ../../../dDocentHPC/dDocentHPC_dev2.sbatch mkBAM config.6.lcwgs
 ```
 
+</p>
+</details>
+
+<details><summary><i>fltrBAM step</i></summary>
+
 To filter resulting BAM files, I executed the following command:
 ```
 sbatch ../../../dDocentHPC/dDocentHPC_dev2.sbatch fltrBAM config.6.lcwgs
 ```
+
+</p>
+</details>
 ---
 ## 4. Visualised results using the Process Sequencing Metadata Repo
 I followed Kevin's repo for [Process Sequencing Metadata](https://github.com/philippinespire/process_sequencing_metadata).
@@ -174,7 +183,7 @@ I followed Brendan's repository for processing Salarias fasciatus [here](https:/
 
 More specifically, here's what I did:
 
-<details><summary><i>Set-up GenErode_Sne_full folder:</i></summary>
+<details><summary><i>Set-up GenErode_Sne_full folder</i></summary>
 <p>
 
 ```
@@ -191,7 +200,7 @@ mkdir reference
 </p>
 </details>
 
-<details><summary><i>Copied the files needed under each folder:</i></i></summary>
+<details><summary><i>Copied the files needed under each folder</i></i></summary>
 <p>
 
 ```
@@ -211,7 +220,7 @@ cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera
 </p>
 </details>
 
-<details><summary><i>Removed mitochondrial scaffold:</i></i></summary>
+<details><summary><i>Removed mitochondrial scaffold</i></i></summary>
 <p>
 
 ```
@@ -232,7 +241,7 @@ rm Sne_scaffolds_allLibs_decontam_R1R2_noIsolate2.fasta
 </p>
 </details>
 
-<details><summary><i>Got outgroup genome files & made a Newick tree:</i></i></summary>
+<details><summary><i>Got outgroup genome files & made a Newick tree</i></i></summary>
 <p>
 
 S. nematoptera is under the Apogonidae family so on GenBank, I did a search for chromosome level assemblies and found assemblies for fishes under Kurtiformes, Gobiaria, and Eupercaria to find almost 30 species with chromosome level genome assemblies. My list of species is uploaded [here](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/GenErode_Sne_full/Speciesnames.txt) and my decode file can be found [here](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/GenErode_Sne_full/SpeciesSequenceDecode.txt)
@@ -251,7 +260,7 @@ sed -i 's/Sphaeramia_nematoptera/Sne_scaffolds_allLibs_decontam_R1R2_noIsolate_r
 </p>
 </details>
 
-<details><summary><i>Copy and Edit Config files:</i></i></summary>
+<details><summary><i>Copy and Edit Config files</i></i></summary>
 <p>
 
 ```
@@ -266,7 +275,7 @@ I made edits to the config file based on Brendan's recommendations & my final co
 </p>
 </details>
 
-<details><summary><i>Run GenErode:</i></i></summary>
+<details><summary><i>Run GenErode</i></i></summary>
 <p>
 
 To run GenErode, you need to copy the sbatch file & run it in your analysis folder:

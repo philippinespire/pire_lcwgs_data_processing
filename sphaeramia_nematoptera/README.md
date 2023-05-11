@@ -247,7 +247,7 @@ Then, rename the focal species w/ the name of the reference assembly file:
 ```
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/GenErode_Sne_full
 sed -i 's/Sphaeramia_nematoptera/Sne_scaffolds_allLibs_decontam_R1R2_noIsolate_rename.fasta/g' gerp_tree.nwk
-
+```
 </p>
 </details>
 

@@ -193,6 +193,7 @@ mkdir reference
 
 <details><summary><i>Copied the files needed under each folder:</i></i></summary>
 <p>
+
 ```
 #historical folder
 cd historical
@@ -206,6 +207,7 @@ cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera
 #navigated to reference folder & then copied the reference fasta file under refGenome
 cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/refGenome/*.fasta .
 ```
+
 </p>
 </details>
 

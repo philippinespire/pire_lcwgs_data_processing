@@ -162,4 +162,72 @@ sbatch ../../../dDocentHPC/dDocentHPC_dev2.sbatch fltrBAM config.6.lcwgs
 ## 4. Visualised results using the Process Sequencing Metadata Repo
 I followed Kevin's repo for [Process Sequencing Metadata](https://github.com/philippinespire/process_sequencing_metadata).
 
-Results are uploaded in this [folder]()]
+Results are uploaded in my folder:
+```
+cd /home/jbald004/process_sequencing_metadata/out/lcwgs_Sne
+```
+
+Graphs showed information on depth of coverage for both Albatross & Contemporary
+
+## 5. GenErode, a bioinformatics pipeline to investigate genome erosion
+I followed Brendan's repository for processing Salarias fasciatus [here](https://github.com/philippinespire/pire_lcwgs_data_processing/tree/main/salarias_fasciatus/1st_sequencing_run/GenErode_Sfa_full)
+
+More specifically, here's what I did:
+
+<details><summary><i>Set-up GenErode_Sne_full folder:</i></summary>
+<p>
+
+```
+#copied the GenErode template directory from Wahab
+cp -r /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_Wahab/GenErode_templatedir /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/GenErode_Sne_full
+
+#made directories within my new folder
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_Wahab/GenErode_templatedir /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/GenErode_Sne_full
+mkdir config
+mkdir historical
+mkdir modern
+mkdir reference
+```
+</p>
+</details>
+
+<details><summary><i>Copied the files needed under each folder:</i></i></summary>
+<p>
+```
+#historical folder
+cd historical
+cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/fq_raw_lcwgs/Sne-ATaw*.fq.gz .
+
+#modern folder
+#navigated to modern/
+cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/fq_raw_lcwgs/Sne-CTaw*.fq.gz .
+
+#reference
+#navigated to reference folder & then copied the reference fasta file under refGenome
+cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/refGenome/*.fasta .
+```
+</p>
+</details>
+
+<details><summary><i>Removed mitochondrial scaffold:</i></i></summary>
+<p>
+
+```
+#navigate to the GenErode reference folder
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/GenErode_Sne_full/reference
+
+awk '/mitochondrion/{stop=1} stop==0{print}' < Sne_scaffolds_allLibs_decontam_R1R2_noIsolate.fasta >> Sne_scaffolds_allLibs_decontam_R1R2_noIsolate2.fasta
+
+sed 's/ .*//g' Sne_scaffolds_allLibs_decontam_R1R2_noIsolate2.fasta >Sne_scaffolds_allLibs_decontam_R1R2_noIsolate3.fasta
+
+#renamed the final fasta file to have 'rename' on file name instead of '3' to be consistent with how Brendan did it
+mv Sne_scaffolds_allLibs_decontam_R1R2_noIsolate3.fasta Sne_scaffolds_allLibs_decontam_R1R2_noIsolate_rename.fasta
+
+#deleted the other interim files
+rm Sne_scaffolds_allLibs_decontam_R1R2_noIsolate.fasta
+rm Sne_scaffolds_allLibs_decontam_R1R2_noIsolate2.fasta
+```
+</p>
+</details>
+
+

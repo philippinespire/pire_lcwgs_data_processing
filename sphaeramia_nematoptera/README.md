@@ -232,4 +232,50 @@ rm Sne_scaffolds_allLibs_decontam_R1R2_noIsolate2.fasta
 </p>
 </details>
 
+<details><summary><i>Got outgroup genome files & made a Newick tree:</i></i></summary>
+<p>
 
+S. nematoptera is under the Apogonidae family so on GenBank, I did a search for chromosome level assemblies and found assemblies for fishes under Kurtiformes, Gobiaria, and Eupercaria to find almost 30 species with chromosome level genome assemblies. My list of species is uploaded [here](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/GenErode_Sne_full/Speciesnames.txt) and my decode file can be found [here](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/GenErode_Sne_full/SpeciesSequenceDecode.txt)
+
+I made the Newick tree by uploading my species list, but then I found that Cottoperca gobio, Epinephelus moara, and Siphamia tubifer could not be found, so I did not upload the genomes of these species on to the gerp_outgroups folder.
+To get the Newick tree:
+* upload the list of species names to timetree.org ("Load a List of Species" at the bottom)
+* download in Newick format
+* upload file to analysis folder (GenErode_Sne_full)
+
+Then, rename the focal species w/ the name of the reference assembly file:
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/GenErode_Sne_full
+sed -i 's/Sphaeramia_nematoptera/Sne_scaffolds_allLibs_decontam_R1R2_noIsolate_rename.fasta/g' gerp_tree.nwk
+
+</p>
+</details>
+
+<details><summary><i>Copy and Edit Config files:</i></i></summary>
+<p>
+
+```
+#Copy the test file you need to edit and change file name to config.yaml
+cp /home/breid/GenErode_testdata/config/config_sum_rhino.yaml /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/GenErode_Sne_full//config.yaml
+```
+
+Edited the files to provide the path info for historic samples & modern samples. My files can be found in the [config](https://github.com/philippinespire/pire_lcwgs_data_processing/tree/main/sphaeramia_nematoptera/GenErode_Sne_full/config) folder
+
+I made edits to the config file based on Brendan's recommendations & my final config file can be found [here](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/GenErode_Sne_full/config/config.yaml)
+
+</p>
+</details>
+
+<details><summary><i>Run GenErode:</i></i></summary>
+<p>
+
+To run GenErode, you need to copy the sbatch file & run it in your analysis folder:
+```
+cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_Wahab/run_GenErode.sbatch /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/GenErode_Sne_full
+#navigate to analysis folder
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/GenErode_Sne_full/
+#run the sbatch file
+sbatch run_GenErode.sbatch 
+```
+</p>
+</details>

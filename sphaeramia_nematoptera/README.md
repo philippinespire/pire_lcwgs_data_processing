@@ -167,6 +167,7 @@ sbatch ../../../dDocentHPC/dDocentHPC_dev2.sbatch fltrBAM config.6.lcwgs
 
 </p>
 </details>
+
 ---
 ## 4. Visualised results using the Process Sequencing Metadata Repo
 I followed Kevin's repo for [Process Sequencing Metadata](https://github.com/philippinespire/process_sequencing_metadata).

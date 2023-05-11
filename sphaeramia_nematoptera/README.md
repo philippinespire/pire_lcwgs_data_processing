@@ -133,4 +133,33 @@ Potential issues:
 I made the refGenome folder in the directory and copied the genome assembled from the SSL processing repo for this species.
 
 ---
-## 3. 
+## 3. Mapped & Filtered BAM files
+
+Created mkBAM folder & linked fq.gz files from fq_fp1_clmp_fp2_fqscrn_repaired:
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera
+mkdir mkBAM
+ln fq_fp1_clmp_fp2_fqscrn_repaired/*fq.gz mkBAM
+```
+
+Copied dDocent config file & edited it to suit the lcwgs data
+```
+cp ../../../dDocentHPC/configs/config.6.cssl .
+mv config.6.cssl config.6.lcwgs
+```
+
+After changing the settings, I executed this command:
+```
+sbatch ../../../dDocentHPC/dDocentHPC_dev2.sbatch mkBAM config.6.lcwgs
+```
+
+To filter resulting BAM files, I executed the following command:
+```
+sbatch ../../../dDocentHPC/dDocentHPC_dev2.sbatch fltrBAM config.6.lcwgs
+```
+---
+## 4. Visualised results using the Process Sequencing Metadata Repo
+I followed Kevin's repo for [Process Sequencing Metadata](https://github.com/philippinespire/process_sequencing_metadata).
+
+Results are uploaded in this [folder]()]

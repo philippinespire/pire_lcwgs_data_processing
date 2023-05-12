@@ -229,7 +229,7 @@ sbatch ../../../pire_fq_gz_processing/runFASTP_2_cssl.sbatch fq_fp1_clmp fq_fp1_
 <details>
         <summary>11. Decontaminate files</summary>
 
-Run by klabrador on 2023-05-01
+Run by klabrador on 2023-05-12
 
 ```
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/3rd_sequencing_run

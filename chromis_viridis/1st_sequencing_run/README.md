@@ -37,6 +37,7 @@ Run by klabrador on 2023-04-28
 - dataset location @ https://gridftp.tamucc.edu/genomics/20230425_PIRE-Cvi-lcwgs-testlane/
 
 ```bash
+cd ./fq_raw
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/gridDownloader.sh . https://gridftp.tamucc.edu/genomics/20230425_PIRE-Cvi-lcwgs-testlane/
 ```
 
@@ -135,14 +136,6 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw
 
 - job submitted; job ID not recorded.
 - job finished successfully
-
-</details>
-
-
-<details>
-        <summary>7. Check data quality</summary>
-
-Run by klabrador on 2023-04-28
 
 </details>
 

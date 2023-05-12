@@ -161,19 +161,17 @@ bash ../../../pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1 fq_fp1_cl
 ```
 
 - job submitted: 1594654
-- job finished...
+- job finished successfully
 
 </details>
-
-<details> <summary>to do</summary>
 
 <details>
         <summary>9b. Check duplicate removal success</summary>
 
-Run by klabrador on 2023-04-29
+Run by klabrador on 2023-05-12
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/ambassis_buruensis/1st_sequencing_run
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/3rd_sequencing_run
 
 salloc
 enable_lmod
@@ -192,17 +190,17 @@ exit
 <details>
         <summary>9c. Generate metadata on deduplicated FASTQ files</summary>
 
-Run by klabrador on 2023-04-29
+Run by klabrador on 2023-05-12
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/ambassis_buruensis/1st_sequencing_run
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/3rd_sequencing_run
 
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1_clmp" "fqc_clmp_report"  "fq.gz"
 
 ```
 
-- job submitted: 1510090
-- job finished successfully
+- job submitted: 1594759
+- job finished ...
 
 </details>
 
@@ -210,22 +208,23 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1
 <details>
         <summary>10. Second Trim</summary>
 
-Run by klabrador on 2023-05-01
+Run by klabrador on 2023-05-12
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/ambassis_buruensis/1st_sequencing_run
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/3rd_sequencing_run
 
 # Run cssl script for lcwgs.
 sbatch ../../../pire_fq_gz_processing/runFASTP_2_cssl.sbatch fq_fp1_clmp fq_fp1_clmp_fp2
 
 ```
 
-- job submitted: 1511948
+- job submitted: 1594760
 - job finished successfully
 
 
 </details>
 
+<details> <summary>to do</summary>
 
 <details>
         <summary>11. Decontaminate files</summary>
@@ -233,12 +232,12 @@ sbatch ../../../pire_fq_gz_processing/runFASTP_2_cssl.sbatch fq_fp1_clmp fq_fp1_
 Run by klabrador on 2023-05-01
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/ambassis_buruensis/1st_sequencing_run
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/3rd_sequencing_run
 
 bash ../../../pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2 fq_fp1_clmp_fp2_fqscrn 20
 ```
 
-- job submitted: 1511969
+- job submitted: 1594764
 
 
 Confirm if all files were successfully completed.

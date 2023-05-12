@@ -165,7 +165,7 @@ bash ../../../pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1 fq_fp1_cl
 
 </details>
 
-<details> <summary: to do</summary>
+<details> <summary>to do</summary>
 
 <details>
         <summary>9b. Check duplicate removal success</summary>

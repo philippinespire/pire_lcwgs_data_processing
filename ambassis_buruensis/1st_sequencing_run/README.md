@@ -37,6 +37,7 @@ Run by klabrador on 2023-04-28
 - dataset location @ https://gridftp.tamucc.edu/genomics/20230425_PIRE-Abu-lcwgs-testlane/
 
 ```bash
+cd ./fq_raw
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/gridDownloader.sh . https://gridftp.tamucc.edu/genomics/20230425_PIRE-Abu-lcwgs-testlane/
 ```
 

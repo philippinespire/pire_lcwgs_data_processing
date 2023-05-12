@@ -33,6 +33,7 @@ mkdir fq_raw fq_fp1 fq_fp1_clmp fq_fp1_clmp_fp2 fq_fp1_clmp_fp2_fqscrn fq_fp1_cl
 - dataset location @ https://gridftp.tamucc.edu/genomics/20230425_Gotanco-lcwgs-testlane/
 
 ```bash
+cd ./fq_raw
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/gridDownloader.sh . https://gridftp.tamucc.edu/genomics/20230425_Gotanco-lcwgs-testlane/ https://gridftp.tamucc.edu/genomics/20230425_Gotanco-lcwgs-testlane/https://gridftp.tamucc.edu/genomics/20230425_Gotanco-lcwgs-testlane/https://gridftp.tamucc.edu/genomics/20230425_Gotanco-lcwgs-testlane/
 ```
 

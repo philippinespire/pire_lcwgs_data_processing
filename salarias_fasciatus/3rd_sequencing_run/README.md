@@ -165,7 +165,8 @@ bash ../../../pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1 fq_fp1_cl
 
 </details>
 
-###
+<details> <summary: to do</summary>
+
 <details>
         <summary>9b. Check duplicate removal success</summary>
 
@@ -304,3 +305,6 @@ mkdir logs
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/ambassis_buruensis/1st_sequencing_run
 mv *out logs/
 ```
+</details>
+
+</details>

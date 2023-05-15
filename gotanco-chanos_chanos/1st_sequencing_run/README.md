@@ -249,6 +249,8 @@ cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/
 mv *out logs/
 ```
 
+</details>
+
 ## 2. Process Sequencing Metadata
 
 This section wrangles the information generated from the previous section and use that to generate plots and tables that are needed to assess library parameters (e.g., proportion of reads filtered, read lengths). This follows the instructions from [process_sequencing_metadata](https://github.com/philippinespire/process_sequencing_metadata). 

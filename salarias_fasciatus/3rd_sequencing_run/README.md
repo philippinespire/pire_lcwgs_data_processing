@@ -224,7 +224,6 @@ sbatch ../../../pire_fq_gz_processing/runFASTP_2_cssl.sbatch fq_fp1_clmp fq_fp1_
 
 </details>
 
-<details> <summary>to do</summary>
 
 <details>
         <summary>11. Decontaminate files</summary>
@@ -239,7 +238,6 @@ bash ../../../pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2 fq_fp1_clmp
 
 - job submitted: 1594764
 
-
 Confirm if all files were successfully completed.
 ```
 # Check file count.
@@ -248,7 +246,7 @@ ls fq_fp1_clmp_fp2_fqscrn/*tagged_filter.fastq.gz | wc -l
 ls fq_fp1_clmp_fp2_fqscrn/*screen.txt | wc -l
 ls fq_fp1_clmp_fp2_fqscrn/*screen.png | wc -l
 ls fq_fp1_clmp_fp2_fqscrn/*screen.html | wc -l
-## n = 208 for all outfiles
+## n = 166 for all outfiles
 
 # Check for errors
 grep 'error' slurm-fqscrn.*out
@@ -257,12 +255,14 @@ grep 'No reads in' slurm-fqscrn.*out
 ```
 
 - Run MultiQC for fqscrn output.
+Run by klabrador on 2023-05-15
+
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/ambassis_buruensis/1st_sequencing_run
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/3rd_sequencing_run
 sbatch ../../../pire_fq_gz_processing/runMULTIQC.sbatch fq_fp1_clmp_fp2_fqscrn fastq_screen_report
 ```
 
-- job submitted: 1573167
+- job submitted: 1595567
 - job finished successfully
 
 
@@ -272,27 +272,27 @@ sbatch ../../../pire_fq_gz_processing/runMULTIQC.sbatch fq_fp1_clmp_fp2_fqscrn f
 <details>
         <summary>12. Execute `runRepair`</summary>
 
-Run by klabrador on 2023-05-02
+Run by klabrador on 2023-05-15
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/ambassis_buruensis/1st_sequencing_run
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/3rd_sequencing_run
 
 sbatch ../../../pire_fq_gz_processing/runREPAIR.sbatch fq_fp1_clmp_fp2_fqscrn fq_fp1_clmp_fp2_fqscrn_rprd 40
 ```
 
-- job submitted: 1573173
+- job submitted: 1595571
 - job finished successfully
 
 
 Run `Multi_FASTQC.sh`
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/ambassis_buruensis/1st_sequencing_run
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/3rd_sequencing_run
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_fp1_clmp_fp2_fqscrn_rprd" "fqc_rprd_report" "fq.gz"
 ```
 
-- job submitted: 1590137
+- job submitted: 1595591
 - job finished successfully
-
+`
 </details>
 
 
@@ -300,10 +300,10 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_f
         <summary>13. Clean Up</summary>
 
 ```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/3rd_sequencing_run
 mkdir logs
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/ambassis_buruensis/1st_sequencing_run
 mv *out logs/
 ```
 </details>
 
-</details>
+

@@ -321,21 +321,23 @@ This section maps the repaired *fq.gz files to the curated reference genome. Thi
 ```
 # Create the mkBAM_dev subdirectory in the working directory
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/1st_sequencing_run
-mkdir mkBAM_dev
+mkdir mkBAM_dev2
 
 
-# Softlink the re-paired *repr.R1/R2.fq.gz files to the mkBAM_dev directory.
-ln -s ./fq_fp1_clmp_fp2_fqscrn_rprd/*repr.R*.fq.gz ./mkBAM_dev
+# Link the re-paired *repr.R1/R2.fq.gz files to the mkBAM_dev directory.
+ln ./fq_fp1_clmp_fp2_fqscrn_rprd/*repr.R*.fq.gz ./mkBAM_dev2
+## Notes: I used softlinks before, and it did not work. Hardlinks do.
+
 
 # Copy the reference genome to the mkBAM_dev directory, then rename the reference to adhere to the pipeline's naming convention ("reference.[AccessionNo].[referenceType].fasta"). 
-cp refGenome/GCF_902362185.1_fChaCha1.1_chr1-16-mtgen.fasta ./mkBAM_dev 
-cd ./mkBAM_dev
+cp refGenome/GCF_902362185.1_fChaCha1.1_chr1-16-mtgen.fasta ./mkBAM_dev2 
+cd ./mkBAM_dev2
 mv GCF_902362185.1_fChaCha1.1_chr1-16-mtgen.fasta reference.902362185.genome.fasta
 
 
 # Copy scripts needed from the dDocentHPC repo
-cp /home/e1garcia/shotgun_PIRE/dDocentHPC/configs/config.6.lcwgs ./mkBAM_dev
-cp /home/e1garcia/shotgun_PIRE/dDocentHPC/dDocentHPC_dev2.sbatch ./mkBAM_dev
+cp /home/e1garcia/shotgun_PIRE/dDocentHPC/configs/config.6.lcwgs ./mkBAM_dev2
+cp /home/e1garcia/shotgun_PIRE/dDocentHPC/dDocentHPC_dev2.sbatch ./mkBAM_dev2
 
 # Edit the *sbatch script to change the path where the *.bash script is called. The last line of the *sbatch script should now be:
 ## crun.ddocent bash /home/e1garcia/shotgun_PIRE/dDocentHPC/dDocentHPC_dev.bash $FUNCTION $CONFIG
@@ -353,11 +355,68 @@ cp /home/e1garcia/shotgun_PIRE/dDocentHPC/dDocentHPC_dev2.sbatch ./mkBAM_dev
 <details>
         <summary>2. Run mkBAM</summary>
 
-- Run by klabrador on 2023-05-15
+- Run by klabrador on 2023-05-16
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/1st_sequencing_run/mkBAM_dev
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/1st_sequencing_run/mkBAM_dev2
 sbatch dDocentHPC_dev2.sbatch mkBAM config.6.lcwgs
 ```
 
 - job submitted: 1595680
+- job failed; error: 
+
+"dDocent cannot locate all of the trimmed reads files. FASTQ files to be mapped must end with the following suffix: *.R1.fq.gz"
+- but, but, but... they do!
+
+- try hardlink vs softlink?
+```
+ln ./fq_fp1_clmp_fp2_fqscrn_rprd/*repr.R*.fq.gz ./mkBAM_dev2
+sbatch dDocentHPC_dev2.sbatch mkBAM config.6.lcwgs
+```
+
+- job submitted: 1597096
+- mkBAM completed!
+
+
+</details>
+
+<details>
+        <summary>3. Run fltrBAM</summary>
+
+- Run by klabrador on 2023-05-17
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/1st_sequencing_run/mkBAM_dev2
+sbatch dDocentHPC_dev2.sbatch fltrBAM config.6.lcwgs
+```
+
+- job submitted: 1605380
+- fltrBAM completed!
+
+
+- Run FASTQC
+```
+# Copy the `runFASTQC.sbatch` script from dDocentHPC repo
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/1st_sequencing_run/mkBAM_dev2
+cp /home/e1garcia/shotgun_PIRE/dDocentHPC/scripts/runFASTQC.sbatch .
+
+# Run FASTQC
+sbatch runFASTQC.sbatch
+
+```
+- job submitted: 1605399
+- job failed; error: "These module(s) or extension(s) exist but cannot be loaded as requested"
+
+
+</details>
+
+<details>
+        <summary>3. Run mkVCF</summary>
+
+- Run by klabrador on 2023-05-17
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/1st_sequencing_run/mkBAM_dev2
+sbatch dDocentHPC_dev2.sbatch mkVCF config.6.lcwgs
+```
+
+- job submitted: 1605438

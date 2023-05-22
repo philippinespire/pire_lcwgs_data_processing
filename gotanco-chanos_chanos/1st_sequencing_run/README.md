@@ -411,6 +411,34 @@ sbatch runFASTQC.sbatch
 </details>
 
 <details>
+        <summary>4. Generate number of mapped reads</summary>
+
+- Run by klabrador on 2023-05-22
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/1st_sequencing_run/mkBAM_dev2
+
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/mappedReadStats.sbatch mkBAM mkBAM/coverageMappedReads
+
+```
+
+- job submitted: 1610256
+- job failed. error :'mkBAM/*-RG.bam': No such file or directory 
+- change $1 argument in the mappedReadStats.sbatch
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/1st_sequencing_run/mkBAM_dev2
+
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/mappedReadStats.sbatch . mkBAM/coverageMappedReads
+```
+- job submitted: 1610492
+- job completed successfully
+
+</details>
+
+
+<details> <summary>Steps that were not necesssary but were otherwise executed</summary>
+
+<details>
         <summary>3. Run mkVCF</summary>
 
 - Run by klabrador on 2023-05-17
@@ -420,3 +448,13 @@ sbatch dDocentHPC_dev2.sbatch mkVCF config.6.lcwgs
 ```
 
 - job submitted: 1605438
+- job completed successfully
+
+
+</details>
+
+</details>
+
+
+
+

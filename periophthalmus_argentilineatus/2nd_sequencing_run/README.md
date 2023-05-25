@@ -50,3 +50,15 @@ cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argenti
 #sbatch Multi_FASTQC.sh "<indir>" "<mqc report name>" "<file extension to qc>"
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw" "fqc_raw_report"  "fq.gz"
 ```
+
+Summary:
+* Duplication higher for Albatross (25-50%) vs contemp (generally <20%)
+* GC content very different for Albatross (mid to high 50%s) compared to contemporary (mid-40%s) - contamination?
+* Number of sequences for Albatross generally decent / stable around 1-5M. Lots more variation in contemporary... some close to 0, some >10M
+* Lots of libraries flagged for overrepresented seqs / adapter content.
+
+First trim.
+
+```
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_1st_trim.sbatch fq_raw fq_fp1
+```

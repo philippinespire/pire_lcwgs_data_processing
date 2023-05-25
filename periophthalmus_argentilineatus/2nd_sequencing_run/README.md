@@ -15,8 +15,8 @@ mkdir /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/peri
 
 # add 1st run to previous structure
 
-mkdir /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/2nd_sequencing_run
-mv /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/fq_raw /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/2nd_sequencing_run
+mkdir /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/1st_sequencing_run
+mv /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/fq_raw /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/1st_sequencing_run
 
 # on wahab replace <yourPireDirPath> with /home/e1garcia/shotgun_PIRE
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/2nd_sequencing_run/fq_raw
@@ -27,4 +27,26 @@ cp ./* /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/per
 
 # look at your screen jobs running
 screen -ls
+```
+
+Dry run rename.
+
+```
+salloc
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/renameFQGZ.bash Par_lcwgs-1_SequenceNameDecode.tsv
+```
+
+Looks good! Rename for real.
+
+```
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/renameFQGZ.bash Par_lcwgs-1_SequenceNameDecode.tsv rename
+```
+
+Check data quality.
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/2nd_sequencing_run
+
+#sbatch Multi_FASTQC.sh "<indir>" "<mqc report name>" "<file extension to qc>"
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw" "fqc_raw_report"  "fq.gz"
 ```

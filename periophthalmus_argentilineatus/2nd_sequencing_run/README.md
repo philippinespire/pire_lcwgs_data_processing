@@ -109,3 +109,13 @@ Last QC.
 ```
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_fp1_clmp_fp2_fqscrn_rprd" "fqc_rprd_report" "fq.gz"
 ```
+
+Map to references (Par ssl assembly and P. magnuspinnatus published genome from NCBI).
+Make mkBAM_Par and mkBAM_PerMag folders.
+
+```
+mkdir /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/2nd_sequencing_run/mkBAM_Par
+mkdir /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/2nd_sequencing_run/mkBAM_PerMag
+```
+
+Downloaded fPerMag1.2.pri from NCBI and uploaded fasta to Wahab mkBAM_PerMag.

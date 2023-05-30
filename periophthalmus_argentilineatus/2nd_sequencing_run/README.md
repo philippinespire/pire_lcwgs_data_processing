@@ -118,4 +118,20 @@ mkdir /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_arge
 mkdir /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/2nd_sequencing_run/mkBAM_PerMag
 ```
 
-Downloaded fPerMag1.2.pri from NCBI and uploaded fasta to Wahab mkBAM_PerMag.
+Mapping to Genbank first - downloaded fPerMag1.2.pri from NCBI and uploaded fasta to Wahab mkBAM_PerMag.
+
+Link .fq.gz files to mkBAM_PerMag.
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/2nd_sequencing_run
+ln fq_fp1_clmp_fp2_fqscrn_repaired/*fq.gz mkBAM
+```
+
+Copy dDocent config file, edit, and execute.
+
+```
+cd mkBAM_PerMag
+cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/dDocentHPC/configs/config.6.cssl .
+mv config.6.cssl config.6.lcwgs
+sbatch /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing//dDocentHPC/dDocentHPC_dev2.sbatch mkBAM config.6.lcwgs
+```

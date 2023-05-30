@@ -128,11 +128,12 @@ ln fq_fp1_clmp_fp2_fqscrn_rprd/*fq.gz mkBAM
 ```
 
 Copy dDocent config file, unzip and rename ref genome, edit config to reflect genome name, and execute.
+Had to copy/edit dDocentHPC_dev2.sbatch and run local copy because version in shotgun_PIRE/dDocentHPC doesn't have correct path to .bash file when 1st/2nd_sequencing_run folders are used.
 
 ```
 cd mkBAM_PerMag
 cp /home/e1garcia/shotgun_PIRE/dDocentHPC/configs/config.6.lcwgs .
 gunzip GCF_009829125.3_fPerMag1.2.pri_genomic.fna.gz
 mv GCF_009829125.3_fPerMag1.2.pri_genomic.fna reference.genbank.PerMag.fasta
-sbatch /home/e1garcia/shotgun_PIRE/dDocentHPC/dDocentHPC_dev2.sbatch mkBAM config.6.lcwgs
+sbatch dDocentHPC_dev2.sbatch mkBAM config.6.lcwgs
 ```

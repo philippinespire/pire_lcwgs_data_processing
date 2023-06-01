@@ -114,7 +114,7 @@ Map to references (Par ssl assembly and P. magnuspinnatus published genome from 
 Make mkBAM_Par and mkBAM_PerMag folders.
 
 ```
-mkdir /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/2nd_sequencing_run/mkBAM_Par
+mkdir /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/2nd_sequencing_run/mkBAM
 mkdir /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/2nd_sequencing_run/mkBAM_PerMag
 ```
 
@@ -144,4 +144,26 @@ Run fltrBAM on mkBAM_PerMag.
 ```
 sbatch dDocentHPC_dev2.sbatch fltrBAM config.6.lcwgs
 ```
+
+Mapping to SSL.
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/2nd_sequencing_run
+ln fq_fp1_clmp_fp2_fqscrn_rprd/*fq.gz mkBAM
+cd mkBAM
+cp ../mkBAM_PerMag/config.6.lcwgs .
+cp /home/e1garcia/shotgun_PIRE/pire_ssl_data_processing/periophthalmus_argentilineatus/SPAdes_Par-CPas_decontam_R1R2_noIsolate/scaffolds.fasta .
+mv scaffolds.fasta reference.ssl.Ppa.fasta
+cp ../mkBAM_PerMag/dDocentHPC_dev2.sbatch .
+sbatch dDocentHPC_dev2.sbatch mkBAM config.6.lcwgs
+```
+
+Filter alignments.
+
+```
+sbatch dDocentHPC_dev2.sbatch fltrBAM config.6.lcwgs
+```
+
+
+
 

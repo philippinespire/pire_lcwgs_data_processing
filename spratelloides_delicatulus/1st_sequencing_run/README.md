@@ -109,7 +109,7 @@ cd mkBAM
 cp /home/e1garcia/shotgun_PIRE/pire_ssl_data_processing/spratelloides_delicatulus/SPAdes_allLibs_decontam_R1R2_noIsolate/scaffolds.fasta .
 mv scaffolds.fasta reference.ssl.Sde.fasta
 cp /home/e1garcia/shotgun_PIRE/dDocentHPC/configs/config.6.lcwgs .
-cp ../mkBAM_PerMag/dDocentHPC_dev2.sbatch .
+cp /home/e1garcia/shotgun_PIRE/dDocentHPC/dDocentHPC_dev2.sbatch .
 sbatch dDocentHPC_dev2.sbatch mkBAM config.6.lcwgs
 ```
 

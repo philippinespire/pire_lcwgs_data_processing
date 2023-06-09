@@ -84,3 +84,37 @@ Last QC.
 ```
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_fp1_clmp_fp2_fqscrn_rprd" "fqc_rprd_report" "fq.gz"
 ```
+
+Most libraries have very low sequence #s (< 1M; most contemporaries < 100K). For Albatross libraries with a decent number of reads (>5M) metrics look good though - low GC content, low duplications, low adapter content after processing. 
+
+Mapping these libraries to Sde SSL reference (note- this assembly was notably poor!) for preliminary data. Edit the config.6 to reflect reference name and dDocent_dev2.sbatch with full path.
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/spratelloides_delicatulus/1st_sequencing_run
+mkdir mkBAM
+
+cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_033-Ex1-9C-lcwgs-1-1.clmp.fp2_repr.R1 mkBAM
+cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_033-Ex1-9C-lcwgs-1-1.clmp.fp2_repr.R2 mkBAM
+cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_068-Ex1-8F-lcwgs-1-1.clmp.fp2_repr.R1 mkBAM
+cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_068-Ex1-8F-lcwgs-1-1.clmp.fp2_repr.R2 mkBAM
+cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_083-Ex1-11G-lcwgs-1-1.clmp.fp2_repr.R1 mkBAM
+cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_083-Ex1-11G-lcwgs-1-1.clmp.fp2_repr.R2 mkBAM
+cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_084-Ex1-12G-lcwgs-1-1.clmp.fp2_repr.R1 mkBAM
+cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_084-Ex1-12G-lcwgs-1-1.clmp.fp2_repr.R2 mkBAM
+cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_090-Ex1-6H-lcwgs-1-1.clmp.fp2_repr.R1 mkBAM
+cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_090-Ex1-6H-lcwgs-1-1.clmp.fp2_repr.R2 mkBAM
+
+cd mkBAM
+
+cp /home/e1garcia/shotgun_PIRE/pire_ssl_data_processing/spratelloides_delicatulus/SPAdes_allLibs_decontam_R1R2_noIsolate/scaffolds.fasta .
+mv scaffolds.fasta reference.ssl.Sde.fasta
+cp /home/e1garcia/shotgun_PIRE/dDocentHPC/configs/config.6.lcwgs .
+cp ../mkBAM_PerMag/dDocentHPC_dev2.sbatch .
+sbatch dDocentHPC_dev2.sbatch mkBAM config.6.lcwgs
+```
+
+Filter alignments.
+
+```
+sbatch dDocentHPC_dev2.sbatch fltrBAM config.6.lcwgs
+```

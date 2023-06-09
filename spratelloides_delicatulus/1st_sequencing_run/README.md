@@ -93,16 +93,16 @@ Mapping these libraries to Sde SSL reference (note- this assembly was notably po
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/spratelloides_delicatulus/1st_sequencing_run
 mkdir mkBAM
 
-cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_033-Ex1-9C-lcwgs-1-1.clmp.fp2_repr.R1 mkBAM
-cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_033-Ex1-9C-lcwgs-1-1.clmp.fp2_repr.R2 mkBAM
-cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_068-Ex1-8F-lcwgs-1-1.clmp.fp2_repr.R1 mkBAM
-cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_068-Ex1-8F-lcwgs-1-1.clmp.fp2_repr.R2 mkBAM
-cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_083-Ex1-11G-lcwgs-1-1.clmp.fp2_repr.R1 mkBAM
-cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_083-Ex1-11G-lcwgs-1-1.clmp.fp2_repr.R2 mkBAM
-cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_084-Ex1-12G-lcwgs-1-1.clmp.fp2_repr.R1 mkBAM
-cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_084-Ex1-12G-lcwgs-1-1.clmp.fp2_repr.R2 mkBAM
-cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_090-Ex1-6H-lcwgs-1-1.clmp.fp2_repr.R1 mkBAM
-cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_090-Ex1-6H-lcwgs-1-1.clmp.fp2_repr.R2 mkBAM
+cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_033-Ex1-9C-lcwgs-1-1.clmp.fp2_repr.R1.fq.gz mkBAM
+cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_033-Ex1-9C-lcwgs-1-1.clmp.fp2_repr.R2.fq.gz mkBAM
+cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_068-Ex1-8F-lcwgs-1-1.clmp.fp2_repr.R1.fq.gz mkBAM
+cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_068-Ex1-8F-lcwgs-1-1.clmp.fp2_repr.R2.fq.gz mkBAM
+cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_083-Ex1-11G-lcwgs-1-1.clmp.fp2_repr.R1.fq.gz mkBAM
+cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_083-Ex1-11G-lcwgs-1-1.clmp.fp2_repr.R2.fq.gz mkBAM
+cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_084-Ex1-12G-lcwgs-1-1.clmp.fp2_repr.R1.fq.gz mkBAM
+cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_084-Ex1-12G-lcwgs-1-1.clmp.fp2_repr.R2.fq.gz mkBAM
+cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_090-Ex1-6H-lcwgs-1-1.clmp.fp2_repr.R1.fq.gz mkBAM
+cp fq_fp1_clmp_fp2_fqscrn_rprd/Sde-ABol_090-Ex1-6H-lcwgs-1-1.clmp.fp2_repr.R2.fq.gz mkBAM
 
 cd mkBAM
 

@@ -38,19 +38,19 @@ Potential issues:
 <details><summary><i>1st trim</i></i></summary>
 <p>
 
- 1st FASTP [Report](
+ 1st FASTP [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/chromis_viridis/2nd_sequencing_run/fq_fp1/1st_fastp_report.html)
 ```
 Potential issues:
- * duplication - xx
-   * Alb: xx%, Contemp: xx%, one w/ xx%
- * gc content - xx
-   * Alb: xx%, Contemp: xx%
+ * duplication - Low to moderate in Albatross, low in Contemp
+   * Alb: 14.4 to 61.8%, Contemp: 2.4-16%
+ * gc content - Reasonable
+   * Alb: 39.6-56.8%, Contemp: 41-44.7%
  * Passing filter
-   * Alb: xx%, Contemp: xx%
+   * Alb: 89.8-98.4%, Contemp: 75.4-98.6%
  * % adapter 
-   * Alb: xx%, Contemp: xx%
+   * Alb: 7-86.6% (Only 2 individuals had >77%), Contemp: 9.7-59.7% (Only 5 had >55%)%
  * number of reads
-   * Albatross - xxM, at least xxxM for majority; Contemp - xxM, xxs reads for Contemporary
+   * Albatross - 3.8-252 M, at least 10 M for majority; Contemp - 3-110 M, at least 7M reads for Contemporary
 ```
 </p>
 </details>

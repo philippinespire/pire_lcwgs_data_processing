@@ -97,6 +97,7 @@ Potential issues:
 
 <details><summary><i>Checked Fastqscreen files</i></summary>
 <p>
+
  MultiQC [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/fq_fp1_clmp_fp2_fqscrn/fastq_screen_report.html)
 
 ```

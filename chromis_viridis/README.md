@@ -58,5 +58,63 @@ Potential issues:
 <details><summary><i>Clumpify</i></summary>
 <p>
 
- Clumpify [Report](
+ Clumpify [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/chromis_viridis/2nd_sequencing_run/fq_fp1_clmp/fqc_clmp_report.html)
+
+Clumpify worked well so I moved on to the next step
+</p>
+</details>
+
+<details><summary><i>2nd Trim</i></summary>
+<p>
+Fastp2 [Report]()
+
+```
+Potential issues:
+  * % duplication -
+    * Alb: %, Contemp: %
+  * GC content -
+    * Alb: %, Contemp: %
+  * passing filter -
+    * Alb: %, Contemp: %
+  * % adapter -
+    * Alb: %, Contemp: %
+  * number of reads -
+    * Alb: M, Contemp: M
+```
+</p>
+</details>
+
+<details><summary><i>Checked Fastqscreen files</i></summary>
+<p>
+ MultiQC [Report]()
+
+```
+Potential issues:
+  * one hit, one genome, no ID -
+     Alb: %, Contemp: %
+  * no one hit, one genome to any potential contaminators (bacteria, virus, human, etc) -
+    * Alb: %, Contemp: %
+```
+</p>
+</details>
+
+
+<details><summary><i>Reviewed Fastqscreen repaired files</i></summary>
+<p>
+MultiQC [Report]()
+
+ ```
+Potential issues:
+  * % duplication -
+     Alb: %, Contemp: %
+  * GC content -
+    * Alb: %, Contemp: %
+  * number of reads -
+    * Alb: M, Contemp: M
+```
+</p>
+</details>
+
+---
+
 

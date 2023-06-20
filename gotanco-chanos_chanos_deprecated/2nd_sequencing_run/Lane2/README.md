@@ -22,7 +22,7 @@ Insert output here.
 </details>
 
 ## 8. First trim.
-First trim started and finished. LW 2023-06-20
+First trim, `runFASTP_1st_trim.sbatch`, started and finished. LW 2023-06-20
 
 <details><summary>Expand for MultiQC Output.</summary>
 

@@ -3,7 +3,7 @@ Data downloaded from TAMUCC grid.
 LW 2023-06-20
 
 ## 2. Proofread the decode files
-300 foward reads, 300 reverse reads. All reads unique.
+300 forward reads, 300 reverse reads. All reads unique.
 LW 2023-06-20
 
 ## 3-6. Rename the files.

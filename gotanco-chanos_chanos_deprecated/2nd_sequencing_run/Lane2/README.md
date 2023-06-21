@@ -13,6 +13,8 @@ LW 2023-06-20
 ## 7. Check the quality of your data.
 `Multi_FASTQC.sh` running. LW 2023-06-20
 
+Still has not finished as of this morning, `scancel` job and restarted it. LW 2023-06-21
+
 <details><summary>Expand for MultiQC Output.</summary>
 
 ```bash
@@ -337,7 +339,7 @@ GotPopWCS281_CKDL230018273-1A_H5YMHDSX7_L2_fastp	16.4%	41.5%	97.9%	2.9%
 ## 9. Remove duplicates with clumpify.
 
 ### 9a. Remove duplicates.
-TBD
+`runCLUMPIFY_r1r2_array.bash` running. LW 2023-06-21
 
 ### 9b. Check duplicate removal success.
 TBD

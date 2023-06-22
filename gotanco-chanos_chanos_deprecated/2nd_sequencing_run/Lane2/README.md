@@ -15,6 +15,8 @@ LW 2023-06-20
 
 Still has not finished as of this morning, `scancel` job and restarted it. LW 2023-06-21
 
+Hasn't finished as of this morning. `scancel` job. LW 2023-06-22
+
 <details><summary>Expand for MultiQC Output.</summary>
 
 ```bash
@@ -340,6 +342,8 @@ GotPopWCS281_CKDL230018273-1A_H5YMHDSX7_L2_fastp	16.4%	41.5%	97.9%	2.9%
 
 ### 9a. Remove duplicates.
 `runCLUMPIFY_r1r2_array.bash` running. LW 2023-06-21
+
+CLUMPIFY has not finished as of this morning. Moving the completed reads into `fq_fp1_done` and restarting. LW 2023-06-22
 
 ### 9b. Check duplicate removal success.
 TBD

@@ -347,7 +347,7 @@ CLUMPIFY has not finished as of this morning. Moving the completed reads into `f
 
 CLUMPIFY made no progress, cancelling job. LW 2023-06-23
 
-Restarted CLUMPIFY. Most jobs completed, but there were a few stragglers. Moved the stragglers into `fq_fp1_stragglers' and restarting the last reads. LW 2023-06-26
+Restarted CLUMPIFY. Most jobs completed, but there were a few stragglers. Moved the stragglers into `fq_fp1_stragglers' and restarted the last reads. The last reads have finished. LW 2023-06-26
 
 ### 9b. Check duplicate removal success.
 TBD

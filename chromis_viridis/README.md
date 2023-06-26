@@ -3,7 +3,7 @@
 | directory-name | date-created | dataset |
 | -------------- | ------------ | ------- |
 | 1st_sequencing_run | 2023-04-28 | test lane |
-| 2nd_sequencing_run | 2023-06-16 | Alb & Contemp sequences |
+| 2nd_sequencing_run | 2023-06-16 | Alb & Contemp sequences from Palapag, Northern Samar|
 
 # Chromis viridis lcWGS
 
@@ -66,34 +66,50 @@ Clumpify worked well so I moved on to the next step
 
 <details><summary><i>2nd Trim</i></summary>
 <p>
-Fastp2 [Report]()
+Fastp2 [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/chromis_viridis/2nd_sequencing_run/fq_fp1_clmp_fp2/2nd_fastp_report.html)
 
 ```
 Potential issues:
-  * % duplication -
-    * Alb: %, Contemp: %
-  * GC content -
-    * Alb: %, Contemp: %
-  * passing filter -
-    * Alb: %, Contemp: %
+  * % duplication -low to moderate in Alb; low in Comtemp
+    * Alb: 2.3-36.0%, Contemp: 0.4-4.6%
+  * GC content - reasonable
+    * Alb: 39.6-56.8%, Contemp: 41-44.7%
+  * passing filter - great
+    * Alb: 98.7-99.6%, Contemp: 99.4-99.6%
   * % adapter -
-    * Alb: %, Contemp: %
+    * Alb: 0.2-1.1%, Contemp: 0.1-1.1%
   * number of reads -
-    * Alb: M, Contemp: M
+    * Alb: 5-158 M, mostly at least 15 M, Contemp: 3-94 M, mostly at least 5M
 ```
 </p>
 </details>
 
 <details><summary><i>Checked Fastqscreen files</i></summary>
 <p>
+
+After checking whether runFQSCRN_6.bash worked, I found that there was an error:
+
+```
+slurm-fqscrn.1735299.2.out:No reads in Cvi-APal_002-Ex1-1B-lcwgs-1-2.clmp.fp2_r1.fq.gz, skipping
+slurm-fqscrn.1735299.5.out:No reads in Cvi-APal_003-Ex1-1C-lcwgs-1-2.clmp.fp2_r2.fq.gz, skipping
+```
+
+So I ran FQSCRN again for the 2 individual sequences:
+```
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2 fq_fp1_clmp_fp2_fqscrn 1 Cvi-APal_002-Ex1-1B-lcwgs-1-2.clmp.fp2_r1.fq.gz
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2 fq_fp1_clmp_fp2_fqscrn 1 Cvi-APal_003-Ex1-1C-lcwgs-1-2.clmp.fp2_r2.fq.gz
+```
+
+There were no more errors or failed individuals so I ran Multiqc for all samples again
+
  MultiQC [Report]()
 
 ```
 Potential issues:
   * one hit, one genome, no ID -
-     Alb: %, Contemp: %
+     Alb: 66-92%, Contemp: 89-97%
   * no one hit, one genome to any potential contaminators (bacteria, virus, human, etc) -
-    * Alb: %, Contemp: %
+    * Alb: 8-44%, Contemp: 3-11%% 
 ```
 </p>
 </details>
@@ -105,16 +121,48 @@ MultiQC [Report]()
 
  ```
 Potential issues:
-  * % duplication -
-     Alb: %, Contemp: %
+  * % duplication - wide range of duplication for Albatross
+     Alb: 3-34.6%, Contemp: 1.2-8.3%%
   * GC content -
-    * Alb: %, Contemp: %
+    * Alb: 39-53%, Contemp: 40-43%
   * number of reads -
-    * Alb: M, Contemp: M
+    * Alb: 2-73 M, Contemp: 1.4-45 M
 ```
 </p>
 </details>
 
 ---
+
+## 2. Copied the Reference Genome into the species folder
+
+I copied the best assembly from the ssl pipeline (see link below) and renamed it to reference.ssl.Cvi.fasta that was copied into the refGenome folder
+```
+/home/e1garcia/shotgun_PIRE/pire_ssl_data_processing/chromis_viridis/SPAdes_Cvi-CPal-A_decontam_R1R2_noIsolate/scaffolds.fasta
+```
+
+---
+## 3. Mapped & Filtered BAM files
+
+<details><summary><i>mkBAM step</i></summary>
+Created mkBAM folder & linked fq.gz files from fq_fp1_clmp_fp2_fqscrn_repaired:
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/chromis_viridis/2nd_sequencing_run
+mkdir mkBAM
+ln fq_fp1_clmp_fp2_fqscrn_rprd/*fq.gz mkBAM
+```
+
+Copied dDocent config file & edited it to suit the lcwgs data
+```
+cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/1st_sequencing_run/mkBAM/config.6.lcwgs .
+```
+
+After changing the settings, I executed this command:
+```
+sbatch ../../../dDocentHPC/dDocentHPC_dev2.sbatch mkBAM config.6.lcwgs
+```
+
+</p>
+</details>
 
 

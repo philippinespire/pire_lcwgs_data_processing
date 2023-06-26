@@ -345,6 +345,10 @@ GotPopWCS281_CKDL230018273-1A_H5YMHDSX7_L3_fastp	15.7%	41.4%	97.6%	3.0%
 
 CLUMPIFY has not finished as of this morning. Moving the completed reads into `fq_fp1_done` and restarting. LW 2023-06-22
 
+CLUMPIFY made no progress, cancelled the job. LW 2023-06-26
+
+Restarted CLUMPIFY, successfully running now. LW 2023-06-26
+
 ### 9b. Check duplicate removal success.
 TBD
 

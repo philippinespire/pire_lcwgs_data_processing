@@ -367,7 +367,7 @@ Insert output here.
 </details>
 
 ## 10. Second trim.
-TBD
+Running `runFASTP_2.sbatch`. LW 2023-06-27
 
 <details><summary>Expand for MultiQC Output.</summary>
 

@@ -173,7 +173,9 @@ sbatch ../../../dDocentHPC/dDocentHPC_dev2.sbatch fltrBAM config.6.lcwgs
 ## 4. Visualised results using the Process Sequencing Metadata Repo
 I followed Kevin's repo for [Process Sequencing Metadata](https://github.com/philippinespire/process_sequencing_metadata).
 
-Results are uploaded in my folder:
+*coverageMappedReads was ran by someone else prior to visualising results. You may refer to the CSSL pipeline for this or check Cvi lcwgs steps
+
+Results are uploaded in my folder but also copied under the process_sequencing_metadata folder for this species
 ```
 cd /home/jbald004/process_sequencing_metadata/out/lcwgs_Sne
 ```

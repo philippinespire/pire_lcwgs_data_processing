@@ -349,13 +349,15 @@ CLUMPIFY made no progress, cancelled the job. LW 2023-06-26
 
 Restarted CLUMPIFY, successfully running now. LW 2023-06-26
 
-Some reads were stuck, moved those reads to `fq_fp1_stragglers` and started again with those. LW 2023-06-27
+Some reads were stuck, moved those reads to `fq_fp1_stragglers` and started again with those. They have finished as well. LW 2023-06-27
 
 ### 9b. Check duplicate removal success.
-TBD
+There were some minor issues with not having `tidyverse` installed, and I had to run `module load container_env R/4.2` instead of `module load container_env mapdamage2`
+
+Successfully ran `checkClumpify_EG.R`, "Clumpify Successfully worked on all samples" LW 2023-06-27
 
 ### 9c. Generate metadata on deduplicated FASTQ files.
-TBD
+`runMULTIQC.sbatch` currently running. LW 2023-06-27
 
 <details><summary>Expand for MultiQC Output.</summary>
 
@@ -367,7 +369,7 @@ Insert output here.
 </details>
 
 ## 10. Second trim.
-TBD
+Running `runFASTP_2.sbatch`. LW 2023-06-27
 
 <details><summary>Expand for MultiQC Output.</summary>
 

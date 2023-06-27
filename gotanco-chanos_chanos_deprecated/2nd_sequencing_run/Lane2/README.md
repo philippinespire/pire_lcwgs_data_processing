@@ -350,7 +350,9 @@ CLUMPIFY made no progress, cancelling job. LW 2023-06-23
 Restarted CLUMPIFY. Most jobs completed, but there were a few stragglers. Moved the stragglers into `fq_fp1_stragglers' and restarted the last reads. The last reads have finished. LW 2023-06-26
 
 ### 9b. Check duplicate removal success.
-TBD
+There were some minor issues with not having `tidyverse` installed, and I had to run `module load container_env R/4.2` instead of `module load container_env mapdamage2`
+
+Successfully ran `checkClumpify_EG.R`, "Clumpify Successfully worked on all samples"
 
 ### 9c. Generate metadata on deduplicated FASTQ files.
 TBD

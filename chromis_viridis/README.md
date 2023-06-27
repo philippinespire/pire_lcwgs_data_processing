@@ -165,4 +165,32 @@ sbatch ../../../dDocentHPC/dDocentHPC_dev2.sbatch mkBAM config.6.lcwgs
 </p>
 </details>
 
+<details><summary><i>fltrBAM step</i></summary>
 
+To filter resulting BAM files, I executed the following command:
+```
+sbatch ../../../dDocentHPC/dDocentHPC_dev2.sbatch fltrBAM config.6.lcwgs
+```
+
+</p>
+</details>
+
+## 4. Generated Mapping stats using mappedReadStats
+
+```
+#navigate to mkBAM folder
+# mappedReadStats.sbatch <Path to BAM file dir> <coverageMappedReads>
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/mappedReadStats.sbatch . coverageMappedReads
+```
+
+---
+## 5. Visualised results using the Process Sequencing Metadata Repo
+I followed Kevin's repo for [Process Sequencing Metadata](https://github.com/philippinespire/process_sequencing_metadata).
+
+Make sure  you do the following:
+-If cloning a repo and working in your own folder, make sure to always git pull before doing anything!
+-Move output files to the species repo after you work in your own folder
+
+Output files are under the process_sequencing_metadata folder
+
+Graphs showed information on depth of coverage for both Albatross & Contemporary

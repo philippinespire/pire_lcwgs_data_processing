@@ -352,10 +352,10 @@ Restarted CLUMPIFY. Most jobs completed, but there were a few stragglers. Moved 
 ### 9b. Check duplicate removal success.
 There were some minor issues with not having `tidyverse` installed, and I had to run `module load container_env R/4.2` instead of `module load container_env mapdamage2`
 
-Successfully ran `checkClumpify_EG.R`, "Clumpify Successfully worked on all samples"
+Successfully ran `checkClumpify_EG.R`, "Clumpify Successfully worked on all samples" LW 2023-06-27
 
 ### 9c. Generate metadata on deduplicated FASTQ files.
-TBD
+`runMULTIQC.sbatch` currently running. LW 2023-06-27
 
 <details><summary>Expand for MultiQC Output.</summary>
 

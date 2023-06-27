@@ -349,6 +349,8 @@ CLUMPIFY made no progress, cancelled the job. LW 2023-06-26
 
 Restarted CLUMPIFY, successfully running now. LW 2023-06-26
 
+Some reads were stuck, moved those reads to `fq_fp1_stragglers` and started again with those. LW 2023-06-27
+
 ### 9b. Check duplicate removal success.
 TBD
 

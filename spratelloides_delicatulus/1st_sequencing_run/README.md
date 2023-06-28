@@ -118,3 +118,20 @@ Filter alignments.
 ```
 sbatch dDocentHPC_dev2.sbatch fltrBAM config.6.lcwgs
 ```
+
+Doing all of the libraries
+
+```
+mv mkBAM mkBAM_test5
+mkdir mkBAM
+
+cp fq_fp1_clmp_fp2_fqscrn_rprd/*.fq.gz mkBAM
+
+cd mkBAM
+
+cp /home/e1garcia/shotgun_PIRE/pire_ssl_data_processing/spratelloides_delicatulus/SPAdes_allLibs_decontam_R1R2_noIsolate/scaffolds.fasta .
+mv scaffolds.fasta reference.ssl.Sde.fasta
+cp ../mkBAM_test5/config.6.lcwgs .
+cp ../mkBAM_test5/dDocentHPC_dev2.sbatch .
+sbatch dDocentHPC_dev2.sbatch mkBAM config.6.lcwgs
+```

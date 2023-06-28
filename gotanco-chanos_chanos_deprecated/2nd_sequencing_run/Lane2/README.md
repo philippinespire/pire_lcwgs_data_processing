@@ -680,7 +680,26 @@ GotPopWCS281_CKDL230018273-1A_H5YMHDSX7_L2_clmp.r1r2_fastp	4.2%	41.5%	99.6%	0.1%
 </details>
 
 ## 11. Decontaminate files.
-TBD
+Running `runFQSCRN_6.bash`. LW 2023-06-27
+
+Finished as of this morning. LW 2023-06-28
+
+Executed 
+
+`ls fq_fp1_clmp_fp2_fqscrn/*tagged.fastq.gz | wc -l
+ls fq_fp1_clmp_fp2_fqscrn/*tagged_filter.fastq.gz | wc -l 
+ls fq_fp1_clmp_fp2_fqscrn/*screen.txt | wc -l
+ls fq_fp1_clmp_fp2_fqscrn/*screen.png | wc -l
+ls fq_fp1_clmp_fp2_fqscrn/*screen.html | wc -l`
+
+Returned "600" for all.
+
+No returns for 
+
+`grep 'error' slurm-fqscrn.*out` or 
+`grep 'No reads in' slurm-fqscrn.*out`
+
+Currently running `runMULTIQC.sbatch` LW 2023-06-28
 
 <details><summary>Expand for MultiQC Output.</summary>
 

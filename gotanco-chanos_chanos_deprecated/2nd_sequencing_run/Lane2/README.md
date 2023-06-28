@@ -355,7 +355,7 @@ There were some minor issues with not having `tidyverse` installed, and I had to
 Successfully ran `checkClumpify_EG.R`, "Clumpify Successfully worked on all samples" LW 2023-06-27
 
 ### 9c. Generate metadata on deduplicated FASTQ files.
-`runMULTIQC.sbatch` currently running. LW 2023-06-27
+Ran `runMULTIQC.sbatch`, currently unable to view MultiQC output as there are too many files in the directory. LW 2023-06-27
 
 <details><summary>Expand for MultiQC Output.</summary>
 
@@ -699,7 +699,7 @@ No returns for
 `grep 'error' slurm-fqscrn.*out` or 
 `grep 'No reads in' slurm-fqscrn.*out`
 
-Currently running `runMULTIQC.sbatch` LW 2023-06-28
+Ran `runMULTIQC.sbatch`, unable to access the MultiQc output at this time as there are too many files in the directory. LW 2023-06-28
 
 <details><summary>Expand for MultiQC Output.</summary>
 

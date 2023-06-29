@@ -209,12 +209,14 @@ mkdir reference
 
 ```
 #historical folder
-cd historical
-cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/fq_raw_lcwgs/Sne-ATaw*.fq.gz .
+#navigated to historical folder
+salloc
+module load parallel
+ls /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/fq_raw_lcwgs/Sne-ATaw*.fq.gz | parallel -no-notice -kj 40 cp {} .
 
 #modern folder
 #navigated to modern/
-cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/fq_raw_lcwgs/Sne-CTaw*.fq.gz .
+ls /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/fq_raw_lcwgs/Sne-CTaw*.fq.gz | parallel -no-notice -kj 40 cp {} .
 
 #reference
 #navigated to reference folder & then copied the reference fasta file under refGenome

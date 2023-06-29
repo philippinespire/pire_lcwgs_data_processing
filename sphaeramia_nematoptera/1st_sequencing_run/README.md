@@ -249,7 +249,7 @@ rm Sne_scaffolds_allLibs_decontam_R1R2_noIsolate2.fasta
 <details><summary><i>Got outgroup genome files & made a Newick tree</i></i></summary>
 <p>
 
-S. nematoptera is under the Apogonidae family so on GenBank, I did a search for chromosome level assemblies and found assemblies for fishes under Kurtiformes, Gobiaria, and Eupercaria to find almost 30 species with chromosome level genome assemblies. My list of species is uploaded [here](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/GenErode_Sne_full/Speciesnames.txt) and my decode file can be found [here](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/GenErode_Sne_full/SpeciesSequenceDecode.txt)
+S. nematoptera is under the Apogonidae family so on GenBank, I did a search for chromosome level assemblies and found assemblies for fishes under Kurtiformes, Gobiaria, and Eupercaria to find almost 30 species with chromosome level genome assemblies. My list of species is uploaded [here](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/1st_sequencing_run/GenErode_Sne_full/Speciesnames.txt) and my decode file can be found [here](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/sphaeramia_nematoptera/1st_sequencing_run/GenErode_Sne_full/SpeciesSequenceDecode.txt)
 
 I made the Newick tree by uploading my species list, but then I found that Cottoperca gobio, Epinephelus moara, and Siphamia tubifer could not be found, so I did not upload the genomes of these species on to the gerp_outgroups folder.
 To get the Newick tree:

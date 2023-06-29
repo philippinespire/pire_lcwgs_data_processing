@@ -209,17 +209,17 @@ mkdir reference
 
 ```
 #navigated to folder with raw Albatross files
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/fq_raw_lcwgs/
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/1st_sequencing_run/fq_raw/
 salloc
 module load parallel
-ls Sne-ATaw*.fq.gz | parallel -no-notice -kj 40 cp {} /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/GenErode_Sne_full/historical
+ls Sne-ATaw*.fq.gz | parallel --no-notice -kj 40 cp {} /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/1st_sequencing_run/GenErode_Sne_full/historical
 
 #modern folder
-ls Sne-CTaw*.fq.gz | parallel -no-notice -kj 40 cp {} /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/GenErode_Sne_full/modern
+ls Sne-CTaw*.fq.gz | parallel --no-notice -kj 40 cp {} /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/1st_sequencing_run/GenErode_Sne_full/modern
 
 #reference
 #navigated to reference folder & then copied the reference fasta file under refGenome
-cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/refGenome/*.fasta .
+cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/1st_sequencing_run/refGenome/*.fasta .
 ```
 
 </p>
@@ -293,3 +293,14 @@ sbatch run_GenErode.sbatch
 ```
 </p>
 </details>
+
+After 14 days, this run failed, so I used the unlock script and ran the sbatch file again:
+```
+sbatch run_GenErode_unlock.sbatch
+#after it unlocks
+sbatch run_GenErode.sbatch
+```
+
+I created another folder: GenErode_Sne_test to see whether we can use the Chromosome-level assembly of Sphaeramia orbicularis as the reference genome to get GERP scores.
+
+Both are running on Wahab as of 6/28/2023

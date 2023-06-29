@@ -208,15 +208,14 @@ mkdir reference
 <p>
 
 ```
-#historical folder
-#navigated to historical folder
+#navigated to folder with raw Albatross files
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/fq_raw_lcwgs/
 salloc
 module load parallel
-ls /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/fq_raw_lcwgs/Sne-ATaw*.fq.gz | parallel -no-notice -kj 40 cp {} .
+ls Sne-ATaw*.fq.gz | parallel -no-notice -kj 40 cp {} /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/GenErode_Sne_full/historical
 
 #modern folder
-#navigated to modern/
-ls /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/fq_raw_lcwgs/Sne-CTaw*.fq.gz | parallel -no-notice -kj 40 cp {} .
+ls Sne-CTaw*.fq.gz | parallel -no-notice -kj 40 cp {} /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/GenErode_Sne_full/modern
 
 #reference
 #navigated to reference folder & then copied the reference fasta file under refGenome

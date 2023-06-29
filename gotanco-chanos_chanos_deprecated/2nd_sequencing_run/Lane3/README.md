@@ -693,6 +693,8 @@ ls fq_fp1_clmp_fp2_fqscrn/*screen.html | wc -l`
 
 Will rerun the unsuccessful files. LW 2023-06-28
 
+Reran the unsuccessful files, there is still 1 missing. Will run that one again. LW 2023-06-29
+
 <details><summary>Expand for MultiQC Output.</summary>
 
 ```bash

@@ -709,7 +709,7 @@ insert multiqc output here
 </details>
 
 ## 12. Execute RePair
-TBD
+Ran `runREPAIR.sbatch` yesterday, finished as of this morning. Now running `Multi_FASTQC.sh`. LW 2023-06-30
 
 <details><summary>Expand for MultiQC Output.</summary>
 
@@ -721,4 +721,4 @@ Insert output here.
 </details>
 
 ## 14. Clean up
-TBD
+Moved all `*out` files to `logs`. LW 2023-06-30

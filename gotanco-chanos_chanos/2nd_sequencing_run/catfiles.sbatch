@@ -25,4 +25,4 @@ find "$input_directory" -name '*.fq.gz' | \
         sed -e 's/.*\///g' | \
         cut -d "_" -f 1-3 | \
         uniq | \
-        parallel -kj 40 --no-notice "cat $input_directory/{}*L[0-9]*_$3.fq.gz > $output_directory/{}_LX_$3.fq"
+        parallel -kj 40 --no-notice "cat $input_directory/{}*L[0-9]*_$3.fq.gz > $output_directory/{}_LX_$3.fq.gz"

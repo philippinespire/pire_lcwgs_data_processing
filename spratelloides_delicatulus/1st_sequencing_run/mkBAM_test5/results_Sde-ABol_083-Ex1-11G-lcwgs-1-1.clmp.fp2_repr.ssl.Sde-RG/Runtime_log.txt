@@ -1,0 +1,7 @@
+2023-06-09 11:54:10,256	INFO	main: Started with the command: /opt/mapdamage2/bin/mapDamage -i Sde-ABol_083-Ex1-11G-lcwgs-1-1.clmp.fp2_repr.ssl.Sde-RG.bam -r reference.ssl.Sde.fasta -l 150 --merge-reference-sequences
+2023-06-09 12:13:20,573	DEBUG	main: BAM read in 1158.890570 seconds
+2023-06-09 12:13:34,658	INFO	mapdamage.rscript: Performing Bayesian estimates
+2023-06-09 12:13:34,658	DEBUG	mapdamage.rscript: Call: Rscript /opt/mapdamage2/lib/python3.7/site-packages/mapdamage/Rscripts/stats/runGeneral.R --args 30 10000 10 50000 0 0 1 1 0 0 1 12 results_Sde-ABol_083-Ex1-11G-lcwgs-1-1.clmp.fp2_repr.ssl.Sde-RG/ /opt/mapdamage2/lib/python3.7/site-packages/mapdamage/Rscripts/stats/ results_Sde-ABol_083-Ex1-11G-lcwgs-1-1.clmp.fp2_repr.ssl.Sde-RG/Stats_out 0 0 0 results_Sde-ABol_083-Ex1-11G-lcwgs-1-1.clmp.fp2_repr.ssl.Sde-RG/acgt_ratio.csv 0 0
+2023-06-09 12:20:04,015	DEBUG	mapdamage.rscript: Bayesian estimates completed in 389.356209 seconds
+2023-06-09 12:20:04,054	INFO	main: Successful run
+2023-06-09 12:20:04,055	DEBUG	main: Run completed in 1562.371962 seconds

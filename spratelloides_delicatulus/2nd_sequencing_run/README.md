@@ -565,8 +565,141 @@ Sde-CMal_069-Ex1-4E-lcwgs-1-1.2	5.4%	46%	0.0
 <details><summary>Expand for MultiQC Output.</summary>
 
 ```bash
-
-
+Sample Name	% Duplication	GC content	% PF	% Adapter
+Sde-ABol_013-Ex1-1B-lcwgs-1-1	17.0%	39.8%	98.9%	91.9%
+Sde-ABol_014-Ex1-2B-lcwgs-1-1	17.3%	46.5%	97.6%	74.7%
+Sde-ABol_015-Ex1-3B-lcwgs-1-1	18.5%	42.1%	96.3%	84.1%
+Sde-ABol_016-Ex1-4B-lcwgs-1-1	17.0%	42.5%	97.7%	84.9%
+Sde-ABol_017-Ex1-5B-lcwgs-1-1	18.1%	42.5%	98.5%	90.1%
+Sde-ABol_018-Ex1-6B-lcwgs-1-1	15.0%	49.0%	96.3%	75.3%
+Sde-ABol_019-Ex1-7B-lcwgs-1-1	16.4%	41.9%	98.2%	89.3%
+Sde-ABol_020-Ex1-8B-lcwgs-1-1	14.4%	42.1%	99.0%	94.7%
+Sde-ABol_021-Ex1-9B-lcwgs-1-1	1.2%	43.2%	90.0%	81.0%
+Sde-ABol_022-Ex1-10B-lcwgs-1-1	15.4%	41.8%	97.8%	92.3%
+Sde-ABol_023-Ex1-11B-lcwgs-1-1	15.3%	42.1%	98.7%	94.0%
+Sde-ABol_024-Ex1-12B-lcwgs-1-1	1.1%	43.9%	90.8%	81.0%
+Sde-ABol_026-Ex1-2C-lcwgs-1-1	16.5%	42.5%	98.8%	94.0%
+Sde-ABol_027-Ex1-3C-lcwgs-1-1	17.4%	40.4%	99.1%	94.5%
+Sde-ABol_028-Ex1-4C-lcwgs-1-1	16.5%	40.4%	99.0%	94.5%
+Sde-ABol_029-Ex1-5C-lcwgs-1-1	1.5%	42.2%	91.7%	86.8%
+Sde-ABol_030-Ex1-6C-lcwgs-1-1	13.1%	41.7%	98.6%	87.3%
+Sde-ABol_031-Ex1-7C-lcwgs-1-1	15.6%	42.8%	98.4%	93.2%
+Sde-ABol_032-Ex1-8C-lcwgs-1-1	15.8%	41.9%	97.4%	93.5%
+Sde-ABol_033-Ex1-9C-lcwgs-1-1	0.0%	0.0%		
+Sde-ABol_034-Ex1-10C-lcwgs-1-1	3.7%	42.9%	91.8%	83.6%
+Sde-ABol_036-Ex1-12C-lcwgs-1-1	2.3%	43.0%	92.2%	84.6%
+Sde-ABol_037-Ex1-1D-lcwgs-1-1	15.3%	41.7%	98.1%	91.5%
+Sde-ABol_038-Ex1-2D-lcwgs-1-1	2.9%	43.2%	90.3%	80.3%
+Sde-ABol_039-Ex1-3D-lcwgs-1-1	17.9%	41.1%	98.3%	88.6%
+Sde-ABol_040-Ex1-4D-lcwgs-1-1	13.7%	40.8%	97.6%	93.3%
+Sde-ABol_041-Ex1-5D-lcwgs-1-1	1.1%	42.0%	91.5%	86.4%
+Sde-ABol_042-Ex1-6D-lcwgs-1-1	16.7%	41.6%	98.2%	88.4%
+Sde-ABol_044-Ex1-8D-lcwgs-1-1	0.0%	0.0%		
+Sde-ABol_046-Ex1-10D-lcwgs-1-1	15.8%	41.0%	98.1%	91.8%
+Sde-ABol_047-Ex1-11D-lcwgs-1-1	15.9%	40.9%	97.1%	89.8%
+Sde-ABol_048-Ex1-12D-lcwgs-1-1	18.3%	48.3%	96.3%	56.4%
+Sde-ABol_049-Ex1-1E-lcwgs-1-1	7.0%	43.3%	94.6%	82.4%
+Sde-ABol_050-Ex1-2E-lcwgs-1-1	6.1%	45.2%	91.5%	73.4%
+Sde-ABol_051-Ex1-3E-lcwgs-1-1	17.3%	42.8%	97.7%	88.2%
+Sde-ABol_053-Ex1-5E-lcwgs-1-1	16.4%	43.2%	96.5%	86.6%
+Sde-ABol_054-Ex1-6E-lcwgs-1-1	0.0%	0.0%		
+Sde-ABol_055-Ex1-7E-lcwgs-1-1	15.4%	41.3%	98.3%	91.2%
+Sde-ABol_056-Ex1-8E-lcwgs-1-1	16.1%	41.6%	97.9%	90.8%
+Sde-ABol_057-Ex1-9E-lcwgs-1-1	16.6%	41.0%	98.5%	90.6%
+Sde-ABol_058-Ex1-10E-lcwgs-1-1	15.5%	39.6%	98.4%	93.1%
+Sde-ABol_059-Ex1-11E-lcwgs-1-1	16.1%	42.8%	98.5%	94.0%
+Sde-ABol_060-Ex1-12E-lcwgs-1-1	17.2%	42.0%	98.0%	82.2%
+Sde-ABol_061-Ex1-1F-lcwgs-1-1	14.7%	41.7%	98.2%	92.5%
+Sde-ABol_062-Ex1-2F-lcwgs-1-1	16.3%	40.1%	98.6%	92.8%
+Sde-ABol_063-Ex1-3F-lcwgs-1-1	17.3%	41.2%	95.4%	88.7%
+Sde-ABol_064-Ex1-4F-lcwgs-1-1	17.2%	39.8%	99.0%	90.0%
+Sde-ABol_065-Ex1-5F-lcwgs-1-1	14.2%	40.2%	98.4%	94.9%
+Sde-ABol_067-Ex1-7F-lcwgs-1-1	13.5%	40.6%	98.9%	92.3%
+Sde-ABol_068-Ex1-8F-lcwgs-1-1	13.4%	41.0%	98.6%	89.2%
+Sde-ABol_069-Ex1-9F-lcwgs-1-1	15.9%	40.2%	98.8%	91.7%
+Sde-ABol_070-Ex1-10F-lcwgs-1-1	15.8%	41.2%	98.1%	93.0%
+Sde-ABol_071-Ex1-11F-lcwgs-1-1	16.1%	42.0%	98.1%	89.0%
+Sde-ABol_072-Ex1-12F-lcwgs-1-1	16.6%	41.3%	98.8%	92.7%
+Sde-ABol_073-Ex1-1G-lcwgs-1-1	1.7%	43.6%	92.0%	78.6%
+Sde-ABol_074-Ex1-2G-lcwgs-1-1	16.3%	40.2%	98.0%	92.1%
+Sde-ABol_075-Ex1-3G-lcwgs-1-1	16.5%	41.0%	97.9%	91.7%
+Sde-ABol_077-Ex1-5G-lcwgs-1-1	13.1%	40.2%	99.1%	95.1%
+Sde-ABol_078-Ex1-6G-lcwgs-1-1	13.9%	40.7%	97.9%	92.3%
+Sde-ABol_079-Ex1-7G-lcwgs-1-1	12.5%	40.9%	50.8%	71.6%
+Sde-ABol_080-Ex1-8G-lcwgs-1-1	15.4%	42.5%	98.0%	91.4%
+Sde-ABol_081-Ex1-9G-lcwgs-1-1	12.9%	42.2%	96.6%	92.5%
+Sde-ABol_082-Ex1-10G-lcwgs-1-1	14.6%	41.1%	98.8%	94.5%
+Sde-ABol_083-Ex1-11G-lcwgs-1-1	0.0%	0.0%		
+Sde-ABol_084-Ex1-12G-lcwgs-1-1	0.0%	0.0%		
+Sde-ABol_087-Ex1-3H-lcwgs-1-1	0.0%	0.0%		
+Sde-ABol_088-Ex1-4H-lcwgs-1-1	0.0%	0.0%		
+Sde-ABol_090-Ex1-6H-lcwgs-1-1	0.0%	0.0%		
+Sde-ABol_091-Ex1-7H-lcwgs-1-1	16.8%	42.3%	98.5%	90.1%
+Sde-ABol_092-Ex1-8H-lcwgs-1-1	17.3%	40.8%	97.2%	91.1%
+Sde-ABol_095-Ex1-11H-lcwgs-1-1	12.4%	42.3%	96.5%	91.2%
+Sde-CMal_003-Ex1-2G-lcwgs-1-1	1.0%	43.1%	91.9%	72.1%
+Sde-CMal_004-Ex1-2E-lcwgs-1-1	1.5%	43.7%	91.8%	68.4%
+Sde-CMal_005-Ex1-4D-lcwgs-1-1	1.0%	43.5%	91.7%	67.7%
+Sde-CMal_006-Ex1-4B-lcwgs-1-1	1.5%	44.2%	91.2%	65.3%
+Sde-CMal_009-Ex1-3G-lcwgs-1-1	1.1%	42.8%	91.5%	70.7%
+Sde-CMal_010-Ex1-1D-lcwgs-1-1	1.2%	43.9%	89.8%	69.9%
+Sde-CMal_011-Ex1-4G-lcwgs-1-1	1.0%	44.1%	91.4%	64.4%
+Sde-CMal_013-Ex1-3H-lcwgs-1-1	1.1%	42.4%	90.6%	69.5%
+Sde-CMal_015-Ex1-1B-lcwgs-1-1	1.3%	44.3%	90.3%	71.0%
+Sde-CMal_016-Ex1-8A-lcwgs-1-1	1.6%	44.4%	84.2%	21.3%
+Sde-CMal_017-Ex1-1F-lcwgs-1-1	1.0%	43.8%	90.1%	69.5%
+Sde-CMal_018-Ex1-6G-lcwgs-1-1	1.1%	44.0%	92.0%	64.5%
+Sde-CMal_019-Ex1-5A-lcwgs-1-1	0.0%	45.9%	89.1%	30.4%
+Sde-CMal_020-Ex1-1C-lcwgs-1-1	1.1%	44.2%	88.9%	69.0%
+Sde-CMal_021-Ex1-4A-lcwgs-1-1	2.6%	45.4%	84.2%	33.0%
+Sde-CMal_022-Ex1-5G-lcwgs-1-1	1.3%	43.9%	91.9%	67.4%
+Sde-CMal_023-Ex1-7E-lcwgs-1-1	1.2%	44.9%	91.7%	62.7%
+Sde-CMal_024-Ex1-4C-lcwgs-1-1	0.8%	44.3%	86.5%	54.0%
+Sde-CMal_025-Ex1-3C-lcwgs-1-1	0.9%	42.4%	88.2%	60.5%
+Sde-CMal_026-Ex1-5E-lcwgs-1-1	1.7%	44.9%	91.5%	63.5%
+Sde-CMal_027-Ex1-8H-lcwgs-1-1	1.0%	43.7%	90.3%	59.1%
+Sde-CMal_028-Ex1-6H-lcwgs-1-1	1.1%	43.8%	91.0%	62.4%
+Sde-CMal_029-Ex1-7F-lcwgs-1-1	1.1%	43.7%	91.8%	63.5%
+Sde-CMal_030-Ex1-5F-lcwgs-1-1	1.1%	43.6%	91.9%	64.5%
+Sde-CMal_031-Ex1-5D-lcwgs-1-1	1.2%	43.8%	91.3%	64.9%
+Sde-CMal_032-Ex1-8C-lcwgs-1-1	0.9%	44.0%	88.2%	54.6%
+Sde-CMal_033-Ex1-7B-lcwgs-1-1	1.2%	44.2%	91.9%	64.1%
+Sde-CMal_034-Ex1-1A-lcwgs-1-1	3.6%	43.3%	91.6%	69.2%
+Sde-CMal_035-Ex1-3A-lcwgs-1-1	7.6%	42.7%	91.7%	49.2%
+Sde-CMal_036-Ex1-8F-lcwgs-1-1	0.9%	43.7%	89.4%	55.6%
+Sde-CMal_037-Ex1-8G-lcwgs-1-1	0.9%	43.9%	91.0%	61.4%
+Sde-CMal_038-Ex1-2H-lcwgs-1-1	1.1%	42.8%	91.1%	70.3%
+Sde-CMal_039-Ex1-6F-lcwgs-1-1	1.2%	43.7%	91.2%	62.1%
+Sde-CMal_040-Ex1-6E-lcwgs-1-1	1.2%	44.7%	91.0%	59.4%
+Sde-CMal_041-Ex1-7H-lcwgs-1-1	1.0%	43.8%	91.6%	64.7%
+Sde-CMal_042-Ex1-7A-lcwgs-1-1	0.0%	45.8%	89.6%	41.0%
+Sde-CMal_043-Ex1-1E-lcwgs-1-1	1.7%	44.7%	90.8%	68.5%
+Sde-CMal_044-Ex1-2D-lcwgs-1-1	1.0%	43.0%	90.7%	68.7%
+Sde-CMal_045-Ex1-6C-lcwgs-1-1	1.4%	44.1%	90.2%	61.3%
+Sde-CMal_046-Ex1-1H-lcwgs-1-1	1.3%	43.9%	90.0%	71.6%
+Sde-CMal_047-Ex1-2F-lcwgs-1-1	1.1%	42.8%	90.8%	67.4%
+Sde-CMal_048-Ex1-4F-lcwgs-1-1	1.2%	43.7%	90.5%	62.4%
+Sde-CMal_049-Ex1-6A-lcwgs-1-1	1.5%	45.5%	88.6%	34.3%
+Sde-CMal_050-Ex1-3D-lcwgs-1-1	1.1%	42.6%	91.3%	71.8%
+Sde-CMal_051-Ex1-5H-lcwgs-1-1	1.2%	43.8%	91.6%	63.6%
+Sde-CMal_052-Ex1-8E-lcwgs-1-1	0.9%	44.7%	91.0%	58.2%
+Sde-CMal_053-Ex1-7D-lcwgs-1-1	0.8%	43.9%	91.6%	63.8%
+Sde-CMal_054-Ex1-5B-lcwgs-1-1	1.5%	44.3%	91.6%	65.4%
+Sde-CMal_055-Ex1-8D-lcwgs-1-1	0.9%	43.7%	89.5%	57.3%
+Sde-CMal_056-Ex1-5C-lcwgs-1-1	1.0%	44.1%	89.9%	61.0%
+Sde-CMal_057-Ex1-7C-lcwgs-1-1	1.1%	44.0%	90.5%	62.6%
+Sde-CMal_058-Ex1-7G-lcwgs-1-1	1.0%	44.1%	92.3%	65.9%
+Sde-CMal_059-Ex1-3B-lcwgs-1-1	1.1%	43.3%	90.5%	68.1%
+Sde-CMal_060-Ex1-4H-lcwgs-1-1	1.1%	43.9%	90.1%	62.5%
+Sde-CMal_061-Ex1-8B-lcwgs-1-1	1.2%	44.3%	90.8%	60.0%
+Sde-CMal_062-Ex1-2B-lcwgs-1-1	1.5%	43.3%	91.4%	70.5%
+Sde-CMal_063-Ex1-6B-lcwgs-1-1	1.4%	44.2%	91.1%	60.0%
+Sde-CMal_064-Ex1-6D-lcwgs-1-1	1.0%	43.8%	90.2%	60.1%
+Sde-CMal_065-Ex1-2C-lcwgs-1-1	1.1%	42.9%	90.2%	69.0%
+Sde-CMal_066-Ex1-1G-lcwgs-1-1	1.2%	44.0%	90.9%	72.1%
+Sde-CMal_067-Ex1-3F-lcwgs-1-1	1.1%	42.4%	91.1%	70.6%
+Sde-CMal_068-Ex1-2A-lcwgs-1-1	2.3%	40.9%	90.1%	72.4%
+Sde-CMal_069-Ex1-4E-lcwgs-1-1	1.2%	44.9%	91.4%	62.0%
 ```
 </p>
 </details>

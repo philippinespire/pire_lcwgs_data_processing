@@ -377,8 +377,99 @@ Sne-CCab_079_Ex1-8H-lcwgs-1-1.2	13.8%	39%	1.7
 <details><summary>Expand for MultiQC Output.</summary>
 
 ```bash
-
-
+Sample Name	% Duplication	GC content	% PF	% Adapter
+Sne-ABir_001_Ex1-9A-lcwgs-1-1	14.7%	44.9%	98.0%	55.5%
+Sne-ABir_002_Ex1-9B-lcwgs-1-1	17.3%	49.4%	97.3%	80.8%
+Sne-ABir_003_Ex1-9C-lcwgs-1-1	28.9%	53.1%	96.8%	29.2%
+Sne-ABir_004_Ex1-9D-lcwgs-1-1	17.4%	47.9%	86.7%	30.4%
+Sne-ABir_005_Ex1-9E-lcwgs-1-1	27.0%	53.8%	90.0%	48.3%
+Sne-ABir_006_Ex1-9F-lcwgs-1-1	18.6%	54.3%	95.8%	15.7%
+Sne-ABir_007_Ex1-9G-lcwgs-1-1	20.9%	53.7%	97.1%	31.2%
+Sne-ABir_008_Ex1-9H-lcwgs-1-1	21.6%	55.3%	47.0%	63.4%
+Sne-ABir_009_Ex1-10A-lcwgs-1-1	16.0%	53.9%	95.9%	32.7%
+Sne-ABir_010_Ex1-10B-lcwgs-1-1	0.0%	0.0%		
+Sne-ABir_011_Ex1-10C-lcwgs-1-1	0.0%	0.0%		
+Sne-ABir_012_Ex1-10D-lcwgs-1-1	0.0%	0.0%		
+Sne-ABir_013_Ex1-10E-lcwgs-1-1	0.0%	0.0%		
+Sne-ABir_014_Ex1-10F-lcwgs-1-1	0.0%	0.0%		
+Sne-ABir_015_Ex1-10G-lcwgs-1-1	0.0%	0.0%		
+Sne-ABir_016_Ex1-10H-lcwgs-1-1	0.0%	0.0%		
+Sne-ABir_017_Ex1-11A-lcwgs-1-1	0.0%	0.0%		
+Sne-ABir_018_Ex1-11B-lcwgs-1-1	0.0%	0.0%		
+Sne-ABir_019_Ex1-11C-lcwgs-1-1	0.0%	0.0%		
+Sne-ABir_020_Ex1-11D-lcwgs-1-1	0.0%	0.0%		
+Sne-ABir_021_Ex1-11E-lcwgs-1-1	0.0%	0.0%		
+Sne-ABir_022_Ex1-11F-lcwgs-1-1	0.0%	0.0%		
+Sne-ABir_023_Ex1-11G-lcwgs-1-1	0.0%	0.0%		
+Sne-ABir_024_Ex1-11H-lcwgs-1-1	0.0%	0.0%		
+Sne-ABir_025_Ex1-12A-lcwgs-1-1	0.0%	0.0%		
+Sne-ABir_026_Ex1-12B-lcwgs-1-1	0.0%	0.0%		
+Sne-ABir_027_Ex1-12C-lcwgs-1-1	18.5%	35.8%	94.2%	73.0%
+Sne-ABir_028_Ex1-12D-lcwgs-1-1	22.0%	40.7%	62.7%	70.1%
+Sne-CCab_016_Ex1-1A-lcwgs-1-1	16.7%	38.9%	96.7%	25.6%
+Sne-CCab_017_Ex1-1B-lcwgs-1-1	16.5%	39.6%	95.9%	25.6%
+Sne-CCab_018_Ex1-1C-lcwgs-1-1	14.9%	39.2%	96.1%	27.8%
+Sne-CCab_019_Ex1-1D-lcwgs-1-1	18.1%	39.8%	96.1%	11.3%
+Sne-CCab_020_Ex1-1E-lcwgs-1-1	15.3%	39.3%	95.4%	19.2%
+Sne-CCab_021_Ex1-1F-lcwgs-1-1	21.4%	38.1%	97.0%	7.7%
+Sne-CCab_022_Ex1-1G-lcwgs-1-1	18.7%	39.1%	97.1%	14.3%
+Sne-CCab_023_Ex1-1H-lcwgs-1-1	15.6%	38.7%	96.9%	18.0%
+Sne-CCab_024_Ex1-2A-lcwgs-1-1	15.4%	38.8%	97.3%	25.3%
+Sne-CCab_025_Ex1-2B-lcwgs-1-1	15.9%	39.0%	96.9%	21.3%
+Sne-CCab_026_Ex1-2C-lcwgs-1-1	17.0%	38.6%	97.0%	12.1%
+Sne-CCab_027_Ex1-2D-lcwgs-1-1	15.7%	38.8%	96.6%	17.7%
+Sne-CCab_028_Ex1-2E-lcwgs-1-1	17.1%	38.6%	96.0%	14.5%
+Sne-CCab_029_Ex1-2F-lcwgs-1-1	14.7%	41.0%	97.2%	15.0%
+Sne-CCab_030_Ex1-2G-lcwgs-1-1	16.8%	38.9%	96.5%	14.7%
+Sne-CCab_031_Ex1-2H-lcwgs-1-1	15.2%	39.2%	96.3%	29.2%
+Sne-CCab_032_Ex1-3A-lcwgs-1-1	16.9%	38.4%	96.4%	21.7%
+Sne-CCab_033_Ex1-3B-lcwgs-1-1	17.1%	38.6%	96.3%	21.3%
+Sne-CCab_034_Ex1-3C-lcwgs-1-1	29.5%	28.8%	98.8%	9.6%
+Sne-CCab_035_Ex1-3D-lcwgs-1-1	14.6%	38.5%	96.4%	13.4%
+Sne-CCab_036_Ex1-3E-lcwgs-1-1	0.0%	0.0%		
+Sne-CCab_037_Ex1-3F-lcwgs-1-1	17.9%	39.0%	96.4%	21.0%
+Sne-CCab_038_Ex1-3G-lcwgs-1-1	18.3%	38.9%	97.1%	13.1%
+Sne-CCab_039_Ex1-3H-lcwgs-1-1	17.7%	38.7%	97.1%	16.6%
+Sne-CCab_040_Ex1-4A-lcwgs-1-1	13.1%	38.4%	96.6%	27.6%
+Sne-CCab_041_Ex1-4B-lcwgs-1-1	15.6%	38.8%	97.0%	23.0%
+Sne-CCab_042_Ex1-4C-lcwgs-1-1	15.6%	38.7%	97.2%	19.3%
+Sne-CCab_043_Ex1-4D-lcwgs-1-1	16.6%	39.3%	96.6%	12.2%
+Sne-CCab_044_Ex1-4E-lcwgs-1-1	16.1%	39.2%	94.7%	23.2%
+Sne-CCab_045_Ex1-4F-lcwgs-1-1	17.1%	38.8%	96.4%	17.6%
+Sne-CCab_046_Ex1-4G-lcwgs-1-1	14.6%	39.1%	96.7%	37.0%
+Sne-CCab_047_Ex1-4H-lcwgs-1-1	16.1%	39.7%	96.6%	17.3%
+Sne-CCab_048_Ex1-5A-lcwgs-1-1	16.3%	39.1%	96.9%	20.6%
+Sne-CCab_049_Ex1-5B-lcwgs-1-1	15.3%	39.3%	96.9%	28.6%
+Sne-CCab_050_Ex1-5C-lcwgs-1-1	16.6%	39.2%	97.0%	15.0%
+Sne-CCab_051_Ex1-5D-lcwgs-1-1	15.2%	39.2%	95.0%	27.7%
+Sne-CCab_052_Ex1-5E-lcwgs-1-1	16.5%	39.4%	96.2%	19.9%
+Sne-CCab_053_Ex1-5F-lcwgs-1-1	16.7%	39.2%	96.4%	25.0%
+Sne-CCab_054_Ex1-5G-lcwgs-1-1	16.4%	39.1%	94.2%	23.7%
+Sne-CCab_055_Ex1-5H-lcwgs-1-1	15.5%	39.2%	93.8%	31.4%
+Sne-CCab_056_Ex1-6A-lcwgs-1-1	15.5%	38.9%	96.9%	26.5%
+Sne-CCab_057_Ex1-6B-lcwgs-1-1	15.7%	39.2%	96.6%	22.1%
+Sne-CCab_058_Ex1-6C-lcwgs-1-1	16.1%	38.7%	97.3%	18.6%
+Sne-CCab_059_Ex1-6D-lcwgs-1-1	15.6%	39.3%	96.6%	16.3%
+Sne-CCab_060_Ex1-6E-lcwgs-1-1	17.2%	38.8%	97.0%	11.1%
+Sne-CCab_061_Ex1-6F-lcwgs-1-1	17.1%	38.8%	96.5%	15.6%
+Sne-CCab_062_Ex1-6G-lcwgs-1-1	15.1%	39.1%	95.8%	27.4%
+Sne-CCab_063_Ex1-6H-lcwgs-1-1	15.6%	39.5%	97.0%	25.4%
+Sne-CCab_064_Ex1-7A-lcwgs-1-1	15.9%	38.4%	97.0%	22.1%
+Sne-CCab_065_Ex1-7B-lcwgs-1-1	14.8%	38.9%	94.9%	33.6%
+Sne-CCab_066_Ex1-7C-lcwgs-1-1	16.6%	39.0%	96.2%	14.5%
+Sne-CCab_067_Ex1-7D-lcwgs-1-1	16.4%	39.3%	96.5%	14.3%
+Sne-CCab_068_Ex1-7E-lcwgs-1-1	17.0%	39.0%	95.2%	15.2%
+Sne-CCab_069_Ex1-7F-lcwgs-1-1	17.4%	38.6%	96.6%	16.4%
+Sne-CCab_070_Ex1-7G-lcwgs-1-1	16.8%	38.2%	97.0%	13.7%
+Sne-CCab_071_Ex1-7H-lcwgs-1-1	15.0%	38.9%	97.1%	30.1%
+Sne-CCab_072_Ex1-8A-lcwgs-1-1	14.2%	39.5%	94.2%	37.0%
+Sne-CCab_073_Ex1-8B-lcwgs-1-1	14.4%	39.6%	95.2%	35.9%
+Sne-CCab_074_Ex1-8C-lcwgs-1-1	0.9%	39.2%	93.4%	24.2%
+Sne-CCab_075_Ex1-8D-lcwgs-1-1	15.1%	39.5%	94.7%	24.6%
+Sne-CCab_076_Ex1-8E-lcwgs-1-1	16.9%	39.2%	96.8%	11.7%
+Sne-CCab_077_Ex1-8F-lcwgs-1-1	17.7%	38.0%	96.5%	12.8%
+Sne-CCab_078_Ex1-8G-lcwgs-1-1	16.8%	38.6%	93.2%	16.6%
+Sne-CCab_079_Ex1-8H-lcwgs-1-1	16.3%	38.7%	94.3%	19.3%
 ```
 </p>
 </details>

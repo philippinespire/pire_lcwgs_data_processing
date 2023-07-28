@@ -485,11 +485,9 @@ Dar-CJol_094-Ex1-1D-lcwgs-1-1	15.3%	48.2%	97.2%	31.9%
 `bash ../../../pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1 fq_fp1_clmp /scratch/hpc-0351 20`
 
 ### 9b. Check duplicate removal success.
-`[hpc-0351@e1-w6420b-23 1st_sequencing_run]$ enable_lmod
-[hpc-0351@e1-w6420b-23 1st_sequencing_run]$ module load container_env R/4.2
-[hpc-0351@e1-w6420b-23 1st_sequencing_run]$ crun R < /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/check
-checkClumpify_EG.R* checkClumpify.R*
-[hpc-0351@e1-w6420b-23 1st_sequencing_run]$ crun R < /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/checkClumpify_EG.R --no-save`
+`[hpc-0351@e1-w6420b-23 1st_sequencing_run]$ enable_lmod`\
+`[hpc-0351@e1-w6420b-23 1st_sequencing_run]$ module load container_env R/4.2`\
+`[hpc-0351@e1-w6420b-23 1st_sequencing_run]$ crun R < /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/checkClumpify_EG.R --no-save`
 
 "Clumpify Successfully worked on all samples"
 
@@ -775,6 +773,10 @@ Dar-CJol_094-Ex1-1D-lcwgs-1-1.clmp.r1r2_fastp	2.7%	48.0%	98.3%	1.0%
 ## 11. Decontaminate files.
 `bash ../../../pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2 fq_fp1_clmp_fp2_fqscrn 20`
 
+170 files for each file type, no return for `grep 'error' slurm-fqscrn.*out` or `grep 'No reads in' slurm-fqscrn.*out`
+
+'sbatch ../../../pire_fq_gz_processing/runMULTIQC.sbatch fq_fp1_clmp_fp2_fqscrn fastq_screen_report'
+
 <details><summary>Expand for MultiQC Output.</summary>
 
 ```bash
@@ -785,13 +787,189 @@ insert multiqc output here
 </details>
 
 ## 12. Execute RePair
+`sbatch ../../../pire_fq_gz_processing/runREPAIR.sbatch fq_fp1_clmp_fp2_fqscrn fq_fp1_clmp_fp2_fqscrn_rprd 40`
 
+`sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_fp1_clmp_fp2_fqscrn_rprd" "fqc_rprd_report" "fq.gz"`
 
 <details><summary>Expand for MultiQC Output.</summary>
 
 ```bash
-Insert output here.
+Sample Name	% Dups	% GC	Length	M Seqs
+Dar-AJol_001-Ex1-1A-lcwgs-1-1.clmp.fp2_repr.R1	2.0%	45%	114 bp	4.0
+Dar-AJol_001-Ex1-1A-lcwgs-1-1.clmp.fp2_repr.R2	2.0%	45%	113 bp	4.0
+Dar-AJol_002-Ex1-1B-lcwgs-1-1.clmp.fp2_repr.R1	1.9%	43%	115 bp	3.4
+Dar-AJol_002-Ex1-1B-lcwgs-1-1.clmp.fp2_repr.R2	1.9%	42%	114 bp	3.4
+Dar-AJol_003-Ex1-1C-lcwgs-1-1.clmp.fp2_repr.R1	1.7%	44%	105 bp	2.7
+Dar-AJol_003-Ex1-1C-lcwgs-1-1.clmp.fp2_repr.R2	1.7%	44%	104 bp	2.7
+Dar-AJol_004-Ex1-1D-lcwgs-1-1.clmp.fp2_repr.R1	1.9%	44%	117 bp	5.4
+Dar-AJol_004-Ex1-1D-lcwgs-1-1.clmp.fp2_repr.R2	1.9%	44%	116 bp	5.4
+Dar-AJol_005-Ex1-1E-lcwgs-1-1.clmp.fp2_repr.R1	2.5%	45%	119 bp	0.7
+Dar-AJol_005-Ex1-1E-lcwgs-1-1.clmp.fp2_repr.R2	2.3%	45%	118 bp	0.7
+Dar-AJol_006-Ex1-1F-lcwgs-1-1.clmp.fp2_repr.R1	1.5%	43%	102 bp	1.5
+Dar-AJol_006-Ex1-1F-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	43%	102 bp	1.5
+Dar-AJol_007-Ex1-1G-lcwgs-1-1.clmp.fp2_repr.R1	2.3%	43%	110 bp	2.2
+Dar-AJol_007-Ex1-1G-lcwgs-1-1.clmp.fp2_repr.R2	2.1%	43%	109 bp	2.2
+Dar-AJol_008-Ex1-1H-lcwgs-1-1.clmp.fp2_repr.R1	2.6%	44%	129 bp	3.3
+Dar-AJol_008-Ex1-1H-lcwgs-1-1.clmp.fp2_repr.R2	2.4%	44%	127 bp	3.3
+Dar-AJol_009-Ex1-2A-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	42%	123 bp	7.3
+Dar-AJol_009-Ex1-2A-lcwgs-1-1.clmp.fp2_repr.R2	2.2%	42%	121 bp	7.3
+Dar-AJol_010-Ex1-2B-lcwgs-1-1.clmp.fp2_repr.R1	1.0%	38%	90 bp	2.5
+Dar-AJol_010-Ex1-2B-lcwgs-1-1.clmp.fp2_repr.R2	1.0%	38%	90 bp	2.5
+Dar-AJol_011-Ex1-2C-lcwgs-1-1.clmp.fp2_repr.R1	1.2%	42%	98 bp	1.3
+Dar-AJol_011-Ex1-2C-lcwgs-1-1.clmp.fp2_repr.R2	1.1%	42%	98 bp	1.3
+Dar-AJol_012-Ex1-2D-lcwgs-1-1.clmp.fp2_repr.R1	1.9%	43%	120 bp	4.7
+Dar-AJol_012-Ex1-2D-lcwgs-1-1.clmp.fp2_repr.R2	1.8%	43%	118 bp	4.7
+Dar-AJol_013-Ex1-2E-lcwgs-1-1.clmp.fp2_repr.R1	1.5%	41%	111 bp	3.2
+Dar-AJol_013-Ex1-2E-lcwgs-1-1.clmp.fp2_repr.R2	1.4%	41%	110 bp	3.2
+Dar-AJol_014-Ex1-2F-lcwgs-1-1.clmp.fp2_repr.R1	1.2%	37%	94 bp	1.9
+Dar-AJol_014-Ex1-2F-lcwgs-1-1.clmp.fp2_repr.R2	1.1%	37%	93 bp	1.9
+Dar-AJol_015-Ex1-2G-lcwgs-1-1.clmp.fp2_repr.R1	1.2%	38%	103 bp	0.8
+Dar-AJol_015-Ex1-2G-lcwgs-1-1.clmp.fp2_repr.R2	1.2%	38%	102 bp	0.8
+Dar-AJol_016-Ex1-2H-lcwgs-1-1.clmp.fp2_repr.R1	2.1%	44%	121 bp	4.0
+Dar-AJol_016-Ex1-2H-lcwgs-1-1.clmp.fp2_repr.R2	2.0%	43%	120 bp	4.0
+Dar-AJol_017-Ex1-3A-lcwgs-1-1.clmp.fp2_repr.R1	1.5%	42%	109 bp	2.2
+Dar-AJol_017-Ex1-3A-lcwgs-1-1.clmp.fp2_repr.R2	1.4%	42%	108 bp	2.2
+Dar-AJol_018-Ex1-3B-lcwgs-1-1.clmp.fp2_repr.R1	1.1%	39%	94 bp	1.3
+Dar-AJol_018-Ex1-3B-lcwgs-1-1.clmp.fp2_repr.R2	1.1%	39%	93 bp	1.3
+Dar-AJol_019-Ex1-3C-lcwgs-1-1.clmp.fp2_repr.R1	3.1%	40%	127 bp	7.2
+Dar-AJol_019-Ex1-3C-lcwgs-1-1.clmp.fp2_repr.R2	3.2%	40%	125 bp	7.2
+Dar-AJol_020-Ex1-3D-lcwgs-1-1.clmp.fp2_repr.R1	1.1%	39%	91 bp	4.2
+Dar-AJol_020-Ex1-3D-lcwgs-1-1.clmp.fp2_repr.R2	1.1%	39%	90 bp	4.2
+Dar-AJol_021-Ex1-3E-lcwgs-1-1.clmp.fp2_repr.R1	1.1%	37%	93 bp	1.5
+Dar-AJol_021-Ex1-3E-lcwgs-1-1.clmp.fp2_repr.R2	1.1%	37%	92 bp	1.5
+Dar-CJol_009-Ex1-3B-lcwgs-1-1.clmp.fp2_repr.R1	3.3%	46%	133 bp	2.1
+Dar-CJol_009-Ex1-3B-lcwgs-1-1.clmp.fp2_repr.R2	3.4%	46%	130 bp	2.1
+Dar-CJol_012-Ex1-3D-lcwgs-1-1.clmp.fp2_repr.R1	4.6%	50%	137 bp	1.7
+Dar-CJol_012-Ex1-3D-lcwgs-1-1.clmp.fp2_repr.R2	4.9%	50%	134 bp	1.7
+Dar-CJol_019-Ex1-1G-lcwgs-1-1.clmp.fp2_repr.R1	2.9%	46%	137 bp	2.1
+Dar-CJol_019-Ex1-1G-lcwgs-1-1.clmp.fp2_repr.R2	2.7%	46%	134 bp	2.1
+Dar-CJol_020-Ex1-4F-lcwgs-1-1.clmp.fp2_repr.R1	3.5%	48%	133 bp	3.5
+Dar-CJol_020-Ex1-4F-lcwgs-1-1.clmp.fp2_repr.R2	3.6%	48%	130 bp	3.5
+Dar-CJol_021-Ex1-6F-lcwgs-1-1.clmp.fp2_repr.R1	3.1%	47%	129 bp	3.9
+Dar-CJol_021-Ex1-6F-lcwgs-1-1.clmp.fp2_repr.R2	3.2%	47%	127 bp	3.9
+Dar-CJol_022-Ex1-7C-lcwgs-1-1.clmp.fp2_repr.R1	1.9%	48%	115 bp	1.0
+Dar-CJol_022-Ex1-7C-lcwgs-1-1.clmp.fp2_repr.R2	1.8%	48%	114 bp	1.0
+Dar-CJol_023-Ex1-8B-lcwgs-1-1.clmp.fp2_repr.R1	1.7%	47%	116 bp	0.8
+Dar-CJol_023-Ex1-8B-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	46%	114 bp	0.8
+Dar-CJol_024-Ex1-7E-lcwgs-1-1.clmp.fp2_repr.R1	0.0%	49%	118 bp	0.0
+Dar-CJol_024-Ex1-7E-lcwgs-1-1.clmp.fp2_repr.R2	0.0%	50%	114 bp	0.0
+Dar-CJol_025-Ex1-3C-lcwgs-1-1.clmp.fp2_repr.R1	2.7%	46%	133 bp	1.8
+Dar-CJol_025-Ex1-3C-lcwgs-1-1.clmp.fp2_repr.R2	2.6%	46%	131 bp	1.8
+Dar-CJol_026-Ex1-8A-lcwgs-1-1.clmp.fp2_repr.R1	1.7%	47%	111 bp	0.9
+Dar-CJol_026-Ex1-8A-lcwgs-1-1.clmp.fp2_repr.R2	1.7%	47%	110 bp	0.9
+Dar-CJol_028-Ex1-2F-lcwgs-1-1.clmp.fp2_repr.R1	2.7%	46%	131 bp	4.1
+Dar-CJol_028-Ex1-2F-lcwgs-1-1.clmp.fp2_repr.R2	2.8%	45%	129 bp	4.1
+Dar-CJol_029-Ex1-5B-lcwgs-1-1.clmp.fp2_repr.R1	2.8%	45%	130 bp	2.2
+Dar-CJol_029-Ex1-5B-lcwgs-1-1.clmp.fp2_repr.R2	2.8%	45%	128 bp	2.2
+Dar-CJol_030-Ex1-8D-lcwgs-1-1.clmp.fp2_repr.R1	2.3%	48%	119 bp	1.4
+Dar-CJol_030-Ex1-8D-lcwgs-1-1.clmp.fp2_repr.R2	2.4%	48%	118 bp	1.4
+Dar-CJol_031-Ex1-4H-lcwgs-1-1.clmp.fp2_repr.R1	2.7%	47%	134 bp	1.7
+Dar-CJol_031-Ex1-4H-lcwgs-1-1.clmp.fp2_repr.R2	2.6%	47%	132 bp	1.7
+Dar-CJol_032-Ex1-3H-lcwgs-1-1.clmp.fp2_repr.R1	3.6%	48%	136 bp	1.4
+Dar-CJol_032-Ex1-3H-lcwgs-1-1.clmp.fp2_repr.R2	3.7%	47%	133 bp	1.4
+Dar-CJol_035-Ex1-8H-lcwgs-1-1.clmp.fp2_repr.R1	1.8%	46%	124 bp	0.6
+Dar-CJol_035-Ex1-8H-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	45%	123 bp	0.6
+Dar-CJol_036-Ex1-8C-lcwgs-1-1.clmp.fp2_repr.R1	1.7%	46%	120 bp	0.6
+Dar-CJol_036-Ex1-8C-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	46%	118 bp	0.6
+Dar-CJol_037-Ex1-2D-lcwgs-1-1.clmp.fp2_repr.R1	3.2%	48%	132 bp	1.9
+Dar-CJol_037-Ex1-2D-lcwgs-1-1.clmp.fp2_repr.R2	3.2%	48%	130 bp	1.9
+Dar-CJol_038-Ex1-6A-lcwgs-1-1.clmp.fp2_repr.R1	2.6%	45%	127 bp	1.9
+Dar-CJol_038-Ex1-6A-lcwgs-1-1.clmp.fp2_repr.R2	2.6%	45%	125 bp	1.9
+Dar-CJol_039-Ex1-7H-lcwgs-1-1.clmp.fp2_repr.R1	2.0%	47%	122 bp	0.9
+Dar-CJol_039-Ex1-7H-lcwgs-1-1.clmp.fp2_repr.R2	2.0%	47%	120 bp	0.9
+Dar-CJol_040-Ex1-1E-lcwgs-1-1.clmp.fp2_repr.R1	0.0%	48%	129 bp	0.0
+Dar-CJol_040-Ex1-1E-lcwgs-1-1.clmp.fp2_repr.R2	0.0%	47%	126 bp	0.0
+Dar-CJol_041-Ex1-1B-lcwgs-1-1.clmp.fp2_repr.R1	3.6%	49%	130 bp	2.4
+Dar-CJol_041-Ex1-1B-lcwgs-1-1.clmp.fp2_repr.R2	3.8%	49%	128 bp	2.4
+Dar-CJol_043-Ex1-4C-lcwgs-1-1.clmp.fp2_repr.R1	2.4%	45%	137 bp	1.4
+Dar-CJol_043-Ex1-4C-lcwgs-1-1.clmp.fp2_repr.R2	2.1%	45%	135 bp	1.4
+Dar-CJol_044-Ex1-5E-lcwgs-1-1.clmp.fp2_repr.R1	0.0%	49%	127 bp	0.0
+Dar-CJol_044-Ex1-5E-lcwgs-1-1.clmp.fp2_repr.R2	0.0%	47%	125 bp	0.0
+Dar-CJol_045-Ex1-5D-lcwgs-1-1.clmp.fp2_repr.R1	3.6%	48%	128 bp	2.4
+Dar-CJol_045-Ex1-5D-lcwgs-1-1.clmp.fp2_repr.R2	3.8%	48%	126 bp	2.4
+Dar-CJol_046-Ex1-2A-lcwgs-1-1.clmp.fp2_repr.R1	2.6%	47%	121 bp	1.8
+Dar-CJol_046-Ex1-2A-lcwgs-1-1.clmp.fp2_repr.R2	2.6%	47%	120 bp	1.8
+Dar-CJol_050-Ex1-3E-lcwgs-1-1.clmp.fp2_repr.R1	0.0%	48%	136 bp	0.0
+Dar-CJol_050-Ex1-3E-lcwgs-1-1.clmp.fp2_repr.R2	0.0%	49%	123 bp	0.0
+Dar-CJol_051-Ex1-1H-lcwgs-1-1.clmp.fp2_repr.R1	2.8%	47%	131 bp	2.6
+Dar-CJol_051-Ex1-1H-lcwgs-1-1.clmp.fp2_repr.R2	2.9%	47%	129 bp	2.6
+Dar-CJol_052-Ex1-3G-lcwgs-1-1.clmp.fp2_repr.R1	2.7%	47%	128 bp	1.7
+Dar-CJol_052-Ex1-3G-lcwgs-1-1.clmp.fp2_repr.R2	2.7%	47%	126 bp	1.7
+Dar-CJol_053-Ex1-2C-lcwgs-1-1.clmp.fp2_repr.R1	3.3%	48%	133 bp	2.0
+Dar-CJol_053-Ex1-2C-lcwgs-1-1.clmp.fp2_repr.R2	3.3%	48%	131 bp	2.0
+Dar-CJol_054-Ex1-2H-lcwgs-1-1.clmp.fp2_repr.R1	2.5%	44%	133 bp	2.8
+Dar-CJol_054-Ex1-2H-lcwgs-1-1.clmp.fp2_repr.R2	2.4%	44%	131 bp	2.8
+Dar-CJol_055-Ex1-6B-lcwgs-1-1.clmp.fp2_repr.R1	2.4%	45%	122 bp	2.5
+Dar-CJol_055-Ex1-6B-lcwgs-1-1.clmp.fp2_repr.R2	2.4%	45%	121 bp	2.5
+Dar-CJol_056-Ex1-8F-lcwgs-1-1.clmp.fp2_repr.R1	2.4%	47%	118 bp	2.2
+Dar-CJol_056-Ex1-8F-lcwgs-1-1.clmp.fp2_repr.R2	2.5%	47%	117 bp	2.2
+Dar-CJol_058-Ex1-1C-lcwgs-1-1.clmp.fp2_repr.R1	2.4%	46%	131 bp	2.0
+Dar-CJol_058-Ex1-1C-lcwgs-1-1.clmp.fp2_repr.R2	2.4%	45%	129 bp	2.0
+Dar-CJol_059-Ex1-6H-lcwgs-1-1.clmp.fp2_repr.R1	2.3%	45%	130 bp	1.1
+Dar-CJol_059-Ex1-6H-lcwgs-1-1.clmp.fp2_repr.R2	2.3%	45%	128 bp	1.1
+Dar-CJol_060-Ex1-1F-lcwgs-1-1.clmp.fp2_repr.R1	2.9%	47%	129 bp	4.5
+Dar-CJol_060-Ex1-1F-lcwgs-1-1.clmp.fp2_repr.R2	3.3%	47%	127 bp	4.5
+Dar-CJol_061-Ex1-2B-lcwgs-1-1.clmp.fp2_repr.R1	2.9%	49%	124 bp	1.9
+Dar-CJol_061-Ex1-2B-lcwgs-1-1.clmp.fp2_repr.R2	3.0%	48%	122 bp	1.9
+Dar-CJol_062-Ex1-7B-lcwgs-1-1.clmp.fp2_repr.R1	2.4%	48%	118 bp	1.3
+Dar-CJol_062-Ex1-7B-lcwgs-1-1.clmp.fp2_repr.R2	2.4%	47%	116 bp	1.3
+Dar-CJol_065-Ex1-2G-lcwgs-1-1.clmp.fp2_repr.R1	2.8%	48%	133 bp	1.1
+Dar-CJol_065-Ex1-2G-lcwgs-1-1.clmp.fp2_repr.R2	2.6%	48%	131 bp	1.1
+Dar-CJol_066-Ex1-5A-lcwgs-1-1.clmp.fp2_repr.R1	2.8%	47%	127 bp	1.5
+Dar-CJol_066-Ex1-5A-lcwgs-1-1.clmp.fp2_repr.R2	2.8%	47%	125 bp	1.5
+Dar-CJol_067-Ex1-2E-lcwgs-1-1.clmp.fp2_repr.R1	0.0%	46%	136 bp	0.0
+Dar-CJol_067-Ex1-2E-lcwgs-1-1.clmp.fp2_repr.R2	0.0%	47%	128 bp	0.0
+Dar-CJol_068-Ex1-8E-lcwgs-1-1.clmp.fp2_repr.R1	0.0%	53%	120 bp	0.0
+Dar-CJol_068-Ex1-8E-lcwgs-1-1.clmp.fp2_repr.R2	0.0%	52%	103 bp	0.0
+Dar-CJol_069-Ex1-4D-lcwgs-1-1.clmp.fp2_repr.R1	2.9%	48%	127 bp	2.5
+Dar-CJol_069-Ex1-4D-lcwgs-1-1.clmp.fp2_repr.R2	3.1%	48%	125 bp	2.5
+Dar-CJol_070-Ex1-5F-lcwgs-1-1.clmp.fp2_repr.R1	3.5%	48%	128 bp	3.5
+Dar-CJol_070-Ex1-5F-lcwgs-1-1.clmp.fp2_repr.R2	3.8%	48%	126 bp	3.5
+Dar-CJol_071-Ex1-7D-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	47%	121 bp	1.3
+Dar-CJol_071-Ex1-7D-lcwgs-1-1.clmp.fp2_repr.R2	2.1%	47%	119 bp	1.3
+Dar-CJol_072-Ex1-8G-lcwgs-1-1.clmp.fp2_repr.R1	1.9%	46%	122 bp	0.6
+Dar-CJol_072-Ex1-8G-lcwgs-1-1.clmp.fp2_repr.R2	1.7%	46%	121 bp	0.6
+Dar-CJol_073-Ex1-3F-lcwgs-1-1.clmp.fp2_repr.R1	3.3%	48%	132 bp	5.0
+Dar-CJol_073-Ex1-3F-lcwgs-1-1.clmp.fp2_repr.R2	3.4%	47%	129 bp	5.0
+Dar-CJol_074-Ex1-7G-lcwgs-1-1.clmp.fp2_repr.R1	2.4%	47%	122 bp	1.7
+Dar-CJol_074-Ex1-7G-lcwgs-1-1.clmp.fp2_repr.R2	2.5%	47%	120 bp	1.7
+Dar-CJol_075-Ex1-4E-lcwgs-1-1.clmp.fp2_repr.R1	6.1%	48%	129 bp	0.0
+Dar-CJol_075-Ex1-4E-lcwgs-1-1.clmp.fp2_repr.R2	3.0%	48%	127 bp	0.0
+Dar-CJol_076-Ex1-5H-lcwgs-1-1.clmp.fp2_repr.R1	3.1%	47%	126 bp	3.0
+Dar-CJol_076-Ex1-5H-lcwgs-1-1.clmp.fp2_repr.R2	3.3%	47%	124 bp	3.0
+Dar-CJol_077-Ex1-7A-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	46%	113 bp	1.1
+Dar-CJol_077-Ex1-7A-lcwgs-1-1.clmp.fp2_repr.R2	2.2%	46%	112 bp	1.1
+Dar-CJol_078-Ex1-6D-lcwgs-1-1.clmp.fp2_repr.R1	3.2%	48%	132 bp	1.4
+Dar-CJol_078-Ex1-6D-lcwgs-1-1.clmp.fp2_repr.R2	3.1%	48%	130 bp	1.4
+Dar-CJol_080-Ex1-4G-lcwgs-1-1.clmp.fp2_repr.R1	3.5%	49%	134 bp	2.5
+Dar-CJol_080-Ex1-4G-lcwgs-1-1.clmp.fp2_repr.R2	3.6%	48%	132 bp	2.5
+Dar-CJol_081-Ex1-7F-lcwgs-1-1.clmp.fp2_repr.R1	2.6%	47%	118 bp	3.4
+Dar-CJol_081-Ex1-7F-lcwgs-1-1.clmp.fp2_repr.R2	2.8%	47%	116 bp	3.4
+Dar-CJol_082-Ex1-5C-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	47%	126 bp	0.8
+Dar-CJol_082-Ex1-5C-lcwgs-1-1.clmp.fp2_repr.R2	2.1%	47%	124 bp	0.8
+Dar-CJol_083-Ex1-6C-lcwgs-1-1.clmp.fp2_repr.R1	3.4%	49%	131 bp	0.8
+Dar-CJol_083-Ex1-6C-lcwgs-1-1.clmp.fp2_repr.R2	3.4%	48%	129 bp	0.8
+Dar-CJol_084-Ex1-4A-lcwgs-1-1.clmp.fp2_repr.R1	2.8%	48%	129 bp	1.2
+Dar-CJol_084-Ex1-4A-lcwgs-1-1.clmp.fp2_repr.R2	2.8%	47%	127 bp	1.2
+Dar-CJol_085-Ex1-3A-lcwgs-1-1.clmp.fp2_repr.R1	4.5%	48%	131 bp	3.1
+Dar-CJol_085-Ex1-3A-lcwgs-1-1.clmp.fp2_repr.R2	5.0%	48%	129 bp	3.1
+Dar-CJol_086-Ex1-6E-lcwgs-1-1.clmp.fp2_repr.R1	0.0%	48%	135 bp	0.0
+Dar-CJol_086-Ex1-6E-lcwgs-1-1.clmp.fp2_repr.R2	0.0%	47%	122 bp	0.0
+Dar-CJol_087-Ex1-4B-lcwgs-1-1.clmp.fp2_repr.R1	3.2%	48%	131 bp	2.0
+Dar-CJol_087-Ex1-4B-lcwgs-1-1.clmp.fp2_repr.R2	3.2%	48%	129 bp	2.0
+Dar-CJol_088-Ex1-1A-lcwgs-1-1.clmp.fp2_repr.R1	2.5%	48%	128 bp	1.2
+Dar-CJol_088-Ex1-1A-lcwgs-1-1.clmp.fp2_repr.R2	2.5%	47%	126 bp	1.2
+Dar-CJol_090-Ex1-6G-lcwgs-1-1.clmp.fp2_repr.R1	3.0%	46%	137 bp	1.1
+Dar-CJol_090-Ex1-6G-lcwgs-1-1.clmp.fp2_repr.R2	2.7%	46%	135 bp	1.1
+Dar-CJol_092-Ex1-5G-lcwgs-1-1.clmp.fp2_repr.R1	3.7%	47%	133 bp	3.1
+Dar-CJol_092-Ex1-5G-lcwgs-1-1.clmp.fp2_repr.R2	3.8%	47%	131 bp	3.1
+Dar-CJol_094-Ex1-1D-lcwgs-1-1.clmp.fp2_repr.R1	3.1%	47%	137 bp	1.6
+Dar-CJol_094-Ex1-1D-lcwgs-1-1.clmp.fp2_repr.R2	3.2%	47%	134 bp	1.6
 ```
 
 </p>
 </details>
+
+## 14. Clean Up
+`mkdir logs`\
+`mv *out logs/`

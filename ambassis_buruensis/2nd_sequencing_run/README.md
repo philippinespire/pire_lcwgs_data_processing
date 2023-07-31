@@ -1,6 +1,6 @@
 ## Ambassis buruensis 2nd sequencing run
 
-Downloading from TAMUCC server
+Downloading from TAMUCC server.
 
 ```
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/ambassis_buruensis/2nd_sequencing_run/fq_raw

@@ -1157,3 +1157,57 @@ Goy-CPnd_095-Ex1-5A-lcwgs-1-T.clmp.fp2_repr.R2	4.4%	44%	131 bp	1.5
 
 ## 14. Clean up
 `logs` directory created, `*out` files moved to `logs`.
+
+### Cleaning up to increase space in e1garcia
+1. Check initial file size.\
+`du -h | sort -rh > Goy_lcwgs_beforeDeleting_InterimFiles`
+
+    * 324G
+
+2. Make a copy of important files in RC
+```bash
+# use interactive node
+salloc
+
+# contaminated files
+cp -R fq_fp1_clmp_fp2 /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/gerres_oyena/1st_sequencing_run
+
+# decontaminated files
+cp -R fq_fp1_clmp_fp2_fqscrn_rprd /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/gerres_oyena/1st_sequencing_run/
+
+# check file sizes
+du -sh *
+du -sh /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/gerres_oyena/1st_sequencing_run/gerres_oyena/1st_sequencing_run/*
+```
+
+</p>
+</details>
+
+    * file sizes are equal
+
+3. Delete unneeded files.
+```bash
+# create log file before removing
+ls -ltrh *raw*/*fq.gz > deleted_files_log
+ls -ltrh *fp1/*fq.gz >> deleted_files_log
+ls -ltrh *clmp/*fq.gz >> deleted_files_log
+ls -ltrh *fqscrn/*fastq.gz >> deleted_files_log
+
+# remove files
+rm *raw*/*fq.gz
+rm *fp1/*fq.gz
+rm *clmp/*fq.gz
+rm *fqscrn/*fastq.gz
+```
+
+</p>
+</details>
+
+4. Find new size of directories
+`du -h | sort -rh > Goy_lcwgs_afterDeleting_InterimFiles`
+
+    * 91G
+    * 324 - 91 = 233G of freed space
+  
+5. Move cleaning files into logs dir
+`mv deleted_files_log logs`

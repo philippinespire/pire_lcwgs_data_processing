@@ -453,7 +453,29 @@ sbatch dDocentHPC_dev2.sbatch mkVCF config.6.lcwgs
 
 </details>
 
+<details>
+	<summary>Cleaning up</summary>
+
+Run by klabrador on 2023-08-01
+
+I have to clean up the species directory to make more space. I followed the **CLEANING UP** section in the [pire_ssl_data_processing](https://github.com/philippinespire/pire_ssl_data_processing).
+
+1. Check initial file size
+
+```
+du -h | sort -rh > Gotanco_lcwgs_beforeDeleting_InterimFiles
+```
+
+
+
+
+
+
+
+
 </details>
+
+	
 
 
 

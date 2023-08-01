@@ -710,3 +710,186 @@ Insert output here.
 
 ## 14. Clean up
 TBD
+
+
+## Prepare Reference Genome
+Preparation of the reference genome was done previously during the processing of the test lane (i.e., 1st_sequencing_run). LWeeks copied and pasted the refGenome directory from the 1st_sequencing_run and copied it to the 2nd_sequencing_run. Since the 1st_sequencing_run directory will be removed from the PIRE repo, I also added the instructions here.
+
+This section prepares the reference genome, which will serve as the scaffold for the assembly. This follows the instructions from [pire_lcwgs_data_processing](https://github.com/philippinespire/pire_lcwgs_data_processing).
+
+<details>
+        <summary>1. Get your reference genome</summary>
+
+Run by klabrador on 2023-05-15
+
+Create a new directory for the reference genome
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/1st_sequencing_run
+mkdir refGenome
+cd ./refGenome
+```
+
+Download the reference genome from NCBI through the [RefSeq database](https://ftp.ncbi.nlm.nih.gov/genomes/refseq/). Retrieve the *.fna.gz file for the species.
+
+``` 
+wget https://ftp.ncbi.nlm.nih.gov/genomes/refseq/vertebrate_other/Chanos_chanos/latest_assembly_versions/GCF_902362185.1_fChaCha1.1/GCF_902362185.1_fChaCha1.1_genomic.fna.gz
+```
+- Reference genome successfully downloaded.
+
+</details>
+
+
+<details>
+        <summary>2. Curate the reference genome</summary>
+
+Run by klabrador on 2023-05-15
+
+```
+# Get the line number for every chromosome, contig, and scaffold in the genome.
+zgrep -n '^>' GCF_902362185.1_fChaCha1.1_genomic.fna.gz > GCF_902362185.1_fChaCha1.1_genomic_linenum.txt
+
+# Extract the mitogenome and save to file
+zcat GCF_902362185.1_fChaCha1.1_genomic.fna.gz | tail -n +8211456 > NC_004693.1_mtgenome.fasta
+
+# Extract the chromosomes and save to file. Make sure to use the line number before that of the next accession number in the sequence.
+## For example, the line number for the last chromosome of the reference used here (chr16: NC_044510.1) starts at 7969298, followed by an unplaced genomic scaffold (NW_022111401.1) at line number 8201217. This means that chr16 ends at the "line number before that of the next accession number in the sequence" (i.e., 8201216).   
+zcat GCF_902362185.1_fChaCha1.1_genomic.fna.gz | head -n 8201216 > NC_044496.1-NC_044510.1_chr1-16.fasta
+
+# Concatenate and the chromosomes and mitogenome into one file.
+cat NC_044496.1-NC_044510.1_chr1-16.fasta NC_004693.1_mtgenome.fasta > GCF_902362185.1_fChaCha1.1_chr1-16-mtgen.fasta
+
+```
+
+</details>
+
+## Map reads to reference genome
+
+This section maps the repaired *fq.gz files to the curated reference genome. This follows the instructions from [dDocentHPC](https://github.com/cbirdlab/dDocentHPC).
+
+LWeeks, RRoberts, and EGarcia did initial runs. I'll take a crack at it.
+
+<details>
+        <summary>1. Prepare directory for dDocent runs</summary>
+
+* Run by klabrador on 2023-08-01
+
+```
+# Create the mkBAM_dev subdirectory in the working directory
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run
+mkdir mkBAM
+
+
+# Link the re-paired *repr.R1/R2.fq.gz files to the mkBAM_dev directory.
+ln ./fq_fp1_clmp_fp2_fqscrn_rprd/*repr.R*.fq.gz ./mkBAM
+## Notes: I used softlinks before, and it did not work. Hardlinks do.
+
+
+# Copy the reference genome to the mkBAM_dev directory, then rename the reference to adhere to the pipeline's naming convention ("reference.[AccessionNo].[referenceType].fasta"). 
+cp refGenome/GCF_902362185.1_fChaCha1.1_chr1-16-mtgen.fasta ./mkBAM 
+cd ./mkBAM
+mv GCF_902362185.1_fChaCha1.1_chr1-16-mtgen.fasta reference.902362185.genome.fasta
+
+
+# Copy scripts needed from the dDocentHPC repo
+cd ./mkBAM
+cp /home/e1garcia/shotgun_PIRE/dDocentHPC/configs/config.6.lcwgs .
+cp /home/e1garcia/shotgun_PIRE/dDocentHPC/dDocentHPC.sbatch .
+
+
+# Edit the config file to assign the correct ID for the reference genome.
+## under mkREF: set Cutoff1 to 902362185
+## under mkREF: sete Cutoff2 to genome
+
+
+```
+
+</details>
+
+<details>
+        <summary>2. Run mkBAM</summary>
+
+- Run by klabrador on 2023-08-01
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/1st_sequencing_run/mkBAM
+sbatch dDocentHPC.sbatch mkBAM config.6.lcwgs
+```
+
+- job submitted: 2016855
+- job failed; try to see what went wrong.
+
+</details>
+
+<details>
+        <summary>3. Run fltrBAM</summary>
+
+- Run by klabrador on 2023-05-17
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/1st_sequencing_run/mkBAM_dev2
+sbatch dDocentHPC_dev2.sbatch fltrBAM config.6.lcwgs
+```
+
+- job submitted: 1605380
+- fltrBAM completed!
+
+
+- Run FASTQC
+```
+# Copy the `runFASTQC.sbatch` script from dDocentHPC repo
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/1st_sequencing_run/mkBAM_dev2
+cp /home/e1garcia/shotgun_PIRE/dDocentHPC/scripts/runFASTQC.sbatch .
+
+# Run FASTQC
+sbatch runFASTQC.sbatch
+
+```
+- job submitted: 1605399
+- job failed; error: "These module(s) or extension(s) exist but cannot be loaded as requested"
+
+
+</details>
+
+<details>
+        <summary>4. Generate number of mapped reads</summary>
+
+- Run by klabrador on 2023-05-22
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/1st_sequencing_run/mkBAM_dev2
+
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/mappedReadStats.sbatch mkBAM mkBAM/coverageMappedReads
+
+```
+
+- job submitted: 1610256
+- job failed. error :'mkBAM/*-RG.bam': No such file or directory 
+- change $1 argument in the mappedReadStats.sbatch
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/1st_sequencing_run/mkBAM_dev2
+
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/mappedReadStats.sbatch . mkBAM/coverageMappedReads
+```
+- job submitted: 1610492
+- job completed successfully
+
+</details>
+
+
+<details> <summary>Steps that were not necesssary but were otherwise executed</summary>
+
+<details>
+        <summary>3. Run mkVCF</summary>
+
+- Run by klabrador on 2023-05-17
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/1st_sequencing_run/mkBAM_dev2
+sbatch dDocentHPC_dev2.sbatch mkVCF config.6.lcwgs
+```
+
+- job submitted: 1605438
+- job completed successfully
+
+
+</details>
+

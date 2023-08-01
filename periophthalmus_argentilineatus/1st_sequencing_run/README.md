@@ -65,21 +65,54 @@ salloc
 ls /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/1st_sequencing_run
 
 # Contaminated file
-cp -R fq_fp1_clmp_fp2/*fq.gz /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/1st_sequencing_run
+## There is a discrepancy in the file size when using `cp` for copying. I switched to `rsync`.
+rsync -av fq_fp1_clmp_fp2 /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/1st_sequencing_run
 
 # Decontaminated file
-cp -R fq_fp1_clmp_fp2_fqscrn_rprd /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/1st_sequencing_run
+rsync -av fq_fp1_clmp_fp2_fqscrn_rprd /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/1st_sequencing_run
 
 # Check if file size is equal between the origin and destination directories.
-du -sh fq_fp1_clmp_fp2/*fq.gz
-du -sh /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/1st_sequencing_run/fq_fp1_clmp_fp2/*fq.gz
+du -sh *
+du -sh /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/1st_sequencing_run/*
+```
 
-## There appears to be missing files here. 
-
-
-
-
+- Even with rsync, there appears to be discrepancies in the total file size. I checked the no. of reads for randomly selected libraries, and it was the same between the origin and destination.
+- I still cannot figure out what caused the discrepancy.
 
 
+
+3. Delete the unneeded files
+
+```
+# create log file before removing
+ls -ltrh *raw*/*fq.gz > deleted_files_log
+ls -ltrh *fp1/*fq.gz >> deleted_files_log
+ls -ltrh *clmp/*fq.gz >> deleted_files_log
+ls -ltrh *fqscrn/*fastq.gz >> deleted_files_log
+
+# remove files
+rm *raw*/*fq.gz
+rm *fp1/*fq.gz
+rm *clmp/*fq.gz
+rm *fqscrn/*fastq.gz
+
+```
+
+4. Document the new size of directories
+
+```
+du -h | sort -rh > Par_lcwgs_afterDeleting_InterimFiles
+```
+- File size = 77 Gb
+
+Freed space: 279 Gb - 77 Gb =  202 Gb
+
+5. Move the cleaning files into the logs dir.
+
+```
+mv deleted_files_log logs
+``` 
 </details>
+
+
 

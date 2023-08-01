@@ -322,7 +322,7 @@ Run by klabrador on 2023-07-21
 
 I have to clean up the repo to make more space. I followed the **CLEANING UP** section in the [pire_ssl_data_processing](https://github.com/philippinespire/pire_ssl_data_processing).
 
-1. Make a copy of important files.
+1. Check initial file size
 
 ```
 du -h | sort -rh > Abu_lcwgs_beforeDeleting_InterimFiles
@@ -332,6 +332,9 @@ du -h | sort -rh > Abu_lcwgs_beforeDeleting_InterimFiles
 2. Make a copy of important files in the RC.
 
 ```
+# Get inside a node
+salloc
+
 # Contaminated file
 cp -R fq_fp1_clmp_fp2 /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/ambassis_buruensis/1st_sequencing_run
 
@@ -368,9 +371,6 @@ Total data removed: 168 Gb - 44 Gb = 124 Gb freed space
 ```
 mv deleted_files_log logs
 ``` 
-
-
- 
 
 
 </details>

@@ -40,4 +40,46 @@ sbatch ../../pire_fq_gz_processing/runMULTIQC.sbatch "fq_fp1_clmp_fp2_fqscrn" "f
 ## cbird did the run earlier
 ```
 
+<details> 
+	<summary>Clean up</summary>
+Run by klabrador on 2023-08-01
+
+I have to clean up the species directory to make more space. I followd the **CLEANING UP** section in the [pire_ssl_data_processing](https://github.com/philippinespire/pire_ssl_data_processing).
+
+
+1. Check initial file size
+
+```
+du -h | sort -rh > Par_lcwgs_beforeDeleting_InterimFiles
+
+```
+- File size: 279 Gb
+
+2. Make a copy of important files in the RC.
+
+```
+# Get inside a node
+salloc
+
+# Confirm that the RC directory for the species exist
+ls /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/1st_sequencing_run
+
+# Contaminated file
+cp -R fq_fp1_clmp_fp2/*fq.gz /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/1st_sequencing_run
+
+# Decontaminated file
+cp -R fq_fp1_clmp_fp2_fqscrn_rprd /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/1st_sequencing_run
+
+# Check if file size is equal between the origin and destination directories.
+du -sh fq_fp1_clmp_fp2/*fq.gz
+du -sh /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/periophthalmus_argentilineatus/1st_sequencing_run/fq_fp1_clmp_fp2/*fq.gz
+
+## There appears to be missing files here. 
+
+
+
+
+
+
+</details>
 

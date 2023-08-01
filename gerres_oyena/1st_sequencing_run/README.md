@@ -1164,7 +1164,7 @@ Goy-CPnd_095-Ex1-5A-lcwgs-1-T.clmp.fp2_repr.R2	4.4%	44%	131 bp	1.5
 
     * 324G
 
-2. Make a copy of important files in RC\
+2. Make a copy of important files in RC
 ```bash
 # use interactive node
 salloc

@@ -1,0 +1,662 @@
+[2023-08-01 16:12:00,819] multiqc                                            [DEBUG  ]  No MultiQC config found: /opt/conda/lib/python3.7/site-packages/multiqc_config.yaml
+[2023-08-01 16:12:00,820] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/hpc-0351/.multiqc_config.yaml
+[2023-08-01 16:12:00,820] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
+[2023-08-01 16:12:00,821] multiqc                                            [DEBUG  ]  Found command line config: {'max_table_rows': 3000}
+[2023-08-01 16:12:00,821] multiqc                                            [DEBUG  ]  New config 'max_table_rows': 3000
+[2023-08-01 16:12:00,822] multiqc                                            [DEBUG  ]  Command used: /opt/conda/bin/multiqc -v -p -ip -f --data-dir --data-format tsv --cl-config max_table_rows: 3000 --filename fqc_clmp_report --outdir fq_fp1_clmp fq_fp1_clmp
+[2023-08-01 16:12:01,346] multiqc                                            [DEBUG  ]  Could not connect to multiqc.info for version check: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1076)>
+[2023-08-01 16:12:01,348] multiqc                                            [INFO   ]  This is MultiQC v1.9
+[2023-08-01 16:12:01,348] multiqc                                            [DEBUG  ]  Command     : /opt/conda/bin/multiqc -v -p -ip -f --data-dir --data-format tsv --cl-config max_table_rows: 3000 --filename fqc_clmp_report --outdir fq_fp1_clmp fq_fp1_clmp
+[2023-08-01 16:12:01,348] multiqc                                            [DEBUG  ]  Working dir : /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/2nd_sequencing_run
+[2023-08-01 16:12:01,348] multiqc                                            [INFO   ]  Template    : default
+[2023-08-01 16:12:01,349] multiqc                                            [DEBUG  ]  Running Python 3.7.7 (default, Jun 26 2020, 05:10:03)  [GCC 7.3.0]
+[2023-08-01 16:12:01,349] multiqc                                            [INFO   ]  Searching   : /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/2nd_sequencing_run/fq_fp1_clmp
+[2023-08-01 16:12:01,350] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, conpair, peddy, somalier, methylQA, mosdepth, phantompeakqualtools, qualimap, preseq, quast, qorts, rna_seqc, rockhopper, rsem, rseqc, busco, goleft_indexcov, disambiguate, supernova, deeptools, sargasso, verifybamid, mirtrace, happy, mirtop, homer, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, fgbio, dragen, dedup, damageprofiler, biobambam2, mtnucratio, picard, prokka, samblaster, samtools, sexdeterrmine, bamtools, jellyfish, vcftools, longranger, stacks, varscan2, bbmap, bismark, biscuit, hicexplorer, hicup, hicpro, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, snpsplit, kat, leehom, adapterRemoval, clipandmerge, cutadapt, flexbar, kaiju, kraken, malt, trimmomatic, sickle, skewer, sortmerna, biobloomtools, fastq_screen, afterqc, fastp, fastqc, pycoqc, minionqc, multivcfanalyzer, clusterflow, bcl2fastq, interop, ivar, flash, seqyclean
+[2023-08-01 16:12:01,350] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmpp1mt15g7
+[2023-08-01 16:12:01,737] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_050-Ex1-5C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:01,764] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_050-Ex1-5C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:01,889] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_044-Ex1-4E-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:01,905] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_044-Ex1-4E-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:01,997] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_026-Ex1-2C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:02,010] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_026-Ex1-2C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:02,094] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_045-Ex1-4F-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:02,108] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_045-Ex1-4F-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:02,176] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_027-Ex1-2D-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:02,205] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_004-Ex1-9D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:02,220] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_004-Ex1-9D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:02,308] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_024-Ex1-11H-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:02,321] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_024-Ex1-11H-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:02,379] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_072-Ex1-8A-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:02,406] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_035-Ex1-3D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:02,419] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_035-Ex1-3D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:02,521] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_030-Ex1-2G-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:02,538] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_030-Ex1-2G-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:02,642] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_048-Ex1-5A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:02,656] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_048-Ex1-5A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:02,716] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_012-Ex1-10D-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:02,716] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_057-Ex1-6B-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:02,717] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_035-Ex1-3D-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:02,748] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_038-Ex1-3G-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:02,764] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_038-Ex1-3G-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:02,860] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_051-Ex1-5D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:02,873] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_051-Ex1-5D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:02,961] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_055-Ex1-5H-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:02,973] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_055-Ex1-5H-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:03,061] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_015-Ex1-10G-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:03,075] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_015-Ex1-10G-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:03,170] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_037-Ex1-3F-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:03,184] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_037-Ex1-3F-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:03,267] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_024-Ex1-11H-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:03,278] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_024-Ex1-11H-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:03,334] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_033-Ex1-3B-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:03,364] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_022-Ex1-1G-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:03,379] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_022-Ex1-1G-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:03,477] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_017-Ex1-11A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:03,492] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_017-Ex1-11A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:03,591] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_006-Ex1-9F-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:03,608] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_006-Ex1-9F-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:03,710] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_038-Ex1-3G-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:03,723] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_038-Ex1-3G-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:03,810] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_059-Ex1-6D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:03,824] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_059-Ex1-6D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:03,883] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_046-Ex1-4G-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:03,911] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_022-Ex1-1G-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:03,922] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_022-Ex1-1G-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:03,978] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_054-Ex1-5G-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:03,978] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_032-Ex1-3A-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:03,997] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_020-Ex1-1E-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:04,009] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_020-Ex1-1E-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:04,063] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_067-Ex1-7D-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:04,064] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_067-Ex1-7D-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:04,064] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_076-Ex1-8E-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:04,064] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_005-Ex1-9E-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:04,083] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_002-Ex1-9B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:04,095] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_002-Ex1-9B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:04,190] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_003-Ex1-9C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:04,205] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_003-Ex1-9C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:04,269] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_075-Ex1-8D-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:04,298] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_066-Ex1-7C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:04,313] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_066-Ex1-7C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:04,402] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_037-Ex1-3F-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:04,418] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_037-Ex1-3F-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:04,508] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_017-Ex1-1B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:04,523] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_017-Ex1-1B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:04,609] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_003-Ex1-9C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:04,621] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_003-Ex1-9C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:04,707] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_028-Ex1-12D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:04,719] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_028-Ex1-12D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:04,779] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_011-Ex1-10C-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:04,808] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_028-Ex1-2E-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:04,822] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_028-Ex1-2E-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:04,883] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_039-Ex1-3H-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:04,883] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_047-Ex1-4H-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:04,884] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_032-Ex1-3A-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:04,909] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_063-Ex1-6H-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:04,918] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_063-Ex1-6H-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:04,972] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_073-Ex1-8B-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:04,990] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_076-Ex1-8E-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:04,999] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_076-Ex1-8E-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:05,055] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_018-Ex1-11B-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:05,083] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_019-Ex1-11C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:05,096] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_019-Ex1-11C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:05,196] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_024-Ex1-2A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:05,209] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_024-Ex1-2A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:05,316] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_053-Ex1-5F-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:05,331] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_053-Ex1-5F-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:05,429] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_020-Ex1-11D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:05,443] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_020-Ex1-11D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:05,531] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_032-Ex1-3A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:05,545] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_032-Ex1-3A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:05,636] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_064-Ex1-7A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:05,651] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_064-Ex1-7A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:05,710] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_068-Ex1-7E-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:05,710] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_001-Ex1-9A-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:05,711] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_053-Ex1-5F-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:05,738] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_011-Ex1-10C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:05,751] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_011-Ex1-10C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:05,838] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_057-Ex1-6B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:05,853] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_057-Ex1-6B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:05,921] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_028-Ex1-2E-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:05,952] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_068-Ex1-7E-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:05,970] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_068-Ex1-7E-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:06,083] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_068-Ex1-7E-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:06,101] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_068-Ex1-7E-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:06,208] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_021-Ex1-1F-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:06,223] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_021-Ex1-1F-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:06,319] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_070-Ex1-7G-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:06,335] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_070-Ex1-7G-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:06,401] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_027-Ex1-12C-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:06,435] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_042-Ex1-4C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:06,454] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_042-Ex1-4C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:06,542] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_079-Ex1-8H-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:06,554] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_079-Ex1-8H-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:06,610] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_078-Ex1-8G-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:06,631] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_014-Ex1-10F-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:06,638] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_014-Ex1-10F-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:06,724] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_025-Ex1-12A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:06,739] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_025-Ex1-12A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:06,809] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_022-Ex1-11F-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:06,856] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_061-Ex1-6F-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:06,875] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_061-Ex1-6F-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:06,942] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_078-Ex1-8G-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:06,993] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_025-Ex1-12A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:07,028] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_025-Ex1-12A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:07,111] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_010-Ex1-10B-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:07,139] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_056-Ex1-6A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:07,153] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_056-Ex1-6A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:07,235] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_065-Ex1-7B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:07,253] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_065-Ex1-7B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:07,318] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_034-Ex1-3C-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:07,318] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_048-Ex1-5A-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:07,346] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_052-Ex1-5E-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:07,360] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_052-Ex1-5E-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:07,416] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_065-Ex1-7B-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:07,416] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_019-Ex1-11C-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:07,417] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_016-Ex1-1A-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:07,443] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_046-Ex1-4G-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:07,457] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_046-Ex1-4G-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:07,512] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_058-Ex1-6C-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:07,540] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_019-Ex1-1D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:07,554] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_019-Ex1-1D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:07,662] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_001-Ex1-9A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:07,678] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_001-Ex1-9A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:07,774] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_022-Ex1-11F-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:07,789] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_022-Ex1-11F-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:07,880] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_047-Ex1-4H-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:07,895] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_047-Ex1-4H-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:07,952] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_039-Ex1-3H-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:07,979] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_011-Ex1-10C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:07,992] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_011-Ex1-10C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:08,078] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_074-Ex1-8C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:08,092] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_074-Ex1-8C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:08,150] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_024-Ex1-11H-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:08,150] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_004-Ex1-9D-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:08,150] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_018-Ex1-11B-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:08,177] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_019-Ex1-1D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:08,192] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_019-Ex1-1D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:08,291] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_020-Ex1-1E-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:08,305] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_020-Ex1-1E-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:08,366] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_030-Ex1-2G-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:08,395] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_007-Ex1-9G-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:08,408] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_007-Ex1-9G-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:08,511] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_033-Ex1-3B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:08,524] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_033-Ex1-3B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:08,585] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_056-Ex1-6A-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:08,585] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_037-Ex1-3F-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:08,585] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_050-Ex1-5C-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:08,585] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_034-Ex1-3C-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:08,616] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_008-Ex1-9H-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:08,630] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_008-Ex1-9H-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:08,723] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_026-Ex1-2C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:08,736] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_026-Ex1-2C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:08,796] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_055-Ex1-5H-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:08,796] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_062-Ex1-6G-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:08,796] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_049-Ex1-5B-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:08,826] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_061-Ex1-6F-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:08,839] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_061-Ex1-6F-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:08,926] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_071-Ex1-7H-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:08,939] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_071-Ex1-7H-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:08,996] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_023-Ex1-1H-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:09,027] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_023-Ex1-11G-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:09,040] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_023-Ex1-11G-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:09,101] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_071-Ex1-7H-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:09,102] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_079-Ex1-8H-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:09,103] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_011-Ex1-10C-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:09,133] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_012-Ex1-10D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:09,146] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_012-Ex1-10D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:09,203] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_044-Ex1-4E-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:09,234] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_018-Ex1-11B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:09,247] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_018-Ex1-11B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:09,304] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_075-Ex1-8D-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:09,334] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_051-Ex1-5D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:09,348] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_051-Ex1-5D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:09,431] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_024-Ex1-2A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:09,442] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_024-Ex1-2A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:09,504] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_069-Ex1-7F-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:09,541] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_036-Ex1-3E-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:09,556] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_036-Ex1-3E-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:09,651] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_015-Ex1-10G-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:09,666] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_015-Ex1-10G-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:09,750] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_075-Ex1-8D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:09,763] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_075-Ex1-8D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:09,834] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_059-Ex1-6D-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:09,861] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_018-Ex1-1C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:09,873] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_018-Ex1-1C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:09,965] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_055-Ex1-5H-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:09,978] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_055-Ex1-5H-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:10,065] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_039-Ex1-3H-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:10,077] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_039-Ex1-3H-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:10,139] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_058-Ex1-6C-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:10,168] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_014-Ex1-10F-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:10,181] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_014-Ex1-10F-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:10,268] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_070-Ex1-7G-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:10,284] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_070-Ex1-7G-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:10,344] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_017-Ex1-1B-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:10,345] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_019-Ex1-1D-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:10,345] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_041-Ex1-4B-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:10,345] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_020-Ex1-11D-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:10,374] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_005-Ex1-9E-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:10,389] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_005-Ex1-9E-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:10,450] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_042-Ex1-4C-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:10,480] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_053-Ex1-5F-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:10,494] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_053-Ex1-5F-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:10,580] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_047-Ex1-4H-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:10,594] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_047-Ex1-4H-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:10,676] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_034-Ex1-3C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:10,687] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_034-Ex1-3C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:10,744] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_079-Ex1-8H-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:10,775] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_033-Ex1-3B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:10,788] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_033-Ex1-3B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:10,865] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_016-Ex1-1A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:10,875] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_016-Ex1-1A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:10,932] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_020-Ex1-1E-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:10,956] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_008-Ex1-9H-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:10,968] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_008-Ex1-9H-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:11,050] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_020-Ex1-11D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:11,063] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_020-Ex1-11D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:11,131] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_049-Ex1-5B-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:11,131] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_019-Ex1-1D-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:11,162] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_045-Ex1-4F-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:11,178] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_045-Ex1-4F-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:11,266] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_023-Ex1-11G-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:11,282] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_023-Ex1-11G-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:11,339] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_070-Ex1-7G-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:11,364] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_031-Ex1-2H-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:11,377] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_031-Ex1-2H-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:11,431] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_061-Ex1-6F-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:11,431] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_030-Ex1-2G-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:11,450] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_021-Ex1-11E-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:11,460] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_021-Ex1-11E-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:11,514] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_023-Ex1-11G-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:11,534] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_031-Ex1-2H-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:11,543] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_031-Ex1-2H-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:11,601] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_038-Ex1-3G-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:11,601] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_071-Ex1-7H-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:11,601] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_014-Ex1-10F-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:11,601] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_015-Ex1-10G-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:11,601] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_029-Ex1-2F-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:11,601] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_027-Ex1-12C-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:11,622] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_062-Ex1-6G-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:11,633] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_062-Ex1-6G-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:11,699] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_044-Ex1-4E-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:11,699] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_017-Ex1-11A-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:11,699] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_057-Ex1-6B-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:11,717] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_071-Ex1-7H-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:11,725] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_071-Ex1-7H-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:11,811] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_064-Ex1-7A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:11,824] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_064-Ex1-7A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:11,883] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_025-Ex1-12A-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:11,909] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_074-Ex1-8C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:11,922] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_074-Ex1-8C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:11,980] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_040-Ex1-4A-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:11,985] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_021-Ex1-1F-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:12,019] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_010-Ex1-10B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:12,034] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_010-Ex1-10B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:12,099] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_045-Ex1-4F-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:12,099] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_064-Ex1-7A-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:12,131] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_026-Ex1-12B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:12,146] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_026-Ex1-12B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:12,226] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_054-Ex1-5G-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:12,256] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_044-Ex1-4E-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:12,270] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_044-Ex1-4E-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:12,359] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_025-Ex1-2B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:12,372] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_025-Ex1-2B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:12,433] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_061-Ex1-6F-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:12,455] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_072-Ex1-8A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:12,465] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_072-Ex1-8A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:12,537] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_069-Ex1-7F-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:12,547] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_069-Ex1-7F-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:12,624] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_027-Ex1-12C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:12,633] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_027-Ex1-12C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:12,717] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_021-Ex1-1F-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:12,730] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_021-Ex1-1F-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:12,820] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_059-Ex1-6D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:12,833] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_059-Ex1-6D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:12,894] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_015-Ex1-10G-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:12,924] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_075-Ex1-8D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:12,937] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_075-Ex1-8D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:13,002] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_024-Ex1-2A-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:13,003] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_004-Ex1-9D-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:13,003] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_001-Ex1-9A-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:13,003] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_017-Ex1-11A-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:13,003] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_070-Ex1-7G-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:13,004] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_025-Ex1-2B-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:13,035] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_073-Ex1-8B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:13,049] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_073-Ex1-8B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:13,141] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_065-Ex1-7B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:13,151] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_065-Ex1-7B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:13,231] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_063-Ex1-6H-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:13,242] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_063-Ex1-6H-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:13,299] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_074-Ex1-8C-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:13,326] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_027-Ex1-2D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:13,338] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_027-Ex1-2D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:13,394] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_026-Ex1-12B-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:13,394] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_056-Ex1-6A-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:13,394] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_047-Ex1-4H-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:13,420] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_034-Ex1-3C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:13,433] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_034-Ex1-3C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:13,524] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_021-Ex1-1F-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:13,555] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_029-Ex1-2F-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:13,569] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_029-Ex1-2F-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:13,630] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_074-Ex1-8C-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:13,631] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_048-Ex1-5A-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:13,631] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_045-Ex1-4F-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:13,632] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_028-Ex1-12D-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:13,656] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_067-Ex1-7D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:13,672] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_067-Ex1-7D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:13,764] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_023-Ex1-1H-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:13,777] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_023-Ex1-1H-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:13,848] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_063-Ex1-6H-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:13,849] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_003-Ex1-9C-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:13,849] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_060-Ex1-6E-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:13,882] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_057-Ex1-6B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:13,896] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_057-Ex1-6B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:14,003] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_018-Ex1-11B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:14,017] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_018-Ex1-11B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:14,118] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_029-Ex1-2F-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:14,133] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_029-Ex1-2F-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:14,197] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_023-Ex1-1H-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:14,225] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_013-Ex1-10E-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:14,239] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_013-Ex1-10E-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:14,295] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_021-Ex1-11E-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:14,295] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_008-Ex1-9H-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:14,323] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_028-Ex1-12D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:14,337] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_028-Ex1-12D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:14,421] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_005-Ex1-9E-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:14,435] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_005-Ex1-9E-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:14,523] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_067-Ex1-7D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:14,537] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_067-Ex1-7D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:14,597] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_051-Ex1-5D-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:14,598] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_028-Ex1-2E-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:14,599] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_026-Ex1-12B-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:14,599] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_026-Ex1-2C-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:14,600] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_060-Ex1-6E-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:14,600] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_065-Ex1-7B-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:14,601] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_064-Ex1-7A-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:14,634] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_009-Ex1-10A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:14,649] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_009-Ex1-10A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:14,709] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_046-Ex1-4G-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:14,711] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_024-Ex1-2A-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:14,746] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_026-Ex1-12B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:14,761] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_026-Ex1-12B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:14,822] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_041-Ex1-4B-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:14,850] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_030-Ex1-2G-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:14,864] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_030-Ex1-2G-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:14,921] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_021-Ex1-11E-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:14,951] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_050-Ex1-5C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:14,965] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_050-Ex1-5C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:15,022] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_052-Ex1-5E-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:15,047] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_040-Ex1-4A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:15,060] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_040-Ex1-4A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:15,118] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_026-Ex1-2C-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:15,147] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_021-Ex1-11E-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:15,161] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_021-Ex1-11E-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:15,260] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_043-Ex1-4D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:15,275] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_043-Ex1-4D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:15,378] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_017-Ex1-11A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:15,393] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_017-Ex1-11A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:15,526] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_023-Ex1-1H-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:15,544] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_023-Ex1-1H-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:15,623] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_017-Ex1-1B-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:15,627] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_007-Ex1-9G-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:15,671] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_072-Ex1-8A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:15,691] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_072-Ex1-8A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:15,762] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_043-Ex1-4D-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:15,763] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_066-Ex1-7C-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:15,766] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_077-Ex1-8F-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:15,768] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_019-Ex1-11C-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:15,768] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_035-Ex1-3D-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:15,803] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_018-Ex1-1C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:15,821] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_018-Ex1-1C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:15,885] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_009-Ex1-10A-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:15,886] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_042-Ex1-4C-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:15,918] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_077-Ex1-8F-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:15,933] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_077-Ex1-8F-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:16,021] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_012-Ex1-10D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:16,033] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_012-Ex1-10D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:16,124] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_058-Ex1-6C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:16,140] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_058-Ex1-6C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:16,209] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_072-Ex1-8A-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:16,236] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_078-Ex1-8G-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:16,249] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_078-Ex1-8G-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:16,306] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_016-Ex1-1A-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:16,330] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_004-Ex1-9D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:16,342] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_004-Ex1-9D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:16,427] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_043-Ex1-4D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:16,441] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_043-Ex1-4D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:16,502] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_013-Ex1-10E-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:16,503] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_028-Ex1-12D-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:16,504] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_051-Ex1-5D-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:16,504] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_020-Ex1-1E-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:16,506] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_077-Ex1-8F-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:16,507] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_003-Ex1-9C-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:16,538] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_069-Ex1-7F-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:16,553] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_069-Ex1-7F-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:16,640] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_010-Ex1-10B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:16,652] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_010-Ex1-10B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:16,744] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_073-Ex1-8B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:16,756] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_073-Ex1-8B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:16,827] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_022-Ex1-1G-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:16,858] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_016-Ex1-1A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:16,871] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_016-Ex1-1A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:16,960] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_009-Ex1-10A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:16,976] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_009-Ex1-10A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:17,050] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_002-Ex1-9B-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:17,050] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_063-Ex1-6H-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:17,051] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_025-Ex1-2B-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:17,051] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_014-Ex1-10F-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:17,052] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_068-Ex1-7E-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:17,055] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_013-Ex1-10E-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:17,085] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_032-Ex1-3A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:17,100] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_032-Ex1-3A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:17,195] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_079-Ex1-8H-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:17,211] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_079-Ex1-8H-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:17,270] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_020-Ex1-11D-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:17,300] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_039-Ex1-3H-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:17,315] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_039-Ex1-3H-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:17,382] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_023-Ex1-11G-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:17,413] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_013-Ex1-10E-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:17,426] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_013-Ex1-10E-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:17,483] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_024-Ex1-11H-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:17,484] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_076-Ex1-8E-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:17,485] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_027-Ex1-2D-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:17,485] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_009-Ex1-10A-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:17,486] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_006-Ex1-9F-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:17,514] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_046-Ex1-4G-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:17,529] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_046-Ex1-4G-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:17,587] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_031-Ex1-2H-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:17,589] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_007-Ex1-9G-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:17,617] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_052-Ex1-5E-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:17,631] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_052-Ex1-5E-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:17,699] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_002-Ex1-9B-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:17,730] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_058-Ex1-6C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:17,744] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_058-Ex1-6C-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:17,820] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_049-Ex1-5B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:17,828] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_049-Ex1-5B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:17,914] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_076-Ex1-8E-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:17,926] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_076-Ex1-8E-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:18,012] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_019-Ex1-11C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:18,026] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_019-Ex1-11C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:18,085] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_031-Ex1-2H-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:18,085] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_040-Ex1-4A-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:18,112] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_062-Ex1-6G-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:18,126] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_062-Ex1-6G-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:18,185] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_018-Ex1-1C-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:18,215] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_077-Ex1-8F-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:18,235] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_077-Ex1-8F-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:18,313] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_055-Ex1-5H-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:18,343] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_041-Ex1-4B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:18,358] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_041-Ex1-4B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:18,418] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_037-Ex1-3F-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:18,447] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_028-Ex1-2E-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:18,460] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_028-Ex1-2E-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:18,523] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_069-Ex1-7F-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:18,523] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_006-Ex1-9F-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:18,524] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_022-Ex1-1G-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:18,551] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_035-Ex1-3D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:18,563] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_035-Ex1-3D-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:18,622] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_005-Ex1-9E-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:18,652] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_001-Ex1-9A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:18,666] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_001-Ex1-9A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:18,723] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_038-Ex1-3G-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:18,754] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_054-Ex1-5G-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:18,769] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_054-Ex1-5G-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:18,859] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_007-Ex1-9G-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:18,874] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_007-Ex1-9G-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:18,938] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_018-Ex1-1C-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:18,939] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_066-Ex1-7C-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:18,940] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_012-Ex1-10D-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:18,940] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_010-Ex1-10B-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:18,973] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_027-Ex1-2D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:18,990] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_027-Ex1-2D-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:19,097] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_042-Ex1-4C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:19,112] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_042-Ex1-4C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:19,203] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_025-Ex1-2B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:19,218] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_025-Ex1-2B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:19,276] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_062-Ex1-6G-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:19,304] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_036-Ex1-3E-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:19,317] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_036-Ex1-3E-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:19,406] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_054-Ex1-5G-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:19,421] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_054-Ex1-5G-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:19,478] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_029-Ex1-2F-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:19,506] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_060-Ex1-6E-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:19,519] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_060-Ex1-6E-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:19,603] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_066-Ex1-7C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:19,616] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_066-Ex1-7C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:19,706] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_022-Ex1-11F-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:19,722] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_022-Ex1-11F-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:19,815] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_078-Ex1-8G-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:19,831] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_078-Ex1-8G-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:19,925] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_006-Ex1-9F-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:19,940] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_006-Ex1-9F-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:20,003] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_053-Ex1-5F-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:20,025] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_048-Ex1-5A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:20,037] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_048-Ex1-5A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:20,095] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_073-Ex1-8B-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:20,096] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_036-Ex1-3E-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:20,101] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_043-Ex1-4D-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:20,124] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_002-Ex1-9B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:20,132] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_002-Ex1-9B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:20,189] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_022-Ex1-11F-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:20,212] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_049-Ex1-5B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:20,223] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_049-Ex1-5B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:20,292] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_033-Ex1-3B-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:20,323] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_040-Ex1-4A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:20,337] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_040-Ex1-4A-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:20,401] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_008-Ex1-9H-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:20,403] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_036-Ex1-3E-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:20,404] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-ABir_025-Ex1-12A-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:20,435] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_060-Ex1-6E-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:20,449] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_060-Ex1-6E-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:20,511] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_050-Ex1-5C-lcwgs-1-1.clmp.r1.fq.gz
+[2023-08-01 16:12:20,536] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_056-Ex1-6A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:20,549] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_056-Ex1-6A-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:20,633] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-ABir_027-Ex1-12C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:20,645] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-ABir_027-Ex1-12C-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:20,705] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_059-Ex1-6D-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:20,706] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Sne-CCab_052-Ex1-5E-lcwgs-1-1.clmp.r2.fq.gz
+[2023-08-01 16:12:20,733] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_017-Ex1-1B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:20,746] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_017-Ex1-1B-lcwgs-1-1.clmp.r2_fastqc.html
+[2023-08-01 16:12:20,829] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: Sne-CCab_041-Ex1-4B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:20,842] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: Sne-CCab_041-Ex1-4B-lcwgs-1-1.clmp.r1_fastqc.html
+[2023-08-01 16:12:22,001] multiqc.plots.bargraph                             [DEBUG  ]  Using matplotlib version 3.1.2
+[2023-08-01 16:12:22,004] multiqc.plots.linegraph                            [DEBUG  ]  Using matplotlib version 3.1.2
+[2023-08-01 16:12:22,007] multiqc                                            [DEBUG  ]  No samples found: custom_content
+[2023-08-01 16:12:22,017] multiqc                                            [DEBUG  ]  No samples found: conpair
+[2023-08-01 16:12:22,035] multiqc                                            [DEBUG  ]  No samples found: peddy
+[2023-08-01 16:12:22,058] multiqc                                            [DEBUG  ]  No samples found: somalier
+[2023-08-01 16:12:22,069] multiqc                                            [DEBUG  ]  No samples found: methylQA
+[2023-08-01 16:12:22,108] multiqc                                            [DEBUG  ]  No samples found: mosdepth
+[2023-08-01 16:12:22,115] multiqc                                            [DEBUG  ]  No samples found: phantompeakqualtools
+[2023-08-01 16:12:22,120] multiqc                                            [DEBUG  ]  No samples found: qualimap
+[2023-08-01 16:12:22,136] multiqc                                            [DEBUG  ]  No samples found: preseq
+[2023-08-01 16:12:22,143] multiqc                                            [DEBUG  ]  No samples found: quast
+[2023-08-01 16:12:22,151] multiqc                                            [DEBUG  ]  No samples found: qorts
+[2023-08-01 16:12:22,157] multiqc                                            [DEBUG  ]  No samples found: rna_seqc
+[2023-08-01 16:12:22,164] multiqc                                            [DEBUG  ]  No samples found: rockhopper
+[2023-08-01 16:12:22,169] multiqc                                            [DEBUG  ]  No samples found: rsem
+[2023-08-01 16:12:22,181] multiqc                                            [DEBUG  ]  No samples found: rseqc
+[2023-08-01 16:12:22,198] multiqc                                            [DEBUG  ]  No samples found: busco
+[2023-08-01 16:12:22,214] multiqc                                            [DEBUG  ]  No samples found: goleft_indexcov
+[2023-08-01 16:12:22,229] multiqc                                            [DEBUG  ]  No samples found: disambiguate
+[2023-08-01 16:12:22,237] multiqc                                            [DEBUG  ]  No samples found: supernova
+[2023-08-01 16:12:22,265] multiqc                                            [DEBUG  ]  No samples found: deeptools
+[2023-08-01 16:12:22,275] multiqc                                            [DEBUG  ]  No samples found: sargasso
+[2023-08-01 16:12:22,284] multiqc                                            [DEBUG  ]  No samples found: verifybamid
+[2023-08-01 16:12:22,292] multiqc                                            [DEBUG  ]  No samples found: mirtrace
+[2023-08-01 16:12:22,307] multiqc                                            [DEBUG  ]  No samples found: happy
+[2023-08-01 16:12:22,315] multiqc                                            [DEBUG  ]  No samples found: mirtop
+[2023-08-01 16:12:22,328] multiqc                                            [DEBUG  ]  No samples found: homer
+[2023-08-01 16:12:22,335] multiqc                                            [DEBUG  ]  No samples found: macs2
+[2023-08-01 16:12:22,344] multiqc                                            [DEBUG  ]  No samples found: theta2
+[2023-08-01 16:12:22,353] multiqc                                            [DEBUG  ]  No samples found: snpeff
+[2023-08-01 16:12:22,362] multiqc                                            [DEBUG  ]  No samples found: gatk
+[2023-08-01 16:12:22,371] multiqc                                            [DEBUG  ]  No samples found: htseq
+[2023-08-01 16:12:22,385] multiqc                                            [DEBUG  ]  No samples found: bcftools
+[2023-08-01 16:12:22,394] multiqc                                            [DEBUG  ]  No samples found: featureCounts
+[2023-08-01 16:12:22,402] multiqc                                            [DEBUG  ]  No samples found: fgbio
+[2023-08-01 16:12:22,417] multiqc                                            [DEBUG  ]  No samples found: dragen
+[2023-08-01 16:12:22,422] multiqc                                            [DEBUG  ]  No samples found: dedup
+[2023-08-01 16:12:22,428] multiqc                                            [DEBUG  ]  No samples found: damageprofiler
+[2023-08-01 16:12:22,470] multiqc                                            [DEBUG  ]  No samples found: biobambam2
+[2023-08-01 16:12:22,475] multiqc                                            [DEBUG  ]  No samples found: mtnucratio
+[2023-08-01 16:12:22,478] multiqc                                            [DEBUG  ]  No samples found: picard
+[2023-08-01 16:12:22,483] multiqc                                            [DEBUG  ]  No samples found: prokka
+[2023-08-01 16:12:22,489] multiqc                                            [DEBUG  ]  No samples found: samblaster
+[2023-08-01 16:12:22,497] multiqc                                            [DEBUG  ]  No samples found: samtools
+[2023-08-01 16:12:22,502] multiqc                                            [DEBUG  ]  No samples found: sexdeterrmine
+[2023-08-01 16:12:22,510] multiqc                                            [DEBUG  ]  No samples found: bamtools
+[2023-08-01 16:12:22,515] multiqc                                            [DEBUG  ]  No samples found: jellyfish
+[2023-08-01 16:12:22,523] multiqc                                            [DEBUG  ]  No samples found: vcftools
+[2023-08-01 16:12:22,530] multiqc                                            [DEBUG  ]  No samples found: longranger
+[2023-08-01 16:12:22,538] multiqc                                            [DEBUG  ]  No samples found: stacks
+[2023-08-01 16:12:22,543] multiqc                                            [DEBUG  ]  No samples found: varscan2
+[2023-08-01 16:12:22,558] multiqc                                            [DEBUG  ]  No samples found: bbmap
+[2023-08-01 16:12:22,566] multiqc                                            [DEBUG  ]  No samples found: bismark
+[2023-08-01 16:12:22,571] multiqc                                            [DEBUG  ]  No samples found: biscuit
+[2023-08-01 16:12:22,576] multiqc                                            [DEBUG  ]  No samples found: hicexplorer
+[2023-08-01 16:12:22,581] multiqc                                            [DEBUG  ]  No samples found: hicup
+[2023-08-01 16:12:22,586] multiqc                                            [DEBUG  ]  No samples found: hicpro
+[2023-08-01 16:12:22,591] multiqc                                            [DEBUG  ]  No samples found: salmon
+[2023-08-01 16:12:22,596] multiqc                                            [DEBUG  ]  No samples found: kallisto
+[2023-08-01 16:12:22,602] multiqc                                            [DEBUG  ]  No samples found: slamdunk
+[2023-08-01 16:12:22,607] multiqc                                            [DEBUG  ]  No samples found: star
+[2023-08-01 16:12:22,612] multiqc                                            [DEBUG  ]  No samples found: hisat2
+[2023-08-01 16:12:22,617] multiqc                                            [DEBUG  ]  No samples found: tophat
+[2023-08-01 16:12:22,624] multiqc                                            [DEBUG  ]  No samples found: bowtie2
+[2023-08-01 16:12:22,629] multiqc                                            [DEBUG  ]  No samples found: bowtie1
+[2023-08-01 16:12:22,636] multiqc                                            [DEBUG  ]  No samples found: snpsplit
+[2023-08-01 16:12:22,640] multiqc                                            [DEBUG  ]  No samples found: kat
+[2023-08-01 16:12:22,645] multiqc                                            [DEBUG  ]  No samples found: leehom
+[2023-08-01 16:12:22,650] multiqc                                            [DEBUG  ]  No samples found: adapterRemoval
+[2023-08-01 16:12:22,655] multiqc                                            [DEBUG  ]  No samples found: clipandmerge
+[2023-08-01 16:12:22,661] multiqc                                            [DEBUG  ]  No samples found: cutadapt
+[2023-08-01 16:12:22,666] multiqc                                            [DEBUG  ]  No samples found: flexbar
+[2023-08-01 16:12:22,671] multiqc                                            [DEBUG  ]  No samples found: kaiju
+[2023-08-01 16:12:22,676] multiqc                                            [DEBUG  ]  No samples found: kraken
+[2023-08-01 16:12:22,680] multiqc                                            [DEBUG  ]  No samples found: malt
+[2023-08-01 16:12:22,685] multiqc                                            [DEBUG  ]  No samples found: trimmomatic
+[2023-08-01 16:12:22,690] multiqc                                            [DEBUG  ]  No samples found: sickle
+[2023-08-01 16:12:22,696] multiqc                                            [DEBUG  ]  No samples found: skewer
+[2023-08-01 16:12:22,701] multiqc                                            [DEBUG  ]  No samples found: sortmerna
+[2023-08-01 16:12:22,706] multiqc                                            [DEBUG  ]  No samples found: biobloomtools
+[2023-08-01 16:12:22,714] multiqc                                            [DEBUG  ]  No samples found: fastq_screen
+[2023-08-01 16:12:22,719] multiqc                                            [DEBUG  ]  No samples found: afterqc
+[2023-08-01 16:12:22,724] multiqc                                            [DEBUG  ]  No samples found: fastp
+[2023-08-01 16:12:26,234] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 182 reports
+[2023-08-01 16:13:03,440] multiqc                                            [DEBUG  ]  No samples found: pycoqc
+[2023-08-01 16:13:03,446] multiqc                                            [DEBUG  ]  No samples found: minionqc
+[2023-08-01 16:13:03,450] multiqc                                            [DEBUG  ]  No samples found: multivcfanalyzer
+[2023-08-01 16:13:03,454] multiqc                                            [DEBUG  ]  No samples found: clusterflow
+[2023-08-01 16:13:03,459] multiqc                                            [DEBUG  ]  No samples found: bcl2fastq
+[2023-08-01 16:13:03,463] multiqc                                            [DEBUG  ]  No samples found: interop
+[2023-08-01 16:13:03,468] multiqc                                            [DEBUG  ]  No samples found: ivar
+[2023-08-01 16:13:03,472] multiqc                                            [DEBUG  ]  No samples found: flash
+[2023-08-01 16:13:03,476] multiqc                                            [DEBUG  ]  No samples found: seqyclean
+[2023-08-01 16:13:03,733] multiqc                                            [INFO   ]  Compressing plot data
+[2023-08-01 16:13:06,541] multiqc                                            [INFO   ]  Report      : fq_fp1_clmp/fqc_clmp_report.html
+[2023-08-01 16:13:06,541] multiqc                                            [INFO   ]  Data        : fq_fp1_clmp/fqc_clmp_report_data
+[2023-08-01 16:13:06,541] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpp1mt15g7/multiqc_data' to 'fq_fp1_clmp/fqc_clmp_report_data'
+[2023-08-01 16:13:06,837] multiqc                                            [INFO   ]  Plots       : fq_fp1_clmp/fqc_clmp_report_plots
+[2023-08-01 16:13:06,837] multiqc                                            [DEBUG  ]  Moving plots directory from '/tmp/tmpp1mt15g7/multiqc_plots' to 'fq_fp1_clmp/fqc_clmp_report_plots'
+[2023-08-01 16:13:07,469] multiqc                                            [INFO   ]  MultiQC complete

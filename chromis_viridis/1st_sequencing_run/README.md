@@ -309,7 +309,7 @@ Run by klabrador on 2023-08-01
 
 I have to clean up the repo to make more space. I followd the **CLEANING UP** section in the [pire_ssl_data_processing](https://github.com/philippinespire/pire_ssl_data_processing).
 
-1. Make a copy of important files.
+1. Check initial file size
 
 ```
 du -h | sort -rh > Cvi_lcwgs_beforeDeleting_InterimFiles

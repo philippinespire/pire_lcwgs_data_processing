@@ -811,27 +811,59 @@ cp /home/e1garcia/shotgun_PIRE/dDocentHPC/dDocentHPC.sbatch .
 - Run by klabrador on 2023-08-01
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/1st_sequencing_run/mkBAM
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run/mkBAM
 sbatch dDocentHPC.sbatch mkBAM config.6.lcwgs
 ```
 
 - job submitted: 2016855
-- job failed; try to see what went wrong.
+- job failed; try to see what went wrong
+
+- job submitted: 2020874
+- job completed, but no *.bam.bai file.
+- I checked, the *RAW.bam files were also empty.
+
+- Is this another RAM problem?
+	- To check, I will run mkBAM on the library with the smallest file size.
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run/fq_fp1_clmp_fp2_fqscrn_rprd
+ls -lSh *fq.gz
+
+# look for the smallest library
+## Cch-CAS_049-3E-lcwgs-1-2.clmp.fp2_repr: R1 = 6.2M; R2 = 6.3M
+
+# hardlink the file to mkBAM directory
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run/mkBAM
+ln ../fq_fp1_clmp_fp2_fqscrn_rprd/Cch-CAS_049*fq.gz .
+
+# Rerun mkBAM
+sbatch dDocentHPC.sbatch mkBAM config.6.lcwgs
+```
+- job submitted: 2024874
+- run is stuck... scancel and rerun.
+
+```
+sbatch dDocentHPC.sbatch mkBAM config.6.lcwgs
+```
+- job submitted: 2029525
+
 
 </details>
+
+## TO BE CONTINUED
 
 <details>
         <summary>3. Run fltrBAM</summary>
 
-- Run by klabrador on 2023-05-17
+- Run by klabrador on 2023-08-02
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/1st_sequencing_run/mkBAM_dev2
-sbatch dDocentHPC_dev2.sbatch fltrBAM config.6.lcwgs
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run/mkBAM
+sbatch dDocentHPC.sbatch fltrBAM config.6.lcwgs
 ```
 
-- job submitted: 1605380
-- fltrBAM completed!
+- job submitted: 2020931
+- job failed;  cannot access '*902362185.genome-RG.bam': No such file or directory
 
 
 - Run FASTQC

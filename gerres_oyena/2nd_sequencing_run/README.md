@@ -89,3 +89,17 @@ crun fastqc Goy-CPnd_062-Ex1-3F-lcwgs-1-2.2.fq.gz
 crun multiqc -v -p -ip -f --data-dir --data-format tsv --cl-config "max_table_rows: 3000" --filename fqc_raw_report --outdir fq_raw fq_raw
 
 ```
+
+Results:
+* lots of variation in read numbers (<1M to >200M)
+* duplication generally not too bad, up to ~30%
+* one red flag for GC content, some yellow flags and a secondary peak around 65% GC, but most don't look too bad
+* adapter content flagged for all but this should be fixed later
+
+First trim.
+
+```
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_1st_trim.sbatch fq_raw fq_fp1 
+```
+```
+

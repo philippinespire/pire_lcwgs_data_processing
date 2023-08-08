@@ -70,3 +70,17 @@ MultiQC.
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw" "fqc_raw_report"  "fq.gz"  
 
 ```
+
+Results:
+
+* Highly variable sequence numbers (~1M to >300M)
+* Duplication rates variable, some <20%, a few >50%.
+* A decent proportion of libraries (~25%) flagged for high GC content, another ~35% yellow flags
+* High adapter content
+
+First trim.
+
+```
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_1st_trim.sbatch fq_raw fq_fp1 
+
+```

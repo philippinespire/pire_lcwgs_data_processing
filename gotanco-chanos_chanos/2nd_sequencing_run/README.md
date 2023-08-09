@@ -1,8 +1,66 @@
 ## 1. Download data
 Data copied from `gotanco_chanos-chanos/2nd_sequencing_run_depracated/fq_raw` and `gotanco_chanos-chanos/3rd_sequencing_run_depracated/fq_raw`   LW 2023-07-09
+Test lane data copied from `https://grid.ftp.tamucc.edu/genomics/20230425_Gotanco-lcwgs-testlane/Lane1/` KL 2023-08-07
+
+```
+mkdir fq_raw_test-lane
+cd ./fq_raw_test-lane
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/gridDownloader.sh . https://gridftp.tamucc.edu/genomics/20230425_Gotanco-lcwgs-testlane/Lane1/
+```
+
+Check if files were downloaded correctly.
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/checkFQ.sh fq_raw_test-lane
+
+```
+
+Some files did not download correctly. Download them again using rsync.
+
+```
+# Retrieve the files that have bad fastq format. 
+# Wrote the faulty_fqgz.bash to collect the faulty files from checkFQ.sh outfile. 
+
+# Create a directory for stragglers
+mkdir fq_raw_test-lane_stragglers
+
+# rsync the files from tamu-cc to ./fq_raw_test-lane_stragglers; change permission afterwards using
+cd fq_raw_test-lane_stragglers
+chmod 770 *
+
+# Check file format if using checkFQ.sh
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/checkFQ.sh fq_raw_test-lane_stragglers
+## All files now have the correct format.
+
+# Move the files from the straggler directory to the fq_raw_test-lane directory.
+mv fq_raw_test-lane_stragglers/* fq_raw_test-lane/
+
+# Just to make sure, do another file check on fq_raw_test-lane
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/checkFQ.sh fq_raw_test-lane
+## Everything looks good now! I can delete the straggler directory.
+```
+
+Add the fq_raw_test-lane/*fq.gz files to fq_raw
+```
+mv fq_raw_test-lane/*fq.gz fq_raw/
+```
 
 ## 1.5 Concatenate the files
 Created a script to concatenate Lanes 2 and 3 into 1 file for each sample run. `catfiles.sbatch`. Successfully concatenated files; new files went into `fq_raw_cat`. LW 2023-07-09
+
+Concatenated the test lane along with Lanes 2 and 3. Output to a different directory for now. KL 2023-08-09
+I had to modify the catfiles script so that it will recognize the unique entries of the sample ID and not the library ID from the sequencing facility.
+```
+sbatch ./catfiles2.sbatch fq_raw fq_raw_cat2 1
+sbatch ./catfiles2.sbatch fq_raw fq_raw_cat2 2
+
+# Just to make sure, do another file check on fq_raw_cat2
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/checkFQ.sh fq_raw_cat2
+
+
+```
+
 
 ## 2. Proofread the decode files
 Decode file does not match the PIRE naming scheme to be able to successfully run scripts down the line, created a new decode file, `Gotanco-Sequencing-DecodeFile.tsv`. 

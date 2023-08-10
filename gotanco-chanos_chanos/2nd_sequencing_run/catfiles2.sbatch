@@ -1,7 +1,7 @@
 #!/bin/bash -l
 
 #SBATCH --job-name=cat-fqgz
-#SBATCH -o cat-fqgz_-%j.out
+#SBATCH -o cat-fqgz-%j.out
 #SBATCH --time=00:00:00
 #SBATCH --cpus-per-task=40
 

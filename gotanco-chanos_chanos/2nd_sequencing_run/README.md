@@ -58,8 +58,35 @@ sbatch ./catfiles2.sbatch fq_raw fq_raw_cat2 2
 # Just to make sure, do another file check on fq_raw_cat2
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/checkFQ.sh fq_raw_cat2
 
-
 ```
+
+The concatenated files were problematic. Ater several trial and error, I decided to partition the full dataset into subfolders and run catfiles2.sbatch on each.
+```
+mkdir fq_raw_GotA
+mv fq_raw/GotPopA* fq_raw_GotA
+sbatch ./catfiles2.sbatch fq_raw_GotA fq_raw_GotA_cat 1
+sbatch ./catfiles2.sbatch fq_raw_GotA fq_raw_GotA_cat 2
+
+mkdir fq_raw_GotB
+mv fq_raw/GotPopB* fq_raw_GotB
+sbatch ./catfiles2.sbatch fq_raw_GotB fq_raw_GotB_cat 1
+sbatch ./catfiles2.sbatch fq_raw_GotB fq_raw_GotB_cat 2
+
+
+mkdir fq_raw_GotC
+mv fq_raw/GotPopC* fq_raw_GotC
+sbatch ./catfiles2.sbatch fq_raw_GotC fq_raw_GotC_cat 1
+sbatch ./catfiles2.sbatch fq_raw_GotC fq_raw_GotC_cat 2
+
+mkdir fq_raw_GotW
+mv fq_raw/GotPopW* fq_raw_GotW
+sbatch ./catfiles2.sbatch fq_raw_GotW fq_raw_GotW_cat 1
+sbatch ./catfiles2.sbatch fq_raw_GotW fq_raw_GotW_cat 2
+
+# Run checkFQ.sh on each cat files.
+```
+
+All files are now in order. Proceed to next step.
 
 
 ## 2. Proofread the decode files

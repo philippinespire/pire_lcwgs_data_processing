@@ -84,6 +84,7 @@ sbatch ./catfiles2.sbatch fq_raw_GotW fq_raw_GotW_cat 1
 sbatch ./catfiles2.sbatch fq_raw_GotW fq_raw_GotW_cat 2
 
 # Run checkFQ.sh on each cat files.
+## All files look good. Move the files back to their original directories (i.e. fq_raw and fq_raw_cat2)
 ```
 
 All files are now in order. Proceed to next step.
@@ -93,6 +94,8 @@ All files are now in order. Proceed to next step.
 Decode file does not match the PIRE naming scheme to be able to successfully run scripts down the line, created a new decode file, `Gotanco-Sequencing-DecodeFile.tsv`. 
 
 300 forward reads, 300 reverse reads in both the decode file and in `fq_raw_cat`. LW 2023-07-10
+
+Copy the decode file from fq_raw_cat to fq_raw_cat2. KL 2023-08-10
 
 ## 3. Edit the decode file
 N/A, created a new file.
@@ -105,8 +108,26 @@ Dry run unsuccessful, renaming does not remove the characters between the sample
 
 After editing, the dry run was successful. LW 2023-07-10
 
+Edited the renameFQGZ.bash script to accommodate the new naming convention for combined lanes. KL 2023-08-10
+Perform a renaming dry run using the decode file. KL 2023-08-10
+
+```
+salloc 
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run/fq_raw_cat2
+bash ../renameFQGZ_2.bash Gotanco-Sequencing-DecodeFile.tsv
+```
+Seems to have worked!
+
 ## 6. Rename the files for real
 Successfully renamed the files with the edited script. LW 2023-07-10
+
+Renamed the files. KL 2023-08-10
+```
+salloc
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_c>
+bash ../renameFQGZ_2.bash Gotanco-Sequencing-DecodeFile.tsv rename
+
+```
 
 ## 7. Check the quality of your data.
 Started `MultiQC`, still running, and still running as of the morning, for 20 hours now. Canceled job. LW 2023-07-11
@@ -118,6 +139,13 @@ Insert output here.
 ```
 </p>
 </details>
+
+Started `MultiQC`. KL 2023-08-10
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw_cat2" "fqc_raw_report"  "fq.gz"
+
+```
 
 ## 8. First trim.
 Started the first trim yesterday, finished as of this morning, still have 300 forward and 300 reverse reads in `fq_fp1`. LW 2023-07-11
@@ -430,6 +458,15 @@ Cch-CWCS_281-12E-lcwgs-1-2	16.2%	41.4%	97.7%	2.9%
 ```
 </p>
 </details>
+
+
+Do first trim on fq_raw_cat2. KL 2023-08-10
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_1st_trim.sbatch fq_raw_cat2 fq_fp1
+```
+- jobID: 2092663
+
 
 ## 9. Remove duplicates with clumpify.
 

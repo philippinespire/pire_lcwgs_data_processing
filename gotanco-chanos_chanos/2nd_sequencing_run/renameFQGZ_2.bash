@@ -45,7 +45,7 @@ ls *_1.fq.gz | \
         origFileNames.txt
 
 echo "writing newFileNames.txt..."
-sed 's/_.*_L[1-9X]_/./1' origFileNames.txt > newFileNames.txt
+sed 's/_L[1-9X]_/./1' origFileNames.txt > newFileNames.txt
 sed $'s/\t/.\$\//' $1 > decode_sedlist.txt
 sed -i 's/^/s\//' decode_sedlist.txt
 sed -i 's/$/.\//' decode_sedlist.txt

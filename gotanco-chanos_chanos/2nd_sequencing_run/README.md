@@ -146,6 +146,15 @@ cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw_cat2" "fqc_raw_report"  "fq.gz"
 
 ```
+- Job stuck. Rerun. KL 2023-08-11
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw_cat2" "fqc_raw_report"  "fq.gz"
+
+```
+- JobID: 2096122
+
 
 ## 8. First trim.
 Started the first trim yesterday, finished as of this morning, still have 300 forward and 300 reverse reads in `fq_fp1`. LW 2023-07-11
@@ -480,11 +489,32 @@ Running `runCLUMPIFY_r1r2_array.bash`. Waiting on nodes to become available. LW 
 CLUMPIFY has finished. LW 2023-07-13
 
 Rerun CLUMPIFY on appended dataset. KL 2023-08-10
+
 ```
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run/
 bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1 fq_fp1_clmp /scratch/hpc-0289 40
 ```
 - job ID: 2093755
+- job stuck. I have to do the same strategy with concatenating files separately.
+
+```
+mkdir fq_fp1_GotA fq_fp1_GotB fq_fp1_GotC fq_fp1_GotW
+
+# Move the *.fq.gz files from fq_fp1 to their appropriate subdirectores, then run clumpify on each.
+
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1_GotA fq_fp1_clmp /scratch/hpc-0289 20
+# JobID: 2096163
+
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1_GotB fq_fp1_clmp /scratch/hpc-0289 20
+# JobID: 2096184
+
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1_GotC fq_fp1_clmp /scratch/hpc-0289 20
+# JobID: 2096206
+
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1_GotW fq_fp1_clmp /scratch/hpc-0289 20
+# JobID: 2096213
+
+```
 
 ### 9b. Check duplicate removal success.
 Due to previous issues woking in R, I ran `module load container_env R/4.2` instead of `module load container_env mapdamage2`. 

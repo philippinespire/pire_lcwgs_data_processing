@@ -515,7 +515,7 @@ bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.ba
 # JobID: 2096213
 
 ```
-- Job stuck again. Identify the stragglers, and redo the run on them.
+- Job stuck again. Identify the stragglers, and redo the run on them. KL 2023-08-11
 - Identified 104 stragglers.
 
 ```

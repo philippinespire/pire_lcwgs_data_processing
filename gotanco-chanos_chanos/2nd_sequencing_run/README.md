@@ -515,6 +515,14 @@ bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.ba
 # JobID: 2096213
 
 ```
+- Job stuck again. Identify the stragglers, and redo the run on them.
+- Identified 104 stragglers.
+
+```
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1_stragglers fq_fp1_clmp /scratch/hpc-0289 20
+# JobID: 2097402
+```
+
 
 ### 9b. Check duplicate removal success.
 Due to previous issues woking in R, I ran `module load container_env R/4.2` instead of `module load container_env mapdamage2`. 

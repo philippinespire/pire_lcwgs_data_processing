@@ -522,7 +522,12 @@ bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.ba
 bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1_stragglers fq_fp1_clmp /scratch/hpc-0289 20
 # JobID: 2097402
 ```
+- Job stuck again. Identified 86 stragglers. Rerun. KL 2023-08-12
 
+```
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1_stragglers fq_fp1_clmp /scratch/hpc-0289 30
+# JobID: 2098809
+```
 
 ### 9b. Check duplicate removal success.
 Due to previous issues woking in R, I ran `module load container_env R/4.2` instead of `module load container_env mapdamage2`. 
@@ -542,7 +547,7 @@ Insert output here.
 </details>
 
 ## 10. Second trim.
-Ran `runFASTP_2_cssl.sbatch`. LW 2023 -07-13
+Ran `runFASTP_2_cssl.sbatch`. LW 2023-07-13
 
 <details><summary>Expand for MultiQC Output.</summary>
 

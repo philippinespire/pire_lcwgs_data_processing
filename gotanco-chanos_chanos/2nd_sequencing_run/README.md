@@ -1,3 +1,4 @@
+
 ## 1. Download data
 Data copied from `gotanco_chanos-chanos/2nd_sequencing_run_depracated/fq_raw` and `gotanco_chanos-chanos/3rd_sequencing_run_depracated/fq_raw`   LW 2023-07-09
 Test lane data copied from `https://grid.ftp.tamucc.edu/genomics/20230425_Gotanco-lcwgs-testlane/Lane1/` KL 2023-08-07
@@ -154,6 +155,7 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw
 
 ```
 - JobID: 2096122
+- Job still stuck after 1 d 15 h. Terminate run. KL 2023-08-13
 
 
 ## 8. First trim.
@@ -167,6 +169,19 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_1st_trim.sbatc
 ```
 - jobID: 2092663
 - job finished successfully
+
+80 files did not return the correct fq.gz format after trimming. Redo. KL 2023-08-13
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run
+
+# Make a straggler directory and move all faulty files for processing.
+mkdir fq_raw_cat2_straggler fq_fp1_straggler
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_1st_trim.sbatch fq_raw_cat2_straggler fq_fp1_straggler
+
+```
+
+
 
 Updated MultiQC table.
 
@@ -528,6 +543,13 @@ bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.ba
 bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1_stragglers fq_fp1_clmp /scratch/hpc-0289 30
 # JobID: 2098809
 ```
+
+Reviewed the logfile for the clmp runs. There seems to be file problems with the stragglers. I need to review these files. KL 2023-08-13
+- All files have been processed with MultiQC and checkFQ.sh. I had no reason to believe that they were problematic. 
+- Review the stragglers to see what is going on with them. Redo checkFQ.sh again. KL 2023-08-13
+- 80 stragglers were indeed problematic i.e., had incorrect fq.gz format. Rerun 1st trim on these files. Store input and output on *_straggler directories.
+
+
 
 ### 9b. Check duplicate removal success.
 Due to previous issues woking in R, I ran `module load container_env R/4.2` instead of `module load container_env mapdamage2`. 

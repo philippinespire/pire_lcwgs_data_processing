@@ -549,12 +549,18 @@ Reviewed the logfile for the clmp runs. There seems to be file problems with the
 - Review the stragglers to see what is going on with them. Redo checkFQ.sh again. KL 2023-08-13
 - 80 stragglers were indeed problematic i.e., had incorrect fq.gz format. Rerun 1st trim on these files. Store input and output on *_straggler directories.
 
-Rerun clumpify on fq_fp1_stragglers. KL 2023-08-13
-
 ```
 bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1_stragglers fq_fp1_clmp_stragglers /scratch/hpc-0289 40
-# JobID: 2102371
-``` 
+# JobID: 2102371 
+```
+
+
+Rerun clumpify on fq_fp1_stragglers. KL 2023-08-13/14
+- Left with 52 stragglers. However, they are no longer possible to run on Wahab because the disk quota has been exceeded.
+- It looks like my disk space has been used up by my scratch directory. I have to clear this one first. In the meantime, I had LWeeks push Gotanco stragglers. 
+- Ask Eric for help on clearing the scratch directory.
+
+
 
 
 

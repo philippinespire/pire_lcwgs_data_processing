@@ -39,6 +39,8 @@ Concatention successful.
 <details><summary>Expand for MultiQC Output.</summary>
 
 ```bash
+Sample Name	% Dups	% GC	M Seqs
+Sample Name	% Dups	% GC	M Seqs
 Pli-AMvi_004-Ex1-1A-lcwgs-X-1.1	31.6%	49%	0.5
 Pli-AMvi_004-Ex1-1A-lcwgs-X-1.2	30.9%	49%	0.5
 Pli-AMvi_005-Ex1-2A-lcwgs-X-1.1	12.1%	46%	0.0
@@ -231,16 +233,20 @@ Pli-AMvi_098-Ex1-11H-lcwgs-X-1.1	6.0%	45%	0.0
 Pli-AMvi_098-Ex1-11H-lcwgs-X-1.2	7.4%	46%	0.0
 Pli-AMvi_099-Ex1-12H-lcwgs-X-1.1	57.0%	54%	1.6
 Pli-AMvi_099-Ex1-12H-lcwgs-X-1.2	47.3%	54%	1.6
-Pli-CMvi_001-Ex1-1B-lcwgs-X-1.1	16.7%	43%	4.8
-Pli-CMvi_002-Ex1-2A-lcwgs-X-1.1	10.2%	43%	1.5
+Pli-CMvi_001-Ex1-1B-lcwgs-1-1.1	16.7%	43%	4.8
+Pli-CMvi_001-Ex1-1B-lcwgs-1-1.2	14.7%	43%	4.8
+Pli-CMvi_002-Ex1-2A-lcwgs-1-1.1	13.3%	43%	6.4
+Pli-CMvi_002-Ex1-2A-lcwgs-1-1.2	11.7%	43%	6.4
 Pli-CMvi_003-Ex1-2G-lcwgs-X-1.1	23.0%	43%	0.8
 Pli-CMvi_003-Ex1-2G-lcwgs-X-1.2	21.8%	44%	0.8
-Pli-CMvi_004-Ex1-3F-lcwgs-X-1.1	13.6%	42%	6.1
+Pli-CMvi_004-Ex1-3F-lcwgs-1-1.1	13.6%	42%	6.1
+Pli-CMvi_004-Ex1-3F-lcwgs-1-1.2	11.5%	43%	6.1
 Pli-CMvi_005-Ex1-4C-lcwgs-X-1.1	4.9%	43%	0.0
 Pli-CMvi_005-Ex1-4C-lcwgs-X-1.2	4.5%	44%	0.0
 Pli-CMvi_006-Ex1-5A-lcwgs-X-1.1	7.6%	44%	0.1
 Pli-CMvi_006-Ex1-5A-lcwgs-X-1.2	7.1%	44%	0.1
-Pli-CMvi_007-Ex1-5G-lcwgs-X-1.1	17.6%	43%	3.4
+Pli-CMvi_007-Ex1-5G-lcwgs-1-1.1	17.6%	43%	3.4
+Pli-CMvi_007-Ex1-5G-lcwgs-1-1.2	15.5%	43%	3.4
 Pli-CMvi_013-Ex1-1C-lcwgs-X-1.1	27.2%	44%	3.3
 Pli-CMvi_013-Ex1-1C-lcwgs-X-1.2	23.9%	44%	3.3
 Pli-CMvi_014-Ex1-2B-lcwgs-X-1.1	6.9%	43%	0.0
@@ -271,12 +277,16 @@ Pli-CMvi_038-Ex1-2C-lcwgs-X-1.1	13.1%	43%	0.1
 Pli-CMvi_038-Ex1-2C-lcwgs-X-1.2	11.7%	43%	0.1
 Pli-CMvi_039-Ex1-3A-lcwgs-X-1.1	20.6%	44%	4.2
 Pli-CMvi_039-Ex1-3A-lcwgs-X-1.2	18.2%	44%	4.2
-Pli-CMvi_040-Ex1-3H-lcwgs-X-1.1	13.7%	43%	4.7
-Pli-CMvi_041-Ex1-4E-lcwgs-X-1.1	13.7%	43%	4.2
+Pli-CMvi_040-Ex1-3H-lcwgs-1-1.1	13.7%	43%	4.7
+Pli-CMvi_040-Ex1-3H-lcwgs-1-1.2	11.5%	43%	4.7
+Pli-CMvi_041-Ex1-4E-lcwgs-1-1.1	13.7%	43%	4.2
+Pli-CMvi_041-Ex1-4E-lcwgs-1-1.2	12.0%	43%	4.2
 Pli-CMvi_042-Ex1-5C-lcwgs-X-1.1	13.5%	43%	5.4
 Pli-CMvi_042-Ex1-5C-lcwgs-X-1.2	11.1%	43%	5.4
 Pli-CMvi_047-Ex1-7G-lcwgs-X-1.1	11.1%	43%	1.1
 Pli-CMvi_047-Ex1-7G-lcwgs-X-1.2	9.7%	43%	1.1
+Pli-CMvi_049-Ex1-1F-lcwgs-1-1.1	17.0%	43%	6.8
+Pli-CMvi_049-Ex1-1F-lcwgs-1-1.2	15.1%	43%	6.8
 Pli-CMvi_051-Ex1-3B-lcwgs-X-1.1	15.6%	43%	8.3
 Pli-CMvi_051-Ex1-3B-lcwgs-X-1.2	13.4%	43%	8.3
 Pli-CMvi_053-Ex1-4F-lcwgs-X-1.1	9.1%	43%	0.3
@@ -287,9 +297,16 @@ Pli-CMvi_059-Ex1-7H-lcwgs-X-1.1	11.9%	43%	2.8
 Pli-CMvi_059-Ex1-7H-lcwgs-X-1.2	10.2%	43%	2.8
 Pli-CMvi_060-Ex1-8F-lcwgs-X-1.1	11.1%	43%	0.1
 Pli-CMvi_060-Ex1-8F-lcwgs-X-1.2	9.6%	43%	0.1
-Pli-CMvi_064-Ex1-4A-lcwgs-X-1.2	14.8%	43%	5.9
+Pli-CMvi_062-Ex1-2D-lcwgs-1-1.1	15.7%	43%	6.2
+Pli-CMvi_062-Ex1-2D-lcwgs-1-1.2	14.4%	43%	6.2
+Pli-CMvi_063-Ex1-3C-lcwgs-1-1.1	13.2%	43%	4.1
+Pli-CMvi_063-Ex1-3C-lcwgs-1-1.2	11.2%	43%	4.1
+Pli-CMvi_064-Ex1-4A-lcwgs-1-1.1	17.4%	43%	5.9
+Pli-CMvi_064-Ex1-4A-lcwgs-1-1.2	14.8%	43%	5.9
 Pli-CMvi_065-Ex1-4G-lcwgs-X-1.1	18.0%	43%	0.3
 Pli-CMvi_065-Ex1-4G-lcwgs-X-1.2	16.7%	44%	0.3
+Pli-CMvi_066-Ex1-5E-lcwgs-1-1.1	17.8%	43%	8.2
+Pli-CMvi_066-Ex1-5E-lcwgs-1-1.2	15.1%	43%	8.2
 Pli-CMvi_066-Ex1-5E-lcwgs-X-1.2	15.1%	43%	8.2
 Pli-CMvi_070-Ex1-7D-lcwgs-X-1.1	9.9%	43%	0.1
 Pli-CMvi_070-Ex1-7D-lcwgs-X-1.2	9.0%	44%	0.1
@@ -432,13 +449,13 @@ Pli-AMvi_096-Ex1-9H-lcwgs-X-1	3.3%	44.8%	63.8%	78.7%
 Pli-AMvi_097-Ex1-10H-lcwgs-X-1	1.2%	43.9%	81.9%	78.4%
 Pli-AMvi_098-Ex1-11H-lcwgs-X-1	0.7%	43.3%	87.5%	78.1%
 Pli-AMvi_099-Ex1-12H-lcwgs-X-1	49.5%	55.4%	88.1%	16.1%
-Pli-CMvi_001-Ex1-1B-lcwgs-X-1	12.9%	38.3%	92.6%	13.7%
-Pli-CMvi_002-Ex1-2A-lcwgs-X-1	8.1%	42.9%	93.8%	23.4%
+Pli-CMvi_001-Ex1-1B-lcwgs-1-1	11.3%	42.8%	91.1%	17.7%
+Pli-CMvi_002-Ex1-2A-lcwgs-1-1	10.0%	42.8%	93.9%	23.1%
 Pli-CMvi_003-Ex1-2G-lcwgs-X-1	8.9%	42.4%	81.2%	41.5%
-Pli-CMvi_004-Ex1-3F-lcwgs-X-1	8.8%	42.6%	95.5%	19.1%
+Pli-CMvi_004-Ex1-3F-lcwgs-1-1	11.8%	42.5%	95.5%	18.8%
 Pli-CMvi_005-Ex1-4C-lcwgs-X-1	0.4%	42.8%	89.7%	45.1%
 Pli-CMvi_006-Ex1-5A-lcwgs-X-1	1.5%	43.0%	87.7%	42.4%
-Pli-CMvi_007-Ex1-5G-lcwgs-X-1	8.0%	42.6%	87.9%	31.7%
+Pli-CMvi_007-Ex1-5G-lcwgs-1-1	10.7%	42.5%	88.1%	31.2%
 Pli-CMvi_013-Ex1-1C-lcwgs-X-1	12.5%	43.7%	81.2%	17.8%
 Pli-CMvi_014-Ex1-2B-lcwgs-X-1	1.2%	42.7%	89.2%	42.1%
 Pli-CMvi_015-Ex1-2H-lcwgs-X-1	9.7%	43.0%	80.0%	32.0%
@@ -454,21 +471,21 @@ Pli-CMvi_034-Ex1-7C-lcwgs-X-1	6.6%	42.3%	93.4%	51.2%
 Pli-CMvi_037-Ex1-1E-lcwgs-X-1	12.8%	43.0%	75.1%	24.4%
 Pli-CMvi_038-Ex1-2C-lcwgs-X-1	6.9%	42.5%	90.9%	28.9%
 Pli-CMvi_039-Ex1-3A-lcwgs-X-1	11.3%	43.4%	87.3%	23.2%
-Pli-CMvi_040-Ex1-3H-lcwgs-X-1	9.0%	42.7%	94.3%	18.7%
-Pli-CMvi_041-Ex1-4E-lcwgs-X-1	7.8%	42.6%	92.6%	22.8%
+Pli-CMvi_040-Ex1-3H-lcwgs-1-1	11.3%	42.7%	94.5%	18.3%
+Pli-CMvi_041-Ex1-4E-lcwgs-1-1	9.3%	42.6%	92.8%	22.4%
 Pli-CMvi_042-Ex1-5C-lcwgs-X-1	10.5%	42.9%	93.7%	11.4%
 Pli-CMvi_047-Ex1-7G-lcwgs-X-1	8.6%	42.3%	93.1%	33.3%
-Pli-CMvi_049-Ex1-1F-lcwgs-X-1	9.0%	42.2%	91.8%	17.3%
+Pli-CMvi_049-Ex1-1F-lcwgs-1-1	11.6%	42.7%	92.0%	18.3%
 Pli-CMvi_051-Ex1-3B-lcwgs-X-1	12.2%	43.0%	94.0%	17.5%
 Pli-CMvi_053-Ex1-4F-lcwgs-X-1	7.0%	42.4%	92.7%	28.8%
 Pli-CMvi_054-Ex1-5D-lcwgs-X-1	9.2%	42.5%	93.2%	24.4%
 Pli-CMvi_059-Ex1-7H-lcwgs-X-1	9.6%	42.8%	94.5%	20.5%
 Pli-CMvi_060-Ex1-8F-lcwgs-X-1	8.0%	42.5%	93.1%	23.1%
-Pli-CMvi_062-Ex1-2D-lcwgs-X-1	7.4%	42.6%	91.3%	28.7%
-Pli-CMvi_063-Ex1-3C-lcwgs-X-1	8.4%	42.8%	93.9%	15.0%
-Pli-CMvi_064-Ex1-4A-lcwgs-X-1	7.9%	43.1%	89.8%	12.4%
+Pli-CMvi_062-Ex1-2D-lcwgs-1-1	9.5%	42.5%	91.4%	28.5%
+Pli-CMvi_063-Ex1-3C-lcwgs-1-1	10.5%	42.8%	93.9%	14.7%
+Pli-CMvi_064-Ex1-4A-lcwgs-1-1	10.8%	43.1%	90.0%	12.2%
 Pli-CMvi_065-Ex1-4G-lcwgs-X-1	7.0%	42.7%	84.1%	38.6%
-Pli-CMvi_066-Ex1-5E-lcwgs-X-1	10.0%	43.3%	94.2%	14.8%
+Pli-CMvi_066-Ex1-5E-lcwgs-1-1	13.6%	43.2%	94.4%	14.5%
 Pli-CMvi_070-Ex1-7D-lcwgs-X-1	5.0%	42.5%	91.5%	42.3%
 Pli-CMvi_071-Ex1-8A-lcwgs-X-1	2.9%	43.2%	87.1%	38.9%
 Pli-CMvi_072-Ex1-8G-lcwgs-X-1	8.9%	42.8%	91.3%	19.8%
@@ -493,37 +510,487 @@ Pli-CMvi_095-Ex1-8C-lcwgs-X-1	1.0%	42.6%	86.5%	41.5%
 ## 9. Remove duplicates with clumpify.
 
 ### 9a. Remove duplicates.
-TBD
+`bash ../../../pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1 fq_fp1_clmp /scratch/hpc-0351 20`
 
 ### 9b. Check duplicate removal success.
-TBD
+"Clumpify Successfully worked on all samples"
 
 ### 9c. Generate metadata on deduplicated FASTQ files.
-TBD
+`sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1_clmp" "fqc_clmp_report"  "fq.gz"`
 
 <details><summary>Expand for MultiQC Output.</summary>
 
 ```bash
-TBD
+Sample Name	% Dups	% GC	Length	M Seqs
+Pli-AMvi_004-Ex1-1A-lcwgs-X-1.clmp.r1	3.7%	51%	82 bp	0.3
+Pli-AMvi_004-Ex1-1A-lcwgs-X-1.clmp.r2	3.1%	51%	82 bp	0.3
+Pli-AMvi_005-Ex1-2A-lcwgs-X-1.clmp.r1	2.7%	45%	86 bp	0.0
+Pli-AMvi_005-Ex1-2A-lcwgs-X-1.clmp.r2	4.1%	45%	86 bp	0.0
+Pli-AMvi_006-Ex1-3A-lcwgs-X-1.clmp.r1	2.4%	43%	79 bp	0.0
+Pli-AMvi_006-Ex1-3A-lcwgs-X-1.clmp.r2	3.2%	43%	79 bp	0.0
+Pli-AMvi_007-Ex1-4A-lcwgs-X-1.clmp.r1	2.5%	40%	71 bp	0.1
+Pli-AMvi_007-Ex1-4A-lcwgs-X-1.clmp.r2	2.3%	40%	71 bp	0.1
+Pli-AMvi_008-Ex1-1B-lcwgs-X-1.clmp.r1	3.4%	42%	75 bp	0.3
+Pli-AMvi_008-Ex1-1B-lcwgs-X-1.clmp.r2	2.9%	42%	75 bp	0.3
+Pli-AMvi_009-Ex1-2B-lcwgs-X-1.clmp.r1	2.7%	45%	83 bp	0.0
+Pli-AMvi_009-Ex1-2B-lcwgs-X-1.clmp.r2	4.1%	45%	83 bp	0.0
+Pli-AMvi_010-Ex1-7A-lcwgs-X-1.clmp.r1	2.0%	46%	87 bp	1.0
+Pli-AMvi_010-Ex1-7A-lcwgs-X-1.clmp.r2	1.7%	46%	87 bp	1.0
+Pli-AMvi_011-Ex1-8A-lcwgs-X-1.clmp.r1	2.8%	47%	90 bp	1.5
+Pli-AMvi_011-Ex1-8A-lcwgs-X-1.clmp.r2	2.4%	47%	90 bp	1.5
+Pli-AMvi_012-Ex1-9A-lcwgs-X-1.clmp.r1	2.5%	44%	86 bp	0.8
+Pli-AMvi_012-Ex1-9A-lcwgs-X-1.clmp.r2	2.0%	44%	86 bp	0.8
+Pli-AMvi_013-Ex1-10A-lcwgs-X-1.clmp.r1	1.9%	39%	74 bp	0.3
+Pli-AMvi_013-Ex1-10A-lcwgs-X-1.clmp.r2	1.6%	39%	74 bp	0.3
+Pli-AMvi_014-Ex1-11A-lcwgs-X-1.clmp.r1	15.3%	46%	81 bp	0.2
+Pli-AMvi_014-Ex1-11A-lcwgs-X-1.clmp.r2	13.4%	46%	81 bp	0.2
+Pli-AMvi_015-Ex1-12A-lcwgs-X-1.clmp.r1	0.7%	48%	108 bp	0.0
+Pli-AMvi_015-Ex1-12A-lcwgs-X-1.clmp.r2	0.7%	49%	108 bp	0.0
+Pli-AMvi_016-Ex1-3B-lcwgs-X-1.clmp.r1	1.2%	42%	68 bp	0.1
+Pli-AMvi_016-Ex1-3B-lcwgs-X-1.clmp.r2	1.0%	42%	68 bp	0.1
+Pli-AMvi_017-Ex1-4B-lcwgs-X-1.clmp.r1	2.8%	41%	67 bp	0.1
+Pli-AMvi_017-Ex1-4B-lcwgs-X-1.clmp.r2	2.4%	41%	67 bp	0.1
+Pli-AMvi_018-Ex1-1C-lcwgs-X-1.clmp.r1	5.5%	44%	69 bp	0.0
+Pli-AMvi_018-Ex1-1C-lcwgs-X-1.clmp.r2	4.9%	44%	69 bp	0.0
+Pli-AMvi_019-Ex1-2C-lcwgs-X-1.clmp.r1	2.8%	44%	66 bp	0.0
+Pli-AMvi_019-Ex1-2C-lcwgs-X-1.clmp.r2	2.8%	44%	66 bp	0.0
+Pli-AMvi_020-Ex1-3C-lcwgs-X-1.clmp.r1	2.4%	44%	68 bp	0.0
+Pli-AMvi_020-Ex1-3C-lcwgs-X-1.clmp.r2	3.1%	44%	68 bp	0.0
+Pli-AMvi_021-Ex1-4C-lcwgs-X-1.clmp.r1	1.0%	42%	61 bp	0.2
+Pli-AMvi_021-Ex1-4C-lcwgs-X-1.clmp.r2	1.0%	42%	61 bp	0.2
+Pli-AMvi_022-Ex1-7B-lcwgs-X-1.clmp.r1	5.9%	51%	123 bp	1.8
+Pli-AMvi_022-Ex1-7B-lcwgs-X-1.clmp.r2	4.6%	51%	122 bp	1.8
+Pli-AMvi_023-Ex1-8B-lcwgs-X-1.clmp.r1	2.2%	45%	82 bp	0.6
+Pli-AMvi_023-Ex1-8B-lcwgs-X-1.clmp.r2	1.9%	45%	82 bp	0.6
+Pli-AMvi_024-Ex1-9B-lcwgs-X-1.clmp.r1	6.8%	50%	102 bp	1.2
+Pli-AMvi_024-Ex1-9B-lcwgs-X-1.clmp.r2	5.4%	50%	102 bp	1.2
+Pli-AMvi_025-Ex1-10B-lcwgs-X-1.clmp.r1	2.2%	40%	68 bp	0.1
+Pli-AMvi_025-Ex1-10B-lcwgs-X-1.clmp.r2	1.9%	40%	68 bp	0.1
+Pli-AMvi_026-Ex1-11B-lcwgs-X-1.clmp.r1	1.4%	41%	67 bp	2.2
+Pli-AMvi_026-Ex1-11B-lcwgs-X-1.clmp.r2	1.3%	41%	67 bp	2.2
+Pli-AMvi_027-Ex1-12B-lcwgs-X-1.clmp.r1	0.3%	48%	104 bp	0.0
+Pli-AMvi_027-Ex1-12B-lcwgs-X-1.clmp.r2	0.2%	48%	104 bp	0.0
+Pli-AMvi_028-Ex1-1D-lcwgs-X-1.clmp.r1	3.2%	46%	81 bp	0.0
+Pli-AMvi_028-Ex1-1D-lcwgs-X-1.clmp.r2	4.9%	47%	81 bp	0.0
+Pli-AMvi_029-Ex1-2D-lcwgs-X-1.clmp.r1	2.2%	42%	68 bp	0.7
+Pli-AMvi_029-Ex1-2D-lcwgs-X-1.clmp.r2	2.2%	42%	68 bp	0.7
+Pli-AMvi_030-Ex1-3D-lcwgs-X-1.clmp.r1	2.8%	43%	62 bp	0.1
+Pli-AMvi_030-Ex1-3D-lcwgs-X-1.clmp.r2	2.4%	43%	62 bp	0.1
+Pli-AMvi_031-Ex1-4D-lcwgs-X-1.clmp.r1	5.6%	45%	81 bp	0.0
+Pli-AMvi_031-Ex1-4D-lcwgs-X-1.clmp.r2	6.9%	46%	81 bp	0.0
+Pli-AMvi_032-Ex1-5C-lcwgs-X-1.clmp.r1	1.1%	42%	69 bp	0.7
+Pli-AMvi_032-Ex1-5C-lcwgs-X-1.clmp.r2	1.1%	42%	69 bp	0.7
+Pli-AMvi_033-Ex1-6C-lcwgs-X-1.clmp.r1	1.0%	43%	67 bp	1.0
+Pli-AMvi_033-Ex1-6C-lcwgs-X-1.clmp.r2	0.8%	43%	67 bp	1.0
+Pli-AMvi_034-Ex1-7C-lcwgs-X-1.clmp.r1	2.3%	45%	77 bp	0.0
+Pli-AMvi_034-Ex1-7C-lcwgs-X-1.clmp.r2	3.6%	46%	77 bp	0.0
+Pli-AMvi_035-Ex1-8C-lcwgs-X-1.clmp.r1	1.0%	42%	62 bp	0.0
+Pli-AMvi_035-Ex1-8C-lcwgs-X-1.clmp.r2	1.2%	42%	62 bp	0.0
+Pli-AMvi_036-Ex1-9C-lcwgs-X-1.clmp.r1	9.8%	47%	121 bp	2.6
+Pli-AMvi_036-Ex1-9C-lcwgs-X-1.clmp.r2	7.4%	48%	121 bp	2.6
+Pli-AMvi_037-Ex1-10C-lcwgs-X-1.clmp.r1	1.2%	38%	68 bp	0.7
+Pli-AMvi_037-Ex1-10C-lcwgs-X-1.clmp.r2	1.0%	38%	68 bp	0.7
+Pli-AMvi_038-Ex1-11C-lcwgs-X-1.clmp.r1	3.4%	43%	71 bp	0.3
+Pli-AMvi_038-Ex1-11C-lcwgs-X-1.clmp.r2	3.3%	43%	71 bp	0.3
+Pli-AMvi_039-Ex1-12C-lcwgs-X-1.clmp.r1	16.1%	57%	145 bp	0.3
+Pli-AMvi_039-Ex1-12C-lcwgs-X-1.clmp.r2	11.0%	57%	145 bp	0.3
+Pli-AMvi_040-Ex1-5A-lcwgs-X-1.clmp.r1	2.8%	46%	92 bp	1.5
+Pli-AMvi_040-Ex1-5A-lcwgs-X-1.clmp.r2	2.2%	47%	92 bp	1.5
+Pli-AMvi_041-Ex1-6A-lcwgs-X-1.clmp.r1	1.9%	43%	83 bp	2.1
+Pli-AMvi_041-Ex1-6A-lcwgs-X-1.clmp.r2	1.7%	43%	83 bp	2.1
+Pli-AMvi_042-Ex1-5B-lcwgs-X-1.clmp.r1	2.4%	45%	89 bp	0.0
+Pli-AMvi_042-Ex1-5B-lcwgs-X-1.clmp.r2	4.2%	45%	89 bp	0.0
+Pli-AMvi_043-Ex1-6B-lcwgs-X-1.clmp.r1	3.2%	50%	94 bp	1.3
+Pli-AMvi_043-Ex1-6B-lcwgs-X-1.clmp.r2	2.6%	50%	94 bp	1.3
+Pli-AMvi_044-Ex1-5D-lcwgs-X-1.clmp.r1	1.1%	44%	61 bp	0.1
+Pli-AMvi_044-Ex1-5D-lcwgs-X-1.clmp.r2	1.1%	44%	61 bp	0.1
+Pli-AMvi_045-Ex1-6D-lcwgs-X-1.clmp.r1	3.8%	46%	63 bp	0.0
+Pli-AMvi_045-Ex1-6D-lcwgs-X-1.clmp.r2	3.6%	46%	63 bp	0.0
+Pli-AMvi_046-Ex1-1E-lcwgs-X-1.clmp.r1	2.2%	45%	87 bp	0.4
+Pli-AMvi_046-Ex1-1E-lcwgs-X-1.clmp.r2	2.0%	45%	87 bp	0.4
+Pli-AMvi_047-Ex1-2E-lcwgs-X-1.clmp.r1	1.7%	40%	68 bp	0.1
+Pli-AMvi_047-Ex1-2E-lcwgs-X-1.clmp.r2	1.5%	40%	68 bp	0.1
+Pli-AMvi_048-Ex1-3E-lcwgs-X-1.clmp.r1	1.2%	42%	81 bp	0.0
+Pli-AMvi_048-Ex1-3E-lcwgs-X-1.clmp.r2	2.7%	43%	81 bp	0.0
+Pli-AMvi_049-Ex1-4E-lcwgs-X-1.clmp.r1	2.0%	44%	90 bp	0.0
+Pli-AMvi_049-Ex1-4E-lcwgs-X-1.clmp.r2	5.5%	45%	89 bp	0.0
+Pli-AMvi_050-Ex1-5E-lcwgs-X-1.clmp.r1	2.1%	44%	94 bp	0.0
+Pli-AMvi_050-Ex1-5E-lcwgs-X-1.clmp.r2	7.1%	45%	94 bp	0.0
+Pli-AMvi_051-Ex1-6E-lcwgs-X-1.clmp.r1	3.1%	46%	66 bp	0.0
+Pli-AMvi_051-Ex1-6E-lcwgs-X-1.clmp.r2	3.3%	47%	66 bp	0.0
+Pli-AMvi_052-Ex1-7D-lcwgs-X-1.clmp.r1	1.9%	42%	67 bp	0.4
+Pli-AMvi_052-Ex1-7D-lcwgs-X-1.clmp.r2	1.8%	42%	67 bp	0.4
+Pli-AMvi_053-Ex1-8D-lcwgs-X-1.clmp.r1	2.7%	43%	89 bp	0.0
+Pli-AMvi_053-Ex1-8D-lcwgs-X-1.clmp.r2	5.3%	44%	89 bp	0.0
+Pli-AMvi_054-Ex1-9D-lcwgs-X-1.clmp.r1	2.5%	44%	57 bp	0.0
+Pli-AMvi_054-Ex1-9D-lcwgs-X-1.clmp.r2	2.3%	44%	57 bp	0.0
+Pli-AMvi_055-Ex1-10D-lcwgs-X-1.clmp.r1	1.9%	42%	62 bp	0.1
+Pli-AMvi_055-Ex1-10D-lcwgs-X-1.clmp.r2	1.5%	42%	62 bp	0.1
+Pli-AMvi_056-Ex1-11D-lcwgs-X-1.clmp.r1	2.5%	43%	86 bp	0.0
+Pli-AMvi_056-Ex1-11D-lcwgs-X-1.clmp.r2	4.4%	44%	85 bp	0.0
+Pli-AMvi_057-Ex1-12D-lcwgs-X-1.clmp.r1	0.7%	48%	112 bp	0.0
+Pli-AMvi_057-Ex1-12D-lcwgs-X-1.clmp.r2	0.3%	48%	111 bp	0.0
+Pli-AMvi_058-Ex1-1F-lcwgs-X-1.clmp.r1	13.9%	57%	144 bp	0.9
+Pli-AMvi_058-Ex1-1F-lcwgs-X-1.clmp.r2	10.0%	58%	144 bp	0.9
+Pli-AMvi_059-Ex1-2F-lcwgs-X-1.clmp.r1	1.7%	44%	85 bp	0.0
+Pli-AMvi_059-Ex1-2F-lcwgs-X-1.clmp.r2	2.9%	44%	85 bp	0.0
+Pli-AMvi_060-Ex1-3F-lcwgs-X-1.clmp.r1	1.2%	43%	80 bp	0.0
+Pli-AMvi_060-Ex1-3F-lcwgs-X-1.clmp.r2	2.9%	43%	80 bp	0.0
+Pli-AMvi_061-Ex1-4F-lcwgs-X-1.clmp.r1	2.0%	45%	91 bp	0.0
+Pli-AMvi_061-Ex1-4F-lcwgs-X-1.clmp.r2	5.3%	45%	90 bp	0.0
+Pli-AMvi_062-Ex1-5F-lcwgs-X-1.clmp.r1	2.7%	45%	93 bp	0.0
+Pli-AMvi_062-Ex1-5F-lcwgs-X-1.clmp.r2	5.8%	45%	93 bp	0.0
+Pli-AMvi_063-Ex1-6F-lcwgs-X-1.clmp.r1	3.3%	46%	65 bp	0.0
+Pli-AMvi_063-Ex1-6F-lcwgs-X-1.clmp.r2	2.9%	46%	65 bp	0.0
+Pli-AMvi_064-Ex1-7E-lcwgs-X-1.clmp.r1	1.8%	42%	68 bp	0.1
+Pli-AMvi_064-Ex1-7E-lcwgs-X-1.clmp.r2	1.4%	42%	68 bp	0.1
+Pli-AMvi_065-Ex1-8E-lcwgs-X-1.clmp.r1	1.2%	39%	66 bp	0.1
+Pli-AMvi_065-Ex1-8E-lcwgs-X-1.clmp.r2	1.0%	39%	66 bp	0.1
+Pli-AMvi_066-Ex1-9E-lcwgs-X-1.clmp.r1	2.6%	44%	93 bp	0.0
+Pli-AMvi_066-Ex1-9E-lcwgs-X-1.clmp.r2	5.3%	44%	92 bp	0.0
+Pli-AMvi_067-Ex1-10E-lcwgs-X-1.clmp.r1	2.1%	43%	69 bp	0.0
+Pli-AMvi_067-Ex1-10E-lcwgs-X-1.clmp.r2	2.0%	43%	69 bp	0.0
+Pli-AMvi_068-Ex1-1E-lcwgs-X-1.clmp.r1	4.8%	45%	100 bp	0.0
+Pli-AMvi_068-Ex1-1E-lcwgs-X-1.clmp.r2	8.7%	46%	99 bp	0.0
+Pli-AMvi_069-Ex1-12E-lcwgs-X-1.clmp.r1	9.6%	59%	146 bp	0.5
+Pli-AMvi_069-Ex1-12E-lcwgs-X-1.clmp.r2	6.9%	59%	145 bp	0.5
+Pli-AMvi_070-Ex1-1G-lcwgs-X-1.clmp.r1	16.3%	57%	144 bp	1.4
+Pli-AMvi_070-Ex1-1G-lcwgs-X-1.clmp.r2	11.6%	57%	143 bp	1.4
+Pli-AMvi_071-Ex1-2G-lcwgs-X-1.clmp.r1	18.0%	56%	145 bp	1.3
+Pli-AMvi_071-Ex1-2G-lcwgs-X-1.clmp.r2	12.8%	56%	144 bp	1.3
+Pli-AMvi_072-Ex1-3G-lcwgs-X-1.clmp.r1	0.9%	43%	80 bp	0.0
+Pli-AMvi_072-Ex1-3G-lcwgs-X-1.clmp.r2	2.3%	43%	80 bp	0.0
+Pli-AMvi_073-Ex1-4G-lcwgs-X-1.clmp.r1	2.2%	45%	72 bp	0.0
+Pli-AMvi_073-Ex1-4G-lcwgs-X-1.clmp.r2	3.2%	45%	72 bp	0.0
+Pli-AMvi_074-Ex1-5G-lcwgs-X-1.clmp.r1	1.6%	44%	91 bp	0.0
+Pli-AMvi_074-Ex1-5G-lcwgs-X-1.clmp.r2	4.7%	45%	91 bp	0.0
+Pli-AMvi_075-Ex1-6G-lcwgs-X-1.clmp.r1	4.4%	50%	101 bp	0.5
+Pli-AMvi_075-Ex1-6G-lcwgs-X-1.clmp.r2	3.4%	50%	101 bp	0.5
+Pli-AMvi_076-Ex1-7F-lcwgs-X-1.clmp.r1	2.2%	46%	57 bp	0.0
+Pli-AMvi_076-Ex1-7F-lcwgs-X-1.clmp.r2	1.6%	46%	57 bp	0.0
+Pli-AMvi_077-Ex1-8F-lcwgs-X-1.clmp.r1	2.5%	45%	77 bp	0.0
+Pli-AMvi_077-Ex1-8F-lcwgs-X-1.clmp.r2	4.1%	45%	77 bp	0.0
+Pli-AMvi_078-Ex1-9F-lcwgs-X-1.clmp.r1	2.2%	44%	92 bp	0.0
+Pli-AMvi_078-Ex1-9F-lcwgs-X-1.clmp.r2	4.9%	45%	92 bp	0.0
+Pli-AMvi_079-Ex1-10F-lcwgs-X-1.clmp.r1	2.5%	44%	96 bp	0.0
+Pli-AMvi_079-Ex1-10F-lcwgs-X-1.clmp.r2	5.3%	45%	96 bp	0.0
+Pli-AMvi_080-Ex1-11F-lcwgs-X-1.clmp.r1	1.9%	43%	84 bp	0.0
+Pli-AMvi_080-Ex1-11F-lcwgs-X-1.clmp.r2	3.7%	43%	84 bp	0.0
+Pli-AMvi_081-Ex1-12F-lcwgs-X-1.clmp.r1	11.2%	56%	147 bp	0.2
+Pli-AMvi_081-Ex1-12F-lcwgs-X-1.clmp.r2	7.4%	56%	146 bp	0.2
+Pli-AMvi_082-Ex1-1H-lcwgs-X-1.clmp.r1	2.1%	46%	73 bp	2.1
+Pli-AMvi_082-Ex1-1H-lcwgs-X-1.clmp.r2	1.8%	46%	73 bp	2.1
+Pli-AMvi_083-Ex1-2H-lcwgs-X-1.clmp.r1	0.9%	41%	61 bp	2.3
+Pli-AMvi_083-Ex1-2H-lcwgs-X-1.clmp.r2	0.8%	41%	61 bp	2.3
+Pli-AMvi_084-Ex1-3H-lcwgs-X-1.clmp.r1	3.1%	47%	75 bp	1.4
+Pli-AMvi_084-Ex1-3H-lcwgs-X-1.clmp.r2	2.9%	47%	75 bp	1.4
+Pli-AMvi_085-Ex1-4H-lcwgs-X-1.clmp.r1	1.5%	42%	60 bp	0.4
+Pli-AMvi_085-Ex1-4H-lcwgs-X-1.clmp.r2	1.5%	42%	60 bp	0.4
+Pli-AMvi_086-Ex1-5H-lcwgs-X-1.clmp.r1	1.1%	43%	71 bp	1.0
+Pli-AMvi_086-Ex1-5H-lcwgs-X-1.clmp.r2	1.0%	43%	71 bp	1.0
+Pli-AMvi_087-Ex1-6H-lcwgs-X-1.clmp.r1	2.7%	50%	88 bp	0.8
+Pli-AMvi_087-Ex1-6H-lcwgs-X-1.clmp.r2	2.3%	51%	88 bp	0.8
+Pli-AMvi_088-Ex1-7G-lcwgs-X-1.clmp.r1	2.8%	48%	91 bp	0.7
+Pli-AMvi_088-Ex1-7G-lcwgs-X-1.clmp.r2	2.4%	48%	91 bp	0.7
+Pli-AMvi_089-Ex1-8G-lcwgs-X-1.clmp.r1	1.6%	44%	90 bp	0.0
+Pli-AMvi_089-Ex1-8G-lcwgs-X-1.clmp.r2	3.9%	44%	90 bp	0.0
+Pli-AMvi_090-Ex1-9G-lcwgs-X-1.clmp.r1	1.6%	45%	94 bp	0.0
+Pli-AMvi_090-Ex1-9G-lcwgs-X-1.clmp.r2	3.7%	45%	93 bp	0.0
+Pli-AMvi_091-Ex1-10G-lcwgs-X-1.clmp.r1	1.9%	45%	98 bp	0.0
+Pli-AMvi_091-Ex1-10G-lcwgs-X-1.clmp.r2	4.3%	45%	97 bp	0.0
+Pli-AMvi_092-Ex1-11G-lcwgs-X-1.clmp.r1	2.4%	43%	84 bp	0.0
+Pli-AMvi_092-Ex1-11G-lcwgs-X-1.clmp.r2	4.0%	44%	84 bp	0.0
+Pli-AMvi_093-Ex1-12G-lcwgs-X-1.clmp.r1	19.5%	57%	147 bp	0.5
+Pli-AMvi_093-Ex1-12G-lcwgs-X-1.clmp.r2	13.4%	57%	146 bp	0.5
+Pli-AMvi_094-Ex1-7H-lcwgs-X-1.clmp.r1	1.1%	43%	62 bp	0.5
+Pli-AMvi_094-Ex1-7H-lcwgs-X-1.clmp.r2	1.1%	43%	62 bp	0.5
+Pli-AMvi_095-Ex1-8H-lcwgs-X-1.clmp.r1	2.3%	47%	54 bp	0.3
+Pli-AMvi_095-Ex1-8H-lcwgs-X-1.clmp.r2	2.1%	47%	55 bp	0.3
+Pli-AMvi_096-Ex1-9H-lcwgs-X-1.clmp.r1	3.4%	44%	77 bp	0.0
+Pli-AMvi_096-Ex1-9H-lcwgs-X-1.clmp.r2	5.7%	45%	77 bp	0.0
+Pli-AMvi_097-Ex1-10H-lcwgs-X-1.clmp.r1	2.7%	43%	80 bp	0.0
+Pli-AMvi_097-Ex1-10H-lcwgs-X-1.clmp.r2	4.5%	44%	80 bp	0.0
+Pli-AMvi_098-Ex1-11H-lcwgs-X-1.clmp.r1	1.4%	43%	83 bp	0.0
+Pli-AMvi_098-Ex1-11H-lcwgs-X-1.clmp.r2	2.9%	43%	83 bp	0.0
+Pli-AMvi_099-Ex1-12H-lcwgs-X-1.clmp.r1	23.2%	55%	145 bp	0.9
+Pli-AMvi_099-Ex1-12H-lcwgs-X-1.clmp.r2	15.8%	55%	145 bp	0.9
+Pli-CMvi_001-Ex1-1B-lcwgs-1-1.clmp.r1	7.1%	42%	143 bp	4.0
+Pli-CMvi_001-Ex1-1B-lcwgs-1-1.clmp.r2	6.8%	42%	143 bp	4.0
+Pli-CMvi_002-Ex1-2A-lcwgs-1-1.clmp.r1	6.4%	42%	140 bp	5.5
+Pli-CMvi_002-Ex1-2A-lcwgs-1-1.clmp.r2	6.5%	42%	139 bp	5.5
+Pli-CMvi_003-Ex1-2G-lcwgs-X-1.clmp.r1	3.7%	42%	135 bp	0.6
+Pli-CMvi_003-Ex1-2G-lcwgs-X-1.clmp.r2	3.1%	42%	134 bp	0.6
+Pli-CMvi_004-Ex1-3F-lcwgs-1-1.clmp.r1	7.2%	42%	142 bp	5.3
+Pli-CMvi_004-Ex1-3F-lcwgs-1-1.clmp.r2	7.1%	42%	141 bp	5.3
+Pli-CMvi_005-Ex1-4C-lcwgs-X-1.clmp.r1	0.6%	42%	122 bp	0.0
+Pli-CMvi_005-Ex1-4C-lcwgs-X-1.clmp.r2	0.3%	42%	122 bp	0.0
+Pli-CMvi_006-Ex1-5A-lcwgs-X-1.clmp.r1	1.2%	42%	125 bp	0.1
+Pli-CMvi_006-Ex1-5A-lcwgs-X-1.clmp.r2	0.8%	43%	124 bp	0.1
+Pli-CMvi_007-Ex1-5G-lcwgs-1-1.clmp.r1	6.4%	42%	137 bp	2.8
+Pli-CMvi_007-Ex1-5G-lcwgs-1-1.clmp.r2	5.9%	42%	136 bp	2.8
+Pli-CMvi_013-Ex1-1C-lcwgs-X-1.clmp.r1	8.6%	43%	147 bp	2.5
+Pli-CMvi_013-Ex1-1C-lcwgs-X-1.clmp.r2	7.7%	43%	147 bp	2.5
+Pli-CMvi_014-Ex1-2B-lcwgs-X-1.clmp.r1	1.2%	42%	126 bp	0.0
+Pli-CMvi_014-Ex1-2B-lcwgs-X-1.clmp.r2	0.7%	42%	126 bp	0.0
+Pli-CMvi_015-Ex1-2H-lcwgs-X-1.clmp.r1	6.1%	42%	141 bp	2.0
+Pli-CMvi_015-Ex1-2H-lcwgs-X-1.clmp.r2	5.7%	43%	140 bp	2.0
+Pli-CMvi_020-Ex1-6D-lcwgs-X-1.clmp.r1	8.9%	42%	141 bp	4.1
+Pli-CMvi_020-Ex1-6D-lcwgs-X-1.clmp.r2	8.3%	43%	140 bp	4.1
+Pli-CMvi_021-Ex1-6G-lcwgs-X-1.clmp.r1	4.8%	42%	144 bp	0.8
+Pli-CMvi_021-Ex1-6G-lcwgs-X-1.clmp.r2	4.3%	42%	143 bp	0.8
+Pli-CMvi_022-Ex1-7B-lcwgs-X-1.clmp.r1	2.4%	42%	130 bp	0.1
+Pli-CMvi_022-Ex1-7B-lcwgs-X-1.clmp.r2	1.8%	42%	130 bp	0.1
+Pli-CMvi_023-Ex1-7F-lcwgs-X-1.clmp.r1	3.8%	42%	134 bp	1.2
+Pli-CMvi_023-Ex1-7F-lcwgs-X-1.clmp.r2	3.4%	42%	134 bp	1.2
+Pli-CMvi_025-Ex1-1D-lcwgs-X-1.clmp.r1	3.6%	43%	135 bp	0.1
+Pli-CMvi_025-Ex1-1D-lcwgs-X-1.clmp.r2	2.6%	43%	135 bp	0.1
+Pli-CMvi_028-Ex1-3G-lcwgs-X-1.clmp.r1	8.0%	42%	144 bp	2.9
+Pli-CMvi_028-Ex1-3G-lcwgs-X-1.clmp.r2	7.4%	43%	144 bp	2.9
+Pli-CMvi_030-Ex1-5B-lcwgs-X-1.clmp.r1	0.9%	42%	128 bp	0.0
+Pli-CMvi_030-Ex1-5B-lcwgs-X-1.clmp.r2	0.5%	42%	128 bp	0.0
+Pli-CMvi_031-Ex1-5H-lcwgs-X-1.clmp.r1	7.4%	43%	137 bp	2.6
+Pli-CMvi_031-Ex1-5H-lcwgs-X-1.clmp.r2	7.0%	43%	137 bp	2.6
+Pli-CMvi_034-Ex1-7C-lcwgs-X-1.clmp.r1	2.1%	42%	126 bp	0.2
+Pli-CMvi_034-Ex1-7C-lcwgs-X-1.clmp.r2	1.9%	42%	126 bp	0.2
+Pli-CMvi_037-Ex1-1E-lcwgs-X-1.clmp.r1	8.2%	42%	147 bp	2.6
+Pli-CMvi_037-Ex1-1E-lcwgs-X-1.clmp.r2	7.1%	43%	146 bp	2.6
+Pli-CMvi_038-Ex1-2C-lcwgs-X-1.clmp.r1	3.7%	42%	135 bp	0.1
+Pli-CMvi_038-Ex1-2C-lcwgs-X-1.clmp.r2	2.7%	42%	135 bp	0.1
+Pli-CMvi_039-Ex1-3A-lcwgs-X-1.clmp.r1	7.2%	43%	142 bp	3.4
+Pli-CMvi_039-Ex1-3A-lcwgs-X-1.clmp.r2	6.6%	43%	142 bp	3.4
+Pli-CMvi_040-Ex1-3H-lcwgs-1-1.clmp.r1	6.8%	42%	142 bp	4.0
+Pli-CMvi_040-Ex1-3H-lcwgs-1-1.clmp.r2	6.5%	42%	141 bp	4.0
+Pli-CMvi_041-Ex1-4E-lcwgs-1-1.clmp.r1	6.4%	42%	140 bp	3.6
+Pli-CMvi_041-Ex1-4E-lcwgs-1-1.clmp.r2	6.3%	42%	140 bp	3.6
+Pli-CMvi_042-Ex1-5C-lcwgs-X-1.clmp.r1	7.0%	42%	145 bp	4.7
+Pli-CMvi_042-Ex1-5C-lcwgs-X-1.clmp.r2	7.0%	43%	144 bp	4.7
+Pli-CMvi_047-Ex1-7G-lcwgs-X-1.clmp.r1	3.7%	42%	135 bp	0.9
+Pli-CMvi_047-Ex1-7G-lcwgs-X-1.clmp.r2	3.2%	42%	135 bp	0.9
+Pli-CMvi_049-Ex1-1F-lcwgs-1-1.clmp.r1	7.2%	42%	144 bp	5.7
+Pli-CMvi_049-Ex1-1F-lcwgs-1-1.clmp.r2	7.2%	42%	143 bp	5.7
+Pli-CMvi_051-Ex1-3B-lcwgs-X-1.clmp.r1	8.1%	42%	142 bp	7.1
+Pli-CMvi_051-Ex1-3B-lcwgs-X-1.clmp.r2	8.2%	43%	142 bp	7.1
+Pli-CMvi_053-Ex1-4F-lcwgs-X-1.clmp.r1	3.0%	42%	137 bp	0.3
+Pli-CMvi_053-Ex1-4F-lcwgs-X-1.clmp.r2	2.5%	42%	137 bp	0.3
+Pli-CMvi_054-Ex1-5D-lcwgs-X-1.clmp.r1	5.8%	42%	139 bp	2.7
+Pli-CMvi_054-Ex1-5D-lcwgs-X-1.clmp.r2	5.7%	42%	139 bp	2.7
+Pli-CMvi_059-Ex1-7H-lcwgs-X-1.clmp.r1	6.1%	42%	141 bp	2.4
+Pli-CMvi_059-Ex1-7H-lcwgs-X-1.clmp.r2	5.7%	42%	141 bp	2.4
+Pli-CMvi_060-Ex1-8F-lcwgs-X-1.clmp.r1	4.0%	42%	140 bp	0.1
+Pli-CMvi_060-Ex1-8F-lcwgs-X-1.clmp.r2	2.9%	42%	140 bp	0.1
+Pli-CMvi_062-Ex1-2D-lcwgs-1-1.clmp.r1	6.0%	42%	138 bp	5.2
+Pli-CMvi_062-Ex1-2D-lcwgs-1-1.clmp.r2	6.2%	42%	137 bp	5.2
+Pli-CMvi_063-Ex1-3C-lcwgs-1-1.clmp.r1	7.2%	42%	144 bp	3.6
+Pli-CMvi_063-Ex1-3C-lcwgs-1-1.clmp.r2	6.8%	42%	143 bp	3.6
+Pli-CMvi_064-Ex1-4A-lcwgs-1-1.clmp.r1	7.5%	43%	146 bp	4.9
+Pli-CMvi_064-Ex1-4A-lcwgs-1-1.clmp.r2	7.4%	43%	145 bp	4.9
+Pli-CMvi_065-Ex1-4G-lcwgs-X-1.clmp.r1	3.0%	42%	134 bp	0.2
+Pli-CMvi_065-Ex1-4G-lcwgs-X-1.clmp.r2	2.4%	42%	134 bp	0.2
+Pli-CMvi_066-Ex1-5E-lcwgs-1-1.clmp.r1	9.2%	43%	144 bp	7.0
+Pli-CMvi_066-Ex1-5E-lcwgs-1-1.clmp.r2	9.5%	43%	144 bp	7.0
+Pli-CMvi_070-Ex1-7D-lcwgs-X-1.clmp.r1	2.2%	42%	129 bp	0.1
+Pli-CMvi_070-Ex1-7D-lcwgs-X-1.clmp.r2	1.5%	42%	128 bp	0.1
+Pli-CMvi_071-Ex1-8A-lcwgs-X-1.clmp.r1	1.4%	43%	128 bp	0.0
+Pli-CMvi_071-Ex1-8A-lcwgs-X-1.clmp.r2	1.0%	43%	127 bp	0.0
+Pli-CMvi_072-Ex1-8G-lcwgs-X-1.clmp.r1	4.7%	42%	142 bp	0.6
+Pli-CMvi_072-Ex1-8G-lcwgs-X-1.clmp.r2	3.8%	42%	142 bp	0.6
+Pli-CMvi_073-Ex1-1G-lcwgs-X-1.clmp.r1	10.7%	43%	143 bp	4.1
+Pli-CMvi_073-Ex1-1G-lcwgs-X-1.clmp.r2	10.5%	44%	142 bp	4.1
+Pli-CMvi_074-Ex1-2E-lcwgs-X-1.clmp.r1	4.8%	42%	136 bp	0.2
+Pli-CMvi_074-Ex1-2E-lcwgs-X-1.clmp.r2	3.8%	42%	136 bp	0.2
+Pli-CMvi_075-Ex1-3D-lcwgs-X-1.clmp.r1	2.3%	42%	129 bp	0.3
+Pli-CMvi_075-Ex1-3D-lcwgs-X-1.clmp.r2	1.9%	42%	129 bp	0.3
+Pli-CMvi_076-Ex1-4B-lcwgs-X-1.clmp.r1	1.6%	42%	129 bp	0.0
+Pli-CMvi_076-Ex1-4B-lcwgs-X-1.clmp.r2	1.1%	42%	129 bp	0.0
+Pli-CMvi_078-Ex1-5F-lcwgs-X-1.clmp.r1	1.1%	42%	134 bp	0.0
+Pli-CMvi_078-Ex1-5F-lcwgs-X-1.clmp.r2	0.8%	42%	134 bp	0.0
+Pli-CMvi_082-Ex1-7E-lcwgs-X-1.clmp.r1	3.6%	42%	133 bp	0.1
+Pli-CMvi_082-Ex1-7E-lcwgs-X-1.clmp.r2	2.8%	42%	133 bp	0.1
+Pli-CMvi_083-Ex1-8B-lcwgs-X-1.clmp.r1	3.7%	42%	139 bp	0.0
+Pli-CMvi_083-Ex1-8B-lcwgs-X-1.clmp.r2	2.5%	42%	138 bp	0.0
+Pli-CMvi_084-Ex1-8H-lcwgs-X-1.clmp.r1	3.8%	42%	133 bp	0.7
+Pli-CMvi_084-Ex1-8H-lcwgs-X-1.clmp.r2	3.1%	42%	132 bp	0.7
+Pli-CMvi_085-Ex1-1H-lcwgs-X-1.clmp.r1	6.9%	42%	142 bp	3.8
+Pli-CMvi_085-Ex1-1H-lcwgs-X-1.clmp.r2	6.6%	42%	141 bp	3.8
+Pli-CMvi_086-Ex1-2F-lcwgs-X-1.clmp.r1	7.5%	42%	145 bp	3.8
+Pli-CMvi_086-Ex1-2F-lcwgs-X-1.clmp.r2	6.9%	43%	145 bp	3.8
+Pli-CMvi_087-Ex1-3E-lcwgs-X-1.clmp.r1	7.4%	42%	145 bp	5.3
+Pli-CMvi_087-Ex1-3E-lcwgs-X-1.clmp.r2	7.1%	43%	145 bp	5.3
+Pli-CMvi_089-Ex1-4H-lcwgs-X-1.clmp.r1	5.9%	42%	142 bp	2.1
+Pli-CMvi_089-Ex1-4H-lcwgs-X-1.clmp.r2	5.5%	42%	142 bp	2.1
+Pli-CMvi_093-Ex1-7A-lcwgs-X-1.clmp.r1	0.6%	42%	120 bp	0.0
+Pli-CMvi_093-Ex1-7A-lcwgs-X-1.clmp.r2	0.4%	42%	120 bp	0.0
+Pli-CMvi_095-Ex1-8C-lcwgs-X-1.clmp.r1	0.7%	42%	126 bp	0.0
+Pli-CMvi_095-Ex1-8C-lcwgs-X-1.clmp.r2	0.4%	42%	126 bp	0.0
 ```
   
 </p>
 </details>
 
 ## 10. Second trim.
-TBD
+`sbatch ../../pire_fq_gz_processing/runFASTP_2.sbatch fq_fp1_clmp fq_fp1_clmp_fp2 33`
 
 <details><summary>Expand for MultiQC Output.</summary>
 
 ```bash
-TBD
+Sample Name	% Duplication	GC content	% PF	% Adapter
+Pli-AMvi_004-Ex1-1A-lcwgs-X-1.clmp.r1r2_fastp	2.6%	51.0%	96.8%	2.6%
+Pli-AMvi_005-Ex1-2A-lcwgs-X-1.clmp.r1r2_fastp	0.3%	44.9%	96.5%	1.8%
+Pli-AMvi_006-Ex1-3A-lcwgs-X-1.clmp.r1r2_fastp	0.2%	43.2%	97.4%	2.1%
+Pli-AMvi_007-Ex1-4A-lcwgs-X-1.clmp.r1r2_fastp	1.1%	40.1%	98.7%	1.6%
+Pli-AMvi_008-Ex1-1B-lcwgs-X-1.clmp.r1r2_fastp	1.5%	41.9%	96.1%	3.1%
+Pli-AMvi_009-Ex1-2B-lcwgs-X-1.clmp.r1r2_fastp	0.2%	44.8%	96.7%	2.1%
+Pli-AMvi_010-Ex1-7A-lcwgs-X-1.clmp.r1r2_fastp	2.4%	46.6%	98.7%	1.3%
+Pli-AMvi_011-Ex1-8A-lcwgs-X-1.clmp.r1r2_fastp	3.6%	46.8%	98.5%	1.3%
+Pli-AMvi_012-Ex1-9A-lcwgs-X-1.clmp.r1r2_fastp	3.1%	44.6%	98.7%	1.3%
+Pli-AMvi_013-Ex1-10A-lcwgs-X-1.clmp.r1r2_fastp	1.2%	39.1%	97.8%	2.3%
+Pli-AMvi_014-Ex1-11A-lcwgs-X-1.clmp.r1r2_fastp	2.6%	45.5%	84.9%	9.7%
+Pli-AMvi_015-Ex1-12A-lcwgs-X-1.clmp.r1r2_fastp	0.8%	48.1%	93.9%	1.9%
+Pli-AMvi_016-Ex1-3B-lcwgs-X-1.clmp.r1r2_fastp	0.7%	42.3%	99.1%	1.6%
+Pli-AMvi_017-Ex1-4B-lcwgs-X-1.clmp.r1r2_fastp	0.7%	41.3%	98.7%	1.5%
+Pli-AMvi_018-Ex1-1C-lcwgs-X-1.clmp.r1r2_fastp	0.8%	44.2%	98.2%	1.6%
+Pli-AMvi_019-Ex1-2C-lcwgs-X-1.clmp.r1r2_fastp	0.4%	43.8%	98.4%	1.8%
+Pli-AMvi_020-Ex1-3C-lcwgs-X-1.clmp.r1r2_fastp	0.4%	44.2%	95.1%	3.9%
+Pli-AMvi_021-Ex1-4C-lcwgs-X-1.clmp.r1r2_fastp	0.5%	42.7%	98.7%	2.3%
+Pli-AMvi_022-Ex1-7B-lcwgs-X-1.clmp.r1r2_fastp	6.9%	51.6%	97.4%	0.9%
+Pli-AMvi_023-Ex1-8B-lcwgs-X-1.clmp.r1r2_fastp	1.9%	44.9%	98.8%	1.4%
+Pli-AMvi_024-Ex1-9B-lcwgs-X-1.clmp.r1r2_fastp	8.9%	50.0%	97.8%	0.9%
+Pli-AMvi_025-Ex1-10B-lcwgs-X-1.clmp.r1r2_fastp	0.8%	39.9%	98.7%	1.5%
+Pli-AMvi_026-Ex1-11B-lcwgs-X-1.clmp.r1r2_fastp	1.0%	41.6%	99.1%	1.6%
+Pli-AMvi_027-Ex1-12B-lcwgs-X-1.clmp.r1r2_fastp	0.2%	47.9%	94.9%	2.1%
+Pli-AMvi_028-Ex1-1D-lcwgs-X-1.clmp.r1r2_fastp	0.3%	46.3%	97.8%	1.8%
+Pli-AMvi_029-Ex1-2D-lcwgs-X-1.clmp.r1r2_fastp	0.9%	41.9%	98.8%	1.7%
+Pli-AMvi_030-Ex1-3D-lcwgs-X-1.clmp.r1r2_fastp	0.6%	43.3%	97.4%	2.7%
+Pli-AMvi_031-Ex1-4D-lcwgs-X-1.clmp.r1r2_fastp	0.5%	45.6%	97.1%	1.7%
+Pli-AMvi_032-Ex1-5C-lcwgs-X-1.clmp.r1r2_fastp	0.8%	42.4%	99.2%	1.7%
+Pli-AMvi_033-Ex1-6C-lcwgs-X-1.clmp.r1r2_fastp	0.7%	43.7%	99.3%	1.8%
+Pli-AMvi_034-Ex1-7C-lcwgs-X-1.clmp.r1r2_fastp	0.3%	45.5%	97.4%	1.8%
+Pli-AMvi_035-Ex1-8C-lcwgs-X-1.clmp.r1r2_fastp	0.5%	42.3%	99.1%	1.6%
+Pli-AMvi_036-Ex1-9C-lcwgs-X-1.clmp.r1r2_fastp	12.7%	47.8%	97.3%	0.7%
+Pli-AMvi_037-Ex1-10C-lcwgs-X-1.clmp.r1r2_fastp	1.0%	38.6%	99.0%	1.7%
+Pli-AMvi_038-Ex1-11C-lcwgs-X-1.clmp.r1r2_fastp	1.1%	43.6%	98.6%	1.7%
+Pli-AMvi_039-Ex1-12C-lcwgs-X-1.clmp.r1r2_fastp	17.5%	57.4%	96.3%	0.2%
+Pli-AMvi_040-Ex1-5A-lcwgs-X-1.clmp.r1r2_fastp	3.1%	46.7%	98.6%	1.2%
+Pli-AMvi_041-Ex1-6A-lcwgs-X-1.clmp.r1r2_fastp	2.1%	43.6%	98.9%	1.4%
+Pli-AMvi_042-Ex1-5B-lcwgs-X-1.clmp.r1r2_fastp	0.3%	44.9%	96.7%	1.4%
+Pli-AMvi_043-Ex1-6B-lcwgs-X-1.clmp.r1r2_fastp	3.7%	50.1%	98.5%	1.1%
+Pli-AMvi_044-Ex1-5D-lcwgs-X-1.clmp.r1r2_fastp	0.5%	44.4%	99.3%	1.6%
+Pli-AMvi_045-Ex1-6D-lcwgs-X-1.clmp.r1r2_fastp	0.7%	46.4%	98.1%	1.5%
+Pli-AMvi_046-Ex1-1E-lcwgs-X-1.clmp.r1r2_fastp	1.4%	45.2%	99.0%	1.4%
+Pli-AMvi_047-Ex1-2E-lcwgs-X-1.clmp.r1r2_fastp	0.8%	40.6%	97.8%	2.4%
+Pli-AMvi_048-Ex1-3E-lcwgs-X-1.clmp.r1r2_fastp	0.1%	42.6%	97.9%	1.5%
+Pli-AMvi_049-Ex1-4E-lcwgs-X-1.clmp.r1r2_fastp	0.4%	44.7%	97.5%	1.7%
+Pli-AMvi_050-Ex1-5E-lcwgs-X-1.clmp.r1r2_fastp	0.1%	44.1%	97.0%	1.2%
+Pli-AMvi_051-Ex1-6E-lcwgs-X-1.clmp.r1r2_fastp	0.9%	46.7%	97.9%	1.7%
+Pli-AMvi_052-Ex1-7D-lcwgs-X-1.clmp.r1r2_fastp	0.8%	42.7%	99.0%	1.7%
+Pli-AMvi_053-Ex1-8D-lcwgs-X-1.clmp.r1r2_fastp	0.4%	43.7%	97.0%	1.7%
+Pli-AMvi_054-Ex1-9D-lcwgs-X-1.clmp.r1r2_fastp	0.5%	44.4%	96.9%	3.1%
+Pli-AMvi_055-Ex1-10D-lcwgs-X-1.clmp.r1r2_fastp	0.5%	41.8%	97.6%	2.6%
+Pli-AMvi_056-Ex1-11D-lcwgs-X-1.clmp.r1r2_fastp	0.2%	43.3%	97.6%	1.9%
+Pli-AMvi_057-Ex1-12D-lcwgs-X-1.clmp.r1r2_fastp	0.4%	48.1%	95.5%	1.3%
+Pli-AMvi_058-Ex1-1F-lcwgs-X-1.clmp.r1r2_fastp	16.5%	57.9%	96.3%	0.2%
+Pli-AMvi_059-Ex1-2F-lcwgs-X-1.clmp.r1r2_fastp	0.2%	44.3%	97.6%	1.5%
+Pli-AMvi_060-Ex1-3F-lcwgs-X-1.clmp.r1r2_fastp	0.2%	43.1%	98.1%	1.9%
+Pli-AMvi_061-Ex1-4F-lcwgs-X-1.clmp.r1r2_fastp	0.2%	45.0%	97.6%	1.9%
+Pli-AMvi_062-Ex1-5F-lcwgs-X-1.clmp.r1r2_fastp	0.3%	44.9%	97.4%	1.8%
+Pli-AMvi_063-Ex1-6F-lcwgs-X-1.clmp.r1r2_fastp	0.6%	45.7%	98.2%	1.6%
+Pli-AMvi_064-Ex1-7E-lcwgs-X-1.clmp.r1r2_fastp	0.8%	42.4%	99.1%	1.6%
+Pli-AMvi_065-Ex1-8E-lcwgs-X-1.clmp.r1r2_fastp	0.7%	39.5%	99.2%	1.7%
+Pli-AMvi_066-Ex1-9E-lcwgs-X-1.clmp.r1r2_fastp	0.5%	43.9%	97.9%	1.4%
+Pli-AMvi_067-Ex1-10E-lcwgs-X-1.clmp.r1r2_fastp	0.6%	43.1%	96.8%	3.0%
+Pli-AMvi_068-Ex1-1E-lcwgs-X-1.clmp.r1r2_fastp	0.7%	45.8%	96.8%	0.7%
+Pli-AMvi_069-Ex1-12E-lcwgs-X-1.clmp.r1r2_fastp	11.7%	59.6%	96.9%	0.1%
+Pli-AMvi_070-Ex1-1G-lcwgs-X-1.clmp.r1r2_fastp	19.4%	57.3%	96.2%	0.3%
+Pli-AMvi_071-Ex1-2G-lcwgs-X-1.clmp.r1r2_fastp	21.6%	56.5%	96.1%	0.2%
+Pli-AMvi_072-Ex1-3G-lcwgs-X-1.clmp.r1r2_fastp	0.2%	43.0%	98.0%	2.3%
+Pli-AMvi_073-Ex1-4G-lcwgs-X-1.clmp.r1r2_fastp	0.4%	45.3%	98.3%	1.9%
+Pli-AMvi_074-Ex1-5G-lcwgs-X-1.clmp.r1r2_fastp	0.5%	44.7%	97.7%	2.0%
+Pli-AMvi_075-Ex1-6G-lcwgs-X-1.clmp.r1r2_fastp	5.1%	50.5%	97.7%	1.5%
+Pli-AMvi_076-Ex1-7F-lcwgs-X-1.clmp.r1r2_fastp	0.5%	46.1%	99.0%	1.6%
+Pli-AMvi_077-Ex1-8F-lcwgs-X-1.clmp.r1r2_fastp	0.4%	44.9%	97.9%	1.9%
+Pli-AMvi_078-Ex1-9F-lcwgs-X-1.clmp.r1r2_fastp	0.3%	44.5%	97.7%	1.6%
+Pli-AMvi_079-Ex1-10F-lcwgs-X-1.clmp.r1r2_fastp	0.8%	44.6%	97.8%	1.5%
+Pli-AMvi_080-Ex1-11F-lcwgs-X-1.clmp.r1r2_fastp	0.4%	42.9%	97.8%	2.0%
+Pli-AMvi_081-Ex1-12F-lcwgs-X-1.clmp.r1r2_fastp	11.7%	56.5%	96.4%	0.1%
+Pli-AMvi_082-Ex1-1H-lcwgs-X-1.clmp.r1r2_fastp	1.7%	46.4%	98.8%	1.7%
+Pli-AMvi_083-Ex1-2H-lcwgs-X-1.clmp.r1r2_fastp	0.6%	41.2%	99.2%	1.8%
+Pli-AMvi_084-Ex1-3H-lcwgs-X-1.clmp.r1r2_fastp	1.9%	46.9%	98.6%	1.9%
+Pli-AMvi_085-Ex1-4H-lcwgs-X-1.clmp.r1r2_fastp	0.6%	42.6%	98.0%	2.7%
+Pli-AMvi_086-Ex1-5H-lcwgs-X-1.clmp.r1r2_fastp	1.1%	43.3%	99.1%	1.5%
+Pli-AMvi_087-Ex1-6H-lcwgs-X-1.clmp.r1r2_fastp	2.6%	50.8%	98.6%	1.3%
+Pli-AMvi_088-Ex1-7G-lcwgs-X-1.clmp.r1r2_fastp	2.7%	47.9%	98.6%	1.3%
+Pli-AMvi_089-Ex1-8G-lcwgs-X-1.clmp.r1r2_fastp	0.2%	44.1%	97.6%	2.0%
+Pli-AMvi_090-Ex1-9G-lcwgs-X-1.clmp.r1r2_fastp	0.3%	44.9%	97.5%	1.4%
+Pli-AMvi_091-Ex1-10G-lcwgs-X-1.clmp.r1r2_fastp	0.5%	45.1%	97.4%	1.5%
+Pli-AMvi_092-Ex1-11G-lcwgs-X-1.clmp.r1r2_fastp	0.2%	43.3%	98.3%	1.6%
+Pli-AMvi_093-Ex1-12G-lcwgs-X-1.clmp.r1r2_fastp	21.7%	57.2%	95.9%	0.1%
+Pli-AMvi_094-Ex1-7H-lcwgs-X-1.clmp.r1r2_fastp	0.6%	43.7%	99.2%	1.8%
+Pli-AMvi_095-Ex1-8H-lcwgs-X-1.clmp.r1r2_fastp	0.5%	47.4%	97.5%	2.9%
+Pli-AMvi_096-Ex1-9H-lcwgs-X-1.clmp.r1r2_fastp	0.6%	44.1%	97.3%	2.0%
+Pli-AMvi_097-Ex1-10H-lcwgs-X-1.clmp.r1r2_fastp	0.3%	43.4%	97.5%	2.1%
+Pli-AMvi_098-Ex1-11H-lcwgs-X-1.clmp.r1r2_fastp	0.2%	42.9%	97.9%	2.2%
+Pli-AMvi_099-Ex1-12H-lcwgs-X-1.clmp.r1r2_fastp	26.9%	55.6%	95.7%	0.2%
+Pli-CMvi_001-Ex1-1B-lcwgs-1-1.clmp.r1r2_fastp	4.4%	42.7%	97.4%	0.3%
+Pli-CMvi_002-Ex1-2A-lcwgs-1-1.clmp.r1r2_fastp	3.7%	42.7%	97.7%	0.4%
+Pli-CMvi_003-Ex1-2G-lcwgs-X-1.clmp.r1r2_fastp	2.8%	42.2%	97.8%	0.5%
+Pli-CMvi_004-Ex1-3F-lcwgs-1-1.clmp.r1r2_fastp	4.6%	42.4%	97.6%	0.3%
+Pli-CMvi_005-Ex1-4C-lcwgs-X-1.clmp.r1r2_fastp	0.2%	42.6%	97.2%	1.2%
+Pli-CMvi_006-Ex1-5A-lcwgs-X-1.clmp.r1r2_fastp	0.5%	42.8%	97.3%	1.1%
+Pli-CMvi_007-Ex1-5G-lcwgs-1-1.clmp.r1r2_fastp	4.2%	42.4%	97.6%	0.5%
+Pli-CMvi_013-Ex1-1C-lcwgs-X-1.clmp.r1r2_fastp	5.8%	43.5%	96.7%	0.2%
+Pli-CMvi_014-Ex1-2B-lcwgs-X-1.clmp.r1r2_fastp	0.4%	42.4%	95.7%	2.5%
+Pli-CMvi_015-Ex1-2H-lcwgs-X-1.clmp.r1r2_fastp	3.5%	42.8%	97.5%	0.4%
+Pli-CMvi_020-Ex1-6D-lcwgs-X-1.clmp.r1r2_fastp	6.1%	43.0%	97.4%	0.5%
+Pli-CMvi_021-Ex1-6G-lcwgs-X-1.clmp.r1r2_fastp	3.2%	42.3%	97.5%	0.3%
+Pli-CMvi_022-Ex1-7B-lcwgs-X-1.clmp.r1r2_fastp	2.0%	42.1%	98.0%	0.8%
+Pli-CMvi_023-Ex1-7F-lcwgs-X-1.clmp.r1r2_fastp	2.9%	42.1%	98.1%	0.6%
+Pli-CMvi_025-Ex1-1D-lcwgs-X-1.clmp.r1r2_fastp	2.2%	43.2%	97.4%	0.7%
+Pli-CMvi_028-Ex1-3G-lcwgs-X-1.clmp.r1r2_fastp	5.8%	42.8%	97.3%	0.3%
+Pli-CMvi_030-Ex1-5B-lcwgs-X-1.clmp.r1r2_fastp	0.3%	42.6%	97.0%	1.0%
+Pli-CMvi_031-Ex1-5H-lcwgs-X-1.clmp.r1r2_fastp	5.1%	43.2%	97.4%	0.5%
+Pli-CMvi_034-Ex1-7C-lcwgs-X-1.clmp.r1r2_fastp	1.9%	42.2%	98.4%	0.9%
+Pli-CMvi_037-Ex1-1E-lcwgs-X-1.clmp.r1r2_fastp	5.9%	42.9%	96.6%	0.2%
+Pli-CMvi_038-Ex1-2C-lcwgs-X-1.clmp.r1r2_fastp	2.4%	42.4%	97.5%	0.6%
+Pli-CMvi_039-Ex1-3A-lcwgs-X-1.clmp.r1r2_fastp	4.3%	43.2%	97.4%	0.4%
+Pli-CMvi_040-Ex1-3H-lcwgs-1-1.clmp.r1r2_fastp	4.3%	42.6%	97.5%	0.3%
+Pli-CMvi_041-Ex1-4E-lcwgs-1-1.clmp.r1r2_fastp	3.5%	42.5%	97.6%	0.4%
+Pli-CMvi_042-Ex1-5C-lcwgs-X-1.clmp.r1r2_fastp	4.2%	42.7%	97.2%	0.2%
+Pli-CMvi_047-Ex1-7G-lcwgs-X-1.clmp.r1r2_fastp	2.9%	42.2%	97.9%	0.5%
+Pli-CMvi_049-Ex1-1F-lcwgs-1-1.clmp.r1r2_fastp	4.4%	42.6%	97.5%	0.3%
+Pli-CMvi_051-Ex1-3B-lcwgs-X-1.clmp.r1r2_fastp	4.7%	42.9%	97.4%	0.3%
+Pli-CMvi_053-Ex1-4F-lcwgs-X-1.clmp.r1r2_fastp	2.6%	42.2%	97.8%	0.5%
+Pli-CMvi_054-Ex1-5D-lcwgs-X-1.clmp.r1r2_fastp	3.3%	42.4%	97.7%	0.5%
+Pli-CMvi_059-Ex1-7H-lcwgs-X-1.clmp.r1r2_fastp	3.6%	42.6%	97.5%	0.4%
+Pli-CMvi_060-Ex1-8F-lcwgs-X-1.clmp.r1r2_fastp	3.0%	42.4%	97.5%	0.4%
+Pli-CMvi_062-Ex1-2D-lcwgs-1-1.clmp.r1r2_fastp	3.3%	42.4%	97.8%	0.5%
+Pli-CMvi_063-Ex1-3C-lcwgs-1-1.clmp.r1r2_fastp	4.1%	42.6%	97.4%	0.3%
+Pli-CMvi_064-Ex1-4A-lcwgs-1-1.clmp.r1r2_fastp	4.6%	43.0%	97.0%	0.2%
+Pli-CMvi_065-Ex1-4G-lcwgs-X-1.clmp.r1r2_fastp	2.4%	42.6%	97.8%	0.6%
+Pli-CMvi_066-Ex1-5E-lcwgs-1-1.clmp.r1r2_fastp	5.5%	43.1%	97.3%	0.3%
+Pli-CMvi_070-Ex1-7D-lcwgs-X-1.clmp.r1r2_fastp	1.6%	42.4%	98.0%	1.0%
+Pli-CMvi_071-Ex1-8A-lcwgs-X-1.clmp.r1r2_fastp	1.0%	43.0%	97.4%	1.1%
+Pli-CMvi_072-Ex1-8G-lcwgs-X-1.clmp.r1r2_fastp	3.7%	42.6%	97.4%	0.3%
+Pli-CMvi_073-Ex1-1G-lcwgs-X-1.clmp.r1r2_fastp	5.3%	43.9%	97.3%	0.3%
+Pli-CMvi_074-Ex1-2E-lcwgs-X-1.clmp.r1r2_fastp	2.3%	42.6%	97.4%	0.6%
+Pli-CMvi_075-Ex1-3D-lcwgs-X-1.clmp.r1r2_fastp	1.6%	42.4%	98.0%	0.8%
+Pli-CMvi_076-Ex1-4B-lcwgs-X-1.clmp.r1r2_fastp	1.0%	42.5%	97.4%	1.0%
+Pli-CMvi_078-Ex1-5F-lcwgs-X-1.clmp.r1r2_fastp	0.6%	42.5%	97.2%	0.8%
+Pli-CMvi_082-Ex1-7E-lcwgs-X-1.clmp.r1r2_fastp	2.4%	42.1%	97.8%	0.7%
+Pli-CMvi_083-Ex1-8B-lcwgs-X-1.clmp.r1r2_fastp	2.8%	42.4%	97.4%	0.6%
+Pli-CMvi_084-Ex1-8H-lcwgs-X-1.clmp.r1r2_fastp	2.9%	42.4%	97.7%	0.6%
+Pli-CMvi_085-Ex1-1H-lcwgs-X-1.clmp.r1r2_fastp	4.0%	42.6%	97.5%	0.3%
+Pli-CMvi_086-Ex1-2F-lcwgs-X-1.clmp.r1r2_fastp	4.8%	42.8%	97.1%	0.2%
+Pli-CMvi_087-Ex1-3E-lcwgs-X-1.clmp.r1r2_fastp	4.8%	42.8%	97.0%	0.2%
+Pli-CMvi_089-Ex1-4H-lcwgs-X-1.clmp.r1r2_fastp	3.6%	42.7%	97.4%	0.3%
+Pli-CMvi_093-Ex1-7A-lcwgs-X-1.clmp.r1r2_fastp	0.3%	42.6%	97.7%	1.4%
+Pli-CMvi_095-Ex1-8C-lcwgs-X-1.clmp.r1r2_fastp	0.4%	42.5%	97.3%	1.0%
 ```
 
 </p>
 </details>
 
 ## 11. Decontaminate files.
-TBD
+`bash ../../../pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2 fq_fp1_clmp_fp2_fqscrn 20`
 
 <details><summary>Expand for MultiQC Output.</summary>
 

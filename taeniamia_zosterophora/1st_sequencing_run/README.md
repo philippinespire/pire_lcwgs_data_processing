@@ -2,7 +2,7 @@
 Data downloaded from TAMUCC grid.
 
 ## 2. Proofread the decode files
-339 foward reads, 339 reverse reads, but 343 individuals in the decode file. INdividuals TzA0403001A, TzA0402801D, TzA0203701D, and TzA0200101A are in the decode file but their fq.gz files do not exist.
+339 forward reads, 339 reverse reads, but 343 individuals in the decode file. Individuals TzA0403001A, TzA0402801D, TzA0203701D, and TzA0200101A are in the decode file but their fq.gz files do not exist.
 
 Per Sharon, this is an error with the decode file and they were supposed to have been deleted.
 
@@ -1760,34 +1760,1068 @@ Tzo-CMvi_094-Ex1-8C-lcwgs-1-1	10.5%	40.4%	94.7%	23.2%
 `bash ../../../pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1 fq_fp1_clmp /scratch/hpc-0351 20`
 
 ### 9b. Check duplicate removal success.
-TBD
+"Clumpify Successfully worked on all samples"
 
 ### 9c. Generate metadata on deduplicated FASTQ files.
-TBD
+`sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1_clmp" "fqc_clmp_report"  "fq.gz"`
 
 <details><summary>Expand for MultiQC Output.</summary>
 
 ```bash
-TBD
+Sample Name	% Dups	% GC	Length	M Seqs
+Tzo-ABol_002-Ex1-2A-lcwgs-1-1.clmp.r1	2.0%	39%	93 bp	0.7
+Tzo-ABol_002-Ex1-2A-lcwgs-1-1.clmp.r2	1.3%	39%	93 bp	0.7
+Tzo-ABol_003-Ex1-3A-lcwgs-1-1.clmp.r1	2.4%	39%	98 bp	0.7
+Tzo-ABol_003-Ex1-3A-lcwgs-1-1.clmp.r2	1.5%	39%	98 bp	0.7
+Tzo-ABol_008-Ex1-8A-lcwgs-1-1.clmp.r1	3.0%	38%	100 bp	2.4
+Tzo-ABol_008-Ex1-8A-lcwgs-1-1.clmp.r2	2.1%	38%	100 bp	2.4
+Tzo-ABol_009-Ex1-9A-lcwgs-1-1.clmp.r1	3.9%	42%	105 bp	2.2
+Tzo-ABol_009-Ex1-9A-lcwgs-1-1.clmp.r2	3.0%	42%	105 bp	2.2
+Tzo-ABol_010-Ex1-10A-lcwgs-1-1.clmp.r1	2.4%	39%	94 bp	3.7
+Tzo-ABol_010-Ex1-10A-lcwgs-1-1.clmp.r2	1.6%	39%	94 bp	3.7
+Tzo-ABol_011-Ex1-11A-lcwgs-1-1.clmp.r1	0.3%	39%	99 bp	0.0
+Tzo-ABol_011-Ex1-11A-lcwgs-1-1.clmp.r2	0.2%	39%	99 bp	0.0
+Tzo-ABol_012-Ex1-12A-lcwgs-1-1.clmp.r1	2.0%	38%	93 bp	1.0
+Tzo-ABol_012-Ex1-12A-lcwgs-1-1.clmp.r2	1.4%	38%	93 bp	1.0
+Tzo-ABol_020-Ex1-8B-lcwgs-1-1.clmp.r1	2.9%	38%	95 bp	4.2
+Tzo-ABol_020-Ex1-8B-lcwgs-1-1.clmp.r2	2.0%	38%	95 bp	4.2
+Tzo-ABol_023-Ex1-11B-lcwgs-1-1.clmp.r1	3.0%	38%	97 bp	4.6
+Tzo-ABol_023-Ex1-11B-lcwgs-1-1.clmp.r2	2.2%	38%	97 bp	4.6
+Tzo-ABol_024-Ex1-12B-lcwgs-1-1.clmp.r1	0.5%	39%	99 bp	0.0
+Tzo-ABol_024-Ex1-12B-lcwgs-1-1.clmp.r2	0.2%	39%	99 bp	0.0
+Tzo-ABol_026-Ex1-2C-lcwgs-1-1.clmp.r1	2.4%	38%	93 bp	2.0
+Tzo-ABol_026-Ex1-2C-lcwgs-1-1.clmp.r2	1.7%	38%	93 bp	2.0
+Tzo-ABol_030-Ex1-6C-lcwgs-1-1.clmp.r1	2.5%	38%	93 bp	4.3
+Tzo-ABol_030-Ex1-6C-lcwgs-1-1.clmp.r2	1.7%	38%	93 bp	4.3
+Tzo-ABol_034-Ex1-10C-lcwgs-1-1.clmp.r1	2.4%	39%	93 bp	4.2
+Tzo-ABol_034-Ex1-10C-lcwgs-1-1.clmp.r2	1.7%	39%	93 bp	4.2
+Tzo-ABol_035-Ex1-11C-lcwgs-1-1.clmp.r1	1.5%	38%	93 bp	0.2
+Tzo-ABol_035-Ex1-11C-lcwgs-1-1.clmp.r2	1.0%	38%	93 bp	0.2
+Tzo-ABol_036-Ex1-12C-lcwgs-1-1.clmp.r1	2.9%	40%	93 bp	4.9
+Tzo-ABol_036-Ex1-12C-lcwgs-1-1.clmp.r2	2.1%	40%	94 bp	4.9
+Tzo-ABol_038-Ex1-2D-lcwgs-1-1.clmp.r1	2.9%	39%	99 bp	2.6
+Tzo-ABol_038-Ex1-2D-lcwgs-1-1.clmp.r2	2.1%	39%	99 bp	2.6
+Tzo-ABol_043-Ex1-7D-lcwgs-1-1.clmp.r1	2.0%	39%	90 bp	2.5
+Tzo-ABol_043-Ex1-7D-lcwgs-1-1.clmp.r2	1.3%	39%	90 bp	2.5
+Tzo-ABol_044-Ex1-8D-lcwgs-1-1.clmp.r1	5.3%	43%	98 bp	4.3
+Tzo-ABol_044-Ex1-8D-lcwgs-1-1.clmp.r2	4.0%	43%	98 bp	4.3
+Tzo-ABol_045-Ex1-9D-lcwgs-1-1.clmp.r1	2.0%	39%	88 bp	2.7
+Tzo-ABol_045-Ex1-9D-lcwgs-1-1.clmp.r2	1.3%	39%	88 bp	2.7
+Tzo-ABol_046-Ex1-10D-lcwgs-1-1.clmp.r1	1.6%	40%	87 bp	0.9
+Tzo-ABol_046-Ex1-10D-lcwgs-1-1.clmp.r2	1.0%	40%	87 bp	0.9
+Tzo-ABol_047-Ex1-11D-lcwgs-1-1.clmp.r1	3.0%	39%	97 bp	4.1
+Tzo-ABol_047-Ex1-11D-lcwgs-1-1.clmp.r2	2.2%	39%	97 bp	4.1
+Tzo-ABol_048-Ex1-12D-lcwgs-1-1.clmp.r1	2.0%	38%	96 bp	1.0
+Tzo-ABol_048-Ex1-12D-lcwgs-1-1.clmp.r2	1.4%	38%	96 bp	1.0
+Tzo-ABol_050-Ex1-2E-lcwgs-1-1.clmp.r1	2.2%	39%	93 bp	1.9
+Tzo-ABol_050-Ex1-2E-lcwgs-1-1.clmp.r2	1.5%	39%	93 bp	1.9
+Tzo-ABol_051-Ex1-3E-lcwgs-1-1.clmp.r1	2.0%	39%	90 bp	0.8
+Tzo-ABol_051-Ex1-3E-lcwgs-1-1.clmp.r2	1.2%	39%	90 bp	0.8
+Tzo-ABol_052-Ex1-4E-lcwgs-1-1.clmp.r1	2.0%	39%	87 bp	2.0
+Tzo-ABol_052-Ex1-4E-lcwgs-1-1.clmp.r2	1.3%	39%	87 bp	2.0
+Tzo-ABol_053-Ex1-5E-lcwgs-1-1.clmp.r1	2.5%	38%	90 bp	6.9
+Tzo-ABol_053-Ex1-5E-lcwgs-1-1.clmp.r2	1.7%	38%	90 bp	6.9
+Tzo-ABol_054-Ex1-6E-lcwgs-1-1.clmp.r1	3.2%	40%	98 bp	6.2
+Tzo-ABol_054-Ex1-6E-lcwgs-1-1.clmp.r2	2.4%	40%	98 bp	6.2
+Tzo-ABol_055-Ex1-7E-lcwgs-1-1.clmp.r1	2.4%	38%	95 bp	2.3
+Tzo-ABol_055-Ex1-7E-lcwgs-1-1.clmp.r2	1.7%	38%	95 bp	2.3
+Tzo-ABol_056-Ex1-8E-lcwgs-1-1.clmp.r1	2.2%	38%	92 bp	1.4
+Tzo-ABol_056-Ex1-8E-lcwgs-1-1.clmp.r2	1.5%	39%	92 bp	1.4
+Tzo-ABol_057-Ex1-9E-lcwgs-1-1.clmp.r1	2.9%	39%	96 bp	5.1
+Tzo-ABol_057-Ex1-9E-lcwgs-1-1.clmp.r2	2.1%	39%	97 bp	5.1
+Tzo-ABol_058-Ex1-10E-lcwgs-1-1.clmp.r1	1.9%	38%	91 bp	1.5
+Tzo-ABol_058-Ex1-10E-lcwgs-1-1.clmp.r2	1.3%	38%	91 bp	1.5
+Tzo-ABol_059-Ex1-11E-lcwgs-1-1.clmp.r1	2.2%	38%	92 bp	1.2
+Tzo-ABol_059-Ex1-11E-lcwgs-1-1.clmp.r2	1.5%	38%	92 bp	1.2
+Tzo-ABol_060-Ex1-12E-lcwgs-1-1.clmp.r1	2.0%	39%	93 bp	1.2
+Tzo-ABol_060-Ex1-12E-lcwgs-1-1.clmp.r2	1.3%	39%	93 bp	1.2
+Tzo-ABol_061-Ex1-1F-lcwgs-1-1.clmp.r1	1.7%	40%	87 bp	1.3
+Tzo-ABol_061-Ex1-1F-lcwgs-1-1.clmp.r2	1.1%	40%	87 bp	1.3
+Tzo-ABol_062-Ex1-2F-lcwgs-1-1.clmp.r1	1.9%	40%	86 bp	4.3
+Tzo-ABol_062-Ex1-2F-lcwgs-1-1.clmp.r2	1.1%	40%	86 bp	4.3
+Tzo-ABol_063-Ex1-3F-lcwgs-1-1.clmp.r1	0.6%	39%	91 bp	0.0
+Tzo-ABol_063-Ex1-3F-lcwgs-1-1.clmp.r2	0.4%	39%	91 bp	0.0
+Tzo-ABol_065-Ex1-5F-lcwgs-1-1.clmp.r1	2.1%	39%	90 bp	2.2
+Tzo-ABol_065-Ex1-5F-lcwgs-1-1.clmp.r2	1.4%	39%	90 bp	2.2
+Tzo-ABol_066-Ex1-6F-lcwgs-1-1.clmp.r1	1.8%	39%	92 bp	2.2
+Tzo-ABol_066-Ex1-6F-lcwgs-1-1.clmp.r2	1.3%	39%	92 bp	2.2
+Tzo-ABol_067-Ex1-7F-lcwgs-1-1.clmp.r1	1.9%	39%	86 bp	2.0
+Tzo-ABol_067-Ex1-7F-lcwgs-1-1.clmp.r2	1.2%	39%	86 bp	2.0
+Tzo-ABol_068-Ex1-8F-lcwgs-1-1.clmp.r1	3.3%	41%	94 bp	2.8
+Tzo-ABol_068-Ex1-8F-lcwgs-1-1.clmp.r2	2.4%	41%	94 bp	2.8
+Tzo-ABol_069-Ex1-9F-lcwgs-1-1.clmp.r1	2.2%	39%	89 bp	3.5
+Tzo-ABol_069-Ex1-9F-lcwgs-1-1.clmp.r2	1.6%	39%	89 bp	3.5
+Tzo-ABol_070-Ex1-10F-lcwgs-1-1.clmp.r1	2.2%	38%	93 bp	1.2
+Tzo-ABol_070-Ex1-10F-lcwgs-1-1.clmp.r2	1.5%	38%	93 bp	1.2
+Tzo-ABol_071-Ex1-11F-lcwgs-1-1.clmp.r1	1.8%	38%	90 bp	0.8
+Tzo-ABol_071-Ex1-11F-lcwgs-1-1.clmp.r2	1.2%	38%	90 bp	0.8
+Tzo-ABol_072-Ex1-12F-lcwgs-1-1.clmp.r1	2.6%	38%	94 bp	1.7
+Tzo-ABol_072-Ex1-12F-lcwgs-1-1.clmp.r2	1.8%	38%	94 bp	1.7
+Tzo-ABol_073-Ex1-1G-lcwgs-1-1.clmp.r1	2.2%	39%	91 bp	1.6
+Tzo-ABol_073-Ex1-1G-lcwgs-1-1.clmp.r2	1.5%	39%	91 bp	1.6
+Tzo-ABol_075-Ex1-3G-lcwgs-1-1.clmp.r1	2.1%	39%	85 bp	5.1
+Tzo-ABol_075-Ex1-3G-lcwgs-1-1.clmp.r2	1.3%	39%	86 bp	5.1
+Tzo-ABol_076-Ex1-4G-lcwgs-1-1.clmp.r1	1.8%	40%	84 bp	3.7
+Tzo-ABol_076-Ex1-4G-lcwgs-1-1.clmp.r2	1.2%	40%	84 bp	3.7
+Tzo-ABol_077-Ex1-5G-lcwgs-1-1.clmp.r1	2.2%	38%	96 bp	1.4
+Tzo-ABol_077-Ex1-5G-lcwgs-1-1.clmp.r2	1.5%	38%	96 bp	1.4
+Tzo-ABol_078-Ex1-6G-lcwgs-1-1.clmp.r1	2.2%	38%	95 bp	2.1
+Tzo-ABol_078-Ex1-6G-lcwgs-1-1.clmp.r2	1.6%	38%	95 bp	2.1
+Tzo-ABol_079-Ex1-7G-lcwgs-1-1.clmp.r1	2.4%	38%	96 bp	1.6
+Tzo-ABol_079-Ex1-7G-lcwgs-1-1.clmp.r2	1.8%	38%	96 bp	1.6
+Tzo-ABol_080-Ex1-8G-lcwgs-1-1.clmp.r1	3.1%	38%	97 bp	5.8
+Tzo-ABol_080-Ex1-8G-lcwgs-1-1.clmp.r2	2.2%	38%	97 bp	5.8
+Tzo-ABol_081-Ex1-9G-lcwgs-1-1.clmp.r1	2.6%	38%	95 bp	3.4
+Tzo-ABol_081-Ex1-9G-lcwgs-1-1.clmp.r2	1.8%	38%	95 bp	3.4
+Tzo-ABol_082-Ex1-10G-lcwgs-1-1.clmp.r1	4.3%	43%	98 bp	1.3
+Tzo-ABol_082-Ex1-10G-lcwgs-1-1.clmp.r2	3.1%	43%	98 bp	1.3
+Tzo-ABol_083-Ex1-11G-lcwgs-1-1.clmp.r1	2.7%	39%	97 bp	1.5
+Tzo-ABol_083-Ex1-11G-lcwgs-1-1.clmp.r2	1.9%	39%	97 bp	1.5
+Tzo-ABol_084-Ex1-12G-lcwgs-1-1.clmp.r1	2.2%	38%	92 bp	2.5
+Tzo-ABol_084-Ex1-12G-lcwgs-1-1.clmp.r2	1.6%	38%	92 bp	2.5
+Tzo-ABol_085-Ex1-1H-lcwgs-1-1.clmp.r1	1.9%	39%	88 bp	1.9
+Tzo-ABol_085-Ex1-1H-lcwgs-1-1.clmp.r2	1.3%	39%	88 bp	1.9
+Tzo-ABol_086-Ex1-2H-lcwgs-1-1.clmp.r1	2.4%	43%	94 bp	1.2
+Tzo-ABol_086-Ex1-2H-lcwgs-1-1.clmp.r2	1.7%	43%	95 bp	1.2
+Tzo-ABol_087-Ex1-3H-lcwgs-1-1.clmp.r1	2.2%	39%	90 bp	2.1
+Tzo-ABol_087-Ex1-3H-lcwgs-1-1.clmp.r2	1.4%	39%	90 bp	2.1
+Tzo-ABol_088-Ex1-4H-lcwgs-1-1.clmp.r1	2.4%	40%	92 bp	1.1
+Tzo-ABol_088-Ex1-4H-lcwgs-1-1.clmp.r2	1.7%	40%	92 bp	1.1
+Tzo-ABol_090-Ex1-6H-lcwgs-1-1.clmp.r1	1.4%	41%	86 bp	0.3
+Tzo-ABol_090-Ex1-6H-lcwgs-1-1.clmp.r2	0.8%	41%	86 bp	0.3
+Tzo-ABol_091-Ex1-7H-lcwgs-1-1.clmp.r1	2.2%	39%	95 bp	1.2
+Tzo-ABol_091-Ex1-7H-lcwgs-1-1.clmp.r2	1.5%	39%	95 bp	1.2
+Tzo-ABol_092-Ex1-8H-lcwgs-1-1.clmp.r1	2.5%	39%	97 bp	1.4
+Tzo-ABol_092-Ex1-8H-lcwgs-1-1.clmp.r2	1.7%	39%	97 bp	1.4
+Tzo-ABol_093-Ex1-9H-lcwgs-1-1.clmp.r1	2.4%	39%	99 bp	0.7
+Tzo-ABol_093-Ex1-9H-lcwgs-1-1.clmp.r2	1.7%	39%	99 bp	0.7
+Tzo-ABol_095-Ex1-11H-lcwgs-1-1.clmp.r1	2.2%	39%	98 bp	0.5
+Tzo-ABol_095-Ex1-11H-lcwgs-1-1.clmp.r2	1.5%	39%	98 bp	0.5
+Tzo-ABol_096-Ex1-12H-lcwgs-1-1.clmp.r1	2.4%	39%	97 bp	0.9
+Tzo-ABol_096-Ex1-12H-lcwgs-1-1.clmp.r2	1.7%	39%	97 bp	0.9
+Tzo-AMta_001-Ex1-5D-lcwgs-1-1.clmp.r1	2.2%	42%	83 bp	2.5
+Tzo-AMta_001-Ex1-5D-lcwgs-1-1.clmp.r2	1.4%	42%	83 bp	2.5
+Tzo-AMta_002-Ex1-5E-lcwgs-1-1.clmp.r1	2.3%	40%	87 bp	5.5
+Tzo-AMta_002-Ex1-5E-lcwgs-1-1.clmp.r2	1.6%	40%	87 bp	5.5
+Tzo-AMta_003-Ex1-5F-lcwgs-1-1.clmp.r1	4.8%	43%	91 bp	7.7
+Tzo-AMta_003-Ex1-5F-lcwgs-1-1.clmp.r2	3.6%	43%	91 bp	7.7
+Tzo-AMta_004-Ex1-5G-lcwgs-1-1.clmp.r1	2.5%	42%	87 bp	4.6
+Tzo-AMta_004-Ex1-5G-lcwgs-1-1.clmp.r2	1.8%	42%	87 bp	4.6
+Tzo-AMta_005-Ex1-5H-lcwgs-1-1.clmp.r1	1.9%	40%	84 bp	5.6
+Tzo-AMta_005-Ex1-5H-lcwgs-1-1.clmp.r2	1.3%	40%	84 bp	5.6
+Tzo-AMta_006-Ex1-1B-lcwgs-2-1.clmp.r1	0.7%	42%	64 bp	0.7
+Tzo-AMta_006-Ex1-1B-lcwgs-2-1.clmp.r2	0.3%	42%	65 bp	0.7
+Tzo-AMta_006-Ex1-6A-lcwgs-1-1.clmp.r1	2.1%	40%	87 bp	1.5
+Tzo-AMta_006-Ex1-6A-lcwgs-1-1.clmp.r2	1.3%	40%	87 bp	1.5
+Tzo-AMta_007-Ex1-6B-lcwgs-1-1.clmp.r1	2.2%	41%	88 bp	5.3
+Tzo-AMta_007-Ex1-6B-lcwgs-1-1.clmp.r2	1.5%	41%	88 bp	5.3
+Tzo-AMta_008-Ex1-6C-lcwgs-1-1.clmp.r1	2.0%	40%	85 bp	5.3
+Tzo-AMta_008-Ex1-6C-lcwgs-1-1.clmp.r2	1.3%	40%	85 bp	5.3
+Tzo-AMta_009-Ex1-6D-lcwgs-1-1.clmp.r1	2.0%	40%	86 bp	5.5
+Tzo-AMta_009-Ex1-6D-lcwgs-1-1.clmp.r2	1.3%	40%	86 bp	5.5
+Tzo-AMta_010-Ex1-6E-lcwgs-1-1.clmp.r1	2.0%	40%	85 bp	5.6
+Tzo-AMta_010-Ex1-6E-lcwgs-1-1.clmp.r2	1.3%	40%	85 bp	5.6
+Tzo-AMta_011-Ex1-6F-lcwgs-1-1.clmp.r1	1.2%	40%	90 bp	0.1
+Tzo-AMta_011-Ex1-6F-lcwgs-1-1.clmp.r2	0.7%	40%	90 bp	0.1
+Tzo-AMta_012-Ex1-6G-lcwgs-1-1.clmp.r1	2.2%	40%	90 bp	3.8
+Tzo-AMta_012-Ex1-6G-lcwgs-1-1.clmp.r2	1.5%	40%	90 bp	3.8
+Tzo-AMta_013-Ex1-6H-lcwgs-1-1.clmp.r1	1.8%	40%	84 bp	3.9
+Tzo-AMta_013-Ex1-6H-lcwgs-1-1.clmp.r2	1.1%	40%	84 bp	3.9
+Tzo-AMta_014-Ex1-7A-lcwgs-1-1.clmp.r1	2.1%	39%	87 bp	3.3
+Tzo-AMta_014-Ex1-7A-lcwgs-1-1.clmp.r2	1.3%	39%	87 bp	3.3
+Tzo-AMta_015-Ex1-7B-lcwgs-1-1.clmp.r1	2.3%	38%	88 bp	6.3
+Tzo-AMta_015-Ex1-7B-lcwgs-1-1.clmp.r2	1.5%	38%	88 bp	6.3
+Tzo-AMta_016-Ex1-7C-lcwgs-1-1.clmp.r1	2.0%	40%	87 bp	3.8
+Tzo-AMta_016-Ex1-7C-lcwgs-1-1.clmp.r2	1.3%	40%	87 bp	3.8
+Tzo-AMta_017-Ex1-7D-lcwgs-1-1.clmp.r1	2.3%	42%	87 bp	5.3
+Tzo-AMta_017-Ex1-7D-lcwgs-1-1.clmp.r2	1.5%	42%	87 bp	5.3
+Tzo-AMta_018-Ex1-7E-lcwgs-1-1.clmp.r1	1.5%	39%	81 bp	3.7
+Tzo-AMta_018-Ex1-7E-lcwgs-1-1.clmp.r2	0.9%	39%	81 bp	3.7
+Tzo-AMta_019-Ex1-7F-lcwgs-1-1.clmp.r1	1.7%	39%	85 bp	3.6
+Tzo-AMta_019-Ex1-7F-lcwgs-1-1.clmp.r2	1.1%	39%	85 bp	3.6
+Tzo-AMta_020-Ex1-7G-lcwgs-1-1.clmp.r1	1.8%	40%	85 bp	4.5
+Tzo-AMta_020-Ex1-7G-lcwgs-1-1.clmp.r2	1.2%	40%	85 bp	4.5
+Tzo-AMta_021-Ex1-7H-lcwgs-1-1.clmp.r1	1.7%	40%	84 bp	2.9
+Tzo-AMta_021-Ex1-7H-lcwgs-1-1.clmp.r2	1.1%	40%	84 bp	2.9
+Tzo-AMta_022-Ex1-8A-lcwgs-1-1.clmp.r1	2.3%	39%	87 bp	5.6
+Tzo-AMta_022-Ex1-8A-lcwgs-1-1.clmp.r2	1.5%	39%	88 bp	5.6
+Tzo-AMta_023-Ex1-8B-lcwgs-1-1.clmp.r1	1.6%	38%	82 bp	4.2
+Tzo-AMta_023-Ex1-8B-lcwgs-1-1.clmp.r2	1.0%	38%	82 bp	4.2
+Tzo-AMta_024-Ex1-8C-lcwgs-1-1.clmp.r1	1.7%	39%	84 bp	3.7
+Tzo-AMta_024-Ex1-8C-lcwgs-1-1.clmp.r2	1.2%	39%	84 bp	3.7
+Tzo-AMta_025-Ex1-1E-lcwgs-2-1.clmp.r1	1.2%	40%	75 bp	2.3
+Tzo-AMta_025-Ex1-1E-lcwgs-2-1.clmp.r2	0.7%	40%	75 bp	2.3
+Tzo-AMta_025-Ex1-8D-lcwgs-1-1.clmp.r1	1.4%	42%	77 bp	2.7
+Tzo-AMta_025-Ex1-8D-lcwgs-1-1.clmp.r2	0.8%	42%	77 bp	2.7
+Tzo-AMta_026-Ex1-8E-lcwgs-1-1.clmp.r1	1.5%	39%	80 bp	3.7
+Tzo-AMta_026-Ex1-8E-lcwgs-1-1.clmp.r2	0.9%	39%	80 bp	3.7
+Tzo-AMta_027-Ex1-1C-lcwgs-2-1.clmp.r1	0.6%	42%	62 bp	0.4
+Tzo-AMta_027-Ex1-1C-lcwgs-2-1.clmp.r2	0.3%	42%	62 bp	0.4
+Tzo-AMta_027-Ex1-8F-lcwgs-1-1.clmp.r1	1.2%	42%	77 bp	0.7
+Tzo-AMta_027-Ex1-8F-lcwgs-1-1.clmp.r2	0.6%	42%	78 bp	0.7
+Tzo-AMta_028-Ex1-8G-lcwgs-1-1.clmp.r1	1.6%	41%	81 bp	2.9
+Tzo-AMta_028-Ex1-8G-lcwgs-1-1.clmp.r2	0.9%	41%	81 bp	2.9
+Tzo-AMta_029-Ex1-8H-lcwgs-1-1.clmp.r1	1.2%	42%	73 bp	2.6
+Tzo-AMta_029-Ex1-8H-lcwgs-1-1.clmp.r2	0.7%	42%	73 bp	2.6
+Tzo-AMta_030-Ex1-9A-lcwgs-1-1.clmp.r1	1.3%	41%	78 bp	0.4
+Tzo-AMta_030-Ex1-9A-lcwgs-1-1.clmp.r2	0.7%	41%	78 bp	0.4
+Tzo-AMta_031-Ex1-9B-lcwgs-1-1.clmp.r1	1.8%	39%	81 bp	5.2
+Tzo-AMta_031-Ex1-9B-lcwgs-1-1.clmp.r2	1.1%	39%	81 bp	5.2
+Tzo-AMvi_001-Ex1-1A-lcwgs-1-1.clmp.r1	3.4%	38%	99 bp	0.2
+Tzo-AMvi_001-Ex1-1A-lcwgs-1-1.clmp.r2	2.2%	38%	99 bp	0.2
+Tzo-AMvi_002-Ex1-1E-lcwgs-1-1.clmp.r1	3.4%	38%	97 bp	0.2
+Tzo-AMvi_002-Ex1-1E-lcwgs-1-1.clmp.r2	2.4%	38%	97 bp	0.2
+Tzo-AMvi_003-Ex1-2A-lcwgs-1-1.clmp.r1	2.2%	36%	103 bp	0.6
+Tzo-AMvi_003-Ex1-2A-lcwgs-1-1.clmp.r2	1.6%	36%	103 bp	0.6
+Tzo-AMvi_004-Ex1-2E-lcwgs-1-1.clmp.r1	2.4%	37%	104 bp	0.1
+Tzo-AMvi_004-Ex1-2E-lcwgs-1-1.clmp.r2	1.5%	37%	104 bp	0.1
+Tzo-AMvi_005-Ex1-3A-lcwgs-1-1.clmp.r1	3.3%	37%	106 bp	1.7
+Tzo-AMvi_005-Ex1-3A-lcwgs-1-1.clmp.r2	2.6%	37%	106 bp	1.7
+Tzo-AMvi_006-Ex1-1A-lcwgs-2-1.clmp.r1	13.4%	52%	127 bp	1.9
+Tzo-AMvi_006-Ex1-1A-lcwgs-2-1.clmp.r2	11.7%	52%	126 bp	1.9
+Tzo-AMvi_007-Ex1-4A-lcwgs-1-1.clmp.r1	2.3%	37%	108 bp	0.1
+Tzo-AMvi_007-Ex1-4A-lcwgs-1-1.clmp.r2	1.3%	37%	108 bp	0.1
+Tzo-AMvi_008-Ex1-1B-lcwgs-2-1.clmp.r1	4.1%	40%	121 bp	1.1
+Tzo-AMvi_008-Ex1-1B-lcwgs-2-1.clmp.r2	3.2%	40%	120 bp	1.1
+Tzo-AMvi_009-Ex1-5A-lcwgs-1-1.clmp.r1	1.9%	37%	100 bp	0.0
+Tzo-AMvi_009-Ex1-5A-lcwgs-1-1.clmp.r2	1.0%	37%	100 bp	0.0
+Tzo-AMvi_010-Ex1-5E-lcwgs-1-1.clmp.r1	2.4%	39%	103 bp	0.0
+Tzo-AMvi_010-Ex1-5E-lcwgs-1-1.clmp.r2	1.3%	39%	103 bp	0.0
+Tzo-AMvi_011-Ex1-6A-lcwgs-1-1.clmp.r1	0.8%	38%	98 bp	0.0
+Tzo-AMvi_011-Ex1-6A-lcwgs-1-1.clmp.r2	0.5%	38%	98 bp	0.0
+Tzo-AMvi_012-Ex1-6E-lcwgs-1-1.clmp.r1	3.0%	38%	102 bp	0.2
+Tzo-AMvi_012-Ex1-6E-lcwgs-1-1.clmp.r2	2.1%	38%	102 bp	0.2
+Tzo-AMvi_013-Ex1-1B-lcwgs-1-1.clmp.r1	2.3%	39%	101 bp	0.1
+Tzo-AMvi_013-Ex1-1B-lcwgs-1-1.clmp.r2	1.4%	39%	101 bp	0.1
+Tzo-AMvi_014-Ex1-1C-lcwgs-2-1.clmp.r1	0.3%	40%	106 bp	0.0
+Tzo-AMvi_014-Ex1-1C-lcwgs-2-1.clmp.r2	0.2%	40%	105 bp	0.0
+Tzo-AMvi_015-Ex1-2B-lcwgs-1-1.clmp.r1	2.6%	38%	111 bp	0.3
+Tzo-AMvi_015-Ex1-2B-lcwgs-1-1.clmp.r2	1.7%	38%	111 bp	0.3
+Tzo-AMvi_016-Ex1-2F-lcwgs-1-1.clmp.r1	2.6%	40%	108 bp	0.0
+Tzo-AMvi_016-Ex1-2F-lcwgs-1-1.clmp.r2	1.5%	40%	108 bp	0.0
+Tzo-AMvi_017-Ex1-3B-lcwgs-1-1.clmp.r1	2.8%	38%	108 bp	0.1
+Tzo-AMvi_017-Ex1-3B-lcwgs-1-1.clmp.r2	1.7%	38%	108 bp	0.1
+Tzo-AMvi_018-Ex1-3F-lcwgs-1-1.clmp.r1	3.0%	40%	106 bp	0.0
+Tzo-AMvi_018-Ex1-3F-lcwgs-1-1.clmp.r2	1.8%	40%	106 bp	0.0
+Tzo-AMvi_019-Ex1-1D-lcwgs-2-1.clmp.r1	0.2%	40%	104 bp	0.0
+Tzo-AMvi_019-Ex1-1D-lcwgs-2-1.clmp.r2	0.1%	40%	104 bp	0.0
+Tzo-AMvi_020-Ex1-4F-lcwgs-1-1.clmp.r1	2.8%	39%	109 bp	0.0
+Tzo-AMvi_020-Ex1-4F-lcwgs-1-1.clmp.r2	1.7%	39%	109 bp	0.0
+Tzo-AMvi_021-Ex1-1E-lcwgs-2-1.clmp.r1	5.1%	43%	124 bp	2.5
+Tzo-AMvi_021-Ex1-1E-lcwgs-2-1.clmp.r2	4.1%	43%	124 bp	2.5
+Tzo-AMvi_022-Ex1-5F-lcwgs-1-1.clmp.r1	3.8%	39%	116 bp	0.1
+Tzo-AMvi_022-Ex1-5F-lcwgs-1-1.clmp.r2	2.4%	39%	116 bp	0.1
+Tzo-AMvi_023-Ex1-6B-lcwgs-1-1.clmp.r1	1.6%	38%	104 bp	0.0
+Tzo-AMvi_023-Ex1-6B-lcwgs-1-1.clmp.r2	1.0%	38%	104 bp	0.0
+Tzo-AMvi_024-Ex1-6F-lcwgs-1-1.clmp.r1	3.0%	38%	109 bp	0.1
+Tzo-AMvi_024-Ex1-6F-lcwgs-1-1.clmp.r2	1.9%	38%	109 bp	0.1
+Tzo-AMvi_025-Ex1-1C-lcwgs-1-1.clmp.r1	1.7%	37%	99 bp	0.3
+Tzo-AMvi_025-Ex1-1C-lcwgs-1-1.clmp.r2	1.2%	37%	99 bp	0.3
+Tzo-AMvi_026-Ex1-1G-lcwgs-1-1.clmp.r1	3.3%	39%	97 bp	0.2
+Tzo-AMvi_026-Ex1-1G-lcwgs-1-1.clmp.r2	2.1%	39%	97 bp	0.2
+Tzo-AMvi_027-Ex1-2C-lcwgs-1-1.clmp.r1	2.1%	38%	103 bp	0.2
+Tzo-AMvi_027-Ex1-2C-lcwgs-1-1.clmp.r2	1.4%	38%	104 bp	0.2
+Tzo-AMvi_028-Ex1-2G-lcwgs-1-1.clmp.r1	2.5%	38%	97 bp	0.1
+Tzo-AMvi_028-Ex1-2G-lcwgs-1-1.clmp.r2	1.6%	38%	98 bp	0.1
+Tzo-AMvi_029-Ex1-3C-lcwgs-1-1.clmp.r1	1.6%	37%	96 bp	0.0
+Tzo-AMvi_029-Ex1-3C-lcwgs-1-1.clmp.r2	0.8%	37%	96 bp	0.0
+Tzo-AMvi_030-Ex1-3G-lcwgs-1-1.clmp.r1	2.5%	37%	106 bp	0.2
+Tzo-AMvi_030-Ex1-3G-lcwgs-1-1.clmp.r2	1.5%	37%	106 bp	0.2
+Tzo-AMvi_031-Ex1-4C-lcwgs-1-1.clmp.r1	1.7%	37%	98 bp	0.0
+Tzo-AMvi_031-Ex1-4C-lcwgs-1-1.clmp.r2	1.0%	37%	98 bp	0.0
+Tzo-AMvi_032-Ex1-4G-lcwgs-1-1.clmp.r1	2.4%	40%	98 bp	0.1
+Tzo-AMvi_032-Ex1-4G-lcwgs-1-1.clmp.r2	1.5%	40%	98 bp	0.1
+Tzo-AMvi_033-Ex1-5C-lcwgs-1-1.clmp.r1	3.7%	39%	114 bp	0.1
+Tzo-AMvi_033-Ex1-5C-lcwgs-1-1.clmp.r2	2.3%	39%	114 bp	0.1
+Tzo-AMvi_034-Ex1-5G-lcwgs-1-1.clmp.r1	2.1%	37%	101 bp	0.4
+Tzo-AMvi_034-Ex1-5G-lcwgs-1-1.clmp.r2	1.4%	37%	101 bp	0.4
+Tzo-AMvi_035-Ex1-6C-lcwgs-1-1.clmp.r1	2.2%	39%	105 bp	0.1
+Tzo-AMvi_035-Ex1-6C-lcwgs-1-1.clmp.r2	1.3%	39%	105 bp	0.1
+Tzo-AMvi_036-Ex1-6G-lcwgs-1-1.clmp.r1	2.9%	41%	108 bp	0.1
+Tzo-AMvi_036-Ex1-6G-lcwgs-1-1.clmp.r2	1.8%	41%	108 bp	0.1
+Tzo-AMvi_037-Ex1-1D-lcwgs-1-1.clmp.r1	1.3%	38%	93 bp	0.0
+Tzo-AMvi_037-Ex1-1D-lcwgs-1-1.clmp.r2	0.7%	38%	93 bp	0.0
+Tzo-AMvi_038-Ex1-1H-lcwgs-1-1.clmp.r1	2.3%	38%	102 bp	0.1
+Tzo-AMvi_038-Ex1-1H-lcwgs-1-1.clmp.r2	1.4%	38%	102 bp	0.1
+Tzo-AMvi_039-Ex1-2D-lcwgs-1-1.clmp.r1	1.6%	38%	101 bp	0.0
+Tzo-AMvi_039-Ex1-2D-lcwgs-1-1.clmp.r2	0.9%	39%	101 bp	0.0
+Tzo-AMvi_040-Ex1-2H-lcwgs-1-1.clmp.r1	1.7%	38%	96 bp	0.0
+Tzo-AMvi_040-Ex1-2H-lcwgs-1-1.clmp.r2	0.9%	38%	96 bp	0.0
+Tzo-AMvi_041-Ex1-3D-lcwgs-1-1.clmp.r1	0.4%	39%	97 bp	0.0
+Tzo-AMvi_041-Ex1-3D-lcwgs-1-1.clmp.r2	0.1%	39%	97 bp	0.0
+Tzo-AMvi_042-Ex1-3H-lcwgs-1-1.clmp.r1	3.1%	41%	105 bp	0.1
+Tzo-AMvi_042-Ex1-3H-lcwgs-1-1.clmp.r2	2.1%	41%	105 bp	0.1
+Tzo-AMvi_043-Ex1-4D-lcwgs-1-1.clmp.r1	1.9%	37%	100 bp	0.1
+Tzo-AMvi_043-Ex1-4D-lcwgs-1-1.clmp.r2	1.2%	37%	100 bp	0.1
+Tzo-AMvi_044-Ex1-4H-lcwgs-1-1.clmp.r1	1.8%	37%	102 bp	0.0
+Tzo-AMvi_044-Ex1-4H-lcwgs-1-1.clmp.r2	1.2%	37%	102 bp	0.0
+Tzo-AMvi_045-Ex1-5D-lcwgs-1-1.clmp.r1	2.2%	38%	102 bp	0.1
+Tzo-AMvi_045-Ex1-5D-lcwgs-1-1.clmp.r2	1.2%	38%	102 bp	0.1
+Tzo-AMvi_046-Ex1-5H-lcwgs-1-1.clmp.r1	2.3%	39%	103 bp	0.0
+Tzo-AMvi_046-Ex1-5H-lcwgs-1-1.clmp.r2	1.3%	40%	103 bp	0.0
+Tzo-AMvi_047-Ex1-6D-lcwgs-1-1.clmp.r1	2.1%	38%	103 bp	0.4
+Tzo-AMvi_047-Ex1-6D-lcwgs-1-1.clmp.r2	1.5%	38%	103 bp	0.4
+Tzo-AMvi_048-Ex1-6H-lcwgs-1-1.clmp.r1	3.5%	41%	103 bp	0.1
+Tzo-AMvi_048-Ex1-6H-lcwgs-1-1.clmp.r2	2.4%	41%	103 bp	0.1
+Tzo-CMal_001-Ex1-3F-lcwgs-1-1.clmp.r1	3.6%	41%	124 bp	0.3
+Tzo-CMal_001-Ex1-3F-lcwgs-1-1.clmp.r2	2.4%	41%	124 bp	0.3
+Tzo-CMal_002-Ex1-3G-lcwgs-1-1.clmp.r1	7.1%	41%	135 bp	0.2
+Tzo-CMal_002-Ex1-3G-lcwgs-1-1.clmp.r2	4.5%	41%	135 bp	0.2
+Tzo-CMal_003-Ex1-3H-lcwgs-1-1.clmp.r1	8.0%	40%	138 bp	0.2
+Tzo-CMal_003-Ex1-3H-lcwgs-1-1.clmp.r2	5.2%	40%	138 bp	0.2
+Tzo-CMal_004-Ex1-4A-lcwgs-1-1.clmp.r1	5.4%	40%	140 bp	0.5
+Tzo-CMal_004-Ex1-4A-lcwgs-1-1.clmp.r2	4.0%	40%	140 bp	0.5
+Tzo-CMal_005-Ex1-4B-lcwgs-1-1.clmp.r1	3.5%	40%	126 bp	0.2
+Tzo-CMal_005-Ex1-4B-lcwgs-1-1.clmp.r2	2.4%	41%	126 bp	0.2
+Tzo-CMal_006-Ex1-4C-lcwgs-1-1.clmp.r1	4.3%	41%	130 bp	0.5
+Tzo-CMal_006-Ex1-4C-lcwgs-1-1.clmp.r2	3.3%	41%	130 bp	0.5
+Tzo-CMal_007-Ex1-4D-lcwgs-1-1.clmp.r1	4.0%	41%	128 bp	0.4
+Tzo-CMal_007-Ex1-4D-lcwgs-1-1.clmp.r2	3.0%	41%	128 bp	0.4
+Tzo-CMal_008-Ex1-4E-lcwgs-1-1.clmp.r1	3.8%	41%	130 bp	0.3
+Tzo-CMal_008-Ex1-4E-lcwgs-1-1.clmp.r2	2.6%	41%	130 bp	0.3
+Tzo-CMal_009-Ex1-4F-lcwgs-1-1.clmp.r1	3.7%	41%	128 bp	0.2
+Tzo-CMal_009-Ex1-4F-lcwgs-1-1.clmp.r2	2.6%	41%	127 bp	0.2
+Tzo-CMal_010-Ex1-4G-lcwgs-1-1.clmp.r1	4.4%	40%	135 bp	0.3
+Tzo-CMal_010-Ex1-4G-lcwgs-1-1.clmp.r2	2.9%	40%	135 bp	0.3
+Tzo-CMal_011-Ex1-4H-lcwgs-1-1.clmp.r1	4.5%	40%	135 bp	0.2
+Tzo-CMal_011-Ex1-4H-lcwgs-1-1.clmp.r2	3.0%	41%	135 bp	0.2
+Tzo-CMal_012-Ex1-5A-lcwgs-1-1.clmp.r1	5.9%	41%	138 bp	1.1
+Tzo-CMal_012-Ex1-5A-lcwgs-1-1.clmp.r2	5.0%	41%	137 bp	1.1
+Tzo-CMal_013-Ex1-5B-lcwgs-1-1.clmp.r1	4.5%	40%	131 bp	0.5
+Tzo-CMal_013-Ex1-5B-lcwgs-1-1.clmp.r2	3.4%	41%	130 bp	0.5
+Tzo-CMal_014-Ex1-5C-lcwgs-1-1.clmp.r1	4.7%	40%	132 bp	0.6
+Tzo-CMal_014-Ex1-5C-lcwgs-1-1.clmp.r2	3.6%	40%	131 bp	0.6
+Tzo-CMal_015-Ex1-5D-lcwgs-1-1.clmp.r1	3.9%	41%	129 bp	0.3
+Tzo-CMal_015-Ex1-5D-lcwgs-1-1.clmp.r2	2.7%	41%	128 bp	0.3
+Tzo-CMal_016-Ex1-5E-lcwgs-1-1.clmp.r1	6.1%	41%	124 bp	0.2
+Tzo-CMal_016-Ex1-5E-lcwgs-1-1.clmp.r2	4.1%	41%	124 bp	0.2
+Tzo-CMal_017-Ex1-5F-lcwgs-1-1.clmp.r1	3.7%	41%	125 bp	0.5
+Tzo-CMal_017-Ex1-5F-lcwgs-1-1.clmp.r2	2.7%	41%	124 bp	0.5
+Tzo-CMal_018-Ex1-5G-lcwgs-1-1.clmp.r1	3.2%	41%	121 bp	0.3
+Tzo-CMal_018-Ex1-5G-lcwgs-1-1.clmp.r2	2.3%	41%	120 bp	0.3
+Tzo-CMal_019-Ex1-5H-lcwgs-1-1.clmp.r1	6.9%	40%	134 bp	0.2
+Tzo-CMal_019-Ex1-5H-lcwgs-1-1.clmp.r2	4.4%	41%	134 bp	0.2
+Tzo-CMal_020-Ex1-6A-lcwgs-1-1.clmp.r1	5.0%	41%	134 bp	0.8
+Tzo-CMal_020-Ex1-6A-lcwgs-1-1.clmp.r2	4.1%	41%	133 bp	0.8
+Tzo-CMal_021-Ex1-6B-lcwgs-1-1.clmp.r1	4.1%	41%	125 bp	0.5
+Tzo-CMal_021-Ex1-6B-lcwgs-1-1.clmp.r2	3.2%	41%	125 bp	0.5
+Tzo-CMal_022-Ex1-6C-lcwgs-1-1.clmp.r1	4.9%	41%	134 bp	0.7
+Tzo-CMal_022-Ex1-6C-lcwgs-1-1.clmp.r2	3.7%	41%	133 bp	0.7
+Tzo-CMal_023-Ex1-6D-lcwgs-1-1.clmp.r1	3.8%	41%	124 bp	0.5
+Tzo-CMal_023-Ex1-6D-lcwgs-1-1.clmp.r2	3.0%	41%	124 bp	0.5
+Tzo-CMal_024-Ex1-6E-lcwgs-1-1.clmp.r1	0.3%	41%	98 bp	0.0
+Tzo-CMal_024-Ex1-6E-lcwgs-1-1.clmp.r2	0.2%	41%	98 bp	0.0
+Tzo-CMal_025-Ex1-6F-lcwgs-1-1.clmp.r1	3.4%	41%	120 bp	0.2
+Tzo-CMal_025-Ex1-6F-lcwgs-1-1.clmp.r2	2.3%	41%	120 bp	0.2
+Tzo-CMal_026-Ex1-6G-lcwgs-1-1.clmp.r1	3.5%	41%	124 bp	0.3
+Tzo-CMal_026-Ex1-6G-lcwgs-1-1.clmp.r2	2.5%	41%	124 bp	0.3
+Tzo-CMal_027-Ex1-6H-lcwgs-1-1.clmp.r1	5.1%	41%	126 bp	0.1
+Tzo-CMal_027-Ex1-6H-lcwgs-1-1.clmp.r2	3.4%	41%	126 bp	0.1
+Tzo-CMal_028-Ex1-7A-lcwgs-1-1.clmp.r1	4.3%	41%	133 bp	0.5
+Tzo-CMal_028-Ex1-7A-lcwgs-1-1.clmp.r2	3.1%	41%	132 bp	0.5
+Tzo-CMal_029-Ex1-7B-lcwgs-1-1.clmp.r1	3.3%	41%	119 bp	0.4
+Tzo-CMal_029-Ex1-7B-lcwgs-1-1.clmp.r2	2.5%	41%	119 bp	0.4
+Tzo-CMal_030-Ex1-7C-lcwgs-1-1.clmp.r1	4.1%	40%	130 bp	0.4
+Tzo-CMal_030-Ex1-7C-lcwgs-1-1.clmp.r2	3.1%	40%	130 bp	0.4
+Tzo-CMal_031-Ex1-7D-lcwgs-1-1.clmp.r1	3.5%	41%	123 bp	0.3
+Tzo-CMal_031-Ex1-7D-lcwgs-1-1.clmp.r2	2.6%	41%	123 bp	0.3
+Tzo-CMal_032-Ex1-7E-lcwgs-1-1.clmp.r1	3.3%	41%	119 bp	0.2
+Tzo-CMal_032-Ex1-7E-lcwgs-1-1.clmp.r2	2.4%	41%	119 bp	0.2
+Tzo-CMal_033-Ex1-7F-lcwgs-1-1.clmp.r1	2.6%	41%	114 bp	0.2
+Tzo-CMal_033-Ex1-7F-lcwgs-1-1.clmp.r2	1.8%	41%	114 bp	0.2
+Tzo-CMal_034-Ex1-7G-lcwgs-1-1.clmp.r1	2.9%	41%	116 bp	0.2
+Tzo-CMal_034-Ex1-7G-lcwgs-1-1.clmp.r2	2.0%	41%	116 bp	0.2
+Tzo-CMal_035-Ex1-7H-lcwgs-1-1.clmp.r1	3.9%	41%	129 bp	0.2
+Tzo-CMal_035-Ex1-7H-lcwgs-1-1.clmp.r2	2.7%	41%	128 bp	0.2
+Tzo-CMal_036-Ex1-8A-lcwgs-1-1.clmp.r1	4.2%	41%	131 bp	0.3
+Tzo-CMal_036-Ex1-8A-lcwgs-1-1.clmp.r2	2.9%	41%	131 bp	0.3
+Tzo-CMal_037-Ex1-8B-lcwgs-1-1.clmp.r1	3.5%	41%	121 bp	0.6
+Tzo-CMal_037-Ex1-8B-lcwgs-1-1.clmp.r2	2.6%	41%	121 bp	0.6
+Tzo-CMal_038-Ex1-8C-lcwgs-1-1.clmp.r1	5.0%	41%	120 bp	0.2
+Tzo-CMal_038-Ex1-8C-lcwgs-1-1.clmp.r2	3.4%	41%	120 bp	0.2
+Tzo-CMal_039-Ex1-8D-lcwgs-1-1.clmp.r1	0.4%	40%	94 bp	0.0
+Tzo-CMal_039-Ex1-8D-lcwgs-1-1.clmp.r2	0.2%	40%	94 bp	0.0
+Tzo-CMal_040-Ex1-8E-lcwgs-1-1.clmp.r1	3.5%	41%	124 bp	0.3
+Tzo-CMal_040-Ex1-8E-lcwgs-1-1.clmp.r2	2.4%	41%	124 bp	0.3
+Tzo-CMal_041-Ex1-8F-lcwgs-1-1.clmp.r1	0.1%	40%	92 bp	0.0
+Tzo-CMal_041-Ex1-8F-lcwgs-1-1.clmp.r2	0.1%	40%	92 bp	0.0
+Tzo-CMal_042-Ex1-8G-lcwgs-1-1.clmp.r1	3.2%	41%	122 bp	0.2
+Tzo-CMal_042-Ex1-8G-lcwgs-1-1.clmp.r2	2.2%	41%	122 bp	0.2
+Tzo-CMal_043-Ex1-8H-lcwgs-1-1.clmp.r1	4.5%	40%	134 bp	0.0
+Tzo-CMal_043-Ex1-8H-lcwgs-1-1.clmp.r2	2.6%	41%	133 bp	0.0
+Tzo-CMal_044-Ex1-9A-lcwgs-1-1.clmp.r1	4.6%	40%	135 bp	0.6
+Tzo-CMal_044-Ex1-9A-lcwgs-1-1.clmp.r2	3.3%	40%	135 bp	0.6
+Tzo-CMal_045-Ex1-9B-lcwgs-1-1.clmp.r1	4.9%	40%	134 bp	0.1
+Tzo-CMal_045-Ex1-9B-lcwgs-1-1.clmp.r2	2.9%	40%	133 bp	0.1
+Tzo-CMal_046-Ex1-9C-lcwgs-1-1.clmp.r1	4.7%	40%	134 bp	0.6
+Tzo-CMal_046-Ex1-9C-lcwgs-1-1.clmp.r2	3.6%	41%	133 bp	0.6
+Tzo-CMal_047-Ex1-9D-lcwgs-1-1.clmp.r1	5.6%	41%	123 bp	0.2
+Tzo-CMal_047-Ex1-9D-lcwgs-1-1.clmp.r2	3.8%	41%	123 bp	0.2
+Tzo-CMal_048-Ex1-9E-lcwgs-1-1.clmp.r1	0.1%	40%	100 bp	0.0
+Tzo-CMal_048-Ex1-9E-lcwgs-1-1.clmp.r2	0.0%	40%	99 bp	0.0
+Tzo-CMal_049-Ex1-9F-lcwgs-1-1.clmp.r1	4.1%	41%	123 bp	0.0
+Tzo-CMal_049-Ex1-9F-lcwgs-1-1.clmp.r2	2.3%	41%	123 bp	0.0
+Tzo-CMal_050-Ex1-9G-lcwgs-1-1.clmp.r1	2.5%	41%	114 bp	0.0
+Tzo-CMal_050-Ex1-9G-lcwgs-1-1.clmp.r2	1.5%	41%	114 bp	0.0
+Tzo-CMal_051-Ex1-9H-lcwgs-1-1.clmp.r1	5.0%	41%	133 bp	0.0
+Tzo-CMal_051-Ex1-9H-lcwgs-1-1.clmp.r2	2.9%	41%	132 bp	0.0
+Tzo-CMal_052-Ex1-10A-lcwgs-1-1.clmp.r1	4.5%	40%	138 bp	0.3
+Tzo-CMal_052-Ex1-10A-lcwgs-1-1.clmp.r2	2.9%	41%	137 bp	0.3
+Tzo-CMal_053-Ex1-10B-lcwgs-1-1.clmp.r1	6.3%	41%	133 bp	0.2
+Tzo-CMal_053-Ex1-10B-lcwgs-1-1.clmp.r2	3.9%	41%	133 bp	0.2
+Tzo-CMal_054-Ex1-10C-lcwgs-1-1.clmp.r1	4.9%	40%	131 bp	0.1
+Tzo-CMal_054-Ex1-10C-lcwgs-1-1.clmp.r2	2.8%	41%	131 bp	0.1
+Tzo-CMal_055-Ex1-10D-lcwgs-1-1.clmp.r1	4.2%	41%	131 bp	0.1
+Tzo-CMal_055-Ex1-10D-lcwgs-1-1.clmp.r2	2.3%	41%	131 bp	0.1
+Tzo-CMal_056-Ex1-10E-lcwgs-1-1.clmp.r1	3.9%	41%	133 bp	0.2
+Tzo-CMal_056-Ex1-10E-lcwgs-1-1.clmp.r2	2.4%	41%	132 bp	0.2
+Tzo-CMal_057-Ex1-10F-lcwgs-1-1.clmp.r1	5.0%	41%	132 bp	0.1
+Tzo-CMal_057-Ex1-10F-lcwgs-1-1.clmp.r2	2.9%	41%	131 bp	0.1
+Tzo-CMal_058-Ex1-10G-lcwgs-1-1.clmp.r1	4.3%	41%	131 bp	0.4
+Tzo-CMal_058-Ex1-10G-lcwgs-1-1.clmp.r2	3.1%	41%	131 bp	0.4
+Tzo-CMal_059-Ex1-10H-lcwgs-1-1.clmp.r1	2.9%	40%	127 bp	0.0
+Tzo-CMal_059-Ex1-10H-lcwgs-1-1.clmp.r2	1.7%	41%	127 bp	0.0
+Tzo-CMal_060-Ex1-11A-lcwgs-1-1.clmp.r1	4.2%	41%	132 bp	0.2
+Tzo-CMal_060-Ex1-11A-lcwgs-1-1.clmp.r2	2.8%	41%	132 bp	0.2
+Tzo-CMal_061-Ex1-11B-lcwgs-1-1.clmp.r1	5.8%	40%	138 bp	0.1
+Tzo-CMal_061-Ex1-11B-lcwgs-1-1.clmp.r2	3.6%	40%	138 bp	0.1
+Tzo-CMal_062-Ex1-11C-lcwgs-1-1.clmp.r1	5.2%	41%	125 bp	0.2
+Tzo-CMal_062-Ex1-11C-lcwgs-1-1.clmp.r2	3.5%	41%	124 bp	0.2
+Tzo-CMal_063-Ex1-11D-lcwgs-1-1.clmp.r1	4.8%	40%	130 bp	0.1
+Tzo-CMal_063-Ex1-11D-lcwgs-1-1.clmp.r2	3.1%	40%	129 bp	0.1
+Tzo-CMal_064-Ex1-11E-lcwgs-1-1.clmp.r1	4.2%	41%	134 bp	0.0
+Tzo-CMal_064-Ex1-11E-lcwgs-1-1.clmp.r2	2.5%	41%	134 bp	0.0
+Tzo-CMta_001-Ex1-9A-lcwgs-1-1.clmp.r1	5.1%	42%	116 bp	0.2
+Tzo-CMta_001-Ex1-9A-lcwgs-1-1.clmp.r2	3.3%	42%	116 bp	0.2
+Tzo-CMta_002-Ex1-9B-lcwgs-1-1.clmp.r1	3.1%	41%	117 bp	0.4
+Tzo-CMta_002-Ex1-9B-lcwgs-1-1.clmp.r2	2.2%	41%	117 bp	0.4
+Tzo-CMta_003-Ex1-9C-lcwgs-1-1.clmp.r1	0.0%	39%	92 bp	0.0
+Tzo-CMta_003-Ex1-9C-lcwgs-1-1.clmp.r2	0.0%	39%	92 bp	0.0
+Tzo-CMta_004-Ex1-9D-lcwgs-1-1.clmp.r1	0.2%	40%	97 bp	0.0
+Tzo-CMta_004-Ex1-9D-lcwgs-1-1.clmp.r2	0.1%	40%	97 bp	0.0
+Tzo-CMta_005-Ex1-9E-lcwgs-1-1.clmp.r1	2.6%	41%	111 bp	0.0
+Tzo-CMta_005-Ex1-9E-lcwgs-1-1.clmp.r2	1.5%	41%	111 bp	0.0
+Tzo-CMta_006-Ex1-9F-lcwgs-1-1.clmp.r1	3.4%	42%	122 bp	0.0
+Tzo-CMta_006-Ex1-9F-lcwgs-1-1.clmp.r2	2.0%	42%	121 bp	0.0
+Tzo-CMta_007-Ex1-9G-lcwgs-1-1.clmp.r1	0.0%	39%	87 bp	0.0
+Tzo-CMta_007-Ex1-9G-lcwgs-1-1.clmp.r2	0.0%	39%	88 bp	0.0
+Tzo-CMta_008-Ex1-9H-lcwgs-1-1.clmp.r1	0.1%	39%	94 bp	0.0
+Tzo-CMta_008-Ex1-9H-lcwgs-1-1.clmp.r2	0.1%	39%	94 bp	0.0
+Tzo-CMta_009-Ex1-10A-lcwgs-1-1.clmp.r1	3.7%	41%	125 bp	0.7
+Tzo-CMta_009-Ex1-10A-lcwgs-1-1.clmp.r2	2.6%	41%	124 bp	0.7
+Tzo-CMta_010-Ex1-10B-lcwgs-1-1.clmp.r1	2.6%	41%	115 bp	0.0
+Tzo-CMta_010-Ex1-10B-lcwgs-1-1.clmp.r2	1.3%	41%	115 bp	0.0
+Tzo-CMta_011-Ex1-10C-lcwgs-1-1.clmp.r1	0.9%	40%	120 bp	0.0
+Tzo-CMta_011-Ex1-10C-lcwgs-1-1.clmp.r2	0.7%	40%	120 bp	0.0
+Tzo-CMta_012-Ex1-10D-lcwgs-1-1.clmp.r1	4.0%	41%	131 bp	0.7
+Tzo-CMta_012-Ex1-10D-lcwgs-1-1.clmp.r2	2.9%	41%	130 bp	0.7
+Tzo-CMta_013-Ex1-10E-lcwgs-1-1.clmp.r1	0.3%	39%	119 bp	0.0
+Tzo-CMta_013-Ex1-10E-lcwgs-1-1.clmp.r2	0.0%	39%	119 bp	0.0
+Tzo-CMta_014-Ex1-10F-lcwgs-1-1.clmp.r1	3.2%	41%	125 bp	0.0
+Tzo-CMta_014-Ex1-10F-lcwgs-1-1.clmp.r2	1.6%	42%	125 bp	0.0
+Tzo-CMta_015-Ex1-10G-lcwgs-1-1.clmp.r1	0.0%	40%	117 bp	0.0
+Tzo-CMta_015-Ex1-10G-lcwgs-1-1.clmp.r2	0.0%	40%	116 bp	0.0
+Tzo-CMta_016-Ex1-10H-lcwgs-1-1.clmp.r1	4.7%	40%	129 bp	0.1
+Tzo-CMta_016-Ex1-10H-lcwgs-1-1.clmp.r2	2.8%	40%	129 bp	0.1
+Tzo-CMta_017-Ex1-11A-lcwgs-1-1.clmp.r1	3.4%	41%	123 bp	0.5
+Tzo-CMta_017-Ex1-11A-lcwgs-1-1.clmp.r2	2.5%	41%	123 bp	0.5
+Tzo-CMta_018-Ex1-11B-lcwgs-1-1.clmp.r1	0.0%	39%	123 bp	0.0
+Tzo-CMta_018-Ex1-11B-lcwgs-1-1.clmp.r2	0.0%	40%	122 bp	0.0
+Tzo-CMta_019-Ex1-11C-lcwgs-1-1.clmp.r1	2.0%	41%	114 bp	0.0
+Tzo-CMta_019-Ex1-11C-lcwgs-1-1.clmp.r2	1.2%	41%	114 bp	0.0
+Tzo-CMta_020-Ex1-11D-lcwgs-1-1.clmp.r1	3.3%	41%	124 bp	0.3
+Tzo-CMta_020-Ex1-11D-lcwgs-1-1.clmp.r2	2.3%	41%	124 bp	0.3
+Tzo-CMta_021-Ex1-11E-lcwgs-1-1.clmp.r1	2.9%	42%	117 bp	0.0
+Tzo-CMta_021-Ex1-11E-lcwgs-1-1.clmp.r2	1.7%	42%	117 bp	0.0
+Tzo-CMta_022-Ex1-11F-lcwgs-1-1.clmp.r1	3.4%	42%	120 bp	0.1
+Tzo-CMta_022-Ex1-11F-lcwgs-1-1.clmp.r2	1.9%	42%	120 bp	0.1
+Tzo-CMta_023-Ex1-11G-lcwgs-1-1.clmp.r1	0.0%	39%	115 bp	0.0
+Tzo-CMta_023-Ex1-11G-lcwgs-1-1.clmp.r2	0.0%	39%	115 bp	0.0
+Tzo-CMta_024-Ex1-11H-lcwgs-1-1.clmp.r1	3.3%	41%	124 bp	0.3
+Tzo-CMta_024-Ex1-11H-lcwgs-1-1.clmp.r2	2.4%	41%	124 bp	0.3
+Tzo-CMta_025-Ex1-12A-lcwgs-1-1.clmp.r1	2.9%	41%	116 bp	0.1
+Tzo-CMta_025-Ex1-12A-lcwgs-1-1.clmp.r2	1.8%	41%	116 bp	0.1
+Tzo-CMta_026-Ex1-12B-lcwgs-1-1.clmp.r1	2.0%	41%	107 bp	0.0
+Tzo-CMta_026-Ex1-12B-lcwgs-1-1.clmp.r2	1.1%	42%	107 bp	0.0
+Tzo-CMta_027-Ex1-12C-lcwgs-1-1.clmp.r1	5.3%	41%	121 bp	0.2
+Tzo-CMta_027-Ex1-12C-lcwgs-1-1.clmp.r2	3.7%	41%	121 bp	0.2
+Tzo-CMta_028-Ex1-12D-lcwgs-1-1.clmp.r1	2.1%	41%	119 bp	0.0
+Tzo-CMta_028-Ex1-12D-lcwgs-1-1.clmp.r2	1.6%	41%	119 bp	0.0
+Tzo-CMta_029-Ex1-12E-lcwgs-1-1.clmp.r1	2.9%	41%	119 bp	0.0
+Tzo-CMta_029-Ex1-12E-lcwgs-1-1.clmp.r2	1.8%	41%	119 bp	0.0
+Tzo-CMta_030-Ex1-12F-lcwgs-1-1.clmp.r1	2.5%	42%	115 bp	0.0
+Tzo-CMta_030-Ex1-12F-lcwgs-1-1.clmp.r2	1.4%	42%	115 bp	0.0
+Tzo-CMta_031-Ex1-12G-lcwgs-1-1.clmp.r1	2.5%	42%	115 bp	0.0
+Tzo-CMta_031-Ex1-12G-lcwgs-1-1.clmp.r2	1.4%	42%	115 bp	0.0
+Tzo-CMta_032-Ex1-12H-lcwgs-1-1.clmp.r1	2.5%	41%	114 bp	0.0
+Tzo-CMta_032-Ex1-12H-lcwgs-1-1.clmp.r2	1.5%	41%	114 bp	0.0
+Tzo-CMta_033-Ex1-1A-lcwgs-1-1.clmp.r1	3.5%	41%	122 bp	0.0
+Tzo-CMta_033-Ex1-1A-lcwgs-1-1.clmp.r2	2.0%	41%	122 bp	0.0
+Tzo-CMta_034-Ex1-1B-lcwgs-1-1.clmp.r1	3.4%	41%	118 bp	0.1
+Tzo-CMta_034-Ex1-1B-lcwgs-1-1.clmp.r2	2.1%	41%	118 bp	0.1
+Tzo-CMta_035-Ex1-1C-lcwgs-1-1.clmp.r1	2.8%	41%	121 bp	0.0
+Tzo-CMta_035-Ex1-1C-lcwgs-1-1.clmp.r2	1.7%	41%	120 bp	0.0
+Tzo-CMta_036-Ex1-1D-lcwgs-1-1.clmp.r1	4.4%	41%	130 bp	0.1
+Tzo-CMta_036-Ex1-1D-lcwgs-1-1.clmp.r2	2.5%	41%	129 bp	0.1
+Tzo-CMta_037-Ex1-1E-lcwgs-1-1.clmp.r1	0.1%	40%	107 bp	0.0
+Tzo-CMta_037-Ex1-1E-lcwgs-1-1.clmp.r2	0.1%	40%	107 bp	0.0
+Tzo-CMta_038-Ex1-1F-lcwgs-1-1.clmp.r1	0.2%	40%	106 bp	0.0
+Tzo-CMta_038-Ex1-1F-lcwgs-1-1.clmp.r2	0.2%	40%	106 bp	0.0
+Tzo-CMta_039-Ex1-1G-lcwgs-1-1.clmp.r1	3.8%	40%	128 bp	0.5
+Tzo-CMta_039-Ex1-1G-lcwgs-1-1.clmp.r2	2.8%	40%	128 bp	0.5
+Tzo-CMta_040-Ex1-1H-lcwgs-1-1.clmp.r1	3.4%	40%	120 bp	0.1
+Tzo-CMta_040-Ex1-1H-lcwgs-1-1.clmp.r2	2.1%	40%	120 bp	0.1
+Tzo-CMta_041-Ex1-2A-lcwgs-1-1.clmp.r1	3.0%	41%	127 bp	0.0
+Tzo-CMta_041-Ex1-2A-lcwgs-1-1.clmp.r2	1.9%	41%	127 bp	0.0
+Tzo-CMta_042-Ex1-2B-lcwgs-1-1.clmp.r1	3.9%	40%	126 bp	0.7
+Tzo-CMta_042-Ex1-2B-lcwgs-1-1.clmp.r2	3.1%	41%	126 bp	0.7
+Tzo-CMta_043-Ex1-2C-lcwgs-1-1.clmp.r1	3.3%	40%	126 bp	0.3
+Tzo-CMta_043-Ex1-2C-lcwgs-1-1.clmp.r2	2.3%	40%	126 bp	0.3
+Tzo-CMta_044-Ex1-2D-lcwgs-1-1.clmp.r1	4.4%	41%	132 bp	1.1
+Tzo-CMta_044-Ex1-2D-lcwgs-1-1.clmp.r2	3.8%	41%	132 bp	1.1
+Tzo-CMta_045-Ex1-2E-lcwgs-1-1.clmp.r1	3.5%	41%	123 bp	0.5
+Tzo-CMta_045-Ex1-2E-lcwgs-1-1.clmp.r2	2.6%	41%	123 bp	0.5
+Tzo-CMta_046-Ex1-2F-lcwgs-1-1.clmp.r1	1.2%	40%	114 bp	0.0
+Tzo-CMta_046-Ex1-2F-lcwgs-1-1.clmp.r2	0.7%	40%	114 bp	0.0
+Tzo-CMta_047-Ex1-2G-lcwgs-1-1.clmp.r1	0.3%	40%	109 bp	0.0
+Tzo-CMta_047-Ex1-2G-lcwgs-1-1.clmp.r2	0.1%	40%	109 bp	0.0
+Tzo-CMta_048-Ex1-2H-lcwgs-1-1.clmp.r1	4.8%	41%	122 bp	0.2
+Tzo-CMta_048-Ex1-2H-lcwgs-1-1.clmp.r2	3.2%	41%	122 bp	0.2
+Tzo-CMta_049-Ex1-3A-lcwgs-1-1.clmp.r1	0.3%	40%	115 bp	0.0
+Tzo-CMta_049-Ex1-3A-lcwgs-1-1.clmp.r2	0.1%	40%	114 bp	0.0
+Tzo-CMta_050-Ex1-3B-lcwgs-1-1.clmp.r1	0.3%	40%	118 bp	0.0
+Tzo-CMta_050-Ex1-3B-lcwgs-1-1.clmp.r2	0.3%	40%	117 bp	0.0
+Tzo-CMta_051-Ex1-3C-lcwgs-1-1.clmp.r1	3.6%	41%	125 bp	0.4
+Tzo-CMta_051-Ex1-3C-lcwgs-1-1.clmp.r2	2.5%	41%	125 bp	0.4
+Tzo-CMta_052-Ex1-3D-lcwgs-1-1.clmp.r1	0.3%	40%	114 bp	0.0
+Tzo-CMta_052-Ex1-3D-lcwgs-1-1.clmp.r2	0.2%	40%	114 bp	0.0
+Tzo-CMta_053-Ex1-3E-lcwgs-1-1.clmp.r1	4.7%	41%	128 bp	1.2
+Tzo-CMta_053-Ex1-3E-lcwgs-1-1.clmp.r2	3.8%	41%	128 bp	1.2
+Tzo-CMta_054-Ex1-3F-lcwgs-1-1.clmp.r1	0.3%	40%	107 bp	0.0
+Tzo-CMta_054-Ex1-3F-lcwgs-1-1.clmp.r2	0.2%	40%	107 bp	0.0
+Tzo-CMta_055-Ex1-3G-lcwgs-1-1.clmp.r1	3.5%	41%	124 bp	0.5
+Tzo-CMta_055-Ex1-3G-lcwgs-1-1.clmp.r2	2.5%	41%	124 bp	0.5
+Tzo-CMta_056-Ex1-3H-lcwgs-1-1.clmp.r1	2.7%	41%	110 bp	0.1
+Tzo-CMta_056-Ex1-3H-lcwgs-1-1.clmp.r2	1.5%	41%	110 bp	0.1
+Tzo-CMta_057-Ex1-4A-lcwgs-1-1.clmp.r1	0.3%	40%	114 bp	0.0
+Tzo-CMta_057-Ex1-4A-lcwgs-1-1.clmp.r2	0.2%	40%	114 bp	0.0
+Tzo-CMta_058-Ex1-4B-lcwgs-1-1.clmp.r1	3.4%	40%	124 bp	0.1
+Tzo-CMta_058-Ex1-4B-lcwgs-1-1.clmp.r2	2.1%	41%	124 bp	0.1
+Tzo-CMta_059-Ex1-4C-lcwgs-1-1.clmp.r1	2.9%	41%	120 bp	0.3
+Tzo-CMta_059-Ex1-4C-lcwgs-1-1.clmp.r2	2.0%	41%	120 bp	0.3
+Tzo-CMta_060-Ex1-4D-lcwgs-1-1.clmp.r1	3.5%	41%	126 bp	0.7
+Tzo-CMta_060-Ex1-4D-lcwgs-1-1.clmp.r2	2.7%	41%	126 bp	0.7
+Tzo-CMta_061-Ex1-4E-lcwgs-1-1.clmp.r1	2.8%	41%	119 bp	0.1
+Tzo-CMta_061-Ex1-4E-lcwgs-1-1.clmp.r2	1.6%	41%	118 bp	0.1
+Tzo-CMta_062-Ex1-4F-lcwgs-1-1.clmp.r1	2.9%	41%	120 bp	0.2
+Tzo-CMta_062-Ex1-4F-lcwgs-1-1.clmp.r2	2.1%	41%	120 bp	0.2
+Tzo-CMta_063-Ex1-4G-lcwgs-1-1.clmp.r1	5.6%	41%	125 bp	0.2
+Tzo-CMta_063-Ex1-4G-lcwgs-1-1.clmp.r2	3.8%	41%	124 bp	0.2
+Tzo-CMta_064-Ex1-4H-lcwgs-1-1.clmp.r1	2.7%	41%	120 bp	0.0
+Tzo-CMta_064-Ex1-4H-lcwgs-1-1.clmp.r2	1.6%	41%	119 bp	0.0
+Tzo-CMvi_006-Ex1-7B-lcwgs-1-1.clmp.r1	6.0%	40%	142 bp	2.7
+Tzo-CMvi_006-Ex1-7B-lcwgs-1-1.clmp.r2	5.5%	40%	141 bp	2.7
+Tzo-CMvi_007-Ex1-8E-lcwgs-1-1.clmp.r1	6.1%	40%	142 bp	0.9
+Tzo-CMvi_007-Ex1-8E-lcwgs-1-1.clmp.r2	5.0%	40%	141 bp	0.9
+Tzo-CMvi_011-Ex1-5G-lcwgs-1-1.clmp.r1	6.4%	40%	142 bp	1.8
+Tzo-CMvi_011-Ex1-5G-lcwgs-1-1.clmp.r2	5.5%	40%	141 bp	1.8
+Tzo-CMvi_012-Ex1-1G-lcwgs-1-1.clmp.r1	4.6%	40%	133 bp	2.4
+Tzo-CMvi_012-Ex1-1G-lcwgs-1-1.clmp.r2	4.0%	40%	133 bp	2.4
+Tzo-CMvi_013-Ex1-2B-lcwgs-1-1.clmp.r1	5.2%	39%	142 bp	1.1
+Tzo-CMvi_013-Ex1-2B-lcwgs-1-1.clmp.r2	4.2%	40%	142 bp	1.1
+Tzo-CMvi_015-Ex1-2F-lcwgs-1-1.clmp.r1	6.1%	40%	143 bp	1.1
+Tzo-CMvi_015-Ex1-2F-lcwgs-1-1.clmp.r2	5.2%	40%	143 bp	1.1
+Tzo-CMvi_016-Ex1-1D-lcwgs-1-1.clmp.r1	4.3%	40%	136 bp	1.5
+Tzo-CMvi_016-Ex1-1D-lcwgs-1-1.clmp.r2	3.6%	40%	135 bp	1.5
+Tzo-CMvi_018-Ex1-1F-lcwgs-2-1.clmp.r1	8.0%	41%	144 bp	0.2
+Tzo-CMvi_018-Ex1-1F-lcwgs-2-1.clmp.r2	4.9%	41%	144 bp	0.2
+Tzo-CMvi_019-Ex1-1G-lcwgs-2-1.clmp.r1	0.2%	40%	105 bp	0.0
+Tzo-CMvi_019-Ex1-1G-lcwgs-2-1.clmp.r2	0.1%	40%	105 bp	0.0
+Tzo-CMvi_020-Ex1-7D-lcwgs-1-1.clmp.r1	5.6%	41%	141 bp	1.8
+Tzo-CMvi_020-Ex1-7D-lcwgs-1-1.clmp.r2	5.1%	41%	141 bp	1.8
+Tzo-CMvi_027-Ex1-1H-lcwgs-2-1.clmp.r1	0.1%	40%	106 bp	0.0
+Tzo-CMvi_027-Ex1-1H-lcwgs-2-1.clmp.r2	0.1%	41%	105 bp	0.0
+Tzo-CMvi_028-Ex1-2A-lcwgs-2-1.clmp.r1	4.7%	40%	138 bp	0.1
+Tzo-CMvi_028-Ex1-2A-lcwgs-2-1.clmp.r2	2.8%	40%	138 bp	0.1
+Tzo-CMvi_029-Ex1-3C-lcwgs-1-1.clmp.r1	5.9%	40%	143 bp	1.3
+Tzo-CMvi_029-Ex1-3C-lcwgs-1-1.clmp.r2	4.7%	40%	142 bp	1.3
+Tzo-CMvi_030-Ex1-2H-lcwgs-1-1.clmp.r1	5.6%	40%	143 bp	1.5
+Tzo-CMvi_030-Ex1-2H-lcwgs-1-1.clmp.r2	4.5%	40%	142 bp	1.5
+Tzo-CMvi_031-Ex1-2B-lcwgs-2-1.clmp.r1	5.2%	40%	141 bp	1.1
+Tzo-CMvi_031-Ex1-2B-lcwgs-2-1.clmp.r2	4.5%	40%	140 bp	1.1
+Tzo-CMvi_032-Ex1-2C-lcwgs-2-1.clmp.r1	6.5%	40%	140 bp	0.2
+Tzo-CMvi_032-Ex1-2C-lcwgs-2-1.clmp.r2	4.2%	40%	139 bp	0.2
+Tzo-CMvi_033-Ex1-2D-lcwgs-2-1.clmp.r1	2.8%	40%	127 bp	0.0
+Tzo-CMvi_033-Ex1-2D-lcwgs-2-1.clmp.r2	1.7%	40%	126 bp	0.0
+Tzo-CMvi_034-Ex1-2E-lcwgs-2-1.clmp.r1	0.2%	40%	103 bp	0.0
+Tzo-CMvi_034-Ex1-2E-lcwgs-2-1.clmp.r2	0.1%	40%	103 bp	0.0
+Tzo-CMvi_035-Ex1-2F-lcwgs-2-1.clmp.r1	5.6%	41%	143 bp	0.1
+Tzo-CMvi_035-Ex1-2F-lcwgs-2-1.clmp.r2	3.1%	41%	142 bp	0.1
+Tzo-CMvi_038-Ex1-6B-lcwgs-1-1.clmp.r1	5.2%	39%	140 bp	0.6
+Tzo-CMvi_038-Ex1-6B-lcwgs-1-1.clmp.r2	4.0%	39%	140 bp	0.6
+Tzo-CMvi_040-Ex1-2G-lcwgs-2-1.clmp.r1	0.3%	40%	105 bp	0.0
+Tzo-CMvi_040-Ex1-2G-lcwgs-2-1.clmp.r2	0.2%	40%	105 bp	0.0
+Tzo-CMvi_041-Ex1-4D-lcwgs-1-1.clmp.r1	4.6%	40%	139 bp	0.7
+Tzo-CMvi_041-Ex1-4D-lcwgs-1-1.clmp.r2	3.7%	40%	139 bp	0.7
+Tzo-CMvi_042-Ex1-2H-lcwgs-2-1.clmp.r1	5.3%	42%	143 bp	0.0
+Tzo-CMvi_042-Ex1-2H-lcwgs-2-1.clmp.r2	2.9%	43%	142 bp	0.0
+Tzo-CMvi_044-Ex1-3A-lcwgs-2-1.clmp.r1	6.4%	41%	141 bp	0.1
+Tzo-CMvi_044-Ex1-3A-lcwgs-2-1.clmp.r2	3.8%	41%	140 bp	0.1
+Tzo-CMvi_045-Ex1-8B-lcwgs-1-1.clmp.r1	6.3%	40%	145 bp	1.9
+Tzo-CMvi_045-Ex1-8B-lcwgs-1-1.clmp.r2	5.3%	40%	144 bp	1.9
+Tzo-CMvi_046-Ex1-6E-lcwgs-1-1.clmp.r1	5.8%	39%	141 bp	1.4
+Tzo-CMvi_046-Ex1-6E-lcwgs-1-1.clmp.r2	4.8%	39%	141 bp	1.4
+Tzo-CMvi_047-Ex1-1F-lcwgs-1-1.clmp.r1	4.6%	40%	135 bp	1.1
+Tzo-CMvi_047-Ex1-1F-lcwgs-1-1.clmp.r2	3.9%	40%	135 bp	1.1
+Tzo-CMvi_048-Ex1-2A-lcwgs-1-1.clmp.r1	5.3%	40%	141 bp	1.1
+Tzo-CMvi_048-Ex1-2A-lcwgs-1-1.clmp.r2	4.5%	40%	140 bp	1.1
+Tzo-CMvi_049-Ex1-5B-lcwgs-1-1.clmp.r1	5.6%	40%	143 bp	0.9
+Tzo-CMvi_049-Ex1-5B-lcwgs-1-1.clmp.r2	4.7%	40%	142 bp	0.9
+Tzo-CMvi_050-Ex1-3B-lcwgs-2-1.clmp.r1	4.2%	40%	133 bp	0.0
+Tzo-CMvi_050-Ex1-3B-lcwgs-2-1.clmp.r2	2.5%	40%	133 bp	0.0
+Tzo-CMvi_051-Ex1-6H-lcwgs-1-1.clmp.r1	5.4%	40%	141 bp	0.9
+Tzo-CMvi_051-Ex1-6H-lcwgs-1-1.clmp.r2	4.5%	40%	140 bp	0.9
+Tzo-CMvi_052-Ex1-7E-lcwgs-1-1.clmp.r1	4.6%	40%	139 bp	0.8
+Tzo-CMvi_052-Ex1-7E-lcwgs-1-1.clmp.r2	3.7%	40%	139 bp	0.8
+Tzo-CMvi_053-Ex1-3C-lcwgs-2-1.clmp.r1	3.4%	40%	129 bp	0.0
+Tzo-CMvi_053-Ex1-3C-lcwgs-2-1.clmp.r2	1.8%	40%	128 bp	0.0
+Tzo-CMvi_054-Ex1-3D-lcwgs-2-1.clmp.r1	6.2%	40%	139 bp	0.2
+Tzo-CMvi_054-Ex1-3D-lcwgs-2-1.clmp.r2	4.1%	40%	139 bp	0.2
+Tzo-CMvi_057-Ex1-1H-lcwgs-1-1.clmp.r1	4.9%	40%	138 bp	0.9
+Tzo-CMvi_057-Ex1-1H-lcwgs-1-1.clmp.r2	4.1%	40%	138 bp	0.9
+Tzo-CMvi_058-Ex1-3E-lcwgs-2-1.clmp.r1	4.7%	40%	140 bp	0.2
+Tzo-CMvi_058-Ex1-3E-lcwgs-2-1.clmp.r2	3.1%	40%	140 bp	0.2
+Tzo-CMvi_061-Ex1-3F-lcwgs-2-1.clmp.r1	6.6%	41%	144 bp	0.1
+Tzo-CMvi_061-Ex1-3F-lcwgs-2-1.clmp.r2	3.7%	41%	144 bp	0.1
+Tzo-CMvi_062-Ex1-3G-lcwgs-2-1.clmp.r1	5.4%	40%	142 bp	0.0
+Tzo-CMvi_062-Ex1-3G-lcwgs-2-1.clmp.r2	3.1%	41%	142 bp	0.0
+Tzo-CMvi_063-Ex1-7A-lcwgs-1-1.clmp.r1	4.7%	40%	139 bp	1.0
+Tzo-CMvi_063-Ex1-7A-lcwgs-1-1.clmp.r2	3.9%	40%	139 bp	1.0
+Tzo-CMvi_064-Ex1-3A-lcwgs-1-1.clmp.r1	6.0%	39%	143 bp	1.0
+Tzo-CMvi_064-Ex1-3A-lcwgs-1-1.clmp.r2	5.0%	40%	142 bp	1.0
+Tzo-CMvi_065-Ex1-1E-lcwgs-1-1.clmp.r1	4.5%	39%	138 bp	0.8
+Tzo-CMvi_065-Ex1-1E-lcwgs-1-1.clmp.r2	3.6%	40%	137 bp	0.8
+Tzo-CMvi_066-Ex1-5F-lcwgs-1-1.clmp.r1	5.7%	40%	142 bp	1.0
+Tzo-CMvi_066-Ex1-5F-lcwgs-1-1.clmp.r2	4.7%	40%	142 bp	1.0
+Tzo-CMvi_067-Ex1-6A-lcwgs-1-1.clmp.r1	6.3%	40%	142 bp	2.4
+Tzo-CMvi_067-Ex1-6A-lcwgs-1-1.clmp.r2	5.4%	40%	141 bp	2.4
+Tzo-CMvi_068-Ex1-6F-lcwgs-1-1.clmp.r1	5.3%	39%	140 bp	0.6
+Tzo-CMvi_068-Ex1-6F-lcwgs-1-1.clmp.r2	4.0%	39%	139 bp	0.6
+Tzo-CMvi_069-Ex1-7G-lcwgs-1-1.clmp.r1	4.8%	40%	140 bp	1.3
+Tzo-CMvi_069-Ex1-7G-lcwgs-1-1.clmp.r2	4.1%	40%	140 bp	1.3
+Tzo-CMvi_070-Ex1-3H-lcwgs-2-1.clmp.r1	0.1%	39%	104 bp	0.0
+Tzo-CMvi_070-Ex1-3H-lcwgs-2-1.clmp.r2	0.1%	39%	104 bp	0.0
+Tzo-CMvi_071-Ex1-4A-lcwgs-2-1.clmp.r1	5.0%	40%	136 bp	0.0
+Tzo-CMvi_071-Ex1-4A-lcwgs-2-1.clmp.r2	2.9%	40%	135 bp	0.0
+Tzo-CMvi_075-Ex1-3D-lcwgs-1-1.clmp.r1	5.9%	40%	143 bp	1.3
+Tzo-CMvi_075-Ex1-3D-lcwgs-1-1.clmp.r2	4.9%	40%	143 bp	1.3
+Tzo-CMvi_076-Ex1-5A-lcwgs-1-1.clmp.r1	5.9%	40%	143 bp	1.2
+Tzo-CMvi_076-Ex1-5A-lcwgs-1-1.clmp.r2	5.1%	40%	143 bp	1.2
+Tzo-CMvi_077-Ex1-6D-lcwgs-1-1.clmp.r1	6.2%	39%	142 bp	1.6
+Tzo-CMvi_077-Ex1-6D-lcwgs-1-1.clmp.r2	5.3%	39%	142 bp	1.6
+Tzo-CMvi_078-Ex1-4B-lcwgs-2-1.clmp.r1	5.0%	40%	141 bp	0.3
+Tzo-CMvi_078-Ex1-4B-lcwgs-2-1.clmp.r2	3.4%	40%	140 bp	0.3
+Tzo-CMvi_079-Ex1-7C-lcwgs-1-1.clmp.r1	5.7%	40%	142 bp	0.5
+Tzo-CMvi_079-Ex1-7C-lcwgs-1-1.clmp.r2	4.7%	40%	141 bp	0.5
+Tzo-CMvi_080-Ex1-4C-lcwgs-2-1.clmp.r1	6.8%	40%	141 bp	0.2
+Tzo-CMvi_080-Ex1-4C-lcwgs-2-1.clmp.r2	4.4%	40%	140 bp	0.2
+Tzo-CMvi_081-Ex1-4D-lcwgs-2-1.clmp.r1	7.4%	40%	140 bp	0.2
+Tzo-CMvi_081-Ex1-4D-lcwgs-2-1.clmp.r2	5.0%	40%	140 bp	0.2
+Tzo-CMvi_082-Ex1-6C-lcwgs-1-1.clmp.r1	5.7%	39%	141 bp	1.4
+Tzo-CMvi_082-Ex1-6C-lcwgs-1-1.clmp.r2	4.6%	39%	141 bp	1.4
+Tzo-CMvi_083-Ex1-4E-lcwgs-2-1.clmp.r1	5.4%	40%	132 bp	0.1
+Tzo-CMvi_083-Ex1-4E-lcwgs-2-1.clmp.r2	3.4%	40%	132 bp	0.1
+Tzo-CMvi_087-Ex1-2D-lcwgs-1-1.clmp.r1	5.8%	40%	143 bp	1.0
+Tzo-CMvi_087-Ex1-2D-lcwgs-1-1.clmp.r2	4.9%	40%	143 bp	1.0
+Tzo-CMvi_088-Ex1-4F-lcwgs-2-1.clmp.r1	6.1%	40%	142 bp	0.1
+Tzo-CMvi_088-Ex1-4F-lcwgs-2-1.clmp.r2	3.5%	40%	142 bp	0.1
+Tzo-CMvi_089-Ex1-5D-lcwgs-1-1.clmp.r1	6.1%	39%	142 bp	3.4
+Tzo-CMvi_089-Ex1-5D-lcwgs-1-1.clmp.r2	5.2%	40%	141 bp	3.4
+Tzo-CMvi_090-Ex1-3F-lcwgs-1-1.clmp.r1	4.5%	39%	132 bp	0.9
+Tzo-CMvi_090-Ex1-3F-lcwgs-1-1.clmp.r2	3.6%	39%	132 bp	0.9
+Tzo-CMvi_091-Ex1-2C-lcwgs-1-1.clmp.r1	6.4%	40%	143 bp	1.5
+Tzo-CMvi_091-Ex1-2C-lcwgs-1-1.clmp.r2	5.9%	40%	143 bp	1.5
+Tzo-CMvi_092-Ex1-4G-lcwgs-2-1.clmp.r1	5.7%	42%	142 bp	0.1
+Tzo-CMvi_092-Ex1-4G-lcwgs-2-1.clmp.r2	3.3%	42%	141 bp	0.1
+Tzo-CMvi_093-Ex1-4H-lcwgs-2-1.clmp.r1	4.5%	40%	137 bp	0.0
+Tzo-CMvi_093-Ex1-4H-lcwgs-2-1.clmp.r2	2.6%	40%	137 bp	0.0
+Tzo-CMvi_094-Ex1-8C-lcwgs-1-1.clmp.r1	6.1%	40%	142 bp	2.7
+Tzo-CMvi_094-Ex1-8C-lcwgs-1-1.clmp.r2	5.6%	40%	142 bp	2.7
 ```
   
 </p>
 </details>
 
 ## 10. Second trim.
-TBD
+`sbatch ../../../pire_fq_gz_processing/runFASTP_2.sbatch fq_fp1_clmp fq_fp1_clmp_fp2 33`
 
 <details><summary>Expand for MultiQC Output.</summary>
 
 ```bash
-TBD
+Sample Name	% Duplication	GC content	% PF	% Adapter
+Tzo-ABol_002-Ex1-2A-lcwgs-1-1.clmp.r1r2_fastp	1.2%	39.2%	98.4%	1.3%
+Tzo-ABol_003-Ex1-3A-lcwgs-1-1.clmp.r1r2_fastp	1.5%	39.3%	98.3%	1.3%
+Tzo-ABol_008-Ex1-8A-lcwgs-1-1.clmp.r1r2_fastp	1.6%	38.9%	98.2%	1.2%
+Tzo-ABol_009-Ex1-9A-lcwgs-1-1.clmp.r1r2_fastp	1.6%	42.1%	98.0%	1.2%
+Tzo-ABol_010-Ex1-10A-lcwgs-1-1.clmp.r1r2_fastp	1.4%	39.3%	98.3%	1.3%
+Tzo-ABol_011-Ex1-11A-lcwgs-1-1.clmp.r1r2_fastp	0.2%	39.4%	97.5%	1.7%
+Tzo-ABol_012-Ex1-12A-lcwgs-1-1.clmp.r1r2_fastp	1.4%	38.3%	98.4%	1.3%
+Tzo-ABol_020-Ex1-8B-lcwgs-1-1.clmp.r1r2_fastp	1.4%	38.7%	98.3%	1.4%
+Tzo-ABol_023-Ex1-11B-lcwgs-1-1.clmp.r1r2_fastp	1.4%	38.4%	98.3%	1.3%
+Tzo-ABol_024-Ex1-12B-lcwgs-1-1.clmp.r1r2_fastp	0.2%	39.5%	97.4%	1.6%
+Tzo-ABol_026-Ex1-2C-lcwgs-1-1.clmp.r1r2_fastp	1.3%	38.3%	98.4%	1.3%
+Tzo-ABol_030-Ex1-6C-lcwgs-1-1.clmp.r1r2_fastp	1.2%	38.9%	98.4%	1.3%
+Tzo-ABol_034-Ex1-10C-lcwgs-1-1.clmp.r1r2_fastp	1.2%	39.0%	98.3%	1.3%
+Tzo-ABol_035-Ex1-11C-lcwgs-1-1.clmp.r1r2_fastp	1.2%	38.5%	98.4%	1.4%
+Tzo-ABol_036-Ex1-12C-lcwgs-1-1.clmp.r1r2_fastp	1.3%	40.8%	98.3%	1.3%
+Tzo-ABol_038-Ex1-2D-lcwgs-1-1.clmp.r1r2_fastp	1.5%	39.4%	98.2%	1.2%
+Tzo-ABol_043-Ex1-7D-lcwgs-1-1.clmp.r1r2_fastp	1.2%	39.1%	98.4%	1.5%
+Tzo-ABol_044-Ex1-8D-lcwgs-1-1.clmp.r1r2_fastp	1.5%	43.8%	97.9%	1.3%
+Tzo-ABol_045-Ex1-9D-lcwgs-1-1.clmp.r1r2_fastp	1.2%	39.3%	98.4%	1.5%
+Tzo-ABol_046-Ex1-10D-lcwgs-1-1.clmp.r1r2_fastp	1.1%	40.1%	98.4%	1.5%
+Tzo-ABol_047-Ex1-11D-lcwgs-1-1.clmp.r1r2_fastp	1.4%	39.5%	98.3%	1.3%
+Tzo-ABol_048-Ex1-12D-lcwgs-1-1.clmp.r1r2_fastp	1.4%	38.3%	98.4%	1.4%
+Tzo-ABol_050-Ex1-2E-lcwgs-1-1.clmp.r1r2_fastp	1.3%	39.8%	98.4%	1.4%
+Tzo-ABol_051-Ex1-3E-lcwgs-1-1.clmp.r1r2_fastp	1.3%	39.5%	98.3%	1.3%
+Tzo-ABol_052-Ex1-4E-lcwgs-1-1.clmp.r1r2_fastp	1.2%	39.1%	98.5%	1.4%
+Tzo-ABol_053-Ex1-5E-lcwgs-1-1.clmp.r1r2_fastp	1.4%	38.4%	98.3%	1.3%
+Tzo-ABol_054-Ex1-6E-lcwgs-1-1.clmp.r1r2_fastp	1.5%	40.3%	98.1%	1.3%
+Tzo-ABol_055-Ex1-7E-lcwgs-1-1.clmp.r1r2_fastp	1.4%	38.8%	98.3%	1.3%
+Tzo-ABol_056-Ex1-8E-lcwgs-1-1.clmp.r1r2_fastp	1.4%	38.9%	98.3%	1.4%
+Tzo-ABol_057-Ex1-9E-lcwgs-1-1.clmp.r1r2_fastp	1.4%	39.5%	98.2%	1.3%
+Tzo-ABol_058-Ex1-10E-lcwgs-1-1.clmp.r1r2_fastp	1.2%	38.3%	98.4%	1.4%
+Tzo-ABol_059-Ex1-11E-lcwgs-1-1.clmp.r1r2_fastp	1.3%	38.6%	98.4%	1.4%
+Tzo-ABol_060-Ex1-12E-lcwgs-1-1.clmp.r1r2_fastp	1.4%	39.0%	98.4%	1.4%
+Tzo-ABol_061-Ex1-1F-lcwgs-1-1.clmp.r1r2_fastp	1.2%	40.0%	98.5%	1.4%
+Tzo-ABol_062-Ex1-2F-lcwgs-1-1.clmp.r1r2_fastp	1.1%	40.1%	98.5%	1.3%
+Tzo-ABol_063-Ex1-3F-lcwgs-1-1.clmp.r1r2_fastp	0.3%	39.1%	97.7%	2.1%
+Tzo-ABol_065-Ex1-5F-lcwgs-1-1.clmp.r1r2_fastp	1.3%	39.8%	98.4%	1.3%
+Tzo-ABol_066-Ex1-6F-lcwgs-1-1.clmp.r1r2_fastp	1.2%	39.6%	98.4%	1.3%
+Tzo-ABol_067-Ex1-7F-lcwgs-1-1.clmp.r1r2_fastp	1.2%	39.0%	98.5%	1.3%
+Tzo-ABol_068-Ex1-8F-lcwgs-1-1.clmp.r1r2_fastp	1.4%	41.9%	98.2%	1.3%
+Tzo-ABol_069-Ex1-9F-lcwgs-1-1.clmp.r1r2_fastp	1.3%	39.0%	98.4%	1.3%
+Tzo-ABol_070-Ex1-10F-lcwgs-1-1.clmp.r1r2_fastp	1.4%	38.7%	98.4%	1.3%
+Tzo-ABol_071-Ex1-11F-lcwgs-1-1.clmp.r1r2_fastp	1.2%	38.5%	98.5%	1.3%
+Tzo-ABol_072-Ex1-12F-lcwgs-1-1.clmp.r1r2_fastp	1.5%	38.7%	98.4%	1.3%
+Tzo-ABol_073-Ex1-1G-lcwgs-1-1.clmp.r1r2_fastp	1.2%	39.3%	98.4%	1.4%
+Tzo-ABol_075-Ex1-3G-lcwgs-1-1.clmp.r1r2_fastp	1.2%	39.9%	98.5%	1.4%
+Tzo-ABol_076-Ex1-4G-lcwgs-1-1.clmp.r1r2_fastp	1.0%	40.7%	98.6%	1.4%
+Tzo-ABol_077-Ex1-5G-lcwgs-1-1.clmp.r1r2_fastp	1.4%	38.5%	98.4%	1.3%
+Tzo-ABol_078-Ex1-6G-lcwgs-1-1.clmp.r1r2_fastp	1.3%	38.3%	98.4%	1.3%
+Tzo-ABol_079-Ex1-7G-lcwgs-1-1.clmp.r1r2_fastp	1.4%	38.1%	98.4%	1.2%
+Tzo-ABol_080-Ex1-8G-lcwgs-1-1.clmp.r1r2_fastp	1.5%	38.4%	98.3%	1.2%
+Tzo-ABol_081-Ex1-9G-lcwgs-1-1.clmp.r1r2_fastp	1.4%	38.8%	98.4%	1.3%
+Tzo-ABol_082-Ex1-10G-lcwgs-1-1.clmp.r1r2_fastp	1.4%	43.9%	98.0%	1.3%
+Tzo-ABol_083-Ex1-11G-lcwgs-1-1.clmp.r1r2_fastp	1.4%	39.2%	98.4%	1.3%
+Tzo-ABol_084-Ex1-12G-lcwgs-1-1.clmp.r1r2_fastp	1.4%	38.7%	98.5%	1.3%
+Tzo-ABol_085-Ex1-1H-lcwgs-1-1.clmp.r1r2_fastp	1.2%	39.6%	98.5%	1.4%
+Tzo-ABol_086-Ex1-2H-lcwgs-1-1.clmp.r1r2_fastp	1.3%	43.0%	98.4%	1.3%
+Tzo-ABol_087-Ex1-3H-lcwgs-1-1.clmp.r1r2_fastp	1.3%	39.1%	98.5%	1.3%
+Tzo-ABol_088-Ex1-4H-lcwgs-1-1.clmp.r1r2_fastp	1.3%	40.8%	98.4%	1.3%
+Tzo-ABol_090-Ex1-6H-lcwgs-1-1.clmp.r1r2_fastp	0.9%	41.8%	98.4%	1.4%
+Tzo-ABol_091-Ex1-7H-lcwgs-1-1.clmp.r1r2_fastp	1.4%	39.3%	98.5%	1.3%
+Tzo-ABol_092-Ex1-8H-lcwgs-1-1.clmp.r1r2_fastp	1.5%	39.6%	98.4%	1.2%
+Tzo-ABol_093-Ex1-9H-lcwgs-1-1.clmp.r1r2_fastp	1.5%	39.1%	98.3%	1.2%
+Tzo-ABol_095-Ex1-11H-lcwgs-1-1.clmp.r1r2_fastp	1.4%	39.4%	98.4%	1.3%
+Tzo-ABol_096-Ex1-12H-lcwgs-1-1.clmp.r1r2_fastp	1.5%	39.3%	98.4%	1.2%
+Tzo-AMta_001-Ex1-5D-lcwgs-1-1.clmp.r1r2_fastp	1.0%	42.8%	98.4%	1.4%
+Tzo-AMta_002-Ex1-5E-lcwgs-1-1.clmp.r1r2_fastp	1.2%	40.7%	98.5%	1.3%
+Tzo-AMta_003-Ex1-5F-lcwgs-1-1.clmp.r1r2_fastp	1.4%	43.8%	98.1%	1.4%
+Tzo-AMta_004-Ex1-5G-lcwgs-1-1.clmp.r1r2_fastp	1.1%	42.0%	98.4%	1.4%
+Tzo-AMta_005-Ex1-5H-lcwgs-1-1.clmp.r1r2_fastp	1.1%	40.7%	98.5%	1.3%
+Tzo-AMta_006-Ex1-1B-lcwgs-2-1.clmp.r1r2_fastp	0.5%	42.0%	98.8%	1.5%
+Tzo-AMta_006-Ex1-6A-lcwgs-1-1.clmp.r1r2_fastp	1.4%	40.2%	98.4%	1.4%
+Tzo-AMta_007-Ex1-6B-lcwgs-1-1.clmp.r1r2_fastp	1.3%	41.6%	98.4%	1.4%
+Tzo-AMta_008-Ex1-6C-lcwgs-1-1.clmp.r1r2_fastp	1.2%	40.9%	98.5%	1.4%
+Tzo-AMta_009-Ex1-6D-lcwgs-1-1.clmp.r1r2_fastp	1.1%	40.1%	98.5%	1.4%
+Tzo-AMta_010-Ex1-6E-lcwgs-1-1.clmp.r1r2_fastp	1.1%	40.0%	98.6%	1.3%
+Tzo-AMta_011-Ex1-6F-lcwgs-1-1.clmp.r1r2_fastp	0.7%	40.2%	98.1%	1.7%
+Tzo-AMta_012-Ex1-6G-lcwgs-1-1.clmp.r1r2_fastp	1.1%	40.8%	98.5%	1.3%
+Tzo-AMta_013-Ex1-6H-lcwgs-1-1.clmp.r1r2_fastp	1.0%	40.4%	98.5%	1.4%
+Tzo-AMta_014-Ex1-7A-lcwgs-1-1.clmp.r1r2_fastp	1.4%	39.1%	98.5%	1.4%
+Tzo-AMta_015-Ex1-7B-lcwgs-1-1.clmp.r1r2_fastp	1.5%	38.8%	98.4%	1.4%
+Tzo-AMta_016-Ex1-7C-lcwgs-1-1.clmp.r1r2_fastp	1.2%	40.8%	98.5%	1.4%
+Tzo-AMta_017-Ex1-7D-lcwgs-1-1.clmp.r1r2_fastp	1.2%	42.1%	98.4%	1.4%
+Tzo-AMta_018-Ex1-7E-lcwgs-1-1.clmp.r1r2_fastp	1.0%	39.2%	98.7%	1.4%
+Tzo-AMta_019-Ex1-7F-lcwgs-1-1.clmp.r1r2_fastp	1.1%	39.4%	98.6%	1.4%
+Tzo-AMta_020-Ex1-7G-lcwgs-1-1.clmp.r1r2_fastp	1.0%	40.0%	98.6%	1.4%
+Tzo-AMta_021-Ex1-7H-lcwgs-1-1.clmp.r1r2_fastp	1.1%	40.1%	98.5%	1.4%
+Tzo-AMta_022-Ex1-8A-lcwgs-1-1.clmp.r1r2_fastp	1.4%	39.5%	98.4%	1.4%
+Tzo-AMta_023-Ex1-8B-lcwgs-1-1.clmp.r1r2_fastp	1.0%	38.6%	98.5%	1.4%
+Tzo-AMta_024-Ex1-8C-lcwgs-1-1.clmp.r1r2_fastp	1.0%	39.5%	98.5%	1.4%
+Tzo-AMta_025-Ex1-1E-lcwgs-2-1.clmp.r1r2_fastp	0.9%	40.7%	98.6%	1.5%
+Tzo-AMta_025-Ex1-8D-lcwgs-1-1.clmp.r1r2_fastp	0.9%	42.1%	98.6%	1.4%
+Tzo-AMta_026-Ex1-8E-lcwgs-1-1.clmp.r1r2_fastp	0.9%	39.9%	98.6%	1.4%
+Tzo-AMta_027-Ex1-1C-lcwgs-2-1.clmp.r1r2_fastp	0.5%	42.7%	98.8%	1.5%
+Tzo-AMta_027-Ex1-8F-lcwgs-1-1.clmp.r1r2_fastp	0.9%	42.7%	98.6%	1.5%
+Tzo-AMta_028-Ex1-8G-lcwgs-1-1.clmp.r1r2_fastp	1.0%	41.0%	98.6%	1.4%
+Tzo-AMta_029-Ex1-8H-lcwgs-1-1.clmp.r1r2_fastp	0.8%	42.2%	98.6%	1.4%
+Tzo-AMta_030-Ex1-9A-lcwgs-1-1.clmp.r1r2_fastp	1.2%	41.2%	98.6%	1.4%
+Tzo-AMta_031-Ex1-9B-lcwgs-1-1.clmp.r1r2_fastp	1.2%	39.2%	98.5%	1.4%
+Tzo-AMvi_001-Ex1-1A-lcwgs-1-1.clmp.r1r2_fastp	1.3%	38.1%	98.3%	1.2%
+Tzo-AMvi_002-Ex1-1E-lcwgs-1-1.clmp.r1r2_fastp	1.4%	38.9%	98.4%	1.3%
+Tzo-AMvi_003-Ex1-2A-lcwgs-1-1.clmp.r1r2_fastp	1.5%	36.4%	98.3%	1.1%
+Tzo-AMvi_004-Ex1-2E-lcwgs-1-1.clmp.r1r2_fastp	1.5%	37.4%	98.4%	1.3%
+Tzo-AMvi_005-Ex1-3A-lcwgs-1-1.clmp.r1r2_fastp	1.8%	37.5%	98.2%	1.1%
+Tzo-AMvi_006-Ex1-1A-lcwgs-2-1.clmp.r1r2_fastp	3.7%	52.0%	96.9%	0.7%
+Tzo-AMvi_007-Ex1-4A-lcwgs-1-1.clmp.r1r2_fastp	1.6%	37.1%	98.1%	1.1%
+Tzo-AMvi_008-Ex1-1B-lcwgs-2-1.clmp.r1r2_fastp	2.4%	40.4%	97.8%	0.9%
+Tzo-AMvi_009-Ex1-5A-lcwgs-1-1.clmp.r1r2_fastp	1.2%	37.2%	98.1%	1.3%
+Tzo-AMvi_010-Ex1-5E-lcwgs-1-1.clmp.r1r2_fastp	1.5%	39.2%	98.2%	1.2%
+Tzo-AMvi_011-Ex1-6A-lcwgs-1-1.clmp.r1r2_fastp	0.6%	38.6%	97.1%	1.7%
+Tzo-AMvi_012-Ex1-6E-lcwgs-1-1.clmp.r1r2_fastp	1.4%	38.4%	98.3%	1.2%
+Tzo-AMvi_013-Ex1-1B-lcwgs-1-1.clmp.r1r2_fastp	1.4%	39.1%	98.3%	1.2%
+Tzo-AMvi_014-Ex1-1C-lcwgs-2-1.clmp.r1r2_fastp	0.2%	40.7%	97.2%	1.7%
+Tzo-AMvi_015-Ex1-2B-lcwgs-1-1.clmp.r1r2_fastp	1.8%	38.7%	98.1%	1.0%
+Tzo-AMvi_016-Ex1-2F-lcwgs-1-1.clmp.r1r2_fastp	1.6%	40.1%	98.4%	1.1%
+Tzo-AMvi_017-Ex1-3B-lcwgs-1-1.clmp.r1r2_fastp	1.8%	38.3%	98.2%	1.1%
+Tzo-AMvi_018-Ex1-3F-lcwgs-1-1.clmp.r1r2_fastp	1.8%	40.6%	98.1%	1.0%
+Tzo-AMvi_019-Ex1-1D-lcwgs-2-1.clmp.r1r2_fastp	0.1%	40.4%	97.2%	1.5%
+Tzo-AMvi_020-Ex1-4F-lcwgs-1-1.clmp.r1r2_fastp	1.7%	39.4%	98.1%	1.2%
+Tzo-AMvi_021-Ex1-1E-lcwgs-2-1.clmp.r1r2_fastp	2.8%	43.0%	97.6%	0.8%
+Tzo-AMvi_022-Ex1-5F-lcwgs-1-1.clmp.r1r2_fastp	2.1%	39.9%	98.0%	1.0%
+Tzo-AMvi_023-Ex1-6B-lcwgs-1-1.clmp.r1r2_fastp	1.2%	38.8%	98.1%	1.1%
+Tzo-AMvi_024-Ex1-6F-lcwgs-1-1.clmp.r1r2_fastp	1.6%	38.5%	98.2%	1.1%
+Tzo-AMvi_025-Ex1-1C-lcwgs-1-1.clmp.r1r2_fastp	1.3%	37.7%	98.4%	1.2%
+Tzo-AMvi_026-Ex1-1G-lcwgs-1-1.clmp.r1r2_fastp	1.3%	39.4%	98.3%	1.3%
+Tzo-AMvi_027-Ex1-2C-lcwgs-1-1.clmp.r1r2_fastp	1.5%	38.8%	98.3%	1.1%
+Tzo-AMvi_028-Ex1-2G-lcwgs-1-1.clmp.r1r2_fastp	1.3%	38.3%	98.4%	1.3%
+Tzo-AMvi_029-Ex1-3C-lcwgs-1-1.clmp.r1r2_fastp	1.1%	37.9%	98.4%	1.4%
+Tzo-AMvi_030-Ex1-3G-lcwgs-1-1.clmp.r1r2_fastp	1.8%	37.4%	98.3%	1.1%
+Tzo-AMvi_031-Ex1-4C-lcwgs-1-1.clmp.r1r2_fastp	1.3%	37.6%	98.5%	1.2%
+Tzo-AMvi_032-Ex1-4G-lcwgs-1-1.clmp.r1r2_fastp	1.4%	40.4%	98.3%	1.3%
+Tzo-AMvi_033-Ex1-5C-lcwgs-1-1.clmp.r1r2_fastp	1.9%	39.8%	98.0%	0.9%
+Tzo-AMvi_034-Ex1-5G-lcwgs-1-1.clmp.r1r2_fastp	1.5%	37.6%	98.3%	1.2%
+Tzo-AMvi_035-Ex1-6C-lcwgs-1-1.clmp.r1r2_fastp	1.5%	39.1%	98.2%	1.1%
+Tzo-AMvi_036-Ex1-6G-lcwgs-1-1.clmp.r1r2_fastp	1.6%	41.8%	98.0%	1.1%
+Tzo-AMvi_037-Ex1-1D-lcwgs-1-1.clmp.r1r2_fastp	0.8%	38.8%	98.1%	1.5%
+Tzo-AMvi_038-Ex1-1H-lcwgs-1-1.clmp.r1r2_fastp	1.4%	38.4%	98.4%	1.1%
+Tzo-AMvi_039-Ex1-2D-lcwgs-1-1.clmp.r1r2_fastp	1.1%	38.9%	98.4%	1.2%
+Tzo-AMvi_040-Ex1-2H-lcwgs-1-1.clmp.r1r2_fastp	1.2%	38.2%	98.4%	1.1%
+Tzo-AMvi_041-Ex1-3D-lcwgs-1-1.clmp.r1r2_fastp	0.2%	39.6%	97.9%	1.4%
+Tzo-AMvi_042-Ex1-3H-lcwgs-1-1.clmp.r1r2_fastp	1.7%	41.3%	98.3%	1.1%
+Tzo-AMvi_043-Ex1-4D-lcwgs-1-1.clmp.r1r2_fastp	1.4%	37.7%	98.5%	1.3%
+Tzo-AMvi_044-Ex1-4H-lcwgs-1-1.clmp.r1r2_fastp	1.5%	37.5%	98.5%	1.2%
+Tzo-AMvi_045-Ex1-5D-lcwgs-1-1.clmp.r1r2_fastp	1.4%	38.0%	98.4%	1.1%
+Tzo-AMvi_046-Ex1-5H-lcwgs-1-1.clmp.r1r2_fastp	1.6%	39.9%	98.3%	1.1%
+Tzo-AMvi_047-Ex1-6D-lcwgs-1-1.clmp.r1r2_fastp	1.4%	38.5%	98.3%	1.1%
+Tzo-AMvi_048-Ex1-6H-lcwgs-1-1.clmp.r1r2_fastp	1.4%	41.0%	98.1%	1.1%
+Tzo-CMal_001-Ex1-3F-lcwgs-1-1.clmp.r1r2_fastp	2.5%	41.1%	97.1%	0.7%
+Tzo-CMal_002-Ex1-3G-lcwgs-1-1.clmp.r1r2_fastp	3.3%	41.1%	96.3%	0.5%
+Tzo-CMal_003-Ex1-3H-lcwgs-1-1.clmp.r1r2_fastp	3.4%	40.8%	96.1%	0.4%
+Tzo-CMal_004-Ex1-4A-lcwgs-1-1.clmp.r1r2_fastp	3.6%	40.6%	96.3%	0.4%
+Tzo-CMal_005-Ex1-4B-lcwgs-1-1.clmp.r1r2_fastp	2.5%	40.9%	97.2%	0.6%
+Tzo-CMal_006-Ex1-4C-lcwgs-1-1.clmp.r1r2_fastp	2.7%	40.9%	97.0%	0.6%
+Tzo-CMal_007-Ex1-4D-lcwgs-1-1.clmp.r1r2_fastp	2.5%	41.0%	97.1%	0.6%
+Tzo-CMal_008-Ex1-4E-lcwgs-1-1.clmp.r1r2_fastp	2.8%	41.0%	96.9%	0.5%
+Tzo-CMal_009-Ex1-4F-lcwgs-1-1.clmp.r1r2_fastp	2.6%	41.2%	97.1%	0.6%
+Tzo-CMal_010-Ex1-4G-lcwgs-1-1.clmp.r1r2_fastp	3.0%	40.8%	96.6%	0.5%
+Tzo-CMal_011-Ex1-4H-lcwgs-1-1.clmp.r1r2_fastp	3.1%	40.9%	96.7%	0.5%
+Tzo-CMal_012-Ex1-5A-lcwgs-1-1.clmp.r1r2_fastp	3.5%	41.0%	96.6%	0.5%
+Tzo-CMal_013-Ex1-5B-lcwgs-1-1.clmp.r1r2_fastp	2.8%	40.9%	96.9%	0.6%
+Tzo-CMal_014-Ex1-5C-lcwgs-1-1.clmp.r1r2_fastp	2.9%	40.8%	96.9%	0.6%
+Tzo-CMal_015-Ex1-5D-lcwgs-1-1.clmp.r1r2_fastp	2.6%	41.2%	97.1%	0.6%
+Tzo-CMal_016-Ex1-5E-lcwgs-1-1.clmp.r1r2_fastp	2.4%	41.3%	97.0%	0.7%
+Tzo-CMal_017-Ex1-5F-lcwgs-1-1.clmp.r1r2_fastp	2.5%	41.1%	97.2%	0.7%
+Tzo-CMal_018-Ex1-5G-lcwgs-1-1.clmp.r1r2_fastp	2.2%	41.3%	97.4%	0.8%
+Tzo-CMal_019-Ex1-5H-lcwgs-1-1.clmp.r1r2_fastp	3.1%	40.9%	96.6%	0.5%
+Tzo-CMal_020-Ex1-6A-lcwgs-1-1.clmp.r1r2_fastp	3.1%	41.1%	96.8%	0.5%
+Tzo-CMal_021-Ex1-6B-lcwgs-1-1.clmp.r1r2_fastp	2.3%	41.1%	97.2%	0.7%
+Tzo-CMal_022-Ex1-6C-lcwgs-1-1.clmp.r1r2_fastp	3.0%	41.0%	96.7%	0.5%
+Tzo-CMal_023-Ex1-6D-lcwgs-1-1.clmp.r1r2_fastp	2.2%	41.2%	97.3%	0.7%
+Tzo-CMal_024-Ex1-6E-lcwgs-1-1.clmp.r1r2_fastp	0.2%	41.0%	97.3%	1.9%
+Tzo-CMal_025-Ex1-6F-lcwgs-1-1.clmp.r1r2_fastp	2.1%	41.3%	97.4%	0.8%
+Tzo-CMal_026-Ex1-6G-lcwgs-1-1.clmp.r1r2_fastp	2.3%	41.4%	97.2%	0.7%
+Tzo-CMal_027-Ex1-6H-lcwgs-1-1.clmp.r1r2_fastp	2.3%	41.4%	97.1%	0.7%
+Tzo-CMal_028-Ex1-7A-lcwgs-1-1.clmp.r1r2_fastp	2.9%	41.6%	96.9%	0.6%
+Tzo-CMal_029-Ex1-7B-lcwgs-1-1.clmp.r1r2_fastp	2.1%	41.3%	97.4%	0.8%
+Tzo-CMal_030-Ex1-7C-lcwgs-1-1.clmp.r1r2_fastp	2.7%	40.8%	97.0%	0.6%
+Tzo-CMal_031-Ex1-7D-lcwgs-1-1.clmp.r1r2_fastp	2.2%	41.2%	97.4%	0.7%
+Tzo-CMal_032-Ex1-7E-lcwgs-1-1.clmp.r1r2_fastp	2.1%	41.4%	97.4%	0.8%
+Tzo-CMal_033-Ex1-7F-lcwgs-1-1.clmp.r1r2_fastp	1.9%	41.5%	97.7%	0.9%
+Tzo-CMal_034-Ex1-7G-lcwgs-1-1.clmp.r1r2_fastp	2.0%	41.4%	97.5%	0.9%
+Tzo-CMal_035-Ex1-7H-lcwgs-1-1.clmp.r1r2_fastp	2.6%	41.4%	96.9%	0.6%
+Tzo-CMal_036-Ex1-8A-lcwgs-1-1.clmp.r1r2_fastp	2.8%	41.0%	96.8%	0.6%
+Tzo-CMal_037-Ex1-8B-lcwgs-1-1.clmp.r1r2_fastp	2.2%	41.4%	97.4%	0.8%
+Tzo-CMal_038-Ex1-8C-lcwgs-1-1.clmp.r1r2_fastp	2.1%	41.2%	97.4%	0.8%
+Tzo-CMal_039-Ex1-8D-lcwgs-1-1.clmp.r1r2_fastp	0.3%	40.6%	97.8%	1.7%
+Tzo-CMal_040-Ex1-8E-lcwgs-1-1.clmp.r1r2_fastp	2.4%	41.3%	97.2%	0.7%
+Tzo-CMal_041-Ex1-8F-lcwgs-1-1.clmp.r1r2_fastp	0.1%	40.7%	97.6%	1.7%
+Tzo-CMal_042-Ex1-8G-lcwgs-1-1.clmp.r1r2_fastp	2.1%	41.4%	97.2%	0.8%
+Tzo-CMal_043-Ex1-8H-lcwgs-1-1.clmp.r1r2_fastp	3.0%	40.9%	96.4%	0.5%
+Tzo-CMal_044-Ex1-9A-lcwgs-1-1.clmp.r1r2_fastp	3.6%	40.8%	96.7%	0.5%
+Tzo-CMal_045-Ex1-9B-lcwgs-1-1.clmp.r1r2_fastp	3.2%	40.5%	96.6%	0.5%
+Tzo-CMal_046-Ex1-9C-lcwgs-1-1.clmp.r1r2_fastp	3.4%	40.9%	96.8%	0.5%
+Tzo-CMal_047-Ex1-9D-lcwgs-1-1.clmp.r1r2_fastp	2.5%	41.1%	97.4%	0.7%
+Tzo-CMal_048-Ex1-9E-lcwgs-1-1.clmp.r1r2_fastp	0.0%	40.3%	97.6%	1.6%
+Tzo-CMal_049-Ex1-9F-lcwgs-1-1.clmp.r1r2_fastp	2.5%	41.5%	97.1%	0.7%
+Tzo-CMal_050-Ex1-9G-lcwgs-1-1.clmp.r1r2_fastp	2.0%	40.9%	97.2%	0.9%
+Tzo-CMal_051-Ex1-9H-lcwgs-1-1.clmp.r1r2_fastp	3.4%	40.9%	96.7%	0.6%
+Tzo-CMal_052-Ex1-10A-lcwgs-1-1.clmp.r1r2_fastp	3.3%	40.9%	95.9%	0.4%
+Tzo-CMal_053-Ex1-10B-lcwgs-1-1.clmp.r1r2_fastp	2.9%	41.1%	96.2%	0.5%
+Tzo-CMal_054-Ex1-10C-lcwgs-1-1.clmp.r1r2_fastp	2.8%	40.9%	96.3%	0.5%
+Tzo-CMal_055-Ex1-10D-lcwgs-1-1.clmp.r1r2_fastp	2.7%	40.9%	96.4%	0.6%
+Tzo-CMal_056-Ex1-10E-lcwgs-1-1.clmp.r1r2_fastp	2.8%	41.2%	96.2%	0.5%
+Tzo-CMal_057-Ex1-10F-lcwgs-1-1.clmp.r1r2_fastp	2.7%	41.4%	96.3%	0.6%
+Tzo-CMal_058-Ex1-10G-lcwgs-1-1.clmp.r1r2_fastp	2.6%	41.1%	96.3%	0.6%
+Tzo-CMal_059-Ex1-10H-lcwgs-1-1.clmp.r1r2_fastp	2.0%	41.0%	96.5%	0.4%
+Tzo-CMal_060-Ex1-11A-lcwgs-1-1.clmp.r1r2_fastp	2.9%	40.9%	96.8%	0.6%
+Tzo-CMal_061-Ex1-11B-lcwgs-1-1.clmp.r1r2_fastp	3.3%	40.6%	96.4%	0.6%
+Tzo-CMal_062-Ex1-11C-lcwgs-1-1.clmp.r1r2_fastp	2.4%	41.0%	97.3%	0.7%
+Tzo-CMal_063-Ex1-11D-lcwgs-1-1.clmp.r1r2_fastp	2.6%	40.8%	97.0%	0.7%
+Tzo-CMal_064-Ex1-11E-lcwgs-1-1.clmp.r1r2_fastp	2.9%	41.2%	96.5%	0.6%
+Tzo-CMta_001-Ex1-9A-lcwgs-1-1.clmp.r1r2_fastp	2.2%	42.1%	97.6%	0.9%
+Tzo-CMta_002-Ex1-9B-lcwgs-1-1.clmp.r1r2_fastp	2.3%	41.4%	97.6%	0.8%
+Tzo-CMta_003-Ex1-9C-lcwgs-1-1.clmp.r1r2_fastp	0.0%	39.5%	98.0%	1.5%
+Tzo-CMta_004-Ex1-9D-lcwgs-1-1.clmp.r1r2_fastp	0.1%	40.3%	97.8%	1.6%
+Tzo-CMta_005-Ex1-9E-lcwgs-1-1.clmp.r1r2_fastp	1.8%	41.7%	97.7%	1.1%
+Tzo-CMta_006-Ex1-9F-lcwgs-1-1.clmp.r1r2_fastp	2.6%	42.0%	97.2%	0.6%
+Tzo-CMta_007-Ex1-9G-lcwgs-1-1.clmp.r1r2_fastp	0.0%	39.2%	97.0%	2.1%
+Tzo-CMta_008-Ex1-9H-lcwgs-1-1.clmp.r1r2_fastp	0.1%	39.7%	97.5%	1.8%
+Tzo-CMta_009-Ex1-10A-lcwgs-1-1.clmp.r1r2_fastp	2.4%	41.7%	96.7%	0.7%
+Tzo-CMta_010-Ex1-10B-lcwgs-1-1.clmp.r1r2_fastp	1.7%	41.4%	97.2%	0.9%
+Tzo-CMta_011-Ex1-10C-lcwgs-1-1.clmp.r1r2_fastp	0.7%	40.4%	97.0%	1.4%
+Tzo-CMta_012-Ex1-10D-lcwgs-1-1.clmp.r1r2_fastp	2.5%	41.5%	96.3%	0.5%
+Tzo-CMta_013-Ex1-10E-lcwgs-1-1.clmp.r1r2_fastp	0.0%	39.8%	95.8%	0.3%
+Tzo-CMta_014-Ex1-10F-lcwgs-1-1.clmp.r1r2_fastp	2.1%	41.8%	96.5%	0.9%
+Tzo-CMta_015-Ex1-10G-lcwgs-1-1.clmp.r1r2_fastp	0.0%	40.1%	96.5%	2.5%
+Tzo-CMta_016-Ex1-10H-lcwgs-1-1.clmp.r1r2_fastp	2.6%	40.2%	96.5%	0.6%
+Tzo-CMta_017-Ex1-11A-lcwgs-1-1.clmp.r1r2_fastp	2.4%	41.3%	97.3%	0.7%
+Tzo-CMta_018-Ex1-11B-lcwgs-1-1.clmp.r1r2_fastp	0.0%	39.9%	95.8%	1.2%
+Tzo-CMta_019-Ex1-11C-lcwgs-1-1.clmp.r1r2_fastp	1.4%	41.7%	97.3%	0.8%
+Tzo-CMta_020-Ex1-11D-lcwgs-1-1.clmp.r1r2_fastp	2.3%	41.4%	97.2%	0.7%
+Tzo-CMta_021-Ex1-11E-lcwgs-1-1.clmp.r1r2_fastp	2.0%	42.0%	97.7%	0.9%
+Tzo-CMta_022-Ex1-11F-lcwgs-1-1.clmp.r1r2_fastp	2.1%	42.1%	97.3%	0.8%
+Tzo-CMta_023-Ex1-11G-lcwgs-1-1.clmp.r1r2_fastp	0.2%	39.8%	98.2%	1.6%
+Tzo-CMta_024-Ex1-11H-lcwgs-1-1.clmp.r1r2_fastp	2.3%	41.0%	97.4%	0.7%
+Tzo-CMta_025-Ex1-12A-lcwgs-1-1.clmp.r1r2_fastp	1.9%	41.5%	97.7%	0.8%
+Tzo-CMta_026-Ex1-12B-lcwgs-1-1.clmp.r1r2_fastp	1.6%	41.9%	98.0%	0.9%
+Tzo-CMta_027-Ex1-12C-lcwgs-1-1.clmp.r1r2_fastp	2.1%	41.3%	97.6%	0.8%
+Tzo-CMta_028-Ex1-12D-lcwgs-1-1.clmp.r1r2_fastp	1.8%	41.5%	97.8%	1.0%
+Tzo-CMta_029-Ex1-12E-lcwgs-1-1.clmp.r1r2_fastp	2.1%	41.6%	97.6%	1.0%
+Tzo-CMta_030-Ex1-12F-lcwgs-1-1.clmp.r1r2_fastp	1.8%	42.3%	97.5%	0.9%
+Tzo-CMta_031-Ex1-12G-lcwgs-1-1.clmp.r1r2_fastp	1.8%	42.3%	97.5%	1.0%
+Tzo-CMta_032-Ex1-12H-lcwgs-1-1.clmp.r1r2_fastp	1.8%	41.5%	97.8%	0.8%
+Tzo-CMta_033-Ex1-1A-lcwgs-1-1.clmp.r1r2_fastp	2.3%	41.4%	97.2%	0.8%
+Tzo-CMta_034-Ex1-1B-lcwgs-1-1.clmp.r1r2_fastp	2.1%	41.7%	97.6%	0.8%
+Tzo-CMta_035-Ex1-1C-lcwgs-1-1.clmp.r1r2_fastp	2.1%	41.1%	97.4%	1.0%
+Tzo-CMta_036-Ex1-1D-lcwgs-1-1.clmp.r1r2_fastp	2.9%	41.4%	97.0%	0.9%
+Tzo-CMta_037-Ex1-1E-lcwgs-1-1.clmp.r1r2_fastp	0.0%	40.1%	97.4%	1.6%
+Tzo-CMta_038-Ex1-1F-lcwgs-1-1.clmp.r1r2_fastp	0.1%	40.3%	97.0%	1.3%
+Tzo-CMta_039-Ex1-1G-lcwgs-1-1.clmp.r1r2_fastp	2.8%	40.6%	97.3%	0.6%
+Tzo-CMta_040-Ex1-1H-lcwgs-1-1.clmp.r1r2_fastp	2.4%	40.8%	97.7%	0.8%
+Tzo-CMta_041-Ex1-2A-lcwgs-1-1.clmp.r1r2_fastp	2.1%	41.3%	97.0%	0.9%
+Tzo-CMta_042-Ex1-2B-lcwgs-1-1.clmp.r1r2_fastp	2.3%	40.8%	97.3%	0.7%
+Tzo-CMta_043-Ex1-2C-lcwgs-1-1.clmp.r1r2_fastp	2.2%	40.8%	97.2%	0.7%
+Tzo-CMta_044-Ex1-2D-lcwgs-1-1.clmp.r1r2_fastp	2.6%	41.1%	97.0%	0.6%
+Tzo-CMta_045-Ex1-2E-lcwgs-1-1.clmp.r1r2_fastp	2.3%	41.2%	97.3%	0.8%
+Tzo-CMta_046-Ex1-2F-lcwgs-1-1.clmp.r1r2_fastp	0.8%	40.6%	97.1%	1.2%
+Tzo-CMta_047-Ex1-2G-lcwgs-1-1.clmp.r1r2_fastp	0.1%	40.0%	97.1%	1.5%
+Tzo-CMta_048-Ex1-2H-lcwgs-1-1.clmp.r1r2_fastp	2.1%	41.2%	97.5%	0.7%
+Tzo-CMta_049-Ex1-3A-lcwgs-1-1.clmp.r1r2_fastp	0.2%	40.3%	96.7%	1.7%
+Tzo-CMta_050-Ex1-3B-lcwgs-1-1.clmp.r1r2_fastp	0.2%	40.2%	96.3%	1.3%
+Tzo-CMta_051-Ex1-3C-lcwgs-1-1.clmp.r1r2_fastp	2.4%	41.0%	97.1%	0.7%
+Tzo-CMta_052-Ex1-3D-lcwgs-1-1.clmp.r1r2_fastp	0.2%	40.6%	96.8%	1.5%
+Tzo-CMta_053-Ex1-3E-lcwgs-1-1.clmp.r1r2_fastp	2.7%	41.2%	97.0%	0.7%
+Tzo-CMta_054-Ex1-3F-lcwgs-1-1.clmp.r1r2_fastp	0.1%	40.4%	96.7%	1.3%
+Tzo-CMta_055-Ex1-3G-lcwgs-1-1.clmp.r1r2_fastp	2.4%	41.3%	97.2%	0.7%
+Tzo-CMta_056-Ex1-3H-lcwgs-1-1.clmp.r1r2_fastp	1.6%	41.4%	97.7%	1.1%
+Tzo-CMta_057-Ex1-4A-lcwgs-1-1.clmp.r1r2_fastp	0.2%	40.3%	97.0%	1.3%
+Tzo-CMta_058-Ex1-4B-lcwgs-1-1.clmp.r1r2_fastp	2.2%	40.8%	97.4%	0.8%
+Tzo-CMta_059-Ex1-4C-lcwgs-1-1.clmp.r1r2_fastp	2.1%	41.3%	97.4%	0.8%
+Tzo-CMta_060-Ex1-4D-lcwgs-1-1.clmp.r1r2_fastp	2.3%	41.3%	97.2%	0.7%
+Tzo-CMta_061-Ex1-4E-lcwgs-1-1.clmp.r1r2_fastp	1.7%	41.2%	97.2%	0.9%
+Tzo-CMta_062-Ex1-4F-lcwgs-1-1.clmp.r1r2_fastp	2.2%	41.3%	97.5%	0.8%
+Tzo-CMta_063-Ex1-4G-lcwgs-1-1.clmp.r1r2_fastp	2.3%	41.1%	97.3%	0.8%
+Tzo-CMta_064-Ex1-4H-lcwgs-1-1.clmp.r1r2_fastp	1.8%	41.1%	97.3%	1.0%
+Tzo-CMvi_006-Ex1-7B-lcwgs-1-1.clmp.r1r2_fastp	3.7%	40.2%	96.6%	0.4%
+Tzo-CMvi_007-Ex1-8E-lcwgs-1-1.clmp.r1r2_fastp	3.7%	40.4%	96.3%	0.4%
+Tzo-CMvi_011-Ex1-5G-lcwgs-1-1.clmp.r1r2_fastp	3.8%	40.0%	96.6%	0.4%
+Tzo-CMvi_012-Ex1-1G-lcwgs-1-1.clmp.r1r2_fastp	2.6%	39.9%	97.2%	0.6%
+Tzo-CMvi_013-Ex1-2B-lcwgs-1-1.clmp.r1r2_fastp	3.5%	39.9%	96.4%	0.4%
+Tzo-CMvi_015-Ex1-2F-lcwgs-1-1.clmp.r1r2_fastp	4.0%	40.3%	96.2%	0.3%
+Tzo-CMvi_016-Ex1-1D-lcwgs-1-1.clmp.r1r2_fastp	2.7%	40.2%	96.9%	0.6%
+Tzo-CMvi_018-Ex1-1F-lcwgs-2-1.clmp.r1r2_fastp	4.0%	41.4%	95.6%	0.3%
+Tzo-CMvi_019-Ex1-1G-lcwgs-2-1.clmp.r1r2_fastp	0.1%	40.8%	97.1%	1.7%
+Tzo-CMvi_020-Ex1-7D-lcwgs-1-1.clmp.r1r2_fastp	3.4%	41.1%	96.4%	0.4%
+Tzo-CMvi_027-Ex1-1H-lcwgs-2-1.clmp.r1r2_fastp	0.1%	40.8%	97.8%	1.0%
+Tzo-CMvi_028-Ex1-2A-lcwgs-2-1.clmp.r1r2_fastp	3.1%	40.7%	96.3%	0.5%
+Tzo-CMvi_029-Ex1-3C-lcwgs-1-1.clmp.r1r2_fastp	3.9%	40.3%	96.2%	0.3%
+Tzo-CMvi_030-Ex1-2H-lcwgs-1-1.clmp.r1r2_fastp	3.9%	40.2%	96.3%	0.3%
+Tzo-CMvi_031-Ex1-2B-lcwgs-2-1.clmp.r1r2_fastp	3.1%	40.5%	96.6%	0.4%
+Tzo-CMvi_032-Ex1-2C-lcwgs-2-1.clmp.r1r2_fastp	3.3%	40.8%	96.4%	0.4%
+Tzo-CMvi_033-Ex1-2D-lcwgs-2-1.clmp.r1r2_fastp	2.0%	40.5%	96.7%	0.8%
+Tzo-CMvi_034-Ex1-2E-lcwgs-2-1.clmp.r1r2_fastp	0.1%	40.2%	97.1%	1.5%
+Tzo-CMvi_035-Ex1-2F-lcwgs-2-1.clmp.r1r2_fastp	3.6%	41.5%	95.8%	0.3%
+Tzo-CMvi_038-Ex1-6B-lcwgs-1-1.clmp.r1r2_fastp	3.8%	39.6%	96.6%	0.4%
+Tzo-CMvi_040-Ex1-2G-lcwgs-2-1.clmp.r1r2_fastp	0.2%	40.1%	97.3%	1.6%
+Tzo-CMvi_041-Ex1-4D-lcwgs-1-1.clmp.r1r2_fastp	3.0%	40.0%	96.6%	0.5%
+Tzo-CMvi_042-Ex1-2H-lcwgs-2-1.clmp.r1r2_fastp	3.4%	42.8%	96.0%	0.3%
+Tzo-CMvi_044-Ex1-3A-lcwgs-2-1.clmp.r1r2_fastp	3.6%	41.0%	96.1%	0.4%
+Tzo-CMvi_045-Ex1-8B-lcwgs-1-1.clmp.r1r2_fastp	4.0%	40.5%	95.9%	0.3%
+Tzo-CMvi_046-Ex1-6E-lcwgs-1-1.clmp.r1r2_fastp	4.1%	39.7%	96.5%	0.4%
+Tzo-CMvi_047-Ex1-1F-lcwgs-1-1.clmp.r1r2_fastp	2.9%	40.0%	97.0%	0.6%
+Tzo-CMvi_048-Ex1-2A-lcwgs-1-1.clmp.r1r2_fastp	3.3%	40.2%	96.5%	0.4%
+Tzo-CMvi_049-Ex1-5B-lcwgs-1-1.clmp.r1r2_fastp	3.7%	40.0%	96.3%	0.3%
+Tzo-CMvi_050-Ex1-3B-lcwgs-2-1.clmp.r1r2_fastp	2.8%	40.5%	96.3%	0.8%
+Tzo-CMvi_051-Ex1-6H-lcwgs-1-1.clmp.r1r2_fastp	3.9%	40.0%	96.7%	0.4%
+Tzo-CMvi_052-Ex1-7E-lcwgs-1-1.clmp.r1r2_fastp	3.2%	40.3%	96.7%	0.5%
+Tzo-CMvi_053-Ex1-3C-lcwgs-2-1.clmp.r1r2_fastp	2.1%	40.7%	96.3%	1.0%
+Tzo-CMvi_054-Ex1-3D-lcwgs-2-1.clmp.r1r2_fastp	3.1%	40.6%	96.4%	0.4%
+Tzo-CMvi_057-Ex1-1H-lcwgs-1-1.clmp.r1r2_fastp	3.0%	40.2%	96.8%	0.5%
+Tzo-CMvi_058-Ex1-3E-lcwgs-2-1.clmp.r1r2_fastp	3.4%	40.7%	96.3%	0.4%
+Tzo-CMvi_061-Ex1-3F-lcwgs-2-1.clmp.r1r2_fastp	4.2%	41.5%	95.5%	0.3%
+Tzo-CMvi_062-Ex1-3G-lcwgs-2-1.clmp.r1r2_fastp	3.6%	40.8%	95.8%	0.4%
+Tzo-CMvi_063-Ex1-7A-lcwgs-1-1.clmp.r1r2_fastp	3.0%	40.3%	96.7%	0.4%
+Tzo-CMvi_064-Ex1-3A-lcwgs-1-1.clmp.r1r2_fastp	3.7%	39.9%	96.2%	0.3%
+Tzo-CMvi_065-Ex1-1E-lcwgs-1-1.clmp.r1r2_fastp	3.0%	39.8%	96.8%	0.5%
+Tzo-CMvi_066-Ex1-5F-lcwgs-1-1.clmp.r1r2_fastp	3.8%	40.1%	96.4%	0.4%
+Tzo-CMvi_067-Ex1-6A-lcwgs-1-1.clmp.r1r2_fastp	4.2%	40.2%	96.5%	0.4%
+Tzo-CMvi_068-Ex1-6F-lcwgs-1-1.clmp.r1r2_fastp	3.9%	39.7%	96.6%	0.4%
+Tzo-CMvi_069-Ex1-7G-lcwgs-1-1.clmp.r1r2_fastp	3.2%	40.1%	96.7%	0.4%
+Tzo-CMvi_070-Ex1-3H-lcwgs-2-1.clmp.r1r2_fastp	0.1%	39.5%	97.3%	1.8%
+Tzo-CMvi_071-Ex1-4A-lcwgs-2-1.clmp.r1r2_fastp	3.4%	40.7%	96.5%	0.6%
+Tzo-CMvi_075-Ex1-3D-lcwgs-1-1.clmp.r1r2_fastp	3.9%	40.0%	96.1%	0.3%
+Tzo-CMvi_076-Ex1-5A-lcwgs-1-1.clmp.r1r2_fastp	3.7%	40.1%	96.3%	0.3%
+Tzo-CMvi_077-Ex1-6D-lcwgs-1-1.clmp.r1r2_fastp	4.2%	39.7%	96.5%	0.4%
+Tzo-CMvi_078-Ex1-4B-lcwgs-2-1.clmp.r1r2_fastp	3.7%	40.6%	96.3%	0.4%
+Tzo-CMvi_079-Ex1-7C-lcwgs-1-1.clmp.r1r2_fastp	3.3%	40.2%	96.5%	0.4%
+Tzo-CMvi_080-Ex1-4C-lcwgs-2-1.clmp.r1r2_fastp	3.5%	40.3%	96.3%	0.4%
+Tzo-CMvi_081-Ex1-4D-lcwgs-2-1.clmp.r1r2_fastp	3.5%	40.6%	96.4%	0.3%
+Tzo-CMvi_082-Ex1-6C-lcwgs-1-1.clmp.r1r2_fastp	4.1%	39.7%	96.6%	0.4%
+Tzo-CMvi_083-Ex1-4E-lcwgs-2-1.clmp.r1r2_fastp	2.9%	40.4%	96.9%	0.6%
+Tzo-CMvi_087-Ex1-2D-lcwgs-1-1.clmp.r1r2_fastp	3.7%	40.1%	96.1%	0.3%
+Tzo-CMvi_088-Ex1-4F-lcwgs-2-1.clmp.r1r2_fastp	3.8%	40.5%	95.9%	0.3%
+Tzo-CMvi_089-Ex1-5D-lcwgs-1-1.clmp.r1r2_fastp	4.1%	39.9%	96.5%	0.4%
+Tzo-CMvi_090-Ex1-3F-lcwgs-1-1.clmp.r1r2_fastp	3.1%	39.8%	97.1%	0.6%
+Tzo-CMvi_091-Ex1-2C-lcwgs-1-1.clmp.r1r2_fastp	3.8%	40.0%	96.3%	0.3%
+Tzo-CMvi_092-Ex1-4G-lcwgs-2-1.clmp.r1r2_fastp	3.8%	42.0%	95.9%	0.4%
+Tzo-CMvi_093-Ex1-4H-lcwgs-2-1.clmp.r1r2_fastp	3.0%	40.1%	96.6%	0.5%
+Tzo-CMvi_094-Ex1-8C-lcwgs-1-1.clmp.r1r2_fastp	3.8%	40.3%	96.3%	0.4%
 ```
 
 </p>
 </details>
 
 ## 11. Decontaminate files.
-TBD
+`bash ../../../pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2 fq_fp1_clmp_fp2_fqscrn 20`
+
+```bash
+[hpc-0351@wahab-01 1st_sequencing_run]$ ls fq_fp1_clmp_fp2_fqscrn/*tagged.fastq.gz | wc -l
+678
+[hpc-0351@wahab-01 1st_sequencing_run]$ ls fq_fp1_clmp_fp2_fqscrn/*tagged_filter.fastq.gz | wc -l
+678
+[hpc-0351@wahab-01 1st_sequencing_run]$ ls fq_fp1_clmp_fp2_fqscrn/*screen.txt | wc -l
+678
+[hpc-0351@wahab-01 1st_sequencing_run]$ ls fq_fp1_clmp_fp2_fqscrn/*screen.png | wc -l
+678
+[hpc-0351@wahab-01 1st_sequencing_run]$ ls fq_fp1_clmp_fp2_fqscrn/*screen.html | wc -l
+678
+[hpc-0351@wahab-01 1st_sequencing_run]$ grep 'error' slurm-fqscrn.*out
+[hpc-0351@wahab-01 1st_sequencing_run]$ grep 'No reads in' slurm-fqscrn.*out
+```
+
+`sbatch ../../../pire_fq_gz_processing/runMULTIQC.sbatch fq_fp1_clmp_fp2_fqscrn fastq_screen_report`
 
 <details><summary>Expand for MultiQC Output.</summary>
 
@@ -1799,16 +2833,699 @@ insert multiqc output here
 </details>
 
 ## 12. Execute RePair
-TBD
+`sbatch ../../../pire_fq_gz_processing/runREPAIR.sbatch fq_fp1_clmp_fp2_fqscrn fq_fp1_clmp_fp2_fqscrn_rprd 40`
+
+`sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_fp1_clmp_fp2_fqscrn_rprd" "fqc_rprd_report" "fq.gz"`
 
 <details><summary>Expand for MultiQC Output.</summary>
 
 ```bash
-TBD
+Sample Name	% Dups	% GC	Length	M Seqs
+Tzo-ABol_002-Ex1-2A-lcwgs-1-1.clmp.fp2_repr.R1	1.8%	39%	93 bp	0.7
+Tzo-ABol_002-Ex1-2A-lcwgs-1-1.clmp.fp2_repr.R2	1.4%	39%	92 bp	0.7
+Tzo-ABol_003-Ex1-3A-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	39%	97 bp	0.6
+Tzo-ABol_003-Ex1-3A-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	39%	95 bp	0.6
+Tzo-ABol_008-Ex1-8A-lcwgs-1-1.clmp.fp2_repr.R1	2.7%	38%	99 bp	2.3
+Tzo-ABol_008-Ex1-8A-lcwgs-1-1.clmp.fp2_repr.R2	2.2%	38%	97 bp	2.3
+Tzo-ABol_009-Ex1-9A-lcwgs-1-1.clmp.fp2_repr.R1	3.6%	42%	104 bp	2.1
+Tzo-ABol_009-Ex1-9A-lcwgs-1-1.clmp.fp2_repr.R2	3.1%	42%	102 bp	2.1
+Tzo-ABol_010-Ex1-10A-lcwgs-1-1.clmp.fp2_repr.R1	2.3%	39%	93 bp	3.5
+Tzo-ABol_010-Ex1-10A-lcwgs-1-1.clmp.fp2_repr.R2	1.8%	39%	92 bp	3.5
+Tzo-ABol_011-Ex1-11A-lcwgs-1-1.clmp.fp2_repr.R1	0.3%	39%	97 bp	0.0
+Tzo-ABol_011-Ex1-11A-lcwgs-1-1.clmp.fp2_repr.R2	0.2%	39%	95 bp	0.0
+Tzo-ABol_012-Ex1-12A-lcwgs-1-1.clmp.fp2_repr.R1	1.9%	38%	92 bp	0.9
+Tzo-ABol_012-Ex1-12A-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	38%	91 bp	0.9
+Tzo-ABol_020-Ex1-8B-lcwgs-1-1.clmp.fp2_repr.R1	2.6%	38%	94 bp	3.9
+Tzo-ABol_020-Ex1-8B-lcwgs-1-1.clmp.fp2_repr.R2	2.1%	38%	93 bp	3.9
+Tzo-ABol_023-Ex1-11B-lcwgs-1-1.clmp.fp2_repr.R1	2.8%	38%	97 bp	4.3
+Tzo-ABol_023-Ex1-11B-lcwgs-1-1.clmp.fp2_repr.R2	2.2%	38%	95 bp	4.3
+Tzo-ABol_024-Ex1-12B-lcwgs-1-1.clmp.fp2_repr.R1	0.4%	39%	97 bp	0.0
+Tzo-ABol_024-Ex1-12B-lcwgs-1-1.clmp.fp2_repr.R2	0.2%	39%	95 bp	0.0
+Tzo-ABol_026-Ex1-2C-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	38%	93 bp	1.9
+Tzo-ABol_026-Ex1-2C-lcwgs-1-1.clmp.fp2_repr.R2	1.7%	38%	91 bp	1.9
+Tzo-ABol_030-Ex1-6C-lcwgs-1-1.clmp.fp2_repr.R1	2.4%	38%	92 bp	4.1
+Tzo-ABol_030-Ex1-6C-lcwgs-1-1.clmp.fp2_repr.R2	1.8%	38%	91 bp	4.1
+Tzo-ABol_034-Ex1-10C-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	38%	93 bp	3.9
+Tzo-ABol_034-Ex1-10C-lcwgs-1-1.clmp.fp2_repr.R2	1.8%	38%	91 bp	3.9
+Tzo-ABol_035-Ex1-11C-lcwgs-1-1.clmp.fp2_repr.R1	1.4%	38%	92 bp	0.2
+Tzo-ABol_035-Ex1-11C-lcwgs-1-1.clmp.fp2_repr.R2	1.1%	38%	91 bp	0.2
+Tzo-ABol_036-Ex1-12C-lcwgs-1-1.clmp.fp2_repr.R1	2.8%	40%	93 bp	4.6
+Tzo-ABol_036-Ex1-12C-lcwgs-1-1.clmp.fp2_repr.R2	2.3%	40%	91 bp	4.6
+Tzo-ABol_038-Ex1-2D-lcwgs-1-1.clmp.fp2_repr.R1	2.7%	39%	98 bp	2.4
+Tzo-ABol_038-Ex1-2D-lcwgs-1-1.clmp.fp2_repr.R2	2.3%	39%	97 bp	2.4
+Tzo-ABol_043-Ex1-7D-lcwgs-1-1.clmp.fp2_repr.R1	1.8%	39%	89 bp	2.3
+Tzo-ABol_043-Ex1-7D-lcwgs-1-1.clmp.fp2_repr.R2	1.4%	39%	88 bp	2.3
+Tzo-ABol_044-Ex1-8D-lcwgs-1-1.clmp.fp2_repr.R1	4.9%	43%	97 bp	4.0
+Tzo-ABol_044-Ex1-8D-lcwgs-1-1.clmp.fp2_repr.R2	4.2%	43%	95 bp	4.0
+Tzo-ABol_045-Ex1-9D-lcwgs-1-1.clmp.fp2_repr.R1	1.9%	39%	88 bp	2.6
+Tzo-ABol_045-Ex1-9D-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	39%	87 bp	2.6
+Tzo-ABol_046-Ex1-10D-lcwgs-1-1.clmp.fp2_repr.R1	1.5%	40%	86 bp	0.8
+Tzo-ABol_046-Ex1-10D-lcwgs-1-1.clmp.fp2_repr.R2	1.1%	40%	85 bp	0.8
+Tzo-ABol_047-Ex1-11D-lcwgs-1-1.clmp.fp2_repr.R1	2.8%	39%	96 bp	3.8
+Tzo-ABol_047-Ex1-11D-lcwgs-1-1.clmp.fp2_repr.R2	2.3%	39%	95 bp	3.8
+Tzo-ABol_048-Ex1-12D-lcwgs-1-1.clmp.fp2_repr.R1	1.8%	38%	95 bp	1.0
+Tzo-ABol_048-Ex1-12D-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	38%	94 bp	1.0
+Tzo-ABol_050-Ex1-2E-lcwgs-1-1.clmp.fp2_repr.R1	2.1%	39%	93 bp	1.8
+Tzo-ABol_050-Ex1-2E-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	39%	91 bp	1.8
+Tzo-ABol_051-Ex1-3E-lcwgs-1-1.clmp.fp2_repr.R1	1.8%	39%	89 bp	0.8
+Tzo-ABol_051-Ex1-3E-lcwgs-1-1.clmp.fp2_repr.R2	1.3%	39%	88 bp	0.8
+Tzo-ABol_052-Ex1-4E-lcwgs-1-1.clmp.fp2_repr.R1	1.8%	39%	86 bp	1.9
+Tzo-ABol_052-Ex1-4E-lcwgs-1-1.clmp.fp2_repr.R2	1.4%	39%	85 bp	1.9
+Tzo-ABol_053-Ex1-5E-lcwgs-1-1.clmp.fp2_repr.R1	2.3%	38%	90 bp	6.5
+Tzo-ABol_053-Ex1-5E-lcwgs-1-1.clmp.fp2_repr.R2	1.8%	38%	88 bp	6.5
+Tzo-ABol_054-Ex1-6E-lcwgs-1-1.clmp.fp2_repr.R1	3.0%	40%	97 bp	5.8
+Tzo-ABol_054-Ex1-6E-lcwgs-1-1.clmp.fp2_repr.R2	2.5%	40%	96 bp	5.8
+Tzo-ABol_055-Ex1-7E-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	38%	95 bp	2.2
+Tzo-ABol_055-Ex1-7E-lcwgs-1-1.clmp.fp2_repr.R2	1.8%	38%	93 bp	2.2
+Tzo-ABol_056-Ex1-8E-lcwgs-1-1.clmp.fp2_repr.R1	2.1%	38%	92 bp	1.3
+Tzo-ABol_056-Ex1-8E-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	38%	90 bp	1.3
+Tzo-ABol_057-Ex1-9E-lcwgs-1-1.clmp.fp2_repr.R1	2.8%	39%	96 bp	4.9
+Tzo-ABol_057-Ex1-9E-lcwgs-1-1.clmp.fp2_repr.R2	2.2%	39%	94 bp	4.9
+Tzo-ABol_058-Ex1-10E-lcwgs-1-1.clmp.fp2_repr.R1	1.7%	38%	90 bp	1.4
+Tzo-ABol_058-Ex1-10E-lcwgs-1-1.clmp.fp2_repr.R2	1.4%	38%	89 bp	1.4
+Tzo-ABol_059-Ex1-11E-lcwgs-1-1.clmp.fp2_repr.R1	2.0%	38%	91 bp	1.2
+Tzo-ABol_059-Ex1-11E-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	38%	90 bp	1.2
+Tzo-ABol_060-Ex1-12E-lcwgs-1-1.clmp.fp2_repr.R1	1.9%	38%	93 bp	1.2
+Tzo-ABol_060-Ex1-12E-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	38%	91 bp	1.2
+Tzo-ABol_061-Ex1-1F-lcwgs-1-1.clmp.fp2_repr.R1	1.6%	39%	87 bp	1.2
+Tzo-ABol_061-Ex1-1F-lcwgs-1-1.clmp.fp2_repr.R2	1.3%	39%	86 bp	1.2
+Tzo-ABol_062-Ex1-2F-lcwgs-1-1.clmp.fp2_repr.R1	1.8%	40%	85 bp	4.1
+Tzo-ABol_062-Ex1-2F-lcwgs-1-1.clmp.fp2_repr.R2	1.3%	40%	84 bp	4.1
+Tzo-ABol_063-Ex1-3F-lcwgs-1-1.clmp.fp2_repr.R1	0.5%	39%	90 bp	0.0
+Tzo-ABol_063-Ex1-3F-lcwgs-1-1.clmp.fp2_repr.R2	0.4%	39%	88 bp	0.0
+Tzo-ABol_065-Ex1-5F-lcwgs-1-1.clmp.fp2_repr.R1	1.9%	39%	89 bp	2.1
+Tzo-ABol_065-Ex1-5F-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	39%	88 bp	2.1
+Tzo-ABol_066-Ex1-6F-lcwgs-1-1.clmp.fp2_repr.R1	1.8%	38%	88 bp	1.8
+Tzo-ABol_066-Ex1-6F-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	38%	87 bp	1.8
+Tzo-ABol_067-Ex1-7F-lcwgs-1-1.clmp.fp2_repr.R1	1.7%	38%	85 bp	1.9
+Tzo-ABol_067-Ex1-7F-lcwgs-1-1.clmp.fp2_repr.R2	1.3%	38%	84 bp	1.9
+Tzo-ABol_068-Ex1-8F-lcwgs-1-1.clmp.fp2_repr.R1	3.1%	41%	93 bp	2.7
+Tzo-ABol_068-Ex1-8F-lcwgs-1-1.clmp.fp2_repr.R2	2.5%	41%	92 bp	2.7
+Tzo-ABol_069-Ex1-9F-lcwgs-1-1.clmp.fp2_repr.R1	2.1%	38%	89 bp	3.3
+Tzo-ABol_069-Ex1-9F-lcwgs-1-1.clmp.fp2_repr.R2	1.7%	38%	88 bp	3.3
+Tzo-ABol_070-Ex1-10F-lcwgs-1-1.clmp.fp2_repr.R1	2.0%	38%	92 bp	1.1
+Tzo-ABol_070-Ex1-10F-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	38%	91 bp	1.1
+Tzo-ABol_071-Ex1-11F-lcwgs-1-1.clmp.fp2_repr.R1	1.7%	38%	89 bp	0.7
+Tzo-ABol_071-Ex1-11F-lcwgs-1-1.clmp.fp2_repr.R2	1.3%	38%	88 bp	0.7
+Tzo-ABol_072-Ex1-12F-lcwgs-1-1.clmp.fp2_repr.R1	2.4%	38%	94 bp	1.6
+Tzo-ABol_072-Ex1-12F-lcwgs-1-1.clmp.fp2_repr.R2	1.9%	38%	92 bp	1.6
+Tzo-ABol_073-Ex1-1G-lcwgs-1-1.clmp.fp2_repr.R1	2.0%	39%	90 bp	1.5
+Tzo-ABol_073-Ex1-1G-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	39%	89 bp	1.5
+Tzo-ABol_075-Ex1-3G-lcwgs-1-1.clmp.fp2_repr.R1	2.0%	39%	85 bp	4.9
+Tzo-ABol_075-Ex1-3G-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	39%	84 bp	4.9
+Tzo-ABol_076-Ex1-4G-lcwgs-1-1.clmp.fp2_repr.R1	1.8%	40%	84 bp	3.5
+Tzo-ABol_076-Ex1-4G-lcwgs-1-1.clmp.fp2_repr.R2	1.4%	40%	83 bp	3.5
+Tzo-ABol_077-Ex1-5G-lcwgs-1-1.clmp.fp2_repr.R1	2.1%	38%	95 bp	1.4
+Tzo-ABol_077-Ex1-5G-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	38%	94 bp	1.4
+Tzo-ABol_078-Ex1-6G-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	38%	94 bp	2.0
+Tzo-ABol_078-Ex1-6G-lcwgs-1-1.clmp.fp2_repr.R2	1.7%	38%	93 bp	2.0
+Tzo-ABol_079-Ex1-7G-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	38%	95 bp	1.5
+Tzo-ABol_079-Ex1-7G-lcwgs-1-1.clmp.fp2_repr.R2	1.9%	38%	94 bp	1.5
+Tzo-ABol_080-Ex1-8G-lcwgs-1-1.clmp.fp2_repr.R1	2.9%	38%	96 bp	5.5
+Tzo-ABol_080-Ex1-8G-lcwgs-1-1.clmp.fp2_repr.R2	2.3%	38%	94 bp	5.5
+Tzo-ABol_081-Ex1-9G-lcwgs-1-1.clmp.fp2_repr.R1	2.5%	38%	95 bp	3.2
+Tzo-ABol_081-Ex1-9G-lcwgs-1-1.clmp.fp2_repr.R2	1.9%	38%	93 bp	3.2
+Tzo-ABol_082-Ex1-10G-lcwgs-1-1.clmp.fp2_repr.R1	4.1%	43%	97 bp	1.2
+Tzo-ABol_082-Ex1-10G-lcwgs-1-1.clmp.fp2_repr.R2	3.3%	43%	95 bp	1.2
+Tzo-ABol_083-Ex1-11G-lcwgs-1-1.clmp.fp2_repr.R1	2.4%	39%	97 bp	1.4
+Tzo-ABol_083-Ex1-11G-lcwgs-1-1.clmp.fp2_repr.R2	1.9%	39%	95 bp	1.4
+Tzo-ABol_084-Ex1-12G-lcwgs-1-1.clmp.fp2_repr.R1	2.1%	38%	91 bp	2.4
+Tzo-ABol_084-Ex1-12G-lcwgs-1-1.clmp.fp2_repr.R2	1.7%	38%	90 bp	2.4
+Tzo-ABol_085-Ex1-1H-lcwgs-1-1.clmp.fp2_repr.R1	1.8%	39%	88 bp	1.8
+Tzo-ABol_085-Ex1-1H-lcwgs-1-1.clmp.fp2_repr.R2	1.4%	39%	87 bp	1.8
+Tzo-ABol_086-Ex1-2H-lcwgs-1-1.clmp.fp2_repr.R1	2.3%	42%	94 bp	1.2
+Tzo-ABol_086-Ex1-2H-lcwgs-1-1.clmp.fp2_repr.R2	1.8%	42%	93 bp	1.2
+Tzo-ABol_087-Ex1-3H-lcwgs-1-1.clmp.fp2_repr.R1	2.1%	39%	89 bp	2.0
+Tzo-ABol_087-Ex1-3H-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	39%	88 bp	2.0
+Tzo-ABol_088-Ex1-4H-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	40%	91 bp	1.0
+Tzo-ABol_088-Ex1-4H-lcwgs-1-1.clmp.fp2_repr.R2	1.7%	40%	90 bp	1.0
+Tzo-ABol_090-Ex1-6H-lcwgs-1-1.clmp.fp2_repr.R1	1.3%	41%	85 bp	0.3
+Tzo-ABol_090-Ex1-6H-lcwgs-1-1.clmp.fp2_repr.R2	0.9%	41%	84 bp	0.3
+Tzo-ABol_091-Ex1-7H-lcwgs-1-1.clmp.fp2_repr.R1	2.1%	39%	94 bp	1.2
+Tzo-ABol_091-Ex1-7H-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	39%	93 bp	1.2
+Tzo-ABol_092-Ex1-8H-lcwgs-1-1.clmp.fp2_repr.R1	2.4%	39%	96 bp	1.3
+Tzo-ABol_092-Ex1-8H-lcwgs-1-1.clmp.fp2_repr.R2	1.9%	39%	95 bp	1.3
+Tzo-ABol_093-Ex1-9H-lcwgs-1-1.clmp.fp2_repr.R1	2.1%	39%	99 bp	0.7
+Tzo-ABol_093-Ex1-9H-lcwgs-1-1.clmp.fp2_repr.R2	1.7%	39%	97 bp	0.7
+Tzo-ABol_095-Ex1-11H-lcwgs-1-1.clmp.fp2_repr.R1	2.0%	39%	98 bp	0.5
+Tzo-ABol_095-Ex1-11H-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	39%	96 bp	0.5
+Tzo-ABol_096-Ex1-12H-lcwgs-1-1.clmp.fp2_repr.R1	2.3%	39%	97 bp	0.8
+Tzo-ABol_096-Ex1-12H-lcwgs-1-1.clmp.fp2_repr.R2	1.8%	39%	95 bp	0.8
+Tzo-AMta_001-Ex1-5D-lcwgs-1-1.clmp.fp2_repr.R1	2.0%	42%	82 bp	2.4
+Tzo-AMta_001-Ex1-5D-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	42%	81 bp	2.4
+Tzo-AMta_002-Ex1-5E-lcwgs-1-1.clmp.fp2_repr.R1	2.1%	40%	86 bp	5.2
+Tzo-AMta_002-Ex1-5E-lcwgs-1-1.clmp.fp2_repr.R2	1.7%	40%	85 bp	5.2
+Tzo-AMta_003-Ex1-5F-lcwgs-1-1.clmp.fp2_repr.R1	4.5%	43%	90 bp	7.2
+Tzo-AMta_003-Ex1-5F-lcwgs-1-1.clmp.fp2_repr.R2	3.7%	43%	88 bp	7.2
+Tzo-AMta_004-Ex1-5G-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	41%	86 bp	4.3
+Tzo-AMta_004-Ex1-5G-lcwgs-1-1.clmp.fp2_repr.R2	1.8%	41%	85 bp	4.3
+Tzo-AMta_005-Ex1-5H-lcwgs-1-1.clmp.fp2_repr.R1	1.8%	40%	84 bp	5.3
+Tzo-AMta_005-Ex1-5H-lcwgs-1-1.clmp.fp2_repr.R2	1.4%	40%	83 bp	5.3
+Tzo-AMta_006-Ex1-1B-lcwgs-2-1.clmp.fp2_repr.R1	0.7%	41%	64 bp	0.7
+Tzo-AMta_006-Ex1-1B-lcwgs-2-1.clmp.fp2_repr.R2	0.5%	41%	64 bp	0.7
+Tzo-AMta_006-Ex1-6A-lcwgs-1-1.clmp.fp2_repr.R1	1.9%	40%	86 bp	1.5
+Tzo-AMta_006-Ex1-6A-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	40%	85 bp	1.5
+Tzo-AMta_007-Ex1-6B-lcwgs-1-1.clmp.fp2_repr.R1	2.1%	41%	87 bp	5.0
+Tzo-AMta_007-Ex1-6B-lcwgs-1-1.clmp.fp2_repr.R2	1.7%	41%	86 bp	5.0
+Tzo-AMta_008-Ex1-6C-lcwgs-1-1.clmp.fp2_repr.R1	1.9%	40%	84 bp	5.0
+Tzo-AMta_008-Ex1-6C-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	40%	83 bp	5.0
+Tzo-AMta_009-Ex1-6D-lcwgs-1-1.clmp.fp2_repr.R1	1.9%	40%	86 bp	5.2
+Tzo-AMta_009-Ex1-6D-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	40%	85 bp	5.2
+Tzo-AMta_010-Ex1-6E-lcwgs-1-1.clmp.fp2_repr.R1	1.9%	39%	85 bp	5.3
+Tzo-AMta_010-Ex1-6E-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	39%	84 bp	5.3
+Tzo-AMta_011-Ex1-6F-lcwgs-1-1.clmp.fp2_repr.R1	1.1%	40%	89 bp	0.1
+Tzo-AMta_011-Ex1-6F-lcwgs-1-1.clmp.fp2_repr.R2	0.8%	40%	88 bp	0.1
+Tzo-AMta_012-Ex1-6G-lcwgs-1-1.clmp.fp2_repr.R1	2.1%	40%	89 bp	3.6
+Tzo-AMta_012-Ex1-6G-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	40%	88 bp	3.6
+Tzo-AMta_013-Ex1-6H-lcwgs-1-1.clmp.fp2_repr.R1	1.7%	40%	83 bp	3.7
+Tzo-AMta_013-Ex1-6H-lcwgs-1-1.clmp.fp2_repr.R2	1.3%	40%	82 bp	3.7
+Tzo-AMta_014-Ex1-7A-lcwgs-1-1.clmp.fp2_repr.R1	1.9%	39%	86 bp	3.2
+Tzo-AMta_014-Ex1-7A-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	39%	85 bp	3.2
+Tzo-AMta_015-Ex1-7B-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	38%	88 bp	6.0
+Tzo-AMta_015-Ex1-7B-lcwgs-1-1.clmp.fp2_repr.R2	1.7%	38%	87 bp	6.0
+Tzo-AMta_016-Ex1-7C-lcwgs-1-1.clmp.fp2_repr.R1	1.9%	40%	86 bp	3.6
+Tzo-AMta_016-Ex1-7C-lcwgs-1-1.clmp.fp2_repr.R2	1.4%	40%	85 bp	3.6
+Tzo-AMta_017-Ex1-7D-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	42%	87 bp	5.0
+Tzo-AMta_017-Ex1-7D-lcwgs-1-1.clmp.fp2_repr.R2	1.7%	42%	86 bp	5.0
+Tzo-AMta_018-Ex1-7E-lcwgs-1-1.clmp.fp2_repr.R1	1.4%	39%	81 bp	3.5
+Tzo-AMta_018-Ex1-7E-lcwgs-1-1.clmp.fp2_repr.R2	1.1%	39%	80 bp	3.5
+Tzo-AMta_019-Ex1-7F-lcwgs-1-1.clmp.fp2_repr.R1	1.7%	39%	85 bp	3.5
+Tzo-AMta_019-Ex1-7F-lcwgs-1-1.clmp.fp2_repr.R2	1.3%	39%	84 bp	3.5
+Tzo-AMta_020-Ex1-7G-lcwgs-1-1.clmp.fp2_repr.R1	1.7%	39%	85 bp	4.3
+Tzo-AMta_020-Ex1-7G-lcwgs-1-1.clmp.fp2_repr.R2	1.4%	39%	84 bp	4.3
+Tzo-AMta_021-Ex1-7H-lcwgs-1-1.clmp.fp2_repr.R1	1.6%	40%	84 bp	2.8
+Tzo-AMta_021-Ex1-7H-lcwgs-1-1.clmp.fp2_repr.R2	1.2%	40%	83 bp	2.8
+Tzo-AMta_022-Ex1-8A-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	39%	87 bp	5.3
+Tzo-AMta_022-Ex1-8A-lcwgs-1-1.clmp.fp2_repr.R2	1.7%	39%	86 bp	5.3
+Tzo-AMta_023-Ex1-8B-lcwgs-1-1.clmp.fp2_repr.R1	1.5%	38%	81 bp	4.0
+Tzo-AMta_023-Ex1-8B-lcwgs-1-1.clmp.fp2_repr.R2	1.2%	38%	81 bp	4.0
+Tzo-AMta_024-Ex1-8C-lcwgs-1-1.clmp.fp2_repr.R1	1.6%	39%	83 bp	3.5
+Tzo-AMta_024-Ex1-8C-lcwgs-1-1.clmp.fp2_repr.R2	1.3%	39%	83 bp	3.5
+Tzo-AMta_025-Ex1-1E-lcwgs-2-1.clmp.fp2_repr.R1	1.1%	40%	75 bp	2.1
+Tzo-AMta_025-Ex1-1E-lcwgs-2-1.clmp.fp2_repr.R2	0.8%	40%	74 bp	2.1
+Tzo-AMta_025-Ex1-8D-lcwgs-1-1.clmp.fp2_repr.R1	1.3%	41%	77 bp	2.6
+Tzo-AMta_025-Ex1-8D-lcwgs-1-1.clmp.fp2_repr.R2	0.9%	41%	76 bp	2.6
+Tzo-AMta_026-Ex1-8E-lcwgs-1-1.clmp.fp2_repr.R1	1.4%	39%	79 bp	3.5
+Tzo-AMta_026-Ex1-8E-lcwgs-1-1.clmp.fp2_repr.R2	1.0%	39%	79 bp	3.5
+Tzo-AMta_027-Ex1-1C-lcwgs-2-1.clmp.fp2_repr.R1	0.6%	42%	62 bp	0.4
+Tzo-AMta_027-Ex1-1C-lcwgs-2-1.clmp.fp2_repr.R2	0.4%	42%	61 bp	0.4
+Tzo-AMta_027-Ex1-8F-lcwgs-1-1.clmp.fp2_repr.R1	1.1%	42%	77 bp	0.7
+Tzo-AMta_027-Ex1-8F-lcwgs-1-1.clmp.fp2_repr.R2	0.8%	42%	77 bp	0.7
+Tzo-AMta_028-Ex1-8G-lcwgs-1-1.clmp.fp2_repr.R1	1.5%	40%	80 bp	2.7
+Tzo-AMta_028-Ex1-8G-lcwgs-1-1.clmp.fp2_repr.R2	1.1%	40%	80 bp	2.7
+Tzo-AMta_029-Ex1-8H-lcwgs-1-1.clmp.fp2_repr.R1	1.2%	42%	73 bp	2.5
+Tzo-AMta_029-Ex1-8H-lcwgs-1-1.clmp.fp2_repr.R2	0.8%	42%	72 bp	2.5
+Tzo-AMta_030-Ex1-9A-lcwgs-1-1.clmp.fp2_repr.R1	1.3%	41%	78 bp	0.4
+Tzo-AMta_030-Ex1-9A-lcwgs-1-1.clmp.fp2_repr.R2	0.9%	41%	77 bp	0.4
+Tzo-AMta_031-Ex1-9B-lcwgs-1-1.clmp.fp2_repr.R1	1.7%	39%	80 bp	4.9
+Tzo-AMta_031-Ex1-9B-lcwgs-1-1.clmp.fp2_repr.R2	1.3%	39%	80 bp	4.9
+Tzo-AMvi_001-Ex1-1A-lcwgs-1-1.clmp.fp2_repr.R1	2.8%	38%	98 bp	0.2
+Tzo-AMvi_001-Ex1-1A-lcwgs-1-1.clmp.fp2_repr.R2	2.1%	38%	96 bp	0.2
+Tzo-AMvi_002-Ex1-1E-lcwgs-1-1.clmp.fp2_repr.R1	2.9%	38%	96 bp	0.2
+Tzo-AMvi_002-Ex1-1E-lcwgs-1-1.clmp.fp2_repr.R2	2.3%	38%	95 bp	0.2
+Tzo-AMvi_003-Ex1-2A-lcwgs-1-1.clmp.fp2_repr.R1	2.0%	36%	102 bp	0.6
+Tzo-AMvi_003-Ex1-2A-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	36%	100 bp	0.6
+Tzo-AMvi_004-Ex1-2E-lcwgs-1-1.clmp.fp2_repr.R1	2.1%	37%	103 bp	0.1
+Tzo-AMvi_004-Ex1-2E-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	37%	101 bp	0.1
+Tzo-AMvi_005-Ex1-3A-lcwgs-1-1.clmp.fp2_repr.R1	3.0%	37%	105 bp	1.6
+Tzo-AMvi_005-Ex1-3A-lcwgs-1-1.clmp.fp2_repr.R2	2.6%	37%	103 bp	1.6
+Tzo-AMvi_006-Ex1-1A-lcwgs-2-1.clmp.fp2_repr.R1	14.1%	48%	123 bp	1.3
+Tzo-AMvi_006-Ex1-1A-lcwgs-2-1.clmp.fp2_repr.R2	13.0%	48%	118 bp	1.3
+Tzo-AMvi_007-Ex1-4A-lcwgs-1-1.clmp.fp2_repr.R1	2.0%	37%	107 bp	0.1
+Tzo-AMvi_007-Ex1-4A-lcwgs-1-1.clmp.fp2_repr.R2	1.4%	37%	104 bp	0.1
+Tzo-AMvi_008-Ex1-1B-lcwgs-2-1.clmp.fp2_repr.R1	3.6%	39%	118 bp	1.0
+Tzo-AMvi_008-Ex1-1B-lcwgs-2-1.clmp.fp2_repr.R2	3.0%	39%	115 bp	1.0
+Tzo-AMvi_009-Ex1-5A-lcwgs-1-1.clmp.fp2_repr.R1	1.6%	37%	99 bp	0.0
+Tzo-AMvi_009-Ex1-5A-lcwgs-1-1.clmp.fp2_repr.R2	1.2%	37%	97 bp	0.0
+Tzo-AMvi_010-Ex1-5E-lcwgs-1-1.clmp.fp2_repr.R1	2.0%	39%	102 bp	0.0
+Tzo-AMvi_010-Ex1-5E-lcwgs-1-1.clmp.fp2_repr.R2	1.4%	39%	100 bp	0.0
+Tzo-AMvi_011-Ex1-6A-lcwgs-1-1.clmp.fp2_repr.R1	0.8%	38%	96 bp	0.0
+Tzo-AMvi_011-Ex1-6A-lcwgs-1-1.clmp.fp2_repr.R2	0.5%	38%	94 bp	0.0
+Tzo-AMvi_012-Ex1-6E-lcwgs-1-1.clmp.fp2_repr.R1	2.6%	38%	101 bp	0.1
+Tzo-AMvi_012-Ex1-6E-lcwgs-1-1.clmp.fp2_repr.R2	2.0%	38%	99 bp	0.1
+Tzo-AMvi_013-Ex1-1B-lcwgs-1-1.clmp.fp2_repr.R1	2.0%	39%	100 bp	0.1
+Tzo-AMvi_013-Ex1-1B-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	39%	99 bp	0.1
+Tzo-AMvi_014-Ex1-1C-lcwgs-2-1.clmp.fp2_repr.R1	0.2%	40%	103 bp	0.0
+Tzo-AMvi_014-Ex1-1C-lcwgs-2-1.clmp.fp2_repr.R2	0.1%	40%	100 bp	0.0
+Tzo-AMvi_015-Ex1-2B-lcwgs-1-1.clmp.fp2_repr.R1	2.3%	38%	110 bp	0.3
+Tzo-AMvi_015-Ex1-2B-lcwgs-1-1.clmp.fp2_repr.R2	1.7%	38%	107 bp	0.3
+Tzo-AMvi_016-Ex1-2F-lcwgs-1-1.clmp.fp2_repr.R1	2.3%	40%	107 bp	0.0
+Tzo-AMvi_016-Ex1-2F-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	40%	104 bp	0.0
+Tzo-AMvi_017-Ex1-3B-lcwgs-1-1.clmp.fp2_repr.R1	2.5%	38%	107 bp	0.1
+Tzo-AMvi_017-Ex1-3B-lcwgs-1-1.clmp.fp2_repr.R2	1.7%	38%	104 bp	0.1
+Tzo-AMvi_018-Ex1-3F-lcwgs-1-1.clmp.fp2_repr.R1	2.5%	40%	105 bp	0.0
+Tzo-AMvi_018-Ex1-3F-lcwgs-1-1.clmp.fp2_repr.R2	1.9%	40%	102 bp	0.0
+Tzo-AMvi_019-Ex1-1D-lcwgs-2-1.clmp.fp2_repr.R1	0.2%	40%	102 bp	0.0
+Tzo-AMvi_019-Ex1-1D-lcwgs-2-1.clmp.fp2_repr.R2	0.1%	40%	100 bp	0.0
+Tzo-AMvi_020-Ex1-4F-lcwgs-1-1.clmp.fp2_repr.R1	2.5%	39%	108 bp	0.0
+Tzo-AMvi_020-Ex1-4F-lcwgs-1-1.clmp.fp2_repr.R2	1.7%	39%	106 bp	0.0
+Tzo-AMvi_021-Ex1-1E-lcwgs-2-1.clmp.fp2_repr.R1	4.6%	41%	122 bp	2.2
+Tzo-AMvi_021-Ex1-1E-lcwgs-2-1.clmp.fp2_repr.R2	3.9%	41%	118 bp	2.2
+Tzo-AMvi_022-Ex1-5F-lcwgs-1-1.clmp.fp2_repr.R1	3.2%	39%	115 bp	0.1
+Tzo-AMvi_022-Ex1-5F-lcwgs-1-1.clmp.fp2_repr.R2	2.4%	39%	112 bp	0.1
+Tzo-AMvi_023-Ex1-6B-lcwgs-1-1.clmp.fp2_repr.R1	1.4%	38%	102 bp	0.0
+Tzo-AMvi_023-Ex1-6B-lcwgs-1-1.clmp.fp2_repr.R2	1.0%	38%	101 bp	0.0
+Tzo-AMvi_024-Ex1-6F-lcwgs-1-1.clmp.fp2_repr.R1	2.5%	38%	108 bp	0.1
+Tzo-AMvi_024-Ex1-6F-lcwgs-1-1.clmp.fp2_repr.R2	1.8%	38%	106 bp	0.1
+Tzo-AMvi_025-Ex1-1C-lcwgs-1-1.clmp.fp2_repr.R1	1.6%	37%	98 bp	0.2
+Tzo-AMvi_025-Ex1-1C-lcwgs-1-1.clmp.fp2_repr.R2	1.2%	37%	96 bp	0.2
+Tzo-AMvi_026-Ex1-1G-lcwgs-1-1.clmp.fp2_repr.R1	2.8%	39%	97 bp	0.2
+Tzo-AMvi_026-Ex1-1G-lcwgs-1-1.clmp.fp2_repr.R2	2.1%	39%	95 bp	0.2
+Tzo-AMvi_027-Ex1-2C-lcwgs-1-1.clmp.fp2_repr.R1	3.4%	38%	103 bp	0.2
+Tzo-AMvi_027-Ex1-2C-lcwgs-1-1.clmp.fp2_repr.R2	2.7%	38%	101 bp	0.2
+Tzo-AMvi_028-Ex1-2G-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	38%	97 bp	0.1
+Tzo-AMvi_028-Ex1-2G-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	38%	95 bp	0.1
+Tzo-AMvi_029-Ex1-3C-lcwgs-1-1.clmp.fp2_repr.R1	1.3%	37%	96 bp	0.0
+Tzo-AMvi_029-Ex1-3C-lcwgs-1-1.clmp.fp2_repr.R2	0.8%	37%	94 bp	0.0
+Tzo-AMvi_030-Ex1-3G-lcwgs-1-1.clmp.fp2_repr.R1	3.9%	37%	106 bp	0.2
+Tzo-AMvi_030-Ex1-3G-lcwgs-1-1.clmp.fp2_repr.R2	2.8%	37%	103 bp	0.2
+Tzo-AMvi_031-Ex1-4C-lcwgs-1-1.clmp.fp2_repr.R1	1.6%	37%	97 bp	0.0
+Tzo-AMvi_031-Ex1-4C-lcwgs-1-1.clmp.fp2_repr.R2	1.1%	37%	95 bp	0.0
+Tzo-AMvi_032-Ex1-4G-lcwgs-1-1.clmp.fp2_repr.R1	2.0%	40%	97 bp	0.1
+Tzo-AMvi_032-Ex1-4G-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	40%	95 bp	0.1
+Tzo-AMvi_033-Ex1-5C-lcwgs-1-1.clmp.fp2_repr.R1	3.1%	39%	113 bp	0.1
+Tzo-AMvi_033-Ex1-5C-lcwgs-1-1.clmp.fp2_repr.R2	2.3%	39%	110 bp	0.1
+Tzo-AMvi_034-Ex1-5G-lcwgs-1-1.clmp.fp2_repr.R1	1.8%	37%	100 bp	0.4
+Tzo-AMvi_034-Ex1-5G-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	37%	98 bp	0.4
+Tzo-AMvi_035-Ex1-6C-lcwgs-1-1.clmp.fp2_repr.R1	1.9%	39%	104 bp	0.0
+Tzo-AMvi_035-Ex1-6C-lcwgs-1-1.clmp.fp2_repr.R2	1.4%	39%	101 bp	0.0
+Tzo-AMvi_036-Ex1-6G-lcwgs-1-1.clmp.fp2_repr.R1	2.5%	41%	106 bp	0.1
+Tzo-AMvi_036-Ex1-6G-lcwgs-1-1.clmp.fp2_repr.R2	1.8%	41%	104 bp	0.1
+Tzo-AMvi_037-Ex1-1D-lcwgs-1-1.clmp.fp2_repr.R1	1.1%	38%	92 bp	0.0
+Tzo-AMvi_037-Ex1-1D-lcwgs-1-1.clmp.fp2_repr.R2	0.7%	38%	90 bp	0.0
+Tzo-AMvi_038-Ex1-1H-lcwgs-1-1.clmp.fp2_repr.R1	2.1%	38%	101 bp	0.1
+Tzo-AMvi_038-Ex1-1H-lcwgs-1-1.clmp.fp2_repr.R2	1.4%	38%	99 bp	0.1
+Tzo-AMvi_039-Ex1-2D-lcwgs-1-1.clmp.fp2_repr.R1	1.4%	38%	100 bp	0.0
+Tzo-AMvi_039-Ex1-2D-lcwgs-1-1.clmp.fp2_repr.R2	1.0%	38%	98 bp	0.0
+Tzo-AMvi_040-Ex1-2H-lcwgs-1-1.clmp.fp2_repr.R1	1.5%	38%	96 bp	0.0
+Tzo-AMvi_040-Ex1-2H-lcwgs-1-1.clmp.fp2_repr.R2	1.0%	38%	94 bp	0.0
+Tzo-AMvi_041-Ex1-3D-lcwgs-1-1.clmp.fp2_repr.R1	0.2%	39%	96 bp	0.0
+Tzo-AMvi_041-Ex1-3D-lcwgs-1-1.clmp.fp2_repr.R2	0.2%	39%	94 bp	0.0
+Tzo-AMvi_042-Ex1-3H-lcwgs-1-1.clmp.fp2_repr.R1	2.8%	41%	103 bp	0.1
+Tzo-AMvi_042-Ex1-3H-lcwgs-1-1.clmp.fp2_repr.R2	2.1%	41%	101 bp	0.1
+Tzo-AMvi_043-Ex1-4D-lcwgs-1-1.clmp.fp2_repr.R1	1.7%	37%	100 bp	0.1
+Tzo-AMvi_043-Ex1-4D-lcwgs-1-1.clmp.fp2_repr.R2	1.3%	37%	98 bp	0.1
+Tzo-AMvi_044-Ex1-4H-lcwgs-1-1.clmp.fp2_repr.R1	1.6%	37%	101 bp	0.0
+Tzo-AMvi_044-Ex1-4H-lcwgs-1-1.clmp.fp2_repr.R2	1.2%	37%	99 bp	0.0
+Tzo-AMvi_045-Ex1-5D-lcwgs-1-1.clmp.fp2_repr.R1	1.9%	37%	101 bp	0.1
+Tzo-AMvi_045-Ex1-5D-lcwgs-1-1.clmp.fp2_repr.R2	1.4%	37%	99 bp	0.1
+Tzo-AMvi_046-Ex1-5H-lcwgs-1-1.clmp.fp2_repr.R1	2.0%	39%	101 bp	0.0
+Tzo-AMvi_046-Ex1-5H-lcwgs-1-1.clmp.fp2_repr.R2	1.3%	39%	99 bp	0.0
+Tzo-AMvi_047-Ex1-6D-lcwgs-1-1.clmp.fp2_repr.R1	1.9%	38%	102 bp	0.3
+Tzo-AMvi_047-Ex1-6D-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	38%	100 bp	0.3
+Tzo-AMvi_048-Ex1-6H-lcwgs-1-1.clmp.fp2_repr.R1	3.2%	40%	102 bp	0.1
+Tzo-AMvi_048-Ex1-6H-lcwgs-1-1.clmp.fp2_repr.R2	2.5%	40%	100 bp	0.1
+Tzo-CMal_001-Ex1-3F-lcwgs-1-1.clmp.fp2_repr.R1	3.1%	41%	123 bp	0.3
+Tzo-CMal_001-Ex1-3F-lcwgs-1-1.clmp.fp2_repr.R2	2.2%	40%	118 bp	0.3
+Tzo-CMal_002-Ex1-3G-lcwgs-1-1.clmp.fp2_repr.R1	5.8%	41%	134 bp	0.1
+Tzo-CMal_002-Ex1-3G-lcwgs-1-1.clmp.fp2_repr.R2	3.8%	41%	126 bp	0.1
+Tzo-CMal_003-Ex1-3H-lcwgs-1-1.clmp.fp2_repr.R1	6.6%	40%	136 bp	0.2
+Tzo-CMal_003-Ex1-3H-lcwgs-1-1.clmp.fp2_repr.R2	4.3%	40%	128 bp	0.2
+Tzo-CMal_004-Ex1-4A-lcwgs-1-1.clmp.fp2_repr.R1	4.7%	40%	139 bp	0.4
+Tzo-CMal_004-Ex1-4A-lcwgs-1-1.clmp.fp2_repr.R2	3.6%	40%	130 bp	0.4
+Tzo-CMal_005-Ex1-4B-lcwgs-1-1.clmp.fp2_repr.R1	3.1%	40%	125 bp	0.2
+Tzo-CMal_005-Ex1-4B-lcwgs-1-1.clmp.fp2_repr.R2	2.1%	40%	119 bp	0.2
+Tzo-CMal_006-Ex1-4C-lcwgs-1-1.clmp.fp2_repr.R1	3.7%	40%	129 bp	0.4
+Tzo-CMal_006-Ex1-4C-lcwgs-1-1.clmp.fp2_repr.R2	2.8%	40%	122 bp	0.4
+Tzo-CMal_007-Ex1-4D-lcwgs-1-1.clmp.fp2_repr.R1	3.5%	40%	127 bp	0.4
+Tzo-CMal_007-Ex1-4D-lcwgs-1-1.clmp.fp2_repr.R2	2.8%	40%	121 bp	0.4
+Tzo-CMal_008-Ex1-4E-lcwgs-1-1.clmp.fp2_repr.R1	3.3%	40%	129 bp	0.3
+Tzo-CMal_008-Ex1-4E-lcwgs-1-1.clmp.fp2_repr.R2	2.3%	40%	123 bp	0.3
+Tzo-CMal_009-Ex1-4F-lcwgs-1-1.clmp.fp2_repr.R1	3.2%	41%	126 bp	0.2
+Tzo-CMal_009-Ex1-4F-lcwgs-1-1.clmp.fp2_repr.R2	2.3%	41%	120 bp	0.2
+Tzo-CMal_010-Ex1-4G-lcwgs-1-1.clmp.fp2_repr.R1	3.8%	40%	133 bp	0.3
+Tzo-CMal_010-Ex1-4G-lcwgs-1-1.clmp.fp2_repr.R2	2.6%	40%	126 bp	0.3
+Tzo-CMal_011-Ex1-4H-lcwgs-1-1.clmp.fp2_repr.R1	6.8%	40%	134 bp	0.2
+Tzo-CMal_011-Ex1-4H-lcwgs-1-1.clmp.fp2_repr.R2	4.7%	40%	126 bp	0.2
+Tzo-CMal_012-Ex1-5A-lcwgs-1-1.clmp.fp2_repr.R1	5.3%	40%	136 bp	1.0
+Tzo-CMal_012-Ex1-5A-lcwgs-1-1.clmp.fp2_repr.R2	4.8%	40%	129 bp	1.0
+Tzo-CMal_013-Ex1-5B-lcwgs-1-1.clmp.fp2_repr.R1	3.8%	40%	129 bp	0.5
+Tzo-CMal_013-Ex1-5B-lcwgs-1-1.clmp.fp2_repr.R2	3.1%	40%	123 bp	0.5
+Tzo-CMal_014-Ex1-5C-lcwgs-1-1.clmp.fp2_repr.R1	4.1%	40%	130 bp	0.5
+Tzo-CMal_014-Ex1-5C-lcwgs-1-1.clmp.fp2_repr.R2	3.4%	40%	123 bp	0.5
+Tzo-CMal_015-Ex1-5D-lcwgs-1-1.clmp.fp2_repr.R1	3.4%	41%	127 bp	0.3
+Tzo-CMal_015-Ex1-5D-lcwgs-1-1.clmp.fp2_repr.R2	2.4%	41%	121 bp	0.3
+Tzo-CMal_016-Ex1-5E-lcwgs-1-1.clmp.fp2_repr.R1	4.9%	41%	123 bp	0.2
+Tzo-CMal_016-Ex1-5E-lcwgs-1-1.clmp.fp2_repr.R2	3.4%	41%	117 bp	0.2
+Tzo-CMal_017-Ex1-5F-lcwgs-1-1.clmp.fp2_repr.R1	3.2%	41%	123 bp	0.4
+Tzo-CMal_017-Ex1-5F-lcwgs-1-1.clmp.fp2_repr.R2	2.4%	41%	118 bp	0.4
+Tzo-CMal_018-Ex1-5G-lcwgs-1-1.clmp.fp2_repr.R1	2.8%	41%	119 bp	0.3
+Tzo-CMal_018-Ex1-5G-lcwgs-1-1.clmp.fp2_repr.R2	2.1%	41%	114 bp	0.3
+Tzo-CMal_019-Ex1-5H-lcwgs-1-1.clmp.fp2_repr.R1	5.7%	40%	133 bp	0.1
+Tzo-CMal_019-Ex1-5H-lcwgs-1-1.clmp.fp2_repr.R2	3.7%	40%	125 bp	0.1
+Tzo-CMal_020-Ex1-6A-lcwgs-1-1.clmp.fp2_repr.R1	4.4%	40%	132 bp	0.8
+Tzo-CMal_020-Ex1-6A-lcwgs-1-1.clmp.fp2_repr.R2	3.7%	40%	125 bp	0.8
+Tzo-CMal_021-Ex1-6B-lcwgs-1-1.clmp.fp2_repr.R1	3.7%	41%	124 bp	0.5
+Tzo-CMal_021-Ex1-6B-lcwgs-1-1.clmp.fp2_repr.R2	3.0%	41%	118 bp	0.5
+Tzo-CMal_022-Ex1-6C-lcwgs-1-1.clmp.fp2_repr.R1	4.2%	40%	132 bp	0.6
+Tzo-CMal_022-Ex1-6C-lcwgs-1-1.clmp.fp2_repr.R2	3.4%	40%	125 bp	0.6
+Tzo-CMal_023-Ex1-6D-lcwgs-1-1.clmp.fp2_repr.R1	3.3%	41%	122 bp	0.4
+Tzo-CMal_023-Ex1-6D-lcwgs-1-1.clmp.fp2_repr.R2	2.7%	41%	117 bp	0.4
+Tzo-CMal_024-Ex1-6E-lcwgs-1-1.clmp.fp2_repr.R1	0.3%	40%	96 bp	0.0
+Tzo-CMal_024-Ex1-6E-lcwgs-1-1.clmp.fp2_repr.R2	0.2%	40%	94 bp	0.0
+Tzo-CMal_025-Ex1-6F-lcwgs-1-1.clmp.fp2_repr.R1	3.0%	41%	119 bp	0.2
+Tzo-CMal_025-Ex1-6F-lcwgs-1-1.clmp.fp2_repr.R2	2.1%	41%	114 bp	0.2
+Tzo-CMal_026-Ex1-6G-lcwgs-1-1.clmp.fp2_repr.R1	3.1%	41%	123 bp	0.3
+Tzo-CMal_026-Ex1-6G-lcwgs-1-1.clmp.fp2_repr.R2	2.3%	41%	117 bp	0.3
+Tzo-CMal_027-Ex1-6H-lcwgs-1-1.clmp.fp2_repr.R1	4.2%	41%	125 bp	0.1
+Tzo-CMal_027-Ex1-6H-lcwgs-1-1.clmp.fp2_repr.R2	2.8%	41%	119 bp	0.1
+Tzo-CMal_028-Ex1-7A-lcwgs-1-1.clmp.fp2_repr.R1	3.8%	41%	131 bp	0.4
+Tzo-CMal_028-Ex1-7A-lcwgs-1-1.clmp.fp2_repr.R2	2.9%	41%	124 bp	0.4
+Tzo-CMal_029-Ex1-7B-lcwgs-1-1.clmp.fp2_repr.R1	2.8%	41%	118 bp	0.4
+Tzo-CMal_029-Ex1-7B-lcwgs-1-1.clmp.fp2_repr.R2	2.2%	41%	113 bp	0.4
+Tzo-CMal_030-Ex1-7C-lcwgs-1-1.clmp.fp2_repr.R1	3.5%	40%	129 bp	0.4
+Tzo-CMal_030-Ex1-7C-lcwgs-1-1.clmp.fp2_repr.R2	2.7%	40%	123 bp	0.4
+Tzo-CMal_031-Ex1-7D-lcwgs-1-1.clmp.fp2_repr.R1	3.1%	41%	121 bp	0.3
+Tzo-CMal_031-Ex1-7D-lcwgs-1-1.clmp.fp2_repr.R2	2.4%	41%	116 bp	0.3
+Tzo-CMal_032-Ex1-7E-lcwgs-1-1.clmp.fp2_repr.R1	2.9%	41%	117 bp	0.2
+Tzo-CMal_032-Ex1-7E-lcwgs-1-1.clmp.fp2_repr.R2	2.2%	41%	113 bp	0.2
+Tzo-CMal_033-Ex1-7F-lcwgs-1-1.clmp.fp2_repr.R1	4.0%	41%	113 bp	0.2
+Tzo-CMal_033-Ex1-7F-lcwgs-1-1.clmp.fp2_repr.R2	3.0%	41%	109 bp	0.2
+Tzo-CMal_034-Ex1-7G-lcwgs-1-1.clmp.fp2_repr.R1	4.5%	41%	115 bp	0.2
+Tzo-CMal_034-Ex1-7G-lcwgs-1-1.clmp.fp2_repr.R2	3.4%	41%	111 bp	0.2
+Tzo-CMal_035-Ex1-7H-lcwgs-1-1.clmp.fp2_repr.R1	3.4%	41%	127 bp	0.2
+Tzo-CMal_035-Ex1-7H-lcwgs-1-1.clmp.fp2_repr.R2	2.4%	41%	121 bp	0.2
+Tzo-CMal_036-Ex1-8A-lcwgs-1-1.clmp.fp2_repr.R1	3.6%	40%	129 bp	0.3
+Tzo-CMal_036-Ex1-8A-lcwgs-1-1.clmp.fp2_repr.R2	2.6%	40%	123 bp	0.3
+Tzo-CMal_037-Ex1-8B-lcwgs-1-1.clmp.fp2_repr.R1	3.0%	41%	120 bp	0.5
+Tzo-CMal_037-Ex1-8B-lcwgs-1-1.clmp.fp2_repr.R2	2.4%	41%	115 bp	0.5
+Tzo-CMal_038-Ex1-8C-lcwgs-1-1.clmp.fp2_repr.R1	4.1%	41%	118 bp	0.2
+Tzo-CMal_038-Ex1-8C-lcwgs-1-1.clmp.fp2_repr.R2	2.9%	41%	114 bp	0.2
+Tzo-CMal_039-Ex1-8D-lcwgs-1-1.clmp.fp2_repr.R1	0.3%	40%	93 bp	0.0
+Tzo-CMal_039-Ex1-8D-lcwgs-1-1.clmp.fp2_repr.R2	0.2%	40%	91 bp	0.0
+Tzo-CMal_040-Ex1-8E-lcwgs-1-1.clmp.fp2_repr.R1	3.0%	41%	123 bp	0.2
+Tzo-CMal_040-Ex1-8E-lcwgs-1-1.clmp.fp2_repr.R2	2.2%	41%	117 bp	0.2
+Tzo-CMal_041-Ex1-8F-lcwgs-1-1.clmp.fp2_repr.R1	0.1%	40%	90 bp	0.0
+Tzo-CMal_041-Ex1-8F-lcwgs-1-1.clmp.fp2_repr.R2	0.1%	40%	88 bp	0.0
+Tzo-CMal_042-Ex1-8G-lcwgs-1-1.clmp.fp2_repr.R1	2.7%	41%	120 bp	0.2
+Tzo-CMal_042-Ex1-8G-lcwgs-1-1.clmp.fp2_repr.R2	2.0%	41%	115 bp	0.2
+Tzo-CMal_043-Ex1-8H-lcwgs-1-1.clmp.fp2_repr.R1	3.9%	40%	132 bp	0.0
+Tzo-CMal_043-Ex1-8H-lcwgs-1-1.clmp.fp2_repr.R2	2.2%	40%	125 bp	0.0
+Tzo-CMal_044-Ex1-9A-lcwgs-1-1.clmp.fp2_repr.R1	4.0%	40%	134 bp	0.5
+Tzo-CMal_044-Ex1-9A-lcwgs-1-1.clmp.fp2_repr.R2	2.9%	40%	126 bp	0.5
+Tzo-CMal_045-Ex1-9B-lcwgs-1-1.clmp.fp2_repr.R1	4.2%	40%	132 bp	0.1
+Tzo-CMal_045-Ex1-9B-lcwgs-1-1.clmp.fp2_repr.R2	2.4%	40%	125 bp	0.1
+Tzo-CMal_046-Ex1-9C-lcwgs-1-1.clmp.fp2_repr.R1	4.2%	40%	132 bp	0.6
+Tzo-CMal_046-Ex1-9C-lcwgs-1-1.clmp.fp2_repr.R2	3.3%	40%	125 bp	0.6
+Tzo-CMal_047-Ex1-9D-lcwgs-1-1.clmp.fp2_repr.R1	4.5%	41%	121 bp	0.2
+Tzo-CMal_047-Ex1-9D-lcwgs-1-1.clmp.fp2_repr.R2	3.1%	41%	116 bp	0.2
+Tzo-CMal_048-Ex1-9E-lcwgs-1-1.clmp.fp2_repr.R1	0.0%	40%	98 bp	0.0
+Tzo-CMal_048-Ex1-9E-lcwgs-1-1.clmp.fp2_repr.R2	0.0%	40%	95 bp	0.0
+Tzo-CMal_049-Ex1-9F-lcwgs-1-1.clmp.fp2_repr.R1	3.4%	41%	121 bp	0.0
+Tzo-CMal_049-Ex1-9F-lcwgs-1-1.clmp.fp2_repr.R2	2.0%	41%	116 bp	0.0
+Tzo-CMal_050-Ex1-9G-lcwgs-1-1.clmp.fp2_repr.R1	2.1%	40%	113 bp	0.0
+Tzo-CMal_050-Ex1-9G-lcwgs-1-1.clmp.fp2_repr.R2	1.4%	40%	108 bp	0.0
+Tzo-CMal_051-Ex1-9H-lcwgs-1-1.clmp.fp2_repr.R1	4.3%	40%	131 bp	0.0
+Tzo-CMal_051-Ex1-9H-lcwgs-1-1.clmp.fp2_repr.R2	2.4%	40%	124 bp	0.0
+Tzo-CMal_052-Ex1-10A-lcwgs-1-1.clmp.fp2_repr.R1	4.0%	40%	136 bp	0.3
+Tzo-CMal_052-Ex1-10A-lcwgs-1-1.clmp.fp2_repr.R2	2.6%	40%	127 bp	0.3
+Tzo-CMal_053-Ex1-10B-lcwgs-1-1.clmp.fp2_repr.R1	5.1%	41%	132 bp	0.1
+Tzo-CMal_053-Ex1-10B-lcwgs-1-1.clmp.fp2_repr.R2	3.2%	41%	123 bp	0.1
+Tzo-CMal_054-Ex1-10C-lcwgs-1-1.clmp.fp2_repr.R1	4.1%	40%	130 bp	0.1
+Tzo-CMal_054-Ex1-10C-lcwgs-1-1.clmp.fp2_repr.R2	2.4%	40%	122 bp	0.1
+Tzo-CMal_055-Ex1-10D-lcwgs-1-1.clmp.fp2_repr.R1	3.6%	40%	130 bp	0.0
+Tzo-CMal_055-Ex1-10D-lcwgs-1-1.clmp.fp2_repr.R2	2.0%	40%	122 bp	0.0
+Tzo-CMal_056-Ex1-10E-lcwgs-1-1.clmp.fp2_repr.R1	6.0%	41%	131 bp	0.2
+Tzo-CMal_056-Ex1-10E-lcwgs-1-1.clmp.fp2_repr.R2	4.0%	41%	123 bp	0.2
+Tzo-CMal_057-Ex1-10F-lcwgs-1-1.clmp.fp2_repr.R1	4.1%	41%	130 bp	0.1
+Tzo-CMal_057-Ex1-10F-lcwgs-1-1.clmp.fp2_repr.R2	2.4%	41%	122 bp	0.1
+Tzo-CMal_058-Ex1-10G-lcwgs-1-1.clmp.fp2_repr.R1	3.8%	41%	130 bp	0.4
+Tzo-CMal_058-Ex1-10G-lcwgs-1-1.clmp.fp2_repr.R2	2.8%	41%	122 bp	0.4
+Tzo-CMal_059-Ex1-10H-lcwgs-1-1.clmp.fp2_repr.R1	2.6%	40%	126 bp	0.0
+Tzo-CMal_059-Ex1-10H-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	41%	118 bp	0.0
+Tzo-CMal_060-Ex1-11A-lcwgs-1-1.clmp.fp2_repr.R1	6.1%	40%	131 bp	0.2
+Tzo-CMal_060-Ex1-11A-lcwgs-1-1.clmp.fp2_repr.R2	4.3%	40%	124 bp	0.2
+Tzo-CMal_061-Ex1-11B-lcwgs-1-1.clmp.fp2_repr.R1	4.8%	40%	137 bp	0.1
+Tzo-CMal_061-Ex1-11B-lcwgs-1-1.clmp.fp2_repr.R2	3.0%	40%	129 bp	0.1
+Tzo-CMal_062-Ex1-11C-lcwgs-1-1.clmp.fp2_repr.R1	4.2%	40%	123 bp	0.2
+Tzo-CMal_062-Ex1-11C-lcwgs-1-1.clmp.fp2_repr.R2	2.9%	40%	118 bp	0.2
+Tzo-CMal_063-Ex1-11D-lcwgs-1-1.clmp.fp2_repr.R1	3.9%	40%	128 bp	0.1
+Tzo-CMal_063-Ex1-11D-lcwgs-1-1.clmp.fp2_repr.R2	2.5%	40%	122 bp	0.1
+Tzo-CMal_064-Ex1-11E-lcwgs-1-1.clmp.fp2_repr.R1	3.6%	41%	132 bp	0.0
+Tzo-CMal_064-Ex1-11E-lcwgs-1-1.clmp.fp2_repr.R2	2.1%	41%	125 bp	0.0
+Tzo-CMta_001-Ex1-9A-lcwgs-1-1.clmp.fp2_repr.R1	4.2%	42%	114 bp	0.2
+Tzo-CMta_001-Ex1-9A-lcwgs-1-1.clmp.fp2_repr.R2	2.9%	42%	110 bp	0.2
+Tzo-CMta_002-Ex1-9B-lcwgs-1-1.clmp.fp2_repr.R1	2.7%	41%	116 bp	0.4
+Tzo-CMta_002-Ex1-9B-lcwgs-1-1.clmp.fp2_repr.R2	2.1%	41%	111 bp	0.4
+Tzo-CMta_003-Ex1-9C-lcwgs-1-1.clmp.fp2_repr.R1	0.0%	39%	91 bp	0.0
+Tzo-CMta_003-Ex1-9C-lcwgs-1-1.clmp.fp2_repr.R2	0.0%	39%	88 bp	0.0
+Tzo-CMta_004-Ex1-9D-lcwgs-1-1.clmp.fp2_repr.R1	0.1%	40%	95 bp	0.0
+Tzo-CMta_004-Ex1-9D-lcwgs-1-1.clmp.fp2_repr.R2	0.1%	40%	93 bp	0.0
+Tzo-CMta_005-Ex1-9E-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	41%	110 bp	0.0
+Tzo-CMta_005-Ex1-9E-lcwgs-1-1.clmp.fp2_repr.R2	1.4%	41%	106 bp	0.0
+Tzo-CMta_006-Ex1-9F-lcwgs-1-1.clmp.fp2_repr.R1	2.9%	42%	120 bp	0.0
+Tzo-CMta_006-Ex1-9F-lcwgs-1-1.clmp.fp2_repr.R2	1.8%	41%	115 bp	0.0
+Tzo-CMta_007-Ex1-9G-lcwgs-1-1.clmp.fp2_repr.R1	0.0%	39%	86 bp	0.0
+Tzo-CMta_007-Ex1-9G-lcwgs-1-1.clmp.fp2_repr.R2	0.0%	39%	84 bp	0.0
+Tzo-CMta_008-Ex1-9H-lcwgs-1-1.clmp.fp2_repr.R1	0.1%	39%	92 bp	0.0
+Tzo-CMta_008-Ex1-9H-lcwgs-1-1.clmp.fp2_repr.R2	0.1%	39%	90 bp	0.0
+Tzo-CMta_009-Ex1-10A-lcwgs-1-1.clmp.fp2_repr.R1	3.2%	41%	123 bp	0.6
+Tzo-CMta_009-Ex1-10A-lcwgs-1-1.clmp.fp2_repr.R2	2.4%	41%	117 bp	0.6
+Tzo-CMta_010-Ex1-10B-lcwgs-1-1.clmp.fp2_repr.R1	2.3%	41%	114 bp	0.0
+Tzo-CMta_010-Ex1-10B-lcwgs-1-1.clmp.fp2_repr.R2	1.4%	41%	108 bp	0.0
+Tzo-CMta_011-Ex1-10C-lcwgs-1-1.clmp.fp2_repr.R1	0.8%	40%	118 bp	0.0
+Tzo-CMta_011-Ex1-10C-lcwgs-1-1.clmp.fp2_repr.R2	0.4%	40%	111 bp	0.0
+Tzo-CMta_012-Ex1-10D-lcwgs-1-1.clmp.fp2_repr.R1	3.5%	41%	129 bp	0.6
+Tzo-CMta_012-Ex1-10D-lcwgs-1-1.clmp.fp2_repr.R2	2.7%	41%	121 bp	0.6
+Tzo-CMta_013-Ex1-10E-lcwgs-1-1.clmp.fp2_repr.R1	0.3%	39%	117 bp	0.0
+Tzo-CMta_013-Ex1-10E-lcwgs-1-1.clmp.fp2_repr.R2	0.0%	39%	112 bp	0.0
+Tzo-CMta_014-Ex1-10F-lcwgs-1-1.clmp.fp2_repr.R1	2.8%	41%	124 bp	0.0
+Tzo-CMta_014-Ex1-10F-lcwgs-1-1.clmp.fp2_repr.R2	1.3%	41%	117 bp	0.0
+Tzo-CMta_015-Ex1-10G-lcwgs-1-1.clmp.fp2_repr.R1	0.0%	39%	114 bp	0.0
+Tzo-CMta_015-Ex1-10G-lcwgs-1-1.clmp.fp2_repr.R2	0.0%	40%	108 bp	0.0
+Tzo-CMta_016-Ex1-10H-lcwgs-1-1.clmp.fp2_repr.R1	4.0%	40%	127 bp	0.1
+Tzo-CMta_016-Ex1-10H-lcwgs-1-1.clmp.fp2_repr.R2	2.6%	40%	121 bp	0.1
+Tzo-CMta_017-Ex1-11A-lcwgs-1-1.clmp.fp2_repr.R1	3.0%	41%	122 bp	0.5
+Tzo-CMta_017-Ex1-11A-lcwgs-1-1.clmp.fp2_repr.R2	2.3%	41%	117 bp	0.5
+Tzo-CMta_018-Ex1-11B-lcwgs-1-1.clmp.fp2_repr.R1	0.0%	39%	121 bp	0.0
+Tzo-CMta_018-Ex1-11B-lcwgs-1-1.clmp.fp2_repr.R2	0.0%	39%	112 bp	0.0
+Tzo-CMta_019-Ex1-11C-lcwgs-1-1.clmp.fp2_repr.R1	1.1%	41%	113 bp	0.0
+Tzo-CMta_019-Ex1-11C-lcwgs-1-1.clmp.fp2_repr.R2	0.7%	41%	109 bp	0.0
+Tzo-CMta_020-Ex1-11D-lcwgs-1-1.clmp.fp2_repr.R1	2.8%	41%	123 bp	0.2
+Tzo-CMta_020-Ex1-11D-lcwgs-1-1.clmp.fp2_repr.R2	2.0%	41%	117 bp	0.2
+Tzo-CMta_021-Ex1-11E-lcwgs-1-1.clmp.fp2_repr.R1	2.5%	42%	116 bp	0.0
+Tzo-CMta_021-Ex1-11E-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	42%	112 bp	0.0
+Tzo-CMta_022-Ex1-11F-lcwgs-1-1.clmp.fp2_repr.R1	2.9%	42%	119 bp	0.1
+Tzo-CMta_022-Ex1-11F-lcwgs-1-1.clmp.fp2_repr.R2	1.8%	42%	114 bp	0.1
+Tzo-CMta_023-Ex1-11G-lcwgs-1-1.clmp.fp2_repr.R1	0.0%	39%	113 bp	0.0
+Tzo-CMta_023-Ex1-11G-lcwgs-1-1.clmp.fp2_repr.R2	0.0%	39%	109 bp	0.0
+Tzo-CMta_024-Ex1-11H-lcwgs-1-1.clmp.fp2_repr.R1	2.9%	41%	123 bp	0.3
+Tzo-CMta_024-Ex1-11H-lcwgs-1-1.clmp.fp2_repr.R2	2.2%	40%	118 bp	0.3
+Tzo-CMta_025-Ex1-12A-lcwgs-1-1.clmp.fp2_repr.R1	2.5%	41%	115 bp	0.1
+Tzo-CMta_025-Ex1-12A-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	41%	111 bp	0.1
+Tzo-CMta_026-Ex1-12B-lcwgs-1-1.clmp.fp2_repr.R1	1.8%	41%	106 bp	0.0
+Tzo-CMta_026-Ex1-12B-lcwgs-1-1.clmp.fp2_repr.R2	1.2%	41%	102 bp	0.0
+Tzo-CMta_027-Ex1-12C-lcwgs-1-1.clmp.fp2_repr.R1	4.3%	41%	120 bp	0.2
+Tzo-CMta_027-Ex1-12C-lcwgs-1-1.clmp.fp2_repr.R2	3.2%	41%	115 bp	0.2
+Tzo-CMta_028-Ex1-12D-lcwgs-1-1.clmp.fp2_repr.R1	1.9%	41%	118 bp	0.0
+Tzo-CMta_028-Ex1-12D-lcwgs-1-1.clmp.fp2_repr.R2	1.9%	41%	114 bp	0.0
+Tzo-CMta_029-Ex1-12E-lcwgs-1-1.clmp.fp2_repr.R1	2.5%	41%	117 bp	0.0
+Tzo-CMta_029-Ex1-12E-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	41%	113 bp	0.0
+Tzo-CMta_030-Ex1-12F-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	42%	114 bp	0.0
+Tzo-CMta_030-Ex1-12F-lcwgs-1-1.clmp.fp2_repr.R2	1.3%	42%	110 bp	0.0
+Tzo-CMta_031-Ex1-12G-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	42%	114 bp	0.0
+Tzo-CMta_031-Ex1-12G-lcwgs-1-1.clmp.fp2_repr.R2	1.4%	42%	109 bp	0.0
+Tzo-CMta_032-Ex1-12H-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	41%	112 bp	0.0
+Tzo-CMta_032-Ex1-12H-lcwgs-1-1.clmp.fp2_repr.R2	1.4%	41%	109 bp	0.0
+Tzo-CMta_033-Ex1-1A-lcwgs-1-1.clmp.fp2_repr.R1	3.0%	41%	121 bp	0.0
+Tzo-CMta_033-Ex1-1A-lcwgs-1-1.clmp.fp2_repr.R2	1.9%	41%	116 bp	0.0
+Tzo-CMta_034-Ex1-1B-lcwgs-1-1.clmp.fp2_repr.R1	2.9%	41%	117 bp	0.1
+Tzo-CMta_034-Ex1-1B-lcwgs-1-1.clmp.fp2_repr.R2	1.9%	41%	112 bp	0.1
+Tzo-CMta_035-Ex1-1C-lcwgs-1-1.clmp.fp2_repr.R1	2.4%	41%	119 bp	0.0
+Tzo-CMta_035-Ex1-1C-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	41%	114 bp	0.0
+Tzo-CMta_036-Ex1-1D-lcwgs-1-1.clmp.fp2_repr.R1	3.8%	41%	128 bp	0.1
+Tzo-CMta_036-Ex1-1D-lcwgs-1-1.clmp.fp2_repr.R2	2.2%	41%	122 bp	0.1
+Tzo-CMta_037-Ex1-1E-lcwgs-1-1.clmp.fp2_repr.R1	0.1%	40%	105 bp	0.0
+Tzo-CMta_037-Ex1-1E-lcwgs-1-1.clmp.fp2_repr.R2	0.1%	40%	102 bp	0.0
+Tzo-CMta_038-Ex1-1F-lcwgs-1-1.clmp.fp2_repr.R1	0.2%	40%	104 bp	0.0
+Tzo-CMta_038-Ex1-1F-lcwgs-1-1.clmp.fp2_repr.R2	0.1%	40%	101 bp	0.0
+Tzo-CMta_039-Ex1-1G-lcwgs-1-1.clmp.fp2_repr.R1	3.4%	40%	127 bp	0.4
+Tzo-CMta_039-Ex1-1G-lcwgs-1-1.clmp.fp2_repr.R2	2.6%	40%	121 bp	0.4
+Tzo-CMta_040-Ex1-1H-lcwgs-1-1.clmp.fp2_repr.R1	3.0%	40%	119 bp	0.1
+Tzo-CMta_040-Ex1-1H-lcwgs-1-1.clmp.fp2_repr.R2	2.0%	40%	114 bp	0.1
+Tzo-CMta_041-Ex1-2A-lcwgs-1-1.clmp.fp2_repr.R1	2.6%	41%	126 bp	0.0
+Tzo-CMta_041-Ex1-2A-lcwgs-1-1.clmp.fp2_repr.R2	1.7%	41%	120 bp	0.0
+Tzo-CMta_042-Ex1-2B-lcwgs-1-1.clmp.fp2_repr.R1	3.4%	40%	125 bp	0.7
+Tzo-CMta_042-Ex1-2B-lcwgs-1-1.clmp.fp2_repr.R2	2.9%	40%	119 bp	0.7
+Tzo-CMta_043-Ex1-2C-lcwgs-1-1.clmp.fp2_repr.R1	2.9%	40%	125 bp	0.2
+Tzo-CMta_043-Ex1-2C-lcwgs-1-1.clmp.fp2_repr.R2	2.2%	40%	120 bp	0.2
+Tzo-CMta_044-Ex1-2D-lcwgs-1-1.clmp.fp2_repr.R1	3.9%	41%	131 bp	1.0
+Tzo-CMta_044-Ex1-2D-lcwgs-1-1.clmp.fp2_repr.R2	3.6%	41%	125 bp	1.0
+Tzo-CMta_045-Ex1-2E-lcwgs-1-1.clmp.fp2_repr.R1	3.0%	41%	122 bp	0.4
+Tzo-CMta_045-Ex1-2E-lcwgs-1-1.clmp.fp2_repr.R2	2.5%	41%	117 bp	0.4
+Tzo-CMta_046-Ex1-2F-lcwgs-1-1.clmp.fp2_repr.R1	1.0%	40%	113 bp	0.0
+Tzo-CMta_046-Ex1-2F-lcwgs-1-1.clmp.fp2_repr.R2	0.6%	40%	108 bp	0.0
+Tzo-CMta_047-Ex1-2G-lcwgs-1-1.clmp.fp2_repr.R1	0.2%	39%	108 bp	0.0
+Tzo-CMta_047-Ex1-2G-lcwgs-1-1.clmp.fp2_repr.R2	0.2%	39%	104 bp	0.0
+Tzo-CMta_048-Ex1-2H-lcwgs-1-1.clmp.fp2_repr.R1	3.9%	41%	120 bp	0.2
+Tzo-CMta_048-Ex1-2H-lcwgs-1-1.clmp.fp2_repr.R2	2.7%	41%	116 bp	0.2
+Tzo-CMta_049-Ex1-3A-lcwgs-1-1.clmp.fp2_repr.R1	0.3%	40%	113 bp	0.0
+Tzo-CMta_049-Ex1-3A-lcwgs-1-1.clmp.fp2_repr.R2	0.1%	40%	108 bp	0.0
+Tzo-CMta_050-Ex1-3B-lcwgs-1-1.clmp.fp2_repr.R1	0.3%	40%	116 bp	0.0
+Tzo-CMta_050-Ex1-3B-lcwgs-1-1.clmp.fp2_repr.R2	0.2%	40%	111 bp	0.0
+Tzo-CMta_051-Ex1-3C-lcwgs-1-1.clmp.fp2_repr.R1	3.1%	40%	124 bp	0.3
+Tzo-CMta_051-Ex1-3C-lcwgs-1-1.clmp.fp2_repr.R2	2.4%	40%	118 bp	0.3
+Tzo-CMta_052-Ex1-3D-lcwgs-1-1.clmp.fp2_repr.R1	0.3%	40%	112 bp	0.0
+Tzo-CMta_052-Ex1-3D-lcwgs-1-1.clmp.fp2_repr.R2	0.2%	40%	107 bp	0.0
+Tzo-CMta_053-Ex1-3E-lcwgs-1-1.clmp.fp2_repr.R1	4.2%	41%	127 bp	1.2
+Tzo-CMta_053-Ex1-3E-lcwgs-1-1.clmp.fp2_repr.R2	3.8%	41%	121 bp	1.2
+Tzo-CMta_054-Ex1-3F-lcwgs-1-1.clmp.fp2_repr.R1	0.2%	40%	105 bp	0.0
+Tzo-CMta_054-Ex1-3F-lcwgs-1-1.clmp.fp2_repr.R2	0.1%	40%	101 bp	0.0
+Tzo-CMta_055-Ex1-3G-lcwgs-1-1.clmp.fp2_repr.R1	3.1%	41%	123 bp	0.5
+Tzo-CMta_055-Ex1-3G-lcwgs-1-1.clmp.fp2_repr.R2	2.4%	41%	118 bp	0.5
+Tzo-CMta_056-Ex1-3H-lcwgs-1-1.clmp.fp2_repr.R1	2.3%	41%	109 bp	0.1
+Tzo-CMta_056-Ex1-3H-lcwgs-1-1.clmp.fp2_repr.R2	1.6%	41%	106 bp	0.1
+Tzo-CMta_057-Ex1-4A-lcwgs-1-1.clmp.fp2_repr.R1	0.3%	40%	112 bp	0.0
+Tzo-CMta_057-Ex1-4A-lcwgs-1-1.clmp.fp2_repr.R2	0.2%	40%	107 bp	0.0
+Tzo-CMta_058-Ex1-4B-lcwgs-1-1.clmp.fp2_repr.R1	3.0%	40%	122 bp	0.1
+Tzo-CMta_058-Ex1-4B-lcwgs-1-1.clmp.fp2_repr.R2	1.9%	40%	117 bp	0.1
+Tzo-CMta_059-Ex1-4C-lcwgs-1-1.clmp.fp2_repr.R1	2.6%	41%	119 bp	0.3
+Tzo-CMta_059-Ex1-4C-lcwgs-1-1.clmp.fp2_repr.R2	1.9%	41%	114 bp	0.3
+Tzo-CMta_060-Ex1-4D-lcwgs-1-1.clmp.fp2_repr.R1	3.2%	41%	124 bp	0.6
+Tzo-CMta_060-Ex1-4D-lcwgs-1-1.clmp.fp2_repr.R2	2.5%	41%	119 bp	0.6
+Tzo-CMta_061-Ex1-4E-lcwgs-1-1.clmp.fp2_repr.R1	2.4%	41%	117 bp	0.1
+Tzo-CMta_061-Ex1-4E-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	41%	112 bp	0.1
+Tzo-CMta_062-Ex1-4F-lcwgs-1-1.clmp.fp2_repr.R1	4.7%	41%	119 bp	0.2
+Tzo-CMta_062-Ex1-4F-lcwgs-1-1.clmp.fp2_repr.R2	3.6%	41%	115 bp	0.2
+Tzo-CMta_063-Ex1-4G-lcwgs-1-1.clmp.fp2_repr.R1	4.6%	41%	123 bp	0.2
+Tzo-CMta_063-Ex1-4G-lcwgs-1-1.clmp.fp2_repr.R2	3.3%	41%	118 bp	0.2
+Tzo-CMta_064-Ex1-4H-lcwgs-1-1.clmp.fp2_repr.R1	2.3%	41%	118 bp	0.0
+Tzo-CMta_064-Ex1-4H-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	41%	114 bp	0.0
+Tzo-CMvi_006-Ex1-7B-lcwgs-1-1.clmp.fp2_repr.R1	5.2%	40%	140 bp	2.5
+Tzo-CMvi_006-Ex1-7B-lcwgs-1-1.clmp.fp2_repr.R2	5.0%	40%	133 bp	2.5
+Tzo-CMvi_007-Ex1-8E-lcwgs-1-1.clmp.fp2_repr.R1	5.4%	40%	140 bp	0.8
+Tzo-CMvi_007-Ex1-8E-lcwgs-1-1.clmp.fp2_repr.R2	4.6%	40%	132 bp	0.8
+Tzo-CMvi_011-Ex1-5G-lcwgs-1-1.clmp.fp2_repr.R1	5.6%	40%	140 bp	1.7
+Tzo-CMvi_011-Ex1-5G-lcwgs-1-1.clmp.fp2_repr.R2	5.2%	40%	133 bp	1.7
+Tzo-CMvi_012-Ex1-1G-lcwgs-1-1.clmp.fp2_repr.R1	4.1%	39%	132 bp	2.2
+Tzo-CMvi_012-Ex1-1G-lcwgs-1-1.clmp.fp2_repr.R2	3.8%	39%	126 bp	2.2
+Tzo-CMvi_013-Ex1-2B-lcwgs-1-1.clmp.fp2_repr.R1	4.5%	39%	141 bp	1.0
+Tzo-CMvi_013-Ex1-2B-lcwgs-1-1.clmp.fp2_repr.R2	3.9%	39%	133 bp	1.0
+Tzo-CMvi_015-Ex1-2F-lcwgs-1-1.clmp.fp2_repr.R1	5.4%	40%	142 bp	1.0
+Tzo-CMvi_015-Ex1-2F-lcwgs-1-1.clmp.fp2_repr.R2	4.8%	40%	133 bp	1.0
+Tzo-CMvi_016-Ex1-1D-lcwgs-1-1.clmp.fp2_repr.R1	3.9%	40%	134 bp	1.4
+Tzo-CMvi_016-Ex1-1D-lcwgs-1-1.clmp.fp2_repr.R2	3.4%	40%	128 bp	1.4
+Tzo-CMvi_018-Ex1-1F-lcwgs-2-1.clmp.fp2_repr.R1	6.5%	41%	143 bp	0.1
+Tzo-CMvi_018-Ex1-1F-lcwgs-2-1.clmp.fp2_repr.R2	3.8%	41%	132 bp	0.1
+Tzo-CMvi_019-Ex1-1G-lcwgs-2-1.clmp.fp2_repr.R1	0.2%	40%	103 bp	0.0
+Tzo-CMvi_019-Ex1-1G-lcwgs-2-1.clmp.fp2_repr.R2	0.1%	40%	100 bp	0.0
+Tzo-CMvi_020-Ex1-7D-lcwgs-1-1.clmp.fp2_repr.R1	4.9%	41%	140 bp	1.6
+Tzo-CMvi_020-Ex1-7D-lcwgs-1-1.clmp.fp2_repr.R2	4.7%	41%	132 bp	1.6
+Tzo-CMvi_027-Ex1-1H-lcwgs-2-1.clmp.fp2_repr.R1	0.2%	40%	104 bp	0.0
+Tzo-CMvi_027-Ex1-1H-lcwgs-2-1.clmp.fp2_repr.R2	0.1%	40%	100 bp	0.0
+Tzo-CMvi_028-Ex1-2A-lcwgs-2-1.clmp.fp2_repr.R1	4.0%	40%	137 bp	0.1
+Tzo-CMvi_028-Ex1-2A-lcwgs-2-1.clmp.fp2_repr.R2	2.3%	40%	128 bp	0.1
+Tzo-CMvi_029-Ex1-3C-lcwgs-1-1.clmp.fp2_repr.R1	5.2%	40%	141 bp	1.1
+Tzo-CMvi_029-Ex1-3C-lcwgs-1-1.clmp.fp2_repr.R2	4.5%	40%	133 bp	1.1
+Tzo-CMvi_030-Ex1-2H-lcwgs-1-1.clmp.fp2_repr.R1	4.9%	40%	141 bp	1.3
+Tzo-CMvi_030-Ex1-2H-lcwgs-1-1.clmp.fp2_repr.R2	4.1%	40%	133 bp	1.3
+Tzo-CMvi_031-Ex1-2B-lcwgs-2-1.clmp.fp2_repr.R1	4.7%	40%	139 bp	1.0
+Tzo-CMvi_031-Ex1-2B-lcwgs-2-1.clmp.fp2_repr.R2	4.3%	40%	131 bp	1.0
+Tzo-CMvi_032-Ex1-2C-lcwgs-2-1.clmp.fp2_repr.R1	5.3%	40%	138 bp	0.1
+Tzo-CMvi_032-Ex1-2C-lcwgs-2-1.clmp.fp2_repr.R2	3.5%	40%	130 bp	0.1
+Tzo-CMvi_033-Ex1-2D-lcwgs-2-1.clmp.fp2_repr.R1	2.4%	40%	125 bp	0.0
+Tzo-CMvi_033-Ex1-2D-lcwgs-2-1.clmp.fp2_repr.R2	1.5%	40%	118 bp	0.0
+Tzo-CMvi_034-Ex1-2E-lcwgs-2-1.clmp.fp2_repr.R1	0.1%	40%	101 bp	0.0
+Tzo-CMvi_034-Ex1-2E-lcwgs-2-1.clmp.fp2_repr.R2	0.1%	39%	99 bp	0.0
+Tzo-CMvi_035-Ex1-2F-lcwgs-2-1.clmp.fp2_repr.R1	4.7%	41%	142 bp	0.1
+Tzo-CMvi_035-Ex1-2F-lcwgs-2-1.clmp.fp2_repr.R2	2.6%	41%	131 bp	0.1
+Tzo-CMvi_038-Ex1-6B-lcwgs-1-1.clmp.fp2_repr.R1	4.6%	39%	139 bp	0.6
+Tzo-CMvi_038-Ex1-6B-lcwgs-1-1.clmp.fp2_repr.R2	3.7%	39%	132 bp	0.6
+Tzo-CMvi_040-Ex1-2G-lcwgs-2-1.clmp.fp2_repr.R1	0.3%	40%	103 bp	0.0
+Tzo-CMvi_040-Ex1-2G-lcwgs-2-1.clmp.fp2_repr.R2	0.1%	40%	100 bp	0.0
+Tzo-CMvi_041-Ex1-4D-lcwgs-1-1.clmp.fp2_repr.R1	4.1%	40%	137 bp	0.6
+Tzo-CMvi_041-Ex1-4D-lcwgs-1-1.clmp.fp2_repr.R2	3.5%	40%	130 bp	0.6
+Tzo-CMvi_042-Ex1-2H-lcwgs-2-1.clmp.fp2_repr.R1	4.5%	41%	141 bp	0.0
+Tzo-CMvi_042-Ex1-2H-lcwgs-2-1.clmp.fp2_repr.R2	2.3%	41%	131 bp	0.0
+Tzo-CMvi_044-Ex1-3A-lcwgs-2-1.clmp.fp2_repr.R1	5.3%	40%	140 bp	0.1
+Tzo-CMvi_044-Ex1-3A-lcwgs-2-1.clmp.fp2_repr.R2	3.0%	40%	130 bp	0.1
+Tzo-CMvi_045-Ex1-8B-lcwgs-1-1.clmp.fp2_repr.R1	5.5%	40%	143 bp	1.7
+Tzo-CMvi_045-Ex1-8B-lcwgs-1-1.clmp.fp2_repr.R2	5.0%	40%	134 bp	1.7
+Tzo-CMvi_046-Ex1-6E-lcwgs-1-1.clmp.fp2_repr.R1	5.3%	39%	139 bp	1.2
+Tzo-CMvi_046-Ex1-6E-lcwgs-1-1.clmp.fp2_repr.R2	4.6%	39%	132 bp	1.2
+Tzo-CMvi_047-Ex1-1F-lcwgs-1-1.clmp.fp2_repr.R1	4.2%	40%	134 bp	1.0
+Tzo-CMvi_047-Ex1-1F-lcwgs-1-1.clmp.fp2_repr.R2	3.7%	40%	128 bp	1.0
+Tzo-CMvi_048-Ex1-2A-lcwgs-1-1.clmp.fp2_repr.R1	4.7%	40%	139 bp	1.0
+Tzo-CMvi_048-Ex1-2A-lcwgs-1-1.clmp.fp2_repr.R2	4.1%	40%	132 bp	1.0
+Tzo-CMvi_049-Ex1-5B-lcwgs-1-1.clmp.fp2_repr.R1	4.9%	40%	141 bp	0.9
+Tzo-CMvi_049-Ex1-5B-lcwgs-1-1.clmp.fp2_repr.R2	4.3%	40%	133 bp	0.9
+Tzo-CMvi_050-Ex1-3B-lcwgs-2-1.clmp.fp2_repr.R1	3.6%	40%	131 bp	0.0
+Tzo-CMvi_050-Ex1-3B-lcwgs-2-1.clmp.fp2_repr.R2	2.0%	40%	124 bp	0.0
+Tzo-CMvi_051-Ex1-6H-lcwgs-1-1.clmp.fp2_repr.R1	4.8%	39%	139 bp	0.8
+Tzo-CMvi_051-Ex1-6H-lcwgs-1-1.clmp.fp2_repr.R2	4.0%	39%	132 bp	0.8
+Tzo-CMvi_052-Ex1-7E-lcwgs-1-1.clmp.fp2_repr.R1	4.0%	40%	138 bp	0.8
+Tzo-CMvi_052-Ex1-7E-lcwgs-1-1.clmp.fp2_repr.R2	3.4%	40%	131 bp	0.8
+Tzo-CMvi_053-Ex1-3C-lcwgs-2-1.clmp.fp2_repr.R1	2.8%	40%	127 bp	0.0
+Tzo-CMvi_053-Ex1-3C-lcwgs-2-1.clmp.fp2_repr.R2	1.3%	40%	120 bp	0.0
+Tzo-CMvi_054-Ex1-3D-lcwgs-2-1.clmp.fp2_repr.R1	5.1%	40%	138 bp	0.1
+Tzo-CMvi_054-Ex1-3D-lcwgs-2-1.clmp.fp2_repr.R2	3.3%	40%	130 bp	0.1
+Tzo-CMvi_057-Ex1-1H-lcwgs-1-1.clmp.fp2_repr.R1	4.4%	40%	137 bp	0.9
+Tzo-CMvi_057-Ex1-1H-lcwgs-1-1.clmp.fp2_repr.R2	3.9%	40%	130 bp	0.9
+Tzo-CMvi_058-Ex1-3E-lcwgs-2-1.clmp.fp2_repr.R1	4.1%	40%	139 bp	0.2
+Tzo-CMvi_058-Ex1-3E-lcwgs-2-1.clmp.fp2_repr.R2	2.7%	40%	131 bp	0.2
+Tzo-CMvi_061-Ex1-3F-lcwgs-2-1.clmp.fp2_repr.R1	5.7%	40%	143 bp	0.1
+Tzo-CMvi_061-Ex1-3F-lcwgs-2-1.clmp.fp2_repr.R2	3.1%	40%	132 bp	0.1
+Tzo-CMvi_062-Ex1-3G-lcwgs-2-1.clmp.fp2_repr.R1	4.7%	40%	140 bp	0.0
+Tzo-CMvi_062-Ex1-3G-lcwgs-2-1.clmp.fp2_repr.R2	2.5%	40%	131 bp	0.0
+Tzo-CMvi_063-Ex1-7A-lcwgs-1-1.clmp.fp2_repr.R1	4.1%	40%	138 bp	0.9
+Tzo-CMvi_063-Ex1-7A-lcwgs-1-1.clmp.fp2_repr.R2	3.5%	40%	131 bp	0.9
+Tzo-CMvi_064-Ex1-3A-lcwgs-1-1.clmp.fp2_repr.R1	5.3%	39%	141 bp	0.9
+Tzo-CMvi_064-Ex1-3A-lcwgs-1-1.clmp.fp2_repr.R2	4.6%	39%	132 bp	0.9
+Tzo-CMvi_065-Ex1-1E-lcwgs-1-1.clmp.fp2_repr.R1	4.0%	39%	136 bp	0.7
+Tzo-CMvi_065-Ex1-1E-lcwgs-1-1.clmp.fp2_repr.R2	3.3%	39%	129 bp	0.7
+Tzo-CMvi_066-Ex1-5F-lcwgs-1-1.clmp.fp2_repr.R1	5.0%	40%	141 bp	0.9
+Tzo-CMvi_066-Ex1-5F-lcwgs-1-1.clmp.fp2_repr.R2	4.3%	40%	133 bp	0.9
+Tzo-CMvi_067-Ex1-6A-lcwgs-1-1.clmp.fp2_repr.R1	5.5%	40%	140 bp	2.2
+Tzo-CMvi_067-Ex1-6A-lcwgs-1-1.clmp.fp2_repr.R2	5.0%	40%	133 bp	2.2
+Tzo-CMvi_068-Ex1-6F-lcwgs-1-1.clmp.fp2_repr.R1	4.8%	39%	138 bp	0.6
+Tzo-CMvi_068-Ex1-6F-lcwgs-1-1.clmp.fp2_repr.R2	3.7%	39%	131 bp	0.6
+Tzo-CMvi_069-Ex1-7G-lcwgs-1-1.clmp.fp2_repr.R1	4.3%	40%	138 bp	1.2
+Tzo-CMvi_069-Ex1-7G-lcwgs-1-1.clmp.fp2_repr.R2	4.0%	40%	131 bp	1.2
+Tzo-CMvi_070-Ex1-3H-lcwgs-2-1.clmp.fp2_repr.R1	0.1%	39%	102 bp	0.0
+Tzo-CMvi_070-Ex1-3H-lcwgs-2-1.clmp.fp2_repr.R2	0.0%	39%	98 bp	0.0
+Tzo-CMvi_071-Ex1-4A-lcwgs-2-1.clmp.fp2_repr.R1	4.3%	40%	134 bp	0.0
+Tzo-CMvi_071-Ex1-4A-lcwgs-2-1.clmp.fp2_repr.R2	2.4%	40%	126 bp	0.0
+Tzo-CMvi_075-Ex1-3D-lcwgs-1-1.clmp.fp2_repr.R1	5.2%	40%	142 bp	1.2
+Tzo-CMvi_075-Ex1-3D-lcwgs-1-1.clmp.fp2_repr.R2	4.5%	39%	133 bp	1.2
+Tzo-CMvi_076-Ex1-5A-lcwgs-1-1.clmp.fp2_repr.R1	5.1%	40%	141 bp	1.1
+Tzo-CMvi_076-Ex1-5A-lcwgs-1-1.clmp.fp2_repr.R2	4.6%	40%	133 bp	1.1
+Tzo-CMvi_077-Ex1-6D-lcwgs-1-1.clmp.fp2_repr.R1	5.6%	39%	141 bp	1.4
+Tzo-CMvi_077-Ex1-6D-lcwgs-1-1.clmp.fp2_repr.R2	4.8%	39%	133 bp	1.4
+Tzo-CMvi_078-Ex1-4B-lcwgs-2-1.clmp.fp2_repr.R1	4.3%	40%	139 bp	0.3
+Tzo-CMvi_078-Ex1-4B-lcwgs-2-1.clmp.fp2_repr.R2	3.0%	40%	131 bp	0.3
+Tzo-CMvi_079-Ex1-7C-lcwgs-1-1.clmp.fp2_repr.R1	5.1%	40%	140 bp	0.5
+Tzo-CMvi_079-Ex1-7C-lcwgs-1-1.clmp.fp2_repr.R2	4.4%	40%	132 bp	0.5
+Tzo-CMvi_080-Ex1-4C-lcwgs-2-1.clmp.fp2_repr.R1	5.6%	40%	139 bp	0.1
+Tzo-CMvi_080-Ex1-4C-lcwgs-2-1.clmp.fp2_repr.R2	3.5%	40%	131 bp	0.1
+Tzo-CMvi_081-Ex1-4D-lcwgs-2-1.clmp.fp2_repr.R1	6.1%	40%	138 bp	0.2
+Tzo-CMvi_081-Ex1-4D-lcwgs-2-1.clmp.fp2_repr.R2	4.0%	40%	130 bp	0.2
+Tzo-CMvi_082-Ex1-6C-lcwgs-1-1.clmp.fp2_repr.R1	5.1%	39%	140 bp	1.3
+Tzo-CMvi_082-Ex1-6C-lcwgs-1-1.clmp.fp2_repr.R2	4.3%	39%	132 bp	1.3
+Tzo-CMvi_083-Ex1-4E-lcwgs-2-1.clmp.fp2_repr.R1	4.5%	40%	130 bp	0.1
+Tzo-CMvi_083-Ex1-4E-lcwgs-2-1.clmp.fp2_repr.R2	2.9%	40%	124 bp	0.1
+Tzo-CMvi_087-Ex1-2D-lcwgs-1-1.clmp.fp2_repr.R1	5.0%	40%	142 bp	0.9
+Tzo-CMvi_087-Ex1-2D-lcwgs-1-1.clmp.fp2_repr.R2	4.4%	40%	133 bp	0.9
+Tzo-CMvi_088-Ex1-4F-lcwgs-2-1.clmp.fp2_repr.R1	5.2%	40%	141 bp	0.1
+Tzo-CMvi_088-Ex1-4F-lcwgs-2-1.clmp.fp2_repr.R2	2.9%	40%	131 bp	0.1
+Tzo-CMvi_089-Ex1-5D-lcwgs-1-1.clmp.fp2_repr.R1	5.5%	39%	140 bp	3.0
+Tzo-CMvi_089-Ex1-5D-lcwgs-1-1.clmp.fp2_repr.R2	5.2%	39%	132 bp	3.0
+Tzo-CMvi_090-Ex1-3F-lcwgs-1-1.clmp.fp2_repr.R1	3.9%	39%	131 bp	0.8
+Tzo-CMvi_090-Ex1-3F-lcwgs-1-1.clmp.fp2_repr.R2	3.2%	39%	125 bp	0.8
+Tzo-CMvi_091-Ex1-2C-lcwgs-1-1.clmp.fp2_repr.R1	5.8%	40%	142 bp	1.4
+Tzo-CMvi_091-Ex1-2C-lcwgs-1-1.clmp.fp2_repr.R2	5.5%	40%	133 bp	1.4
+Tzo-CMvi_092-Ex1-4G-lcwgs-2-1.clmp.fp2_repr.R1	4.9%	40%	140 bp	0.1
+Tzo-CMvi_092-Ex1-4G-lcwgs-2-1.clmp.fp2_repr.R2	2.7%	40%	131 bp	0.1
+Tzo-CMvi_093-Ex1-4H-lcwgs-2-1.clmp.fp2_repr.R1	3.8%	39%	136 bp	0.0
+Tzo-CMvi_093-Ex1-4H-lcwgs-2-1.clmp.fp2_repr.R2	2.2%	39%	128 bp	0.0
+Tzo-CMvi_094-Ex1-8C-lcwgs-1-1.clmp.fp2_repr.R1	5.4%	40%	141 bp	2.4
+Tzo-CMvi_094-Ex1-8C-lcwgs-1-1.clmp.fp2_repr.R2	5.1%	40%	133 bp	2.4
 ```
 
 </p>
 </details>
 
 ## 14. Clean Up
-TBD
+```bash
+mkdir logs
+mv *out logs/
+```

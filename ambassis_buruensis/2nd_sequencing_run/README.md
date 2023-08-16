@@ -84,3 +84,63 @@ First trim.
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_1st_trim.sbatch fq_raw fq_fp1 
 
 ```
+
+Results:
+* lower duplication, still one Albatross and one Contemporary with high rates
+* GC content much better!
+* high proportion of adapter-trimmed reads for Albatross but large majority passed filter
+
+Clumpify - ran into errors with original settings. May have run out of space on scratch - was also trying to run Abu and Goy simultaneously. Trying just Abu with 40 cores.
+
+```
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1 fq_fp1_clmp /scratch/breid 40
+```
+
+Still had jobs that had errors and weren't terminating (even though checkClumpify script reported no errors). Running the files that failed a second time.
+
+```
+mkdir fq_fp1_clumprpt
+cp fq_fp1/Abu-APnd_017-Ex1-6E-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt
+cp fq_fp1/Abu-APnd_029-Ex1-8A-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt
+cp fq_fp1/Abu-CPnd_038-Ex1-7B-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt
+cp fq_fp1/Abu-CPnd_074-Ex1-6B-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt
+cp fq_fp1/Abu-CPnd_085-Ex1-3E-lcwgs-1-2.r1.fq.gz fq_fp1_clumprpt
+
+rm fq_fp1_clmp/Abu-APnd_017*
+rm fq_fp1_clmp/Abu-APnd_029*
+rm fq_fp1_clmp/Abu-CPnd_038*
+rm fq_fp1_clmp/Abu-CPnd_074*
+rm fq_fp1_clmp/Abu-CPnd_085*
+
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1_clumprpt fq_fp1_clmp /scratch/breid 40
+```
+
+Redoing a few with different errors.
+
+```
+mkdir fq_fp1_clumprpt2
+
+cp fq_fp1/Abu-APnd_018-Ex1-6F-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt2
+cp fq_fp1/Abu-APnd_028-Ex1-7H-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt2
+cp fq_fp1/Abu-CPnd_053-Ex1-5G-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt2
+cp fq_fp1/Abu-CPnd_059-Ex1-6C-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt2
+cp fq_fp1/Abu-CPnd_060-Ex1-8C-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt2
+
+rm fq_fp1_clmp/Abu-APnd_018*
+rm fq_fp1_clmp/Abu-APnd_028*
+rm fq_fp1_clmp/Abu-CPnd_053*
+rm fq_fp1_clmp/Abu-CPnd_059*
+rm fq_fp1_clmp/Abu-CPnd_060*
+
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1_clumprpt2 fq_fp1_clmp /scratch/breid 40
+```
+
+All look good now!
+
+Second trim.
+
+```
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_2.sbatch fq_fp1_clmp fq_fp1_clmp_fp2 33
+
+```
+

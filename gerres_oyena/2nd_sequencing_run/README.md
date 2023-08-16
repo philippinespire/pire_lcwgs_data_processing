@@ -101,5 +101,85 @@ First trim.
 ```
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_1st_trim.sbatch fq_raw fq_fp1 
 ```
+
+Results:
+* much lower duplication overall
+* GC content lower - contemporary higher than Albatross on avg!
+* high % adapter-trimmed reads in Albatross, but most (usually >90%) passed filter
+
+Clumpify.
+
+```
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1 fq_fp1_clmp /scratch/breid 40
 ```
 
+Still had jobs that had errors and weren't terminating (even though checkClumpify script reported no errors). Running the files that failed a second time.
+
+```
+mkdir fq_fp1_clumprpt
+cp fq_fp1/Goy-APnd_033-Ex1-5A-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt
+cp fq_fp1/Goy-APnd_037-Ex1-5E-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt
+cp fq_fp1/Goy-APnd_048-Ex1-6H-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt
+cp fq_fp1/Goy-CPnd_008-Ex1-4B-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt
+cp fq_fp1/Goy-CPnd_071-Ex1-3E-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt
+
+rm fq_fp1_clmp/Goy-APnd_033*
+rm fq_fp1_clmp/Goy-APnd_037*
+rm fq_fp1_clmp/Goy-APnd_088*
+rm fq_fp1_clmp/Goy-CPnd_008*
+rm fq_fp1_clmp/Goy-CPnd_071*
+
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1_clumprpt fq_fp1_clmp /scratch/breid 40
+```
+
+Repeat one more where the job did not terminate.
+
+```
+mkdir fq_fp1_clumprpt2
+cp fq_fp1_clumprpt/Goy-APnd_037-Ex1-5E-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt2
+
+rm fq_fp1_clmp/Goy-APnd_037*
+
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1_clumprpt2 fq_fp1_clmp /scratch/breid 40
+```
+
+Repeat more that had different errors.
+
+```
+mkdir fq_fp1_clumprpt2
+cp fq_fp1/Goy-APnd_006-Ex1-1F-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt2
+cp fq_fp1/Goy-APnd_011-Ex1-2C-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt2
+cp fq_fp1/Goy-APnd_012-Ex1-2D-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt2
+cp fq_fp1/Goy-APnd_016-Ex1-2H-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt2
+cp fq_fp1/Goy-APnd_017-Ex1-3A-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt2
+cp fq_fp1/Goy-APnd_030-Ex1-4F-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt2
+cp fq_fp1/Goy-APnd_035-Ex1-5C-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt2
+cp fq_fp1/Goy-APnd_046-Ex1-6F-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt2
+cp fq_fp1/Goy-APnd_048-Ex1-6H-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt2
+cp fq_fp1/Goy-CPnd_053-Ex1-2E-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt2
+cp fq_fp1/Goy-CPnd_068-Ex1-2E-lcwgs-1-2.r*.fq.gz fq_fp1_clumprpt2
+
+rm fq_fp1_clmp/Goy-APnd_006*
+rm fq_fp1_clmp/Goy-APnd_011*
+rm fq_fp1_clmp/Goy-APnd_012*
+rm fq_fp1_clmp/Goy-APnd_016*
+rm fq_fp1_clmp/Goy-APnd_017*
+rm fq_fp1_clmp/Goy-APnd_030*
+rm fq_fp1_clmp/Goy-APnd_035*
+rm fq_fp1_clmp/Goy-APnd_046*
+rm fq_fp1_clmp/Goy-APnd_048*
+
+rm fq_fp1_clmp/Goy-CPnd_053*
+rm fq_fp1_clmp/Goy-CPnd_068*
+
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1_clumprpt fq_fp1_clmp /scratch/breid 40
+```
+
+All look good now!
+
+Second trim.
+
+```
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_2.sbatch fq_fp1_clmp fq_fp1_clmp_fp2 33
+
+```

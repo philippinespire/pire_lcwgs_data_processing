@@ -141,6 +141,16 @@ Second trim.
 
 ```
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_2.sbatch fq_fp1_clmp fq_fp1_clmp_fp2 33
-
 ```
 
+Summary:
+* Duplication mostly <2% now, but two individuals (APnd010 + CPnd085) >10% still.
+* GC content is on average higher for contemporary individuals (Albatross mostly ~37-40%, contemp 43-46%), but decent amount of variation within those two categories.
+* Longer inserts for contemp.
+* Looking pretty good otherwise (>99% PF, almost all <2% adapter).
+
+Decontaminate.
+
+```
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2 fq_fp1_clmp_fp2_fqscrn 20
+```

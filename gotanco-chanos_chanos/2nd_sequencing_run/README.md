@@ -560,15 +560,24 @@ Rerun clumpify on fq_fp1_stragglers. KL 2023-08-13/14
 - It looks like my disk space has been used up by my scratch directory. I have to clear this one first. In the meantime, I had LWeeks push Gotanco stragglers. 
 - Ask Eric for help on clearing the scratch directory.
 
+Problems on memory and scratch directory
+- Run clumpify on turing using a himem node. CBird and KL. 2023-08-16
 
-
-
+```
+# Do in Turing
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array2.bash fq_fp1_stragglers_sub fq_fp1_clmp_stragglers /scratch-lustre/hpc-0289 1 32 350g himem
+# Move all output to fq_fp1_clmp directory, and then clean-up work directory 
+```
 
 
 ### 9b. Check duplicate removal success.
 Due to previous issues woking in R, I ran `module load container_env R/4.2` instead of `module load container_env mapdamage2`. 
 
 `Clumpify Successfully worked on al samples" LW 2023-07-13
+
+
+Cannot recover all the outfiles from this round of clumpify due to all the reruns made. I did however look at the files using `checkFQ.sh` to see if they are still correctly formatted as fq.gz. KL 2023-08-16
+
 
 ### 9c. Generate metadata on deduplicated FASTQ files.
 Running `runMULTIQC.sbatch`. LW 2023-07-13
@@ -582,8 +591,22 @@ Insert output here.
 </p>
 </details>
 
+Run MultiQC on fq_fp1_clmp. KL 2023-08-16
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco_chanos-chanos/2nd_sequencing_run
+
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1_clmp" "fqc_clmp_report"  "fq.gz"
+```
+
 ## 10. Second trim.
 Ran `runFASTP_2_cssl.sbatch`. LW 2023-07-13
+
+Run second trim. Save in a temp directory in case something goes wrong and I don't want to overwrite the previous result just yet.  KL 2023-08-16
+```
+mkdir fq_fp1_clmp_fp2_kl
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_2.sbatch fq_fp1_clmp fq_fp1_clmp_fp2_kl 33
+```
+
 
 <details><summary>Expand for MultiQC Output.</summary>
 

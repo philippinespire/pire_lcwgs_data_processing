@@ -594,7 +594,6 @@ Insert output here.
 Run MultiQC on fq_fp1_clmp. KL 2023-08-16
 ```
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco_chanos-chanos/2nd_sequencing_run
-
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1_clmp" "fqc_clmp_report"  "fq.gz"
 ```
 
@@ -930,22 +929,28 @@ Run fqscrn on concatenated data files. KL 2023-08-17
 
 ```
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run
-
 bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2 fq_fp1_clmp_fp2_fqscrn_kl 20
 ```
 
 - first run finished on 2023-08-19, but I get 79 stragglers (i.e., no reads, input/output error)
 - figure out what those are, put them in a straggler directory, and then rerun
 
-Rerun stragglers. 2023-08-19
+Rerun stragglers. KL 2023-08-19
 
 ```
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run
-
-bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2 fq_fp1_clmp_fp2_fqscrn_kl 20
-
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2_stragglers fq_fp1_clmp_fp2_fqscrn_kl 20
 ```
 - job ID: 2128024
+- second run cancelled on 2023-08-19. 51 stragglers remain.
+
+Reorganize straggler directory and rerun stragglers. Use fewer nodes this time. KL 2023-08-19
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2_stragglers fq_fp1_clmp_fp2_fqscrn_kl 5
+```
+- job ID: 2129654
 
 <details><summary>Expand for MultiQC Output.</summary>
 

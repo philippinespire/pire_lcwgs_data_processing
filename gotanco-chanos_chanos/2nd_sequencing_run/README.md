@@ -942,7 +942,7 @@ cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/
 bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2_stragglers fq_fp1_clmp_fp2_fqscrn_kl 20
 ```
 - job ID: 2128024
-- second run cancelled on 2023-08-19. 51 stragglers remain.
+- second run cancelled on 2023-08-19; 52 stragglers remain.
 
 Reorganize straggler directory and rerun stragglers. Use fewer nodes this time. KL 2023-08-19
 
@@ -951,6 +951,15 @@ cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/
 bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2_stragglers fq_fp1_clmp_fp2_fqscrn_kl 5
 ```
 - job ID: 2129654
+- third run finished; 46 stragglers remain; consider running on himem for, but for now, consider using 1 node and see what happens. 
+
+Reorganize straggler directory and rerun stragglers. Use a single node and check progress. KL 2023-08-20
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2_stragglers fq_fp1_clmp_fp2_fqscrn_kl 1
+```
+
 
 <details><summary>Expand for MultiQC Output.</summary>
 

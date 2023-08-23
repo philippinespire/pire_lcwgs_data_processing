@@ -960,6 +960,27 @@ cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/
 bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2_stragglers fq_fp1_clmp_fp2_fqscrn_kl 1
 ```
 
+```
+# Run on turing
+# Copy script to working directory and change partition from main to himem. Rename script afterwards.
+
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run
+bash ./runFQSCRN_6-himem.bash fq_fp1_clmp_fp2_stragglers fq_fp1_clmp_fp2_fqscrn_kl 5
+
+```
+- job ID: 10535715
+- finished with 41 stragglers remaining; raise the problem again with CBird
+
+Reorganize, rerun. 2023-08-22
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run
+bash ./runFQSCRN_6-himem.bash fq_fp1_clmp_fp2_stragglers fq_fp1_clmp_fp2_fqscrn 5
+
+```
+- job ID: 10536824
+
+
 
 <details><summary>Expand for MultiQC Output.</summary>
 

@@ -979,10 +979,47 @@ bash ./runFQSCRN_6-himem.bash fq_fp1_clmp_fp2_stragglers fq_fp1_clmp_fp2_fqscrn 
 
 ```
 - job ID: 10536824
+- job failed; rerun using CBird's solution, that is to use /scratch/hpc-0289/ as the output directory.
+
+Rerun straggler directory. 2023-08-22
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run
+
+bash # only run if not already in bash
+
+fqScrnPATH=/home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash
+indir=fq_fp1_clmp_fp2
+outdir=/scratch/hpc-0289/fq_fp1_clmp_fp2_fqscrn
+nodes=20
+
+bash $fqScrnPATH $indir $outdir $nodes
+```
+- job ID: 2141391
+- job failed; we are still running out of disk space
+- follow Min's directions next run
+
+Do fqscrn with Min's revised script. 2023-08-25
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run
+
+# Purge scratch directory
+rm -r /scratch/hpc-0289/fq_fp1_clmp_fp2_fqscrn
+
+# Create a directory to test min's script
+mkdir fq_fp1_clmp_fp2_stragglers_min-test
+
+# Move several files to the test directory
+mv fq_fp1_clmp_fp2_stragglers/*CC*.fq.gz fq_fp1_clmp_fp2_stragglers_min-test
+# Total input file size: 51 Gb (6 files) 
+
+# Copy runFQSCRN_6.bash, change file name to runFQSCRN_6-min.bash, then edit the script to redirect the sbatch to /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6_min.sbatch
+
+# Run using scratch as the output directory:
+bash ./runFQSCRN_6-min.bash fq_fp1_clmp_fp2_stragglers_min-test /scratch/hpc-0289/fq_fp1_clmp_fp2_fqscrn 6
+```
 
 
-
-<details><summary>Expand for MultiQC Output.</summary>
+<summary>Expand for MultiQC Output.</summary>
 
 ```bash
 insert multiqc output here

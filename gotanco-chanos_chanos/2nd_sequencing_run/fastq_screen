@@ -3,7 +3,7 @@
 use warnings;
 use strict;
 use Getopt::Long;
-use FindBin qw($RealBin);
+#use FindBin qw($RealBin);
 use File::Copy;
 use File::Spec;
 use File::Basename;
@@ -14,6 +14,8 @@ use Data::Dumper;
 
 
 our $VERSION = "0.14.0";
+
+our $RealBin = "/opt/conda/share/fastq-screen-0.14.0-1/";
 
 ###########################################################################
 ###########################################################################

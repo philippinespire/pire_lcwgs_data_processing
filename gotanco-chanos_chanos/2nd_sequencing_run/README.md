@@ -1017,6 +1017,22 @@ mv fq_fp1_clmp_fp2_stragglers/*CC*.fq.gz fq_fp1_clmp_fp2_stragglers_min-test
 # Run using scratch as the output directory:
 bash ./runFQSCRN_6-min.bash fq_fp1_clmp_fp2_stragglers_min-test /scratch/hpc-0289/fq_fp1_clmp_fp2_fqscrn 6
 ```
+- job ID: 2148026
+- job finished, but with two issues:
+	1. the *screen.html files were not generated
+	2. the output *fastq files were not zipped
+
+- Chris instructed to proceed doing the fastq_screen with the remaining samples, and just manually zip the output.
+- Prepare a .sbatch script to zip the fastq files.
+
+
+Run fqscrn on the remaining 35 stragglers
+
+```
+bash ./runFQSCRN_6-min.bash fq_fp1_clmp_fp2_straggler /scratch/hpc-0289/fq_fp1_clmp_fp2_fqscrn_2 20
+```
+- job ID: 2149416
+
 
 
 <summary>Expand for MultiQC Output.</summary>

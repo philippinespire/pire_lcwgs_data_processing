@@ -1018,12 +1018,24 @@ mv fq_fp1_clmp_fp2_stragglers/*CC*.fq.gz fq_fp1_clmp_fp2_stragglers_min-test
 bash ./runFQSCRN_6-min.bash fq_fp1_clmp_fp2_stragglers_min-test /scratch/hpc-0289/fq_fp1_clmp_fp2_fqscrn 6
 ```
 - job ID: 2148026
-- job finished, but with two issues:
+- job finished, but with several issues
 	1. the *screen.html files were not generated
 	2. the output *fastq files were not zipped
 
+### Notes on this run ###
+I ran Min's `runFQSCRN_6_min.sbatch` for a subset of the straggler files (6 of 41). Here are some notes on this run:
+
+- Input file size (*fp2): 51 Gb
+- Output file size (*fqscrn; directed at scratch directory):  534 Gb
+- Output files did not have (1) *screen.html files and (2) were not compressed (i.e., I got *fastq instead of *fastq.gz.) 
+
+If I understood correctly the conversation with Min, the changes in the output files were because of his modified script.
+######
+
+
 - Chris instructed to proceed doing the fastq_screen with the remaining samples, and just manually zip the output.
 - Prepare a .sbatch script to zip the fastq files.
+	- Compression worked. Both input *fastq and output *fastq.gz had the correct fastq format and had equal line numbers.
 
 
 Run fqscrn on the remaining 35 stragglers
@@ -1032,7 +1044,10 @@ Run fqscrn on the remaining 35 stragglers
 bash ./runFQSCRN_6-min.bash fq_fp1_clmp_fp2_straggler /scratch/hpc-0289/fq_fp1_clmp_fp2_fqscrn_2 20
 ```
 - job ID: 2149416
-
+- Min's updated script produced the correct number of output files (*screen.html, *screen.txt, *screen.png, *tagged.fastq, *tagged_filter.fastq)
+- The *fastq files were still not compressed. I will manually compress them similar to what I did in the previous run.
+- I still ran out of disk space; my scratch directory is now at 2.5 Tb. 
+- There are 8 stragglers remaining. I will rerun them once all the files from the scratch directory have been compressed and transferred to the gotanco working directory, and after I clear my scratch directory.
 
 
 <summary>Expand for MultiQC Output.</summary>

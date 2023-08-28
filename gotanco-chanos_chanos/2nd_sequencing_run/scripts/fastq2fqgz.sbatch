@@ -13,23 +13,17 @@ INDIR=$1
 #Output directory
 OUTDIR=$2
 
+#No. of parallel jobs
+NUM_JOBS=$3
 
-# Check if output directory exists, create if not.
-if [ ! -d ${OUTDIR} ]; then
-	mkdir -p ${OUTDIR}
-fi
+export SINGULARITY_BIND=/home/e1garcia
 
-# Loop through each FASTQ file in the input directory
-for fastq_file in "$INDIR"/*.fastq; do
 
-	# Get the filename without the path
-	filename=$(basename "$fastq_file")
+find "$INDIR" -name '*.fastq' | \
+	parallel -j "$3" --no-notice "gzip {} && mv {}.gz $OUTDIR"
 
-	# Compress the FASTQ file and save it to the output directory
-	gzip -c "$fastq_file" > "$OUTDIR/${filename%.fastq}.fastq.gz"
-done
 
-echo "Compression complete."
+
 
 
 

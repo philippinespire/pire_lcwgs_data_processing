@@ -1049,6 +1049,12 @@ bash ./runFQSCRN_6-min.bash fq_fp1_clmp_fp2_straggler /scratch/hpc-0289/fq_fp1_c
 - I still ran out of disk space; my scratch directory is now at 2.5 Tb. 
 - There are 8 stragglers remaining. I will rerun them once all the files from the scratch directory have been compressed and transferred to the gotanco working directory, and after I clear my scratch directory.
 
+The for loop script I wrote is taking too long (20 files in 22 h). I modified the script allowing for parallel runs.
+- Run compression in parallel.
+- With how the script works, compression is done within the scratch directory, and then the resulting *fastq.gz files are moved to the working directory. Since my scratch is nearly full, I can only did 8 at a time to allow for sufficient space during the process.
+
+
+
 
 <summary>Expand for MultiQC Output.</summary>
 

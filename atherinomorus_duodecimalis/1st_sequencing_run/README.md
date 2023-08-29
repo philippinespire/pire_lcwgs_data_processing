@@ -4151,7 +4151,7 @@ Adu-CTaw_096-Ex1-8A-lcwgs-1-1	1.8%	44.1%	96.4%	51.6%
 ## 9. Remove duplicates with clumpify.
 
 ### 9a. Remove duplicates.
-TBD
+`bash ../../../pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1 fq_fp1_clmp /scratch/hpc-0351 20`
 
 ### 9b. Check duplicate removal success.
 TBD

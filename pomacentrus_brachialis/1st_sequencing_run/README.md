@@ -1395,7 +1395,343 @@ Pba-CVer_096-Ex1-11B-lcwgs-1-1.2	18.6%	54%	0.8
 <details><summary>Expand for MultiQC Output.</summary>
 
 ```bash
-TBD
+Sample Name	% Duplication	GC content	% PF	% Adapter
+Pba-ABir_001-Ex1-7H-lcwgs-1-1	9.9%	41.6%	69.9%	76.7%
+Pba-ABir_002-Ex1-8H-lcwgs-1-1	10.7%	35.2%	95.2%	70.8%
+Pba-ABir_003-Ex1-9H-lcwgs-1-1	10.2%	41.7%	81.1%	70.5%
+Pba-ABir_004-Ex1-10H-lcwgs-1-1	9.6%	36.9%	83.2%	72.7%
+Pba-ABir_005-Ex1-11H-lcwgs-1-1	9.5%	41.4%	85.2%	76.5%
+Pba-ABir_006-Ex1-12H-lcwgs-1-1	11.3%	40.2%	90.3%	53.1%
+Pba-ABir_007-Ex1-5B-lcwgs-1-1	12.1%	42.9%	93.7%	64.3%
+Pba-ABir_009-Ex1-5D-lcwgs-1-1	10.9%	37.1%	94.7%	85.7%
+Pba-ABir_010-Ex1-5E-lcwgs-1-1	12.2%	35.6%	92.9%	80.2%
+Pba-ABir_011-Ex1-5F-lcwgs-1-1	11.6%	38.5%	93.0%	83.7%
+Pba-ABir_012-Ex1-5G-lcwgs-1-1	12.4%	42.2%	92.3%	79.0%
+Pba-ABir_013-Ex1-5H-lcwgs-1-1	10.1%	40.8%	93.0%	81.5%
+Pba-ABir_014-Ex1-6A-lcwgs-1-1	13.5%	35.1%	93.3%	87.7%
+Pba-ABur_001-Ex1-1A-lcwgs-1-1	9.9%	36.5%	95.4%	71.1%
+Pba-ABur_002-Ex1-2A-lcwgs-1-1	10.8%	39.5%	96.0%	77.6%
+Pba-ABur_003-Ex1-3A-lcwgs-1-1	11.2%	37.9%	96.0%	80.8%
+Pba-ABur_004-Ex1-4A-lcwgs-1-1	10.2%	36.6%	96.5%	75.9%
+Pba-ABur_005-Ex1-5A-lcwgs-1-1	12.4%	43.9%	94.1%	59.8%
+Pba-ABur_006-Ex1-6A-lcwgs-1-1	10.2%	37.8%	96.2%	75.4%
+Pba-ABur_007-Ex1-7A-lcwgs-1-1	10.1%	40.1%	95.0%	80.0%
+Pba-ABur_008-Ex1-8A-lcwgs-1-1	11.6%	38.9%	93.5%	72.8%
+Pba-ABur_009-Ex1-9A-lcwgs-1-1	10.2%	36.8%	94.2%	82.9%
+Pba-ABur_010-Ex1-10A-lcwgs-1-1	10.4%	42.3%	93.0%	70.2%
+Pba-ABur_011-Ex1-11A-lcwgs-1-1	12.1%	38.2%	95.7%	70.1%
+Pba-ABur_012-Ex1-12A-lcwgs-1-1	12.0%	35.1%	93.3%	79.0%
+Pba-ABur_013-Ex1-1B-lcwgs-1-1	10.6%	37.9%	96.4%	80.6%
+Pba-ABur_014-Ex1-2B-lcwgs-1-1	9.8%	38.3%	95.3%	73.7%
+Pba-ABur_015-Ex1-3B-lcwgs-1-1	12.2%	39.1%	95.9%	74.5%
+Pba-ABur_016-Ex1-4B-lcwgs-1-1	10.5%	37.9%	95.4%	71.1%
+Pba-ABur_017-Ex1-5B-lcwgs-1-1	10.9%	39.7%	94.3%	76.6%
+Pba-ABur_018-Ex1-6B-lcwgs-1-1	9.3%	40.1%	95.1%	70.9%
+Pba-ABur_019-Ex1-7B-lcwgs-1-1	9.7%	37.7%	94.6%	69.2%
+Pba-ABur_020-Ex1-8B-lcwgs-1-1	10.5%	40.5%	95.1%	77.2%
+Pba-ABur_021-Ex1-9B-lcwgs-1-1	10.3%	36.3%	90.1%	82.4%
+Pba-ABur_022-Ex1-10B-lcwgs-1-1	9.8%	38.5%	93.0%	81.6%
+Pba-ABur_023-Ex1-11B-lcwgs-1-1	10.2%	39.9%	87.9%	76.8%
+Pba-ABur_024-Ex1-12B-lcwgs-1-1	11.6%	36.8%	94.0%	70.5%
+Pba-ABur_025-Ex1-1C-lcwgs-1-1	12.5%	39.1%	96.5%	79.1%
+Pba-ABur_026-Ex1-2C-lcwgs-1-1	10.3%	38.7%	95.8%	80.5%
+Pba-ABur_027-Ex1-3C-lcwgs-1-1	11.4%	40.2%	95.0%	75.2%
+Pba-ABur_028-Ex1-4C-lcwgs-1-1	10.8%	41.3%	95.9%	71.2%
+Pba-ABur_029-Ex1-5C-lcwgs-1-1	10.8%	40.6%	95.1%	62.9%
+Pba-ABur_030-Ex1-6C-lcwgs-1-1	10.1%	38.8%	95.2%	64.4%
+Pba-ABur_031-Ex1-7C-lcwgs-1-1	10.6%	36.9%	94.1%	79.7%
+Pba-ABur_032-Ex1-8C-lcwgs-1-1	10.1%	38.7%	96.7%	84.4%
+Pba-ABur_033-Ex1-9C-lcwgs-1-1	8.5%	37.8%	90.4%	73.5%
+Pba-ABur_034-Ex1-10C-lcwgs-1-1	10.4%	38.6%	95.3%	78.8%
+Pba-ABur_036-Ex1-11C-lcwgs-1-1	9.7%	37.2%	82.5%	73.6%
+Pba-ABur_037-Ex1-12C-lcwgs-1-1	10.5%	39.9%	92.9%	82.1%
+Pba-ABur_038-Ex1-1D-lcwgs-1-1	10.0%	39.1%	96.2%	81.8%
+Pba-ABur_039-Ex1-2D-lcwgs-1-1	9.7%	39.6%	95.0%	83.4%
+Pba-ABur_040-Ex1-3D-lcwgs-1-1	10.3%	40.5%	95.6%	79.0%
+Pba-ABur_041-Ex1-4D-lcwgs-1-1	9.3%	40.2%	95.5%	83.6%
+Pba-ABur_042-Ex1-5D-lcwgs-1-1	10.1%	39.5%	95.6%	75.8%
+Pba-ABur_043-Ex1-6D-lcwgs-1-1	9.5%	38.9%	96.4%	79.1%
+Pba-ABur_044-Ex1-7D-lcwgs-1-1	10.3%	38.1%	84.5%	81.3%
+Pba-ABur_045-Ex1-8D-lcwgs-1-1	9.9%	38.7%	96.7%	86.4%
+Pba-ABur_046-Ex1-9D-lcwgs-1-1	10.4%	36.5%	92.1%	73.4%
+Pba-ABur_047-Ex1-10D-lcwgs-1-1	8.2%	38.8%	81.4%	85.8%
+Pba-ABur_048-Ex1-11D-lcwgs-1-1	9.8%	39.5%	50.7%	85.1%
+Pba-ABur_049-Ex1-12D-lcwgs-1-1	11.0%	39.7%	95.0%	75.3%
+Pba-ABur_050-Ex1-1E-lcwgs-1-1	8.1%	40.8%	94.1%	84.7%
+Pba-ABur_051-Ex1-2E-lcwgs-1-1	10.6%	38.8%	95.6%	86.2%
+Pba-ABur_052-Ex1-3E-lcwgs-1-1	11.6%	34.8%	91.5%	81.5%
+Pba-ABur_053-Ex1-4E-lcwgs-1-1	10.4%	36.8%	93.5%	83.9%
+Pba-ABur_054-Ex1-5E-lcwgs-1-1	10.7%	38.8%	94.2%	78.6%
+Pba-ABur_055-Ex1-6E-lcwgs-1-1	10.0%	37.5%	95.3%	79.4%
+Pba-ABur_056-Ex1-7E-lcwgs-1-1	11.4%	39.5%	93.4%	78.2%
+Pba-ABur_057-Ex1-8E-lcwgs-1-1	11.0%	38.9%	95.6%	73.4%
+Pba-AGal_001-Ex1-8G-lcwgs-1-1	9.6%	41.5%	92.1%	83.5%
+Pba-AGal_001-Ex1-8H-lcwgs-1-1	9.9%	40.8%	92.6%	87.0%
+Pba-AGal_002-Ex1-9A-lcwgs-1-1	11.6%	42.0%	94.5%	90.6%
+Pba-AGal_003-Ex1-9B-lcwgs-1-1	10.7%	40.6%	92.1%	85.2%
+Pba-AGal_004-Ex1-10G-lcwgs-1-1	9.2%	41.5%	89.5%	90.0%
+Pba-AGal_005-Ex1-9D-lcwgs-1-1	9.8%	40.1%	88.7%	89.9%
+Pba-AGal_006-Ex1-9E-lcwgs-1-1	10.6%	37.4%	96.1%	87.1%
+Pba-AGal_007-Ex1-9F-lcwgs-1-1	9.7%	38.0%	97.0%	90.3%
+Pba-AGal_008-Ex1-9G-lcwgs-1-1	10.1%	44.6%	94.4%	98.0%
+Pba-AGal_009-Ex1-9H-lcwgs-1-1	10.0%	41.1%	94.9%	88.9%
+Pba-AGal_010-Ex1-10A-lcwgs-1-1	10.6%	37.3%	91.6%	87.3%
+Pba-AGal_011-Ex1-10B-lcwgs-1-1	10.0%	40.3%	92.1%	93.0%
+Pba-AGal_013-Ex1-10C-lcwgs-1-1	9.6%	42.9%	90.6%	91.8%
+Pba-AGal_014-Ex1-10D-lcwgs-1-1	9.1%	39.9%	88.8%	96.0%
+Pba-AGal_015-Ex1-10E-lcwgs-1-1	10.3%	43.9%	87.2%	87.0%
+Pba-AGal_016-Ex1-10F-lcwgs-1-1	11.3%	55.4%	80.1%	42.5%
+Pba-AGal_017-Ex1-9C-lcwgs-1-1	10.7%	39.8%	86.1%	91.0%
+Pba-AGal_018-Ex1-10H-lcwgs-1-1	12.0%	56.4%	71.8%	58.1%
+Pba-AGal_019-Ex1-11A-lcwgs-1-1	11.2%	36.1%	96.0%	89.0%
+Pba-AGal_020-Ex1-11B-lcwgs-1-1	10.7%	39.1%	96.3%	93.3%
+Pba-AMar_001-Ex1-3F-lcwgs-1-1	11.4%	38.0%	94.4%	74.6%
+Pba-AMar_002-Ex1-3G-lcwgs-1-1	10.7%	42.2%	91.3%	67.4%
+Pba-AMar_003-Ex1-3H-lcwgs-1-1	10.0%	41.2%	94.7%	89.5%
+Pba-AMar_004-Ex1-4A-lcwgs-1-1	11.2%	44.1%	95.4%	91.2%
+Pba-AMar_005-Ex1-4B-lcwgs-1-1	9.5%	40.4%	93.2%	84.9%
+Pba-AMar_006-Ex1-4C-lcwgs-1-1	9.1%	46.5%	70.0%	94.3%
+Pba-AMar_007-Ex1-4D-lcwgs-1-1	10.5%	39.7%	83.1%	60.3%
+Pba-AMar_008-Ex1-4E-lcwgs-1-1	9.7%	41.2%	85.0%	93.1%
+Pba-AMar_009-Ex1-4F-lcwgs-1-1	10.5%	38.2%	92.4%	81.4%
+Pba-AMar_010-Ex1-4G-lcwgs-1-1	9.2%	41.3%	91.4%	88.0%
+Pba-AMar_011-Ex1-4H-lcwgs-1-1	10.0%	40.7%	89.2%	92.8%
+Pba-AMar_012-Ex1-5A-lcwgs-1-1	11.2%	37.3%	97.3%	92.8%
+Pba-AMar_013-Ex1-5B-lcwgs-1-1	10.8%	44.8%	94.3%	97.7%
+Pba-AMar_014-Ex1-5C-lcwgs-1-1	10.2%	41.1%	93.1%	91.1%
+Pba-APal_001-Ex1-7E-lcwgs-1-1	10.3%	40.6%	94.7%	80.8%
+Pba-APal_002-Ex1-7F-lcwgs-1-1	9.8%	43.6%	94.8%	84.4%
+Pba-APal_003-Ex1-7G-lcwgs-1-1	9.4%	44.0%	91.2%	80.6%
+Pba-APal_004-Ex1-7H-lcwgs-1-1	9.8%	42.6%	91.5%	78.9%
+Pba-APal_005-Ex1-8A-lcwgs-1-1	12.0%	40.9%	90.4%	77.3%
+Pba-APal_006-Ex1-8B-lcwgs-1-1	10.7%	40.7%	93.6%	82.3%
+Pba-APal_007-Ex1-8C-lcwgs-1-1	10.1%	43.1%	92.0%	81.6%
+Pba-APal_008-Ex1-8D-lcwgs-1-1	10.0%	43.0%	91.8%	92.6%
+Pba-APal_009-Ex1-8E-lcwgs-1-1	10.5%	42.6%	92.8%	88.6%
+Pba-APal_010-Ex1-8F-lcwgs-1-1	10.3%	36.6%	95.6%	88.0%
+Pba-ATat_001-Ex1-9E-lcwgs-1-1	10.5%	38.7%	95.6%	86.4%
+Pba-ATat_002-Ex1-10E-lcwgs-1-1	9.0%	40.6%	52.8%	91.7%
+Pba-ATat_003-Ex1-11E-lcwgs-1-1	10.4%	38.5%	86.8%	87.3%
+Pba-ATat_004-Ex1-12E-lcwgs-1-1	11.1%	40.0%	95.9%	87.4%
+Pba-ATat_005-Ex1-1F-lcwgs-1-1	10.4%	38.1%	97.0%	84.1%
+Pba-ATat_006-Ex1-2F-lcwgs-1-1	9.4%	40.6%	95.3%	83.6%
+Pba-ATat_007-Ex1-3F-lcwgs-1-1	9.9%	42.8%	94.4%	82.1%
+Pba-ATat_008-Ex1-4F-lcwgs-1-1	10.0%	42.7%	94.6%	82.0%
+Pba-ATat_009-Ex1-5F-lcwgs-1-1	9.1%	37.5%	95.7%	84.2%
+Pba-ATat_010-Ex1-6F-lcwgs-1-1	10.4%	39.7%	96.5%	77.8%
+Pba-ATat_011-Ex1-7F-lcwgs-1-1	10.1%	41.2%	94.0%	79.4%
+Pba-ATat_012-Ex1-8F-lcwgs-1-1	10.7%	38.2%	96.5%	77.8%
+Pba-ATat_013-Ex1-9F-lcwgs-1-1	10.2%	38.2%	94.1%	87.3%
+Pba-ATat_014-Ex1-10F-lcwgs-1-1	9.7%	42.1%	90.2%	83.2%
+Pba-ATat_015-Ex1-11F-lcwgs-1-1	9.6%	41.2%	76.8%	83.4%
+Pba-ATat_016-Ex1-12F-lcwgs-1-1	7.8%	44.4%	92.2%	92.5%
+Pba-ATat_017-Ex1-1G-lcwgs-1-1	0.6%	40.5%	90.5%	78.5%
+Pba-ATat_018-Ex1-2G-lcwgs-1-1	9.6%	40.0%	95.7%	88.2%
+Pba-ATat_019-Ex1-3G-lcwgs-1-1	10.2%	39.2%	80.9%	88.7%
+Pba-ATat_020-Ex1-4G-lcwgs-1-1	9.5%	40.1%	95.7%	84.9%
+Pba-ATat_021-Ex1-5G-lcwgs-1-1	9.9%	40.5%	95.4%	85.7%
+Pba-CCab_003-Ex1-7C-lcwgs-1-1	9.4%	42.4%	90.8%	52.2%
+Pba-CCab_006-Ex1-9C-lcwgs-1-1	10.1%	42.2%	89.7%	49.8%
+Pba-CCab_009-Ex1-6A-lcwgs-1-1	11.6%	43.2%	90.4%	48.4%
+Pba-CCab_012-Ex1-9A-lcwgs-1-1	10.3%	41.6%	88.3%	50.2%
+Pba-CCab_016-Ex1-4C-lcwgs-1-1	10.1%	43.5%	92.7%	41.7%
+Pba-CCab_019-Ex1-5B-lcwgs-1-1	10.2%	42.6%	90.7%	38.2%
+Pba-CCab_020-Ex1-6C-lcwgs-1-1	11.1%	42.1%	92.4%	48.2%
+Pba-CCab_021-Ex1-12C-lcwgs-1-1	11.8%	43.6%	89.7%	28.2%
+Pba-CCab_023-Ex1-6B-lcwgs-1-1	11.1%	42.2%	92.3%	47.0%
+Pba-CCab_024-Ex1-4B-lcwgs-1-1	9.7%	43.8%	92.5%	47.4%
+Pba-CCab_026-Ex1-3C-lcwgs-1-1	10.3%	42.0%	92.7%	42.2%
+Pba-CCab_027-Ex1-1D-lcwgs-1-1	9.2%	42.1%	93.7%	52.3%
+Pba-CCab_028-Ex1-10C-lcwgs-1-1	9.1%	41.9%	91.8%	56.5%
+Pba-CCab_029-Ex1-1A-lcwgs-1-1	9.5%	42.2%	92.9%	46.2%
+Pba-CCab_030-Ex1-2C-lcwgs-1-1	10.3%	42.1%	94.3%	54.9%
+Pba-CCab_032-Ex1-2B-lcwgs-1-1	10.4%	42.8%	92.6%	44.9%
+Pba-CCab_033-Ex1-11B-lcwgs-1-1	10.0%	43.9%	86.8%	52.3%
+Pba-CCab_037-Ex1-1C-lcwgs-1-1	9.2%	43.7%	93.3%	50.8%
+Pba-CCab_039-Ex1-9B-lcwgs-1-1	10.0%	43.6%	90.4%	52.2%
+Pba-CCab_041-Ex1-8C-lcwgs-1-1	9.7%	43.3%	83.3%	35.8%
+Pba-CCab_042-Ex1-12B-lcwgs-1-1	10.7%	41.7%	89.4%	58.3%
+Pba-CCab_043-Ex1-11C-lcwgs-1-1	10.2%	42.4%	90.6%	50.9%
+Pba-CCab_044-Ex1-8B-lcwgs-1-1	9.8%	45.1%	85.7%	36.7%
+Pba-CCab_045-Ex1-3B-lcwgs-1-1	10.8%	42.8%	91.8%	37.1%
+Pba-CCab_047-Ex1-8A-lcwgs-1-1	9.6%	43.2%	77.2%	37.0%
+Pba-CCab_049-Ex1-7A-lcwgs-1-1	9.4%	41.6%	92.8%	60.5%
+Pba-CCab_050-Ex1-10A-lcwgs-1-1	9.4%	41.7%	90.4%	45.4%
+Pba-CCab_051-Ex1-12A-lcwgs-1-1	10.9%	45.0%	89.8%	60.8%
+Pba-CCab_052-Ex1-10B-lcwgs-1-1	9.0%	42.4%	86.1%	48.9%
+Pba-CCab_053-Ex1-7B-lcwgs-1-1	9.3%	41.5%	90.8%	47.5%
+Pba-CCab_054-Ex1-5A-lcwgs-1-1	10.8%	42.7%	92.4%	47.0%
+Pba-CCab_056-Ex1-2A-lcwgs-1-1	10.9%	42.2%	93.9%	53.2%
+Pba-CCab_060-Ex1-3A-lcwgs-1-1	10.7%	42.8%	90.2%	37.2%
+Pba-CCab_062-Ex1-5C-lcwgs-1-1	10.5%	43.4%	92.9%	45.3%
+Pba-CCab_063-Ex1-11A-lcwgs-1-1	10.1%	44.3%	84.0%	60.1%
+Pba-CCab_064-Ex1-1B-lcwgs-1-1	9.2%	42.3%	91.9%	38.4%
+Pba-CCab_066-Ex1-4A-lcwgs-1-1	10.3%	45.7%	91.1%	40.2%
+Pba-CCab_066-Ex1-8B-lcwgs-1-1	7.3%	42.4%	92.0%	50.4%
+Pba-CCab_067-Ex1-8C-lcwgs-1-1	10.2%	42.7%	95.2%	62.4%
+Pba-CCab_068-Ex1-8D-lcwgs-1-1	10.5%	42.7%	92.5%	43.3%
+Pba-CCab_069-Ex1-8E-lcwgs-1-1	10.6%	43.6%	93.9%	55.3%
+Pba-CCab_070-Ex1-8F-lcwgs-1-1	10.5%	43.0%	93.9%	57.3%
+Pba-CCab_071-Ex1-8G-lcwgs-1-1	9.5%	42.9%	93.7%	53.9%
+Pba-CCab_072-Ex1-8H-lcwgs-1-1	5.4%	43.5%	92.3%	67.4%
+Pba-CCab_073-Ex1-9A-lcwgs-1-1	10.2%	45.9%	94.9%	77.2%
+Pba-CCab_074-Ex1-9B-lcwgs-1-1	11.5%	42.7%	93.4%	51.1%
+Pba-CCab_075-Ex1-9C-lcwgs-1-1	10.8%	46.6%	96.4%	88.2%
+Pba-CCab_076-Ex1-9D-lcwgs-1-1	11.5%	43.1%	93.2%	44.6%
+Pba-CCab_077-Ex1-9E-lcwgs-1-1	11.8%	42.6%	94.0%	51.6%
+Pba-CCab_078-Ex1-9F-lcwgs-1-1	11.6%	42.2%	94.3%	57.2%
+Pba-CCab_079-Ex1-9G-lcwgs-1-1	11.1%	43.0%	93.4%	56.8%
+Pba-CCab_080-Ex1-9H-lcwgs-1-1	11.2%	41.4%	95.3%	61.3%
+Pba-CCab_081-Ex1-10A-lcwgs-1-1	9.3%	43.4%	93.9%	59.3%
+Pba-CCab_082-Ex1-10B-lcwgs-1-1	8.6%	43.4%	93.4%	57.2%
+Pba-CCab_083-Ex1-10C-lcwgs-1-1	9.2%	44.1%	94.5%	65.6%
+Pba-CCab_084-Ex1-10D-lcwgs-1-1	7.5%	42.7%	92.4%	50.0%
+Pba-CCab_085-Ex1-10E-lcwgs-1-1	8.8%	42.9%	92.5%	49.4%
+Pba-CCab_086-Ex1-10F-lcwgs-1-1	9.9%	43.9%	92.6%	52.0%
+Pba-CCab_087-Ex1-10G-lcwgs-1-1	9.0%	44.0%	93.5%	58.6%
+Pba-CCab_088-Ex1-10H-lcwgs-1-1	9.6%	43.3%	92.7%	50.6%
+Pba-CCab_089-Ex1-11A-lcwgs-1-1	9.0%	45.8%	93.8%	63.8%
+Pba-CCab_090-Ex1-11B-lcwgs-1-1	3.2%	43.2%	92.2%	58.0%
+Pba-CCab_091-Ex1-11C-lcwgs-1-1	10.1%	44.0%	94.5%	61.6%
+Pba-CCab_092-Ex1-11D-lcwgs-1-1	10.4%	41.9%	93.2%	42.0%
+Pba-CCab_093-Ex1-11E-lcwgs-1-1	9.8%	40.8%	94.4%	54.9%
+Pba-CCab_094-Ex1-11F-lcwgs-1-1	10.0%	41.6%	93.2%	56.0%
+Pba-CCab_095-Ex1-11G-lcwgs-1-1	10.0%	44.2%	92.3%	49.1%
+Pba-CCab_096-Ex1-11H-lcwgs-1-1	10.8%	41.5%	93.3%	50.8%
+Pba-CMas_001-Ex1-5A-lcwgs-1-1	11.6%	44.3%	94.3%	64.3%
+Pba-CMas_002-Ex1-5B-lcwgs-1-1	12.9%	41.9%	93.4%	45.0%
+Pba-CMas_003-Ex1-5C-lcwgs-1-1	11.0%	42.4%	92.7%	47.1%
+Pba-CMas_004-Ex1-5D-lcwgs-1-1	10.4%	42.9%	91.4%	43.5%
+Pba-CMas_005-Ex1-5E-lcwgs-1-1	11.4%	41.5%	92.7%	42.8%
+Pba-CMas_006-Ex1-5F-lcwgs-1-1	10.6%	41.5%	93.0%	50.9%
+Pba-CMas_007-Ex1-5G-lcwgs-1-1	11.6%	40.8%	93.2%	42.8%
+Pba-CMas_008-Ex1-5H-lcwgs-1-1	0.8%	41.7%	91.7%	59.5%
+Pba-CMas_009-Ex1-6A-lcwgs-1-1	11.9%	42.7%	93.3%	40.4%
+Pba-CMas_010-Ex1-6B-lcwgs-1-1	10.6%	42.2%	93.5%	49.0%
+Pba-CMas_011-Ex1-6C-lcwgs-1-1	10.4%	41.5%	94.2%	48.5%
+Pba-CMas_012-Ex1-6D-lcwgs-1-1	9.8%	43.4%	96.1%	76.3%
+Pba-CMas_013-Ex1-6E-lcwgs-1-1	10.8%	41.7%	92.1%	39.9%
+Pba-CMas_014-Ex1-6F-lcwgs-1-1	11.0%	41.1%	92.0%	43.3%
+Pba-CMas_015-Ex1-6G-lcwgs-1-1	10.1%	41.1%	94.2%	51.5%
+Pba-CMas_016-Ex1-6H-lcwgs-1-1	9.6%	40.6%	95.0%	71.9%
+Pba-CMas_017-Ex1-7A-lcwgs-1-1	10.1%	44.8%	95.4%	74.4%
+Pba-CMas_018-Ex1-7B-lcwgs-1-1	10.8%	43.6%	92.7%	46.0%
+Pba-CMas_019-Ex1-7C-lcwgs-1-1	10.3%	41.6%	92.8%	49.8%
+Pba-CMas_020-Ex1-7D-lcwgs-1-1	9.9%	42.4%	92.2%	46.1%
+Pba-CMas_021-Ex1-7E-lcwgs-1-1	10.2%	41.9%	94.1%	51.9%
+Pba-CMas_022-Ex1-7F-lcwgs-1-1	11.0%	41.5%	93.4%	48.9%
+Pba-CMas_023-Ex1-7G-lcwgs-1-1	5.4%	42.0%	92.7%	62.6%
+Pba-CMas_024-Ex1-7H-lcwgs-1-1	10.1%	41.6%	94.6%	56.1%
+Pba-CMas_025-Ex1-8A-lcwgs-1-1	10.9%	44.6%	95.7%	73.5%
+Pba-CTat_009-Ex1-1D-lcwgs-1-1	9.4%	40.7%	89.4%	16.9%
+Pba-CTat_010-Ex1-6B-lcwgs-1-1	9.5%	39.8%	93.1%	41.1%
+Pba-CTat_012-Ex1-2H-lcwgs-1-1	7.5%	39.3%	93.5%	51.0%
+Pba-CTat_013-Ex1-5H-lcwgs-1-1	9.7%	39.7%	93.5%	40.3%
+Pba-CTat_015-Ex1-1C-lcwgs-1-1	0.6%	40.2%	90.1%	61.1%
+Pba-CTat_016-Ex1-4E-lcwgs-1-1	9.3%	40.4%	89.6%	22.4%
+Pba-CTat_017-Ex1-4D-lcwgs-1-1	9.6%	40.1%	93.2%	39.5%
+Pba-CTat_018-Ex1-1E-lcwgs-1-1	2.2%	39.3%	90.8%	57.9%
+Pba-CTat_019-Ex1-5F-lcwgs-1-1	10.5%	39.6%	92.9%	36.7%
+Pba-CTat_020-Ex1-8B-lcwgs-1-1	10.2%	39.6%	92.8%	39.9%
+Pba-CTat_021-Ex1-3A-lcwgs-1-1	9.3%	39.8%	93.6%	51.2%
+Pba-CTat_022-Ex1-5G-lcwgs-1-1	10.6%	39.6%	92.6%	36.5%
+Pba-CTat_023-Ex1-4G-lcwgs-1-1	5.2%	39.0%	93.3%	60.0%
+Pba-CTat_024-Ex1-2B-lcwgs-1-1	9.8%	39.8%	93.7%	46.9%
+Pba-CTat_025-Ex1-7G-lcwgs-1-1	10.3%	39.6%	92.2%	36.5%
+Pba-CTat_026-Ex1-8G-lcwgs-1-1	10.7%	40.5%	91.2%	31.9%
+Pba-CTat_027-Ex1-2E-lcwgs-1-1	3.2%	39.2%	92.3%	58.4%
+Pba-CTat_029-Ex1-5D-lcwgs-1-1	9.4%	39.6%	93.3%	38.3%
+Pba-CTat_032-Ex1-8E-lcwgs-1-1	10.1%	39.7%	92.8%	35.7%
+Pba-CTat_033-Ex1-1A-lcwgs-1-1	10.3%	40.9%	94.4%	52.0%
+Pba-CTat_034-Ex1-7F-lcwgs-1-1	10.3%	39.6%	92.8%	35.0%
+Pba-CTat_036-Ex1-2A-lcwgs-1-1	10.1%	40.4%	94.2%	48.8%
+Pba-CTat_037-Ex1-4A-lcwgs-1-1	10.0%	40.2%	93.7%	46.2%
+Pba-CTat_038-Ex1-7D-lcwgs-1-1	9.9%	40.4%	93.0%	38.4%
+Pba-CTat_039-Ex1-3F-lcwgs-1-1	10.8%	40.5%	92.7%	39.1%
+Pba-CTat_041-Ex1-7E-lcwgs-1-1	8.8%	38.7%	93.5%	41.0%
+Pba-CTat_045-Ex1-3C-lcwgs-1-1	10.1%	40.1%	93.4%	42.7%
+Pba-CTat_046-Ex1-3G-lcwgs-1-1	10.7%	39.9%	91.5%	30.9%
+Pba-CTat_047-Ex1-8A-lcwgs-1-1	10.5%	40.3%	93.0%	39.7%
+Pba-CTat_048-Ex1-4C-lcwgs-1-1	9.6%	40.5%	92.5%	36.8%
+Pba-CTat_049-Ex1-2D-lcwgs-1-1	9.4%	39.3%	93.2%	38.2%
+Pba-CTat_050-Ex1-6D-lcwgs-1-1	9.4%	40.4%	93.7%	44.9%
+Pba-CTat_051-Ex1-7A-lcwgs-1-1	9.9%	40.4%	93.4%	45.0%
+Pba-CTat_052-Ex1-3B-lcwgs-1-1	10.6%	39.6%	93.3%	42.8%
+Pba-CTat_053-Ex1-5E-lcwgs-1-1	10.5%	40.7%	90.3%	25.0%
+Pba-CTat_054-Ex1-6E-lcwgs-1-1	9.8%	40.9%	89.0%	23.4%
+Pba-CTat_055-Ex1-2F-lcwgs-1-1	10.3%	39.6%	93.2%	40.1%
+Pba-CTat_056-Ex1-8C-lcwgs-1-1	1.4%	40.2%	90.6%	56.5%
+Pba-CTat_058-Ex1-1H-lcwgs-1-1	6.5%	40.0%	90.8%	39.3%
+Pba-CTat_059-Ex1-8H-lcwgs-1-1	10.3%	40.8%	90.0%	24.3%
+Pba-CTat_060-Ex1-6F-lcwgs-1-1	9.9%	41.0%	93.2%	44.6%
+Pba-CTat_061-Ex1-2C-lcwgs-1-1	9.8%	39.4%	93.5%	42.4%
+Pba-CTat_062-Ex1-7C-lcwgs-1-1	2.4%	39.8%	90.0%	57.9%
+Pba-CTat_063-Ex1-8D-lcwgs-1-1	9.8%	40.1%	93.7%	48.8%
+Pba-CTat_064-Ex1-1G-lcwgs-1-1	10.1%	39.4%	92.0%	34.4%
+Pba-CTat_065-Ex1-6G-lcwgs-1-1	9.7%	39.5%	92.5%	38.4%
+Pba-CTat_069-Ex1-4H-lcwgs-1-1	8.4%	40.1%	92.6%	35.2%
+Pba-CTat_072-Ex1-4F-lcwgs-1-1	6.2%	39.0%	93.0%	56.6%
+Pba-CTat_073-Ex1-3D-lcwgs-1-1	10.6%	40.4%	92.6%	35.4%
+Pba-CTat_074-Ex1-7B-lcwgs-1-1	8.3%	38.7%	93.3%	45.2%
+Pba-CTat_075-Ex1-6A-lcwgs-1-1	9.6%	40.4%	92.9%	39.1%
+Pba-CTat_077-Ex1-5B-lcwgs-1-1	10.0%	39.9%	93.4%	43.2%
+Pba-CTat_078-Ex1-5A-lcwgs-1-1	10.0%	40.6%	93.3%	44.6%
+Pba-CTat_082-Ex1-2G-lcwgs-1-1	10.3%	39.7%	92.4%	36.2%
+Pba-CTat_083-Ex1-4B-lcwgs-1-1	9.7%	40.6%	92.7%	39.5%
+Pba-CTat_084-Ex1-6H-lcwgs-1-1	10.0%	41.1%	89.1%	20.1%
+Pba-CTat_085-Ex1-1F-lcwgs-1-1	10.0%	41.1%	89.2%	22.9%
+Pba-CTat_086-Ex1-8F-lcwgs-1-1	10.5%	40.5%	92.1%	34.1%
+Pba-CTat_087-Ex1-5C-lcwgs-1-1	9.9%	39.6%	93.5%	42.0%
+Pba-CTat_088-Ex1-3E-lcwgs-1-1	10.6%	40.8%	88.5%	16.1%
+Pba-CTat_092-Ex1-3H-lcwgs-1-1	8.3%	40.7%	90.5%	59.0%
+Pba-CTat_093-Ex1-7H-lcwgs-1-1	10.2%	41.0%	91.2%	29.4%
+Pba-CTat_094-Ex1-1B-lcwgs-1-1	9.3%	41.0%	92.0%	41.7%
+Pba-CTat_095-Ex1-6C-lcwgs-1-1	9.3%	40.7%	93.1%	41.7%
+Pba-CVer_001-Ex2-11C-lcwgs-1-1	12.0%	51.5%	71.5%	48.2%
+Pba-CVer_002-Ex2-11D-lcwgs-1-1	2.9%	45.9%	82.2%	49.2%
+Pba-CVer_003-Ex2-11E-lcwgs-1-1	20.0%	47.4%	88.0%	31.6%
+Pba-CVer_004-Ex2-11F-lcwgs-1-1	20.6%	48.8%	84.3%	30.7%
+Pba-CVer_005-Ex2-11G-lcwgs-1-1	19.8%	46.3%	86.7%	29.7%
+Pba-CVer_006-Ex2-11H-lcwgs-1-1	13.6%	43.2%	87.8%	31.8%
+Pba-CVer_007-Ex2-12A-lcwgs-1-1	13.1%	41.7%	88.4%	20.7%
+Pba-CVer_008-Ex2-12B-lcwgs-1-1	13.8%	46.3%	86.2%	28.1%
+Pba-CVer_012-Ex2-12D-lcwgs-1-1	13.6%	44.3%	86.9%	39.7%
+Pba-CVer_020-Ex2-12E-lcwgs-1-1	24.8%	44.7%	88.2%	32.7%
+Pba-CVer_021-Ex2-12F-lcwgs-1-1	21.8%	45.3%	89.0%	34.7%
+Pba-CVer_022-Ex2-12G-lcwgs-1-1	22.0%	45.5%	88.6%	27.6%
+Pba-CVer_023-Ex2-12H-lcwgs-1-1	17.3%	45.3%	83.8%	36.5%
+Pba-CVer_024-Ex2-1A-lcwgs-1-1	12.2%	45.3%	88.9%	23.4%
+Pba-CVer_032-Ex2-1B-lcwgs-1-1	13.4%	49.0%	90.0%	31.8%
+Pba-CVer_033-Ex2-1C-lcwgs-1-1	19.1%	50.7%	88.5%	27.4%
+Pba-CVer_034-Ex2-1D-lcwgs-1-1	12.4%	52.5%	89.3%	34.1%
+Pba-CVer_036-Ex1-9C-lcwgs-1-1	21.3%	64.3%	86.3%	27.1%
+Pba-CVer_039-Ex2-1E-lcwgs-1-1	13.1%	49.3%	88.5%	28.2%
+Pba-CVer_044-Ex2-1F-lcwgs-1-1	14.6%	46.8%	90.0%	37.5%
+Pba-CVer_046-Ex2-1G-lcwgs-1-1	20.6%	51.0%	89.3%	23.9%
+Pba-CVer_047-Ex2-1H-lcwgs-1-1	11.4%	48.8%	88.9%	26.1%
+Pba-CVer_048-Ex2-2A-lcwgs-1-1	11.6%	46.8%	91.4%	35.0%
+Pba-CVer_049-Ex1-9D-lcwgs-1-1	17.7%	51.0%	87.2%	34.4%
+Pba-CVer_051-Ex1-9E-lcwgs-1-1	12.4%	45.2%	90.0%	28.0%
+Pba-CVer_057-Ex2-2B-lcwgs-1-1	16.2%	49.6%	90.1%	27.0%
+Pba-CVer_058-Ex1-9F-lcwgs-1-1	20.8%	53.1%	85.8%	35.7%
+Pba-CVer_059-Ex1-9G-lcwgs-1-1	20.4%	49.9%	85.0%	44.1%
+Pba-CVer_060-Ex2-2C-lcwgs-1-1	12.2%	48.2%	90.6%	31.8%
+Pba-CVer_068-Ex2-2E-lcwgs-1-1	11.8%	51.8%	89.4%	34.4%
+Pba-CVer_069-Ex2-2F-lcwgs-1-1	12.3%	53.0%	89.6%	29.6%
+Pba-CVer_071-Ex1-9H-lcwgs-1-1	20.2%	48.0%	83.8%	41.9%
+Pba-CVer_072-Ex2-2H-lcwgs-1-1	12.2%	52.2%	88.7%	25.7%
+Pba-CVer_073-Ex1-10A-lcwgs-1-1	14.9%	66.3%	85.1%	20.6%
+Pba-CVer_075-Ex1-10C-lcwgs-1-1	13.4%	64.3%	85.8%	24.4%
+Pba-CVer_076-Ex2-3A-lcwgs-1-1	12.9%	54.3%	89.8%	35.0%
+Pba-CVer_082-Ex1-10D-lcwgs-1-1	21.1%	51.5%	87.5%	35.5%
+Pba-CVer_083-Ex1-10E-lcwgs-1-1	12.4%	62.6%	85.8%	22.8%
+Pba-CVer_084-Ex1-10F-lcwgs-1-1	15.5%	50.3%	85.5%	33.4%
+Pba-CVer_085-Ex1-10G-lcwgs-1-1	15.4%	47.2%	89.2%	33.7%
+Pba-CVer_092-Ex2-3D-lcwgs-1-1	12.6%	46.1%	89.0%	17.1%
+Pba-CVer_093-Ex2-3E-lcwgs-1-1	12.4%	52.0%	88.5%	25.8%
+Pba-CVer_094-Ex1-10H-lcwgs-1-1	17.0%	49.4%	82.7%	48.8%
+Pba-CVer_095-Ex1-11A-lcwgs-1-1	18.6%	46.4%	89.4%	43.8%
+Pba-CVer_096-Ex1-11B-lcwgs-1-1	16.7%	54.1%	83.8%	37.9%
 ```
 </p>
 </details>
@@ -1403,30 +1739,1046 @@ TBD
 ## 9. Remove duplicates with clumpify.
 
 ### 9a. Remove duplicates.
-TBD
+`bash .../../../pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1 fq_fp1_clmp /scratch/hpc-0351 20`
 
 ### 9b. Check duplicate removal success.
-TBD
+```bash
+[hpc-0351@d1-w6420a-12 1st_sequencing_run]$ enable_lmod
+[hpc-0351@d1-w6420a-12 1st_sequencing_run]$ module load conta
+iner_env R/4.2
+[hpc-0351@d1-w6420a-12 1st_sequencing_run]$ crun R < /home/e1
+garcia/shotgun_PIRE/pire_fq_gz_processing/checkClumpify_EG.R
+--no-save
+```
+"Clumpify Successfully worked on all samples"
 
 ### 9c. Generate metadata on deduplicated FASTQ files.
-TBD
+`sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1_clmp" "fqc_clmp_report"  "fq.gz"`
 
 <details><summary>Expand for MultiQC Output.</summary>
 
 ```bash
-TBD
+Sample Name	% Dups	% GC	Length	M Seqs
+Pba-ABir_001-Ex1-7H-lcwgs-1-1.clmp.r1	3.0%	41%	113 bp	0.7
+Pba-ABir_001-Ex1-7H-lcwgs-1-1.clmp.r2	2.8%	41%	113 bp	0.7
+Pba-ABir_002-Ex1-8H-lcwgs-1-1.clmp.r1	3.6%	35%	113 bp	1.5
+Pba-ABir_002-Ex1-8H-lcwgs-1-1.clmp.r2	3.4%	35%	113 bp	1.5
+Pba-ABir_003-Ex1-9H-lcwgs-1-1.clmp.r1	3.1%	41%	117 bp	0.6
+Pba-ABir_003-Ex1-9H-lcwgs-1-1.clmp.r2	2.8%	41%	117 bp	0.6
+Pba-ABir_004-Ex1-10H-lcwgs-1-1.clmp.r1	3.3%	36%	113 bp	0.4
+Pba-ABir_004-Ex1-10H-lcwgs-1-1.clmp.r2	3.1%	36%	113 bp	0.4
+Pba-ABir_005-Ex1-11H-lcwgs-1-1.clmp.r1	2.7%	41%	105 bp	1.2
+Pba-ABir_005-Ex1-11H-lcwgs-1-1.clmp.r2	2.5%	41%	105 bp	1.2
+Pba-ABir_006-Ex1-12H-lcwgs-1-1.clmp.r1	4.7%	40%	127 bp	1.3
+Pba-ABir_006-Ex1-12H-lcwgs-1-1.clmp.r2	4.2%	40%	127 bp	1.3
+Pba-ABir_007-Ex1-5B-lcwgs-1-1.clmp.r1	6.3%	42%	121 bp	3.4
+Pba-ABir_007-Ex1-5B-lcwgs-1-1.clmp.r2	6.0%	42%	121 bp	3.4
+Pba-ABir_009-Ex1-5D-lcwgs-1-1.clmp.r1	5.6%	37%	102 bp	2.6
+Pba-ABir_009-Ex1-5D-lcwgs-1-1.clmp.r2	5.4%	37%	102 bp	2.6
+Pba-ABir_010-Ex1-5E-lcwgs-1-1.clmp.r1	7.9%	35%	109 bp	2.4
+Pba-ABir_010-Ex1-5E-lcwgs-1-1.clmp.r2	7.2%	35%	109 bp	2.4
+Pba-ABir_011-Ex1-5F-lcwgs-1-1.clmp.r1	5.7%	38%	105 bp	2.2
+Pba-ABir_011-Ex1-5F-lcwgs-1-1.clmp.r2	5.5%	38%	105 bp	2.2
+Pba-ABir_012-Ex1-5G-lcwgs-1-1.clmp.r1	6.7%	42%	109 bp	1.9
+Pba-ABir_012-Ex1-5G-lcwgs-1-1.clmp.r2	6.1%	42%	109 bp	1.9
+Pba-ABir_013-Ex1-5H-lcwgs-1-1.clmp.r1	3.5%	40%	104 bp	1.3
+Pba-ABir_013-Ex1-5H-lcwgs-1-1.clmp.r2	3.2%	40%	104 bp	1.3
+Pba-ABir_014-Ex1-6A-lcwgs-1-1.clmp.r1	7.4%	35%	103 bp	3.2
+Pba-ABir_014-Ex1-6A-lcwgs-1-1.clmp.r2	7.0%	35%	103 bp	3.2
+Pba-ABur_001-Ex1-1A-lcwgs-1-1.clmp.r1	3.6%	36%	116 bp	0.5
+Pba-ABur_001-Ex1-1A-lcwgs-1-1.clmp.r2	3.3%	36%	116 bp	0.5
+Pba-ABur_002-Ex1-2A-lcwgs-1-1.clmp.r1	2.9%	39%	109 bp	0.8
+Pba-ABur_002-Ex1-2A-lcwgs-1-1.clmp.r2	2.7%	39%	109 bp	0.8
+Pba-ABur_003-Ex1-3A-lcwgs-1-1.clmp.r1	3.5%	37%	108 bp	0.8
+Pba-ABur_003-Ex1-3A-lcwgs-1-1.clmp.r2	3.3%	38%	108 bp	0.8
+Pba-ABur_004-Ex1-4A-lcwgs-1-1.clmp.r1	2.9%	36%	112 bp	0.6
+Pba-ABur_004-Ex1-4A-lcwgs-1-1.clmp.r2	2.7%	36%	112 bp	0.6
+Pba-ABur_005-Ex1-5A-lcwgs-1-1.clmp.r1	4.3%	43%	124 bp	0.8
+Pba-ABur_005-Ex1-5A-lcwgs-1-1.clmp.r2	4.0%	43%	124 bp	0.8
+Pba-ABur_006-Ex1-6A-lcwgs-1-1.clmp.r1	3.0%	37%	112 bp	0.9
+Pba-ABur_006-Ex1-6A-lcwgs-1-1.clmp.r2	2.9%	37%	112 bp	0.9
+Pba-ABur_007-Ex1-7A-lcwgs-1-1.clmp.r1	2.8%	40%	108 bp	0.7
+Pba-ABur_007-Ex1-7A-lcwgs-1-1.clmp.r2	2.5%	40%	108 bp	0.7
+Pba-ABur_008-Ex1-8A-lcwgs-1-1.clmp.r1	4.4%	38%	114 bp	1.1
+Pba-ABur_008-Ex1-8A-lcwgs-1-1.clmp.r2	4.2%	38%	114 bp	1.1
+Pba-ABur_009-Ex1-9A-lcwgs-1-1.clmp.r1	2.5%	36%	104 bp	0.5
+Pba-ABur_009-Ex1-9A-lcwgs-1-1.clmp.r2	2.3%	36%	104 bp	0.5
+Pba-ABur_010-Ex1-10A-lcwgs-1-1.clmp.r1	3.7%	42%	116 bp	0.9
+Pba-ABur_010-Ex1-10A-lcwgs-1-1.clmp.r2	3.4%	42%	116 bp	0.9
+Pba-ABur_011-Ex1-11A-lcwgs-1-1.clmp.r1	4.4%	38%	117 bp	1.6
+Pba-ABur_011-Ex1-11A-lcwgs-1-1.clmp.r2	4.2%	38%	117 bp	1.6
+Pba-ABur_012-Ex1-12A-lcwgs-1-1.clmp.r1	3.4%	35%	110 bp	0.9
+Pba-ABur_012-Ex1-12A-lcwgs-1-1.clmp.r2	3.1%	35%	110 bp	0.9
+Pba-ABur_013-Ex1-1B-lcwgs-1-1.clmp.r1	2.7%	37%	106 bp	2.1
+Pba-ABur_013-Ex1-1B-lcwgs-1-1.clmp.r2	2.5%	37%	106 bp	2.1
+Pba-ABur_014-Ex1-2B-lcwgs-1-1.clmp.r1	2.9%	38%	113 bp	0.4
+Pba-ABur_014-Ex1-2B-lcwgs-1-1.clmp.r2	2.7%	38%	113 bp	0.4
+Pba-ABur_015-Ex1-3B-lcwgs-1-1.clmp.r1	4.1%	39%	113 bp	2.3
+Pba-ABur_015-Ex1-3B-lcwgs-1-1.clmp.r2	3.9%	39%	113 bp	2.3
+Pba-ABur_016-Ex1-4B-lcwgs-1-1.clmp.r1	3.0%	37%	114 bp	1.0
+Pba-ABur_016-Ex1-4B-lcwgs-1-1.clmp.r2	2.7%	38%	114 bp	1.0
+Pba-ABur_017-Ex1-5B-lcwgs-1-1.clmp.r1	3.9%	39%	111 bp	1.5
+Pba-ABur_017-Ex1-5B-lcwgs-1-1.clmp.r2	3.7%	39%	111 bp	1.5
+Pba-ABur_018-Ex1-6B-lcwgs-1-1.clmp.r1	2.7%	40%	113 bp	0.5
+Pba-ABur_018-Ex1-6B-lcwgs-1-1.clmp.r2	2.5%	40%	113 bp	0.5
+Pba-ABur_019-Ex1-7B-lcwgs-1-1.clmp.r1	2.7%	37%	116 bp	0.3
+Pba-ABur_019-Ex1-7B-lcwgs-1-1.clmp.r2	2.5%	37%	116 bp	0.3
+Pba-ABur_020-Ex1-8B-lcwgs-1-1.clmp.r1	4.2%	40%	110 bp	0.7
+Pba-ABur_020-Ex1-8B-lcwgs-1-1.clmp.r2	4.0%	40%	110 bp	0.7
+Pba-ABur_021-Ex1-9B-lcwgs-1-1.clmp.r1	2.6%	36%	105 bp	0.6
+Pba-ABur_021-Ex1-9B-lcwgs-1-1.clmp.r2	2.5%	36%	105 bp	0.6
+Pba-ABur_022-Ex1-10B-lcwgs-1-1.clmp.r1	2.7%	38%	104 bp	0.9
+Pba-ABur_022-Ex1-10B-lcwgs-1-1.clmp.r2	2.4%	38%	104 bp	0.9
+Pba-ABur_023-Ex1-11B-lcwgs-1-1.clmp.r1	3.6%	39%	109 bp	0.7
+Pba-ABur_023-Ex1-11B-lcwgs-1-1.clmp.r2	3.3%	40%	109 bp	0.7
+Pba-ABur_024-Ex1-12B-lcwgs-1-1.clmp.r1	3.5%	36%	116 bp	0.8
+Pba-ABur_024-Ex1-12B-lcwgs-1-1.clmp.r2	3.2%	36%	116 bp	0.8
+Pba-ABur_025-Ex1-1C-lcwgs-1-1.clmp.r1	4.6%	39%	109 bp	14.5
+Pba-ABur_025-Ex1-1C-lcwgs-1-1.clmp.r2	4.5%	39%	109 bp	14.5
+Pba-ABur_026-Ex1-2C-lcwgs-1-1.clmp.r1	2.4%	38%	105 bp	0.7
+Pba-ABur_026-Ex1-2C-lcwgs-1-1.clmp.r2	2.2%	38%	105 bp	0.7
+Pba-ABur_027-Ex1-3C-lcwgs-1-1.clmp.r1	3.4%	40%	110 bp	1.5
+Pba-ABur_027-Ex1-3C-lcwgs-1-1.clmp.r2	3.1%	40%	110 bp	1.5
+Pba-ABur_028-Ex1-4C-lcwgs-1-1.clmp.r1	3.1%	41%	115 bp	0.9
+Pba-ABur_028-Ex1-4C-lcwgs-1-1.clmp.r2	2.9%	41%	115 bp	0.9
+Pba-ABur_029-Ex1-5C-lcwgs-1-1.clmp.r1	4.4%	40%	122 bp	0.4
+Pba-ABur_029-Ex1-5C-lcwgs-1-1.clmp.r2	4.0%	40%	122 bp	0.4
+Pba-ABur_030-Ex1-6C-lcwgs-1-1.clmp.r1	3.5%	38%	120 bp	0.8
+Pba-ABur_030-Ex1-6C-lcwgs-1-1.clmp.r2	3.3%	38%	120 bp	0.8
+Pba-ABur_031-Ex1-7C-lcwgs-1-1.clmp.r1	2.7%	36%	105 bp	1.6
+Pba-ABur_031-Ex1-7C-lcwgs-1-1.clmp.r2	2.6%	36%	105 bp	1.6
+Pba-ABur_032-Ex1-8C-lcwgs-1-1.clmp.r1	2.1%	38%	103 bp	0.3
+Pba-ABur_032-Ex1-8C-lcwgs-1-1.clmp.r2	1.9%	38%	103 bp	0.3
+Pba-ABur_033-Ex1-9C-lcwgs-1-1.clmp.r1	2.8%	37%	113 bp	0.0
+Pba-ABur_033-Ex1-9C-lcwgs-1-1.clmp.r2	2.5%	37%	113 bp	0.0
+Pba-ABur_034-Ex1-10C-lcwgs-1-1.clmp.r1	3.1%	38%	109 bp	1.0
+Pba-ABur_034-Ex1-10C-lcwgs-1-1.clmp.r2	2.9%	38%	109 bp	1.0
+Pba-ABur_036-Ex1-11C-lcwgs-1-1.clmp.r1	3.6%	37%	114 bp	0.4
+Pba-ABur_036-Ex1-11C-lcwgs-1-1.clmp.r2	3.4%	37%	114 bp	0.4
+Pba-ABur_037-Ex1-12C-lcwgs-1-1.clmp.r1	2.9%	39%	103 bp	0.3
+Pba-ABur_037-Ex1-12C-lcwgs-1-1.clmp.r2	2.7%	39%	103 bp	0.3
+Pba-ABur_038-Ex1-1D-lcwgs-1-1.clmp.r1	2.4%	39%	104 bp	1.2
+Pba-ABur_038-Ex1-1D-lcwgs-1-1.clmp.r2	2.3%	39%	104 bp	1.2
+Pba-ABur_039-Ex1-2D-lcwgs-1-1.clmp.r1	1.8%	39%	99 bp	1.4
+Pba-ABur_039-Ex1-2D-lcwgs-1-1.clmp.r2	1.8%	39%	99 bp	1.4
+Pba-ABur_040-Ex1-3D-lcwgs-1-1.clmp.r1	2.4%	40%	104 bp	1.5
+Pba-ABur_040-Ex1-3D-lcwgs-1-1.clmp.r2	2.3%	40%	104 bp	1.5
+Pba-ABur_041-Ex1-4D-lcwgs-1-1.clmp.r1	1.8%	40%	97 bp	0.9
+Pba-ABur_041-Ex1-4D-lcwgs-1-1.clmp.r2	1.7%	40%	97 bp	0.9
+Pba-ABur_042-Ex1-5D-lcwgs-1-1.clmp.r1	2.5%	39%	110 bp	0.8
+Pba-ABur_042-Ex1-5D-lcwgs-1-1.clmp.r2	2.3%	39%	110 bp	0.8
+Pba-ABur_043-Ex1-6D-lcwgs-1-1.clmp.r1	2.8%	38%	108 bp	1.2
+Pba-ABur_043-Ex1-6D-lcwgs-1-1.clmp.r2	2.6%	38%	108 bp	1.2
+Pba-ABur_044-Ex1-7D-lcwgs-1-1.clmp.r1	2.4%	38%	106 bp	1.3
+Pba-ABur_044-Ex1-7D-lcwgs-1-1.clmp.r2	2.3%	38%	106 bp	1.3
+Pba-ABur_045-Ex1-8D-lcwgs-1-1.clmp.r1	1.7%	38%	96 bp	1.4
+Pba-ABur_045-Ex1-8D-lcwgs-1-1.clmp.r2	1.7%	38%	96 bp	1.4
+Pba-ABur_046-Ex1-9D-lcwgs-1-1.clmp.r1	3.1%	36%	113 bp	0.9
+Pba-ABur_046-Ex1-9D-lcwgs-1-1.clmp.r2	2.8%	36%	113 bp	0.9
+Pba-ABur_047-Ex1-10D-lcwgs-1-1.clmp.r1	2.0%	38%	98 bp	0.1
+Pba-ABur_047-Ex1-10D-lcwgs-1-1.clmp.r2	1.8%	38%	98 bp	0.1
+Pba-ABur_048-Ex1-11D-lcwgs-1-1.clmp.r1	2.6%	39%	107 bp	0.7
+Pba-ABur_048-Ex1-11D-lcwgs-1-1.clmp.r2	2.4%	39%	107 bp	0.7
+Pba-ABur_049-Ex1-12D-lcwgs-1-1.clmp.r1	2.7%	39%	109 bp	1.4
+Pba-ABur_049-Ex1-12D-lcwgs-1-1.clmp.r2	2.5%	39%	109 bp	1.4
+Pba-ABur_050-Ex1-1E-lcwgs-1-1.clmp.r1	2.4%	40%	101 bp	0.1
+Pba-ABur_050-Ex1-1E-lcwgs-1-1.clmp.r2	2.3%	40%	101 bp	0.1
+Pba-ABur_051-Ex1-2E-lcwgs-1-1.clmp.r1	2.6%	38%	100 bp	1.4
+Pba-ABur_051-Ex1-2E-lcwgs-1-1.clmp.r2	2.5%	38%	100 bp	1.4
+Pba-ABur_052-Ex1-3E-lcwgs-1-1.clmp.r1	3.6%	34%	106 bp	1.5
+Pba-ABur_052-Ex1-3E-lcwgs-1-1.clmp.r2	3.4%	34%	106 bp	1.5
+Pba-ABur_053-Ex1-4E-lcwgs-1-1.clmp.r1	2.6%	36%	103 bp	1.0
+Pba-ABur_053-Ex1-4E-lcwgs-1-1.clmp.r2	2.4%	36%	103 bp	1.0
+Pba-ABur_054-Ex1-5E-lcwgs-1-1.clmp.r1	2.9%	38%	108 bp	1.0
+Pba-ABur_054-Ex1-5E-lcwgs-1-1.clmp.r2	2.7%	38%	108 bp	1.0
+Pba-ABur_055-Ex1-6E-lcwgs-1-1.clmp.r1	2.9%	37%	108 bp	1.1
+Pba-ABur_055-Ex1-6E-lcwgs-1-1.clmp.r2	2.8%	37%	108 bp	1.1
+Pba-ABur_056-Ex1-7E-lcwgs-1-1.clmp.r1	3.7%	39%	110 bp	2.5
+Pba-ABur_056-Ex1-7E-lcwgs-1-1.clmp.r2	3.4%	39%	110 bp	2.5
+Pba-ABur_057-Ex1-8E-lcwgs-1-1.clmp.r1	2.7%	38%	114 bp	0.5
+Pba-ABur_057-Ex1-8E-lcwgs-1-1.clmp.r2	2.5%	38%	114 bp	0.5
+Pba-AGal_001-Ex1-8G-lcwgs-1-1.clmp.r1	4.8%	41%	100 bp	1.6
+Pba-AGal_001-Ex1-8G-lcwgs-1-1.clmp.r2	4.4%	41%	100 bp	1.6
+Pba-AGal_001-Ex1-8H-lcwgs-1-1.clmp.r1	4.4%	40%	99 bp	1.4
+Pba-AGal_001-Ex1-8H-lcwgs-1-1.clmp.r2	4.0%	40%	99 bp	1.4
+Pba-AGal_002-Ex1-9A-lcwgs-1-1.clmp.r1	4.0%	42%	98 bp	2.5
+Pba-AGal_002-Ex1-9A-lcwgs-1-1.clmp.r2	3.8%	42%	98 bp	2.5
+Pba-AGal_003-Ex1-9B-lcwgs-1-1.clmp.r1	4.5%	40%	101 bp	1.3
+Pba-AGal_003-Ex1-9B-lcwgs-1-1.clmp.r2	4.0%	40%	101 bp	1.3
+Pba-AGal_004-Ex1-10G-lcwgs-1-1.clmp.r1	3.4%	41%	95 bp	1.3
+Pba-AGal_004-Ex1-10G-lcwgs-1-1.clmp.r2	3.0%	41%	95 bp	1.3
+Pba-AGal_005-Ex1-9D-lcwgs-1-1.clmp.r1	2.9%	40%	91 bp	2.4
+Pba-AGal_005-Ex1-9D-lcwgs-1-1.clmp.r2	2.7%	40%	91 bp	2.4
+Pba-AGal_006-Ex1-9E-lcwgs-1-1.clmp.r1	2.0%	37%	95 bp	3.3
+Pba-AGal_006-Ex1-9E-lcwgs-1-1.clmp.r2	1.9%	37%	95 bp	3.3
+Pba-AGal_007-Ex1-9F-lcwgs-1-1.clmp.r1	1.6%	37%	90 bp	5.4
+Pba-AGal_007-Ex1-9F-lcwgs-1-1.clmp.r2	1.6%	38%	90 bp	5.4
+Pba-AGal_008-Ex1-9G-lcwgs-1-1.clmp.r1	1.5%	44%	78 bp	1.6
+Pba-AGal_008-Ex1-9G-lcwgs-1-1.clmp.r2	1.4%	44%	78 bp	1.6
+Pba-AGal_009-Ex1-9H-lcwgs-1-1.clmp.r1	1.9%	41%	92 bp	2.1
+Pba-AGal_009-Ex1-9H-lcwgs-1-1.clmp.r2	1.8%	41%	92 bp	2.1
+Pba-AGal_010-Ex1-10A-lcwgs-1-1.clmp.r1	5.9%	37%	101 bp	2.0
+Pba-AGal_010-Ex1-10A-lcwgs-1-1.clmp.r2	5.4%	37%	101 bp	2.0
+Pba-AGal_011-Ex1-10B-lcwgs-1-1.clmp.r1	4.1%	40%	92 bp	1.6
+Pba-AGal_011-Ex1-10B-lcwgs-1-1.clmp.r2	3.8%	40%	92 bp	1.6
+Pba-AGal_013-Ex1-10C-lcwgs-1-1.clmp.r1	3.8%	43%	92 bp	0.9
+Pba-AGal_013-Ex1-10C-lcwgs-1-1.clmp.r2	3.3%	43%	92 bp	0.9
+Pba-AGal_014-Ex1-10D-lcwgs-1-1.clmp.r1	2.8%	40%	81 bp	1.4
+Pba-AGal_014-Ex1-10D-lcwgs-1-1.clmp.r2	2.5%	40%	81 bp	1.4
+Pba-AGal_015-Ex1-10E-lcwgs-1-1.clmp.r1	3.6%	44%	97 bp	1.5
+Pba-AGal_015-Ex1-10E-lcwgs-1-1.clmp.r2	3.3%	44%	97 bp	1.5
+Pba-AGal_016-Ex1-10F-lcwgs-1-1.clmp.r1	4.7%	55%	128 bp	0.2
+Pba-AGal_016-Ex1-10F-lcwgs-1-1.clmp.r2	3.9%	55%	128 bp	0.2
+Pba-AGal_017-Ex1-9C-lcwgs-1-1.clmp.r1	4.8%	40%	93 bp	1.7
+Pba-AGal_017-Ex1-9C-lcwgs-1-1.clmp.r2	4.3%	40%	93 bp	1.7
+Pba-AGal_018-Ex1-10H-lcwgs-1-1.clmp.r1	7.7%	56%	124 bp	0.2
+Pba-AGal_018-Ex1-10H-lcwgs-1-1.clmp.r2	6.6%	56%	124 bp	0.2
+Pba-AGal_019-Ex1-11A-lcwgs-1-1.clmp.r1	2.0%	36%	96 bp	1.5
+Pba-AGal_019-Ex1-11A-lcwgs-1-1.clmp.r2	1.9%	36%	96 bp	1.5
+Pba-AGal_020-Ex1-11B-lcwgs-1-1.clmp.r1	1.7%	39%	87 bp	3.2
+Pba-AGal_020-Ex1-11B-lcwgs-1-1.clmp.r2	1.7%	39%	87 bp	3.2
+Pba-AMar_001-Ex1-3F-lcwgs-1-1.clmp.r1	3.4%	38%	108 bp	0.7
+Pba-AMar_001-Ex1-3F-lcwgs-1-1.clmp.r2	3.1%	38%	108 bp	0.7
+Pba-AMar_002-Ex1-3G-lcwgs-1-1.clmp.r1	3.6%	42%	117 bp	1.1
+Pba-AMar_002-Ex1-3G-lcwgs-1-1.clmp.r2	3.3%	42%	117 bp	1.1
+Pba-AMar_003-Ex1-3H-lcwgs-1-1.clmp.r1	2.1%	41%	92 bp	0.3
+Pba-AMar_003-Ex1-3H-lcwgs-1-1.clmp.r2	1.9%	41%	92 bp	0.3
+Pba-AMar_004-Ex1-4A-lcwgs-1-1.clmp.r1	2.3%	44%	99 bp	1.1
+Pba-AMar_004-Ex1-4A-lcwgs-1-1.clmp.r2	2.1%	44%	99 bp	1.1
+Pba-AMar_005-Ex1-4B-lcwgs-1-1.clmp.r1	1.8%	40%	95 bp	0.3
+Pba-AMar_005-Ex1-4B-lcwgs-1-1.clmp.r2	1.6%	40%	95 bp	0.3
+Pba-AMar_006-Ex1-4C-lcwgs-1-1.clmp.r1	0.9%	46%	72 bp	0.0
+Pba-AMar_006-Ex1-4C-lcwgs-1-1.clmp.r2	0.8%	46%	72 bp	0.0
+Pba-AMar_007-Ex1-4D-lcwgs-1-1.clmp.r1	3.4%	39%	123 bp	0.3
+Pba-AMar_007-Ex1-4D-lcwgs-1-1.clmp.r2	3.0%	39%	123 bp	0.3
+Pba-AMar_008-Ex1-4E-lcwgs-1-1.clmp.r1	1.8%	41%	85 bp	3.4
+Pba-AMar_008-Ex1-4E-lcwgs-1-1.clmp.r2	1.6%	41%	85 bp	3.4
+Pba-AMar_009-Ex1-4F-lcwgs-1-1.clmp.r1	2.5%	38%	102 bp	2.7
+Pba-AMar_009-Ex1-4F-lcwgs-1-1.clmp.r2	2.4%	38%	102 bp	2.7
+Pba-AMar_010-Ex1-4G-lcwgs-1-1.clmp.r1	2.3%	41%	95 bp	1.7
+Pba-AMar_010-Ex1-4G-lcwgs-1-1.clmp.r2	2.2%	41%	95 bp	1.7
+Pba-AMar_011-Ex1-4H-lcwgs-1-1.clmp.r1	2.0%	40%	84 bp	2.0
+Pba-AMar_011-Ex1-4H-lcwgs-1-1.clmp.r2	1.8%	40%	84 bp	2.0
+Pba-AMar_012-Ex1-5A-lcwgs-1-1.clmp.r1	1.8%	37%	94 bp	0.5
+Pba-AMar_012-Ex1-5A-lcwgs-1-1.clmp.r2	1.7%	37%	94 bp	0.5
+Pba-AMar_013-Ex1-5B-lcwgs-1-1.clmp.r1	1.4%	44%	81 bp	0.7
+Pba-AMar_013-Ex1-5B-lcwgs-1-1.clmp.r2	1.3%	44%	81 bp	0.7
+Pba-AMar_014-Ex1-5C-lcwgs-1-1.clmp.r1	1.8%	41%	90 bp	1.0
+Pba-AMar_014-Ex1-5C-lcwgs-1-1.clmp.r2	1.7%	41%	90 bp	1.0
+Pba-APal_001-Ex1-7E-lcwgs-1-1.clmp.r1	2.4%	40%	104 bp	2.8
+Pba-APal_001-Ex1-7E-lcwgs-1-1.clmp.r2	2.2%	40%	104 bp	2.8
+Pba-APal_002-Ex1-7F-lcwgs-1-1.clmp.r1	2.4%	43%	101 bp	2.1
+Pba-APal_002-Ex1-7F-lcwgs-1-1.clmp.r2	2.2%	43%	101 bp	2.1
+Pba-APal_003-Ex1-7G-lcwgs-1-1.clmp.r1	2.7%	43%	104 bp	2.2
+Pba-APal_003-Ex1-7G-lcwgs-1-1.clmp.r2	2.5%	44%	104 bp	2.2
+Pba-APal_004-Ex1-7H-lcwgs-1-1.clmp.r1	2.7%	42%	107 bp	1.9
+Pba-APal_004-Ex1-7H-lcwgs-1-1.clmp.r2	2.5%	42%	107 bp	1.9
+Pba-APal_005-Ex1-8A-lcwgs-1-1.clmp.r1	3.9%	40%	113 bp	3.0
+Pba-APal_005-Ex1-8A-lcwgs-1-1.clmp.r2	3.5%	40%	113 bp	3.0
+Pba-APal_006-Ex1-8B-lcwgs-1-1.clmp.r1	2.7%	40%	104 bp	2.2
+Pba-APal_006-Ex1-8B-lcwgs-1-1.clmp.r2	2.5%	40%	104 bp	2.2
+Pba-APal_007-Ex1-8C-lcwgs-1-1.clmp.r1	3.0%	43%	104 bp	2.0
+Pba-APal_007-Ex1-8C-lcwgs-1-1.clmp.r2	2.7%	43%	104 bp	2.0
+Pba-APal_008-Ex1-8D-lcwgs-1-1.clmp.r1	2.4%	43%	91 bp	1.8
+Pba-APal_008-Ex1-8D-lcwgs-1-1.clmp.r2	2.2%	43%	91 bp	1.8
+Pba-APal_009-Ex1-8E-lcwgs-1-1.clmp.r1	2.5%	42%	96 bp	2.0
+Pba-APal_009-Ex1-8E-lcwgs-1-1.clmp.r2	2.3%	42%	96 bp	2.0
+Pba-APal_010-Ex1-8F-lcwgs-1-1.clmp.r1	1.9%	36%	96 bp	1.9
+Pba-APal_010-Ex1-8F-lcwgs-1-1.clmp.r2	1.8%	36%	96 bp	1.9
+Pba-ATat_001-Ex1-9E-lcwgs-1-1.clmp.r1	2.1%	38%	102 bp	1.7
+Pba-ATat_001-Ex1-9E-lcwgs-1-1.clmp.r2	2.0%	38%	102 bp	1.7
+Pba-ATat_002-Ex1-10E-lcwgs-1-1.clmp.r1	1.8%	40%	97 bp	0.3
+Pba-ATat_002-Ex1-10E-lcwgs-1-1.clmp.r2	1.7%	40%	97 bp	0.3
+Pba-ATat_003-Ex1-11E-lcwgs-1-1.clmp.r1	2.9%	38%	99 bp	1.2
+Pba-ATat_003-Ex1-11E-lcwgs-1-1.clmp.r2	2.7%	38%	99 bp	1.2
+Pba-ATat_004-Ex1-12E-lcwgs-1-1.clmp.r1	3.5%	40%	104 bp	0.5
+Pba-ATat_004-Ex1-12E-lcwgs-1-1.clmp.r2	3.2%	40%	104 bp	0.5
+Pba-ATat_005-Ex1-1F-lcwgs-1-1.clmp.r1	2.2%	38%	105 bp	1.3
+Pba-ATat_005-Ex1-1F-lcwgs-1-1.clmp.r2	2.0%	38%	105 bp	1.3
+Pba-ATat_006-Ex1-2F-lcwgs-1-1.clmp.r1	2.0%	40%	103 bp	0.3
+Pba-ATat_006-Ex1-2F-lcwgs-1-1.clmp.r2	1.9%	40%	103 bp	0.3
+Pba-ATat_007-Ex1-3F-lcwgs-1-1.clmp.r1	2.8%	42%	107 bp	0.2
+Pba-ATat_007-Ex1-3F-lcwgs-1-1.clmp.r2	2.5%	42%	107 bp	0.2
+Pba-ATat_008-Ex1-4F-lcwgs-1-1.clmp.r1	3.5%	42%	108 bp	0.2
+Pba-ATat_008-Ex1-4F-lcwgs-1-1.clmp.r2	3.2%	42%	108 bp	0.2
+Pba-ATat_009-Ex1-5F-lcwgs-1-1.clmp.r1	3.0%	37%	102 bp	0.2
+Pba-ATat_009-Ex1-5F-lcwgs-1-1.clmp.r2	2.7%	37%	102 bp	0.2
+Pba-ATat_010-Ex1-6F-lcwgs-1-1.clmp.r1	3.8%	39%	112 bp	1.7
+Pba-ATat_010-Ex1-6F-lcwgs-1-1.clmp.r2	3.5%	39%	112 bp	1.7
+Pba-ATat_011-Ex1-7F-lcwgs-1-1.clmp.r1	2.5%	41%	110 bp	0.8
+Pba-ATat_011-Ex1-7F-lcwgs-1-1.clmp.r2	2.4%	41%	110 bp	0.8
+Pba-ATat_012-Ex1-8F-lcwgs-1-1.clmp.r1	2.4%	38%	107 bp	1.2
+Pba-ATat_012-Ex1-8F-lcwgs-1-1.clmp.r2	2.2%	38%	107 bp	1.2
+Pba-ATat_013-Ex1-9F-lcwgs-1-1.clmp.r1	1.9%	38%	99 bp	1.4
+Pba-ATat_013-Ex1-9F-lcwgs-1-1.clmp.r2	1.8%	38%	99 bp	1.4
+Pba-ATat_014-Ex1-10F-lcwgs-1-1.clmp.r1	2.7%	42%	105 bp	1.1
+Pba-ATat_014-Ex1-10F-lcwgs-1-1.clmp.r2	2.5%	42%	105 bp	1.1
+Pba-ATat_015-Ex1-11F-lcwgs-1-1.clmp.r1	3.0%	41%	109 bp	0.3
+Pba-ATat_015-Ex1-11F-lcwgs-1-1.clmp.r2	2.7%	41%	109 bp	0.3
+Pba-ATat_016-Ex1-12F-lcwgs-1-1.clmp.r1	1.1%	44%	87 bp	0.0
+Pba-ATat_016-Ex1-12F-lcwgs-1-1.clmp.r2	1.0%	44%	87 bp	0.0
+Pba-ATat_017-Ex1-1G-lcwgs-1-1.clmp.r1	0.2%	40%	101 bp	0.0
+Pba-ATat_017-Ex1-1G-lcwgs-1-1.clmp.r2	0.2%	40%	101 bp	0.0
+Pba-ATat_018-Ex1-2G-lcwgs-1-1.clmp.r1	1.6%	40%	94 bp	0.8
+Pba-ATat_018-Ex1-2G-lcwgs-1-1.clmp.r2	1.6%	40%	94 bp	0.8
+Pba-ATat_019-Ex1-3G-lcwgs-1-1.clmp.r1	1.9%	39%	97 bp	1.0
+Pba-ATat_019-Ex1-3G-lcwgs-1-1.clmp.r2	1.7%	39%	97 bp	1.0
+Pba-ATat_020-Ex1-4G-lcwgs-1-1.clmp.r1	2.0%	40%	100 bp	0.9
+Pba-ATat_020-Ex1-4G-lcwgs-1-1.clmp.r2	1.8%	40%	100 bp	0.9
+Pba-ATat_021-Ex1-5G-lcwgs-1-1.clmp.r1	1.9%	40%	99 bp	1.0
+Pba-ATat_021-Ex1-5G-lcwgs-1-1.clmp.r2	1.8%	40%	99 bp	1.0
+Pba-CCab_003-Ex1-7C-lcwgs-1-1.clmp.r1	3.1%	42%	121 bp	1.2
+Pba-CCab_003-Ex1-7C-lcwgs-1-1.clmp.r2	2.8%	42%	121 bp	1.2
+Pba-CCab_006-Ex1-9C-lcwgs-1-1.clmp.r1	3.6%	41%	123 bp	0.9
+Pba-CCab_006-Ex1-9C-lcwgs-1-1.clmp.r2	3.3%	42%	123 bp	0.9
+Pba-CCab_009-Ex1-6A-lcwgs-1-1.clmp.r1	4.5%	42%	125 bp	2.1
+Pba-CCab_009-Ex1-6A-lcwgs-1-1.clmp.r2	4.1%	43%	125 bp	2.1
+Pba-CCab_012-Ex1-9A-lcwgs-1-1.clmp.r1	3.5%	41%	123 bp	1.5
+Pba-CCab_012-Ex1-9A-lcwgs-1-1.clmp.r2	3.1%	41%	123 bp	1.5
+Pba-CCab_016-Ex1-4C-lcwgs-1-1.clmp.r1	4.3%	43%	129 bp	1.3
+Pba-CCab_016-Ex1-4C-lcwgs-1-1.clmp.r2	4.0%	43%	128 bp	1.3
+Pba-CCab_019-Ex1-5B-lcwgs-1-1.clmp.r1	4.1%	42%	130 bp	1.3
+Pba-CCab_019-Ex1-5B-lcwgs-1-1.clmp.r2	3.7%	42%	130 bp	1.3
+Pba-CCab_020-Ex1-6C-lcwgs-1-1.clmp.r1	3.6%	42%	123 bp	1.1
+Pba-CCab_020-Ex1-6C-lcwgs-1-1.clmp.r2	3.3%	42%	123 bp	1.1
+Pba-CCab_021-Ex1-12C-lcwgs-1-1.clmp.r1	5.6%	43%	138 bp	1.3
+Pba-CCab_021-Ex1-12C-lcwgs-1-1.clmp.r2	4.9%	43%	137 bp	1.3
+Pba-CCab_023-Ex1-6B-lcwgs-1-1.clmp.r1	4.1%	41%	124 bp	1.7
+Pba-CCab_023-Ex1-6B-lcwgs-1-1.clmp.r2	3.7%	42%	124 bp	1.7
+Pba-CCab_024-Ex1-4B-lcwgs-1-1.clmp.r1	4.2%	43%	125 bp	1.5
+Pba-CCab_024-Ex1-4B-lcwgs-1-1.clmp.r2	4.1%	43%	125 bp	1.5
+Pba-CCab_026-Ex1-3C-lcwgs-1-1.clmp.r1	3.6%	41%	128 bp	1.3
+Pba-CCab_026-Ex1-3C-lcwgs-1-1.clmp.r2	3.2%	42%	128 bp	1.3
+Pba-CCab_027-Ex1-1D-lcwgs-1-1.clmp.r1	2.7%	42%	121 bp	0.8
+Pba-CCab_027-Ex1-1D-lcwgs-1-1.clmp.r2	2.4%	42%	120 bp	0.8
+Pba-CCab_028-Ex1-10C-lcwgs-1-1.clmp.r1	2.9%	41%	118 bp	1.0
+Pba-CCab_028-Ex1-10C-lcwgs-1-1.clmp.r2	2.6%	41%	118 bp	1.0
+Pba-CCab_029-Ex1-1A-lcwgs-1-1.clmp.r1	3.4%	41%	125 bp	2.0
+Pba-CCab_029-Ex1-1A-lcwgs-1-1.clmp.r2	3.1%	42%	125 bp	2.0
+Pba-CCab_030-Ex1-2C-lcwgs-1-1.clmp.r1	3.3%	41%	120 bp	1.5
+Pba-CCab_030-Ex1-2C-lcwgs-1-1.clmp.r2	3.1%	41%	120 bp	1.5
+Pba-CCab_032-Ex1-2B-lcwgs-1-1.clmp.r1	4.4%	42%	127 bp	1.6
+Pba-CCab_032-Ex1-2B-lcwgs-1-1.clmp.r2	4.0%	42%	126 bp	1.6
+Pba-CCab_033-Ex1-11B-lcwgs-1-1.clmp.r1	4.1%	43%	123 bp	0.9
+Pba-CCab_033-Ex1-11B-lcwgs-1-1.clmp.r2	3.8%	43%	122 bp	0.9
+Pba-CCab_037-Ex1-1C-lcwgs-1-1.clmp.r1	3.9%	43%	122 bp	1.0
+Pba-CCab_037-Ex1-1C-lcwgs-1-1.clmp.r2	3.5%	43%	122 bp	1.0
+Pba-CCab_039-Ex1-9B-lcwgs-1-1.clmp.r1	3.9%	43%	122 bp	1.0
+Pba-CCab_039-Ex1-9B-lcwgs-1-1.clmp.r2	3.6%	43%	122 bp	1.0
+Pba-CCab_041-Ex1-8C-lcwgs-1-1.clmp.r1	4.8%	43%	133 bp	0.7
+Pba-CCab_041-Ex1-8C-lcwgs-1-1.clmp.r2	4.4%	43%	133 bp	0.7
+Pba-CCab_042-Ex1-12B-lcwgs-1-1.clmp.r1	3.4%	41%	118 bp	1.2
+Pba-CCab_042-Ex1-12B-lcwgs-1-1.clmp.r2	3.1%	41%	118 bp	1.2
+Pba-CCab_043-Ex1-11C-lcwgs-1-1.clmp.r1	3.4%	42%	123 bp	1.2
+Pba-CCab_043-Ex1-11C-lcwgs-1-1.clmp.r2	3.0%	42%	123 bp	1.2
+Pba-CCab_044-Ex1-8B-lcwgs-1-1.clmp.r1	5.8%	44%	132 bp	1.1
+Pba-CCab_044-Ex1-8B-lcwgs-1-1.clmp.r2	5.4%	44%	132 bp	1.1
+Pba-CCab_045-Ex1-3B-lcwgs-1-1.clmp.r1	4.1%	42%	132 bp	1.7
+Pba-CCab_045-Ex1-3B-lcwgs-1-1.clmp.r2	3.7%	42%	132 bp	1.7
+Pba-CCab_047-Ex1-8A-lcwgs-1-1.clmp.r1	5.2%	42%	135 bp	0.4
+Pba-CCab_047-Ex1-8A-lcwgs-1-1.clmp.r2	4.6%	43%	135 bp	0.4
+Pba-CCab_049-Ex1-7A-lcwgs-1-1.clmp.r1	2.8%	41%	115 bp	3.4
+Pba-CCab_049-Ex1-7A-lcwgs-1-1.clmp.r2	2.6%	41%	115 bp	3.4
+Pba-CCab_050-Ex1-10A-lcwgs-1-1.clmp.r1	3.6%	41%	125 bp	1.1
+Pba-CCab_050-Ex1-10A-lcwgs-1-1.clmp.r2	3.1%	41%	125 bp	1.1
+Pba-CCab_051-Ex1-12A-lcwgs-1-1.clmp.r1	5.0%	44%	118 bp	1.7
+Pba-CCab_051-Ex1-12A-lcwgs-1-1.clmp.r2	4.8%	44%	118 bp	1.7
+Pba-CCab_052-Ex1-10B-lcwgs-1-1.clmp.r1	3.4%	42%	124 bp	1.0
+Pba-CCab_052-Ex1-10B-lcwgs-1-1.clmp.r2	3.1%	42%	124 bp	1.0
+Pba-CCab_053-Ex1-7B-lcwgs-1-1.clmp.r1	3.1%	41%	124 bp	1.4
+Pba-CCab_053-Ex1-7B-lcwgs-1-1.clmp.r2	2.7%	41%	124 bp	1.4
+Pba-CCab_054-Ex1-5A-lcwgs-1-1.clmp.r1	3.8%	42%	126 bp	3.1
+Pba-CCab_054-Ex1-5A-lcwgs-1-1.clmp.r2	3.5%	42%	126 bp	3.1
+Pba-CCab_056-Ex1-2A-lcwgs-1-1.clmp.r1	3.8%	41%	123 bp	2.0
+Pba-CCab_056-Ex1-2A-lcwgs-1-1.clmp.r2	3.5%	42%	123 bp	2.0
+Pba-CCab_060-Ex1-3A-lcwgs-1-1.clmp.r1	4.1%	42%	132 bp	1.5
+Pba-CCab_060-Ex1-3A-lcwgs-1-1.clmp.r2	3.5%	43%	131 bp	1.5
+Pba-CCab_062-Ex1-5C-lcwgs-1-1.clmp.r1	4.1%	43%	127 bp	1.7
+Pba-CCab_062-Ex1-5C-lcwgs-1-1.clmp.r2	3.8%	43%	127 bp	1.7
+Pba-CCab_063-Ex1-11A-lcwgs-1-1.clmp.r1	3.5%	44%	121 bp	1.7
+Pba-CCab_063-Ex1-11A-lcwgs-1-1.clmp.r2	3.2%	44%	121 bp	1.7
+Pba-CCab_064-Ex1-1B-lcwgs-1-1.clmp.r1	3.5%	42%	129 bp	1.2
+Pba-CCab_064-Ex1-1B-lcwgs-1-1.clmp.r2	3.0%	42%	129 bp	1.2
+Pba-CCab_066-Ex1-4A-lcwgs-1-1.clmp.r1	6.5%	45%	131 bp	1.3
+Pba-CCab_066-Ex1-4A-lcwgs-1-1.clmp.r2	6.2%	45%	131 bp	1.3
+Pba-CCab_066-Ex1-8B-lcwgs-1-1.clmp.r1	3.7%	42%	127 bp	0.0
+Pba-CCab_066-Ex1-8B-lcwgs-1-1.clmp.r2	3.2%	42%	127 bp	0.0
+Pba-CCab_067-Ex1-8C-lcwgs-1-1.clmp.r1	2.9%	42%	121 bp	0.4
+Pba-CCab_067-Ex1-8C-lcwgs-1-1.clmp.r2	2.6%	42%	121 bp	0.4
+Pba-CCab_068-Ex1-8D-lcwgs-1-1.clmp.r1	4.5%	42%	131 bp	1.2
+Pba-CCab_068-Ex1-8D-lcwgs-1-1.clmp.r2	4.1%	42%	131 bp	1.2
+Pba-CCab_069-Ex1-8E-lcwgs-1-1.clmp.r1	4.4%	43%	124 bp	0.4
+Pba-CCab_069-Ex1-8E-lcwgs-1-1.clmp.r2	4.2%	43%	124 bp	0.4
+Pba-CCab_070-Ex1-8F-lcwgs-1-1.clmp.r1	4.0%	42%	121 bp	0.3
+Pba-CCab_070-Ex1-8F-lcwgs-1-1.clmp.r2	3.6%	42%	121 bp	0.3
+Pba-CCab_071-Ex1-8G-lcwgs-1-1.clmp.r1	3.6%	42%	125 bp	0.6
+Pba-CCab_071-Ex1-8G-lcwgs-1-1.clmp.r2	3.4%	42%	125 bp	0.6
+Pba-CCab_072-Ex1-8H-lcwgs-1-1.clmp.r1	1.7%	43%	114 bp	0.0
+Pba-CCab_072-Ex1-8H-lcwgs-1-1.clmp.r2	1.5%	43%	114 bp	0.0
+Pba-CCab_073-Ex1-9A-lcwgs-1-1.clmp.r1	4.6%	45%	115 bp	0.0
+Pba-CCab_073-Ex1-9A-lcwgs-1-1.clmp.r2	4.0%	45%	115 bp	0.0
+Pba-CCab_074-Ex1-9B-lcwgs-1-1.clmp.r1	4.5%	42%	127 bp	1.6
+Pba-CCab_074-Ex1-9B-lcwgs-1-1.clmp.r2	4.2%	42%	127 bp	1.6
+Pba-CCab_075-Ex1-9C-lcwgs-1-1.clmp.r1	4.1%	45%	106 bp	0.1
+Pba-CCab_075-Ex1-9C-lcwgs-1-1.clmp.r2	3.6%	45%	106 bp	0.1
+Pba-CCab_076-Ex1-9D-lcwgs-1-1.clmp.r1	5.1%	42%	131 bp	1.0
+Pba-CCab_076-Ex1-9D-lcwgs-1-1.clmp.r2	4.6%	42%	131 bp	1.0
+Pba-CCab_077-Ex1-9E-lcwgs-1-1.clmp.r1	4.6%	42%	126 bp	0.7
+Pba-CCab_077-Ex1-9E-lcwgs-1-1.clmp.r2	4.3%	42%	126 bp	0.7
+Pba-CCab_078-Ex1-9F-lcwgs-1-1.clmp.r1	4.1%	41%	119 bp	0.3
+Pba-CCab_078-Ex1-9F-lcwgs-1-1.clmp.r2	3.7%	42%	119 bp	0.3
+Pba-CCab_079-Ex1-9G-lcwgs-1-1.clmp.r1	4.1%	42%	122 bp	1.3
+Pba-CCab_079-Ex1-9G-lcwgs-1-1.clmp.r2	3.8%	42%	122 bp	1.3
+Pba-CCab_080-Ex1-9H-lcwgs-1-1.clmp.r1	3.1%	41%	119 bp	1.1
+Pba-CCab_080-Ex1-9H-lcwgs-1-1.clmp.r2	2.8%	41%	119 bp	1.1
+Pba-CCab_081-Ex1-10A-lcwgs-1-1.clmp.r1	3.7%	42%	126 bp	1.5
+Pba-CCab_081-Ex1-10A-lcwgs-1-1.clmp.r2	3.4%	43%	126 bp	1.5
+Pba-CCab_082-Ex1-10B-lcwgs-1-1.clmp.r1	3.7%	43%	125 bp	1.3
+Pba-CCab_082-Ex1-10B-lcwgs-1-1.clmp.r2	3.3%	43%	125 bp	1.3
+Pba-CCab_083-Ex1-10C-lcwgs-1-1.clmp.r1	3.7%	43%	121 bp	0.3
+Pba-CCab_083-Ex1-10C-lcwgs-1-1.clmp.r2	3.3%	43%	121 bp	0.3
+Pba-CCab_084-Ex1-10D-lcwgs-1-1.clmp.r1	3.0%	42%	126 bp	0.7
+Pba-CCab_084-Ex1-10D-lcwgs-1-1.clmp.r2	2.8%	42%	126 bp	0.7
+Pba-CCab_085-Ex1-10E-lcwgs-1-1.clmp.r1	3.8%	42%	126 bp	0.8
+Pba-CCab_085-Ex1-10E-lcwgs-1-1.clmp.r2	3.4%	42%	126 bp	0.8
+Pba-CCab_086-Ex1-10F-lcwgs-1-1.clmp.r1	4.3%	43%	126 bp	3.0
+Pba-CCab_086-Ex1-10F-lcwgs-1-1.clmp.r2	3.9%	43%	126 bp	3.0
+Pba-CCab_087-Ex1-10G-lcwgs-1-1.clmp.r1	3.8%	43%	122 bp	0.5
+Pba-CCab_087-Ex1-10G-lcwgs-1-1.clmp.r2	3.5%	43%	122 bp	0.5
+Pba-CCab_088-Ex1-10H-lcwgs-1-1.clmp.r1	4.5%	42%	127 bp	1.0
+Pba-CCab_088-Ex1-10H-lcwgs-1-1.clmp.r2	4.1%	43%	127 bp	1.0
+Pba-CCab_089-Ex1-11A-lcwgs-1-1.clmp.r1	4.5%	45%	122 bp	0.5
+Pba-CCab_089-Ex1-11A-lcwgs-1-1.clmp.r2	4.3%	45%	122 bp	0.5
+Pba-CCab_090-Ex1-11B-lcwgs-1-1.clmp.r1	1.2%	43%	123 bp	0.0
+Pba-CCab_090-Ex1-11B-lcwgs-1-1.clmp.r2	1.1%	43%	123 bp	0.0
+Pba-CCab_091-Ex1-11C-lcwgs-1-1.clmp.r1	4.0%	43%	120 bp	0.2
+Pba-CCab_091-Ex1-11C-lcwgs-1-1.clmp.r2	3.7%	43%	120 bp	0.2
+Pba-CCab_092-Ex1-11D-lcwgs-1-1.clmp.r1	4.3%	41%	132 bp	1.3
+Pba-CCab_092-Ex1-11D-lcwgs-1-1.clmp.r2	3.9%	41%	132 bp	1.3
+Pba-CCab_093-Ex1-11E-lcwgs-1-1.clmp.r1	2.8%	40%	121 bp	0.9
+Pba-CCab_093-Ex1-11E-lcwgs-1-1.clmp.r2	2.5%	40%	120 bp	0.9
+Pba-CCab_094-Ex1-11F-lcwgs-1-1.clmp.r1	4.4%	41%	118 bp	0.1
+Pba-CCab_094-Ex1-11F-lcwgs-1-1.clmp.r2	3.9%	41%	118 bp	0.1
+Pba-CCab_095-Ex1-11G-lcwgs-1-1.clmp.r1	3.2%	44%	125 bp	0.4
+Pba-CCab_095-Ex1-11G-lcwgs-1-1.clmp.r2	2.9%	44%	125 bp	0.4
+Pba-CCab_096-Ex1-11H-lcwgs-1-1.clmp.r1	4.1%	41%	128 bp	1.3
+Pba-CCab_096-Ex1-11H-lcwgs-1-1.clmp.r2	3.8%	41%	128 bp	1.3
+Pba-CMas_001-Ex1-5A-lcwgs-1-1.clmp.r1	5.0%	44%	124 bp	5.0
+Pba-CMas_001-Ex1-5A-lcwgs-1-1.clmp.r2	4.8%	44%	124 bp	5.0
+Pba-CMas_002-Ex1-5B-lcwgs-1-1.clmp.r1	5.3%	41%	131 bp	11.6
+Pba-CMas_002-Ex1-5B-lcwgs-1-1.clmp.r2	5.1%	42%	131 bp	11.6
+Pba-CMas_003-Ex1-5C-lcwgs-1-1.clmp.r1	4.1%	42%	128 bp	3.1
+Pba-CMas_003-Ex1-5C-lcwgs-1-1.clmp.r2	3.8%	42%	128 bp	3.1
+Pba-CMas_004-Ex1-5D-lcwgs-1-1.clmp.r1	4.1%	42%	131 bp	0.3
+Pba-CMas_004-Ex1-5D-lcwgs-1-1.clmp.r2	3.7%	42%	130 bp	0.3
+Pba-CMas_005-Ex1-5E-lcwgs-1-1.clmp.r1	4.4%	41%	130 bp	2.4
+Pba-CMas_005-Ex1-5E-lcwgs-1-1.clmp.r2	4.0%	41%	130 bp	2.4
+Pba-CMas_006-Ex1-5F-lcwgs-1-1.clmp.r1	4.6%	41%	124 bp	0.1
+Pba-CMas_006-Ex1-5F-lcwgs-1-1.clmp.r2	4.0%	41%	124 bp	0.1
+Pba-CMas_007-Ex1-5G-lcwgs-1-1.clmp.r1	4.3%	40%	130 bp	2.7
+Pba-CMas_007-Ex1-5G-lcwgs-1-1.clmp.r2	3.9%	40%	130 bp	2.7
+Pba-CMas_008-Ex1-5H-lcwgs-1-1.clmp.r1	0.3%	41%	119 bp	0.0
+Pba-CMas_008-Ex1-5H-lcwgs-1-1.clmp.r2	0.2%	41%	119 bp	0.0
+Pba-CMas_009-Ex1-6A-lcwgs-1-1.clmp.r1	4.5%	42%	135 bp	1.8
+Pba-CMas_009-Ex1-6A-lcwgs-1-1.clmp.r2	4.1%	42%	135 bp	1.8
+Pba-CMas_010-Ex1-6B-lcwgs-1-1.clmp.r1	3.8%	42%	128 bp	4.5
+Pba-CMas_010-Ex1-6B-lcwgs-1-1.clmp.r2	3.6%	42%	128 bp	4.5
+Pba-CMas_011-Ex1-6C-lcwgs-1-1.clmp.r1	3.5%	41%	127 bp	1.1
+Pba-CMas_011-Ex1-6C-lcwgs-1-1.clmp.r2	3.2%	41%	127 bp	1.1
+Pba-CMas_012-Ex1-6D-lcwgs-1-1.clmp.r1	2.7%	43%	115 bp	1.7
+Pba-CMas_012-Ex1-6D-lcwgs-1-1.clmp.r2	2.5%	43%	115 bp	1.7
+Pba-CMas_013-Ex1-6E-lcwgs-1-1.clmp.r1	4.1%	41%	133 bp	1.2
+Pba-CMas_013-Ex1-6E-lcwgs-1-1.clmp.r2	3.7%	41%	133 bp	1.2
+Pba-CMas_014-Ex1-6F-lcwgs-1-1.clmp.r1	4.2%	41%	131 bp	1.1
+Pba-CMas_014-Ex1-6F-lcwgs-1-1.clmp.r2	3.8%	41%	131 bp	1.1
+Pba-CMas_015-Ex1-6G-lcwgs-1-1.clmp.r1	3.2%	41%	124 bp	0.9
+Pba-CMas_015-Ex1-6G-lcwgs-1-1.clmp.r2	2.9%	41%	124 bp	0.9
+Pba-CMas_016-Ex1-6H-lcwgs-1-1.clmp.r1	2.5%	40%	112 bp	0.6
+Pba-CMas_016-Ex1-6H-lcwgs-1-1.clmp.r2	2.4%	40%	112 bp	0.6
+Pba-CMas_017-Ex1-7A-lcwgs-1-1.clmp.r1	4.9%	44%	120 bp	0.2
+Pba-CMas_017-Ex1-7A-lcwgs-1-1.clmp.r2	4.4%	44%	120 bp	0.2
+Pba-CMas_018-Ex1-7B-lcwgs-1-1.clmp.r1	4.2%	43%	129 bp	2.9
+Pba-CMas_018-Ex1-7B-lcwgs-1-1.clmp.r2	3.9%	43%	129 bp	2.9
+Pba-CMas_019-Ex1-7C-lcwgs-1-1.clmp.r1	3.5%	41%	127 bp	0.9
+Pba-CMas_019-Ex1-7C-lcwgs-1-1.clmp.r2	3.2%	41%	127 bp	0.9
+Pba-CMas_020-Ex1-7D-lcwgs-1-1.clmp.r1	3.2%	42%	126 bp	0.5
+Pba-CMas_020-Ex1-7D-lcwgs-1-1.clmp.r2	2.8%	42%	126 bp	0.5
+Pba-CMas_021-Ex1-7E-lcwgs-1-1.clmp.r1	3.2%	41%	124 bp	1.2
+Pba-CMas_021-Ex1-7E-lcwgs-1-1.clmp.r2	2.9%	42%	124 bp	1.2
+Pba-CMas_022-Ex1-7F-lcwgs-1-1.clmp.r1	3.6%	41%	126 bp	0.8
+Pba-CMas_022-Ex1-7F-lcwgs-1-1.clmp.r2	3.2%	41%	126 bp	0.8
+Pba-CMas_023-Ex1-7G-lcwgs-1-1.clmp.r1	1.8%	42%	114 bp	0.0
+Pba-CMas_023-Ex1-7G-lcwgs-1-1.clmp.r2	1.4%	42%	114 bp	0.0
+Pba-CMas_024-Ex1-7H-lcwgs-1-1.clmp.r1	3.0%	41%	122 bp	1.3
+Pba-CMas_024-Ex1-7H-lcwgs-1-1.clmp.r2	2.7%	41%	122 bp	1.3
+Pba-CMas_025-Ex1-8A-lcwgs-1-1.clmp.r1	3.0%	44%	120 bp	1.2
+Pba-CMas_025-Ex1-8A-lcwgs-1-1.clmp.r2	2.9%	44%	120 bp	1.2
+Pba-CTat_009-Ex1-1D-lcwgs-1-1.clmp.r1	4.4%	40%	142 bp	0.3
+Pba-CTat_009-Ex1-1D-lcwgs-1-1.clmp.r2	3.7%	40%	142 bp	0.3
+Pba-CTat_010-Ex1-6B-lcwgs-1-1.clmp.r1	3.6%	39%	128 bp	0.9
+Pba-CTat_010-Ex1-6B-lcwgs-1-1.clmp.r2	3.2%	39%	128 bp	0.9
+Pba-CTat_012-Ex1-2H-lcwgs-1-1.clmp.r1	2.9%	39%	122 bp	0.1
+Pba-CTat_012-Ex1-2H-lcwgs-1-1.clmp.r2	2.6%	39%	122 bp	0.1
+Pba-CTat_013-Ex1-5H-lcwgs-1-1.clmp.r1	3.5%	39%	129 bp	0.6
+Pba-CTat_013-Ex1-5H-lcwgs-1-1.clmp.r2	3.2%	39%	129 bp	0.6
+Pba-CTat_015-Ex1-1C-lcwgs-1-1.clmp.r1	0.3%	40%	114 bp	0.0
+Pba-CTat_015-Ex1-1C-lcwgs-1-1.clmp.r2	0.2%	40%	114 bp	0.0
+Pba-CTat_016-Ex1-4E-lcwgs-1-1.clmp.r1	6.1%	40%	140 bp	0.1
+Pba-CTat_016-Ex1-4E-lcwgs-1-1.clmp.r2	5.1%	40%	140 bp	0.1
+Pba-CTat_017-Ex1-4D-lcwgs-1-1.clmp.r1	3.7%	40%	129 bp	1.0
+Pba-CTat_017-Ex1-4D-lcwgs-1-1.clmp.r2	3.3%	40%	129 bp	1.0
+Pba-CTat_018-Ex1-1E-lcwgs-1-1.clmp.r1	1.0%	39%	117 bp	0.0
+Pba-CTat_018-Ex1-1E-lcwgs-1-1.clmp.r2	0.8%	39%	117 bp	0.0
+Pba-CTat_019-Ex1-5F-lcwgs-1-1.clmp.r1	3.9%	39%	131 bp	0.7
+Pba-CTat_019-Ex1-5F-lcwgs-1-1.clmp.r2	3.5%	39%	131 bp	0.7
+Pba-CTat_020-Ex1-8B-lcwgs-1-1.clmp.r1	3.9%	39%	129 bp	1.2
+Pba-CTat_020-Ex1-8B-lcwgs-1-1.clmp.r2	3.5%	39%	129 bp	1.2
+Pba-CTat_021-Ex1-3A-lcwgs-1-1.clmp.r1	3.0%	39%	122 bp	0.4
+Pba-CTat_021-Ex1-3A-lcwgs-1-1.clmp.r2	2.7%	39%	122 bp	0.4
+Pba-CTat_022-Ex1-5G-lcwgs-1-1.clmp.r1	4.1%	39%	131 bp	0.8
+Pba-CTat_022-Ex1-5G-lcwgs-1-1.clmp.r2	3.7%	39%	131 bp	0.8
+Pba-CTat_023-Ex1-4G-lcwgs-1-1.clmp.r1	1.6%	38%	114 bp	0.0
+Pba-CTat_023-Ex1-4G-lcwgs-1-1.clmp.r2	1.3%	39%	114 bp	0.0
+Pba-CTat_024-Ex1-2B-lcwgs-1-1.clmp.r1	3.3%	39%	125 bp	0.7
+Pba-CTat_024-Ex1-2B-lcwgs-1-1.clmp.r2	3.0%	39%	125 bp	0.7
+Pba-CTat_025-Ex1-7G-lcwgs-1-1.clmp.r1	4.1%	39%	131 bp	0.8
+Pba-CTat_025-Ex1-7G-lcwgs-1-1.clmp.r2	3.7%	39%	131 bp	0.8
+Pba-CTat_026-Ex1-8G-lcwgs-1-1.clmp.r1	4.1%	40%	133 bp	0.9
+Pba-CTat_026-Ex1-8G-lcwgs-1-1.clmp.r2	3.5%	40%	133 bp	0.9
+Pba-CTat_027-Ex1-2E-lcwgs-1-1.clmp.r1	1.0%	39%	115 bp	0.0
+Pba-CTat_027-Ex1-2E-lcwgs-1-1.clmp.r2	1.0%	39%	115 bp	0.0
+Pba-CTat_029-Ex1-5D-lcwgs-1-1.clmp.r1	3.3%	39%	131 bp	0.5
+Pba-CTat_029-Ex1-5D-lcwgs-1-1.clmp.r2	3.0%	39%	131 bp	0.5
+Pba-CTat_032-Ex1-8E-lcwgs-1-1.clmp.r1	3.6%	39%	132 bp	0.4
+Pba-CTat_032-Ex1-8E-lcwgs-1-1.clmp.r2	3.2%	39%	131 bp	0.4
+Pba-CTat_033-Ex1-1A-lcwgs-1-1.clmp.r1	3.6%	40%	126 bp	1.3
+Pba-CTat_033-Ex1-1A-lcwgs-1-1.clmp.r2	3.3%	41%	126 bp	1.3
+Pba-CTat_034-Ex1-7F-lcwgs-1-1.clmp.r1	3.8%	39%	132 bp	0.7
+Pba-CTat_034-Ex1-7F-lcwgs-1-1.clmp.r2	3.4%	39%	132 bp	0.7
+Pba-CTat_036-Ex1-2A-lcwgs-1-1.clmp.r1	3.3%	40%	124 bp	1.6
+Pba-CTat_036-Ex1-2A-lcwgs-1-1.clmp.r2	3.0%	40%	124 bp	1.6
+Pba-CTat_037-Ex1-4A-lcwgs-1-1.clmp.r1	3.1%	40%	125 bp	0.6
+Pba-CTat_037-Ex1-4A-lcwgs-1-1.clmp.r2	2.8%	40%	125 bp	0.6
+Pba-CTat_038-Ex1-7D-lcwgs-1-1.clmp.r1	3.4%	40%	130 bp	0.7
+Pba-CTat_038-Ex1-7D-lcwgs-1-1.clmp.r2	3.0%	40%	130 bp	0.7
+Pba-CTat_039-Ex1-3F-lcwgs-1-1.clmp.r1	3.7%	40%	129 bp	0.6
+Pba-CTat_039-Ex1-3F-lcwgs-1-1.clmp.r2	3.3%	40%	129 bp	0.6
+Pba-CTat_041-Ex1-7E-lcwgs-1-1.clmp.r1	5.3%	38%	130 bp	0.2
+Pba-CTat_041-Ex1-7E-lcwgs-1-1.clmp.r2	4.7%	38%	130 bp	0.2
+Pba-CTat_045-Ex1-3C-lcwgs-1-1.clmp.r1	3.4%	40%	127 bp	1.1
+Pba-CTat_045-Ex1-3C-lcwgs-1-1.clmp.r2	2.9%	40%	127 bp	1.1
+Pba-CTat_046-Ex1-3G-lcwgs-1-1.clmp.r1	4.1%	39%	134 bp	0.7
+Pba-CTat_046-Ex1-3G-lcwgs-1-1.clmp.r2	3.5%	40%	133 bp	0.7
+Pba-CTat_047-Ex1-8A-lcwgs-1-1.clmp.r1	4.1%	40%	130 bp	1.0
+Pba-CTat_047-Ex1-8A-lcwgs-1-1.clmp.r2	3.7%	40%	130 bp	1.0
+Pba-CTat_048-Ex1-4C-lcwgs-1-1.clmp.r1	3.9%	40%	130 bp	0.8
+Pba-CTat_048-Ex1-4C-lcwgs-1-1.clmp.r2	3.4%	40%	130 bp	0.8
+Pba-CTat_049-Ex1-2D-lcwgs-1-1.clmp.r1	3.7%	39%	131 bp	0.7
+Pba-CTat_049-Ex1-2D-lcwgs-1-1.clmp.r2	3.3%	39%	131 bp	0.7
+Pba-CTat_050-Ex1-6D-lcwgs-1-1.clmp.r1	3.3%	40%	127 bp	0.4
+Pba-CTat_050-Ex1-6D-lcwgs-1-1.clmp.r2	3.0%	40%	127 bp	0.4
+Pba-CTat_051-Ex1-7A-lcwgs-1-1.clmp.r1	3.3%	40%	126 bp	0.6
+Pba-CTat_051-Ex1-7A-lcwgs-1-1.clmp.r2	2.9%	40%	126 bp	0.6
+Pba-CTat_052-Ex1-3B-lcwgs-1-1.clmp.r1	4.1%	39%	128 bp	1.7
+Pba-CTat_052-Ex1-3B-lcwgs-1-1.clmp.r2	3.7%	39%	128 bp	1.7
+Pba-CTat_053-Ex1-5E-lcwgs-1-1.clmp.r1	4.6%	40%	140 bp	0.3
+Pba-CTat_053-Ex1-5E-lcwgs-1-1.clmp.r2	4.0%	40%	140 bp	0.3
+Pba-CTat_054-Ex1-6E-lcwgs-1-1.clmp.r1	4.4%	40%	138 bp	0.3
+Pba-CTat_054-Ex1-6E-lcwgs-1-1.clmp.r2	3.6%	41%	138 bp	0.3
+Pba-CTat_055-Ex1-2F-lcwgs-1-1.clmp.r1	3.4%	39%	129 bp	0.6
+Pba-CTat_055-Ex1-2F-lcwgs-1-1.clmp.r2	3.1%	39%	129 bp	0.6
+Pba-CTat_056-Ex1-8C-lcwgs-1-1.clmp.r1	0.5%	40%	116 bp	0.0
+Pba-CTat_056-Ex1-8C-lcwgs-1-1.clmp.r2	0.4%	40%	116 bp	0.0
+Pba-CTat_058-Ex1-1H-lcwgs-1-1.clmp.r1	3.2%	39%	129 bp	0.0
+Pba-CTat_058-Ex1-1H-lcwgs-1-1.clmp.r2	2.7%	40%	128 bp	0.0
+Pba-CTat_059-Ex1-8H-lcwgs-1-1.clmp.r1	4.4%	40%	137 bp	0.3
+Pba-CTat_059-Ex1-8H-lcwgs-1-1.clmp.r2	3.6%	40%	137 bp	0.3
+Pba-CTat_060-Ex1-6F-lcwgs-1-1.clmp.r1	3.4%	40%	126 bp	0.5
+Pba-CTat_060-Ex1-6F-lcwgs-1-1.clmp.r2	3.0%	41%	126 bp	0.5
+Pba-CTat_061-Ex1-2C-lcwgs-1-1.clmp.r1	3.5%	39%	127 bp	1.0
+Pba-CTat_061-Ex1-2C-lcwgs-1-1.clmp.r2	3.1%	39%	127 bp	1.0
+Pba-CTat_062-Ex1-7C-lcwgs-1-1.clmp.r1	0.8%	39%	116 bp	0.0
+Pba-CTat_062-Ex1-7C-lcwgs-1-1.clmp.r2	0.7%	39%	116 bp	0.0
+Pba-CTat_063-Ex1-8D-lcwgs-1-1.clmp.r1	3.3%	40%	124 bp	0.4
+Pba-CTat_063-Ex1-8D-lcwgs-1-1.clmp.r2	3.0%	40%	124 bp	0.4
+Pba-CTat_064-Ex1-1G-lcwgs-1-1.clmp.r1	4.1%	39%	132 bp	0.7
+Pba-CTat_064-Ex1-1G-lcwgs-1-1.clmp.r2	3.7%	39%	132 bp	0.7
+Pba-CTat_065-Ex1-6G-lcwgs-1-1.clmp.r1	3.6%	39%	130 bp	0.5
+Pba-CTat_065-Ex1-6G-lcwgs-1-1.clmp.r2	3.2%	39%	130 bp	0.5
+Pba-CTat_069-Ex1-4H-lcwgs-1-1.clmp.r1	4.9%	40%	132 bp	0.2
+Pba-CTat_069-Ex1-4H-lcwgs-1-1.clmp.r2	4.2%	40%	132 bp	0.2
+Pba-CTat_072-Ex1-4F-lcwgs-1-1.clmp.r1	2.2%	38%	117 bp	0.0
+Pba-CTat_072-Ex1-4F-lcwgs-1-1.clmp.r2	1.9%	39%	117 bp	0.0
+Pba-CTat_073-Ex1-3D-lcwgs-1-1.clmp.r1	4.1%	40%	132 bp	1.2
+Pba-CTat_073-Ex1-3D-lcwgs-1-1.clmp.r2	3.6%	40%	131 bp	1.2
+Pba-CTat_074-Ex1-7B-lcwgs-1-1.clmp.r1	2.8%	38%	126 bp	0.3
+Pba-CTat_074-Ex1-7B-lcwgs-1-1.clmp.r2	2.5%	38%	126 bp	0.3
+Pba-CTat_075-Ex1-6A-lcwgs-1-1.clmp.r1	3.7%	40%	130 bp	0.9
+Pba-CTat_075-Ex1-6A-lcwgs-1-1.clmp.r2	3.3%	40%	130 bp	0.9
+Pba-CTat_077-Ex1-5B-lcwgs-1-1.clmp.r1	4.1%	39%	127 bp	1.2
+Pba-CTat_077-Ex1-5B-lcwgs-1-1.clmp.r2	3.8%	40%	127 bp	1.2
+Pba-CTat_078-Ex1-5A-lcwgs-1-1.clmp.r1	3.4%	40%	126 bp	0.7
+Pba-CTat_078-Ex1-5A-lcwgs-1-1.clmp.r2	3.1%	40%	126 bp	0.7
+Pba-CTat_082-Ex1-2G-lcwgs-1-1.clmp.r1	3.9%	39%	131 bp	0.9
+Pba-CTat_082-Ex1-2G-lcwgs-1-1.clmp.r2	3.4%	39%	131 bp	0.9
+Pba-CTat_083-Ex1-4B-lcwgs-1-1.clmp.r1	3.7%	40%	129 bp	0.8
+Pba-CTat_083-Ex1-4B-lcwgs-1-1.clmp.r2	3.3%	40%	129 bp	0.8
+Pba-CTat_084-Ex1-6H-lcwgs-1-1.clmp.r1	4.6%	41%	141 bp	0.6
+Pba-CTat_084-Ex1-6H-lcwgs-1-1.clmp.r2	4.0%	41%	140 bp	0.6
+Pba-CTat_085-Ex1-1F-lcwgs-1-1.clmp.r1	4.6%	41%	140 bp	0.2
+Pba-CTat_085-Ex1-1F-lcwgs-1-1.clmp.r2	3.9%	41%	140 bp	0.2
+Pba-CTat_086-Ex1-8F-lcwgs-1-1.clmp.r1	3.9%	40%	132 bp	0.9
+Pba-CTat_086-Ex1-8F-lcwgs-1-1.clmp.r2	3.4%	40%	131 bp	0.9
+Pba-CTat_087-Ex1-5C-lcwgs-1-1.clmp.r1	3.7%	39%	128 bp	1.1
+Pba-CTat_087-Ex1-5C-lcwgs-1-1.clmp.r2	3.4%	39%	127 bp	1.1
+Pba-CTat_088-Ex1-3E-lcwgs-1-1.clmp.r1	7.8%	40%	142 bp	0.2
+Pba-CTat_088-Ex1-3E-lcwgs-1-1.clmp.r2	6.4%	41%	142 bp	0.2
+Pba-CTat_092-Ex1-3H-lcwgs-1-1.clmp.r1	3.0%	40%	115 bp	0.1
+Pba-CTat_092-Ex1-3H-lcwgs-1-1.clmp.r2	2.5%	40%	115 bp	0.1
+Pba-CTat_093-Ex1-7H-lcwgs-1-1.clmp.r1	4.1%	40%	134 bp	0.4
+Pba-CTat_093-Ex1-7H-lcwgs-1-1.clmp.r2	3.6%	41%	134 bp	0.4
+Pba-CTat_094-Ex1-1B-lcwgs-1-1.clmp.r1	3.4%	40%	128 bp	0.4
+Pba-CTat_094-Ex1-1B-lcwgs-1-1.clmp.r2	3.0%	41%	127 bp	0.4
+Pba-CTat_095-Ex1-6C-lcwgs-1-1.clmp.r1	3.9%	40%	128 bp	0.9
+Pba-CTat_095-Ex1-6C-lcwgs-1-1.clmp.r2	3.6%	40%	128 bp	0.9
+Pba-CVer_001-Ex2-11C-lcwgs-1-1.clmp.r1	6.0%	51%	134 bp	0.0
+Pba-CVer_001-Ex2-11C-lcwgs-1-1.clmp.r2	4.9%	51%	134 bp	0.0
+Pba-CVer_002-Ex2-11D-lcwgs-1-1.clmp.r1	1.7%	45%	123 bp	0.0
+Pba-CVer_002-Ex2-11D-lcwgs-1-1.clmp.r2	1.3%	45%	123 bp	0.0
+Pba-CVer_003-Ex2-11E-lcwgs-1-1.clmp.r1	8.9%	47%	138 bp	2.2
+Pba-CVer_003-Ex2-11E-lcwgs-1-1.clmp.r2	7.9%	47%	138 bp	2.2
+Pba-CVer_004-Ex2-11F-lcwgs-1-1.clmp.r1	9.4%	48%	139 bp	2.1
+Pba-CVer_004-Ex2-11F-lcwgs-1-1.clmp.r2	8.2%	49%	139 bp	2.1
+Pba-CVer_005-Ex2-11G-lcwgs-1-1.clmp.r1	9.6%	46%	139 bp	2.9
+Pba-CVer_005-Ex2-11G-lcwgs-1-1.clmp.r2	8.6%	46%	139 bp	2.9
+Pba-CVer_006-Ex2-11H-lcwgs-1-1.clmp.r1	7.2%	43%	139 bp	0.7
+Pba-CVer_006-Ex2-11H-lcwgs-1-1.clmp.r2	6.8%	43%	139 bp	0.7
+Pba-CVer_007-Ex2-12A-lcwgs-1-1.clmp.r1	10.2%	41%	142 bp	0.2
+Pba-CVer_007-Ex2-12A-lcwgs-1-1.clmp.r2	8.7%	41%	142 bp	0.2
+Pba-CVer_008-Ex2-12B-lcwgs-1-1.clmp.r1	9.9%	46%	140 bp	0.2
+Pba-CVer_008-Ex2-12B-lcwgs-1-1.clmp.r2	8.6%	46%	139 bp	0.2
+Pba-CVer_012-Ex2-12D-lcwgs-1-1.clmp.r1	5.3%	44%	134 bp	0.5
+Pba-CVer_012-Ex2-12D-lcwgs-1-1.clmp.r2	4.6%	44%	134 bp	0.5
+Pba-CVer_020-Ex2-12E-lcwgs-1-1.clmp.r1	11.7%	44%	138 bp	4.4
+Pba-CVer_020-Ex2-12E-lcwgs-1-1.clmp.r2	10.7%	44%	138 bp	4.4
+Pba-CVer_021-Ex2-12F-lcwgs-1-1.clmp.r1	10.2%	45%	137 bp	2.9
+Pba-CVer_021-Ex2-12F-lcwgs-1-1.clmp.r2	9.3%	45%	137 bp	2.9
+Pba-CVer_022-Ex2-12G-lcwgs-1-1.clmp.r1	10.3%	45%	140 bp	2.2
+Pba-CVer_022-Ex2-12G-lcwgs-1-1.clmp.r2	9.3%	45%	140 bp	2.2
+Pba-CVer_023-Ex2-12H-lcwgs-1-1.clmp.r1	7.6%	45%	138 bp	1.9
+Pba-CVer_023-Ex2-12H-lcwgs-1-1.clmp.r2	6.8%	45%	137 bp	1.9
+Pba-CVer_024-Ex2-1A-lcwgs-1-1.clmp.r1	6.8%	45%	140 bp	0.0
+Pba-CVer_024-Ex2-1A-lcwgs-1-1.clmp.r2	5.6%	45%	140 bp	0.0
+Pba-CVer_032-Ex2-1B-lcwgs-1-1.clmp.r1	6.8%	48%	138 bp	0.1
+Pba-CVer_032-Ex2-1B-lcwgs-1-1.clmp.r2	5.9%	49%	138 bp	0.1
+Pba-CVer_033-Ex2-1C-lcwgs-1-1.clmp.r1	8.5%	50%	140 bp	0.9
+Pba-CVer_033-Ex2-1C-lcwgs-1-1.clmp.r2	7.4%	50%	140 bp	0.9
+Pba-CVer_034-Ex2-1D-lcwgs-1-1.clmp.r1	6.1%	52%	136 bp	0.0
+Pba-CVer_034-Ex2-1D-lcwgs-1-1.clmp.r2	5.2%	52%	136 bp	0.0
+Pba-CVer_036-Ex1-9C-lcwgs-1-1.clmp.r1	11.9%	64%	139 bp	1.6
+Pba-CVer_036-Ex1-9C-lcwgs-1-1.clmp.r2	11.2%	64%	139 bp	1.6
+Pba-CVer_039-Ex2-1E-lcwgs-1-1.clmp.r1	7.1%	49%	139 bp	0.1
+Pba-CVer_039-Ex2-1E-lcwgs-1-1.clmp.r2	6.0%	49%	138 bp	0.1
+Pba-CVer_044-Ex2-1F-lcwgs-1-1.clmp.r1	6.3%	46%	133 bp	1.0
+Pba-CVer_044-Ex2-1F-lcwgs-1-1.clmp.r2	5.8%	47%	133 bp	1.0
+Pba-CVer_046-Ex2-1G-lcwgs-1-1.clmp.r1	9.6%	50%	141 bp	1.3
+Pba-CVer_046-Ex2-1G-lcwgs-1-1.clmp.r2	8.5%	51%	141 bp	1.3
+Pba-CVer_047-Ex2-1H-lcwgs-1-1.clmp.r1	6.3%	48%	139 bp	0.0
+Pba-CVer_047-Ex2-1H-lcwgs-1-1.clmp.r2	5.3%	48%	139 bp	0.0
+Pba-CVer_048-Ex2-2A-lcwgs-1-1.clmp.r1	5.6%	46%	136 bp	0.0
+Pba-CVer_048-Ex2-2A-lcwgs-1-1.clmp.r2	4.9%	46%	136 bp	0.0
+Pba-CVer_049-Ex1-9D-lcwgs-1-1.clmp.r1	7.6%	50%	135 bp	1.0
+Pba-CVer_049-Ex1-9D-lcwgs-1-1.clmp.r2	6.6%	51%	135 bp	1.0
+Pba-CVer_051-Ex1-9E-lcwgs-1-1.clmp.r1	7.0%	45%	139 bp	1.7
+Pba-CVer_051-Ex1-9E-lcwgs-1-1.clmp.r2	6.6%	45%	139 bp	1.7
+Pba-CVer_057-Ex2-2B-lcwgs-1-1.clmp.r1	7.1%	49%	140 bp	0.9
+Pba-CVer_057-Ex2-2B-lcwgs-1-1.clmp.r2	6.3%	49%	140 bp	0.9
+Pba-CVer_058-Ex1-9F-lcwgs-1-1.clmp.r1	9.2%	53%	135 bp	1.3
+Pba-CVer_058-Ex1-9F-lcwgs-1-1.clmp.r2	8.2%	53%	135 bp	1.3
+Pba-CVer_059-Ex1-9G-lcwgs-1-1.clmp.r1	8.4%	49%	132 bp	1.6
+Pba-CVer_059-Ex1-9G-lcwgs-1-1.clmp.r2	7.6%	50%	132 bp	1.6
+Pba-CVer_060-Ex2-2C-lcwgs-1-1.clmp.r1	8.5%	48%	138 bp	0.2
+Pba-CVer_060-Ex2-2C-lcwgs-1-1.clmp.r2	7.5%	48%	138 bp	0.2
+Pba-CVer_068-Ex2-2E-lcwgs-1-1.clmp.r1	5.8%	51%	137 bp	0.0
+Pba-CVer_068-Ex2-2E-lcwgs-1-1.clmp.r2	5.0%	51%	137 bp	0.0
+Pba-CVer_069-Ex2-2F-lcwgs-1-1.clmp.r1	6.7%	52%	139 bp	0.1
+Pba-CVer_069-Ex2-2F-lcwgs-1-1.clmp.r2	5.8%	53%	139 bp	0.1
+Pba-CVer_071-Ex1-9H-lcwgs-1-1.clmp.r1	8.7%	47%	134 bp	1.8
+Pba-CVer_071-Ex1-9H-lcwgs-1-1.clmp.r2	7.9%	48%	133 bp	1.8
+Pba-CVer_072-Ex2-2H-lcwgs-1-1.clmp.r1	7.0%	52%	140 bp	0.1
+Pba-CVer_072-Ex2-2H-lcwgs-1-1.clmp.r2	6.0%	52%	140 bp	0.1
+Pba-CVer_073-Ex1-10A-lcwgs-1-1.clmp.r1	9.6%	66%	142 bp	1.0
+Pba-CVer_073-Ex1-10A-lcwgs-1-1.clmp.r2	9.0%	66%	142 bp	1.0
+Pba-CVer_075-Ex1-10C-lcwgs-1-1.clmp.r1	10.5%	64%	141 bp	2.2
+Pba-CVer_075-Ex1-10C-lcwgs-1-1.clmp.r2	10.4%	64%	141 bp	2.2
+Pba-CVer_076-Ex2-3A-lcwgs-1-1.clmp.r1	6.5%	54%	136 bp	0.1
+Pba-CVer_076-Ex2-3A-lcwgs-1-1.clmp.r2	5.4%	54%	135 bp	0.1
+Pba-CVer_082-Ex1-10D-lcwgs-1-1.clmp.r1	9.8%	51%	135 bp	1.5
+Pba-CVer_082-Ex1-10D-lcwgs-1-1.clmp.r2	8.7%	51%	135 bp	1.5
+Pba-CVer_083-Ex1-10E-lcwgs-1-1.clmp.r1	6.2%	62%	140 bp	0.3
+Pba-CVer_083-Ex1-10E-lcwgs-1-1.clmp.r2	5.2%	62%	140 bp	0.3
+Pba-CVer_084-Ex1-10F-lcwgs-1-1.clmp.r1	6.8%	50%	136 bp	0.6
+Pba-CVer_084-Ex1-10F-lcwgs-1-1.clmp.r2	5.8%	50%	135 bp	0.6
+Pba-CVer_085-Ex1-10G-lcwgs-1-1.clmp.r1	6.7%	47%	136 bp	0.9
+Pba-CVer_085-Ex1-10G-lcwgs-1-1.clmp.r2	5.9%	47%	136 bp	0.9
+Pba-CVer_092-Ex2-3D-lcwgs-1-1.clmp.r1	6.0%	45%	143 bp	0.4
+Pba-CVer_092-Ex2-3D-lcwgs-1-1.clmp.r2	5.1%	46%	143 bp	0.4
+Pba-CVer_093-Ex2-3E-lcwgs-1-1.clmp.r1	6.9%	51%	138 bp	0.0
+Pba-CVer_093-Ex2-3E-lcwgs-1-1.clmp.r2	5.6%	52%	138 bp	0.0
+Pba-CVer_094-Ex1-10H-lcwgs-1-1.clmp.r1	6.8%	49%	130 bp	1.5
+Pba-CVer_094-Ex1-10H-lcwgs-1-1.clmp.r2	6.0%	49%	130 bp	1.5
+Pba-CVer_095-Ex1-11A-lcwgs-1-1.clmp.r1	7.8%	46%	134 bp	1.6
+Pba-CVer_095-Ex1-11A-lcwgs-1-1.clmp.r2	7.0%	46%	134 bp	1.6
+Pba-CVer_096-Ex1-11B-lcwgs-1-1.clmp.r1	7.0%	54%	136 bp	0.6
+Pba-CVer_096-Ex1-11B-lcwgs-1-1.clmp.r2	6.1%	54%	136 bp	0.6
 ```
   
 </p>
 </details>
 
 ## 10. Second trim.
-TBD
+`sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_2.sbatch fq_fp1_clmp fq_fp1_clmp_fp2 33`
 
 <details><summary>Expand for MultiQC Output.</summary>
 
 ```bash
-TBD
+Sample Name	% Duplication	GC content	% PF	% Adapter
+Pba-ABir_001-Ex1-7H-lcwgs-1-1.clmp.r1r2_fastp	3.0%	41.4%	99.1%	1.1%
+Pba-ABir_002-Ex1-8H-lcwgs-1-1.clmp.r1r2_fastp	3.3%	34.9%	99.2%	1.1%
+Pba-ABir_003-Ex1-9H-lcwgs-1-1.clmp.r1r2_fastp	3.4%	41.4%	99.1%	1.1%
+Pba-ABir_004-Ex1-10H-lcwgs-1-1.clmp.r1r2_fastp	3.1%	36.6%	99.1%	1.1%
+Pba-ABir_005-Ex1-11H-lcwgs-1-1.clmp.r1r2_fastp	2.6%	41.1%	99.1%	1.2%
+Pba-ABir_006-Ex1-12H-lcwgs-1-1.clmp.r1r2_fastp	4.4%	39.9%	99.0%	0.9%
+Pba-ABir_007-Ex1-5B-lcwgs-1-1.clmp.r1r2_fastp	4.4%	42.5%	99.1%	1.1%
+Pba-ABir_009-Ex1-5D-lcwgs-1-1.clmp.r1r2_fastp	2.7%	36.9%	99.3%	1.3%
+Pba-ABir_010-Ex1-5E-lcwgs-1-1.clmp.r1r2_fastp	3.7%	35.4%	99.1%	1.3%
+Pba-ABir_011-Ex1-5F-lcwgs-1-1.clmp.r1r2_fastp	3.1%	38.4%	99.2%	1.3%
+Pba-ABir_012-Ex1-5G-lcwgs-1-1.clmp.r1r2_fastp	4.0%	41.9%	99.1%	1.3%
+Pba-ABir_013-Ex1-5H-lcwgs-1-1.clmp.r1r2_fastp	2.6%	40.6%	99.2%	1.3%
+Pba-ABir_014-Ex1-6A-lcwgs-1-1.clmp.r1r2_fastp	3.5%	34.9%	99.2%	1.3%
+Pba-ABur_001-Ex1-1A-lcwgs-1-1.clmp.r1r2_fastp	3.1%	36.2%	99.2%	1.1%
+Pba-ABur_002-Ex1-2A-lcwgs-1-1.clmp.r1r2_fastp	3.0%	39.3%	99.2%	1.2%
+Pba-ABur_003-Ex1-3A-lcwgs-1-1.clmp.r1r2_fastp	3.0%	37.7%	99.2%	1.2%
+Pba-ABur_004-Ex1-4A-lcwgs-1-1.clmp.r1r2_fastp	2.9%	36.4%	99.2%	1.2%
+Pba-ABur_005-Ex1-5A-lcwgs-1-1.clmp.r1r2_fastp	4.8%	43.4%	99.0%	0.9%
+Pba-ABur_006-Ex1-6A-lcwgs-1-1.clmp.r1r2_fastp	2.9%	37.5%	99.2%	1.2%
+Pba-ABur_007-Ex1-7A-lcwgs-1-1.clmp.r1r2_fastp	2.7%	39.9%	99.2%	1.2%
+Pba-ABur_008-Ex1-8A-lcwgs-1-1.clmp.r1r2_fastp	3.6%	38.6%	99.2%	1.1%
+Pba-ABur_009-Ex1-9A-lcwgs-1-1.clmp.r1r2_fastp	2.5%	36.6%	99.3%	1.3%
+Pba-ABur_010-Ex1-10A-lcwgs-1-1.clmp.r1r2_fastp	3.4%	42.0%	99.1%	1.1%
+Pba-ABur_011-Ex1-11A-lcwgs-1-1.clmp.r1r2_fastp	4.0%	37.9%	99.2%	1.1%
+Pba-ABur_012-Ex1-12A-lcwgs-1-1.clmp.r1r2_fastp	3.3%	34.8%	99.3%	1.2%
+Pba-ABur_013-Ex1-1B-lcwgs-1-1.clmp.r1r2_fastp	2.8%	37.6%	99.2%	1.3%
+Pba-ABur_014-Ex1-2B-lcwgs-1-1.clmp.r1r2_fastp	2.9%	38.0%	99.2%	1.2%
+Pba-ABur_015-Ex1-3B-lcwgs-1-1.clmp.r1r2_fastp	3.7%	38.8%	99.2%	1.2%
+Pba-ABur_016-Ex1-4B-lcwgs-1-1.clmp.r1r2_fastp	3.2%	37.7%	99.2%	1.1%
+Pba-ABur_017-Ex1-5B-lcwgs-1-1.clmp.r1r2_fastp	3.2%	39.5%	99.2%	1.2%
+Pba-ABur_018-Ex1-6B-lcwgs-1-1.clmp.r1r2_fastp	2.9%	39.8%	99.1%	1.2%
+Pba-ABur_019-Ex1-7B-lcwgs-1-1.clmp.r1r2_fastp	3.0%	37.4%	99.1%	1.1%
+Pba-ABur_020-Ex1-8B-lcwgs-1-1.clmp.r1r2_fastp	3.0%	40.3%	99.1%	1.2%
+Pba-ABur_021-Ex1-9B-lcwgs-1-1.clmp.r1r2_fastp	2.7%	36.1%	99.2%	1.3%
+Pba-ABur_022-Ex1-10B-lcwgs-1-1.clmp.r1r2_fastp	2.5%	38.2%	99.2%	1.3%
+Pba-ABur_023-Ex1-11B-lcwgs-1-1.clmp.r1r2_fastp	2.9%	39.7%	99.1%	1.2%
+Pba-ABur_024-Ex1-12B-lcwgs-1-1.clmp.r1r2_fastp	3.6%	36.6%	99.2%	1.1%
+Pba-ABur_025-Ex1-1C-lcwgs-1-1.clmp.r1r2_fastp	3.8%	38.8%	99.2%	1.2%
+Pba-ABur_026-Ex1-2C-lcwgs-1-1.clmp.r1r2_fastp	2.7%	38.5%	99.2%	1.3%
+Pba-ABur_027-Ex1-3C-lcwgs-1-1.clmp.r1r2_fastp	3.4%	39.9%	99.2%	1.2%
+Pba-ABur_028-Ex1-4C-lcwgs-1-1.clmp.r1r2_fastp	3.4%	41.0%	99.2%	1.1%
+Pba-ABur_029-Ex1-5C-lcwgs-1-1.clmp.r1r2_fastp	3.8%	40.3%	99.1%	1.0%
+Pba-ABur_030-Ex1-6C-lcwgs-1-1.clmp.r1r2_fastp	3.5%	38.4%	99.1%	1.0%
+Pba-ABur_031-Ex1-7C-lcwgs-1-1.clmp.r1r2_fastp	2.8%	36.7%	99.2%	1.3%
+Pba-ABur_032-Ex1-8C-lcwgs-1-1.clmp.r1r2_fastp	2.4%	38.4%	99.2%	1.4%
+Pba-ABur_033-Ex1-9C-lcwgs-1-1.clmp.r1r2_fastp	2.7%	37.6%	99.1%	1.4%
+Pba-ABur_034-Ex1-10C-lcwgs-1-1.clmp.r1r2_fastp	3.0%	38.3%	99.2%	1.3%
+Pba-ABur_036-Ex1-11C-lcwgs-1-1.clmp.r1r2_fastp	2.9%	37.0%	99.2%	1.1%
+Pba-ABur_037-Ex1-12C-lcwgs-1-1.clmp.r1r2_fastp	2.6%	39.7%	99.2%	1.4%
+Pba-ABur_038-Ex1-1D-lcwgs-1-1.clmp.r1r2_fastp	2.6%	38.8%	99.2%	1.3%
+Pba-ABur_039-Ex1-2D-lcwgs-1-1.clmp.r1r2_fastp	2.2%	39.4%	99.2%	1.4%
+Pba-ABur_040-Ex1-3D-lcwgs-1-1.clmp.r1r2_fastp	2.7%	40.2%	99.2%	1.2%
+Pba-ABur_041-Ex1-4D-lcwgs-1-1.clmp.r1r2_fastp	2.1%	40.1%	99.3%	1.3%
+Pba-ABur_042-Ex1-5D-lcwgs-1-1.clmp.r1r2_fastp	2.8%	39.2%	99.2%	1.2%
+Pba-ABur_043-Ex1-6D-lcwgs-1-1.clmp.r1r2_fastp	2.6%	38.6%	99.3%	1.2%
+Pba-ABur_044-Ex1-7D-lcwgs-1-1.clmp.r1r2_fastp	2.7%	37.9%	99.2%	1.2%
+Pba-ABur_045-Ex1-8D-lcwgs-1-1.clmp.r1r2_fastp	2.2%	38.5%	99.3%	1.4%
+Pba-ABur_046-Ex1-9D-lcwgs-1-1.clmp.r1r2_fastp	3.1%	36.3%	99.2%	1.1%
+Pba-ABur_047-Ex1-10D-lcwgs-1-1.clmp.r1r2_fastp	1.9%	38.6%	99.2%	1.4%
+Pba-ABur_048-Ex1-11D-lcwgs-1-1.clmp.r1r2_fastp	2.7%	39.2%	99.2%	1.2%
+Pba-ABur_049-Ex1-12D-lcwgs-1-1.clmp.r1r2_fastp	3.1%	39.3%	99.3%	1.1%
+Pba-ABur_050-Ex1-1E-lcwgs-1-1.clmp.r1r2_fastp	1.9%	40.5%	99.1%	1.5%
+Pba-ABur_051-Ex1-2E-lcwgs-1-1.clmp.r1r2_fastp	2.5%	38.6%	99.2%	1.4%
+Pba-ABur_052-Ex1-3E-lcwgs-1-1.clmp.r1r2_fastp	3.1%	34.6%	99.2%	1.3%
+Pba-ABur_053-Ex1-4E-lcwgs-1-1.clmp.r1r2_fastp	2.6%	36.6%	99.2%	1.3%
+Pba-ABur_054-Ex1-5E-lcwgs-1-1.clmp.r1r2_fastp	2.9%	38.6%	99.2%	1.3%
+Pba-ABur_055-Ex1-6E-lcwgs-1-1.clmp.r1r2_fastp	2.7%	37.3%	99.2%	1.3%
+Pba-ABur_056-Ex1-7E-lcwgs-1-1.clmp.r1r2_fastp	3.3%	39.2%	99.2%	1.2%
+Pba-ABur_057-Ex1-8E-lcwgs-1-1.clmp.r1r2_fastp	3.4%	38.6%	99.1%	1.2%
+Pba-AGal_001-Ex1-8G-lcwgs-1-1.clmp.r1r2_fastp	2.5%	41.3%	99.1%	1.4%
+Pba-AGal_001-Ex1-8H-lcwgs-1-1.clmp.r1r2_fastp	2.4%	40.7%	99.1%	1.4%
+Pba-AGal_002-Ex1-9A-lcwgs-1-1.clmp.r1r2_fastp	2.7%	41.9%	99.2%	1.4%
+Pba-AGal_003-Ex1-9B-lcwgs-1-1.clmp.r1r2_fastp	2.7%	40.5%	99.1%	1.4%
+Pba-AGal_004-Ex1-10G-lcwgs-1-1.clmp.r1r2_fastp	2.1%	41.4%	99.1%	1.5%
+Pba-AGal_005-Ex1-9D-lcwgs-1-1.clmp.r1r2_fastp	2.0%	40.0%	99.2%	1.5%
+Pba-AGal_006-Ex1-9E-lcwgs-1-1.clmp.r1r2_fastp	2.3%	37.2%	99.2%	1.5%
+Pba-AGal_007-Ex1-9F-lcwgs-1-1.clmp.r1r2_fastp	1.9%	37.8%	99.2%	1.5%
+Pba-AGal_008-Ex1-9G-lcwgs-1-1.clmp.r1r2_fastp	1.5%	44.5%	99.2%	1.7%
+Pba-AGal_009-Ex1-9H-lcwgs-1-1.clmp.r1r2_fastp	2.1%	40.9%	99.2%	1.5%
+Pba-AGal_010-Ex1-10A-lcwgs-1-1.clmp.r1r2_fastp	2.6%	37.1%	99.1%	1.3%
+Pba-AGal_011-Ex1-10B-lcwgs-1-1.clmp.r1r2_fastp	2.0%	40.5%	99.1%	1.5%
+Pba-AGal_013-Ex1-10C-lcwgs-1-1.clmp.r1r2_fastp	2.0%	43.2%	99.0%	1.5%
+Pba-AGal_014-Ex1-10D-lcwgs-1-1.clmp.r1r2_fastp	1.4%	40.2%	99.1%	1.6%
+Pba-AGal_015-Ex1-10E-lcwgs-1-1.clmp.r1r2_fastp	2.6%	43.8%	99.0%	1.4%
+Pba-AGal_016-Ex1-10F-lcwgs-1-1.clmp.r1r2_fastp	5.5%	54.6%	98.4%	0.8%
+Pba-AGal_017-Ex1-9C-lcwgs-1-1.clmp.r1r2_fastp	2.4%	39.8%	99.0%	1.5%
+Pba-AGal_018-Ex1-10H-lcwgs-1-1.clmp.r1r2_fastp	5.4%	55.8%	98.7%	0.8%
+Pba-AGal_019-Ex1-11A-lcwgs-1-1.clmp.r1r2_fastp	2.4%	35.9%	99.3%	1.4%
+Pba-AGal_020-Ex1-11B-lcwgs-1-1.clmp.r1r2_fastp	1.9%	38.9%	99.3%	1.6%
+Pba-AMar_001-Ex1-3F-lcwgs-1-1.clmp.r1r2_fastp	3.3%	37.8%	99.1%	1.2%
+Pba-AMar_002-Ex1-3G-lcwgs-1-1.clmp.r1r2_fastp	3.5%	41.8%	99.1%	1.1%
+Pba-AMar_003-Ex1-3H-lcwgs-1-1.clmp.r1r2_fastp	2.2%	41.1%	99.2%	1.4%
+Pba-AMar_004-Ex1-4A-lcwgs-1-1.clmp.r1r2_fastp	2.6%	43.9%	99.2%	1.4%
+Pba-AMar_005-Ex1-4B-lcwgs-1-1.clmp.r1r2_fastp	2.1%	40.2%	99.2%	1.4%
+Pba-AMar_006-Ex1-4C-lcwgs-1-1.clmp.r1r2_fastp	1.0%	46.3%	99.2%	1.7%
+Pba-AMar_007-Ex1-4D-lcwgs-1-1.clmp.r1r2_fastp	3.8%	39.4%	99.0%	0.9%
+Pba-AMar_008-Ex1-4E-lcwgs-1-1.clmp.r1r2_fastp	1.7%	41.1%	99.3%	1.5%
+Pba-AMar_009-Ex1-4F-lcwgs-1-1.clmp.r1r2_fastp	2.6%	37.9%	99.2%	1.3%
+Pba-AMar_010-Ex1-4G-lcwgs-1-1.clmp.r1r2_fastp	2.1%	41.2%	99.2%	1.5%
+Pba-AMar_011-Ex1-4H-lcwgs-1-1.clmp.r1r2_fastp	1.7%	40.6%	99.2%	1.5%
+Pba-AMar_012-Ex1-5A-lcwgs-1-1.clmp.r1r2_fastp	2.3%	37.2%	99.3%	1.5%
+Pba-AMar_013-Ex1-5B-lcwgs-1-1.clmp.r1r2_fastp	1.7%	44.8%	99.3%	1.7%
+Pba-AMar_014-Ex1-5C-lcwgs-1-1.clmp.r1r2_fastp	2.0%	40.9%	99.2%	1.5%
+Pba-APal_001-Ex1-7E-lcwgs-1-1.clmp.r1r2_fastp	2.8%	40.3%	99.2%	1.3%
+Pba-APal_002-Ex1-7F-lcwgs-1-1.clmp.r1r2_fastp	2.5%	43.2%	99.2%	1.4%
+Pba-APal_003-Ex1-7G-lcwgs-1-1.clmp.r1r2_fastp	2.6%	43.7%	99.1%	1.3%
+Pba-APal_004-Ex1-7H-lcwgs-1-1.clmp.r1r2_fastp	2.8%	42.3%	99.1%	1.3%
+Pba-APal_005-Ex1-8A-lcwgs-1-1.clmp.r1r2_fastp	3.8%	40.4%	99.2%	1.2%
+Pba-APal_006-Ex1-8B-lcwgs-1-1.clmp.r1r2_fastp	2.8%	40.3%	99.2%	1.3%
+Pba-APal_007-Ex1-8C-lcwgs-1-1.clmp.r1r2_fastp	2.7%	42.7%	99.2%	1.3%
+Pba-APal_008-Ex1-8D-lcwgs-1-1.clmp.r1r2_fastp	2.0%	42.8%	99.2%	1.5%
+Pba-APal_009-Ex1-8E-lcwgs-1-1.clmp.r1r2_fastp	2.5%	42.3%	99.2%	1.5%
+Pba-APal_010-Ex1-8F-lcwgs-1-1.clmp.r1r2_fastp	2.3%	36.4%	99.2%	1.4%
+Pba-ATat_001-Ex1-9E-lcwgs-1-1.clmp.r1r2_fastp	2.5%	38.5%	99.3%	1.4%
+Pba-ATat_002-Ex1-10E-lcwgs-1-1.clmp.r1r2_fastp	2.0%	40.4%	99.2%	1.5%
+Pba-ATat_003-Ex1-11E-lcwgs-1-1.clmp.r1r2_fastp	2.4%	38.3%	99.2%	1.4%
+Pba-ATat_004-Ex1-12E-lcwgs-1-1.clmp.r1r2_fastp	2.7%	39.9%	99.2%	1.4%
+Pba-ATat_005-Ex1-1F-lcwgs-1-1.clmp.r1r2_fastp	2.6%	37.9%	99.3%	1.3%
+Pba-ATat_006-Ex1-2F-lcwgs-1-1.clmp.r1r2_fastp	2.3%	40.4%	99.0%	1.4%
+Pba-ATat_007-Ex1-3F-lcwgs-1-1.clmp.r1r2_fastp	2.6%	42.7%	99.1%	1.3%
+Pba-ATat_008-Ex1-4F-lcwgs-1-1.clmp.r1r2_fastp	2.6%	42.5%	99.2%	1.3%
+Pba-ATat_009-Ex1-5F-lcwgs-1-1.clmp.r1r2_fastp	2.1%	37.3%	99.2%	1.4%
+Pba-ATat_010-Ex1-6F-lcwgs-1-1.clmp.r1r2_fastp	3.0%	39.4%	99.2%	1.2%
+Pba-ATat_011-Ex1-7F-lcwgs-1-1.clmp.r1r2_fastp	2.8%	40.9%	99.2%	1.3%
+Pba-ATat_012-Ex1-8F-lcwgs-1-1.clmp.r1r2_fastp	2.9%	37.9%	99.2%	1.2%
+Pba-ATat_013-Ex1-9F-lcwgs-1-1.clmp.r1r2_fastp	2.3%	38.0%	99.3%	1.4%
+Pba-ATat_014-Ex1-10F-lcwgs-1-1.clmp.r1r2_fastp	2.5%	41.9%	99.2%	1.3%
+Pba-ATat_015-Ex1-11F-lcwgs-1-1.clmp.r1r2_fastp	2.7%	41.0%	99.2%	1.3%
+Pba-ATat_016-Ex1-12F-lcwgs-1-1.clmp.r1r2_fastp	1.2%	44.2%	99.1%	1.7%
+Pba-ATat_017-Ex1-1G-lcwgs-1-1.clmp.r1r2_fastp	0.1%	40.3%	98.4%	1.9%
+Pba-ATat_018-Ex1-2G-lcwgs-1-1.clmp.r1r2_fastp	2.0%	39.9%	99.3%	1.5%
+Pba-ATat_019-Ex1-3G-lcwgs-1-1.clmp.r1r2_fastp	2.3%	39.0%	99.2%	1.4%
+Pba-ATat_020-Ex1-4G-lcwgs-1-1.clmp.r1r2_fastp	2.3%	39.9%	99.2%	1.4%
+Pba-ATat_021-Ex1-5G-lcwgs-1-1.clmp.r1r2_fastp	2.3%	40.3%	99.2%	1.4%
+Pba-CCab_003-Ex1-7C-lcwgs-1-1.clmp.r1r2_fastp	3.5%	41.7%	98.9%	0.9%
+Pba-CCab_006-Ex1-9C-lcwgs-1-1.clmp.r1r2_fastp	3.9%	41.5%	98.8%	0.9%
+Pba-CCab_009-Ex1-6A-lcwgs-1-1.clmp.r1r2_fastp	4.6%	42.4%	98.8%	0.9%
+Pba-CCab_012-Ex1-9A-lcwgs-1-1.clmp.r1r2_fastp	4.0%	41.1%	98.8%	0.8%
+Pba-CCab_016-Ex1-4C-lcwgs-1-1.clmp.r1r2_fastp	4.2%	42.7%	98.8%	0.8%
+Pba-CCab_019-Ex1-5B-lcwgs-1-1.clmp.r1r2_fastp	4.3%	41.9%	98.7%	0.8%
+Pba-CCab_020-Ex1-6C-lcwgs-1-1.clmp.r1r2_fastp	4.3%	41.6%	98.9%	0.8%
+Pba-CCab_021-Ex1-12C-lcwgs-1-1.clmp.r1r2_fastp	5.9%	42.8%	98.4%	0.6%
+Pba-CCab_023-Ex1-6B-lcwgs-1-1.clmp.r1r2_fastp	4.4%	41.5%	98.8%	0.9%
+Pba-CCab_024-Ex1-4B-lcwgs-1-1.clmp.r1r2_fastp	3.8%	42.8%	98.8%	0.9%
+Pba-CCab_026-Ex1-3C-lcwgs-1-1.clmp.r1r2_fastp	4.3%	41.5%	98.8%	0.7%
+Pba-CCab_027-Ex1-1D-lcwgs-1-1.clmp.r1r2_fastp	3.4%	41.6%	98.9%	0.9%
+Pba-CCab_028-Ex1-10C-lcwgs-1-1.clmp.r1r2_fastp	3.3%	41.4%	98.9%	0.9%
+Pba-CCab_029-Ex1-1A-lcwgs-1-1.clmp.r1r2_fastp	3.8%	41.5%	98.8%	0.8%
+Pba-CCab_030-Ex1-2C-lcwgs-1-1.clmp.r1r2_fastp	3.7%	41.4%	99.0%	1.0%
+Pba-CCab_032-Ex1-2B-lcwgs-1-1.clmp.r1r2_fastp	4.2%	41.9%	98.8%	0.9%
+Pba-CCab_033-Ex1-11B-lcwgs-1-1.clmp.r1r2_fastp	3.8%	43.0%	98.8%	1.0%
+Pba-CCab_037-Ex1-1C-lcwgs-1-1.clmp.r1r2_fastp	3.5%	42.8%	98.8%	1.0%
+Pba-CCab_039-Ex1-9B-lcwgs-1-1.clmp.r1r2_fastp	3.7%	42.7%	98.8%	1.0%
+Pba-CCab_041-Ex1-8C-lcwgs-1-1.clmp.r1r2_fastp	4.5%	42.5%	98.5%	0.7%
+Pba-CCab_042-Ex1-12B-lcwgs-1-1.clmp.r1r2_fastp	3.8%	41.3%	99.0%	1.0%
+Pba-CCab_043-Ex1-11C-lcwgs-1-1.clmp.r1r2_fastp	3.9%	41.7%	98.9%	0.9%
+Pba-CCab_044-Ex1-8B-lcwgs-1-1.clmp.r1r2_fastp	4.5%	44.0%	98.4%	0.9%
+Pba-CCab_045-Ex1-3B-lcwgs-1-1.clmp.r1r2_fastp	4.9%	42.2%	98.7%	0.7%
+Pba-CCab_047-Ex1-8A-lcwgs-1-1.clmp.r1r2_fastp	4.8%	42.4%	98.3%	0.7%
+Pba-CCab_049-Ex1-7A-lcwgs-1-1.clmp.r1r2_fastp	3.1%	41.0%	99.0%	1.0%
+Pba-CCab_050-Ex1-10A-lcwgs-1-1.clmp.r1r2_fastp	3.8%	41.2%	98.7%	0.8%
+Pba-CCab_051-Ex1-12A-lcwgs-1-1.clmp.r1r2_fastp	3.9%	43.6%	98.8%	1.1%
+Pba-CCab_052-Ex1-10B-lcwgs-1-1.clmp.r1r2_fastp	3.6%	41.9%	98.7%	0.8%
+Pba-CCab_053-Ex1-7B-lcwgs-1-1.clmp.r1r2_fastp	3.6%	41.1%	98.8%	0.8%
+Pba-CCab_054-Ex1-5A-lcwgs-1-1.clmp.r1r2_fastp	4.3%	42.0%	98.8%	0.8%
+Pba-CCab_056-Ex1-2A-lcwgs-1-1.clmp.r1r2_fastp	4.1%	41.5%	98.9%	0.9%
+Pba-CCab_060-Ex1-3A-lcwgs-1-1.clmp.r1r2_fastp	4.8%	42.3%	98.6%	0.7%
+Pba-CCab_062-Ex1-5C-lcwgs-1-1.clmp.r1r2_fastp	4.2%	42.6%	98.8%	0.8%
+Pba-CCab_063-Ex1-11A-lcwgs-1-1.clmp.r1r2_fastp	3.8%	43.8%	98.9%	0.9%
+Pba-CCab_064-Ex1-1B-lcwgs-1-1.clmp.r1r2_fastp	3.8%	41.7%	98.7%	0.7%
+Pba-CCab_066-Ex1-4A-lcwgs-1-1.clmp.r1r2_fastp	4.5%	44.5%	98.6%	1.0%
+Pba-CCab_066-Ex1-8B-lcwgs-1-1.clmp.r1r2_fastp	3.2%	41.7%	98.8%	0.9%
+Pba-CCab_067-Ex1-8C-lcwgs-1-1.clmp.r1r2_fastp	3.6%	42.2%	99.1%	1.0%
+Pba-CCab_068-Ex1-8D-lcwgs-1-1.clmp.r1r2_fastp	4.4%	41.9%	98.8%	0.8%
+Pba-CCab_069-Ex1-8E-lcwgs-1-1.clmp.r1r2_fastp	4.0%	42.7%	98.9%	1.0%
+Pba-CCab_070-Ex1-8F-lcwgs-1-1.clmp.r1r2_fastp	3.7%	42.2%	99.0%	1.0%
+Pba-CCab_071-Ex1-8G-lcwgs-1-1.clmp.r1r2_fastp	3.7%	42.1%	99.0%	0.9%
+Pba-CCab_072-Ex1-8H-lcwgs-1-1.clmp.r1r2_fastp	1.6%	42.9%	98.8%	1.2%
+Pba-CCab_073-Ex1-9A-lcwgs-1-1.clmp.r1r2_fastp	3.1%	44.8%	99.0%	1.2%
+Pba-CCab_074-Ex1-9B-lcwgs-1-1.clmp.r1r2_fastp	4.6%	41.8%	98.9%	0.9%
+Pba-CCab_075-Ex1-9C-lcwgs-1-1.clmp.r1r2_fastp	2.8%	45.5%	99.1%	1.2%
+Pba-CCab_076-Ex1-9D-lcwgs-1-1.clmp.r1r2_fastp	4.9%	42.2%	98.8%	0.8%
+Pba-CCab_077-Ex1-9E-lcwgs-1-1.clmp.r1r2_fastp	4.6%	41.8%	98.9%	0.9%
+Pba-CCab_078-Ex1-9F-lcwgs-1-1.clmp.r1r2_fastp	4.2%	41.5%	99.0%	1.0%
+Pba-CCab_079-Ex1-9G-lcwgs-1-1.clmp.r1r2_fastp	4.2%	42.2%	98.9%	1.0%
+Pba-CCab_080-Ex1-9H-lcwgs-1-1.clmp.r1r2_fastp	3.9%	40.9%	99.1%	1.0%
+Pba-CCab_081-Ex1-10A-lcwgs-1-1.clmp.r1r2_fastp	3.6%	42.5%	98.8%	0.9%
+Pba-CCab_082-Ex1-10B-lcwgs-1-1.clmp.r1r2_fastp	3.4%	42.5%	98.8%	0.9%
+Pba-CCab_083-Ex1-10C-lcwgs-1-1.clmp.r1r2_fastp	3.3%	43.2%	98.9%	1.1%
+Pba-CCab_084-Ex1-10D-lcwgs-1-1.clmp.r1r2_fastp	3.1%	42.1%	98.7%	0.9%
+Pba-CCab_085-Ex1-10E-lcwgs-1-1.clmp.r1r2_fastp	3.6%	42.1%	98.7%	0.9%
+Pba-CCab_086-Ex1-10F-lcwgs-1-1.clmp.r1r2_fastp	4.0%	42.9%	98.7%	0.9%
+Pba-CCab_087-Ex1-10G-lcwgs-1-1.clmp.r1r2_fastp	3.4%	43.2%	98.8%	1.0%
+Pba-CCab_088-Ex1-10H-lcwgs-1-1.clmp.r1r2_fastp	3.9%	42.4%	98.7%	0.9%
+Pba-CCab_089-Ex1-11A-lcwgs-1-1.clmp.r1r2_fastp	3.3%	44.8%	99.0%	1.1%
+Pba-CCab_090-Ex1-11B-lcwgs-1-1.clmp.r1r2_fastp	1.1%	42.7%	98.8%	1.2%
+Pba-CCab_091-Ex1-11C-lcwgs-1-1.clmp.r1r2_fastp	3.6%	43.1%	99.0%	1.1%
+Pba-CCab_092-Ex1-11D-lcwgs-1-1.clmp.r1r2_fastp	4.5%	41.1%	98.8%	0.8%
+Pba-CCab_093-Ex1-11E-lcwgs-1-1.clmp.r1r2_fastp	3.5%	40.4%	98.9%	0.9%
+Pba-CCab_094-Ex1-11F-lcwgs-1-1.clmp.r1r2_fastp	3.5%	41.2%	99.0%	0.9%
+Pba-CCab_095-Ex1-11G-lcwgs-1-1.clmp.r1r2_fastp	4.0%	43.7%	98.8%	0.8%
+Pba-CCab_096-Ex1-11H-lcwgs-1-1.clmp.r1r2_fastp	4.3%	40.9%	98.9%	0.9%
+Pba-CMas_001-Ex1-5A-lcwgs-1-1.clmp.r1r2_fastp	4.3%	43.8%	99.0%	1.0%
+Pba-CMas_002-Ex1-5B-lcwgs-1-1.clmp.r1r2_fastp	5.6%	41.4%	98.9%	0.7%
+Pba-CMas_003-Ex1-5C-lcwgs-1-1.clmp.r1r2_fastp	4.5%	41.8%	98.9%	0.7%
+Pba-CMas_004-Ex1-5D-lcwgs-1-1.clmp.r1r2_fastp	4.5%	42.4%	98.8%	0.8%
+Pba-CMas_005-Ex1-5E-lcwgs-1-1.clmp.r1r2_fastp	4.8%	41.0%	98.8%	0.7%
+Pba-CMas_006-Ex1-5F-lcwgs-1-1.clmp.r1r2_fastp	4.0%	41.1%	98.9%	0.9%
+Pba-CMas_007-Ex1-5G-lcwgs-1-1.clmp.r1r2_fastp	4.9%	40.3%	98.8%	0.7%
+Pba-CMas_008-Ex1-5H-lcwgs-1-1.clmp.r1r2_fastp	0.3%	41.2%	98.5%	1.4%
+Pba-CMas_009-Ex1-6A-lcwgs-1-1.clmp.r1r2_fastp	5.2%	42.1%	98.9%	0.6%
+Pba-CMas_010-Ex1-6B-lcwgs-1-1.clmp.r1r2_fastp	4.2%	41.7%	98.9%	0.8%
+Pba-CMas_011-Ex1-6C-lcwgs-1-1.clmp.r1r2_fastp	4.1%	41.0%	99.0%	0.8%
+Pba-CMas_012-Ex1-6D-lcwgs-1-1.clmp.r1r2_fastp	3.1%	43.0%	99.2%	1.2%
+Pba-CMas_013-Ex1-6E-lcwgs-1-1.clmp.r1r2_fastp	4.7%	41.2%	98.8%	0.7%
+Pba-CMas_014-Ex1-6F-lcwgs-1-1.clmp.r1r2_fastp	4.6%	40.6%	98.9%	0.7%
+Pba-CMas_015-Ex1-6G-lcwgs-1-1.clmp.r1r2_fastp	3.9%	40.6%	99.0%	0.8%
+Pba-CMas_016-Ex1-6H-lcwgs-1-1.clmp.r1r2_fastp	2.9%	40.2%	99.2%	1.1%
+Pba-CMas_017-Ex1-7A-lcwgs-1-1.clmp.r1r2_fastp	3.3%	44.3%	99.1%	1.1%
+Pba-CMas_018-Ex1-7B-lcwgs-1-1.clmp.r1r2_fastp	4.5%	43.1%	98.9%	0.8%
+Pba-CMas_019-Ex1-7C-lcwgs-1-1.clmp.r1r2_fastp	4.1%	41.2%	99.0%	0.8%
+Pba-CMas_020-Ex1-7D-lcwgs-1-1.clmp.r1r2_fastp	4.0%	42.0%	98.8%	0.8%
+Pba-CMas_021-Ex1-7E-lcwgs-1-1.clmp.r1r2_fastp	3.8%	41.5%	98.9%	0.8%
+Pba-CMas_022-Ex1-7F-lcwgs-1-1.clmp.r1r2_fastp	4.3%	41.0%	98.9%	0.8%
+Pba-CMas_023-Ex1-7G-lcwgs-1-1.clmp.r1r2_fastp	1.6%	41.6%	98.8%	1.3%
+Pba-CMas_024-Ex1-7H-lcwgs-1-1.clmp.r1r2_fastp	3.6%	41.2%	99.0%	0.9%
+Pba-CMas_025-Ex1-8A-lcwgs-1-1.clmp.r1r2_fastp	3.6%	44.1%	99.2%	1.1%
+Pba-CTat_009-Ex1-1D-lcwgs-1-1.clmp.r1r2_fastp	5.1%	40.2%	98.3%	0.4%
+Pba-CTat_010-Ex1-6B-lcwgs-1-1.clmp.r1r2_fastp	3.9%	39.3%	98.8%	0.8%
+Pba-CTat_012-Ex1-2H-lcwgs-1-1.clmp.r1r2_fastp	2.9%	39.0%	98.9%	0.9%
+Pba-CTat_013-Ex1-5H-lcwgs-1-1.clmp.r1r2_fastp	3.9%	39.2%	98.8%	0.8%
+Pba-CTat_015-Ex1-1C-lcwgs-1-1.clmp.r1r2_fastp	0.2%	39.8%	98.2%	1.5%
+Pba-CTat_016-Ex1-4E-lcwgs-1-1.clmp.r1r2_fastp	4.8%	39.9%	98.5%	0.5%
+Pba-CTat_017-Ex1-4D-lcwgs-1-1.clmp.r1r2_fastp	4.0%	39.7%	98.8%	0.7%
+Pba-CTat_018-Ex1-1E-lcwgs-1-1.clmp.r1r2_fastp	0.9%	38.9%	98.4%	1.1%
+Pba-CTat_019-Ex1-5F-lcwgs-1-1.clmp.r1r2_fastp	4.5%	39.2%	98.8%	0.7%
+Pba-CTat_020-Ex1-8B-lcwgs-1-1.clmp.r1r2_fastp	4.2%	39.1%	98.8%	0.7%
+Pba-CTat_021-Ex1-3A-lcwgs-1-1.clmp.r1r2_fastp	3.5%	39.3%	98.9%	0.9%
+Pba-CTat_022-Ex1-5G-lcwgs-1-1.clmp.r1r2_fastp	4.5%	39.1%	98.7%	0.7%
+Pba-CTat_023-Ex1-4G-lcwgs-1-1.clmp.r1r2_fastp	1.5%	38.7%	98.9%	1.2%
+Pba-CTat_024-Ex1-2B-lcwgs-1-1.clmp.r1r2_fastp	3.7%	39.4%	98.9%	0.8%
+Pba-CTat_025-Ex1-7G-lcwgs-1-1.clmp.r1r2_fastp	4.5%	39.1%	98.7%	0.7%
+Pba-CTat_026-Ex1-8G-lcwgs-1-1.clmp.r1r2_fastp	4.8%	40.0%	98.6%	0.6%
+Pba-CTat_027-Ex1-2E-lcwgs-1-1.clmp.r1r2_fastp	1.1%	38.8%	98.9%	1.3%
+Pba-CTat_029-Ex1-5D-lcwgs-1-1.clmp.r1r2_fastp	4.0%	39.1%	98.8%	0.7%
+Pba-CTat_032-Ex1-8E-lcwgs-1-1.clmp.r1r2_fastp	4.3%	39.3%	98.7%	0.7%
+Pba-CTat_033-Ex1-1A-lcwgs-1-1.clmp.r1r2_fastp	4.1%	40.4%	99.0%	0.9%
+Pba-CTat_034-Ex1-7F-lcwgs-1-1.clmp.r1r2_fastp	4.4%	39.1%	98.7%	0.6%
+Pba-CTat_036-Ex1-2A-lcwgs-1-1.clmp.r1r2_fastp	3.8%	40.0%	98.9%	0.8%
+Pba-CTat_037-Ex1-4A-lcwgs-1-1.clmp.r1r2_fastp	3.8%	39.8%	98.9%	0.8%
+Pba-CTat_038-Ex1-7D-lcwgs-1-1.clmp.r1r2_fastp	4.1%	40.0%	98.8%	0.7%
+Pba-CTat_039-Ex1-3F-lcwgs-1-1.clmp.r1r2_fastp	4.5%	40.0%	98.8%	0.7%
+Pba-CTat_041-Ex1-7E-lcwgs-1-1.clmp.r1r2_fastp	3.5%	38.3%	98.9%	0.7%
+Pba-CTat_045-Ex1-3C-lcwgs-1-1.clmp.r1r2_fastp	4.0%	39.7%	98.8%	0.7%
+Pba-CTat_046-Ex1-3G-lcwgs-1-1.clmp.r1r2_fastp	4.9%	39.5%	98.6%	0.6%
+Pba-CTat_047-Ex1-8A-lcwgs-1-1.clmp.r1r2_fastp	4.5%	39.8%	98.8%	0.7%
+Pba-CTat_048-Ex1-4C-lcwgs-1-1.clmp.r1r2_fastp	4.1%	40.0%	98.7%	0.7%
+Pba-CTat_049-Ex1-2D-lcwgs-1-1.clmp.r1r2_fastp	4.0%	38.8%	98.8%	0.7%
+Pba-CTat_050-Ex1-6D-lcwgs-1-1.clmp.r1r2_fastp	3.7%	40.0%	98.9%	0.8%
+Pba-CTat_051-Ex1-7A-lcwgs-1-1.clmp.r1r2_fastp	3.9%	39.9%	98.9%	0.8%
+Pba-CTat_052-Ex1-3B-lcwgs-1-1.clmp.r1r2_fastp	4.3%	39.2%	98.8%	0.7%
+Pba-CTat_053-Ex1-5E-lcwgs-1-1.clmp.r1r2_fastp	5.3%	40.2%	98.5%	0.5%
+Pba-CTat_054-Ex1-6E-lcwgs-1-1.clmp.r1r2_fastp	4.9%	40.4%	98.4%	0.5%
+Pba-CTat_055-Ex1-2F-lcwgs-1-1.clmp.r1r2_fastp	4.2%	39.2%	98.8%	0.7%
+Pba-CTat_056-Ex1-8C-lcwgs-1-1.clmp.r1r2_fastp	0.4%	39.8%	98.4%	1.3%
+Pba-CTat_058-Ex1-1H-lcwgs-1-1.clmp.r1r2_fastp	3.0%	39.5%	98.7%	0.8%
+Pba-CTat_059-Ex1-8H-lcwgs-1-1.clmp.r1r2_fastp	5.1%	40.3%	98.4%	0.5%
+Pba-CTat_060-Ex1-6F-lcwgs-1-1.clmp.r1r2_fastp	3.9%	40.5%	98.9%	0.8%
+Pba-CTat_061-Ex1-2C-lcwgs-1-1.clmp.r1r2_fastp	3.9%	39.0%	98.8%	0.8%
+Pba-CTat_062-Ex1-7C-lcwgs-1-1.clmp.r1r2_fastp	0.7%	39.4%	98.4%	1.1%
+Pba-CTat_063-Ex1-8D-lcwgs-1-1.clmp.r1r2_fastp	3.8%	39.6%	98.9%	0.8%
+Pba-CTat_064-Ex1-1G-lcwgs-1-1.clmp.r1r2_fastp	4.5%	38.9%	98.7%	0.6%
+Pba-CTat_065-Ex1-6G-lcwgs-1-1.clmp.r1r2_fastp	4.1%	39.0%	98.7%	0.7%
+Pba-CTat_069-Ex1-4H-lcwgs-1-1.clmp.r1r2_fastp	3.7%	39.6%	98.8%	0.7%
+Pba-CTat_072-Ex1-4F-lcwgs-1-1.clmp.r1r2_fastp	2.2%	38.7%	99.0%	1.1%
+Pba-CTat_073-Ex1-3D-lcwgs-1-1.clmp.r1r2_fastp	4.6%	39.9%	98.7%	0.6%
+Pba-CTat_074-Ex1-7B-lcwgs-1-1.clmp.r1r2_fastp	3.3%	38.3%	98.9%	0.9%
+Pba-CTat_075-Ex1-6A-lcwgs-1-1.clmp.r1r2_fastp	4.1%	39.9%	98.8%	0.7%
+Pba-CTat_077-Ex1-5B-lcwgs-1-1.clmp.r1r2_fastp	4.1%	39.4%	98.8%	0.8%
+Pba-CTat_078-Ex1-5A-lcwgs-1-1.clmp.r1r2_fastp	4.0%	40.2%	98.8%	0.8%
+Pba-CTat_082-Ex1-2G-lcwgs-1-1.clmp.r1r2_fastp	4.4%	39.2%	98.7%	0.7%
+Pba-CTat_083-Ex1-4B-lcwgs-1-1.clmp.r1r2_fastp	4.1%	40.1%	98.8%	0.7%
+Pba-CTat_084-Ex1-6H-lcwgs-1-1.clmp.r1r2_fastp	5.2%	40.6%	98.4%	0.5%
+Pba-CTat_085-Ex1-1F-lcwgs-1-1.clmp.r1r2_fastp	5.3%	40.6%	98.4%	0.5%
+Pba-CTat_086-Ex1-8F-lcwgs-1-1.clmp.r1r2_fastp	4.6%	40.0%	98.6%	0.6%
+Pba-CTat_087-Ex1-5C-lcwgs-1-1.clmp.r1r2_fastp	4.0%	39.1%	98.8%	0.8%
+Pba-CTat_088-Ex1-3E-lcwgs-1-1.clmp.r1r2_fastp	5.7%	40.3%	98.2%	0.4%
+Pba-CTat_092-Ex1-3H-lcwgs-1-1.clmp.r1r2_fastp	2.8%	40.3%	99.0%	1.0%
+Pba-CTat_093-Ex1-7H-lcwgs-1-1.clmp.r1r2_fastp	4.7%	40.5%	98.6%	0.6%
+Pba-CTat_094-Ex1-1B-lcwgs-1-1.clmp.r1r2_fastp	3.9%	40.5%	98.7%	0.8%
+Pba-CTat_095-Ex1-6C-lcwgs-1-1.clmp.r1r2_fastp	3.8%	40.2%	98.8%	0.7%
+Pba-CVer_001-Ex2-11C-lcwgs-1-1.clmp.r1r2_fastp	5.6%	50.8%	98.6%	0.6%
+Pba-CVer_002-Ex2-11D-lcwgs-1-1.clmp.r1r2_fastp	1.4%	45.3%	98.3%	1.4%
+Pba-CVer_003-Ex2-11E-lcwgs-1-1.clmp.r1r2_fastp	10.9%	46.8%	98.7%	0.4%
+Pba-CVer_004-Ex2-11F-lcwgs-1-1.clmp.r1r2_fastp	11.5%	48.3%	98.5%	0.4%
+Pba-CVer_005-Ex2-11G-lcwgs-1-1.clmp.r1r2_fastp	11.0%	45.8%	98.6%	0.4%
+Pba-CVer_006-Ex2-11H-lcwgs-1-1.clmp.r1r2_fastp	6.6%	42.8%	98.6%	0.4%
+Pba-CVer_007-Ex2-12A-lcwgs-1-1.clmp.r1r2_fastp	6.7%	41.2%	98.3%	0.3%
+Pba-CVer_008-Ex2-12B-lcwgs-1-1.clmp.r1r2_fastp	6.9%	45.7%	98.5%	0.4%
+Pba-CVer_012-Ex2-12D-lcwgs-1-1.clmp.r1r2_fastp	6.3%	43.8%	98.8%	0.6%
+Pba-CVer_020-Ex2-12E-lcwgs-1-1.clmp.r1r2_fastp	14.0%	44.1%	98.8%	0.5%
+Pba-CVer_021-Ex2-12F-lcwgs-1-1.clmp.r1r2_fastp	11.9%	44.7%	98.8%	0.6%
+Pba-CVer_022-Ex2-12G-lcwgs-1-1.clmp.r1r2_fastp	12.5%	44.9%	98.7%	0.5%
+Pba-CVer_023-Ex2-12H-lcwgs-1-1.clmp.r1r2_fastp	9.0%	44.7%	98.8%	0.5%
+Pba-CVer_024-Ex2-1A-lcwgs-1-1.clmp.r1r2_fastp	6.2%	44.8%	98.5%	0.4%
+Pba-CVer_032-Ex2-1B-lcwgs-1-1.clmp.r1r2_fastp	6.5%	48.4%	98.8%	0.5%
+Pba-CVer_033-Ex2-1C-lcwgs-1-1.clmp.r1r2_fastp	10.5%	50.1%	98.7%	0.4%
+Pba-CVer_034-Ex2-1D-lcwgs-1-1.clmp.r1r2_fastp	5.9%	51.8%	98.8%	0.5%
+Pba-CVer_036-Ex1-9C-lcwgs-1-1.clmp.r1r2_fastp	12.2%	63.6%	98.5%	0.3%
+Pba-CVer_039-Ex2-1E-lcwgs-1-1.clmp.r1r2_fastp	6.6%	48.7%	98.6%	0.5%
+Pba-CVer_044-Ex2-1F-lcwgs-1-1.clmp.r1r2_fastp	7.1%	46.2%	98.6%	0.6%
+Pba-CVer_046-Ex2-1G-lcwgs-1-1.clmp.r1r2_fastp	11.9%	50.3%	98.6%	0.4%
+Pba-CVer_047-Ex2-1H-lcwgs-1-1.clmp.r1r2_fastp	5.8%	48.2%	98.4%	0.5%
+Pba-CVer_048-Ex2-2A-lcwgs-1-1.clmp.r1r2_fastp	5.4%	46.2%	98.8%	0.6%
+Pba-CVer_049-Ex1-9D-lcwgs-1-1.clmp.r1r2_fastp	9.4%	50.4%	98.6%	0.5%
+Pba-CVer_051-Ex1-9E-lcwgs-1-1.clmp.r1r2_fastp	6.1%	44.7%	98.6%	0.4%
+Pba-CVer_057-Ex2-2B-lcwgs-1-1.clmp.r1r2_fastp	8.7%	49.0%	98.7%	0.4%
+Pba-CVer_058-Ex1-9F-lcwgs-1-1.clmp.r1r2_fastp	11.3%	52.5%	98.6%	0.5%
+Pba-CVer_059-Ex1-9G-lcwgs-1-1.clmp.r1r2_fastp	10.5%	49.3%	98.7%	0.6%
+Pba-CVer_060-Ex2-2C-lcwgs-1-1.clmp.r1r2_fastp	5.9%	47.6%	98.8%	0.5%
+Pba-CVer_068-Ex2-2E-lcwgs-1-1.clmp.r1r2_fastp	5.5%	51.2%	98.7%	0.5%
+Pba-CVer_069-Ex2-2F-lcwgs-1-1.clmp.r1r2_fastp	6.1%	52.3%	98.8%	0.5%
+Pba-CVer_071-Ex1-9H-lcwgs-1-1.clmp.r1r2_fastp	10.7%	47.4%	98.7%	0.6%
+Pba-CVer_072-Ex2-2H-lcwgs-1-1.clmp.r1r2_fastp	6.3%	51.6%	98.6%	0.4%
+Pba-CVer_073-Ex1-10A-lcwgs-1-1.clmp.r1r2_fastp	8.5%	65.8%	98.4%	0.3%
+Pba-CVer_075-Ex1-10C-lcwgs-1-1.clmp.r1r2_fastp	7.3%	63.6%	98.5%	0.3%
+Pba-CVer_076-Ex2-3A-lcwgs-1-1.clmp.r1r2_fastp	6.0%	53.6%	98.7%	0.5%
+Pba-CVer_082-Ex1-10D-lcwgs-1-1.clmp.r1r2_fastp	11.8%	50.9%	98.6%	0.5%
+Pba-CVer_083-Ex1-10E-lcwgs-1-1.clmp.r1r2_fastp	6.6%	61.9%	98.5%	0.3%
+Pba-CVer_084-Ex1-10F-lcwgs-1-1.clmp.r1r2_fastp	8.3%	49.7%	98.5%	0.5%
+Pba-CVer_085-Ex1-10G-lcwgs-1-1.clmp.r1r2_fastp	8.2%	46.7%	98.6%	0.5%
+Pba-CVer_092-Ex2-3D-lcwgs-1-1.clmp.r1r2_fastp	6.7%	45.5%	98.4%	0.3%
+Pba-CVer_093-Ex2-3E-lcwgs-1-1.clmp.r1r2_fastp	6.3%	51.3%	98.5%	0.5%
+Pba-CVer_094-Ex1-10H-lcwgs-1-1.clmp.r1r2_fastp	8.5%	48.8%	98.7%	0.6%
+Pba-CVer_095-Ex1-11A-lcwgs-1-1.clmp.r1r2_fastp	9.4%	45.9%	98.7%	0.6%
+Pba-CVer_096-Ex1-11B-lcwgs-1-1.clmp.r1r2_fastp	8.7%	53.5%	98.7%	0.5%
 ```
 
 </p>

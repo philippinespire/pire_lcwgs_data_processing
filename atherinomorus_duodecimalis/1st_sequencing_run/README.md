@@ -13,7 +13,7 @@ Copying with `screen`.
 ## 5. Perform a renaming dry run.
 Some of the original file names make it difficult to run the rename script as is, so I copied the rename script and edited it to work with all the files.
 
-`bash renameFQGZ.bash Adu_LCWGS-TestLane_SequenceNameDecode.tsv`
+`bash ../renameFQGZ.bash Adu_LCWGS-TestLane_SequenceNameDecode.tsv`
 
 <details><summary>Expand for output.</summary>
 
@@ -1650,7 +1650,7 @@ AdC0909612G_CKDL230025714-1A_225YNFLT3_L3_2.fq.gz Adu-CTag_096-Ex1-12G-lcwgs-1-1
 </details>
 
 ## 6. Rename the files for real
-`bash renameFQGZ.bash Adu_LCWGS-TestLane_SequenceNameDecode.tsv rename`
+`bash ../renameFQGZ.bash Adu_LCWGS-TestLane_SequenceNameDecode.tsv rename`
 
 ## 7. Check the quality of your data.
 `sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw" "fqc_raw_report"  "fq.gz"`

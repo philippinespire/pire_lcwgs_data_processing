@@ -1038,7 +1038,7 @@ If I understood correctly the conversation with Min, the changes in the output f
 	- Compression worked. Both input *fastq and output *fastq.gz had the correct fastq format and had equal line numbers.
 
 
-Run fqscrn on the remaining 35 stragglers
+Run fqscrn on the remaining stragglers.
 
 ```
 bash ./runFQSCRN_6-min.bash fq_fp1_clmp_fp2_straggler /scratch/hpc-0289/fq_fp1_clmp_fp2_fqscrn_2 20
@@ -1054,6 +1054,18 @@ The for loop script I wrote is taking too long (20 files in 22 h). I modified th
 - With how the script works, compression is done within the scratch directory, and then the resulting *fastq.gz files are moved to the working directory. Since my scratch is nearly full, I can only did 8 at a time to allow for sufficient space during the process.
 
 
+Compression completed, but not all files had the correct *.fastq format.
+- Reorganize the files, then rerun fqscrn on those that failed.
+- After everything, I am left with 36 stragglers for processing. 
+
+Rerun fqscrn on stragglers. KL 2023-08-30
+- Total file size remaining is 319 Gb. There is a risk that my scratch directory will be overwhelmed yet again once these files are being unzipped during fastq_screen. I decided to divide the number of files in half, and then run with fewer nodes.
+- I created another subdir containing a subset of straggler files
+```
+bash ./runFQSCRN_6-min.bash fq_fp1_clmp_fp2_stragglers_CW /scratch/hpc-0289/fq_fp1_clmp_fp2_fqscrn 5
+# no. of files: 20 (size = 118Gb)
+```
+- job ID: 2164734
 
 
 <summary>Expand for MultiQC Output.</summary>

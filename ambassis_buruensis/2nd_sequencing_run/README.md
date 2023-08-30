@@ -154,3 +154,34 @@ Decontaminate.
 ```
 bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2 fq_fp1_clmp_fp2_fqscrn 20
 ```
+
+Some failures - making a list and rerunning with output to scratch as per Chris Bird's latest instructions.
+
+```
+grep 'No reads in' logs/slurm-fqscrn.2119196*out | sed -e 's/^.*No reads in //' -e 's/, skipping.*$//' > fqscrn_files_to_rerun_noreads.txt
+
+bash
+
+indir="fq_fp1_clmp_fp2"
+outdir="/scratch/breid/fq_fp1_clmp_fp2_fqscrn"
+nodes=1
+rerun_file=fqscrn_files_to_rerun_noreads.txt
+
+while read -r fqfile; do
+  sbatch --wrap="bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash $indir $outdir $nodes $fqfile"
+done < $rerun_file
+```
+
+Worked!
+Move the files produced from scratch back to main directory.
+
+```
+mv /scratch/breid/fq_fp1_clmp_fp2_fqscrn/* /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/ambassis_buruensis/2nd_sequencing_run/fq_fp1_clmp_fp2_fqscrn
+```
+
+Run MultiQC.
+
+```
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runMULTIQC.sbatch fq_fp1_clmp_fp2_fqscrn fastq_screen_report
+```
+

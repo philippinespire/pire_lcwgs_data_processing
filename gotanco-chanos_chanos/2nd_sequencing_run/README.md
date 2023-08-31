@@ -1066,6 +1066,19 @@ bash ./runFQSCRN_6-min.bash fq_fp1_clmp_fp2_stragglers_CW /scratch/hpc-0289/fq_f
 # no. of files: 20 (size = 118Gb)
 ```
 - job ID: 2164734
+- job finished; compressing files using Min's pigz method
+- compression done; checking if all fastq files have the correct format
+- moved all output files to working directory
+
+Rerun fqscrn on remaining stragglers. KL 2023-08-31
+- Total file size remaining is  203 Gb. There is a risk that my scratch directory will be overwhelmed yet again once these files are being unzipped during f>- I created another subdir containing a subset of straggler files
+```
+bash ./runFQSCRN_6-min.bash fq_fp1_clmp_fp2_stragglers_CBS /scratch/hpc-0289/fq_fp1_clmp_fp2_fqscrn 6
+# no. of files: 6 (size = 77 Gb)
+```
+
+
+
 
 
 <summary>Expand for MultiQC Output.</summary>

@@ -1095,7 +1095,7 @@ bash ./runFQSCRN_6-min.bash fq_fp1_clmp_fp2_stragglers /scratch/hpc-0289/fq_fp1_
 Running fqscrn on last batch of stragglers. KL 2023-08-31
 ```
 bash ./runFQSCRN_6-min.bash fq_fp1_clmp_fp2_stragglers /scratch/hpc-0289/fq_fp1_clmp_fp2_fqscrn 10
-# no. of files: 10 (size = 126 Gb)
+# no. of files: 2 (size = 37 Gb)
 ```
 
 

@@ -1099,7 +1099,7 @@ Running fqscrn on last batch of stragglers. KL 2023-08-31
 bash ./runFQSCRN_6-min.bash fq_fp1_clmp_fp2_stragglers /scratch/hpc-0289/fq_fp1_clmp_fp2_fqscrn 2
 # no. of files: 2 (size = 37 Gb)
 ```
-- job ID: 2172861
+- job ID: 2174411
 
 <summary>Expand for MultiQC Output.</summary>
 

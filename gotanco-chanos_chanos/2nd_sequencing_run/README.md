@@ -1076,6 +1076,7 @@ Rerun fqscrn on remaining stragglers. KL 2023-08-31
 bash ./runFQSCRN_6-min.bash fq_fp1_clmp_fp2_stragglers_CBS /scratch/hpc-0289/fq_fp1_clmp_fp2_fqscrn 6
 # no. of files: 6 (size = 77 Gb)
 ```
+- job ID: 2168613
 - job finished; compressing files using Min's pigz method
 - compression done; checking if all fastq files have the correct format
 - moved all output files to working directory
@@ -1086,6 +1087,7 @@ Running fqscrn on last batch of stragglers. KL 2023-08-31
 bash ./runFQSCRN_6-min.bash fq_fp1_clmp_fp2_stragglers /scratch/hpc-0289/fq_fp1_clmp_fp2_fqscrn 10
 # no. of files: 10 (size = 126 Gb)
 ```
+- job ID: 2170414
 - job finished; 2 files failed 
 - compressing files using Min's pigz method
 - compression done; checking if all fastq files have the correct format
@@ -1094,10 +1096,10 @@ bash ./runFQSCRN_6-min.bash fq_fp1_clmp_fp2_stragglers /scratch/hpc-0289/fq_fp1_
 
 Running fqscrn on last batch of stragglers. KL 2023-08-31
 ```
-bash ./runFQSCRN_6-min.bash fq_fp1_clmp_fp2_stragglers /scratch/hpc-0289/fq_fp1_clmp_fp2_fqscrn 10
+bash ./runFQSCRN_6-min.bash fq_fp1_clmp_fp2_stragglers /scratch/hpc-0289/fq_fp1_clmp_fp2_fqscrn 2
 # no. of files: 2 (size = 37 Gb)
 ```
-
+- job ID: 2172861
 
 <summary>Expand for MultiQC Output.</summary>
 

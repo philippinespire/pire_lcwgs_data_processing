@@ -1100,6 +1100,17 @@ bash ./runFQSCRN_6-min.bash fq_fp1_clmp_fp2_stragglers /scratch/hpc-0289/fq_fp1_
 # no. of files: 2 (size = 37 Gb)
 ```
 - job ID: 2174411
+- job failed;
+- there was a problem with running Min's script; the error says: 
+	- "No space left on device at /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run/fastq_screen line 1632, <IN_SUBSET> line 1396512096.
+Use of uninitialized value $readsprocessed in numeric eq (==) at /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run/fastq_screen line 458, <IN_SUBSET> line 1396512096. 
+- this was the same error when we were running out of disk space, so I deleted the fq_raw_cat to make more space (~1 TB)
+- error persisted
+- I remembered Brendan saying he used the original `runFQSCRN_6.bash`, and it worked fine; tried doing this (job ID: 2175693)
+- It worked! All files have now been screened!
+
+
+
 
 <summary>Expand for MultiQC Output.</summary>
 
@@ -1118,6 +1129,12 @@ TBD
 ```bash
 Insert output here.
 ```
+
+Run re-pair. KL 2023-09-03
+```
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runREPAIR.sbatch fq_fp1_clmp_fp2_fqscrn fq_fp1_clmp_fp2_fqscrn_rprd 40
+```
+- job ID: 2179002
 
 </p>
 </details>

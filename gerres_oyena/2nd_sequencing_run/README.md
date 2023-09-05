@@ -236,6 +236,14 @@ Run MultiQC.
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runMULTIQC.sbatch fq_fp1_clmp_fp2_fqscrn fastq_screen_report
 ```
 
+Summary:
+* All libraries mostly no-hit (>90%).
+* Multiple genomes mostly ~2%, up to ~8%
+* ~ 0.6-0.8% protist content for most libraries
+* A few libraries with 2-3% bacteria
+* Human < 0.5%
+* All other categories 0-0.1%
+
 Re-pair.
 
 ```
@@ -248,3 +256,8 @@ Final MultiQC.
 ```
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_fp1_clmp_fp2_fqscrn_rprd" "fqc_rprd_report" "fq.gz"
 ```
+
+Summary:
+* Generally very low duplication, some up to 9%.
+* Length distribution for Albatross smaller (74-111) than contemp (109-140).
+* Still higher GC content for contemp than Albatross. But distributions look OK.

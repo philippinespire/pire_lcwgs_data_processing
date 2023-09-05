@@ -185,6 +185,12 @@ Run MultiQC.
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runMULTIQC.sbatch fq_fp1_clmp_fp2_fqscrn fastq_screen_report
 ```
 
+Summary:
+* Mostly no-hit (>83%)
+* Generally higher protist + multiple genomes for contemp (protist ~1.5%, multiple 6-12%) than for Albatross (protist ~1%, multiple 3-6%).
+* A few contemporaries with up to 4% bacterial, but mostly very low.
+* All other categories < 0.5%.
+
 Re-pair and MultiQC.
 
 ```
@@ -192,3 +198,8 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runREPAIR.sbatch fq_fp1
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_fp1_clmp_fp2_fqscrn_rprd" "fqc_rprd_report" "fq.gz"
 
 ```
+
+Summary:
+* Shorter Albatross reads (86-114 bp) than contemporary (100-135 bp).
+* Duplication generally low but can be >10% still.
+* GC content lower on average for Albatross than contemp - still some flags for GC.

@@ -1,0 +1,10 @@
+#!/bin/bash -l
+
+#SBATCH --job-name=fqscrn_copy
+#SBATCH -o fqscrn_copy-%j.out 
+#SBATCH -p main 
+#SBATCH -n 1  
+#SBATCH -N 1  
+#SBATCH --cpus-per-task=40
+
+cp /scratch/breid/fq_fp1_clmp_fp2_fqscrn_goy/* /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gerres_oyena/2nd_sequencing_run/fq_fp1_clmp_fp2_fqscrn

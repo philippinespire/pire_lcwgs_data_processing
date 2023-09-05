@@ -189,7 +189,62 @@ Summary:
 * Longer inserts for contemp.
 * Looking pretty good otherwise (>99% PF, almost all <2% adapter).
 
-Decontaminate.
+Decontaminate/FQSCRN.
+
 ```
 bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2 fq_fp1_clmp_fp2_fqscrn 20
+```
+
+Some errors, looks like especially with large files. Trying one of these individually:
+
+```
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2 fq_fp1_clmp_fp2_fqscrn 2 "Goy-APnd_004*.fq.gz"
+```
+
+Outputting to scratch:
+
+```
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2 /scratch/breid/gerres_2ndrun/fq_fp1_clmp_fp2_fqscrn 2 "Goy-APnd_004*.fq.gz"
+```
+
+Making a list and rerunning with output to scratch as per Chris Bird's latest instructions.
+
+```
+grep 'No reads in' logs/slurm-fqscrn.2119221*out | sed -e 's/^.*No reads in //' -e 's/, skipping.*$//' > fqscrn_files_to_rerun_noreads.txt
+
+bash
+
+indir="fq_fp1_clmp_fp2"
+outdir="/scratch/breid/fq_fp1_clmp_fp2_fqscrn_goy"
+nodes=1
+rerun_file=fqscrn_files_to_rerun_noreads.txt
+
+while read -r fqfile; do
+  sbatch --wrap="bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash $indir $outdir $nodes $fqfile"
+done < $rerun_file
+```
+
+One file did not finish!
+
+```
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash "fq_fp1_clmp_fp2" "/scratch/breid/fq_fp1_clmp_fp2_fqscrn_goy" 1 Goy-CPnd_027-Ex1-2H-lcwgs-1-2.clmp.fp2_r1.fq.gz 
+```
+
+Run MultiQC.
+
+```
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runMULTIQC.sbatch fq_fp1_clmp_fp2_fqscrn fastq_screen_report
+```
+
+Re-pair.
+
+```
+sbatch /home/e1garcia/pire_fq_gz_processing/runREPAIR.sbatch fq_fp1_clmp_fp2_fqscrn fq_fp1_clmp_fp2_fqscrn_rprd 40
+
+```
+
+Final MultiQC.
+
+```
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_fp1_clmp_fp2_fqscrn_rprd" "fqc_rprd_report" "fq.gz"
 ```

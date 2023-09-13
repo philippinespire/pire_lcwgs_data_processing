@@ -1144,12 +1144,31 @@ TBD
 
 Due to the problem with git push/pull, EGarcia deprecated the old directory and create a new one. The *fq.gz files were not included, so I should find a way to transfer them to the new directory.
 - Use mv for this.
-
+- Files were successfully transferred from the freshly cloned repo. KL 2023-09-13
 
 
 ## Perform multi fastqc on several directories
 
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run
 
+# fq_raw_cat2
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw_cat2" "fqc_raw_report"  "fq.gz"
+# job ID: 2203270
+
+# fq_fp1_clmp
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1_clmp" "fqc_clmp_report"  "fq.gz"
+# job ID: 2203310
+
+# fq_fp1_clmp_fp2_fqscrn
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1_clmp_fp2_fqscrn" "fastq_screen_report"  "tagged_filter.fastq.gz"
+# job ID: 2203311
+
+# fq_fp1_clmp_fp2_fqscrn_rprd
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_fp1_clmp_fp2_fqscrn_rprd" "fqc_rprd_report" "fq.gz"
+# job ID: 2203312
+
+```
 
 
 

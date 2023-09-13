@@ -1,4 +1,4 @@
-\*\*\* contents of fq_raw, fq_fp1_clmp_fp2, and fq_fp1_clmp_fp2_fqscrn_rprd have been transferred to /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/gerres_oyena/1st_sequencing_run/ \*\*\*
+\*\*\* contents of `fq_raw`, `fq_fp1_clmp_fp2`, and `fq_fp1_clmp_fp2_fqscrn_rprd` have been transferred to `/RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/gerres_oyena/1st_sequencing_run/` Some intermediate \*fq.gz files completely missing, including in `fq_fp1`, `fq_fp1_clmp`, and \*.gz files in `fq_fp1_clmp_fp2_fqscrn` *\*\*\*
 
 ## 1. Download data
 Data downloaded from TAMUCC grid.

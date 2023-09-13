@@ -1,3 +1,5 @@
+\*\*\* \*fq.gz files lost from `fq_fp1` \*\*\*
+
 ## 1. Download data
 Data downloaded from TAMUCC grid.
 

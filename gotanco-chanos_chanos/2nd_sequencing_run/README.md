@@ -1142,6 +1142,17 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runREPAIR.sbatch fq_fp1
 ## 14. Clean up
 TBD
 
+Due to the problem with git push/pull, EGarcia deprecated the old directory and create a new one. The *fq.gz files were not included, so I should find a way to transfer them to the new directory.
+- Use mv for this.
+
+
+
+## Perform multi fastqc on several directories
+
+
+
+
+
 
 ## Prepare Reference Genome
 Preparation of the reference genome was done previously during the processing of the test lane (i.e., 1st_sequencing_run). LWeeks copied and pasted the refGenome directory from the 1st_sequencing_run and copied it to the 2nd_sequencing_run. Since the 1st_sequencing_run directory will be removed from the PIRE repo, I also added the instructions here.

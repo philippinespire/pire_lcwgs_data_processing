@@ -24,7 +24,7 @@ for f in "$INDIR/"*.fastq; do
 
 	sleep 30
 
-	rm "$f"    # uncomment this if you want remove the original unzipped file
+	#rm "$f"    # uncomment this if you want remove the original unzipped file
 done
 
 

@@ -1155,19 +1155,23 @@ cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/
 # fq_raw_cat2
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw_cat2" "fqc_raw_report"  "fq.gz"
 # job ID: 2203270
+# job got stuck; 34 stragglers remaining.
+
 
 # fq_fp1_clmp
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1_clmp" "fqc_clmp_report"  "fq.gz"
 # job ID: 2203310
+# job got stuck;
 
 # fq_fp1_clmp_fp2_fqscrn
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1_clmp_fp2_fqscrn" "fastq_screen_report"  "tagged_filter.fastq.gz"
 # job ID: 2203311
+# job got stuck
 
 # fq_fp1_clmp_fp2_fqscrn_rprd
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_fp1_clmp_fp2_fqscrn_rprd" "fqc_rprd_report" "fq.gz"
 # job ID: 2203312
-
+# job got stuck
 ```
 
 

@@ -13,7 +13,7 @@ filename_list=$3
 # Loop through each filename in the list
 for filename in $(cat "$filename_list"); do
 	# Move files from source directory to destination directory.
-	mv "$source_dir/$filename" "$destination_dir/"
+	mv "$source_dir/$filename"*fq.gz "$destination_dir/"
 done
 
 echo "Files have been moved from $source_dir to $destination_dir."

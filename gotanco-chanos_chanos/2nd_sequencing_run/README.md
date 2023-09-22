@@ -638,6 +638,8 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1
 ```
 </details>
 
+</details>
+
 <details>
 	<summary>10. Second trim</summary>
 Ran `runFASTP_2_cssl.sbatch`. LW 2023-07-13
@@ -1177,6 +1179,7 @@ TBD
 ```bash
 Insert output here.
 ```
+</details>
 
 Run re-pair. KL 2023-09-03
 ```
@@ -1184,11 +1187,10 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runREPAIR.sbatch fq_fp1
 ```
 - job ID: 2179002
 
-</p>
 </details>
 
 <details>
-	<summary>14. Clean up</summary>
+	<summary>13. Clean up</summary>
 TBD
 
 Due to the problem with git push/pull, EGarcia deprecated the old directory and create a new one. The *fq.gz files were not included, so I should find a way to transfer them to the new directory.
@@ -1197,7 +1199,7 @@ Due to the problem with git push/pull, EGarcia deprecated the old directory and 
 </details>
 
 <details>
-	<summary>15. Perform multi fastqc on several directories</summary>
+	<summary>14. Perform multi fastqc on several directories</summary>
 
 ```
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run
@@ -1224,7 +1226,7 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_f
 # job got stuck
 ```
 
-
+</details>
 
 
 ## Prepare Reference Genome

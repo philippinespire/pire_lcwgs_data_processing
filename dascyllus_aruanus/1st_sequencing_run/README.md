@@ -973,3 +973,10 @@ Dar-CJol_094-Ex1-1D-lcwgs-1-1.clmp.fp2_repr.R2	3.2%	47%	134 bp	1.6
 ## 14. Clean Up
 `mkdir logs`\
 `mv *out logs/`
+
+## 15. Removing Interim Files
+Followed the steps in https://github.com/philippinespire/pire_ssl_data_processing#f-cleaning-up
+
+Before: 237 G
+After: 121 G
+Space saved: 116 G

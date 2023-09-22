@@ -878,3 +878,10 @@ Lva-CPnd_048-Ex1-12D-lcwgs-2-1.clmp.fp2_repr.R2	2.6%	42%	124 bp	2.5
 mkdir logs
 mv *out logs/
 ```
+
+## 15. Delete Interim Files
+Followed directions in https://github.com/philippinespire/pire_ssl_data_processing#f-cleaning-up
+
+Before: 200 G
+After: 55 G
+Space saved: 145 G

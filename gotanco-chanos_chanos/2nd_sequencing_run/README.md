@@ -1226,8 +1226,30 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_f
 # job got stuck
 ```
 
+<details> <summary>Notes</summary>
+
+- QC gets stuck for all the files processed.
+- LWeeks informed me that it could be due to fault file formats (which I have made sure to check every step).
+- I re-checked again, and true enough, I get two raw, concatenated files who were not in the proper format:
+	- Cch-CAS_038-1D-lcwgs-1-2.1.fq.gz (GotPopAS38)
+	- Cch-CBL_020-5E-lcwgs-1-2.2.fq.gz (GotPopBL20)
+
+- Concatenate the stragglers.
+	- Checked fq.gz file format. All is good.
+	- Use the custom `catfiles2.sbatch` to concatenate the reads across different sequencing runs.
+	- Use `validateFQ.sbatch` to check file formats.
+	- Stragglers concatenated successfully.
+
+- Add the stragglers to the fq_raw_cat2_qc_stragglers directory. Run QC
+```
+# fq_raw_cat2
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw_cat2_qc_stragglers" "fqc_raw_report"  "fq.gz"
+# job ID: 2224679
+```
+
 </details>
 
+</details>
 
 ## Prepare Reference Genome
 Preparation of the reference genome was done previously during the processing of the test lane (i.e., 1st_sequencing_run). LWeeks copied and pasted the refGenome directory from the 1st_sequencing_run and copied it to the 2nd_sequencing_run. Since the 1st_sequencing_run directory will be removed from the PIRE repo, I also added the instructions here.

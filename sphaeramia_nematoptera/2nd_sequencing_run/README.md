@@ -876,3 +876,10 @@ Sne-CCab_079-Ex1-8H-lcwgs-1-1.clmp.fp2_repr.R2	2.3%	38%	138 bp	1.2
 mkdir logs
 mv *out logs/
 ```
+
+## 15. Delete Interim Files
+Followed directions from https://github.com/philippinespire/pire_ssl_data_processing#f-cleaning-up
+
+Before: 195 G
+After: 57 G
+Space saved: 138 G

@@ -3529,3 +3529,10 @@ Tzo-CMvi_094-Ex1-8C-lcwgs-1-1.clmp.fp2_repr.R2	5.1%	40%	133 bp	2.4
 mkdir logs
 mv *out logs/
 ```
+
+## 15. Delete Interim Files
+Followed directions in https://github.com/philippinespire/pire_ssl_data_processing#f-cleaning-up
+
+Before: 431 G
+After: 113 G
+Space saved: 318 G

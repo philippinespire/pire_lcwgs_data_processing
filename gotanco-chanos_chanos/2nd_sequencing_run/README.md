@@ -1213,7 +1213,7 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw
 # fq_fp1_clmp
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1_clmp" "fqc_clmp_report"  "fq.gz"
 # job ID: 2203310
-# job got stuck;
+# job got stuck; 2 stragglers remaining (Cch-CAS_049, Cch-CAS_023)
 
 # fq_fp1_clmp_fp2_fqscrn
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1_clmp_fp2_fqscrn" "fastq_screen_report"  "tagged_filter.fastq.gz"
@@ -1243,8 +1243,19 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_f
 - Add the stragglers to the fq_raw_cat2_qc_stragglers directory. Run QC
 ```
 # fq_raw_cat2
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw_cat2_qc_stragglers" "fqc_raw_report"  "fq.gz"
-# job ID: 2224679
+# job ID: 2224743
+```
+
+- I checked the fq.gz file format for the two qc_stragglers under fq_fp1_clmp.
+	- Use `validateFQ.sbatch` to check file format.
+	- Both files had the right format. Proceed with Multi_FASTQC.
+```
+# fq_fp1_clmp
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1_clmp_qc_straggler" "fqc_clmp_report"  "fq.gz"
+# job ID: 2224747
 ```
 
 </details>

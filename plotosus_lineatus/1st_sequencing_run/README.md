@@ -2095,3 +2095,10 @@ Pli-CMvi_095-Ex1-8C-lcwgs-1-1.clmp.fp2_repr.R2	0.3%	42%	118 bp	0.0
 mkdir logs
 mv *out logs
 ```
+
+## Delete Interim Files
+Followed directions in https://github.com/philippinespire/pire_ssl_data_processing#f-cleaning-up
+
+Before: 188 G
+After: 65 G
+Space saved: 123 G

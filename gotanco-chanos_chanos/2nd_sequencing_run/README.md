@@ -193,6 +193,8 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw
 - Job still stuck after 1 d 15 h. Terminate run. KL 2023-08-13
 
 </details>
+
+<details>
 	<summary>8. First trim</summary>
 
 Started the first trim yesterday, finished as of this morning, still have 300 forward and 300 reverse reads in `fq_fp1`. LW 2023-07-11

@@ -1,5 +1,15 @@
 
-## 1. Download data
+# *Chanos chanos* lcwgs
+### Laurel Weeks and Kevin Labrador
+#
+
+## 1. Pre-processing
+
+This follows the instructions from [pire_fq_gz_processing](https://github.com/philippinespire/pire_fq_gz_processing/blob/main/README.md).
+
+<details>
+	<summary>1. Download data</summary>
+
 Data copied from `gotanco_chanos-chanos/2nd_sequencing_run_depracated/fq_raw` and `gotanco_chanos-chanos/3rd_sequencing_run_depracated/fq_raw`   LW 2023-07-09
 Test lane data copied from `https://grid.ftp.tamucc.edu/genomics/20230425_Gotanco-lcwgs-testlane/Lane1/` KL 2023-08-07
 
@@ -47,7 +57,11 @@ Add the fq_raw_test-lane/*fq.gz files to fq_raw
 mv fq_raw_test-lane/*fq.gz fq_raw/
 ```
 
-## 1.5 Concatenate the files
+</details>
+
+
+<details>
+	<summary>1.5 Concatenate the files</summary>
 Created a script to concatenate Lanes 2 and 3 into 1 file for each sample run. `catfiles.sbatch`. Successfully concatenated files; new files went into `fq_raw_cat`. LW 2023-07-09
 
 Concatenated the test lane along with Lanes 2 and 3. Output to a different directory for now. KL 2023-08-09
@@ -89,22 +103,36 @@ sbatch ./catfiles2.sbatch fq_raw_GotW fq_raw_GotW_cat 2
 ```
 
 All files are now in order. Proceed to next step.
+</details>
 
-
-## 2. Proofread the decode files
+<details>
+	<summary>2. Proofread the decode files</summary>
 Decode file does not match the PIRE naming scheme to be able to successfully run scripts down the line, created a new decode file, `Gotanco-Sequencing-DecodeFile.tsv`. 
 
 300 forward reads, 300 reverse reads in both the decode file and in `fq_raw_cat`. LW 2023-07-10
 
 Copy the decode file from fq_raw_cat to fq_raw_cat2. KL 2023-08-10
 
-## 3. Edit the decode file
+</details>
+
+<details>
+	<summary>3. Edit the decode file</summary>
+
 N/A, created a new file.
 
-## 4. Make a copy of the fq_raw files
+</details>
+
+
+<details>
+	<summary>4. Make a copy of the fq_raw files</summary>
+
 N/A
 
-## 5. Perform a renaming dry run.
+</details>
+
+<details>
+	<summary>5. Perform a renaming dry run</summary>
+
 Dry run unsuccessful, renaming does not remove the characters between the sample name and `.fq.gz`. Copied `renameFQGZ.bash` to the gotanco directory and edited the script so that it works with the initial unconvential naming.
 
 After editing, the dry run was successful. LW 2023-07-10
@@ -119,7 +147,10 @@ bash ../renameFQGZ_2.bash Gotanco-Sequencing-DecodeFile.tsv
 ```
 Seems to have worked!
 
-## 6. Rename the files for real
+</details>
+
+<details>
+	<summary>6. Rename the files for real</summary>
 Successfully renamed the files with the edited script. LW 2023-07-10
 
 Renamed the files. KL 2023-08-10
@@ -130,7 +161,11 @@ bash ../renameFQGZ_2.bash Gotanco-Sequencing-DecodeFile.tsv rename
 
 ```
 
-## 7. Check the quality of your data.
+</details>
+
+<details>
+	<summary>7. Check the quality of your data</summary>
+
 Started `MultiQC`, still running, and still running as of the morning, for 20 hours now. Canceled job. LW 2023-07-11
 
 <details><summary>Expand for MultiQC Output.</summary>
@@ -157,10 +192,10 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw
 - JobID: 2096122
 - Job still stuck after 1 d 15 h. Terminate run. KL 2023-08-13
 
+</details>
+	<summary>8. First trim</summary>
 
-## 8. First trim.
 Started the first trim yesterday, finished as of this morning, still have 300 forward and 300 reverse reads in `fq_fp1`. LW 2023-07-11
-
 
 Do first trim on fq_raw_cat2. KL 2023-08-10
 ```
@@ -180,8 +215,6 @@ mkdir fq_raw_cat2_straggler fq_fp1_straggler
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_1st_trim.sbatch fq_raw_cat2_straggler fq_fp1_straggler
 
 ```
-
-
 
 Updated MultiQC table.
 
@@ -495,10 +528,13 @@ Cch-CWCS_281-12E-lcwgs-1-2	15.7%	41.5%	97.7%	3.7%
 </p>
 </details>
 
+</details>
 
-## 9. Remove duplicates with clumpify.
+<details>
+	<summary>9. Remove duplicates with clumpify</summary>
 
-### 9a. Remove duplicates.
+<details> <summary>9a. Remove duplicates</summary>
+
 Running `runCLUMPIFY_r1r2_array.bash`. Waiting on nodes to become available. LW 2023-07-11
 
 CLUMPIFY has finished. LW 2023-07-13
@@ -568,18 +604,20 @@ Problems on memory and scratch directory
 bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array2.bash fq_fp1_stragglers_sub fq_fp1_clmp_stragglers /scratch-lustre/hpc-0289 1 32 350g himem
 # Move all output to fq_fp1_clmp directory, and then clean-up work directory 
 ```
+</details>
 
+<details> <summary>9b. Check duplicate removal success</summary>
 
-### 9b. Check duplicate removal success.
 Due to previous issues woking in R, I ran `module load container_env R/4.2` instead of `module load container_env mapdamage2`. 
 
-`Clumpify Successfully worked on al samples" LW 2023-07-13
+`Clumpify Successfully worked on all samples" LW 2023-07-13
 
 
 Cannot recover all the outfiles from clumpifying the concatenated libraries due to all the reruns made. I did however look at the files using `checkFQ.sh` to see if they are still correctly formatted as fq.gz. KL 2023-08-16
 
+</details>
 
-### 9c. Generate metadata on deduplicated FASTQ files.
+<details> <summary>9c. Generate metadata on deduplicated FASTQ files</summary>
 Running `runMULTIQC.sbatch`. LW 2023-07-13
 
 <details><summary>Expand for MultiQC Output.</summary>
@@ -596,8 +634,10 @@ Run MultiQC on fq_fp1_clmp. KL 2023-08-16
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco_chanos-chanos/2nd_sequencing_run
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1_clmp" "fqc_clmp_report"  "fq.gz"
 ```
+</details>
 
-## 10. Second trim.
+<details>
+	<summary>10. Second trim</summary>
 Ran `runFASTP_2_cssl.sbatch`. LW 2023-07-13
 
 Run second trim. Save in a temp directory in case something goes wrong and I don't want to overwrite the previous result just yet.  KL 2023-08-16
@@ -606,7 +646,6 @@ mkdir fq_fp1_clmp_fp2_kl
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_2.sbatch fq_fp1_clmp fq_fp1_clmp_fp2_kl 33
 ```
 Second trim worked perfectly. Delete the old files and replace with this one.
-
 
 <details><summary>Expand for Updated MultiQC Output.</summary>
 
@@ -919,7 +958,11 @@ Cch-CWCS_281-12E-lcwgs-1-2.clmp.r1r2_fastp	4.2%	41.5%	99.5%	0.1%
 </p>
 </details>
 
-## 11. Decontaminate files.
+</details>
+
+<details>
+	<summary>11. Decontaminate files</summary>
+
 Running `runFQSCRN_6.bash`. LW 2023-07-13
 
 Took 2 days to finish, 5 reads did not run correctly. Moved these reads to `fq_fp1_clmp_fp2_stragglers` and restarted them. LW 2023-07-17
@@ -1121,7 +1164,10 @@ insert multiqc output here
 </p>
 </details>
 
-## 12. Execute RePair
+</details>
+
+<details>
+	<summary>12. Execute RePair</summary>
 TBD
 
 <details><summary>Expand for MultiQC Output.</summary>
@@ -1139,15 +1185,17 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runREPAIR.sbatch fq_fp1
 </p>
 </details>
 
-## 14. Clean up
+<details>
+	<summary>14. Clean up</summary>
 TBD
 
 Due to the problem with git push/pull, EGarcia deprecated the old directory and create a new one. The *fq.gz files were not included, so I should find a way to transfer them to the new directory.
 - Use mv for this.
 - Files were successfully transferred from the freshly cloned repo. KL 2023-09-13
+</details>
 
-
-## Perform multi fastqc on several directories
+<details>
+	<summary>15. Perform multi fastqc on several directories</summary>
 
 ```
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run

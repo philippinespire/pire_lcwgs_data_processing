@@ -1656,3 +1656,10 @@ Psq-CVer_090-Ex1-3F-lcwgs-1-1.clmp.fp2_repr.R2	5.0%	42%	134 bp	1.1
 mkdir logs
 mv *out logs/
 ```
+
+## 15. Delete Interim Files
+Followed directions in https://github.com/philippinespire/pire_ssl_data_processing#f-cleaning-up
+
+Before: 270 G
+After: 70 G
+Space saved: 200 G

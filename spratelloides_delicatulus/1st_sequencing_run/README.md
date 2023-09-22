@@ -135,3 +135,10 @@ cp ../mkBAM_test5/config.6.lcwgs .
 cp ../mkBAM_test5/dDocentHPC_dev2.sbatch .
 sbatch dDocentHPC_dev2.sbatch mkBAM config.6.lcwgs
 ```
+
+## Delete Interim Files
+Followed directions from https://github.com/philippinespire/pire_ssl_data_processing#f-cleaning-up
+
+Before: 163 G
+After: 84 G
+Space saved: 79 G

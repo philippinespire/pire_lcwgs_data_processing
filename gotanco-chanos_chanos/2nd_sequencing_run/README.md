@@ -1246,6 +1246,9 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_f
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw_cat2_qc_stragglers" "fqc_raw_report"  "fq.gz"
 # job ID: 2224743
+# job stuck; cancelled; MaxVMSize = 151.8 Gb
+# Rerun job ID: 2224755
+# job stuck (runtime: 2d17h); cancelled; MaxVMSize (152.32 Gb) < ReqMem (341.80 Gb)  
 ```
 
 - I checked the fq.gz file format for the two qc_stragglers under fq_fp1_clmp.
@@ -1256,7 +1259,23 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw
 cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1_clmp_qc_straggler" "fqc_clmp_report"  "fq.gz"
 # job ID: 2224747
+# job stuck; cancelled; MaxVMSize = 19.60 Gb
+# Rerun job ID: 2224753
+# job stuck (runtime: 2d17h); cancelled; MaxVMSize (19.46 Gb) < ReqMem (341.80 Gb)	
 ```
+
+- MultiQC is no longer working despite sufficient memory. This points toward space issues.
+- Try moving the directory to my wahab acct and work from there.
+```
+# rsynced all straggler directories to /home/klab
+# perform `Multi-FASTQC.sh` on these directories.
+cd ~/PIRE_tmp
+rsync /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run/fq_fp1_clmp_qc_straggler .
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1_clmp_qc_straggler" "fqc_clmp_report" "fq.gz"
+
+
+```
+
 
 </details>
 

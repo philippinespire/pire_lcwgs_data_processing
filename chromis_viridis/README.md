@@ -102,7 +102,7 @@ bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_c
 
 There were no more errors or failed individuals so I ran Multiqc for all samples again
 
- MultiQC [Report]()
+ MultiQC [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/chromis_viridis/2nd_sequencing_run/fq_fp1_clmp_fp2_fqscrn/fastq_screen_report.html)
 
 ```
 Potential issues:
@@ -117,7 +117,7 @@ Potential issues:
 
 <details><summary><i>Reviewed Fastqscreen repaired files</i></summary>
 <p>
-MultiQC [Report]()
+MultiQC [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/chromis_viridis/2nd_sequencing_run/fq_fp1_clmp_fp2_fqscrn_rprd/fqc_rprd_report.html)
 
  ```
 Potential issues:

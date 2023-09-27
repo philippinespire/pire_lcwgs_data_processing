@@ -1,0 +1,15 @@
+Started with the command: /opt/paleomix/bin/mapDamage --rescale-only -i - -d /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/PALEOMIX_raw/temp/650ecb14-cda3-4aa3-9204-a0f7b61a1e11 -r /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/refGenome/GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fasta --rescale-out /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/PALEOMIX_raw/temp/650ecb14-cda3-4aa3-9204-a0f7b61a1e11/Sfa-CBas_032_Lib1.rescaled.bam --downsample 100000
+Rescaling BAM: '-' -> '/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/PALEOMIX_raw/temp/650ecb14-cda3-4aa3-9204-a0f7b61a1e11/Sfa-CBas_032_Lib1.rescaled.bam'
+[E::idx_find_and_load] Could not retrieve index file for '-'
+Warning! Assuming the pairs are non-overlapping, facing inwards and correctly paired.
+Number of non-rescaled reads due to improper pairing:  33322
+[E::bgzf_close] File write failed
+Traceback (most recent call last):
+  File "/opt/paleomix/bin/mapDamage", line 371, in <module>
+    sys.exit(main())
+  File "/opt/paleomix/bin/mapDamage", line 208, in main
+    mapdamage.rescale.rescale_qual(ref, options)
+  File "/opt/paleomix/lib/python3.9/site-packages/mapdamage/rescale.py", line 357, in rescale_qual
+    bam_out.close()
+  File "pysam/libcalignmentfile.pyx", line 1682, in pysam.libcalignmentfile.AlignmentFile.close
+OSError: [Errno 5] Input/output error

@@ -1,0 +1,24 @@
+PALEOMIX         = v1.3.8
+Command          = '/opt/paleomix/bin/paleomix bam run makefile.yaml'
+CWD              = '/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/PALEOMIX_raw'
+PATH             = '/opt/paleomix/bin:/opt/conda/bin/libfabric:/opt/micromamba/condabin:/cm/shared/applications/slurm/23.02.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+Node             = alignment of './Sfa_lcWGS/reads/Sfa-CBas_061/Sfa-CBas_061_Lib1/Lane_1/Sfa-CBas_061_Ex1_L3_x.fq.gz/reads.collapsed.gz' onto GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen using BWA Backtrack using 8 threads
+Threads          = 8
+Input files      = ./Sfa_lcWGS/reads/Sfa-CBas_061/Sfa-CBas_061_Lib1/Lane_1/Sfa-CBas_061_Ex1_L3_x.fq.gz/reads.collapsed.gz
+                   /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/refGenome/GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fasta.amb
+                   /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/refGenome/GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fasta.ann
+                   /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/refGenome/GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fasta.bwt
+                   /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/refGenome/GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fasta.pac
+                   /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/refGenome/GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fasta.sa
+Output files     = ./Sfa_lcWGS/Sfa/Sfa-CBas_061/Sfa-CBas_061_Lib1/Lane_1/Sfa-CBas_061_Ex1_L3_x.fq.gz/collapsed.sai
+Auxiliary files  = 
+Executables      = bwa
+
+Errors =
+Command = bwa aln -t 8 -l 65535 \
+              /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/refGenome/GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fasta \
+              ./Sfa_lcWGS/reads/Sfa-CBas_061/Sfa-CBas_061_Lib1/Lane_1/Sfa-CBas_061_Ex1_L3_x.fq.gz/reads.collapsed.gz
+Status  = Exited with return-code 1
+STDOUT  = '/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/PALEOMIX_raw/temp/99980158-2695-4d6a-80bd-d423b05a392d/collapsed.sai'
+STDERR* = '/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/PALEOMIX_raw/temp/99980158-2695-4d6a-80bd-d423b05a392d/pipe_bwa_140150919065312.stderr'
+CWD     = '/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/PALEOMIX_raw'

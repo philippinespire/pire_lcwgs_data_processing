@@ -1,0 +1,372 @@
+# Command:
+#     /opt/paleomix/bin/paleomix bam run makefile.yaml
+#
+# Directory:
+#     /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/PALEOMIX_raw_norescaletest
+#
+# Genomes:
+#     Name    Contigs    Size         Prefix
+#     Sfa     23         714822470    /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/refGenome/GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fasta
+#
+# Regions Of Interest:
+#     Genome    ROI    Size    NFeatures    NIntervals    Path
+#
+#
+Target	Sample	Library	Measure	Value	# Description
+Sfa_lcWGS	*	*	lib_type	PE	# SE, PE, or * (for both)
+Sfa_lcWGS	*	*	seq_reads_pairs	157459635	# Total number of pairs
+Sfa_lcWGS	*	*	seq_trash_pe_1	7775	# Total number of reads
+Sfa_lcWGS	*	*	seq_trash_pe_1_frac	4.937773417295169e-05	# Fraction of PE mate 1 reads trashed
+Sfa_lcWGS	*	*	seq_trash_pe_2	7775	# Total number of reads
+Sfa_lcWGS	*	*	seq_trash_pe_2_frac	4.937773417295169e-05	# Fraction of PE mate 2 reads trashed
+Sfa_lcWGS	*	*	seq_collapsed	141063619	# Total number of pairs collapsed into one read
+Sfa_lcWGS	*	*	seq_collapsed_frac	0.8958716244960176	# Fraction of PE pairs collapsed into one read
+Sfa_lcWGS	*	*	seq_retained_reads	173840101	# Total number of retained reads
+Sfa_lcWGS	*	*	seq_retained_nts	24978454562	# Total number of NTs in retained reads
+Sfa_lcWGS	*	*	seq_retained_length	143.6863785646328	# Average number of NTs in retained reads
+
+Sfa_lcWGS	*	*	hits_raw(Sfa)	81877045	# Total number of hits (prior to PCR duplicate filtering)
+Sfa_lcWGS	*	*	hits_raw_frac(Sfa)	0.47099055125376393	# Total number of hits vs. total number of reads retained
+Sfa_lcWGS	*	*	hits_clonality(Sfa)	0.275874733876876	# Fraction of hits that were PCR duplicates
+Sfa_lcWGS	*	*	hits_unique(Sfa)	59289237	# Total number of hits (excluding any PCR duplicates)
+Sfa_lcWGS	*	*	hits_unique_frac(Sfa)	0.3410561582681087	# Total number of unique hits vs. total number of reads retained
+Sfa_lcWGS	*	*	hits_coverage(Sfa)	11.460914665986927	# Estimated coverage from unique hits
+Sfa_lcWGS	*	*	hits_length(Sfa)	138.1788625480203	# Average number of aligned bases per unique hit
+
+
+Sfa_lcWGS	Sfa-ABas_001	*	lib_type	PE	# SE, PE, or * (for both)
+Sfa_lcWGS	Sfa-ABas_001	*	seq_reads_pairs	33966079	# Total number of pairs
+Sfa_lcWGS	Sfa-ABas_001	*	seq_trash_pe_1	1070	# Total number of reads
+Sfa_lcWGS	Sfa-ABas_001	*	seq_trash_pe_1_frac	3.1502017056487446e-05	# Fraction of PE mate 1 reads trashed
+Sfa_lcWGS	Sfa-ABas_001	*	seq_trash_pe_2	1070	# Total number of reads
+Sfa_lcWGS	Sfa-ABas_001	*	seq_trash_pe_2_frac	3.1502017056487446e-05	# Fraction of PE mate 2 reads trashed
+Sfa_lcWGS	Sfa-ABas_001	*	seq_collapsed	32680011	# Total number of pairs collapsed into one read
+Sfa_lcWGS	Sfa-ABas_001	*	seq_collapsed_frac	0.9621366952599975	# Fraction of PE pairs collapsed into one read
+Sfa_lcWGS	Sfa-ABas_001	*	seq_retained_reads	35250007	# Total number of retained reads
+Sfa_lcWGS	Sfa-ABas_001	*	seq_retained_nts	4692972336	# Total number of NTs in retained reads
+Sfa_lcWGS	Sfa-ABas_001	*	seq_retained_length	133.13394054077776	# Average number of NTs in retained reads
+
+Sfa_lcWGS	Sfa-ABas_001	*	hits_raw(Sfa)	16025281	# Total number of hits (prior to PCR duplicate filtering)
+Sfa_lcWGS	Sfa-ABas_001	*	hits_raw_frac(Sfa)	0.45461781043050575	# Total number of hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-ABas_001	*	hits_clonality(Sfa)	0.2762490092997433	# Fraction of hits that were PCR duplicates
+Sfa_lcWGS	Sfa-ABas_001	*	hits_unique(Sfa)	11598313	# Total number of hits (excluding any PCR duplicates)
+Sfa_lcWGS	Sfa-ABas_001	*	hits_unique_frac(Sfa)	0.32903009068906003	# Total number of unique hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-ABas_001	*	hits_coverage(Sfa)	1.9773551998162564	# Estimated coverage from unique hits
+Sfa_lcWGS	Sfa-ABas_001	*	hits_length(Sfa)	121.86754470240629	# Average number of aligned bases per unique hit
+
+
+Sfa_lcWGS	Sfa-ABas_001	Sfa-ABas_001_Lib1	lib_type	PE	# SE, PE, or * (for both)
+Sfa_lcWGS	Sfa-ABas_001	Sfa-ABas_001_Lib1	seq_reads_pairs	33966079	# Total number of pairs
+Sfa_lcWGS	Sfa-ABas_001	Sfa-ABas_001_Lib1	seq_trash_pe_1	1070	# Total number of reads
+Sfa_lcWGS	Sfa-ABas_001	Sfa-ABas_001_Lib1	seq_trash_pe_1_frac	3.1502017056487446e-05	# Fraction of PE mate 1 reads trashed
+Sfa_lcWGS	Sfa-ABas_001	Sfa-ABas_001_Lib1	seq_trash_pe_2	1070	# Total number of reads
+Sfa_lcWGS	Sfa-ABas_001	Sfa-ABas_001_Lib1	seq_trash_pe_2_frac	3.1502017056487446e-05	# Fraction of PE mate 2 reads trashed
+Sfa_lcWGS	Sfa-ABas_001	Sfa-ABas_001_Lib1	seq_collapsed	32680011	# Total number of pairs collapsed into one read
+Sfa_lcWGS	Sfa-ABas_001	Sfa-ABas_001_Lib1	seq_collapsed_frac	0.9621366952599975	# Fraction of PE pairs collapsed into one read
+Sfa_lcWGS	Sfa-ABas_001	Sfa-ABas_001_Lib1	seq_retained_reads	35250007	# Total number of retained reads
+Sfa_lcWGS	Sfa-ABas_001	Sfa-ABas_001_Lib1	seq_retained_nts	4692972336	# Total number of NTs in retained reads
+Sfa_lcWGS	Sfa-ABas_001	Sfa-ABas_001_Lib1	seq_retained_length	133.13394054077776	# Average number of NTs in retained reads
+
+Sfa_lcWGS	Sfa-ABas_001	Sfa-ABas_001_Lib1	hits_raw(Sfa)	16025281	# Total number of hits (prior to PCR duplicate filtering)
+Sfa_lcWGS	Sfa-ABas_001	Sfa-ABas_001_Lib1	hits_raw_frac(Sfa)	0.45461781043050575	# Total number of hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-ABas_001	Sfa-ABas_001_Lib1	hits_clonality(Sfa)	0.2762490092997433	# Fraction of hits that were PCR duplicates
+Sfa_lcWGS	Sfa-ABas_001	Sfa-ABas_001_Lib1	hits_unique(Sfa)	11598313	# Total number of hits (excluding any PCR duplicates)
+Sfa_lcWGS	Sfa-ABas_001	Sfa-ABas_001_Lib1	hits_unique_frac(Sfa)	0.32903009068906003	# Total number of unique hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-ABas_001	Sfa-ABas_001_Lib1	hits_coverage(Sfa)	1.9773551998162564	# Estimated coverage from unique hits
+Sfa_lcWGS	Sfa-ABas_001	Sfa-ABas_001_Lib1	hits_length(Sfa)	121.86754470240629	# Average number of aligned bases per unique hit
+
+
+Sfa_lcWGS	Sfa-ABas_002	*	lib_type	PE	# SE, PE, or * (for both)
+Sfa_lcWGS	Sfa-ABas_002	*	seq_reads_pairs	31590940	# Total number of pairs
+Sfa_lcWGS	Sfa-ABas_002	*	seq_trash_pe_1	1391	# Total number of reads
+Sfa_lcWGS	Sfa-ABas_002	*	seq_trash_pe_1_frac	4.403161159496995e-05	# Fraction of PE mate 1 reads trashed
+Sfa_lcWGS	Sfa-ABas_002	*	seq_trash_pe_2	1391	# Total number of reads
+Sfa_lcWGS	Sfa-ABas_002	*	seq_trash_pe_2_frac	4.403161159496995e-05	# Fraction of PE mate 2 reads trashed
+Sfa_lcWGS	Sfa-ABas_002	*	seq_collapsed	30019122	# Total number of pairs collapsed into one read
+Sfa_lcWGS	Sfa-ABas_002	*	seq_collapsed_frac	0.9502446587534275	# Fraction of PE pairs collapsed into one read
+Sfa_lcWGS	Sfa-ABas_002	*	seq_retained_reads	33159976	# Total number of retained reads
+Sfa_lcWGS	Sfa-ABas_002	*	seq_retained_nts	4595512752	# Total number of NTs in retained reads
+Sfa_lcWGS	Sfa-ABas_002	*	seq_retained_length	138.58613021915335	# Average number of NTs in retained reads
+
+Sfa_lcWGS	Sfa-ABas_002	*	hits_raw(Sfa)	13135524	# Total number of hits (prior to PCR duplicate filtering)
+Sfa_lcWGS	Sfa-ABas_002	*	hits_raw_frac(Sfa)	0.39612585968096	# Total number of hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-ABas_002	*	hits_clonality(Sfa)	0.2522857862389045	# Fraction of hits that were PCR duplicates
+Sfa_lcWGS	Sfa-ABas_002	*	hits_unique(Sfa)	9821618	# Total number of hits (excluding any PCR duplicates)
+Sfa_lcWGS	Sfa-ABas_002	*	hits_unique_frac(Sfa)	0.296188935721787	# Total number of unique hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-ABas_002	*	hits_coverage(Sfa)	1.7679265650392888	# Estimated coverage from unique hits
+Sfa_lcWGS	Sfa-ABas_002	*	hits_length(Sfa)	128.67061557474543	# Average number of aligned bases per unique hit
+
+
+Sfa_lcWGS	Sfa-ABas_002	Sfa-ABas_002_Lib1	lib_type	PE	# SE, PE, or * (for both)
+Sfa_lcWGS	Sfa-ABas_002	Sfa-ABas_002_Lib1	seq_reads_pairs	31590940	# Total number of pairs
+Sfa_lcWGS	Sfa-ABas_002	Sfa-ABas_002_Lib1	seq_trash_pe_1	1391	# Total number of reads
+Sfa_lcWGS	Sfa-ABas_002	Sfa-ABas_002_Lib1	seq_trash_pe_1_frac	4.403161159496995e-05	# Fraction of PE mate 1 reads trashed
+Sfa_lcWGS	Sfa-ABas_002	Sfa-ABas_002_Lib1	seq_trash_pe_2	1391	# Total number of reads
+Sfa_lcWGS	Sfa-ABas_002	Sfa-ABas_002_Lib1	seq_trash_pe_2_frac	4.403161159496995e-05	# Fraction of PE mate 2 reads trashed
+Sfa_lcWGS	Sfa-ABas_002	Sfa-ABas_002_Lib1	seq_collapsed	30019122	# Total number of pairs collapsed into one read
+Sfa_lcWGS	Sfa-ABas_002	Sfa-ABas_002_Lib1	seq_collapsed_frac	0.9502446587534275	# Fraction of PE pairs collapsed into one read
+Sfa_lcWGS	Sfa-ABas_002	Sfa-ABas_002_Lib1	seq_retained_reads	33159976	# Total number of retained reads
+Sfa_lcWGS	Sfa-ABas_002	Sfa-ABas_002_Lib1	seq_retained_nts	4595512752	# Total number of NTs in retained reads
+Sfa_lcWGS	Sfa-ABas_002	Sfa-ABas_002_Lib1	seq_retained_length	138.58613021915335	# Average number of NTs in retained reads
+
+Sfa_lcWGS	Sfa-ABas_002	Sfa-ABas_002_Lib1	hits_raw(Sfa)	13135524	# Total number of hits (prior to PCR duplicate filtering)
+Sfa_lcWGS	Sfa-ABas_002	Sfa-ABas_002_Lib1	hits_raw_frac(Sfa)	0.39612585968096	# Total number of hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-ABas_002	Sfa-ABas_002_Lib1	hits_clonality(Sfa)	0.2522857862389045	# Fraction of hits that were PCR duplicates
+Sfa_lcWGS	Sfa-ABas_002	Sfa-ABas_002_Lib1	hits_unique(Sfa)	9821618	# Total number of hits (excluding any PCR duplicates)
+Sfa_lcWGS	Sfa-ABas_002	Sfa-ABas_002_Lib1	hits_unique_frac(Sfa)	0.296188935721787	# Total number of unique hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-ABas_002	Sfa-ABas_002_Lib1	hits_coverage(Sfa)	1.7679265650392888	# Estimated coverage from unique hits
+Sfa_lcWGS	Sfa-ABas_002	Sfa-ABas_002_Lib1	hits_length(Sfa)	128.67061557474543	# Average number of aligned bases per unique hit
+
+
+Sfa_lcWGS	Sfa-ABas_013	*	lib_type	PE	# SE, PE, or * (for both)
+Sfa_lcWGS	Sfa-ABas_013	*	seq_reads_pairs	31977007	# Total number of pairs
+Sfa_lcWGS	Sfa-ABas_013	*	seq_trash_pe_1	1081	# Total number of reads
+Sfa_lcWGS	Sfa-ABas_013	*	seq_trash_pe_1_frac	3.380554033715538e-05	# Fraction of PE mate 1 reads trashed
+Sfa_lcWGS	Sfa-ABas_013	*	seq_trash_pe_2	1081	# Total number of reads
+Sfa_lcWGS	Sfa-ABas_013	*	seq_trash_pe_2_frac	3.380554033715538e-05	# Fraction of PE mate 2 reads trashed
+Sfa_lcWGS	Sfa-ABas_013	*	seq_collapsed	30653954	# Total number of pairs collapsed into one read
+Sfa_lcWGS	Sfa-ABas_013	*	seq_collapsed_frac	0.9586248644221143	# Fraction of PE pairs collapsed into one read
+Sfa_lcWGS	Sfa-ABas_013	*	seq_retained_reads	33297898	# Total number of retained reads
+Sfa_lcWGS	Sfa-ABas_013	*	seq_retained_nts	4729479240	# Total number of NTs in retained reads
+Sfa_lcWGS	Sfa-ABas_013	*	seq_retained_length	142.03536931970902	# Average number of NTs in retained reads
+
+Sfa_lcWGS	Sfa-ABas_013	*	hits_raw(Sfa)	15400545	# Total number of hits (prior to PCR duplicate filtering)
+Sfa_lcWGS	Sfa-ABas_013	*	hits_raw_frac(Sfa)	0.4625080237797593	# Total number of hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-ABas_013	*	hits_clonality(Sfa)	0.3031579726561625	# Fraction of hits that were PCR duplicates
+Sfa_lcWGS	Sfa-ABas_013	*	hits_unique(Sfa)	10731747	# Total number of hits (excluding any PCR duplicates)
+Sfa_lcWGS	Sfa-ABas_013	*	hits_unique_frac(Sfa)	0.3222950289534793	# Total number of unique hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-ABas_013	*	hits_coverage(Sfa)	2.0116640401637067	# Estimated coverage from unique hits
+Sfa_lcWGS	Sfa-ABas_013	*	hits_length(Sfa)	133.99334311552443	# Average number of aligned bases per unique hit
+
+
+Sfa_lcWGS	Sfa-ABas_013	Sfa-ABas_013_Lib1	lib_type	PE	# SE, PE, or * (for both)
+Sfa_lcWGS	Sfa-ABas_013	Sfa-ABas_013_Lib1	seq_reads_pairs	31977007	# Total number of pairs
+Sfa_lcWGS	Sfa-ABas_013	Sfa-ABas_013_Lib1	seq_trash_pe_1	1081	# Total number of reads
+Sfa_lcWGS	Sfa-ABas_013	Sfa-ABas_013_Lib1	seq_trash_pe_1_frac	3.380554033715538e-05	# Fraction of PE mate 1 reads trashed
+Sfa_lcWGS	Sfa-ABas_013	Sfa-ABas_013_Lib1	seq_trash_pe_2	1081	# Total number of reads
+Sfa_lcWGS	Sfa-ABas_013	Sfa-ABas_013_Lib1	seq_trash_pe_2_frac	3.380554033715538e-05	# Fraction of PE mate 2 reads trashed
+Sfa_lcWGS	Sfa-ABas_013	Sfa-ABas_013_Lib1	seq_collapsed	30653954	# Total number of pairs collapsed into one read
+Sfa_lcWGS	Sfa-ABas_013	Sfa-ABas_013_Lib1	seq_collapsed_frac	0.9586248644221143	# Fraction of PE pairs collapsed into one read
+Sfa_lcWGS	Sfa-ABas_013	Sfa-ABas_013_Lib1	seq_retained_reads	33297898	# Total number of retained reads
+Sfa_lcWGS	Sfa-ABas_013	Sfa-ABas_013_Lib1	seq_retained_nts	4729479240	# Total number of NTs in retained reads
+Sfa_lcWGS	Sfa-ABas_013	Sfa-ABas_013_Lib1	seq_retained_length	142.03536931970902	# Average number of NTs in retained reads
+
+Sfa_lcWGS	Sfa-ABas_013	Sfa-ABas_013_Lib1	hits_raw(Sfa)	15400545	# Total number of hits (prior to PCR duplicate filtering)
+Sfa_lcWGS	Sfa-ABas_013	Sfa-ABas_013_Lib1	hits_raw_frac(Sfa)	0.4625080237797593	# Total number of hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-ABas_013	Sfa-ABas_013_Lib1	hits_clonality(Sfa)	0.3031579726561625	# Fraction of hits that were PCR duplicates
+Sfa_lcWGS	Sfa-ABas_013	Sfa-ABas_013_Lib1	hits_unique(Sfa)	10731747	# Total number of hits (excluding any PCR duplicates)
+Sfa_lcWGS	Sfa-ABas_013	Sfa-ABas_013_Lib1	hits_unique_frac(Sfa)	0.3222950289534793	# Total number of unique hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-ABas_013	Sfa-ABas_013_Lib1	hits_coverage(Sfa)	2.0116640401637067	# Estimated coverage from unique hits
+Sfa_lcWGS	Sfa-ABas_013	Sfa-ABas_013_Lib1	hits_length(Sfa)	133.99334311552443	# Average number of aligned bases per unique hit
+
+
+Sfa_lcWGS	Sfa-ABas_025	*	lib_type	PE	# SE, PE, or * (for both)
+Sfa_lcWGS	Sfa-ABas_025	*	seq_reads_pairs	26768595	# Total number of pairs
+Sfa_lcWGS	Sfa-ABas_025	*	seq_trash_pe_1	3012	# Total number of reads
+Sfa_lcWGS	Sfa-ABas_025	*	seq_trash_pe_1_frac	0.00011251991372726137	# Fraction of PE mate 1 reads trashed
+Sfa_lcWGS	Sfa-ABas_025	*	seq_trash_pe_2	3012	# Total number of reads
+Sfa_lcWGS	Sfa-ABas_025	*	seq_trash_pe_2_frac	0.00011251991372726137	# Fraction of PE mate 2 reads trashed
+Sfa_lcWGS	Sfa-ABas_025	*	seq_collapsed	26274286	# Total number of pairs collapsed into one read
+Sfa_lcWGS	Sfa-ABas_025	*	seq_collapsed_frac	0.9815339953404353	# Fraction of PE pairs collapsed into one read
+Sfa_lcWGS	Sfa-ABas_025	*	seq_retained_reads	27256880	# Total number of retained reads
+Sfa_lcWGS	Sfa-ABas_025	*	seq_retained_nts	3266621825	# Total number of NTs in retained reads
+Sfa_lcWGS	Sfa-ABas_025	*	seq_retained_length	119.84577196656404	# Average number of NTs in retained reads
+
+Sfa_lcWGS	Sfa-ABas_025	*	hits_raw(Sfa)	12143734	# Total number of hits (prior to PCR duplicate filtering)
+Sfa_lcWGS	Sfa-ABas_025	*	hits_raw_frac(Sfa)	0.445529128792437	# Total number of hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-ABas_025	*	hits_clonality(Sfa)	0.19750976100102324	# Fraction of hits that were PCR duplicates
+Sfa_lcWGS	Sfa-ABas_025	*	hits_unique(Sfa)	9745228	# Total number of hits (excluding any PCR duplicates)
+Sfa_lcWGS	Sfa-ABas_025	*	hits_unique_frac(Sfa)	0.3575327770456487	# Total number of unique hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-ABas_025	*	hits_coverage(Sfa)	1.5858569806850085	# Estimated coverage from unique hits
+Sfa_lcWGS	Sfa-ABas_025	*	hits_length(Sfa)	116.3242362313124	# Average number of aligned bases per unique hit
+
+
+Sfa_lcWGS	Sfa-ABas_025	Sfa-ABas_025_Lib1	lib_type	PE	# SE, PE, or * (for both)
+Sfa_lcWGS	Sfa-ABas_025	Sfa-ABas_025_Lib1	seq_reads_pairs	26768595	# Total number of pairs
+Sfa_lcWGS	Sfa-ABas_025	Sfa-ABas_025_Lib1	seq_trash_pe_1	3012	# Total number of reads
+Sfa_lcWGS	Sfa-ABas_025	Sfa-ABas_025_Lib1	seq_trash_pe_1_frac	0.00011251991372726137	# Fraction of PE mate 1 reads trashed
+Sfa_lcWGS	Sfa-ABas_025	Sfa-ABas_025_Lib1	seq_trash_pe_2	3012	# Total number of reads
+Sfa_lcWGS	Sfa-ABas_025	Sfa-ABas_025_Lib1	seq_trash_pe_2_frac	0.00011251991372726137	# Fraction of PE mate 2 reads trashed
+Sfa_lcWGS	Sfa-ABas_025	Sfa-ABas_025_Lib1	seq_collapsed	26274286	# Total number of pairs collapsed into one read
+Sfa_lcWGS	Sfa-ABas_025	Sfa-ABas_025_Lib1	seq_collapsed_frac	0.9815339953404353	# Fraction of PE pairs collapsed into one read
+Sfa_lcWGS	Sfa-ABas_025	Sfa-ABas_025_Lib1	seq_retained_reads	27256880	# Total number of retained reads
+Sfa_lcWGS	Sfa-ABas_025	Sfa-ABas_025_Lib1	seq_retained_nts	3266621825	# Total number of NTs in retained reads
+Sfa_lcWGS	Sfa-ABas_025	Sfa-ABas_025_Lib1	seq_retained_length	119.84577196656404	# Average number of NTs in retained reads
+
+Sfa_lcWGS	Sfa-ABas_025	Sfa-ABas_025_Lib1	hits_raw(Sfa)	12143734	# Total number of hits (prior to PCR duplicate filtering)
+Sfa_lcWGS	Sfa-ABas_025	Sfa-ABas_025_Lib1	hits_raw_frac(Sfa)	0.445529128792437	# Total number of hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-ABas_025	Sfa-ABas_025_Lib1	hits_clonality(Sfa)	0.19750976100102324	# Fraction of hits that were PCR duplicates
+Sfa_lcWGS	Sfa-ABas_025	Sfa-ABas_025_Lib1	hits_unique(Sfa)	9745228	# Total number of hits (excluding any PCR duplicates)
+Sfa_lcWGS	Sfa-ABas_025	Sfa-ABas_025_Lib1	hits_unique_frac(Sfa)	0.3575327770456487	# Total number of unique hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-ABas_025	Sfa-ABas_025_Lib1	hits_coverage(Sfa)	1.5858569806850085	# Estimated coverage from unique hits
+Sfa_lcWGS	Sfa-ABas_025	Sfa-ABas_025_Lib1	hits_length(Sfa)	116.3242362313124	# Average number of aligned bases per unique hit
+
+
+Sfa_lcWGS	Sfa-CBas_017	*	lib_type	PE	# SE, PE, or * (for both)
+Sfa_lcWGS	Sfa-CBas_017	*	seq_reads_pairs	7862277	# Total number of pairs
+Sfa_lcWGS	Sfa-CBas_017	*	seq_trash_pe_1	242	# Total number of reads
+Sfa_lcWGS	Sfa-CBas_017	*	seq_trash_pe_1_frac	3.0779887302368005e-05	# Fraction of PE mate 1 reads trashed
+Sfa_lcWGS	Sfa-CBas_017	*	seq_trash_pe_2	242	# Total number of reads
+Sfa_lcWGS	Sfa-CBas_017	*	seq_trash_pe_2_frac	3.0779887302368005e-05	# Fraction of PE mate 2 reads trashed
+Sfa_lcWGS	Sfa-CBas_017	*	seq_collapsed	4372529	# Total number of pairs collapsed into one read
+Sfa_lcWGS	Sfa-CBas_017	*	seq_collapsed_frac	0.5561402886212226	# Fraction of PE pairs collapsed into one read
+Sfa_lcWGS	Sfa-CBas_017	*	seq_retained_reads	11351541	# Total number of retained reads
+Sfa_lcWGS	Sfa-CBas_017	*	seq_retained_nts	1949966778	# Total number of NTs in retained reads
+Sfa_lcWGS	Sfa-CBas_017	*	seq_retained_length	171.7799176340904	# Average number of NTs in retained reads
+
+Sfa_lcWGS	Sfa-CBas_017	*	hits_raw(Sfa)	6560016	# Total number of hits (prior to PCR duplicate filtering)
+Sfa_lcWGS	Sfa-CBas_017	*	hits_raw_frac(Sfa)	0.5778965164289148	# Total number of hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-CBas_017	*	hits_clonality(Sfa)	0.32896215497035375	# Fraction of hits that were PCR duplicates
+Sfa_lcWGS	Sfa-CBas_017	*	hits_unique(Sfa)	4402019	# Total number of hits (excluding any PCR duplicates)
+Sfa_lcWGS	Sfa-CBas_017	*	hits_unique_frac(Sfa)	0.38779043303459854	# Total number of unique hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-CBas_017	*	hits_coverage(Sfa)	1.0485542571150568	# Estimated coverage from unique hits
+Sfa_lcWGS	Sfa-CBas_017	*	hits_length(Sfa)	170.2696294586643	# Average number of aligned bases per unique hit
+
+
+Sfa_lcWGS	Sfa-CBas_017	Sfa-CBas_017_Lib1	lib_type	PE	# SE, PE, or * (for both)
+Sfa_lcWGS	Sfa-CBas_017	Sfa-CBas_017_Lib1	seq_reads_pairs	7862277	# Total number of pairs
+Sfa_lcWGS	Sfa-CBas_017	Sfa-CBas_017_Lib1	seq_trash_pe_1	242	# Total number of reads
+Sfa_lcWGS	Sfa-CBas_017	Sfa-CBas_017_Lib1	seq_trash_pe_1_frac	3.0779887302368005e-05	# Fraction of PE mate 1 reads trashed
+Sfa_lcWGS	Sfa-CBas_017	Sfa-CBas_017_Lib1	seq_trash_pe_2	242	# Total number of reads
+Sfa_lcWGS	Sfa-CBas_017	Sfa-CBas_017_Lib1	seq_trash_pe_2_frac	3.0779887302368005e-05	# Fraction of PE mate 2 reads trashed
+Sfa_lcWGS	Sfa-CBas_017	Sfa-CBas_017_Lib1	seq_collapsed	4372529	# Total number of pairs collapsed into one read
+Sfa_lcWGS	Sfa-CBas_017	Sfa-CBas_017_Lib1	seq_collapsed_frac	0.5561402886212226	# Fraction of PE pairs collapsed into one read
+Sfa_lcWGS	Sfa-CBas_017	Sfa-CBas_017_Lib1	seq_retained_reads	11351541	# Total number of retained reads
+Sfa_lcWGS	Sfa-CBas_017	Sfa-CBas_017_Lib1	seq_retained_nts	1949966778	# Total number of NTs in retained reads
+Sfa_lcWGS	Sfa-CBas_017	Sfa-CBas_017_Lib1	seq_retained_length	171.7799176340904	# Average number of NTs in retained reads
+
+Sfa_lcWGS	Sfa-CBas_017	Sfa-CBas_017_Lib1	hits_raw(Sfa)	6560016	# Total number of hits (prior to PCR duplicate filtering)
+Sfa_lcWGS	Sfa-CBas_017	Sfa-CBas_017_Lib1	hits_raw_frac(Sfa)	0.5778965164289148	# Total number of hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-CBas_017	Sfa-CBas_017_Lib1	hits_clonality(Sfa)	0.32896215497035375	# Fraction of hits that were PCR duplicates
+Sfa_lcWGS	Sfa-CBas_017	Sfa-CBas_017_Lib1	hits_unique(Sfa)	4402019	# Total number of hits (excluding any PCR duplicates)
+Sfa_lcWGS	Sfa-CBas_017	Sfa-CBas_017_Lib1	hits_unique_frac(Sfa)	0.38779043303459854	# Total number of unique hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-CBas_017	Sfa-CBas_017_Lib1	hits_coverage(Sfa)	1.0485542571150568	# Estimated coverage from unique hits
+Sfa_lcWGS	Sfa-CBas_017	Sfa-CBas_017_Lib1	hits_length(Sfa)	170.2696294586643	# Average number of aligned bases per unique hit
+
+
+Sfa_lcWGS	Sfa-CBas_061	*	lib_type	PE	# SE, PE, or * (for both)
+Sfa_lcWGS	Sfa-CBas_061	*	seq_reads_pairs	9103150	# Total number of pairs
+Sfa_lcWGS	Sfa-CBas_061	*	seq_trash_pe_1	407	# Total number of reads
+Sfa_lcWGS	Sfa-CBas_061	*	seq_trash_pe_1_frac	4.4709798256647423e-05	# Fraction of PE mate 1 reads trashed
+Sfa_lcWGS	Sfa-CBas_061	*	seq_trash_pe_2	407	# Total number of reads
+Sfa_lcWGS	Sfa-CBas_061	*	seq_trash_pe_2_frac	4.4709798256647423e-05	# Fraction of PE mate 2 reads trashed
+Sfa_lcWGS	Sfa-CBas_061	*	seq_collapsed	5944354	# Total number of pairs collapsed into one read
+Sfa_lcWGS	Sfa-CBas_061	*	seq_collapsed_frac	0.6529996759363517	# Fraction of PE pairs collapsed into one read
+Sfa_lcWGS	Sfa-CBas_061	*	seq_retained_reads	12261132	# Total number of retained reads
+Sfa_lcWGS	Sfa-CBas_061	*	seq_retained_nts	2106494552	# Total number of NTs in retained reads
+Sfa_lcWGS	Sfa-CBas_061	*	seq_retained_length	171.80261594117084	# Average number of NTs in retained reads
+
+Sfa_lcWGS	Sfa-CBas_061	*	hits_raw(Sfa)	6647730	# Total number of hits (prior to PCR duplicate filtering)
+Sfa_lcWGS	Sfa-CBas_061	*	hits_raw_frac(Sfa)	0.5421791397401153	# Total number of hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-CBas_061	*	hits_clonality(Sfa)	0.3184162112480501	# Fraction of hits that were PCR duplicates
+Sfa_lcWGS	Sfa-CBas_061	*	hits_unique(Sfa)	4530985	# Total number of hits (excluding any PCR duplicates)
+Sfa_lcWGS	Sfa-CBas_061	*	hits_unique_frac(Sfa)	0.3695405122463407	# Total number of unique hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-CBas_061	*	hits_coverage(Sfa)	1.0755624022283463	# Estimated coverage from unique hits
+Sfa_lcWGS	Sfa-CBas_061	*	hits_length(Sfa)	169.68411349849978	# Average number of aligned bases per unique hit
+
+
+Sfa_lcWGS	Sfa-CBas_061	Sfa-CBas_061_Lib1	lib_type	PE	# SE, PE, or * (for both)
+Sfa_lcWGS	Sfa-CBas_061	Sfa-CBas_061_Lib1	seq_reads_pairs	9103150	# Total number of pairs
+Sfa_lcWGS	Sfa-CBas_061	Sfa-CBas_061_Lib1	seq_trash_pe_1	407	# Total number of reads
+Sfa_lcWGS	Sfa-CBas_061	Sfa-CBas_061_Lib1	seq_trash_pe_1_frac	4.4709798256647423e-05	# Fraction of PE mate 1 reads trashed
+Sfa_lcWGS	Sfa-CBas_061	Sfa-CBas_061_Lib1	seq_trash_pe_2	407	# Total number of reads
+Sfa_lcWGS	Sfa-CBas_061	Sfa-CBas_061_Lib1	seq_trash_pe_2_frac	4.4709798256647423e-05	# Fraction of PE mate 2 reads trashed
+Sfa_lcWGS	Sfa-CBas_061	Sfa-CBas_061_Lib1	seq_collapsed	5944354	# Total number of pairs collapsed into one read
+Sfa_lcWGS	Sfa-CBas_061	Sfa-CBas_061_Lib1	seq_collapsed_frac	0.6529996759363517	# Fraction of PE pairs collapsed into one read
+Sfa_lcWGS	Sfa-CBas_061	Sfa-CBas_061_Lib1	seq_retained_reads	12261132	# Total number of retained reads
+Sfa_lcWGS	Sfa-CBas_061	Sfa-CBas_061_Lib1	seq_retained_nts	2106494552	# Total number of NTs in retained reads
+Sfa_lcWGS	Sfa-CBas_061	Sfa-CBas_061_Lib1	seq_retained_length	171.80261594117084	# Average number of NTs in retained reads
+
+Sfa_lcWGS	Sfa-CBas_061	Sfa-CBas_061_Lib1	hits_raw(Sfa)	6647730	# Total number of hits (prior to PCR duplicate filtering)
+Sfa_lcWGS	Sfa-CBas_061	Sfa-CBas_061_Lib1	hits_raw_frac(Sfa)	0.5421791397401153	# Total number of hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-CBas_061	Sfa-CBas_061_Lib1	hits_clonality(Sfa)	0.3184162112480501	# Fraction of hits that were PCR duplicates
+Sfa_lcWGS	Sfa-CBas_061	Sfa-CBas_061_Lib1	hits_unique(Sfa)	4530985	# Total number of hits (excluding any PCR duplicates)
+Sfa_lcWGS	Sfa-CBas_061	Sfa-CBas_061_Lib1	hits_unique_frac(Sfa)	0.3695405122463407	# Total number of unique hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-CBas_061	Sfa-CBas_061_Lib1	hits_coverage(Sfa)	1.0755624022283463	# Estimated coverage from unique hits
+Sfa_lcWGS	Sfa-CBas_061	Sfa-CBas_061_Lib1	hits_length(Sfa)	169.68411349849978	# Average number of aligned bases per unique hit
+
+
+Sfa_lcWGS	Sfa-CBas_066	*	lib_type	PE	# SE, PE, or * (for both)
+Sfa_lcWGS	Sfa-CBas_066	*	seq_reads_pairs	8661527	# Total number of pairs
+Sfa_lcWGS	Sfa-CBas_066	*	seq_trash_pe_1	356	# Total number of reads
+Sfa_lcWGS	Sfa-CBas_066	*	seq_trash_pe_1_frac	4.1101297727294504e-05	# Fraction of PE mate 1 reads trashed
+Sfa_lcWGS	Sfa-CBas_066	*	seq_trash_pe_2	356	# Total number of reads
+Sfa_lcWGS	Sfa-CBas_066	*	seq_trash_pe_2_frac	4.1101297727294504e-05	# Fraction of PE mate 2 reads trashed
+Sfa_lcWGS	Sfa-CBas_066	*	seq_collapsed	5335738	# Total number of pairs collapsed into one read
+Sfa_lcWGS	Sfa-CBas_066	*	seq_collapsed_frac	0.616027404867525	# Fraction of PE pairs collapsed into one read
+Sfa_lcWGS	Sfa-CBas_066	*	seq_retained_reads	11986604	# Total number of retained reads
+Sfa_lcWGS	Sfa-CBas_066	*	seq_retained_nts	2040860694	# Total number of NTs in retained reads
+Sfa_lcWGS	Sfa-CBas_066	*	seq_retained_length	170.2617934153827	# Average number of NTs in retained reads
+
+Sfa_lcWGS	Sfa-CBas_066	*	hits_raw(Sfa)	6611213	# Total number of hits (prior to PCR duplicate filtering)
+Sfa_lcWGS	Sfa-CBas_066	*	hits_raw_frac(Sfa)	0.551550130462306	# Total number of hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-CBas_066	*	hits_clonality(Sfa)	0.3102436723790324	# Fraction of hits that were PCR duplicates
+Sfa_lcWGS	Sfa-CBas_066	*	hits_unique(Sfa)	4560126	# Total number of hits (excluding any PCR duplicates)
+Sfa_lcWGS	Sfa-CBas_066	*	hits_unique_frac(Sfa)	0.38043519248654584	# Total number of unique hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-CBas_066	*	hits_coverage(Sfa)	1.0729232364505834	# Estimated coverage from unique hits
+Sfa_lcWGS	Sfa-CBas_066	*	hits_length(Sfa)	168.18606284124604	# Average number of aligned bases per unique hit
+
+
+Sfa_lcWGS	Sfa-CBas_066	Sfa-CBas_066_Lib1	lib_type	PE	# SE, PE, or * (for both)
+Sfa_lcWGS	Sfa-CBas_066	Sfa-CBas_066_Lib1	seq_reads_pairs	8661527	# Total number of pairs
+Sfa_lcWGS	Sfa-CBas_066	Sfa-CBas_066_Lib1	seq_trash_pe_1	356	# Total number of reads
+Sfa_lcWGS	Sfa-CBas_066	Sfa-CBas_066_Lib1	seq_trash_pe_1_frac	4.1101297727294504e-05	# Fraction of PE mate 1 reads trashed
+Sfa_lcWGS	Sfa-CBas_066	Sfa-CBas_066_Lib1	seq_trash_pe_2	356	# Total number of reads
+Sfa_lcWGS	Sfa-CBas_066	Sfa-CBas_066_Lib1	seq_trash_pe_2_frac	4.1101297727294504e-05	# Fraction of PE mate 2 reads trashed
+Sfa_lcWGS	Sfa-CBas_066	Sfa-CBas_066_Lib1	seq_collapsed	5335738	# Total number of pairs collapsed into one read
+Sfa_lcWGS	Sfa-CBas_066	Sfa-CBas_066_Lib1	seq_collapsed_frac	0.616027404867525	# Fraction of PE pairs collapsed into one read
+Sfa_lcWGS	Sfa-CBas_066	Sfa-CBas_066_Lib1	seq_retained_reads	11986604	# Total number of retained reads
+Sfa_lcWGS	Sfa-CBas_066	Sfa-CBas_066_Lib1	seq_retained_nts	2040860694	# Total number of NTs in retained reads
+Sfa_lcWGS	Sfa-CBas_066	Sfa-CBas_066_Lib1	seq_retained_length	170.2617934153827	# Average number of NTs in retained reads
+
+Sfa_lcWGS	Sfa-CBas_066	Sfa-CBas_066_Lib1	hits_raw(Sfa)	6611213	# Total number of hits (prior to PCR duplicate filtering)
+Sfa_lcWGS	Sfa-CBas_066	Sfa-CBas_066_Lib1	hits_raw_frac(Sfa)	0.551550130462306	# Total number of hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-CBas_066	Sfa-CBas_066_Lib1	hits_clonality(Sfa)	0.3102436723790324	# Fraction of hits that were PCR duplicates
+Sfa_lcWGS	Sfa-CBas_066	Sfa-CBas_066_Lib1	hits_unique(Sfa)	4560126	# Total number of hits (excluding any PCR duplicates)
+Sfa_lcWGS	Sfa-CBas_066	Sfa-CBas_066_Lib1	hits_unique_frac(Sfa)	0.38043519248654584	# Total number of unique hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-CBas_066	Sfa-CBas_066_Lib1	hits_coverage(Sfa)	1.0729232364505834	# Estimated coverage from unique hits
+Sfa_lcWGS	Sfa-CBas_066	Sfa-CBas_066_Lib1	hits_length(Sfa)	168.18606284124604	# Average number of aligned bases per unique hit
+
+
+Sfa_lcWGS	Sfa-CBas_088	*	lib_type	PE	# SE, PE, or * (for both)
+Sfa_lcWGS	Sfa-CBas_088	*	seq_reads_pairs	7530060	# Total number of pairs
+Sfa_lcWGS	Sfa-CBas_088	*	seq_trash_pe_1	216	# Total number of reads
+Sfa_lcWGS	Sfa-CBas_088	*	seq_trash_pe_1_frac	2.8685030398164157e-05	# Fraction of PE mate 1 reads trashed
+Sfa_lcWGS	Sfa-CBas_088	*	seq_trash_pe_2	216	# Total number of reads
+Sfa_lcWGS	Sfa-CBas_088	*	seq_trash_pe_2_frac	2.8685030398164157e-05	# Fraction of PE mate 2 reads trashed
+Sfa_lcWGS	Sfa-CBas_088	*	seq_collapsed	5783625	# Total number of pairs collapsed into one read
+Sfa_lcWGS	Sfa-CBas_088	*	seq_collapsed_frac	0.7680715691508434	# Fraction of PE pairs collapsed into one read
+Sfa_lcWGS	Sfa-CBas_088	*	seq_retained_reads	9276063	# Total number of retained reads
+Sfa_lcWGS	Sfa-CBas_088	*	seq_retained_nts	1596546385	# Total number of NTs in retained reads
+Sfa_lcWGS	Sfa-CBas_088	*	seq_retained_length	172.11465521525673	# Average number of NTs in retained reads
+
+Sfa_lcWGS	Sfa-CBas_088	*	hits_raw(Sfa)	5353002	# Total number of hits (prior to PCR duplicate filtering)
+Sfa_lcWGS	Sfa-CBas_088	*	hits_raw_frac(Sfa)	0.5770769344710143	# Total number of hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-CBas_088	*	hits_clonality(Sfa)	0.2715861118676959	# Fraction of hits that were PCR duplicates
+Sfa_lcWGS	Sfa-CBas_088	*	hits_unique(Sfa)	3899201	# Total number of hits (excluding any PCR duplicates)
+Sfa_lcWGS	Sfa-CBas_088	*	hits_unique_frac(Sfa)	0.42035085358950236	# Total number of unique hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-CBas_088	*	hits_coverage(Sfa)	0.9210719844886801	# Estimated coverage from unique hits
+Sfa_lcWGS	Sfa-CBas_088	*	hits_length(Sfa)	168.85586329096654	# Average number of aligned bases per unique hit
+
+
+Sfa_lcWGS	Sfa-CBas_088	Sfa-CBas_088_Lib1	lib_type	PE	# SE, PE, or * (for both)
+Sfa_lcWGS	Sfa-CBas_088	Sfa-CBas_088_Lib1	seq_reads_pairs	7530060	# Total number of pairs
+Sfa_lcWGS	Sfa-CBas_088	Sfa-CBas_088_Lib1	seq_trash_pe_1	216	# Total number of reads
+Sfa_lcWGS	Sfa-CBas_088	Sfa-CBas_088_Lib1	seq_trash_pe_1_frac	2.8685030398164157e-05	# Fraction of PE mate 1 reads trashed
+Sfa_lcWGS	Sfa-CBas_088	Sfa-CBas_088_Lib1	seq_trash_pe_2	216	# Total number of reads
+Sfa_lcWGS	Sfa-CBas_088	Sfa-CBas_088_Lib1	seq_trash_pe_2_frac	2.8685030398164157e-05	# Fraction of PE mate 2 reads trashed
+Sfa_lcWGS	Sfa-CBas_088	Sfa-CBas_088_Lib1	seq_collapsed	5783625	# Total number of pairs collapsed into one read
+Sfa_lcWGS	Sfa-CBas_088	Sfa-CBas_088_Lib1	seq_collapsed_frac	0.7680715691508434	# Fraction of PE pairs collapsed into one read
+Sfa_lcWGS	Sfa-CBas_088	Sfa-CBas_088_Lib1	seq_retained_reads	9276063	# Total number of retained reads
+Sfa_lcWGS	Sfa-CBas_088	Sfa-CBas_088_Lib1	seq_retained_nts	1596546385	# Total number of NTs in retained reads
+Sfa_lcWGS	Sfa-CBas_088	Sfa-CBas_088_Lib1	seq_retained_length	172.11465521525673	# Average number of NTs in retained reads
+
+Sfa_lcWGS	Sfa-CBas_088	Sfa-CBas_088_Lib1	hits_raw(Sfa)	5353002	# Total number of hits (prior to PCR duplicate filtering)
+Sfa_lcWGS	Sfa-CBas_088	Sfa-CBas_088_Lib1	hits_raw_frac(Sfa)	0.5770769344710143	# Total number of hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-CBas_088	Sfa-CBas_088_Lib1	hits_clonality(Sfa)	0.2715861118676959	# Fraction of hits that were PCR duplicates
+Sfa_lcWGS	Sfa-CBas_088	Sfa-CBas_088_Lib1	hits_unique(Sfa)	3899201	# Total number of hits (excluding any PCR duplicates)
+Sfa_lcWGS	Sfa-CBas_088	Sfa-CBas_088_Lib1	hits_unique_frac(Sfa)	0.42035085358950236	# Total number of unique hits vs. total number of reads retained
+Sfa_lcWGS	Sfa-CBas_088	Sfa-CBas_088_Lib1	hits_coverage(Sfa)	0.9210719844886801	# Estimated coverage from unique hits
+Sfa_lcWGS	Sfa-CBas_088	Sfa-CBas_088_Lib1	hits_length(Sfa)	168.85586329096654	# Average number of aligned bases per unique hit
+
+

@@ -1,0 +1,78 @@
+# Command:
+#     /opt/paleomix/bin/paleomix bam run makefile.yaml
+#
+# Directory:
+#     /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/PALEOMIX
+#
+# Genomes:
+#     Name       Contigs    Size         Prefix
+#     fSalaFa    23         714822470    /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/refGenome/GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fasta
+#
+# Regions Of Interest:
+#     Genome    ROI    Size    NFeatures    NIntervals    Path
+#
+#
+Target	Sample	Library	Measure	Value	# Description
+Sfa-CBas_002	*	*	lib_type	PE	# SE, PE, or * (for both)
+Sfa-CBas_002	*	*	seq_reads_pairs	5607914	# Total number of pairs
+Sfa-CBas_002	*	*	seq_trash_pe_1	64	# Total number of reads
+Sfa-CBas_002	*	*	seq_trash_pe_1_frac	1.1412443200805147e-05	# Fraction of PE mate 1 reads trashed
+Sfa-CBas_002	*	*	seq_trash_pe_2	64	# Total number of reads
+Sfa-CBas_002	*	*	seq_trash_pe_2_frac	1.1412443200805147e-05	# Fraction of PE mate 2 reads trashed
+Sfa-CBas_002	*	*	seq_collapsed	4401508	# Total number of pairs collapsed into one read
+Sfa-CBas_002	*	*	seq_collapsed_frac	0.7848743757482729	# Fraction of PE pairs collapsed into one read
+Sfa-CBas_002	*	*	seq_retained_reads	6814192	# Total number of retained reads
+Sfa-CBas_002	*	*	seq_retained_nts	991707116	# Total number of NTs in retained reads
+Sfa-CBas_002	*	*	seq_retained_length	145.53554053070417	# Average number of NTs in retained reads
+
+Sfa-CBas_002	*	*	hits_raw(fSalaFa)	4472316	# Total number of hits (prior to PCR duplicate filtering)
+Sfa-CBas_002	*	*	hits_raw_frac(fSalaFa)	0.6563237431525264	# Total number of hits vs. total number of reads retained
+Sfa-CBas_002	*	*	hits_clonality(fSalaFa)	0.05030726809107411	# Fraction of hits that were PCR duplicates
+Sfa-CBas_002	*	*	hits_unique(fSalaFa)	4247326	# Total number of hits (excluding any PCR duplicates)
+Sfa-CBas_002	*	*	hits_unique_frac(fSalaFa)	0.623305888651215	# Total number of unique hits vs. total number of reads retained
+Sfa-CBas_002	*	*	hits_coverage(fSalaFa)	0.8558950168424336	# Estimated coverage from unique hits
+Sfa-CBas_002	*	*	hits_length(fSalaFa)	144.04662839631334	# Average number of aligned bases per unique hit
+
+
+Sfa-CBas_002	Sfa-CBas_002	*	lib_type	PE	# SE, PE, or * (for both)
+Sfa-CBas_002	Sfa-CBas_002	*	seq_reads_pairs	5607914	# Total number of pairs
+Sfa-CBas_002	Sfa-CBas_002	*	seq_trash_pe_1	64	# Total number of reads
+Sfa-CBas_002	Sfa-CBas_002	*	seq_trash_pe_1_frac	1.1412443200805147e-05	# Fraction of PE mate 1 reads trashed
+Sfa-CBas_002	Sfa-CBas_002	*	seq_trash_pe_2	64	# Total number of reads
+Sfa-CBas_002	Sfa-CBas_002	*	seq_trash_pe_2_frac	1.1412443200805147e-05	# Fraction of PE mate 2 reads trashed
+Sfa-CBas_002	Sfa-CBas_002	*	seq_collapsed	4401508	# Total number of pairs collapsed into one read
+Sfa-CBas_002	Sfa-CBas_002	*	seq_collapsed_frac	0.7848743757482729	# Fraction of PE pairs collapsed into one read
+Sfa-CBas_002	Sfa-CBas_002	*	seq_retained_reads	6814192	# Total number of retained reads
+Sfa-CBas_002	Sfa-CBas_002	*	seq_retained_nts	991707116	# Total number of NTs in retained reads
+Sfa-CBas_002	Sfa-CBas_002	*	seq_retained_length	145.53554053070417	# Average number of NTs in retained reads
+
+Sfa-CBas_002	Sfa-CBas_002	*	hits_raw(fSalaFa)	4472316	# Total number of hits (prior to PCR duplicate filtering)
+Sfa-CBas_002	Sfa-CBas_002	*	hits_raw_frac(fSalaFa)	0.6563237431525264	# Total number of hits vs. total number of reads retained
+Sfa-CBas_002	Sfa-CBas_002	*	hits_clonality(fSalaFa)	0.05030726809107411	# Fraction of hits that were PCR duplicates
+Sfa-CBas_002	Sfa-CBas_002	*	hits_unique(fSalaFa)	4247326	# Total number of hits (excluding any PCR duplicates)
+Sfa-CBas_002	Sfa-CBas_002	*	hits_unique_frac(fSalaFa)	0.623305888651215	# Total number of unique hits vs. total number of reads retained
+Sfa-CBas_002	Sfa-CBas_002	*	hits_coverage(fSalaFa)	0.8558950168424336	# Estimated coverage from unique hits
+Sfa-CBas_002	Sfa-CBas_002	*	hits_length(fSalaFa)	144.04662839631334	# Average number of aligned bases per unique hit
+
+
+Sfa-CBas_002	Sfa-CBas_002	Sfa-CBas_002_Lib1	lib_type	PE	# SE, PE, or * (for both)
+Sfa-CBas_002	Sfa-CBas_002	Sfa-CBas_002_Lib1	seq_reads_pairs	5607914	# Total number of pairs
+Sfa-CBas_002	Sfa-CBas_002	Sfa-CBas_002_Lib1	seq_trash_pe_1	64	# Total number of reads
+Sfa-CBas_002	Sfa-CBas_002	Sfa-CBas_002_Lib1	seq_trash_pe_1_frac	1.1412443200805147e-05	# Fraction of PE mate 1 reads trashed
+Sfa-CBas_002	Sfa-CBas_002	Sfa-CBas_002_Lib1	seq_trash_pe_2	64	# Total number of reads
+Sfa-CBas_002	Sfa-CBas_002	Sfa-CBas_002_Lib1	seq_trash_pe_2_frac	1.1412443200805147e-05	# Fraction of PE mate 2 reads trashed
+Sfa-CBas_002	Sfa-CBas_002	Sfa-CBas_002_Lib1	seq_collapsed	4401508	# Total number of pairs collapsed into one read
+Sfa-CBas_002	Sfa-CBas_002	Sfa-CBas_002_Lib1	seq_collapsed_frac	0.7848743757482729	# Fraction of PE pairs collapsed into one read
+Sfa-CBas_002	Sfa-CBas_002	Sfa-CBas_002_Lib1	seq_retained_reads	6814192	# Total number of retained reads
+Sfa-CBas_002	Sfa-CBas_002	Sfa-CBas_002_Lib1	seq_retained_nts	991707116	# Total number of NTs in retained reads
+Sfa-CBas_002	Sfa-CBas_002	Sfa-CBas_002_Lib1	seq_retained_length	145.53554053070417	# Average number of NTs in retained reads
+
+Sfa-CBas_002	Sfa-CBas_002	Sfa-CBas_002_Lib1	hits_raw(fSalaFa)	4472316	# Total number of hits (prior to PCR duplicate filtering)
+Sfa-CBas_002	Sfa-CBas_002	Sfa-CBas_002_Lib1	hits_raw_frac(fSalaFa)	0.6563237431525264	# Total number of hits vs. total number of reads retained
+Sfa-CBas_002	Sfa-CBas_002	Sfa-CBas_002_Lib1	hits_clonality(fSalaFa)	0.05030726809107411	# Fraction of hits that were PCR duplicates
+Sfa-CBas_002	Sfa-CBas_002	Sfa-CBas_002_Lib1	hits_unique(fSalaFa)	4247326	# Total number of hits (excluding any PCR duplicates)
+Sfa-CBas_002	Sfa-CBas_002	Sfa-CBas_002_Lib1	hits_unique_frac(fSalaFa)	0.623305888651215	# Total number of unique hits vs. total number of reads retained
+Sfa-CBas_002	Sfa-CBas_002	Sfa-CBas_002_Lib1	hits_coverage(fSalaFa)	0.8558950168424336	# Estimated coverage from unique hits
+Sfa-CBas_002	Sfa-CBas_002	Sfa-CBas_002_Lib1	hits_length(fSalaFa)	144.04662839631334	# Average number of aligned bases per unique hit
+
+

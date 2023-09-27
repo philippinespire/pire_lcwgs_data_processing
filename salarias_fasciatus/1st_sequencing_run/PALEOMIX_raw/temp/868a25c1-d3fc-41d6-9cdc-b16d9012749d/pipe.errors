@@ -1,0 +1,38 @@
+PALEOMIX         = v1.3.8
+Command          = '/opt/paleomix/bin/paleomix bam run makefile.yaml'
+CWD              = '/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/PALEOMIX_raw'
+PATH             = '/opt/paleomix/bin:/opt/conda/bin/libfabric:/opt/micromamba/condabin:/cm/shared/applications/slurm/23.02.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+Node             = rescaling 2 files in './Sfa_lcWGS/Sfa/Sfa-ABas_035' using mapDamage
+Threads          = 1
+Input files      = ./Sfa_lcWGS/Sfa/Sfa-ABas_035/Sfa-ABas_035_Lib1.rmdup.collapsed.bam
+                   ./Sfa_lcWGS/Sfa/Sfa-ABas_035/Sfa-ABas_035_Lib1.rmdup.normal.bam
+                   /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/refGenome/GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fasta
+Output files     = ./Sfa_lcWGS/Sfa/Sfa-ABas_035/Sfa-ABas_035_Lib1.rescaled.bam
+Auxiliary files  = 
+Executables      = mapDamage
+                   samtools
+
+Errors =
+Parallel processes:
+  Process 1:
+    Command = samtools merge -u - \
+                  ./Sfa_lcWGS/Sfa/Sfa-ABas_035/Sfa-ABas_035_Lib1.rmdup.normal.bam \
+                  ./Sfa_lcWGS/Sfa/Sfa-ABas_035/Sfa-ABas_035_Lib1.rmdup.collapsed.bam
+    Status  = Exited with return-code 0
+    STDOUT  = Piped to process 2
+    STDERR* = '/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/PALEOMIX_raw/temp/868a25c1-d3fc-41d6-9cdc-b16d9012749d/pipe_samtools_140150919576688.stderr'
+    CWD     = '/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/PALEOMIX_raw'
+
+  Process 2:
+    Command = mapDamage --rescale-only -i - -d \
+                  /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/PALEOMIX_raw/temp/868a25c1-d3fc-41d6-9cdc-b16d9012749d \
+                  -r \
+                  /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/refGenome/GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fasta \
+                  --rescale-out \
+                  /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/PALEOMIX_raw/temp/868a25c1-d3fc-41d6-9cdc-b16d9012749d/Sfa-ABas_035_Lib1.rescaled.bam \
+                  --downsample 100000
+    Status  = Exited with return-code 1
+    STDIN   = Piped from process 1
+    STDOUT* = '/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/PALEOMIX_raw/temp/868a25c1-d3fc-41d6-9cdc-b16d9012749d/pipe_mapDamage_140150919577072.stdout'
+    STDERR* = '/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/PALEOMIX_raw/temp/868a25c1-d3fc-41d6-9cdc-b16d9012749d/pipe_mapDamage_140150919577072.stderr'
+    CWD     = '/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/PALEOMIX_raw'

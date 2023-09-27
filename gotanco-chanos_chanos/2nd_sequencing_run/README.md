@@ -1272,9 +1272,13 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1
 cd ~/PIRE_tmp
 rsync /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run/fq_fp1_clmp_qc_straggler .
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1_clmp_qc_straggler" "fqc_clmp_report" "fq.gz"
-
-
+# Same issues on job being stuck (both on wahab and turing).
 ```
+
+- I checked the QC html files after the first and second fastp for the two stragglers, and they all came alright.
+- What I will do now is to compile all stragglers in a single repo called `qc_stragglers`, and then validate the files from there using `validateFQ.sbatch`. 
+- Once validated, I can check more closely file issues.
+
 
 
 </details>

@@ -153,7 +153,7 @@ mv config.6.cssl config.6.lcwgs
 
 After changing the settings, I executed this command:
 ```
-sbatch ../../../dDocentHPC/dDocentHPC_dev2.sbatch mkBAM config.6.lcwgs
+sbatch /home/e1garcia/shotgun_PIRE/dDocentHPC/dDocentHPC.sbatch mkBAM config.6.lcwgs
 ```
 
 </p>
@@ -163,7 +163,7 @@ sbatch ../../../dDocentHPC/dDocentHPC_dev2.sbatch mkBAM config.6.lcwgs
 
 To filter resulting BAM files, I executed the following command:
 ```
-sbatch ../../../dDocentHPC/dDocentHPC_dev2.sbatch fltrBAM config.6.lcwgs
+sbatch /home/e1garcia/shotgun_PIRE/dDocentHPC/dDocentHPC.sbatch fltrBAM config.6.lcwgs
 ```
 
 </p>

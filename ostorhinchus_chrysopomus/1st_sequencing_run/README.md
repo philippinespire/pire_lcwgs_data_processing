@@ -4,7 +4,11 @@ Data downloaded from TAMUCC grid.
 File formats correct, third column contents correct.
 
 ## 2. Proofread the decode files
-TBD
+Decode file format correct.
+
+There are 184 forward reads, 184 reverse reads, but 197 unique individuals listed in the decode sheet, one of which is actually listed twice.
+
+Waiting to hear back from the sequencing facility.
 
 ## 3. Edit the decode file
 TBD

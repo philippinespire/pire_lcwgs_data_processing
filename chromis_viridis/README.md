@@ -193,7 +193,7 @@ Make sure  you do the following:
 -Remember to change line 306 of the visualizeSslCsslLcwgsMETADA.R script. For lcwgs, I changed this line based on what my mkBAM_T setting was and the 2nd to last setting for fltrmBAM:
 ```
   mutate(mkBAM_T_setting = ceiling(25 * fqc_avg_sequence_length_rprd / 100))
-``
+```
 
 Output files are under the process_sequencing_metadata folder
 
@@ -201,4 +201,4 @@ Graphs showed information on depth of coverage for both Albatross & Contemporary
 
 ---
 ## 6. GenErode
-I followed the GenErode
+

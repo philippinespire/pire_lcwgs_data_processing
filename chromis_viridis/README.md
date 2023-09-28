@@ -159,7 +159,7 @@ cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera
 
 After changing the settings, I executed this command:
 ```
-sbatch ../../../dDocentHPC/dDocentHPC_dev2.sbatch mkBAM config.6.lcwgs
+sbatch /home/e1garcia/shotgun_PIRE/dDocentHPC mkBAM config.6.lcwgs
 ```
 
 </p>
@@ -169,7 +169,7 @@ sbatch ../../../dDocentHPC/dDocentHPC_dev2.sbatch mkBAM config.6.lcwgs
 
 To filter resulting BAM files, I executed the following command:
 ```
-sbatch ../../../dDocentHPC/dDocentHPC_dev2.sbatch fltrBAM config.6.lcwgs
+sbatch /home/e1garcia/shotgun_PIRE/dDocentHPC fltrBAM config.6.lcwgs
 ```
 
 </p>

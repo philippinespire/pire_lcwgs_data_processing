@@ -1278,6 +1278,23 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1
 - I checked the QC html files after the first and second fastp for the two stragglers, and they all came alright.
 - What I will do now is to compile all stragglers in a single repo called `qc_stragglers`, and then validate the files from there using `validateFQ.sbatch`. 
 - Once validated, I can check more closely file issues.
+- Nothing seems to work. I will proceed on running MultiQC on the files that have generated output so as to not delay the reports any longer.
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/gotanco-chanos_chanos/2nd_sequencing_run
+
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runMULTIQC.sbatch "fq_raw_cat2" "fqc_raw_report" "fq.gz"
+# jobID: 2240983
+
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runMULTIQC.sbatch "fq_fp1_clmp" "fqc_clmp_report" "fq.gz"
+# jobID: 2240984
+
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runMULTIQC.sbatch "fq_fp1_clmp_fp2_fqscrn" "fastq_screen_report" "fastq.gz"
+# jobID: 2240985
+
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runMULTIQC.sbatch "fq_fp1_clmp_fp2_fqscrn_rprd" "fqc_rprd_report" "fq.gz"
+# jobID: 2240986
+```
 
 
 

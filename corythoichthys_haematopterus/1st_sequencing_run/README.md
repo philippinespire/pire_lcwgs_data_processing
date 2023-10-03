@@ -600,47 +600,580 @@ module load container_env R/4.2
 <details><summary>Expand for MultiQC Output.</summary>
 
 ```bash
-TBD
+Sample Name	% Dups	% GC	Length	M Seqs
+Cha-APnd_001-Ex1-1A-lcwgs-1-1.clmp.r1	6.5%	34%	96 bp	0.3
+Cha-APnd_001-Ex1-1A-lcwgs-1-1.clmp.r2	4.9%	34%	96 bp	0.3
+Cha-APnd_002-Ex1-1B-lcwgs-1-1.clmp.r1	5.7%	35%	95 bp	0.2
+Cha-APnd_002-Ex1-1B-lcwgs-1-1.clmp.r2	4.2%	35%	95 bp	0.2
+Cha-APnd_003-Ex1-1C-lcwgs-1-1.clmp.r1	2.2%	40%	77 bp	1.9
+Cha-APnd_003-Ex1-1C-lcwgs-1-1.clmp.r2	1.8%	40%	77 bp	1.9
+Cha-APnd_004-Ex1-1D-lcwgs-1-1.clmp.r1	3.9%	39%	89 bp	1.6
+Cha-APnd_004-Ex1-1D-lcwgs-1-1.clmp.r2	3.0%	39%	89 bp	1.6
+Cha-APnd_005-Ex1-1E-lcwgs-1-1.clmp.r1	3.1%	38%	82 bp	1.8
+Cha-APnd_005-Ex1-1E-lcwgs-1-1.clmp.r2	2.4%	38%	82 bp	1.8
+Cha-APnd_006-Ex1-1F-lcwgs-1-1.clmp.r1	7.0%	35%	96 bp	0.4
+Cha-APnd_006-Ex1-1F-lcwgs-1-1.clmp.r2	5.4%	35%	96 bp	0.4
+Cha-APnd_007-Ex1-1G-lcwgs-1-1.clmp.r1	2.3%	39%	78 bp	0.5
+Cha-APnd_007-Ex1-1G-lcwgs-1-1.clmp.r2	1.9%	39%	78 bp	0.5
+Cha-APnd_008-Ex1-1H-lcwgs-1-1.clmp.r1	3.3%	41%	85 bp	2.0
+Cha-APnd_008-Ex1-1H-lcwgs-1-1.clmp.r2	2.6%	41%	85 bp	2.0
+Cha-APnd_009-Ex1-2A-lcwgs-1-1.clmp.r1	4.0%	37%	86 bp	1.5
+Cha-APnd_009-Ex1-2A-lcwgs-1-1.clmp.r2	3.2%	37%	86 bp	1.5
+Cha-APnd_010-Ex1-2B-lcwgs-1-1.clmp.r1	3.1%	39%	85 bp	0.9
+Cha-APnd_010-Ex1-2B-lcwgs-1-1.clmp.r2	2.4%	39%	85 bp	0.9
+Cha-APnd_011-Ex1-2C-lcwgs-1-1.clmp.r1	5.2%	38%	88 bp	0.8
+Cha-APnd_011-Ex1-2C-lcwgs-1-1.clmp.r2	4.0%	38%	89 bp	0.8
+Cha-APnd_012-Ex1-2D-lcwgs-1-1.clmp.r1	2.6%	39%	82 bp	1.4
+Cha-APnd_012-Ex1-2D-lcwgs-1-1.clmp.r2	1.9%	39%	82 bp	1.4
+Cha-APnd_013-Ex1-2E-lcwgs-1-1.clmp.r1	1.8%	37%	85 bp	0.4
+Cha-APnd_013-Ex1-2E-lcwgs-1-1.clmp.r2	1.4%	37%	85 bp	0.4
+Cha-APnd_014-Ex1-2F-lcwgs-1-1.clmp.r1	2.1%	39%	80 bp	1.7
+Cha-APnd_014-Ex1-2F-lcwgs-1-1.clmp.r2	1.7%	39%	81 bp	1.7
+Cha-APnd_015-Ex1-2G-lcwgs-1-1.clmp.r1	3.6%	37%	90 bp	1.1
+Cha-APnd_015-Ex1-2G-lcwgs-1-1.clmp.r2	2.9%	37%	91 bp	1.1
+Cha-APnd_016-Ex1-2H-lcwgs-1-1.clmp.r1	2.0%	39%	77 bp	1.5
+Cha-APnd_016-Ex1-2H-lcwgs-1-1.clmp.r2	1.7%	39%	78 bp	1.5
+Cha-APnd_017-Ex1-3A-lcwgs-1-1.clmp.r1	5.0%	37%	89 bp	1.2
+Cha-APnd_017-Ex1-3A-lcwgs-1-1.clmp.r2	4.1%	37%	89 bp	1.2
+Cha-APnd_018-Ex1-3B-lcwgs-1-1.clmp.r1	4.3%	39%	84 bp	0.2
+Cha-APnd_018-Ex1-3B-lcwgs-1-1.clmp.r2	3.3%	39%	84 bp	0.2
+Cha-APnd_019-Ex1-3C-lcwgs-1-1.clmp.r1	1.5%	39%	84 bp	0.0
+Cha-APnd_019-Ex1-3C-lcwgs-1-1.clmp.r2	1.1%	39%	84 bp	0.0
+Cha-APnd_020-Ex1-3D-lcwgs-1-1.clmp.r1	1.9%	46%	100 bp	0.0
+Cha-APnd_020-Ex1-3D-lcwgs-1-1.clmp.r2	1.4%	46%	100 bp	0.0
+Cha-APnd_021-Ex1-3E-lcwgs-1-1.clmp.r1	2.5%	40%	82 bp	0.4
+Cha-APnd_021-Ex1-3E-lcwgs-1-1.clmp.r2	1.9%	40%	82 bp	0.4
+Cha-APnd_022-Ex1-3F-lcwgs-1-1.clmp.r1	2.5%	39%	79 bp	1.4
+Cha-APnd_022-Ex1-3F-lcwgs-1-1.clmp.r2	2.0%	39%	79 bp	1.4
+Cha-APnd_023-Ex1-3G-lcwgs-1-1.clmp.r1	0.9%	39%	84 bp	0.0
+Cha-APnd_023-Ex1-3G-lcwgs-1-1.clmp.r2	0.6%	39%	85 bp	0.0
+Cha-APnd_024-Ex1-3H-lcwgs-1-1.clmp.r1	0.4%	40%	91 bp	0.0
+Cha-APnd_024-Ex1-3H-lcwgs-1-1.clmp.r2	0.2%	40%	91 bp	0.0
+Cha-APnd_025-Ex1-4A-lcwgs-1-1.clmp.r1	4.6%	35%	94 bp	0.1
+Cha-APnd_025-Ex1-4A-lcwgs-1-1.clmp.r2	3.2%	35%	95 bp	0.1
+Cha-APnd_026-Ex1-4B-lcwgs-1-1.clmp.r1	2.9%	39%	81 bp	1.6
+Cha-APnd_026-Ex1-4B-lcwgs-1-1.clmp.r2	2.4%	39%	81 bp	1.6
+Cha-APnd_027-Ex1-4C-lcwgs-1-1.clmp.r1	2.1%	40%	76 bp	1.4
+Cha-APnd_027-Ex1-4C-lcwgs-1-1.clmp.r2	1.7%	40%	76 bp	1.4
+Cha-APnd_028-Ex1-4D-lcwgs-1-1.clmp.r1	2.7%	37%	85 bp	1.9
+Cha-APnd_028-Ex1-4D-lcwgs-1-1.clmp.r2	2.1%	37%	85 bp	1.9
+Cha-APnd_029-Ex1-4E-lcwgs-1-1.clmp.r1	2.9%	39%	81 bp	1.4
+Cha-APnd_029-Ex1-4E-lcwgs-1-1.clmp.r2	2.4%	39%	81 bp	1.4
+Cha-APnd_030-Ex1-4F-lcwgs-1-1.clmp.r1	3.7%	39%	89 bp	0.5
+Cha-APnd_030-Ex1-4F-lcwgs-1-1.clmp.r2	2.8%	39%	89 bp	0.5
+Cha-APnd_031-Ex1-4G-lcwgs-1-1.clmp.r1	5.2%	36%	97 bp	0.2
+Cha-APnd_031-Ex1-4G-lcwgs-1-1.clmp.r2	4.1%	36%	97 bp	0.2
+Cha-APnd_032-Ex1-4H-lcwgs-1-1.clmp.r1	1.8%	38%	80 bp	1.6
+Cha-APnd_032-Ex1-4H-lcwgs-1-1.clmp.r2	1.5%	38%	80 bp	1.6
+Cha-APnd_033-Ex1-5A-lcwgs-1-1.clmp.r1	0.5%	39%	97 bp	0.0
+Cha-APnd_033-Ex1-5A-lcwgs-1-1.clmp.r2	0.4%	39%	97 bp	0.0
+Cha-APnd_034-Ex1-5B-lcwgs-1-1.clmp.r1	0.7%	47%	85 bp	0.0
+Cha-APnd_034-Ex1-5B-lcwgs-1-1.clmp.r2	0.6%	47%	85 bp	0.0
+Cha-APnd_035-Ex1-5C-lcwgs-1-1.clmp.r1	1.0%	49%	86 bp	0.7
+Cha-APnd_035-Ex1-5C-lcwgs-1-1.clmp.r2	0.9%	49%	87 bp	0.7
+Cha-APnd_036-Ex1-5D-lcwgs-1-1.clmp.r1	2.0%	60%	110 bp	0.5
+Cha-APnd_036-Ex1-5D-lcwgs-1-1.clmp.r2	1.6%	60%	110 bp	0.5
+Cha-APnd_037-Ex1-5E-lcwgs-1-1.clmp.r1	1.8%	46%	115 bp	0.4
+Cha-APnd_037-Ex1-5E-lcwgs-1-1.clmp.r2	1.5%	46%	115 bp	0.4
+Cha-APnd_038-Ex1-5F-lcwgs-1-1.clmp.r1	1.7%	45%	118 bp	1.0
+Cha-APnd_038-Ex1-5F-lcwgs-1-1.clmp.r2	1.4%	45%	118 bp	1.0
+Cha-APnd_039-Ex1-5G-lcwgs-1-1.clmp.r1	1.3%	48%	112 bp	0.0
+Cha-APnd_039-Ex1-5G-lcwgs-1-1.clmp.r2	0.9%	48%	112 bp	0.0
+Cha-APnd_040-Ex1-5H-lcwgs-1-1.clmp.r1	1.0%	45%	104 bp	0.0
+Cha-APnd_040-Ex1-5H-lcwgs-1-1.clmp.r2	0.7%	45%	104 bp	0.0
+Cha-CPnd_009-Ex1-8D-lcwgs-1-1.clmp.r1	3.1%	58%	133 bp	0.1
+Cha-CPnd_009-Ex1-8D-lcwgs-1-1.clmp.r2	2.0%	58%	133 bp	0.1
+Cha-CPnd_010-Ex1-7D-lcwgs-1-1.clmp.r1	3.3%	41%	124 bp	1.1
+Cha-CPnd_010-Ex1-7D-lcwgs-1-1.clmp.r2	3.6%	41%	124 bp	1.1
+Cha-CPnd_011-Ex1-7C-lcwgs-1-1.clmp.r1	1.8%	53%	132 bp	0.1
+Cha-CPnd_011-Ex1-7C-lcwgs-1-1.clmp.r2	1.0%	53%	131 bp	0.1
+Cha-CPnd_013-Ex1-8G-lcwgs-1-1.clmp.r1	3.1%	41%	115 bp	0.9
+Cha-CPnd_013-Ex1-8G-lcwgs-1-1.clmp.r2	3.1%	41%	115 bp	0.9
+Cha-CPnd_014-Ex1-7F-lcwgs-1-1.clmp.r1	4.0%	41%	124 bp	2.0
+Cha-CPnd_014-Ex1-7F-lcwgs-1-1.clmp.r2	4.5%	41%	124 bp	2.0
+Cha-CPnd_015-Ex1-7E-lcwgs-1-1.clmp.r1	4.2%	41%	121 bp	0.7
+Cha-CPnd_015-Ex1-7E-lcwgs-1-1.clmp.r2	4.2%	41%	121 bp	0.7
+Cha-CPnd_016-Ex1-6E-lcwgs-1-1.clmp.r1	3.5%	41%	122 bp	0.3
+Cha-CPnd_016-Ex1-6E-lcwgs-1-1.clmp.r2	3.3%	41%	122 bp	0.3
+Cha-CPnd_017-Ex1-8E-lcwgs-1-1.clmp.r1	6.0%	39%	133 bp	1.6
+Cha-CPnd_017-Ex1-8E-lcwgs-1-1.clmp.r2	6.3%	40%	132 bp	1.6
+Cha-CPnd_018-Ex1-6C-lcwgs-1-1.clmp.r1	6.0%	41%	128 bp	1.0
+Cha-CPnd_018-Ex1-6C-lcwgs-1-1.clmp.r2	5.8%	41%	128 bp	1.0
+Cha-CPnd_021-Ex1-5F-lcwgs-1-1.clmp.r1	3.8%	41%	122 bp	1.8
+Cha-CPnd_021-Ex1-5F-lcwgs-1-1.clmp.r2	4.3%	41%	122 bp	1.8
+Cha-CPnd_022-Ex1-6H-lcwgs-1-1.clmp.r1	2.7%	41%	121 bp	1.2
+Cha-CPnd_022-Ex1-6H-lcwgs-1-1.clmp.r2	2.7%	41%	121 bp	1.2
+Cha-CPnd_023-Ex1-1G-lcwgs-1-1.clmp.r1	2.5%	53%	129 bp	0.1
+Cha-CPnd_023-Ex1-1G-lcwgs-1-1.clmp.r2	1.7%	53%	129 bp	0.1
+Cha-CPnd_024-Ex1-4A-lcwgs-1-1.clmp.r1	2.9%	41%	129 bp	0.9
+Cha-CPnd_024-Ex1-4A-lcwgs-1-1.clmp.r2	2.9%	41%	129 bp	0.9
+Cha-CPnd_025-Ex1-2H-lcwgs-1-1.clmp.r1	4.6%	41%	130 bp	1.2
+Cha-CPnd_025-Ex1-2H-lcwgs-1-1.clmp.r2	5.0%	41%	130 bp	1.2
+Cha-CPnd_026-Ex1-8H-lcwgs-1-1.clmp.r1	3.7%	40%	125 bp	0.9
+Cha-CPnd_026-Ex1-8H-lcwgs-1-1.clmp.r2	3.7%	40%	125 bp	0.9
+Cha-CPnd_027-Ex1-5E-lcwgs-1-1.clmp.r1	4.4%	41%	124 bp	0.6
+Cha-CPnd_027-Ex1-5E-lcwgs-1-1.clmp.r2	4.1%	41%	124 bp	0.6
+Cha-CPnd_028-Ex1-1B-lcwgs-1-1.clmp.r1	3.6%	41%	129 bp	1.0
+Cha-CPnd_028-Ex1-1B-lcwgs-1-1.clmp.r2	3.9%	41%	129 bp	1.0
+Cha-CPnd_030-Ex1-3H-lcwgs-1-1.clmp.r1	6.1%	40%	133 bp	2.8
+Cha-CPnd_030-Ex1-3H-lcwgs-1-1.clmp.r2	6.5%	41%	133 bp	2.8
+Cha-CPnd_031-Ex1-2E-lcwgs-1-1.clmp.r1	4.6%	42%	127 bp	3.3
+Cha-CPnd_031-Ex1-2E-lcwgs-1-1.clmp.r2	5.2%	42%	127 bp	3.3
+Cha-CPnd_032-Ex1-7B-lcwgs-1-1.clmp.r1	2.6%	41%	119 bp	1.2
+Cha-CPnd_032-Ex1-7B-lcwgs-1-1.clmp.r2	2.6%	41%	119 bp	1.2
+Cha-CPnd_033-Ex1-8F-lcwgs-1-1.clmp.r1	3.4%	41%	126 bp	2.3
+Cha-CPnd_033-Ex1-8F-lcwgs-1-1.clmp.r2	3.5%	41%	126 bp	2.3
+Cha-CPnd_034-Ex1-6B-lcwgs-1-1.clmp.r1	2.6%	41%	121 bp	1.4
+Cha-CPnd_034-Ex1-6B-lcwgs-1-1.clmp.r2	2.7%	41%	121 bp	1.4
+Cha-CPnd_035-Ex1-4B-lcwgs-1-1.clmp.r1	5.6%	41%	134 bp	1.0
+Cha-CPnd_035-Ex1-4B-lcwgs-1-1.clmp.r2	5.4%	41%	134 bp	1.0
+Cha-CPnd_036-Ex1-4G-lcwgs-1-1.clmp.r1	3.1%	41%	121 bp	1.8
+Cha-CPnd_036-Ex1-4G-lcwgs-1-1.clmp.r2	3.3%	41%	121 bp	1.8
+Cha-CPnd_037-Ex1-2C-lcwgs-1-1.clmp.r1	2.2%	41%	117 bp	0.3
+Cha-CPnd_037-Ex1-2C-lcwgs-1-1.clmp.r2	2.0%	41%	117 bp	0.3
+Cha-CPnd_038-Ex1-5B-lcwgs-1-1.clmp.r1	2.8%	41%	116 bp	1.2
+Cha-CPnd_038-Ex1-5B-lcwgs-1-1.clmp.r2	2.9%	41%	116 bp	1.2
+Cha-CPnd_039-Ex1-3C-lcwgs-1-1.clmp.r1	4.8%	41%	132 bp	4.2
+Cha-CPnd_039-Ex1-3C-lcwgs-1-1.clmp.r2	5.2%	41%	132 bp	4.2
+Cha-CPnd_040-Ex1-7G-lcwgs-1-1.clmp.r1	2.6%	41%	118 bp	1.8
+Cha-CPnd_040-Ex1-7G-lcwgs-1-1.clmp.r2	2.7%	41%	118 bp	1.8
+Cha-CPnd_041-Ex1-1A-lcwgs-1-1.clmp.r1	4.0%	41%	137 bp	0.5
+Cha-CPnd_041-Ex1-1A-lcwgs-1-1.clmp.r2	3.7%	41%	137 bp	0.5
+Cha-CPnd_042-Ex1-5H-lcwgs-1-1.clmp.r1	3.4%	41%	124 bp	1.0
+Cha-CPnd_042-Ex1-5H-lcwgs-1-1.clmp.r2	3.6%	41%	124 bp	1.0
+Cha-CPnd_043-Ex1-3G-lcwgs-1-1.clmp.r1	3.2%	41%	124 bp	1.1
+Cha-CPnd_043-Ex1-3G-lcwgs-1-1.clmp.r2	3.1%	42%	124 bp	1.1
+Cha-CPnd_044-Ex1-4E-lcwgs-1-1.clmp.r1	2.9%	42%	121 bp	1.1
+Cha-CPnd_044-Ex1-4E-lcwgs-1-1.clmp.r2	3.1%	42%	121 bp	1.1
+Cha-CPnd_045-Ex1-6F-lcwgs-1-1.clmp.r1	4.5%	41%	129 bp	2.0
+Cha-CPnd_045-Ex1-6F-lcwgs-1-1.clmp.r2	5.1%	41%	129 bp	2.0
+Cha-CPnd_047-Ex1-1D-lcwgs-1-1.clmp.r1	2.5%	41%	126 bp	0.5
+Cha-CPnd_047-Ex1-1D-lcwgs-1-1.clmp.r2	2.4%	41%	126 bp	0.5
+Cha-CPnd_048-Ex1-5A-lcwgs-1-1.clmp.r1	3.3%	41%	134 bp	1.5
+Cha-CPnd_048-Ex1-5A-lcwgs-1-1.clmp.r2	3.2%	41%	134 bp	1.5
+Cha-CPnd_049-Ex1-2B-lcwgs-1-1.clmp.r1	5.2%	41%	122 bp	0.5
+Cha-CPnd_049-Ex1-2B-lcwgs-1-1.clmp.r2	4.9%	41%	122 bp	0.5
+Cha-CPnd_051-Ex1-1C-lcwgs-1-1.clmp.r1	2.3%	42%	110 bp	0.9
+Cha-CPnd_051-Ex1-1C-lcwgs-1-1.clmp.r2	2.4%	42%	110 bp	0.9
+Cha-CPnd_052-Ex1-3E-lcwgs-1-1.clmp.r1	2.3%	41%	121 bp	0.4
+Cha-CPnd_052-Ex1-3E-lcwgs-1-1.clmp.r2	2.0%	41%	121 bp	0.4
+Cha-CPnd_053-Ex1-3D-lcwgs-1-1.clmp.r1	3.8%	42%	127 bp	0.9
+Cha-CPnd_053-Ex1-3D-lcwgs-1-1.clmp.r2	3.7%	42%	127 bp	0.9
+Cha-CPnd_054-Ex1-1H-lcwgs-1-1.clmp.r1	7.1%	41%	134 bp	1.2
+Cha-CPnd_054-Ex1-1H-lcwgs-1-1.clmp.r2	7.0%	41%	134 bp	1.2
+Cha-CPnd_059-Ex1-8A-lcwgs-1-1.clmp.r1	4.4%	41%	127 bp	0.9
+Cha-CPnd_059-Ex1-8A-lcwgs-1-1.clmp.r2	4.4%	41%	126 bp	0.9
+Cha-CPnd_060-Ex1-1F-lcwgs-1-1.clmp.r1	3.9%	41%	131 bp	2.5
+Cha-CPnd_060-Ex1-1F-lcwgs-1-1.clmp.r2	3.8%	41%	131 bp	2.5
+Cha-CPnd_061-Ex1-5D-lcwgs-1-1.clmp.r1	3.5%	41%	129 bp	1.4
+Cha-CPnd_061-Ex1-5D-lcwgs-1-1.clmp.r2	3.8%	41%	129 bp	1.4
+Cha-CPnd_062-Ex1-1E-lcwgs-1-1.clmp.r1	5.6%	42%	125 bp	3.1
+Cha-CPnd_062-Ex1-1E-lcwgs-1-1.clmp.r2	6.5%	42%	125 bp	3.1
+Cha-CPnd_064-Ex1-7H-lcwgs-1-1.clmp.r1	3.6%	41%	122 bp	0.8
+Cha-CPnd_064-Ex1-7H-lcwgs-1-1.clmp.r2	3.8%	41%	122 bp	0.8
+Cha-CPnd_065-Ex1-7A-lcwgs-1-1.clmp.r1	4.2%	41%	132 bp	0.9
+Cha-CPnd_065-Ex1-7A-lcwgs-1-1.clmp.r2	4.2%	41%	132 bp	0.9
+Cha-CPnd_066-Ex1-3B-lcwgs-1-1.clmp.r1	6.9%	44%	143 bp	1.0
+Cha-CPnd_066-Ex1-3B-lcwgs-1-1.clmp.r2	7.2%	44%	142 bp	1.0
+Cha-CPnd_067-Ex1-2A-lcwgs-1-1.clmp.r1	3.6%	41%	130 bp	0.7
+Cha-CPnd_067-Ex1-2A-lcwgs-1-1.clmp.r2	3.5%	41%	130 bp	0.7
+Cha-CPnd_069-Ex1-2G-lcwgs-1-1.clmp.r1	5.0%	42%	129 bp	2.6
+Cha-CPnd_069-Ex1-2G-lcwgs-1-1.clmp.r2	5.7%	42%	129 bp	2.6
+Cha-CPnd_070-Ex1-3F-lcwgs-1-1.clmp.r1	3.1%	42%	115 bp	0.6
+Cha-CPnd_070-Ex1-3F-lcwgs-1-1.clmp.r2	3.0%	42%	115 bp	0.6
+Cha-CPnd_071-Ex1-6D-lcwgs-1-1.clmp.r1	2.0%	54%	137 bp	0.2
+Cha-CPnd_071-Ex1-6D-lcwgs-1-1.clmp.r2	1.4%	54%	137 bp	0.2
+Cha-CPnd_072-Ex1-3A-lcwgs-1-1.clmp.r1	4.0%	41%	134 bp	0.7
+Cha-CPnd_072-Ex1-3A-lcwgs-1-1.clmp.r2	3.8%	41%	134 bp	0.7
+Cha-CPnd_073-Ex1-2F-lcwgs-1-1.clmp.r1	5.4%	41%	129 bp	3.7
+Cha-CPnd_073-Ex1-2F-lcwgs-1-1.clmp.r2	5.6%	41%	129 bp	3.7
+Cha-CPnd_074-Ex1-2D-lcwgs-1-1.clmp.r1	3.3%	42%	123 bp	0.6
+Cha-CPnd_074-Ex1-2D-lcwgs-1-1.clmp.r2	3.0%	42%	123 bp	0.6
+Cha-CPnd_076-Ex1-4C-lcwgs-1-1.clmp.r1	3.2%	42%	121 bp	0.8
+Cha-CPnd_076-Ex1-4C-lcwgs-1-1.clmp.r2	3.1%	42%	121 bp	0.8
+Cha-CPnd_077-Ex1-6G-lcwgs-1-1.clmp.r1	5.4%	41%	133 bp	4.4
+Cha-CPnd_077-Ex1-6G-lcwgs-1-1.clmp.r2	6.5%	41%	133 bp	4.4
+Cha-CPnd_078-Ex1-4D-lcwgs-1-1.clmp.r1	3.8%	41%	137 bp	1.2
+Cha-CPnd_078-Ex1-4D-lcwgs-1-1.clmp.r2	3.9%	41%	137 bp	1.2
+Cha-CPnd_079-Ex1-4H-lcwgs-1-1.clmp.r1	3.5%	42%	125 bp	2.1
+Cha-CPnd_079-Ex1-4H-lcwgs-1-1.clmp.r2	3.8%	42%	125 bp	2.1
+Cha-CPnd_081-Ex1-8C-lcwgs-1-1.clmp.r1	2.4%	42%	114 bp	0.8
+Cha-CPnd_081-Ex1-8C-lcwgs-1-1.clmp.r2	2.2%	42%	114 bp	0.8
+Cha-CPnd_082-Ex1-8B-lcwgs-1-1.clmp.r1	4.1%	41%	112 bp	0.8
+Cha-CPnd_082-Ex1-8B-lcwgs-1-1.clmp.r2	4.0%	41%	112 bp	0.8
+Cha-CPnd_083-Ex1-6A-lcwgs-1-1.clmp.r1	3.8%	58%	139 bp	0.2
+Cha-CPnd_083-Ex1-6A-lcwgs-1-1.clmp.r2	2.4%	58%	139 bp	0.2
+Cha-CPnd_084-Ex1-4F-lcwgs-1-1.clmp.r1	3.1%	42%	116 bp	0.8
+Cha-CPnd_084-Ex1-4F-lcwgs-1-1.clmp.r2	2.9%	42%	116 bp	0.8
+Cha-CPnd_085-Ex1-5C-lcwgs-1-1.clmp.r1	3.1%	41%	123 bp	0.7
+Cha-CPnd_085-Ex1-5C-lcwgs-1-1.clmp.r2	2.9%	41%	123 bp	0.7
+Cha-CPnd_086-Ex1-5G-lcwgs-1-1.clmp.r1	5.2%	41%	129 bp	2.3
+Cha-CPnd_086-Ex1-5G-lcwgs-1-1.clmp.r2	5.9%	41%	129 bp	2.3
 ```
   
 </p>
 </details>
 
 ## 10. Second trim.
-TBD
+`sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_2.sbatch fq_fp1_clmp fq_fp1_clmp_fp2 33`
 
 <details><summary>Expand for MultiQC Output.</summary>
 
 ```bash
-TBD
+Sample Name	% Duplication	GC content	% PF	% Adapter
+Cha-APnd_001-Ex1-1A-lcwgs-1-1.clmp.r1r2_fastp	1.3%	34.7%	99.1%	3.9%
+Cha-APnd_002-Ex1-1B-lcwgs-1-1.clmp.r1r2_fastp	1.1%	35.9%	99.1%	4.0%
+Cha-APnd_003-Ex1-1C-lcwgs-1-1.clmp.r1r2_fastp	0.5%	40.7%	99.4%	4.1%
+Cha-APnd_004-Ex1-1D-lcwgs-1-1.clmp.r1r2_fastp	0.7%	39.9%	99.4%	3.9%
+Cha-APnd_005-Ex1-1E-lcwgs-1-1.clmp.r1r2_fastp	0.7%	38.9%	99.3%	4.2%
+Cha-APnd_006-Ex1-1F-lcwgs-1-1.clmp.r1r2_fastp	1.4%	35.7%	99.1%	4.1%
+Cha-APnd_007-Ex1-1G-lcwgs-1-1.clmp.r1r2_fastp	0.7%	39.4%	99.4%	4.2%
+Cha-APnd_008-Ex1-1H-lcwgs-1-1.clmp.r1r2_fastp	0.9%	41.2%	99.4%	4.1%
+Cha-APnd_009-Ex1-2A-lcwgs-1-1.clmp.r1r2_fastp	0.8%	37.6%	99.3%	4.1%
+Cha-APnd_010-Ex1-2B-lcwgs-1-1.clmp.r1r2_fastp	0.8%	39.3%	99.4%	4.1%
+Cha-APnd_011-Ex1-2C-lcwgs-1-1.clmp.r1r2_fastp	0.8%	38.1%	99.2%	3.9%
+Cha-APnd_012-Ex1-2D-lcwgs-1-1.clmp.r1r2_fastp	0.6%	39.7%	99.4%	3.9%
+Cha-APnd_013-Ex1-2E-lcwgs-1-1.clmp.r1r2_fastp	1.0%	37.6%	99.4%	4.0%
+Cha-APnd_014-Ex1-2F-lcwgs-1-1.clmp.r1r2_fastp	0.6%	39.0%	99.4%	4.1%
+Cha-APnd_015-Ex1-2G-lcwgs-1-1.clmp.r1r2_fastp	1.0%	37.2%	99.3%	4.0%
+Cha-APnd_016-Ex1-2H-lcwgs-1-1.clmp.r1r2_fastp	0.6%	39.8%	99.4%	4.0%
+Cha-APnd_017-Ex1-3A-lcwgs-1-1.clmp.r1r2_fastp	1.0%	37.5%	99.2%	4.1%
+Cha-APnd_018-Ex1-3B-lcwgs-1-1.clmp.r1r2_fastp	0.9%	39.7%	99.4%	4.0%
+Cha-APnd_019-Ex1-3C-lcwgs-1-1.clmp.r1r2_fastp	0.7%	39.2%	98.9%	3.9%
+Cha-APnd_020-Ex1-3D-lcwgs-1-1.clmp.r1r2_fastp	1.2%	46.9%	98.5%	3.3%
+Cha-APnd_021-Ex1-3E-lcwgs-1-1.clmp.r1r2_fastp	0.7%	40.4%	99.4%	4.1%
+Cha-APnd_022-Ex1-3F-lcwgs-1-1.clmp.r1r2_fastp	0.7%	39.8%	99.4%	4.1%
+Cha-APnd_023-Ex1-3G-lcwgs-1-1.clmp.r1r2_fastp	0.4%	39.3%	98.8%	4.2%
+Cha-APnd_024-Ex1-3H-lcwgs-1-1.clmp.r1r2_fastp	0.1%	40.3%	98.2%	4.6%
+Cha-APnd_025-Ex1-4A-lcwgs-1-1.clmp.r1r2_fastp	1.2%	35.4%	98.9%	3.9%
+Cha-APnd_026-Ex1-4B-lcwgs-1-1.clmp.r1r2_fastp	0.6%	39.6%	99.3%	4.2%
+Cha-APnd_027-Ex1-4C-lcwgs-1-1.clmp.r1r2_fastp	0.5%	40.1%	99.4%	4.0%
+Cha-APnd_028-Ex1-4D-lcwgs-1-1.clmp.r1r2_fastp	0.8%	37.8%	99.4%	3.8%
+Cha-APnd_029-Ex1-4E-lcwgs-1-1.clmp.r1r2_fastp	0.6%	39.9%	99.3%	4.1%
+Cha-APnd_030-Ex1-4F-lcwgs-1-1.clmp.r1r2_fastp	0.9%	39.2%	99.3%	4.2%
+Cha-APnd_031-Ex1-4G-lcwgs-1-1.clmp.r1r2_fastp	1.3%	36.4%	99.2%	4.0%
+Cha-APnd_032-Ex1-4H-lcwgs-1-1.clmp.r1r2_fastp	0.7%	38.0%	99.4%	4.0%
+Cha-APnd_033-Ex1-5A-lcwgs-1-1.clmp.r1r2_fastp	0.2%	39.4%	97.3%	4.4%
+Cha-APnd_034-Ex1-5B-lcwgs-1-1.clmp.r1r2_fastp	0.7%	47.7%	99.0%	3.9%
+Cha-APnd_035-Ex1-5C-lcwgs-1-1.clmp.r1r2_fastp	1.2%	49.5%	99.3%	3.4%
+Cha-APnd_036-Ex1-5D-lcwgs-1-1.clmp.r1r2_fastp	2.2%	60.4%	98.9%	2.8%
+Cha-APnd_037-Ex1-5E-lcwgs-1-1.clmp.r1r2_fastp	2.1%	46.3%	98.9%	2.8%
+Cha-APnd_038-Ex1-5F-lcwgs-1-1.clmp.r1r2_fastp	1.9%	45.5%	98.9%	2.5%
+Cha-APnd_039-Ex1-5G-lcwgs-1-1.clmp.r1r2_fastp	1.1%	48.7%	98.1%	3.0%
+Cha-APnd_040-Ex1-5H-lcwgs-1-1.clmp.r1r2_fastp	0.7%	45.3%	98.4%	4.2%
+Cha-CPnd_009-Ex1-8D-lcwgs-1-1.clmp.r1r2_fastp	2.0%	58.1%	98.2%	1.6%
+Cha-CPnd_010-Ex1-7D-lcwgs-1-1.clmp.r1r2_fastp	1.3%	41.8%	98.6%	2.3%
+Cha-CPnd_011-Ex1-7C-lcwgs-1-1.clmp.r1r2_fastp	1.1%	53.7%	98.4%	1.8%
+Cha-CPnd_013-Ex1-8G-lcwgs-1-1.clmp.r1r2_fastp	1.1%	41.8%	98.8%	2.7%
+Cha-CPnd_014-Ex1-7F-lcwgs-1-1.clmp.r1r2_fastp	1.4%	41.3%	98.6%	2.3%
+Cha-CPnd_015-Ex1-7E-lcwgs-1-1.clmp.r1r2_fastp	1.2%	41.3%	98.7%	2.6%
+Cha-CPnd_016-Ex1-6E-lcwgs-1-1.clmp.r1r2_fastp	1.2%	41.4%	98.6%	2.6%
+Cha-CPnd_017-Ex1-8E-lcwgs-1-1.clmp.r1r2_fastp	1.8%	39.9%	98.2%	1.8%
+Cha-CPnd_018-Ex1-6C-lcwgs-1-1.clmp.r1r2_fastp	1.4%	41.4%	98.6%	2.0%
+Cha-CPnd_021-Ex1-5F-lcwgs-1-1.clmp.r1r2_fastp	1.3%	41.8%	98.7%	2.4%
+Cha-CPnd_022-Ex1-6H-lcwgs-1-1.clmp.r1r2_fastp	1.2%	41.3%	98.8%	2.4%
+Cha-CPnd_023-Ex1-1G-lcwgs-1-1.clmp.r1r2_fastp	1.4%	53.3%	98.2%	2.2%
+Cha-CPnd_024-Ex1-4A-lcwgs-1-1.clmp.r1r2_fastp	1.4%	41.5%	98.4%	1.8%
+Cha-CPnd_025-Ex1-2H-lcwgs-1-1.clmp.r1r2_fastp	1.5%	41.8%	98.5%	2.1%
+Cha-CPnd_026-Ex1-8H-lcwgs-1-1.clmp.r1r2_fastp	1.4%	40.7%	98.7%	2.2%
+Cha-CPnd_027-Ex1-5E-lcwgs-1-1.clmp.r1r2_fastp	1.3%	41.4%	98.5%	2.4%
+Cha-CPnd_028-Ex1-1B-lcwgs-1-1.clmp.r1r2_fastp	1.4%	41.7%	98.5%	2.0%
+Cha-CPnd_030-Ex1-3H-lcwgs-1-1.clmp.r1r2_fastp	1.9%	40.9%	98.2%	1.7%
+Cha-CPnd_031-Ex1-2E-lcwgs-1-1.clmp.r1r2_fastp	1.4%	42.0%	98.5%	2.1%
+Cha-CPnd_032-Ex1-7B-lcwgs-1-1.clmp.r1r2_fastp	1.2%	41.7%	98.8%	2.4%
+Cha-CPnd_033-Ex1-8F-lcwgs-1-1.clmp.r1r2_fastp	1.5%	41.5%	98.5%	2.0%
+Cha-CPnd_034-Ex1-6B-lcwgs-1-1.clmp.r1r2_fastp	1.2%	41.9%	98.7%	2.4%
+Cha-CPnd_035-Ex1-4B-lcwgs-1-1.clmp.r1r2_fastp	1.6%	41.1%	98.3%	1.7%
+Cha-CPnd_036-Ex1-4G-lcwgs-1-1.clmp.r1r2_fastp	1.2%	41.2%	98.8%	2.5%
+Cha-CPnd_037-Ex1-2C-lcwgs-1-1.clmp.r1r2_fastp	1.0%	41.7%	98.8%	2.6%
+Cha-CPnd_038-Ex1-5B-lcwgs-1-1.clmp.r1r2_fastp	1.2%	41.5%	98.9%	2.6%
+Cha-CPnd_039-Ex1-3C-lcwgs-1-1.clmp.r1r2_fastp	1.7%	41.8%	98.5%	1.7%
+Cha-CPnd_040-Ex1-7G-lcwgs-1-1.clmp.r1r2_fastp	1.2%	41.2%	98.9%	2.6%
+Cha-CPnd_041-Ex1-1A-lcwgs-1-1.clmp.r1r2_fastp	1.7%	41.6%	98.0%	1.5%
+Cha-CPnd_042-Ex1-5H-lcwgs-1-1.clmp.r1r2_fastp	1.3%	41.5%	98.7%	2.3%
+Cha-CPnd_043-Ex1-3G-lcwgs-1-1.clmp.r1r2_fastp	1.4%	41.9%	98.7%	2.4%
+Cha-CPnd_044-Ex1-4E-lcwgs-1-1.clmp.r1r2_fastp	1.2%	42.7%	98.7%	2.5%
+Cha-CPnd_045-Ex1-6F-lcwgs-1-1.clmp.r1r2_fastp	1.5%	41.5%	98.5%	2.0%
+Cha-CPnd_047-Ex1-1D-lcwgs-1-1.clmp.r1r2_fastp	1.3%	41.2%	98.6%	2.2%
+Cha-CPnd_048-Ex1-5A-lcwgs-1-1.clmp.r1r2_fastp	1.6%	41.3%	98.3%	1.5%
+Cha-CPnd_049-Ex1-2B-lcwgs-1-1.clmp.r1r2_fastp	1.1%	41.5%	98.8%	2.5%
+Cha-CPnd_051-Ex1-1C-lcwgs-1-1.clmp.r1r2_fastp	0.9%	42.4%	99.1%	2.9%
+Cha-CPnd_052-Ex1-3E-lcwgs-1-1.clmp.r1r2_fastp	1.2%	41.6%	98.6%	2.5%
+Cha-CPnd_053-Ex1-3D-lcwgs-1-1.clmp.r1r2_fastp	1.5%	42.5%	98.4%	2.1%
+Cha-CPnd_054-Ex1-1H-lcwgs-1-1.clmp.r1r2_fastp	1.6%	41.6%	98.3%	1.9%
+Cha-CPnd_059-Ex1-8A-lcwgs-1-1.clmp.r1r2_fastp	1.4%	41.7%	98.5%	2.1%
+Cha-CPnd_060-Ex1-1F-lcwgs-1-1.clmp.r1r2_fastp	1.6%	41.4%	98.4%	1.9%
+Cha-CPnd_061-Ex1-5D-lcwgs-1-1.clmp.r1r2_fastp	1.5%	41.8%	98.4%	2.0%
+Cha-CPnd_062-Ex1-1E-lcwgs-1-1.clmp.r1r2_fastp	1.4%	42.6%	98.6%	2.4%
+Cha-CPnd_064-Ex1-7H-lcwgs-1-1.clmp.r1r2_fastp	1.2%	41.9%	98.8%	2.5%
+Cha-CPnd_065-Ex1-7A-lcwgs-1-1.clmp.r1r2_fastp	1.6%	41.2%	98.4%	1.8%
+Cha-CPnd_066-Ex1-3B-lcwgs-1-1.clmp.r1r2_fastp	2.2%	44.0%	97.7%	1.3%
+Cha-CPnd_067-Ex1-2A-lcwgs-1-1.clmp.r1r2_fastp	1.4%	41.9%	98.5%	1.9%
+Cha-CPnd_069-Ex1-2G-lcwgs-1-1.clmp.r1r2_fastp	1.4%	42.3%	98.5%	2.1%
+Cha-CPnd_070-Ex1-3F-lcwgs-1-1.clmp.r1r2_fastp	1.2%	42.3%	98.8%	2.7%
+Cha-CPnd_071-Ex1-6D-lcwgs-1-1.clmp.r1r2_fastp	1.8%	54.2%	98.2%	1.5%
+Cha-CPnd_072-Ex1-3A-lcwgs-1-1.clmp.r1r2_fastp	1.7%	41.8%	98.2%	1.6%
+Cha-CPnd_073-Ex1-2F-lcwgs-1-1.clmp.r1r2_fastp	1.5%	41.9%	98.5%	2.1%
+Cha-CPnd_074-Ex1-2D-lcwgs-1-1.clmp.r1r2_fastp	1.2%	42.6%	98.7%	2.3%
+Cha-CPnd_076-Ex1-4C-lcwgs-1-1.clmp.r1r2_fastp	1.2%	42.2%	98.8%	2.4%
+Cha-CPnd_077-Ex1-6G-lcwgs-1-1.clmp.r1r2_fastp	1.5%	41.4%	98.4%	1.8%
+Cha-CPnd_078-Ex1-4D-lcwgs-1-1.clmp.r1r2_fastp	1.7%	41.1%	98.2%	1.6%
+Cha-CPnd_079-Ex1-4H-lcwgs-1-1.clmp.r1r2_fastp	1.4%	42.0%	98.6%	2.2%
+Cha-CPnd_081-Ex1-8C-lcwgs-1-1.clmp.r1r2_fastp	1.1%	42.1%	99.0%	2.6%
+Cha-CPnd_082-Ex1-8B-lcwgs-1-1.clmp.r1r2_fastp	1.1%	41.4%	99.0%	2.9%
+Cha-CPnd_083-Ex1-6A-lcwgs-1-1.clmp.r1r2_fastp	2.0%	58.3%	98.0%	1.2%
+Cha-CPnd_084-Ex1-4F-lcwgs-1-1.clmp.r1r2_fastp	1.1%	42.2%	98.8%	2.6%
+Cha-CPnd_085-Ex1-5C-lcwgs-1-1.clmp.r1r2_fastp	1.3%	41.8%	98.7%	2.2%
+Cha-CPnd_086-Ex1-5G-lcwgs-1-1.clmp.r1r2_fastp	1.5%	41.8%	98.5%	2.2%
 ```
 
 </p>
 </details>
 
 ## 11. Decontaminate files.
-TBD
-
-<details><summary>Expand for MultiQC Output.</summary>
+`bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash fq_fp1_clmp_fp2 /scratch/hpc-0351/fq_fp1_clmp_fp2_fqscrn 20`
 
 ```bash
-insert multiqc output here
+[hpc-0351@wahab-01 1st_sequencing_run]$ ls fq_fp1_clmp_fp2_fqscrn/*tagged.fastq.gz | wc -l
+208
+[hpc-0351@wahab-01 1st_sequencing_run]$ ls fq_fp1_clmp_fp2_fqscrn/*tagged_filter.fastq.gz | wc -l
+208
+[hpc-0351@wahab-01 1st_sequencing_run]$ ls fq_fp1_clmp_fp2_fqscrn/*screen.txt | wc -l
+208
+[hpc-0351@wahab-01 1st_sequencing_run]$ ls fq_fp1_clmp_fp2_fqscrn/*screen.png | wc -l
+208
+[hpc-0351@wahab-01 1st_sequencing_run]$ ls fq_fp1_clmp_fp2_fqscrn/*screen.html | wc -l
+208
+[hpc-0351@wahab-01 1st_sequencing_run]$ grep 'error' slurm-fqscrn.*out
+[hpc-0351@wahab-01 1st_sequencing_run]$ grep 'No reads in' slurm-fqscrn.*out
 ```
 
-</p>
-</details>
+`sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runMULTIQC.sbatch fq_fp1_clmp_fp2_fqscrn fastq_screen_report`
 
 ## 12. Execute RePair
-TBD
+`sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runREPAIR.sbatch fq_fp1_clmp_fp2_fqscrn fq_fp1_clmp_fp2_fqscrn_rprd 5`
+
+`sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_fp1_clmp_fp2_fqscrn_rprd" "fqc_rprd_report" "fq.gz"`
 
 <details><summary>Expand for MultiQC Output.</summary>
 
 ```bash
-TBD
+Sample Name	% Dups	% GC	Length	M Seqs
+Cha-APnd_001-Ex1-1A-lcwgs-1-1.clmp.fp2_repr.R1	6.8%	35%	95 bp	0.3
+Cha-APnd_001-Ex1-1A-lcwgs-1-1.clmp.fp2_repr.R2	5.3%	35%	95 bp	0.3
+Cha-APnd_002-Ex1-1B-lcwgs-1-1.clmp.fp2_repr.R1	6.0%	36%	94 bp	0.2
+Cha-APnd_002-Ex1-1B-lcwgs-1-1.clmp.fp2_repr.R2	4.5%	36%	94 bp	0.2
+Cha-APnd_003-Ex1-1C-lcwgs-1-1.clmp.fp2_repr.R1	2.4%	40%	77 bp	1.8
+Cha-APnd_003-Ex1-1C-lcwgs-1-1.clmp.fp2_repr.R2	1.9%	40%	77 bp	1.8
+Cha-APnd_004-Ex1-1D-lcwgs-1-1.clmp.fp2_repr.R1	4.1%	39%	88 bp	1.5
+Cha-APnd_004-Ex1-1D-lcwgs-1-1.clmp.fp2_repr.R2	3.2%	39%	88 bp	1.5
+Cha-APnd_005-Ex1-1E-lcwgs-1-1.clmp.fp2_repr.R1	3.4%	39%	82 bp	1.7
+Cha-APnd_005-Ex1-1E-lcwgs-1-1.clmp.fp2_repr.R2	2.6%	39%	82 bp	1.7
+Cha-APnd_006-Ex1-1F-lcwgs-1-1.clmp.fp2_repr.R1	7.3%	36%	96 bp	0.4
+Cha-APnd_006-Ex1-1F-lcwgs-1-1.clmp.fp2_repr.R2	5.8%	36%	95 bp	0.4
+Cha-APnd_007-Ex1-1G-lcwgs-1-1.clmp.fp2_repr.R1	2.5%	39%	77 bp	0.5
+Cha-APnd_007-Ex1-1G-lcwgs-1-1.clmp.fp2_repr.R2	2.0%	39%	77 bp	0.5
+Cha-APnd_008-Ex1-1H-lcwgs-1-1.clmp.fp2_repr.R1	3.6%	40%	84 bp	1.9
+Cha-APnd_008-Ex1-1H-lcwgs-1-1.clmp.fp2_repr.R2	2.9%	40%	84 bp	1.9
+Cha-APnd_009-Ex1-2A-lcwgs-1-1.clmp.fp2_repr.R1	4.2%	37%	85 bp	1.4
+Cha-APnd_009-Ex1-2A-lcwgs-1-1.clmp.fp2_repr.R2	3.4%	37%	85 bp	1.4
+Cha-APnd_010-Ex1-2B-lcwgs-1-1.clmp.fp2_repr.R1	3.3%	39%	84 bp	0.9
+Cha-APnd_010-Ex1-2B-lcwgs-1-1.clmp.fp2_repr.R2	2.6%	39%	84 bp	0.9
+Cha-APnd_011-Ex1-2C-lcwgs-1-1.clmp.fp2_repr.R1	5.6%	38%	88 bp	0.7
+Cha-APnd_011-Ex1-2C-lcwgs-1-1.clmp.fp2_repr.R2	4.5%	38%	87 bp	0.7
+Cha-APnd_012-Ex1-2D-lcwgs-1-1.clmp.fp2_repr.R1	2.7%	39%	82 bp	1.3
+Cha-APnd_012-Ex1-2D-lcwgs-1-1.clmp.fp2_repr.R2	2.1%	39%	81 bp	1.3
+Cha-APnd_013-Ex1-2E-lcwgs-1-1.clmp.fp2_repr.R1	1.8%	37%	84 bp	0.4
+Cha-APnd_013-Ex1-2E-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	37%	84 bp	0.4
+Cha-APnd_014-Ex1-2F-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	39%	80 bp	1.6
+Cha-APnd_014-Ex1-2F-lcwgs-1-1.clmp.fp2_repr.R2	1.8%	39%	80 bp	1.6
+Cha-APnd_015-Ex1-2G-lcwgs-1-1.clmp.fp2_repr.R1	3.8%	37%	90 bp	1.1
+Cha-APnd_015-Ex1-2G-lcwgs-1-1.clmp.fp2_repr.R2	3.1%	37%	89 bp	1.1
+Cha-APnd_016-Ex1-2H-lcwgs-1-1.clmp.fp2_repr.R1	2.1%	40%	77 bp	1.5
+Cha-APnd_016-Ex1-2H-lcwgs-1-1.clmp.fp2_repr.R2	1.8%	40%	77 bp	1.5
+Cha-APnd_017-Ex1-3A-lcwgs-1-1.clmp.fp2_repr.R1	5.4%	37%	88 bp	1.1
+Cha-APnd_017-Ex1-3A-lcwgs-1-1.clmp.fp2_repr.R2	4.5%	37%	88 bp	1.1
+Cha-APnd_018-Ex1-3B-lcwgs-1-1.clmp.fp2_repr.R1	4.3%	39%	83 bp	0.2
+Cha-APnd_018-Ex1-3B-lcwgs-1-1.clmp.fp2_repr.R2	3.4%	39%	83 bp	0.2
+Cha-APnd_019-Ex1-3C-lcwgs-1-1.clmp.fp2_repr.R1	1.6%	39%	83 bp	0.0
+Cha-APnd_019-Ex1-3C-lcwgs-1-1.clmp.fp2_repr.R2	1.2%	39%	83 bp	0.0
+Cha-APnd_020-Ex1-3D-lcwgs-1-1.clmp.fp2_repr.R1	1.5%	43%	95 bp	0.0
+Cha-APnd_020-Ex1-3D-lcwgs-1-1.clmp.fp2_repr.R2	1.1%	43%	94 bp	0.0
+Cha-APnd_021-Ex1-3E-lcwgs-1-1.clmp.fp2_repr.R1	2.6%	40%	82 bp	0.4
+Cha-APnd_021-Ex1-3E-lcwgs-1-1.clmp.fp2_repr.R2	2.1%	40%	81 bp	0.4
+Cha-APnd_022-Ex1-3F-lcwgs-1-1.clmp.fp2_repr.R1	2.7%	39%	78 bp	1.3
+Cha-APnd_022-Ex1-3F-lcwgs-1-1.clmp.fp2_repr.R2	2.2%	39%	78 bp	1.3
+Cha-APnd_023-Ex1-3G-lcwgs-1-1.clmp.fp2_repr.R1	0.9%	39%	84 bp	0.0
+Cha-APnd_023-Ex1-3G-lcwgs-1-1.clmp.fp2_repr.R2	0.7%	39%	83 bp	0.0
+Cha-APnd_024-Ex1-3H-lcwgs-1-1.clmp.fp2_repr.R1	0.3%	40%	89 bp	0.0
+Cha-APnd_024-Ex1-3H-lcwgs-1-1.clmp.fp2_repr.R2	0.2%	40%	88 bp	0.0
+Cha-APnd_025-Ex1-4A-lcwgs-1-1.clmp.fp2_repr.R1	4.7%	35%	94 bp	0.1
+Cha-APnd_025-Ex1-4A-lcwgs-1-1.clmp.fp2_repr.R2	3.5%	35%	93 bp	0.1
+Cha-APnd_026-Ex1-4B-lcwgs-1-1.clmp.fp2_repr.R1	3.1%	39%	81 bp	1.5
+Cha-APnd_026-Ex1-4B-lcwgs-1-1.clmp.fp2_repr.R2	2.6%	39%	80 bp	1.5
+Cha-APnd_027-Ex1-4C-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	40%	75 bp	1.4
+Cha-APnd_027-Ex1-4C-lcwgs-1-1.clmp.fp2_repr.R2	1.8%	40%	75 bp	1.4
+Cha-APnd_028-Ex1-4D-lcwgs-1-1.clmp.fp2_repr.R1	2.8%	38%	84 bp	1.8
+Cha-APnd_028-Ex1-4D-lcwgs-1-1.clmp.fp2_repr.R2	2.2%	38%	84 bp	1.8
+Cha-APnd_029-Ex1-4E-lcwgs-1-1.clmp.fp2_repr.R1	3.0%	40%	80 bp	1.3
+Cha-APnd_029-Ex1-4E-lcwgs-1-1.clmp.fp2_repr.R2	2.5%	40%	80 bp	1.3
+Cha-APnd_030-Ex1-4F-lcwgs-1-1.clmp.fp2_repr.R1	3.8%	39%	89 bp	0.5
+Cha-APnd_030-Ex1-4F-lcwgs-1-1.clmp.fp2_repr.R2	2.9%	39%	88 bp	0.5
+Cha-APnd_031-Ex1-4G-lcwgs-1-1.clmp.fp2_repr.R1	5.3%	36%	96 bp	0.2
+Cha-APnd_031-Ex1-4G-lcwgs-1-1.clmp.fp2_repr.R2	4.3%	36%	96 bp	0.2
+Cha-APnd_032-Ex1-4H-lcwgs-1-1.clmp.fp2_repr.R1	1.8%	38%	79 bp	1.5
+Cha-APnd_032-Ex1-4H-lcwgs-1-1.clmp.fp2_repr.R2	1.5%	38%	79 bp	1.5
+Cha-APnd_033-Ex1-5A-lcwgs-1-1.clmp.fp2_repr.R1	0.5%	39%	95 bp	0.0
+Cha-APnd_033-Ex1-5A-lcwgs-1-1.clmp.fp2_repr.R2	0.5%	39%	93 bp	0.0
+Cha-APnd_034-Ex1-5B-lcwgs-1-1.clmp.fp2_repr.R1	0.5%	44%	80 bp	0.0
+Cha-APnd_034-Ex1-5B-lcwgs-1-1.clmp.fp2_repr.R2	0.5%	44%	80 bp	0.0
+Cha-APnd_035-Ex1-5C-lcwgs-1-1.clmp.fp2_repr.R1	0.8%	45%	77 bp	0.5
+Cha-APnd_035-Ex1-5C-lcwgs-1-1.clmp.fp2_repr.R2	0.7%	45%	77 bp	0.5
+Cha-APnd_036-Ex1-5D-lcwgs-1-1.clmp.fp2_repr.R1	1.6%	57%	104 bp	0.2
+Cha-APnd_036-Ex1-5D-lcwgs-1-1.clmp.fp2_repr.R2	1.4%	57%	103 bp	0.2
+Cha-APnd_037-Ex1-5E-lcwgs-1-1.clmp.fp2_repr.R1	3.2%	56%	128 bp	0.0
+Cha-APnd_037-Ex1-5E-lcwgs-1-1.clmp.fp2_repr.R2	2.2%	56%	126 bp	0.0
+Cha-APnd_038-Ex1-5F-lcwgs-1-1.clmp.fp2_repr.R1	1.2%	45%	99 bp	0.4
+Cha-APnd_038-Ex1-5F-lcwgs-1-1.clmp.fp2_repr.R2	1.1%	45%	99 bp	0.4
+Cha-APnd_039-Ex1-5G-lcwgs-1-1.clmp.fp2_repr.R1	0.7%	47%	102 bp	0.0
+Cha-APnd_039-Ex1-5G-lcwgs-1-1.clmp.fp2_repr.R2	0.4%	47%	101 bp	0.0
+Cha-APnd_040-Ex1-5H-lcwgs-1-1.clmp.fp2_repr.R1	0.5%	43%	95 bp	0.0
+Cha-APnd_040-Ex1-5H-lcwgs-1-1.clmp.fp2_repr.R2	0.4%	43%	94 bp	0.0
+Cha-CPnd_009-Ex1-8D-lcwgs-1-1.clmp.fp2_repr.R1	2.0%	53%	130 bp	0.1
+Cha-CPnd_009-Ex1-8D-lcwgs-1-1.clmp.fp2_repr.R2	1.3%	53%	128 bp	0.1
+Cha-CPnd_010-Ex1-7D-lcwgs-1-1.clmp.fp2_repr.R1	3.1%	41%	123 bp	1.1
+Cha-CPnd_010-Ex1-7D-lcwgs-1-1.clmp.fp2_repr.R2	3.4%	41%	121 bp	1.1
+Cha-CPnd_011-Ex1-7C-lcwgs-1-1.clmp.fp2_repr.R1	1.2%	48%	128 bp	0.0
+Cha-CPnd_011-Ex1-7C-lcwgs-1-1.clmp.fp2_repr.R2	0.7%	48%	125 bp	0.0
+Cha-CPnd_013-Ex1-8G-lcwgs-1-1.clmp.fp2_repr.R1	2.9%	41%	114 bp	0.8
+Cha-CPnd_013-Ex1-8G-lcwgs-1-1.clmp.fp2_repr.R2	3.0%	41%	112 bp	0.8
+Cha-CPnd_014-Ex1-7F-lcwgs-1-1.clmp.fp2_repr.R1	3.7%	41%	122 bp	1.9
+Cha-CPnd_014-Ex1-7F-lcwgs-1-1.clmp.fp2_repr.R2	4.3%	41%	121 bp	1.9
+Cha-CPnd_015-Ex1-7E-lcwgs-1-1.clmp.fp2_repr.R1	4.0%	41%	120 bp	0.7
+Cha-CPnd_015-Ex1-7E-lcwgs-1-1.clmp.fp2_repr.R2	4.0%	41%	118 bp	0.7
+Cha-CPnd_016-Ex1-6E-lcwgs-1-1.clmp.fp2_repr.R1	3.2%	41%	121 bp	0.3
+Cha-CPnd_016-Ex1-6E-lcwgs-1-1.clmp.fp2_repr.R2	3.1%	41%	119 bp	0.3
+Cha-CPnd_017-Ex1-8E-lcwgs-1-1.clmp.fp2_repr.R1	5.7%	40%	131 bp	1.5
+Cha-CPnd_017-Ex1-8E-lcwgs-1-1.clmp.fp2_repr.R2	6.1%	40%	128 bp	1.5
+Cha-CPnd_018-Ex1-6C-lcwgs-1-1.clmp.fp2_repr.R1	5.7%	41%	127 bp	0.9
+Cha-CPnd_018-Ex1-6C-lcwgs-1-1.clmp.fp2_repr.R2	5.7%	41%	125 bp	0.9
+Cha-CPnd_021-Ex1-5F-lcwgs-1-1.clmp.fp2_repr.R1	3.6%	41%	120 bp	1.7
+Cha-CPnd_021-Ex1-5F-lcwgs-1-1.clmp.fp2_repr.R2	4.1%	41%	118 bp	1.7
+Cha-CPnd_022-Ex1-6H-lcwgs-1-1.clmp.fp2_repr.R1	2.5%	41%	120 bp	1.1
+Cha-CPnd_022-Ex1-6H-lcwgs-1-1.clmp.fp2_repr.R2	2.6%	41%	118 bp	1.1
+Cha-CPnd_023-Ex1-1G-lcwgs-1-1.clmp.fp2_repr.R1	1.5%	48%	124 bp	0.1
+Cha-CPnd_023-Ex1-1G-lcwgs-1-1.clmp.fp2_repr.R2	1.1%	48%	122 bp	0.1
+Cha-CPnd_024-Ex1-4A-lcwgs-1-1.clmp.fp2_repr.R1	2.7%	41%	128 bp	0.9
+Cha-CPnd_024-Ex1-4A-lcwgs-1-1.clmp.fp2_repr.R2	2.7%	41%	126 bp	0.9
+Cha-CPnd_025-Ex1-2H-lcwgs-1-1.clmp.fp2_repr.R1	4.3%	41%	128 bp	1.1
+Cha-CPnd_025-Ex1-2H-lcwgs-1-1.clmp.fp2_repr.R2	4.8%	41%	126 bp	1.1
+Cha-CPnd_026-Ex1-8H-lcwgs-1-1.clmp.fp2_repr.R1	3.6%	40%	123 bp	0.8
+Cha-CPnd_026-Ex1-8H-lcwgs-1-1.clmp.fp2_repr.R2	3.6%	40%	121 bp	0.8
+Cha-CPnd_027-Ex1-5E-lcwgs-1-1.clmp.fp2_repr.R1	4.2%	41%	123 bp	0.6
+Cha-CPnd_027-Ex1-5E-lcwgs-1-1.clmp.fp2_repr.R2	4.0%	41%	120 bp	0.6
+Cha-CPnd_028-Ex1-1B-lcwgs-1-1.clmp.fp2_repr.R1	3.3%	41%	127 bp	1.0
+Cha-CPnd_028-Ex1-1B-lcwgs-1-1.clmp.fp2_repr.R2	3.7%	41%	125 bp	1.0
+Cha-CPnd_030-Ex1-3H-lcwgs-1-1.clmp.fp2_repr.R1	5.7%	41%	132 bp	2.7
+Cha-CPnd_030-Ex1-3H-lcwgs-1-1.clmp.fp2_repr.R2	6.2%	41%	129 bp	2.7
+Cha-CPnd_031-Ex1-2E-lcwgs-1-1.clmp.fp2_repr.R1	4.3%	42%	126 bp	3.1
+Cha-CPnd_031-Ex1-2E-lcwgs-1-1.clmp.fp2_repr.R2	5.0%	42%	124 bp	3.1
+Cha-CPnd_032-Ex1-7B-lcwgs-1-1.clmp.fp2_repr.R1	2.4%	41%	118 bp	1.1
+Cha-CPnd_032-Ex1-7B-lcwgs-1-1.clmp.fp2_repr.R2	2.5%	41%	116 bp	1.1
+Cha-CPnd_033-Ex1-8F-lcwgs-1-1.clmp.fp2_repr.R1	3.1%	41%	124 bp	2.2
+Cha-CPnd_033-Ex1-8F-lcwgs-1-1.clmp.fp2_repr.R2	3.3%	41%	122 bp	2.2
+Cha-CPnd_034-Ex1-6B-lcwgs-1-1.clmp.fp2_repr.R1	2.4%	42%	120 bp	1.3
+Cha-CPnd_034-Ex1-6B-lcwgs-1-1.clmp.fp2_repr.R2	2.5%	41%	118 bp	1.3
+Cha-CPnd_035-Ex1-4B-lcwgs-1-1.clmp.fp2_repr.R1	5.2%	41%	133 bp	1.0
+Cha-CPnd_035-Ex1-4B-lcwgs-1-1.clmp.fp2_repr.R2	5.2%	41%	130 bp	1.0
+Cha-CPnd_036-Ex1-4G-lcwgs-1-1.clmp.fp2_repr.R1	2.9%	41%	120 bp	1.7
+Cha-CPnd_036-Ex1-4G-lcwgs-1-1.clmp.fp2_repr.R2	3.2%	41%	118 bp	1.7
+Cha-CPnd_037-Ex1-2C-lcwgs-1-1.clmp.fp2_repr.R1	2.1%	41%	116 bp	0.3
+Cha-CPnd_037-Ex1-2C-lcwgs-1-1.clmp.fp2_repr.R2	2.0%	41%	114 bp	0.3
+Cha-CPnd_038-Ex1-5B-lcwgs-1-1.clmp.fp2_repr.R1	2.6%	41%	115 bp	1.1
+Cha-CPnd_038-Ex1-5B-lcwgs-1-1.clmp.fp2_repr.R2	2.8%	41%	114 bp	1.1
+Cha-CPnd_039-Ex1-3C-lcwgs-1-1.clmp.fp2_repr.R1	4.3%	41%	131 bp	4.0
+Cha-CPnd_039-Ex1-3C-lcwgs-1-1.clmp.fp2_repr.R2	4.8%	41%	128 bp	4.0
+Cha-CPnd_040-Ex1-7G-lcwgs-1-1.clmp.fp2_repr.R1	2.4%	41%	117 bp	1.8
+Cha-CPnd_040-Ex1-7G-lcwgs-1-1.clmp.fp2_repr.R2	2.6%	41%	115 bp	1.8
+Cha-CPnd_041-Ex1-1A-lcwgs-1-1.clmp.fp2_repr.R1	3.6%	41%	135 bp	0.5
+Cha-CPnd_041-Ex1-1A-lcwgs-1-1.clmp.fp2_repr.R2	3.5%	41%	132 bp	0.5
+Cha-CPnd_042-Ex1-5H-lcwgs-1-1.clmp.fp2_repr.R1	3.2%	41%	122 bp	1.0
+Cha-CPnd_042-Ex1-5H-lcwgs-1-1.clmp.fp2_repr.R2	3.4%	41%	121 bp	1.0
+Cha-CPnd_043-Ex1-3G-lcwgs-1-1.clmp.fp2_repr.R1	3.0%	42%	122 bp	1.0
+Cha-CPnd_043-Ex1-3G-lcwgs-1-1.clmp.fp2_repr.R2	3.0%	42%	120 bp	1.0
+Cha-CPnd_044-Ex1-4E-lcwgs-1-1.clmp.fp2_repr.R1	2.6%	42%	120 bp	1.0
+Cha-CPnd_044-Ex1-4E-lcwgs-1-1.clmp.fp2_repr.R2	2.9%	42%	118 bp	1.0
+Cha-CPnd_045-Ex1-6F-lcwgs-1-1.clmp.fp2_repr.R1	4.3%	41%	128 bp	1.9
+Cha-CPnd_045-Ex1-6F-lcwgs-1-1.clmp.fp2_repr.R2	4.9%	41%	125 bp	1.9
+Cha-CPnd_047-Ex1-1D-lcwgs-1-1.clmp.fp2_repr.R1	2.3%	41%	125 bp	0.4
+Cha-CPnd_047-Ex1-1D-lcwgs-1-1.clmp.fp2_repr.R2	2.2%	41%	123 bp	0.4
+Cha-CPnd_048-Ex1-5A-lcwgs-1-1.clmp.fp2_repr.R1	3.0%	41%	133 bp	1.5
+Cha-CPnd_048-Ex1-5A-lcwgs-1-1.clmp.fp2_repr.R2	3.0%	41%	130 bp	1.5
+Cha-CPnd_049-Ex1-2B-lcwgs-1-1.clmp.fp2_repr.R1	5.0%	41%	121 bp	0.5
+Cha-CPnd_049-Ex1-2B-lcwgs-1-1.clmp.fp2_repr.R2	4.8%	41%	119 bp	0.5
+Cha-CPnd_051-Ex1-1C-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	42%	109 bp	0.8
+Cha-CPnd_051-Ex1-1C-lcwgs-1-1.clmp.fp2_repr.R2	2.3%	42%	108 bp	0.8
+Cha-CPnd_052-Ex1-3E-lcwgs-1-1.clmp.fp2_repr.R1	2.1%	41%	119 bp	0.4
+Cha-CPnd_052-Ex1-3E-lcwgs-1-1.clmp.fp2_repr.R2	1.9%	41%	117 bp	0.4
+Cha-CPnd_053-Ex1-3D-lcwgs-1-1.clmp.fp2_repr.R1	3.5%	42%	126 bp	0.9
+Cha-CPnd_053-Ex1-3D-lcwgs-1-1.clmp.fp2_repr.R2	3.7%	42%	123 bp	0.9
+Cha-CPnd_054-Ex1-1H-lcwgs-1-1.clmp.fp2_repr.R1	6.9%	41%	132 bp	1.1
+Cha-CPnd_054-Ex1-1H-lcwgs-1-1.clmp.fp2_repr.R2	6.8%	41%	129 bp	1.1
+Cha-CPnd_059-Ex1-8A-lcwgs-1-1.clmp.fp2_repr.R1	4.2%	41%	125 bp	0.8
+Cha-CPnd_059-Ex1-8A-lcwgs-1-1.clmp.fp2_repr.R2	4.4%	41%	123 bp	0.8
+Cha-CPnd_060-Ex1-1F-lcwgs-1-1.clmp.fp2_repr.R1	3.6%	41%	130 bp	2.4
+Cha-CPnd_060-Ex1-1F-lcwgs-1-1.clmp.fp2_repr.R2	3.6%	41%	127 bp	2.4
+Cha-CPnd_061-Ex1-5D-lcwgs-1-1.clmp.fp2_repr.R1	3.2%	41%	127 bp	1.4
+Cha-CPnd_061-Ex1-5D-lcwgs-1-1.clmp.fp2_repr.R2	3.5%	41%	125 bp	1.4
+Cha-CPnd_062-Ex1-1E-lcwgs-1-1.clmp.fp2_repr.R1	5.4%	42%	124 bp	2.9
+Cha-CPnd_062-Ex1-1E-lcwgs-1-1.clmp.fp2_repr.R2	6.2%	42%	122 bp	2.9
+Cha-CPnd_064-Ex1-7H-lcwgs-1-1.clmp.fp2_repr.R1	3.8%	41%	120 bp	0.8
+Cha-CPnd_064-Ex1-7H-lcwgs-1-1.clmp.fp2_repr.R2	3.9%	41%	119 bp	0.8
+Cha-CPnd_065-Ex1-7A-lcwgs-1-1.clmp.fp2_repr.R1	3.9%	41%	131 bp	0.8
+Cha-CPnd_065-Ex1-7A-lcwgs-1-1.clmp.fp2_repr.R2	4.0%	41%	128 bp	0.8
+Cha-CPnd_066-Ex1-3B-lcwgs-1-1.clmp.fp2_repr.R1	6.9%	44%	141 bp	1.0
+Cha-CPnd_066-Ex1-3B-lcwgs-1-1.clmp.fp2_repr.R2	7.0%	44%	137 bp	1.0
+Cha-CPnd_067-Ex1-2A-lcwgs-1-1.clmp.fp2_repr.R1	3.4%	41%	129 bp	0.6
+Cha-CPnd_067-Ex1-2A-lcwgs-1-1.clmp.fp2_repr.R2	3.4%	41%	126 bp	0.6
+Cha-CPnd_069-Ex1-2G-lcwgs-1-1.clmp.fp2_repr.R1	4.7%	42%	127 bp	2.4
+Cha-CPnd_069-Ex1-2G-lcwgs-1-1.clmp.fp2_repr.R2	5.5%	42%	125 bp	2.4
+Cha-CPnd_070-Ex1-3F-lcwgs-1-1.clmp.fp2_repr.R1	2.9%	42%	114 bp	0.5
+Cha-CPnd_070-Ex1-3F-lcwgs-1-1.clmp.fp2_repr.R2	2.9%	42%	113 bp	0.5
+Cha-CPnd_071-Ex1-6D-lcwgs-1-1.clmp.fp2_repr.R1	2.6%	49%	135 bp	0.1
+Cha-CPnd_071-Ex1-6D-lcwgs-1-1.clmp.fp2_repr.R2	1.8%	49%	132 bp	0.1
+Cha-CPnd_072-Ex1-3A-lcwgs-1-1.clmp.fp2_repr.R1	3.7%	41%	133 bp	0.7
+Cha-CPnd_072-Ex1-3A-lcwgs-1-1.clmp.fp2_repr.R2	3.6%	41%	130 bp	0.7
+Cha-CPnd_073-Ex1-2F-lcwgs-1-1.clmp.fp2_repr.R1	5.1%	41%	128 bp	3.5
+Cha-CPnd_073-Ex1-2F-lcwgs-1-1.clmp.fp2_repr.R2	5.4%	41%	126 bp	3.5
+Cha-CPnd_074-Ex1-2D-lcwgs-1-1.clmp.fp2_repr.R1	3.0%	42%	122 bp	0.6
+Cha-CPnd_074-Ex1-2D-lcwgs-1-1.clmp.fp2_repr.R2	2.9%	42%	120 bp	0.6
+Cha-CPnd_076-Ex1-4C-lcwgs-1-1.clmp.fp2_repr.R1	3.1%	42%	119 bp	0.7
+Cha-CPnd_076-Ex1-4C-lcwgs-1-1.clmp.fp2_repr.R2	3.1%	42%	118 bp	0.7
+Cha-CPnd_077-Ex1-6G-lcwgs-1-1.clmp.fp2_repr.R1	5.2%	41%	132 bp	4.2
+Cha-CPnd_077-Ex1-6G-lcwgs-1-1.clmp.fp2_repr.R2	6.4%	41%	130 bp	4.2
+Cha-CPnd_078-Ex1-4D-lcwgs-1-1.clmp.fp2_repr.R1	3.4%	41%	135 bp	1.2
+Cha-CPnd_078-Ex1-4D-lcwgs-1-1.clmp.fp2_repr.R2	3.7%	41%	133 bp	1.2
+Cha-CPnd_079-Ex1-4H-lcwgs-1-1.clmp.fp2_repr.R1	3.3%	42%	124 bp	2.0
+Cha-CPnd_079-Ex1-4H-lcwgs-1-1.clmp.fp2_repr.R2	3.7%	42%	122 bp	2.0
+Cha-CPnd_081-Ex1-8C-lcwgs-1-1.clmp.fp2_repr.R1	2.2%	42%	113 bp	0.8
+Cha-CPnd_081-Ex1-8C-lcwgs-1-1.clmp.fp2_repr.R2	2.1%	42%	111 bp	0.8
+Cha-CPnd_082-Ex1-8B-lcwgs-1-1.clmp.fp2_repr.R1	4.0%	41%	110 bp	0.8
+Cha-CPnd_082-Ex1-8B-lcwgs-1-1.clmp.fp2_repr.R2	3.9%	41%	109 bp	0.8
+Cha-CPnd_083-Ex1-6A-lcwgs-1-1.clmp.fp2_repr.R1	2.1%	53%	136 bp	0.1
+Cha-CPnd_083-Ex1-6A-lcwgs-1-1.clmp.fp2_repr.R2	1.3%	53%	133 bp	0.1
+Cha-CPnd_084-Ex1-4F-lcwgs-1-1.clmp.fp2_repr.R1	3.0%	42%	115 bp	0.7
+Cha-CPnd_084-Ex1-4F-lcwgs-1-1.clmp.fp2_repr.R2	3.0%	42%	114 bp	0.7
+Cha-CPnd_085-Ex1-5C-lcwgs-1-1.clmp.fp2_repr.R1	2.8%	41%	122 bp	0.7
+Cha-CPnd_085-Ex1-5C-lcwgs-1-1.clmp.fp2_repr.R2	2.7%	41%	120 bp	0.7
+Cha-CPnd_086-Ex1-5G-lcwgs-1-1.clmp.fp2_repr.R1	4.8%	41%	127 bp	2.2
+Cha-CPnd_086-Ex1-5G-lcwgs-1-1.clmp.fp2_repr.R2	5.6%	41%	125 bp	2.2
 ```
 
 </p>
 </details>
 
 ## 14. Clean Up
-TBD
+```bash
+mkdir logs
+mv *out logs
+```

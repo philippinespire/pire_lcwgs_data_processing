@@ -56,3 +56,46 @@ Potential issues:
 </p>
 </details>
 
+ Clumpify [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/dascyllus_aruanus/2nd_sequencing_run/fq_fp1_clmp/fqc_clmp_report.html)
+
+```
+bash ../../pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1 fq_fp1_clmp /scratch/jbald004 20
+#copied the checkClumpify_EG.R file to the fq_fp1_clmp folder after running clumpify
+cp /home/e1garcia/shotgun_PIRE/pire_cssl_data_processing/leiognathus_equula/fq_fp1_clmp/checkClumpify_EG.R .
+#ran checkClumpify_EG.R in the fq_fp1_clmp folder
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/fq_fp1_clmp
+salloc
+enable_lmod
+module load container_env mapdamage2
+crun R <checkClumpify_EG.R --no-save
+```
+Clumpify worked well so I moved on to the next step
+</p>
+</details>
+
+<details><summary><i>2nd Trim</i></summary>
+<p>
+
+```
+sbatch ../../pire_fq_gz_processing/runFASTP_2_cssl.sbatch fq_fp1_clmp fq_fp1_clmp_fp2
+```
+
+Fastp2 [Report](xx)
+```
+Potential issues:
+  * % duplication -
+    * Alb: 2-11%, Contemp: 0.7-28%
+  * GC content -
+    * Alb: 36.2-65%, Contemp: 37.3-41.8%
+  * passing filter -
+    * Alb: 98.5-99.2%, Contemp: 98.6-99.4%
+  * % adapter -
+    * Alb: 0.5-1.1%, Contemp: 0.5-1.7%
+  * number of reads -
+    * Alb: 34-105 mil, Contemp: 1-173 mil
+```
+</p>
+</details>
+
+<details><summary><i>Checked Fastqscreen files</i></summary>
+<p>

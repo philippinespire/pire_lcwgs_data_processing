@@ -80,19 +80,19 @@ Clumpify worked well so I moved on to the next step
 sbatch ../../pire_fq_gz_processing/runFASTP_2_cssl.sbatch fq_fp1_clmp fq_fp1_clmp_fp2
 ```
 
-Fastp2 [Report](xx)
+Fastp2 [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/dascyllus_aruanus/2nd_sequencing_run/fq_fp1_clmp_fp2/2nd_fastp_report.html)
 ```
 Potential issues:
-  * % duplication -
-    * Alb: 2-11%, Contemp: 0.7-28%
-  * GC content -
-    * Alb: 36.2-65%, Contemp: 37.3-41.8%
-  * passing filter -
-    * Alb: 98.5-99.2%, Contemp: 98.6-99.4%
-  * % adapter -
-    * Alb: 0.5-1.1%, Contemp: 0.5-1.7%
-  * number of reads -
-    * Alb: 34-105 mil, Contemp: 1-173 mil
+  * % duplication - low, with 1-3 outliers
+    * Alb: 0.7-34.1% (only 1 individual, the rest are <2%, 1 is 12.1%), Contemp: 0.3-16.5% (16.5 is an outlier)
+  * GC content - acceptable range of ~40%
+    * Alb: 37.5-52.2%, Contemp: 45.3-49%
+  * passing filter - very high
+    * Alb: 98.3-99.7%, Contemp: 99.0-99.6%
+  * % adapter - low
+    * Alb: 0.9-1.8%, Contemp: 0.2-1.7%
+  * number of reads - very erratic, no patttern across samples
+    * Alb: 1-148 M, Contemp: 1-270 M
 ```
 </p>
 </details>

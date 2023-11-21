@@ -54,14 +54,7 @@ cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st
 Copy config file from previous run and edit paths / etc.
 
 Changes:
-* line 23: ref_path: "reference/GCF_902148845.1_fSalaFa1.1_chr1-23_rename.fna"
-* line 31: historical_samples: "config/Sfa_32_historical_samples.txt"
-* line 32: modern_samples: "config/Sfa_49_modern_samples.txt"
-* line 89: map_historical_to_mitogenomes: True
-* line 97: species_mt_path: "/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/refGenome/NC_004412.1_mtgenome.fasta"
-* line 165: historical_bam_mapDamage: True
-* line 173: historical_rescaled_samplenames: ["SfaABas001","SfaABas002","SfaABas003","SfaABas004","SfaABas005","SfaABas006","SfaABas007","SfaABas008","SfaABas009","SfaABas010","SfaABas013","SfaABas014","SfaABas016","SfaABas017","SfaABas018","SfaABas019","SfaABas020","SfaABas021","SfaABas022","SfaABas023","SfaABas024","SfaABas025","SfaABas026","SfaABas027","SfaABas028","SfaABas029","SfaABas030","SfaABas031","SfaABas032","SfaABas033","SfaABas034","SfaABas035"]
-* line 486: gerp: True
+* line 23: ref_path: "reference/reference.denovoSSL.Sfa20k.fasta"
 * line 492: gerp_ref_path: "/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_Sfa_100k/gerp_outgroups"
 * line 501: tree: "/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/salarias_fasciatus/1st_sequencing_run/GenErode_Sfa_100k/gerp_tree.nwk"
 

@@ -4,8 +4,7 @@
 
 # don't change this, this is just the "kickoff" job, snakemake will launch more jobs on its own
 
-module unload container_env
-module load snakemake/7.21.0 singularity
+module load snakemake/7.25.4
 
 snakemake --latency-wait 60 -j 40 --use-singularity --slurm
 

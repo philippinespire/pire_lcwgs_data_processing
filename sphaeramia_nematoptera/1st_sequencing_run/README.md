@@ -161,11 +161,11 @@ sbatch /home/e1garcia/shotgun_PIRE/dDocentHPC/dDocentHPC.sbatch mkBAM config.6.l
 
 <details><summary><i>fltrBAM step</i></summary>
 
-To filter resulting BAM files, I executed the following command:
+I ran into RAM issues, so what I did was edit the dDocentHPC sbatch script and bash scripts so that less nodes will be used. I used new scripts to filter & it worked! This time, to filter resulting BAM files, I executed the following command:
 ```
-sbatch /home/e1garcia/shotgun_PIRE/dDocentHPC/dDocentHPC.sbatch fltrBAM config.6.lcwgs
+sbatch /home/e1garcia/shotgun_PIRE/dDocentHPC/dDocentHPC2.sbatch fltrBAM config.6.lcwgs
 ```
-
+The dDocentHPC2.sbatch script uses dDocentHPC2.bash that doesn't use too many nodes and will allow you to run your script w/o using up too much memory.
 </p>
 </details>
 

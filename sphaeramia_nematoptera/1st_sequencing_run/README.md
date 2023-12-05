@@ -161,7 +161,7 @@ sbatch /home/e1garcia/shotgun_PIRE/dDocentHPC/dDocentHPC.sbatch mkBAM config.6.l
 
 <details><summary><i>fltrBAM step</i></summary>
 
-I ran into RAM issues, so what I did was edit the dDocentHPC sbatch script and bash scripts so that less nodes will be used. I used new scripts to filter & it worked! This time, to filter resulting BAM files, I executed the following command:
+Some time in November 2023, I ran into RAM issues while doing the mapping & filtering step. Brendan & I tried to troubleshoot this by editing the dDocentHPC sbatch script and bash scripts so that less nodes will be used. I used new scripts to filter & it worked! This time, to filter resulting BAM files, I executed the following command:
 ```
 sbatch /home/e1garcia/shotgun_PIRE/dDocentHPC/dDocentHPC2.sbatch fltrBAM config.6.lcwgs
 ```

@@ -175,12 +175,17 @@ I followed Kevin's repo for [Process Sequencing Metadata](https://github.com/phi
 
 *coverageMappedReads was ran by someone else prior to visualising results. You may refer to the CSSL pipeline for this or check Cvi lcwgs steps
 
+Make sure you do the following: -If cloning a repo and working in your own folder, make sure to always git pull before doing anything! -Move output files to the species repo after you work in your own folder -Remember to change line 306 of the visualizeSslCsslLcwgsMETADA.R script. For lcwgs, I changed this line based on what my mkBAM_T setting was and the 2nd to last setting for fltrmBAM:
+
+  mutate(mkBAM_T_setting = ceiling(25 * fqc_avg_sequence_length_rprd / 100))
+Output files are under the process_sequencing_metadata folder
+
+Graphs showed information on depth of coverage for both Albatross & Contemporary
+
 Results are uploaded in my folder but also copied under the process_sequencing_metadata folder for this species
 ```
 cd /home/jbald004/process_sequencing_metadata/out/lcwgs_Sne
 ```
-
-Graphs showed information on depth of coverage for both Albatross & Contemporary
 
 ## 5. GenErode, a bioinformatics pipeline to investigate genome erosion
 I followed Brendan's repository for processing Salarias fasciatus [here](https://github.com/philippinespire/pire_lcwgs_data_processing/tree/main/salarias_fasciatus/1st_sequencing_run/GenErode_Sfa_full)

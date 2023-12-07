@@ -40,6 +40,22 @@ rsync -vr /archive/carpenterlab/pire/downloads/parupeneus_barberinus/1st_sequenc
 All files synced successfully. File sizes were equal between source and destination directories.
 
 
+Check download:
+A) `gridDownloader.sh`
+- I did not use `gridDownloader.sh`, so I have no log file to check.
+
+B) Validate the `fq.gz` files
+
+```bash
+bash # only run bash if you are not already in bash
+SCRIPT=/home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/validateFQPE.sbatch
+DIR=./fq_raw
+fqPATTERN="*fq.gz"
+sbatch $SCRIPT $DIR $fqPATTERN
+```
+- jobID: 2751677
+
+
 </details>
 
 

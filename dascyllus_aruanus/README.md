@@ -99,3 +99,30 @@ Potential issues:
 
 <details><summary><i>Checked Fastqscreen files</i></summary>
 <p>
+
+Fastqscreen [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/dascyllus_aruanus/2nd_sequencing_run/fq_fp1_clmp_fp2_fqscrn/fastq_screen_report.html)
+
+```
+Potential issues 
+  * one hit, one genome, no ID -
+    * Alb: 91-97.5%, Contemp: 93-95%
+  * No one hit, one genome to any potential contaminators (bacteria, virus, human, etc) -
+    * Alb: 0.4-1.7%, Contemp: 0.4-0.5%
+```
+</p>
+</details>
+
+<details><summary><i>Revewied Fastqscreen repaired files</i></summary>
+<p>
+
+MultiQC [Report]()
+
+```
+Potential issues:
+ * % duplication - wide range of duplication for Albatross
+   Alb: -%, Contemp: 1.2-8.3%%
+ * GC content -
+   Alb: -%, Contemp: 40-43%
+ * number of reads -
+   Alb: - M, Contemp: 1.4-45 M
+```

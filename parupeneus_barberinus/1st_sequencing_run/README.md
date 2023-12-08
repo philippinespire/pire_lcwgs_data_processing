@@ -165,6 +165,32 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw
 
 ```
 - jobID = 2752786
+- job finished successfully
+
+<details> 
+	<summary>QC Results</summary> 
+```
+Potential issues:  
+  * % duplication - high duplication in Albatross samples (> 50%)
+	* Alb: 4.80 - 65.30%, Contemp: 3.20 - 10.30%
+  * GC content - high GC content in Albtross samples 
+	* Alb: 48 - 80%, Contemp: 48 - 53%
+  * number of reads - some samples have read counts < 100k
+	* Alb: 0.00 - 93.9 M, Contemp: 0.7 - 13.8 M
+	* Samples with raw read count < 100k:
+		- Pbb_AGal_013: 20,100
+		- Pbb-AGal_014: 46,332
+		- Pbb-AGal_015: 45,668
+		- Pbb-AGal_016: 60,625
+		- Pbb-AGal_017: 94,464
+		- Pbb-AGal_018: 20,739
+		- Pbb-AGal_019: 80,086
+
+```
+
+
+</details>
+
 
 </details>
 

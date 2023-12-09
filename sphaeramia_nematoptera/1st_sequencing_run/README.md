@@ -308,4 +308,9 @@ sbatch run_GenErode.sbatch
 
 I created another folder: GenErode_Sne_test to see whether we can use the Chromosome-level assembly of Sphaeramia orbicularis as the reference genome to get GERP scores.
 
-Both are running on Wahab as of 6/28/2023
+Unfortunately, after running it, GenErode still took forever (more than 1 month) so we are employing a new method where we will filter the ref genome to remove smaller scaffolds prior to using Gen Erode.
+
+First, I created a new filtered ref genome:
+```
+perl /home/e1garcia/shotgun_PIRE/REUs/2022_REU/PSMC/scripts/removesmalls.pl 20000 Sne_scaffolds_allLibs_decontam_R1R2_noIsolate.fasta > reference.denovoSSL.Sne20k.fasta
+```

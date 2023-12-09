@@ -1,5 +1,5 @@
-Looking to launch executable "/opt/conda/bin/bwa-meme_mode2.avx512bw", simd = _mode2.avx512bw
-Launching executable "/opt/conda/bin/bwa-meme_mode2.avx512bw"
+Looking to launch executable "/opt/conda/bin/bwa-meme_mode3.avx512bw", simd = _mode3.avx512bw
+Launching executable "/opt/conda/bin/bwa-meme_mode3.avx512bw"
 -----------------------------
 Executing in AVX512 mode!!
 -----------------------------
@@ -18,13 +18,13 @@ Reading other elements of the index from files reference.ssl.Sne.fasta
 1. Memory pre-allocation for Chaining: 5679.4903 MB
 2. Memory pre-allocation for BSW: 9584.6810 MB
 [M::memoryAllocLearned::MEME] Reading Learned-index models into memory
-[Learned-Config] MODE:2 SEARCH_METHOD: 1 MEM_TRADEOFF:0 EXPONENTIAL_SMEMSEARCH: 1 DEBUG_MODE:0 Num 2nd Models:268435456 PWL Bits Used:28
-[M::memoryAllocLearned::MEME] Loading RMI model and Pac reference file took 20.948 sec
+[Learned-Config] MODE:3 SEARCH_METHOD: 1 MEM_TRADEOFF:1 EXPONENTIAL_SMEMSEARCH: 1 DEBUG_MODE:0 Num 2nd Models:268435456 PWL Bits Used:28
+[M::memoryAllocLearned::MEME] Loading RMI model and Pac reference file took 18.564 sec
 [M::memoryAllocLearned::MEME] Reading suffix array into memory
-[M::memoryAllocLearned::MEME] Loading pos_packed file took 30.702 sec
-[M::memoryAllocLearned::MEME] Generating SA and 64-bit Suffix in memory
-[M::memoryAllocLearned::MEME] Runtime-build-index took 20.585 sec
-3. Memory pre-allocation for BWT: 38314.2282 MB
+[M::memoryAllocLearned::MEME] Loading pos_packed file took 28.061 sec
+[M::memoryAllocLearned::MEME] Generating SA, 64-bit Suffix and ISA in memory
+[M::memoryAllocLearned::MEME] Runtime-build-index took 32.192 sec
+3. Memory pre-allocation for BWT: 15132.1744 MB
 ------------------------------------------
 * Threads used (compute): 40
 * No. of pipeline threads: 2
@@ -63,7 +63,7 @@ Reading other elements of the index from files reference.ssl.Sne.fasta
 [0000][PE] skip orientation RF
 [0000][PE] skip orientation RR
 [0000] 3. Calling kt_for - worker_sam
-	[0000][ M::mem_process_seqs] Processed 3041680 reads in 593.963 CPU sec, 17.834 real sec
+	[0000][ M::mem_process_seqs] Processed 3041680 reads in 553.470 CPU sec, 14.556 real sec
 [0000] Reallocating initial memory allocations!!
 [0000] Calling mem_process_seqs.., task: 1
 [0000] 1. Calling kt_for - worker_bwt
@@ -94,7 +94,7 @@ Reading other elements of the index from files reference.ssl.Sne.fasta
 [0000][PE] skip orientation RF
 [0000][PE] skip orientation RR
 [0000] 3. Calling kt_for - worker_sam
-	[0000][ M::mem_process_seqs] Processed 3041982 reads in 593.501 CPU sec, 17.275 real sec
+	[0000][ M::mem_process_seqs] Processed 3041982 reads in 562.335 CPU sec, 15.053 real sec
 [0000] read_chunk: 400000000, work_chunk_size: 400000150, nseq: 3039746
 	[0000][ M::kt_pipeline] read 3039746 sequences (400000150 bp)...
 [0000] Calling mem_process_seqs.., task: 2
@@ -128,13 +128,13 @@ Reading other elements of the index from files reference.ssl.Sne.fasta
 [0000][PE] skip orientation RF
 [0000][PE] skip orientation RR
 [0000] 3. Calling kt_for - worker_sam
-	[0000][ M::mem_process_seqs] Processed 3039746 reads in 597.967 CPU sec, 18.368 real sec
+	[0000][ M::mem_process_seqs] Processed 3039746 reads in 568.730 CPU sec, 15.054 real sec
 [0000] Reallocating initial memory allocations!!
-[0000] read_chunk: 400000000, work_chunk_size: 323826287, nseq: 2464270
-	[0000][ M::kt_pipeline] read 2464270 sequences (323826287 bp)...
 [0000] Calling mem_process_seqs.., task: 3
 [0000] 1. Calling kt_for - worker_bwt
 [0000] 2. Calling kt_for - worker_aln
+[0000] read_chunk: 400000000, work_chunk_size: 323826287, nseq: 2464270
+	[0000][ M::kt_pipeline] read 2464270 sequences (323826287 bp)...
 [0000] Inferring insert size distribution of PE reads from data, l_pac: 1448878366, n: 3042650
 [0000][PE] # candidate unique pairs for (FF, FR, RF, RR): (49, 1170269, 34, 41)
 [0000][PE] analyzing insert size distribution for orientation FF...
@@ -161,7 +161,7 @@ Reading other elements of the index from files reference.ssl.Sne.fasta
 [0000][PE] skip orientation RF
 [0000][PE] skip orientation RR
 [0000] 3. Calling kt_for - worker_sam
-	[0000][ M::mem_process_seqs] Processed 3042650 reads in 594.177 CPU sec, 18.832 real sec
+	[0000][ M::mem_process_seqs] Processed 3042650 reads in 559.929 CPU sec, 15.096 real sec
 [0000] Calling mem_process_seqs.., task: 4
 [0000] 1. Calling kt_for - worker_bwt
 [0000] read_chunk: 400000000, work_chunk_size: 0, nseq: 0
@@ -192,39 +192,39 @@ Reading other elements of the index from files reference.ssl.Sne.fasta
 [0000][PE] skip orientation RF
 [0000][PE] skip orientation RR
 [0000] 3. Calling kt_for - worker_sam
-	[0000][ M::mem_process_seqs] Processed 2464270 reads in 472.920 CPU sec, 13.144 real sec
+	[0000][ M::mem_process_seqs] Processed 2464270 reads in 452.455 CPU sec, 12.389 real sec
 [0000] read_chunk: 400000000, work_chunk_size: 0, nseq: 0
 [0000] Computation ends..
 No. of OMP threads: 40
-Processor is running @2394.724256 MHz
+Processor is running @2394.723260 MHz
 Runtime profile:
 
-	Time taken for main_mem function: 270.37 sec
+	Time taken for main_mem function: 162.50 sec
 
 	IO times (sec) :
-	Reading IO time (reads) avg: 55.59, (55.59, 55.59)
-	Writing IO time (SAM) avg: 30.68, (30.68, 30.68)
-	Reading IO time (Reference Genome) avg: 1.14, (1.14, 1.14)
-	Index read time avg: 1.81, (1.81, 1.81)
+	Reading IO time (reads) avg: 45.78, (45.78, 45.78)
+	Writing IO time (SAM) avg: 20.07, (20.07, 20.07)
+	Reading IO time (Reference Genome) avg: 1.21, (1.21, 1.21)
+	Index read time avg: 1.85, (1.85, 1.85)
 
 	Overall time (sec) (Excluding Index reading time):
-	PROCESS() (Total compute time + (read + SAM) IO time) : 265.30
-	MEM_PROCESS_SEQ() (Total compute time (Kernel + SAM)), avg: 85.44, (85.44, 85.44)
+	PROCESS() (Total compute time + (read + SAM) IO time) : 157.31
+	MEM_PROCESS_SEQ() (Total compute time (Kernel + SAM)), avg: 72.14, (72.14, 72.14)
 
 	 SAM Processing time (sec):
-	--WORKER_SAM avg: 16.44, (16.44, 16.44)
+	--WORKER_SAM avg: 14.95, (14.95, 14.95)
 
 	Kernels' compute time (sec):
-	Total kernel (smem+sal+bsw) time avg: 67.26, (67.26, 67.26)
+	Total kernel (smem+sal+bsw) time avg: 55.46, (55.46, 55.46)
 		MEM_ALN_CHAIN_FLT avg: 0.00, (0.00, 0.00)
 		MEM_ALN_CHAIN_SEED avg: 0.00, (0.00, 0.00)
 		ERT_SEED_CHAIN avg: 0.00, (0.00, 0.00)
-	LEARNED_SEED_CHAIN avg: 38.28, (38.47, 38.14)
+	LEARNED_SEED_CHAIN avg: 27.50, (27.68, 27.40)
 		SMEM compute avg: 0.00, (0.00, 0.00)
 		SAL compute avg: 0.00, (0.00, 0.00)
 				MEM_SA avg: 0.00, (0.00, 0.00)
 
-		BSW time, avg: 27.36, (27.49, 27.22)
+		BSW time, avg: 26.20, (26.37, 26.09)
 
 Important parameter settings: 
 	BATCH_SIZE: 512

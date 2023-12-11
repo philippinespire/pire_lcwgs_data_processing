@@ -169,6 +169,7 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw
 
 <details> 
 	<summary>QC Results</summary> 
+
 ```
 Potential issues:  
   * % duplication - high duplication in Albatross samples (> 50%)
@@ -205,3 +206,22 @@ cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_1st_trim.sbatch fq_raw fq_fp1
 ```
 - jobID: 2752787
+- job finished successfully
+
+```
+Potential issues:
+  * % duplication -
+    * Alb: 0.70 - 24.20%, Contemp: 2.00 - 6.80%
+  * GC content -
+    * Alb: 40.90 - 53.30%, Contemp: 47.10 - 51.10%
+  * passing filter -
+    * Alb: 39.90 - 96.20%, Contemp: 94.70 - 98.10%
+  * % adapter -
+    * Alb: 60.40 - 97.60%, Contemp: 39.50 - 75.80%
+  * number of reads (passed filter) -
+    * Alb: 0.04 - 164.42 M, Contemp: 1.31 - 26.85 M
+```
+</details>
+
+</details>
+

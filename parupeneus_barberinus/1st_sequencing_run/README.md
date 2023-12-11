@@ -210,18 +210,35 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_1st_trim.sbatc
 
 ```
 Potential issues:
-  * % duplication -
+  * % duplication 
     * Alb: 0.70 - 24.20%, Contemp: 2.00 - 6.80%
-  * GC content -
+  * GC content
     * Alb: 40.90 - 53.30%, Contemp: 47.10 - 51.10%
-  * passing filter -
+  * passing filter - low rate 
     * Alb: 39.90 - 96.20%, Contemp: 94.70 - 98.10%
-  * % adapter -
+  * % adapter
     * Alb: 60.40 - 97.60%, Contemp: 39.50 - 75.80%
-  * number of reads (passed filter) -
+  * number of reads (passed filter) - low reads for Albatross samples
     * Alb: 0.04 - 164.42 M, Contemp: 1.31 - 26.85 M
 ```
 </details>
 
 </details>
 
+<details>
+	<summary>9. Remove Duplicates with Clumpify</summary>
+
+<details>
+        <summary>9a. Remove duplicates</summary>
+
+Run by klabrador on 2023-12-11
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1 fq_fp1_clmp /scratch/klab 20
+```
+
+- jobID: 2765310
+
+
+</details>

@@ -342,4 +342,44 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_2.sbatch fq_fp
 - jobID: 2768064
 - job finished successfully
 
+FastQC Results
 
+```
+Potential issues:
+  * % duplication
+    * Alb: 0.00 - 2.60%, Contemp: 0.10 - 0.80%
+  * GC content
+    * Alb: 40.90 - 54.70%, Contemp: 47.00 - 50.80%
+  * passing filter 
+    * Alb: 96.60 - 98.40%, Contemp: 97.20 - 97.90%
+  * % adapter
+    * Alb: 2.00 - 5.80%, Contemp: 1.50 - 2.80%
+  * number of reads (passed filter) - low reads for Albatross samples
+    * Alb: 0.04 - 111.92 M, Contemp: 1.20 - 23.43 M
+```
+
+</details>
+
+<details>
+        <summary>11. Decontaminate Files</summary>
+
+
+<details>
+	<summary>11a. Run fastq_screen</summary>
+
+Run by klabrador on 2023-12-13
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
+
+bash
+
+fqScrnPATH=/home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash
+indir=fq_fp1_clmp_fp2
+outdir=/scratch/klab/fq_fp1_clmp_fp2_fqscrn
+nodes=20
+
+bash $fqScrnPATH $indir $outdir $nodes
+```
+- jobID: 2769384
+
+</details>

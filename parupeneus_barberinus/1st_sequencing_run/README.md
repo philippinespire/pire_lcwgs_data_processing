@@ -340,4 +340,6 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_2.sbatch fq_fp
 
 ```
 - jobID: 2768064
-- job submitted: 1511955
+- job finished successfully
+
+

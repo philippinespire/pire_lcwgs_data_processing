@@ -105,9 +105,9 @@ Fastqscreen [Report](https://github.com/philippinespire/pire_lcwgs_data_processi
 ```
 Potential issues 
   * one hit, one genome, no ID -
-    * Alb: 91-97.5%, Contemp: 93-95%
+    * Alb: 78-97.5%, Contemp: 93-96%
   * No one hit, one genome to any potential contaminators (bacteria, virus, human, etc) -
-    * Alb: 0.4-1.7%, Contemp: 0.4-0.5%
+    * Alb: 2.5-22%, Contemp: 4-7%
 ```
 </p>
 </details>

@@ -543,15 +543,25 @@ MultiQC output
 Potential Issues
 
 * % duplication
-	* Alb:
-	* Contemp:
+	* Alb: 0.00 - 2.60
+	* Contemp: 0.40 - 1.80
 
-* GC Content 
-	* Alb:
-	* Contemp:
+* % GC Content 
+	* Alb: 39.00 - 52.00
+	* Contemp: 46.00 - 50.00
 
-* Number of reads
-	* Alb:
-	* Contemp:
+* Number of reads (M_seqs)
+	* Alb:  0 - 51.1
+	* Contemp: 0.50 - 10.50
 ```
 
+</details>
+
+<details>
+        <summary>13. Clean up</summary>
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
+mv *out /logs/
+
+```

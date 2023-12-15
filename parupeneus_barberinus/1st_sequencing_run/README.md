@@ -491,6 +491,8 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runMULTIQC.sbatch fq_fp
 
 </details>
 
+</details>
+
 <details>
         <summary>12. Repair FASTQ files</summary>
 

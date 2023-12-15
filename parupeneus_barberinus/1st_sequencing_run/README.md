@@ -381,5 +381,125 @@ nodes=20
 bash $fqScrnPATH $indir $outdir $nodes
 ```
 - jobID: 2769384
+- job finished; check for errors.
 
 </details>
+
+<details>
+        <summary>11b. Check for errors</summary>
+
+Run by klabrador on 2023-12-14
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
+
+bash
+outdir=/scratch/klab/fq_fp1_clmp_fp2_fqscrn
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/validateFQ.sbatch $outdir "*filter.fastq.gz"
+
+less -S $outdir/fqValidationReport.txt file
+# All 160 files were tagged as "OK" based on the validation report.
+
+```
+- jobID: 2772246
+- job finished successfully
+
+Confirm that all files were successfully completed (2023-12-15)
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
+
+# Check that all 5 files were created for each *fq.gz file
+
+bash
+indir=fq_fp1_clmp_fp2
+outdir=/scratch/klab/fq_fp1_clmp_fp2_fqscrn
+
+ls $outdir/*r1.tagged.fastq.gz | wc -l
+ls $outdir/*r2.tagged.fastq.gz | wc -l
+ls $outdir/*r1.tagged_filter.fastq.gz | wc -l
+ls $outdir/*r2.tagged_filter.fastq.gz | wc -l 
+ls $outdir/*r1_screen.txt | wc -l
+ls $outdir/*r2_screen.txt | wc -l
+ls $outdir/*r1_screen.png | wc -l
+ls $outdir/*r2_screen.png | wc -l
+ls $outdir/*r1_screen.html | wc -l
+ls $outdir/*r2_screen.html | wc -l
+### All counts = 80
+
+# for each, you should have the same number as the number of input files (number of fq.gz files)
+ls $indir/*r1.fq.gz | wc -l
+ls $indir/*r2.fq.gz | wc -l
+### All counts = 80
+
+#you should also check for errors in the *out files:
+#this will return any out files that had a problem
+
+#do all out files at once
+grep 'error' slurm-fqscrn.*out
+grep 'No reads in' slurm-fqscrn.*out
+grep 'FATAL' slurm-fqscrn.*out   # unknown userid is from a bad node, use sacct to find node id and report to your PI who will report to the hpc administrator
+### No keyword hit. All's good.
+
+# Check for temp files
+ls $outdir/*temp*
+### No temp files found
+```
+
+</details>
+
+<details>
+	<summary>11c. Diagnose errors</summary>
+No error found.
+
+</details>
+
+<details>
+        <summary>11d. Rerun files that failed</summary>
+No files to rerun.
+
+</details>
+
+<details>
+        <summary>11e. Move output files</summary>
+
+Run by klabrador on 2023-12-15
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
+outdir=/scratch/klab/fq_fp1_clmp_fp2_fqscrn
+fqscrndir=fq_fp1_clmp_fp2_fqscrn
+screen mv $outdir $fqscrndir
+# to leave screen: ctrl-a d  
+
+
+```
+</details>
+
+
+<details>
+        <summary>11f. Run MultiQC</summary>
+
+Run by klabrador on 2023-12-15
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runMULTIQC.sbatch fq_fp1_clmp_fp2_fqscrn fastq_screen_report
+```
+- jobID: 2774130
+
+
+</details>
+
+<details>
+        <summary>12. Repair FASTQ files</summary>
+
+Run by klabrador on 2023-12-15
+
+```
+cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
+sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runREPAIR.sbatch fq_fp1_clmp_fp2_fqscrn fq_fp1_clmp_fp2_fqscrn_rprd 8
+```
+- jobID: 2774132
+
+

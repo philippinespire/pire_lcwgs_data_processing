@@ -115,14 +115,14 @@ Potential issues
 <details><summary><i>Revewied Fastqscreen repaired files</i></summary>
 <p>
 
-MultiQC [Report]()
+MultiQC [Report](https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/dascyllus_aruanus/2nd_sequencing_run/fq_fp1_clmp_fp2_fqscrn_rprd/fqc_rprd_report.html)
 
 ```
 Potential issues:
- * % duplication - wide range of duplication for Albatross
-   Alb: -%, Contemp: 1.2-8.3%%
+ * % duplication - 
+   Alb: 0.7-21.5% (only one had 21.5, the rest are only up to 7%), Contemp: 0.7-14.5%
  * GC content -
-   Alb: -%, Contemp: 40-43%
+   Alb: 37-48%, Contemp: 45-48%
  * number of reads -
-   Alb: - M, Contemp: 1.4-45 M
+   Alb: - 0.5-71.7 M (wide range), Contemp: 0.3-131.4 M
 ```

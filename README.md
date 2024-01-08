@@ -184,7 +184,7 @@ coming soon!
 
 ## 8. Use PCAngsd to Visualize Your Data
 
- [see notes on using angsd and related program on ODU hpcs](angsd_on_wahab_turing.md)
+[see notes on using angsd and related program on ODU hpcs](angsd_on_wahab_turing.md)
 
 Coming soon!
 
@@ -196,9 +196,5 @@ Coming soon!
 
 </p>
 </details>
-
-
-<details><summary>Which HPC Are You Using?</summary>
-<p>
 
 ---

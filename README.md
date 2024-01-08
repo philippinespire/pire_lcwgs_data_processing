@@ -113,7 +113,7 @@ cp locationofrefgenome .
 </details>
 
 
-<details><summary>Which HPC Are You Using?</summary>
+<details><summary>4. Map your reads to your reference genome</summary>
 <p>
 
 ## 4. Map your reads to your reference genome
@@ -131,7 +131,7 @@ sbatch ./scripts/mkBAMlcwgs.sbatch "./fq_fp1_clmp_fp2b_fqscrn_rprd/*.fq.gz" ./GC
 </details>
 
 
-<details><summary>Which HPC Are You Using?</summary>
+<details><summary>5. Filter the binary alignment maps</summary>
 <p>
 
 ## 5. Filter the binary alignment maps
@@ -149,7 +149,7 @@ sbatch ../scripts/fltrBAMwgs.sbatch mkBAM
 </details>
 
 
-<details><summary>Which HPC Are You Using?</summary>
+<details><summary>6. Summarize Read Mapping Performance</summary>
 <p>
 
 ## 6. Summarize Read Mapping Performance
@@ -166,7 +166,7 @@ coming soon!
 </details>
 
 
-<details><summary>Which HPC Are You Using?</summary>
+<details><summary>7. Make a Beagle File with Angsd</summary>
 <p>
 
 ## 7. Make a Beagle File with Angsd
@@ -179,7 +179,7 @@ coming soon!
 </details>
 
 
-<details><summary>Which HPC Are You Using?</summary>
+<details><summary>8. Use PCAngsd to Visualize Your Data</summary>
 <p>
 
 ## 8. Use PCAngsd to Visualize Your Data

@@ -1,4 +1,4 @@
-# *Ostorhinchus chrysopomus* lcWGS, test lane
+# *Spratelloides gracilis* lcWGS, test lane
 ### Kevin Labrador
 #
 
@@ -30,7 +30,7 @@ git clone https://github.com/philippinespire/pire_lcwgs_data_processing.git
 
 ```bash
 cd /home/klab/PIRE/pire_lcwgs_data_processing
-mkdir -p parupeneus_barberinus/1st_sequencing_run/
+mkdir -p spratelloides_gracilis/1st_sequencing_run/
 ```
 
 - Go to the assigned working directory and create the following subdirs:
@@ -43,14 +43,14 @@ mkdir fq_raw fq_fp1 fq_fp1_clmp fq_fp1_clmp_fp2 fq_fp1_clmp_fp2_fqscrn fq_fp1_cl
 <details>
         <summary>1. Retrieve data from ODU HPC Archive </summary>
 
-- dataset location at /archive/carpenterlab/pire/downloads/ostorhinchus_chrysopomus/1st_sequencing_run/fq_raw
+- dataset location at /archive/carpenterlab/pire/downloads/spratelloides_gracilis/1st_sequencing_run/fq_raw
 
 ```bash
 cd ./fq_raw
-screen rsync -vr /archive/carpenterlab/pire/downloads/ostorhinchus_chrysopomus/1st_sequencing_run/fq_raw/ .
+screen rsync -vr /archive/carpenterlab/pire/downloads/spratelloides_gracilis/1st_sequencing_run/fq_raw/ .
 ```
 
-##### To be processed
+####### To be processed
 All files synced successfully. File sizes were equal between source and destination directories.
 - N = 81 samples * 2 reads = 162 fq.gz files
 

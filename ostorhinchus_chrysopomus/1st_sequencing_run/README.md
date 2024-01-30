@@ -50,9 +50,8 @@ cd ./fq_raw
 screen rsync -vr /archive/carpenterlab/pire/downloads/ostorhinchus_chrysopomus/1st_sequencing_run/fq_raw/ .
 ```
 
-##### To be processed
 All files synced successfully. File sizes were equal between source and destination directories.
-- N = 81 samples * 2 reads = 162 fq.gz files
+- N = 197 samples * 2 reads = 394 fq.gz files
 
 
 **Check download:**

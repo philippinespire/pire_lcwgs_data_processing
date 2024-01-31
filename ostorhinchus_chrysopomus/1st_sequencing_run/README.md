@@ -127,7 +127,6 @@ cat *.tsv | sort | uniq | wc -l
 - Not done. 
 - There is a back-up of the exact same files at ODU HPC Archive. Check with PIRE if they still need a backup on the rc_carpenterlab_ngs directory
 
-```
 
 </details>
 

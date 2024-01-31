@@ -212,7 +212,7 @@ cd /home/klab/PIRE/pire_lcwgs_data_processing/ostorhinchus_chrysopomus/1st_seque
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_1st_trim.sbatch fq_raw fq_fp1
 ```
 - jobID: 2917106
-- job finished ...
+- job finished successfully
 
 ```
 Potential issues:

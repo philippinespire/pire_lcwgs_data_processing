@@ -209,7 +209,7 @@ cd /home/klab/PIRE/pire_lcwgs_data_processing/spratelloides_gracilis/1st_sequenc
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_1st_trim.sbatch fq_raw fq_fp1
 ```
 - jobID: 2917138
-- job to be updated
+- job successfully finished
 
 ```
 Potential issues:

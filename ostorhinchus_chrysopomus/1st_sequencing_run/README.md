@@ -38,6 +38,10 @@ mkdir -p ostorhinchus_chrysopomus/1st_sequencing_run/
 ```bash
 mkdir fq_raw fq_fp1 fq_fp1_clmp fq_fp1_clmp_fp2 fq_fp1_clmp_fp2_fqscrn fq_fp1_clmp_fp2_fqscrn_rprd
 ```
+
+If the repositories have been cloned previously, just use `git pull` to update your local repo.
+
+
 </details>
 
 <details>
@@ -174,27 +178,19 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw
 - job finished successfully
 
 <details> 
-	<summary>QC Results (to be updated)</summary> 
+	<summary>QC Results</summary> 
 
 ```
 Potential issues:  
-  * % duplication - high duplication in Albatross samples (> 50%)
-	* Alb: 4.80 - 65.30%, Contemp: 3.20 - 10.30%
-  * GC content - high GC content in Albtross samples 
-	* Alb: 48 - 80%, Contemp: 48 - 53%
-  * number of reads - some samples have read counts < 100k
-	* Alb: 0.00 - 93.9 M, Contemp: 0.7 - 13.8 M
-	* Samples with raw read count < 100k:
-		- Pbb_AGal_013: 20,100
-		- Pbb-AGal_014: 46,332
-		- Pbb-AGal_015: 45,668
-		- Pbb-AGal_016: 60,625
-		- Pbb-AGal_017: 94,464
-		- Pbb-AGal_018: 20,739
-		- Pbb-AGal_019: 80,086
+  * % duplication
+	* Alb: 2.60 - 29.40%, Contemp: 2.40 - 17.00%
+  * GC content 
+	* Alb: 40 - 55%, Contemp: 39 - 45%
+	* Albatross Och samples have bimodal GC content.
+  * number of reads - 90 libraries have read counts < 100k
+	* Alb: 0 - 5.8 M, Contemp: 0 - 6.8 M
 
 ```
-
 
 </details>
 
@@ -217,15 +213,15 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_1st_trim.sbatc
 ```
 Potential issues:
   * % duplication 
-    * Alb: 0.70 - 24.20%, Contemp: 2.00 - 6.80%
+    * Alb: 0.70 - 28.50%, Contemp: 1.40 - 11.30%
   * GC content
-    * Alb: 40.90 - 53.30%, Contemp: 47.10 - 51.10%
-  * passing filter - low rate 
-    * Alb: 39.90 - 96.20%, Contemp: 94.70 - 98.10%
+    * Alb: 37.70 - 55.50%, Contemp: 38.70 - 43.50%
+  * passing filter 
+    * Alb: 88.40 - 99.10%, Contemp: 89.30 - 98.70%
   * % adapter
-    * Alb: 60.40 - 97.60%, Contemp: 39.50 - 75.80%
-  * number of reads (passed filter) - low reads for Albatross samples
-    * Alb: 0.04 - 164.42 M, Contemp: 1.31 - 26.85 M
+    * Alb: 23.60 - 94.50%, Contemp: 7.40 - 88.50%
+  * number of reads (passed filter)
+    * Alb: 0.1 - 5.76 M, Contemp: 0 - 6.77 M
 ```
 </details>
 
@@ -237,18 +233,17 @@ Potential issues:
 <details>
         <summary>9a/b. Remove duplicates</summary>
 
-Run by klabrador on 2023-12-11
+Run by klabrador on 2024-01-31
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
+cd /home/klab/PIRE/pire_lcwgs_data_processing/ostorhinchus_chrysopomus/1st_sequencing_run
 bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1 fq_fp1_clmp /scratch/klab 20
 ```
 
-- jobID: 2765310
-- job got stuck; review files for rerun
-	- Pbb-AGal_023 (r1/r2)
-	- Pbb-AGal_024 (r1/r2)
-	- Pbb-AGal_033 (r1/r2)
+- jobID: 2917146
+
+#### TO BE UPDATED
+- job status: 
 
 
 Rerun stragglers

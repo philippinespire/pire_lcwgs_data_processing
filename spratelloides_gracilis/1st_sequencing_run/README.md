@@ -167,7 +167,6 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw
 
 ```
 - jobID = 2917136
-
 - job finished successfully
 
 <details> 
@@ -209,10 +208,10 @@ cd /home/klab/PIRE/pire_lcwgs_data_processing/spratelloides_gracilis/1st_sequenc
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_1st_trim.sbatch fq_raw fq_fp1
 ```
 - jobID: 2917138
-- job successfully finished
+- job finished successfully
 
 ```
-Potential issues:
+Potential issues (to be updated):
   * % duplication 
     * Alb: 0.70 - 24.20%, Contemp: 2.00 - 6.80%
   * GC content
@@ -234,10 +233,10 @@ Potential issues:
 <details>
         <summary>9a/b. Remove duplicates</summary>
 
-Run by klabrador on 2023-12-11
+Run by klabrador on (Run this after finishing Och; you don't want to fill your stratch directory and then deal with disk space issues).
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
+cd /home/klab/PIRE/pire_lcwgs_data_processing/spratelloides_gracilis/1st_sequencing_run
 bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1 fq_fp1_clmp /scratch/klab 20
 ```
 

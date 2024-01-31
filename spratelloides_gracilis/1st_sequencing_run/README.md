@@ -40,6 +40,8 @@ mkdir fq_raw fq_fp1 fq_fp1_clmp fq_fp1_clmp_fp2 fq_fp1_clmp_fp2_fqscrn fq_fp1_cl
 ```
 </details>
 
+If the repositories have been cloned previously, just use `git pull` to update your local repo.
+
 <details>
         <summary>1. Retrieve data from ODU HPC Archive </summary>
 

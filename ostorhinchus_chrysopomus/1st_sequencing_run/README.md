@@ -171,11 +171,10 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_raw
 
 ```
 - jobID = 2917090
-
 - job finished successfully
 
 <details> 
-	<summary>QC Results</summary> 
+	<summary>QC Results (to be updated)</summary> 
 
 ```
 Potential issues:  
@@ -206,14 +205,14 @@ Potential issues:
 <details>
         <summary>8. First trim</summary>
 
-Run by klabrador on 2023-12-08
+Run by klabrador on 2024-01-31
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
+cd /home/klab/PIRE/pire_lcwgs_data_processing/ostorhinchus_chrysopomus/1st_sequencing_run
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_1st_trim.sbatch fq_raw fq_fp1
 ```
-- jobID: 2752787
-- job finished successfully
+- jobID: 2917106
+- job finished ...
 
 ```
 Potential issues:

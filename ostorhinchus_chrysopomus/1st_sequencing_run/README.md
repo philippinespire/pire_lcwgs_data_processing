@@ -320,7 +320,7 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_2.sbatch fq_fp
 - jobID: 2919539
 - job finished successfully
 
-FastQC Results
+FastQC Results (TO BE UPDATED)
 
 ```
 Potential issues:
@@ -345,11 +345,11 @@ Potential issues:
 <details>
 	<summary>11a. Run fastq_screen</summary>
 
-Run by klabrador on 2023-12-13
+Run by klabrador on 2024-02-01
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
+cd /home/klab/PIRE/pire_lcwgs_data_processing/ostorhinchus_chrysopomus/1st_sequencing_run
 
-bash
+bash # only run when out of bash
 
 fqScrnPATH=/home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFQSCRN_6.bash
 indir=fq_fp1_clmp_fp2
@@ -358,11 +358,14 @@ nodes=20
 
 bash $fqScrnPATH $indir $outdir $nodes
 ```
-- jobID: 2769384
-- job finished; check for errors.
+- jobID: 2919588
+- job: TO BE UPDATED!
 
 </details>
 
+
+
+######
 <details>
         <summary>11b. Check for errors</summary>
 

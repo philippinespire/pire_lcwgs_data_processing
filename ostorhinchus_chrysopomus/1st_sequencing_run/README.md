@@ -231,7 +231,7 @@ Potential issues:
 	<summary>9. Remove Duplicates with Clumpify</summary>
 
 <details>
-        <summary>9a/b. Remove duplicates</summary>
+        <summary>9a. Remove duplicates</summary>
 
 Run by klabrador on 2024-01-31
 
@@ -241,59 +241,34 @@ bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.ba
 ```
 
 - jobID: 2917146
+- job finished succesfully
+</details>
 
-#### TO BE UPDATED
-- job status: 
+<details>
+        <summary>9b. Addressing memory errors</summary>
 
-
-Rerun stragglers
-```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
-
-# Create a directory for stragglers.
-mkdir fq_fp1_stragglers
-
-# Create a text file containing the names of stragglers, and then move them using a custom bash script.
-bash move_files.bash fq_fp1 fq_fp1_stragglers files2move.txt
-
-# Once all stragglers were transferred to the correct directory, rerun clumpify.
-bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runCLUMPIFY_r1r2_array.bash fq_fp1_stragglers fq_fp1_clmp /scratch/klab 2
-```
-- jobID: 2767928
-- job finished successfully
-
-Return stragglers to the fq_fp1 directory.
-```
-mv fq_fp1_stragglers/*fq.gz fq_fp1
-
-# Delete temporary stragglers directory
-rm -r fq_fp1_stragglers
-```
-
+- No memory errors to address.
 </details>
 
 <details>
         <summary>9c. Check duplicate removal success</summary>
 
-Run by klabrador on 2023-12-12
+Run by klabrador on 2024-02-01
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
+cd /home/klab/PIRE/pire_lcwgs_data_processing/ostorhinchus_chrysopomus/1st_sequencing_run
 
 salloc
 enable_lmod
-module load container_env mapdamage2
 
-crun R
-install.packages ("tidyverse")
-# I cannot install tidyverse within the container. The following error is returned: 
+# Update the container from mapdamage2 to R/4.2
+module load container_env R/4.2
 
-## Warning in dir.create(lockdir, recursive = TRUE) :
-## cannot create dir '/opt/mapdamage2/lib/R/library/00LOCK-fastmap', reason 'Function not implemented'
-## Installation of dependencies had non-zero exit status.
+# Modify R script to change the pattern search from "clmp_" to "clmp_r", then run:
+crun R < /home/klab/PIRE/pire_fq_gz_processing/checkClumpify_EG.R --no-save
 
-# This goes on for other dependencies.
 ```
+- Clumpify successfully worked on all samples!
 
 </details>
 
@@ -301,12 +276,13 @@ install.packages ("tidyverse")
 <details>
         <summary>9d. Clean the scratch drive</summary>
 
-Run by klabrador on 2023-12-12
+Run by klabrador on 2024-02-01
 
 ```
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/cleanSCRATCH.sbatch /scratch/klab "*clumpify*temp*"
 ```
-- jobID: 2768052
+
+- jobID: 2919534
 - job finished successfully
 
 </details>
@@ -314,14 +290,15 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/cleanSCRATCH.sbatch /sc
 <details>
         <summary>9e. Generate metadata on deduplicated FASTQ files</summary>
 
-Run by klabrador on 2023-12-12
+Run by klabrador on 2024-02-01
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
+cd /home/klab/PIRE/pire_lcwgs_data_processing/ostorhinchus_chrysopomus/1st_sequencing_run
 
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1_clmp" "fqc_clmp_report"  "fq.gz"
 ```
-- jobID: 2768058
+- jobID: 2919538
+- job status: TO BE UPDATED
 
 </details>
 
@@ -331,16 +308,16 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1
 <details>
         <summary>10. Second Trim</summary>
 
-Run by klabrador on 2023-05-01
+Run by klabrador on 2024-02-01
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
+cd /home/klab/PIRE/pire_lcwgs_data_processing/ostorhinchus_chrysopomus/1st_sequencing_run
 
 # Run cssl script for lcwgs.
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_2.sbatch fq_fp1_clmp fq_fp1_clmp_fp2 33
 
 ```
-- jobID: 2768064
+- jobID: 2919539
 - job finished successfully
 
 FastQC Results

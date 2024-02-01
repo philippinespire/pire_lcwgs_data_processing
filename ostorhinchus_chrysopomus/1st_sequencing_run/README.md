@@ -298,7 +298,7 @@ cd /home/klab/PIRE/pire_lcwgs_data_processing/ostorhinchus_chrysopomus/1st_seque
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "fq_fp1_clmp" "fqc_clmp_report"  "fq.gz"
 ```
 - jobID: 2919538
-- job status: TO BE UPDATED
+- job finished successfully
 
 </details>
 
@@ -320,20 +320,20 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runFASTP_2.sbatch fq_fp
 - jobID: 2919539
 - job finished successfully
 
-FastQC Results (TO BE UPDATED)
+FastQC Results
 
 ```
 Potential issues:
   * % duplication
-    * Alb: 0.00 - 2.60%, Contemp: 0.10 - 0.80%
+    * Alb: 0.00 - 5.90%, Contemp: 0.20 - 2.90%
   * GC content
-    * Alb: 40.90 - 54.70%, Contemp: 47.00 - 50.80%
+    * Alb: 37.60 - 54.90%, Contemp: 38.70 - 43.40%
   * passing filter 
-    * Alb: 96.60 - 98.40%, Contemp: 97.20 - 97.90%
+    * Alb: 96.90 - 99.40%, Contemp: 97.70 - 99.40%
   * % adapter
-    * Alb: 2.00 - 5.80%, Contemp: 1.50 - 2.80%
-  * number of reads (passed filter) - low reads for Albatross samples
-    * Alb: 0.04 - 111.92 M, Contemp: 1.20 - 23.43 M
+    * Alb: 1.00 - 3.90%, Contemp: 0.40 - 3.50%
+  * number of reads (passed filter) 
+    * Alb: 0.00 - 9.57 M, Contemp: 0.01 - 11.65 M
 ```
 
 </details>

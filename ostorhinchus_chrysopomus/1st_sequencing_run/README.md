@@ -375,18 +375,17 @@ bash
 outdir=/scratch/klab/fq_fp1_clmp_fp2_fqscrn
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/validateFQ.sbatch $outdir "*filter.fastq.gz"
 
-less -S $outdir/fqValidationReport.txt file
-# All 160 files were tagged as "OK" based on the validation report.
+less -S $outdir/fqValidationReport.txt file | grep "OK" | wc -l
+# All 392 files were tagged as "OK" based on the validation report.
 
 ```
 - jobID: 2925015
 - job finished successfully
 
-Confirm that all files were successfully completed (2023-12-15)
+Confirm that all files were successfully completed (2024-02-04)
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
-
+cd /home/klab/PIRE/pire_lcwgs_data_processing/ostorhinchus_chrysopomus/1st_sequencing_run
 # Check that all 5 files were created for each *fq.gz file
 
 bash
@@ -403,12 +402,12 @@ ls $outdir/*r1_screen.png | wc -l
 ls $outdir/*r2_screen.png | wc -l
 ls $outdir/*r1_screen.html | wc -l
 ls $outdir/*r2_screen.html | wc -l
-### All counts = 80
+### All counts = 196
 
 # for each, you should have the same number as the number of input files (number of fq.gz files)
 ls $indir/*r1.fq.gz | wc -l
 ls $indir/*r2.fq.gz | wc -l
-### All counts = 80
+### All counts = 196
 
 #you should also check for errors in the *out files:
 #this will return any out files that had a problem
@@ -441,13 +440,15 @@ No files to rerun.
 <details>
         <summary>11e. Move output files</summary>
 
-Run by klabrador on 2023-12-15
+Run by klabrador on 2024-02-04
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
+cd /home/klab/PIRE/pire_lcwgs_data_processing/ostorhinchus_chrysopomus/1st_sequencing_run
 outdir=/scratch/klab/fq_fp1_clmp_fp2_fqscrn
 fqscrndir=fq_fp1_clmp_fp2_fqscrn
 screen mv $outdir $fqscrndir
+
+# screen sockets: 3391498, 894455
 # to leave screen: ctrl-a d  
 
 

@@ -448,7 +448,7 @@ outdir=/scratch/klab/fq_fp1_clmp_fp2_fqscrn
 fqscrndir=fq_fp1_clmp_fp2_fqscrn
 screen mv $outdir $fqscrndir
 
-# screen sockets: 3391498, 894455
+# screen sockets: 3391498
 # to leave screen: ctrl-a d  
 
 
@@ -459,16 +459,16 @@ screen mv $outdir $fqscrndir
 <details>
         <summary>11f. Run MultiQC</summary>
 
-Run by klabrador on 2023-12-15
+Run by klabrador on 2024-02-04
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
+cd /home/klab/PIRE/pire_lcwgs_data_processing/ostorhinchus_chrysopomus/1st_sequencing_run
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runMULTIQC.sbatch fq_fp1_clmp_fp2_fqscrn fastq_screen_report
 ```
-- jobID: 2774130
-- job finished successfully
+- jobID: 2925150
+- job status to be updated
 
-MultiQC output
+MultiQC output (To be updated)
 ```
 Potential Issues:
 
@@ -489,14 +489,14 @@ Potential Issues:
 <details>
         <summary>12. Repair FASTQ files</summary>
 
-Run by klabrador on 2023-12-15
+Run by klabrador on 2024-02-04
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
+cd /home/klab/PIRE/pire_lcwgs_data_processing/ostorhinchus_chrysopomus/1st_sequencing_run
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runREPAIR.sbatch fq_fp1_clmp_fp2_fqscrn fq_fp1_clmp_fp2_fqscrn_rprd 8
 ```
-- jobID: 2774132
-- job finished
+- jobID: 2925151
+- job status to be updated
 
 Confirm if paired end *fq.gz files are complete and formatted correctly
 ```

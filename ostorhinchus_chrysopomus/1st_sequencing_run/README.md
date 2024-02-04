@@ -359,20 +359,17 @@ nodes=20
 bash $fqScrnPATH $indir $outdir $nodes
 ```
 - jobID: 2919588
-- job: TO BE UPDATED!
+- job finished successfully
 
 </details>
 
-
-
-######
 <details>
         <summary>11b. Check for errors</summary>
 
-Run by klabrador on 2023-12-14
+Run by klabrador on 2024-02-04
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
+cd /home/klab/PIRE/pire_lcwgs_data_processing/ostorhinchus_chrysopomus/1st_sequencing_run
 
 bash
 outdir=/scratch/klab/fq_fp1_clmp_fp2_fqscrn
@@ -382,7 +379,7 @@ less -S $outdir/fqValidationReport.txt file
 # All 160 files were tagged as "OK" based on the validation report.
 
 ```
-- jobID: 2772246
+- jobID: 2925015
 - job finished successfully
 
 Confirm that all files were successfully completed (2023-12-15)

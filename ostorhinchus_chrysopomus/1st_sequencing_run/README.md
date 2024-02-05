@@ -506,8 +506,8 @@ fqPATTERN="*fq.gz"
 sbatch $SCRIPT $DIR $fqPATTERN
 ```
 - jobID: 2925373
-- job status to be updated
-- all files are valid
+- job finished successfully
+- no errors reported
 
 Run Multi_FASTQC.sh
 ```
@@ -517,23 +517,23 @@ sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_f
 
 ```
 - jobID: 2925374
-- job status to be updated
+- job finished successfully
 
-MultiQC output
+MultiQC output (To be updated)
 ```
 Potential Issues
 
 * % duplication
-	* Alb: 0.00 - 2.60
-	* Contemp: 0.40 - 1.80
+	* Alb: 
+	* Contemp: 
 
 * % GC Content 
-	* Alb: 39.00 - 52.00
-	* Contemp: 46.00 - 50.00
+	* Alb: 
+	* Contemp: 
 
 * Number of reads (M_seqs)
-	* Alb:  0 - 51.1
-	* Contemp: 0.50 - 10.50
+	* Alb:  
+	* Contemp: 
 ```
 
 </details>
@@ -542,7 +542,8 @@ Potential Issues
         <summary>13. Clean up</summary>
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
-mv *out /logs/
+cd /home/klab/PIRE/pire_lcwgs_data_processing/ostorhinchus_chrysopomus/1st_sequencing_run
+mkdir logs
+mv *out logs/
 
 ```

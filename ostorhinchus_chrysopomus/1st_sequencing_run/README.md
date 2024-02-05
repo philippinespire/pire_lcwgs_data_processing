@@ -466,7 +466,7 @@ cd /home/klab/PIRE/pire_lcwgs_data_processing/ostorhinchus_chrysopomus/1st_seque
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runMULTIQC.sbatch fq_fp1_clmp_fp2_fqscrn fastq_screen_report
 ```
 - jobID: 2925150
-- job status to be updated
+- job finished successfully
 
 MultiQC output (To be updated)
 ```
@@ -496,7 +496,7 @@ cd /home/klab/PIRE/pire_lcwgs_data_processing/ostorhinchus_chrysopomus/1st_seque
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runREPAIR.sbatch fq_fp1_clmp_fp2_fqscrn fq_fp1_clmp_fp2_fqscrn_rprd 8
 ```
 - jobID: 2925151
-- job status to be updated
+- job finished successfully
 
 Confirm if paired end *fq.gz files are complete and formatted correctly
 ```
@@ -505,17 +505,19 @@ DIR=fq_fp1_clmp_fp2_fqscrn_rprd
 fqPATTERN="*fq.gz"
 sbatch $SCRIPT $DIR $fqPATTERN
 ```
-- jobID: 2774193
-- job finished
+- jobID: 2925373
+- job status to be updated
 - all files are valid
 
 Run Multi_FASTQC.sh
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
+cd /home/klab/PIRE/pire_lcwgs_data_processing/ostorhinchus_chrysopomus/1st_sequencing_run
 
 sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_fp1_clmp_fp2_fqscrn_rprd" "fqc_rprd_report" "fq.gz"
 
 ```
+- jobID: 2925374
+- job status to be updated
 
 MultiQC output
 ```

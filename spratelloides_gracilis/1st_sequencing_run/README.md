@@ -355,27 +355,10 @@ screen mv $outdir $fqscrndir
 <details>
         <summary>11f. Run MultiQC</summary>
 
-Run by klabrador on 2023-12-15
+Run by lweeks on 2024-02-12
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
-sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runMULTIQC.sbatch fq_fp1_clmp_fp2_fqscrn fastq_screen_report
-```
-- jobID: 2774130
-- job finished successfully
-
-MultiQC output
-```
-Potential Issues:
-
-* one hit, one genome, no ID
-	* Alb:
-	* Contemp:
-
-* no one hit, one genome to any potential contaminators (bacteria, virus, human, etc)
-	* Alb:
-	* Contemp:	
-
+sbatch /../../../pire_fq_gz_processing/runMULTIQC.sbatch fq_fp1_clmp_fp2_fqscrn fastq_screen_report
 ```
 
 </details>
@@ -385,50 +368,18 @@ Potential Issues:
 <details>
         <summary>12. Repair FASTQ files</summary>
 
-Run by klabrador on 2023-12-15
+Run by lweeks on 2024-02-12
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
-sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/runREPAIR.sbatch fq_fp1_clmp_fp2_fqscrn fq_fp1_clmp_fp2_fqscrn_rprd 8
+sbatch ../../../pire_fq_gz_processing/runREPAIR.sbatch fq_fp1_clmp_fp2_fqscrn fq_fp1_clmp_fp2_fqscrn_rprd 5
 ```
-- jobID: 2774132
-- job finished
-
-Confirm if paired end *fq.gz files are complete and formatted correctly
-```
-SCRIPT=/home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/validateFQPE.sbatch
-DIR=fq_fp1_clmp_fp2_fqscrn_rprd
-fqPATTERN="*fq.gz"
-sbatch $SCRIPT $DIR $fqPATTERN
-```
-- jobID: 2774193
-- job finished
-- all files are valid
-
 Run Multi_FASTQC.sh
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
 
-sbatch /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/Multi_FASTQC.sh "./fq_fp1_clmp_fp2_fqscrn_rprd" "fqc_rprd_report" "fq.gz"
+sbatch ../../../pire_fq_gz_processing/Multi_FASTQC.sh "./fq_fp1_clmp_fp2_fqscrn_rprd" "fqc_rprd_report" "fq.gz"
 
 ```
 
-MultiQC output
-```
-Potential Issues
-
-* % duplication
-	* Alb: 0.00 - 2.60
-	* Contemp: 0.40 - 1.80
-
-* % GC Content 
-	* Alb: 39.00 - 52.00
-	* Contemp: 46.00 - 50.00
-
-* Number of reads (M_seqs)
-	* Alb:  0 - 51.1
-	* Contemp: 0.50 - 10.50
-```
 
 </details>
 
@@ -436,7 +387,6 @@ Potential Issues
         <summary>13. Clean up</summary>
 
 ```
-cd /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/parupeneus_barberinus/1st_sequencing_run
 mv *out /logs/
 
 ```

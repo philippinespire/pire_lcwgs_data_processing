@@ -118,13 +118,28 @@ cp locationofrefgenome .
 
 ## 4. Map your reads to your reference genome
 
-this will take the fq.gz files you specify and map them to the reference genome that you specify
+Currently the preferred method is to use dDocent.
 
 ```bash
-#sbatch mkBAMwgs.sbatch InFilePattern RefGenomeFile OutDir
-sbatch ./scripts/mkBAMlcwgs.sbatch "./fq_fp1_clmp_fp2b_fqscrn_rprd/*.fq.gz" ./GCF_902148845.1_fSalaFa1.1_chr1-23-mtgen.fna.gz ./mkBAM
-```
+git clone https://github.com/cbirdlab/dDocentHPC
 
+mkdir mkBAM_ddocent
+
+#copy fq.gz to mkBAM_ddocent folder
+rsync fq_fp1_clmp_fp2_fqscrn_rprd/*fq.gz mkBAM_ddocent
+
+#copy reference genome to mkBAM_ddocent folder. naming convention: reference.[type: denovoSSL/GenBank].[speciescode].fasta
+#example for Hte
+cp refGenome/Hte_final_best_assembly.fasta mkBAM_ddocent/reference.denovoSSL.Htebest.fasta
+
+cd mkBAM_ddocent
+cp ../dDocentHPC/configs/config.6.lcwgs .
+cp ../dDocentHPC/dDocentHPC.sbatch .
+
+# edit config.6, make sure sbatch pointing to correct bash
+
+sbatch dDocentHPC.sbatch mkBAM config.6.lcwgs
+```
 ---
 
 </p>
@@ -136,11 +151,10 @@ sbatch ./scripts/mkBAMlcwgs.sbatch "./fq_fp1_clmp_fp2b_fqscrn_rprd/*.fq.gz" ./GC
 
 ## 5. Filter the binary alignment maps
 
-The fltrBAM script will remove unmapped reads, secondary and supplementary alignments, reads with mapping q <=30
+Again, use dDocent.
 
 ```bash
-#sbatch fltrBAMwgs.sbatch DirWithBamFiles
-sbatch ../scripts/fltrBAMwgs.sbatch mkBAM
+sbatch dDocentHPC.sbatch fltrBAM config.6.lcwgs
 ```
 
 ---
@@ -154,11 +168,7 @@ sbatch ../scripts/fltrBAMwgs.sbatch mkBAM
 
 ## 6. Summarize Read Mapping Performance
 
-coming soon!
-
-```bash
-
-```
+See the [process_sequencing_metadata](https://github.com/philippinespire/process_sequencing_metadata) repo for instructions.
 
 ---
 

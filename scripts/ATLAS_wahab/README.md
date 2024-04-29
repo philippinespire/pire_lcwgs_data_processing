@@ -33,6 +33,8 @@ gunzip -c GenErode_Sfa_20k/results/gerp/reference.denovoSSL.Sfa20k.ancestral.rat
 
 cd ATLAS_nurecal
 
+# this is a good time to check the number of sites in your gerp*.bed files (`wc -l gerp15.bed` etc)... ATLAS wants something on the order of ~5 million sites total for its recalibration procedure.
+
 # merge adjacent sites into regions using bedtools
 
 module load bedtools

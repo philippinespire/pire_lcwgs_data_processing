@@ -54,9 +54,23 @@ awk -v OFS='\t' '!($2==$3)' < gerp5.merge.bed > gerp5.merge.nosingle.bed
 
 ### Get scripts
 
+```
 cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/ATLAS_wahab/*.sbatch .
 cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/ATLAS_wahab/*.bash .
+```
 
-###
+### Run recalibration
 
-merged.rmdup.merged.realn.bam
+ATLAS has its own recalibration procedure, so you will use the .bam files produced by GenErode before it performs its recalibration ('*merged.rmdup.merged.realn.bam').
+
+Modify the atlas_recal .bash script to reflect the path for the .sbatch script.
+
+Modify the .sbatch script to reflect the number of .bed files you want to use and their names. You can also change the maximum depth - currently set to only use 10 reads maximum per site, which should be sufficient to calculate error.
+
+Create the desired output directory first. 
+
+Run with:
+
+```
+bash atlas_recal_readuntilbeds_array.bash [directory with .bam files] [reference genome location] [output directory]
+```

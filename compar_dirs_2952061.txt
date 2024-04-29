@@ -1,0 +1,21 @@
+Thu Feb 15 01:54:25 PM EST 2024
+Comparing directories dir1 and dir2 using 'md5sum' and 'wc -c'
+dir1 = /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/taeniamia_zosterophora
+dir2 = /archive/carpenterlab/pire/pire_taeniamia_zosterophora_lcwgs
+Some files were found to exist only in /archive/carpenterlab/pire/pire_taeniamia_zosterophora_lcwgs. These have been listed in dir2_only_files_20240215_135613.txt
+For tracking purposes, the name of the output file(s) end with date (yearmonthday) and time (hourminutesecond) stamps in their names.
+Thu Feb 15 01:56:13 PM EST 2024
+
+###########################################3
+
+Comparing directories dir1 and dir2 using 'diff -r -q'
+dir1 = /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/taeniamia_zosterophora
+dir2 = /archive/carpenterlab/pire/pire_taeniamia_zosterophora_lcwgs
+diff will print results in this slurm out files. diff does not print anything If no differences were found
+
+Only in /archive/carpenterlab/pire/pire_taeniamia_zosterophora_lcwgs: .git
+Only in /archive/carpenterlab/pire/pire_taeniamia_zosterophora_lcwgs: .gitignore
+
+diff has finished
+
+Thu Feb 15 02:26:58 PM EST 2024

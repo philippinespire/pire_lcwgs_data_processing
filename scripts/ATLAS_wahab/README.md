@@ -76,3 +76,22 @@ Run with:
 ```
 bash atlas_recal_readuntilbeds_array.bash [directory with .bam files] [reference genome location] [output directory]
 ```
+
+Check the outputs as the files run. Currently, ATLAS can get hung up on some files, particularly high-depth files and contemporary sequencing data. If there is no change in the log for a long time you might want to cancel the job and move on.
+
+
+### Estimate theta
+
+As currently written this will estimate theta using the whole .bam files and also perform downsampling.
+
+Modify the .bash script to reflect the path for the .sbatch script.
+
+Run with:
+
+```
+bash atlas_theta_albrecal_array.bash [directory with recalibrated output files] [output directory]
+```
+
+### Visualize results
+
+R scripts to be added.

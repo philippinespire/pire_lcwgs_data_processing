@@ -69,7 +69,7 @@ Modify the atlas_recal .bash script to reflect the path for the .sbatch script.
 
 Modify the .sbatch script to reflect the number of .bed files you want to use and their names. You can also change the maximum depth - currently set to only use 10 reads maximum per site, which should be sufficient to calculate error.
 
-Create the desired output directory first. 
+Create the desired output directory first and copy the .bed files you made in the previous step into this folder. 
 
 Run with:
 

@@ -10,7 +10,7 @@
 enable_lmod
 module load container_env bwa
 module load container_env samtools
-module load container_env atlas/20240206
+module load container_env atlas/20240503
 export SINGULARITY_BIND=/home/e1garcia
 
 BAMDIR=$1
@@ -31,4 +31,4 @@ cp ${BAMDIR}/${sample_name}.merged.rmdup.merged.realn.bam .
 
 crun.samtools samtools index ${sample_name}.merged.rmdup.merged.realn.bam
 
-crun.atlas atlas --task estimateErrors --bam ${sample_name}.merged.rmdup.merged.realn.bam --fasta ${REFLOC} --bed bed1_nosingle.bed,bed2_nosingle.bed --readUpToDepth 10
+crun.atlas atlas --task estimateErrors --bam ${sample_name}.merged.rmdup.merged.realn.bam --fasta ${REFLOC} --regions bed1_nosingle.bed,bed2_nosingle.bed --readUpToDepth 10

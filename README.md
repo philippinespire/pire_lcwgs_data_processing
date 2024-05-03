@@ -137,6 +137,7 @@ cp ../dDocentHPC/configs/config.6.lcwgs .
 cp ../dDocentHPC/dDocentHPC.sbatch .
 
 # edit config.6, make sure sbatch pointing to correct bash
+# make sure the correct version of the ddocent container (2.9.4) is being loaded by the sbatch file -  can comment/uncomment lines in sbatch to fix if not.
 
 sbatch dDocentHPC.sbatch mkBAM config.6.lcwgs
 ```

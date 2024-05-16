@@ -167,9 +167,13 @@ sbatch dDocentHPC.sbatch fltrBAM config.6.lcwgs
 <details><summary>6. Summarize Read Mapping Performance</summary>
 <p>
 
-## 6. Summarize Read Mapping Performance
+## 6. Summarize Read Mapping Performance / Merge Runs
 
 See the [process_sequencing_metadata](https://github.com/philippinespire/process_sequencing_metadata) repo for instructions.
+
+Merging multiple runs can be done using modified versions of the existing scripts used for cssl (`runmerge_2runs_lcwgs_array.bash` and `runmerge_2runs_lcwgs_array.sbatch`). As currently written, these will merge .bam files with the same individual ID that have produced by dDocent in two different sequencing_run directories, while keeping a record of unmerged files. The `copyunmerged.sbatch` script can then be used to copy the files that have not been merged.
+
+
 
 ---
 

@@ -173,7 +173,14 @@ See the [process_sequencing_metadata](https://github.com/philippinespire/process
 
 Merging multiple runs can be done using modified versions of the existing scripts used for cssl (`runmerge_2runs_lcwgs_array.bash` and `runmerge_2runs_lcwgs_array.sbatch`). As currently written, these will merge .bam files with the same individual ID that have produced by dDocent in two different sequencing_run directories, while keeping a record of unmerged files. The `copyunmerged.sbatch` script can then be used to copy the files that have not been merged.
 
+After merging, use `mappedReadStats.sbatch` to get depth and coverage statistics.
 
+```bash
+# on wahab replace <yourPireDirPath> with /home/e1garcia/shotgun_PIRE
+cd <yourPireDirPath>/pire_<ssl-or-cssl-or-lcwgs>_data_processing/<genus_species>
+# sbatch mappedReadStats.sbatch "-RG.bam"
+sbatch ../../pire_fq_gz_processing/mappedReadStats.sbatch mkBAM mkBAM/coverageMappedReads 
+```
 
 ---
 

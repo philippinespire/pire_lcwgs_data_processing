@@ -67,7 +67,7 @@ reference_repeat_identification: False
 # Adapter sequences are automatically detected.
 # Automatic detection of NovaSeq or NextSeq samples and activation of
 # poly-G tail trimming.
-fastq_processing: False
+fastq_processing: True
 
 # Minimum read length.
 # Historical samples (after trimming and read merging)
@@ -162,7 +162,7 @@ maxDP: 10
 # Will rescale base qualities at potentially damaged sites and 
 # calculate statistics on DNA damage patterns in realigned BAM 
 # files.
-historical_bam_mapDamage: False
+historical_bam_mapDamage: True
 
 # List of historical samples on which mapDamage2 should be run. 
 # Sample names without lane or index number in quotation marks, 
@@ -443,7 +443,7 @@ homozyg-het: 999
 # BCF files.
 # Requires sample lists and parameters for any desired optional 
 # data filtering step (as described above). 
-snpEff: True
+snpEff: False
 
 # Full path to GTF file (GTF format version 2.2) with gene model predictions 
 # for the reference genome specified at the top of this config file.

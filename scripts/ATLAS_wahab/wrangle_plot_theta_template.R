@@ -86,6 +86,23 @@ for(fnum in 1:length(files)) {
   theta_data$avg_missing[fnum]=mean(t$p1.0_fracMissing)
 }
 
+## Examine your data ##
+# set the avg_theta filter to list Albatross files with an avg_theta less than alb_fltr_avg_theta.
+alb_fltr_avg_theta <- 0.01
+# identify the Albatross file names with an avg_theta less than alb_fltr_avg_theta.
+alb_0.01_theta <- theta_data %>%
+  filter(Era == 'Albatross - ATLAS GERP recalibration') %>%
+  filter(avg_theta < alb_fltr_avg_theta) %>%
+  mutate(file_name = basename(file))  # Extract the file name from the path
+
+# Print the file names
+cat("Albatross files with an avg_theta less than", alb_fltr_avg_theta)
+alb_0.01_theta %>%
+  pull(file_name) %>%
+  cat(sep = "\n")
+
+## Check files and logs for the files that had a low avg_theta
+
 # List file names with non-finite avg_theta
 non_finite_files <- theta_data %>%
   filter(!is.finite(avg_theta)) %>%
@@ -395,32 +412,6 @@ for(fnum in 1:length(files)) {
   theta_data$d002_depth[fnum]=mean(t$p0.02_depth)
   theta_data$d001_depth[fnum]=mean(t$p0.01_depth)
 }
-
-# Reshape the data into a long format
-theta_data_long <- theta_data %>%
-  pivot_longer(
-    cols = starts_with("d"),  # Select columns starting with "d"
-    names_to = c("Category", ".value"),  # Extract "Category" and keep the rest as values
-    names_pattern = "(d[0-9]+)_(.*)"  # Regex to split names into Category and value types
-  )
-
-# Calculate average theta. group by Era and Category
-theta_avg_grouped_theta <- theta_data_long %>%
-  group_by(Era, Category) %>%
-  summarize(
-    avg_theta = mean(theta, na.rm = TRUE),  # Calculate mean excluding NA
-    .groups = "drop"
-  )
-print(theta_avg_grouped_theta)
-
-# Calculate average depth. group by Era and Category
-theta_avg_grouped_depth <- theta_data_long %>%
-  group_by(Era, Category) %>%
-  summarize(
-    avg_depth = mean(depth, na.rm = TRUE),  # Calculate mean excluding NA
-    .groups = "drop"
-  )
-print(theta_avg_grouped_depth)
 
 # filter to samples with depth higher than a certain value and pivot/group by individual.
 # the default was 3, but you may have to change this for other species. 

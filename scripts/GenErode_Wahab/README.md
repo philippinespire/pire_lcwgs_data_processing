@@ -8,14 +8,17 @@ It can also do some auxiliary tasks that will be useful for PIRE such as estimat
 
 A road map for using GenErode on Wahab is included below.
 
-#### Script:
+### Script:
 `run_GenErode.sbatch`
 
-#### Input:
+### Input:
+
 **Modern & Historical fq_raw Files**
+
 `<Spp>_<Era><Site>_IndividualID*.fq.gz`
 
 **20k Reference Genome**
+
 `reference.denovoSSL.Spp20k.fasta`
 
 **GERP Outgroups**
@@ -36,24 +39,31 @@ modern_samples.txt
 historical_samples.txt
 ```
 
-#### Output (relevant to pipeline):
+### Output (relevant to pipeline):
+
 **Modern Output Directory**
+
 `GenErode_Spp_20k/results/modern/mapping/reference.denovoSSL.Spp20k/`
 
 **Modern Output Files**
+
 `SppC<Site><IndID>.merged.rmdup.merged.realn.bam`
 
 **Historical Output Directory**
+
 `GenErode_Spp_20k/results/historical/mapping/reference.denovoSSL.Spp20k/`
 
 **Historical Output Files**
+
 `SppA<Site><IndID>.merged.rmdup.merged.realn.rescaled.bam`
 
 **GERP Scores Output Directory**
+
 `GenErode_Spp_20k/results/gerp`
 
 **GERP Scores Output File**
-`reference.denovoSSL.Abu20k.ancestral.rates.gz`
+
+`reference.denovoSSL.Spp20k.ancestral.rates.gz`
 
 
 <details><summary>1. Set-Up</summary>
@@ -147,9 +157,6 @@ cd /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/referenc
 
 perl /home/e1garcia/shotgun_PIRE/REUs/2022_REU/PSMC/scripts/removesmalls.pl 20000 scaffolds.fasta > reference.denovoSSL.Spp20k.fasta
 ```
-
-</details>
-
 
 #### GERP Outgroups
 
@@ -359,9 +366,11 @@ echo "Missing files: $missing_files"
 
 ```
 bash check_genomes.sh
-```
+
+# output
 Total files listed: $total_files
 Missing files: $missing_files
+```
 
 The file names of the downloaded genomes will be all of the text after the last forward slash (/) in the URLs. The file names of the downloaded genomes need to be changed to `Genus_species.fa.gz`. This can be done one at a time with a simple `mv` command. Alternatively you can edit the script `rename_genomes.sh` to do it all at once. You can edit this script with the information from your files `speciesnames.txt` and `filenames.txt`. If you have kept the species' names and their URLs in the same order, excluding the first line in `speciesnames.txt` that has your Genus_species, this should be a simple copy and paste. Then just add `mv` before the genome file names and `.fa.gz` at the end of each Genus_species.  
 
@@ -390,6 +399,8 @@ Rename files.
 ```
 bash rename_genomes.sh
 ```
+
+</details>
 
 <details><summary>2. Get Newick tree</summary>
 
@@ -567,8 +578,6 @@ run `config_modern_samples.sh`
 bash config_modern_samples.sh
 ```
 
-
-
 #### Edit the config files
 
 Template config files are located in `home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_Wahab/config`.
@@ -579,6 +588,9 @@ Edit the config.yaml files to reflect the analyses you want to conduct in GenEro
 
 Edit the `*historical_samples.txt` and `*modern_samples.txt` files to reflect your sample information.
 
+</p>
+</details>
+
 </details>
 
 <details><summary>4. Run GenErode</summary>
@@ -587,17 +599,20 @@ Edit the `*historical_samples.txt` and `*modern_samples.txt` files to reflect yo
 
 #### Run the pipeline
 
-Copy `home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_Wahab/run_GenErode.sbatch` to your analysis folder.
+Copy `run_GenErode.sbatch` and `run_GenErode_unlock.sbatch` to your analysis folder (GenErode_Spp_20k).
 ```
-cd 
-
-cp home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_Wahab/run_GenErode.sbatch . 
+cp home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_Wahab/*sbatch /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/ 
 ```
 
-Move to this folder and run with `sbatch run_GenErode.sbatch`.
+Move to this folder and run with 
+```
+sbatch run_GenErode.sbatch
+```
 
 If it is locked then unlock it with:
-
+```
+sbatch run_GenErode_unlock.sbatch
+```
 
 </details>
 
@@ -605,5 +620,33 @@ If it is locked then unlock it with:
 
 ### 5. Check results
 
+**Modern Input Files**
+```
+# counts the number of unique modern individuals
+find /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/modern -maxdepth 1 -type f -name 'Spp-CPnd_*' -printf '%f\n' | cut -c 10-12 | sort | uniq | wc -l
+```
+
+**Modern Output Files**
+```
+# counts the number of modern output files
+ls /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/results/modern/mapping/reference.denovoSSL.Spp20k/*.merged.rmdup.merged.realn.bam | wc -l
+```
+
+**Historical Input Files**
+```
+# counts the number of unique historical individuals
+find /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/historical -maxdepth 1 -type f -name 'Spp-APnd_*' -printf '%f\n' | cut -c 10-12 | sort | uniq | wc -l
+```
+
+**Historical Output Files**
+```
+# counts the number of historical output files
+ls /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/results/historical/mapping/reference.denovoSSL.Spp20k/*.merged.rmdup.merged.realn.rescaled.bam | wc -l
+```
+
+**GERP Scores File**
+```
+ls /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/results/gerp/reference.denovoSSL.Spp20k.ancestral.rates.gz
+```
 
 </details>

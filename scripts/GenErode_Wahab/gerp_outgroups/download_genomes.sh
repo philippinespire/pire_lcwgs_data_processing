@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Check if abu_filenames.txt file exists
-if [[ ! -f abu_filenames.txt ]]; then
-  echo "Error: abu_filenames.txt file not found!"
+# Check if filenames.txt file exists
+if [[ ! -f filenames.txt ]]; then
+  echo "Error: filenames.txt file not found!"
   exit 1
 fi
 
-# Read each line from the abu_filenames.txt file and use wget to download
+# Read each line from the filenames.txt file and use wget to download
 while IFS= read -r url; do
   # Trim whitespace and any trailing characters
   trimmed_url=$(echo "$url" | tr -d '\r' | xargs)
@@ -19,6 +19,6 @@ while IFS= read -r url; do
   else
     echo "Skipping empty URL."
   fi
-done < abu_filenames.txt
+done < filenames.txt
 
 echo "Download completed."

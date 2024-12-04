@@ -9,11 +9,11 @@ species="lethrinus_variegatus"
 # For Spp, this is the three letter species code. Capitalize the first letter.
 Spp="Lva"
 
-# Define the lcwgs & ssl directory path using the species variable. Edit if necessary. 
+# Define the lcwgs & ssl directory path using the species variable. Edit if necessary. Check SSL.
 lcwgs_path=$"/archive/carpenterlab/pire/pire_${species}_lcwgs"
 ssl_path=$"/home/e1garcia/shotgun_PIRE/pire_ssl_data_processing/${species}"
 
-# Define the input files
+# Define the input files. Edit if necessary. Check SSL.
 file1="${lcwgs_path}/1st_sequencing_run/fq_raw/old_new_filenames.log"
 file2="${lcwgs_path}/2nd_sequencing_run/fq_raw/old_new_filenames.log"
 file3="${lcwgs_path}/3rd_sequencing_run/fq_raw/old_new_filenames.log"

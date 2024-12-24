@@ -1,10 +1,10 @@
 # Scripts for lcWGS data analysis
 
 ```
-
+/home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts
 ```
 
-<img src="" alt="lcwgs" width="300"/>
+<img src="https://github.com/philippinespire/pire_lcwgs_data_processing/blob/main/scripts/lcwgs_processing_map.jpg" alt="lcwgs" width="300"/>
 
 ## [ANGSD_wahab](https://github.com/philippinespire/pire_lcwgs_data_processing/tree/main/scripts/ANGSD_wahab)
 

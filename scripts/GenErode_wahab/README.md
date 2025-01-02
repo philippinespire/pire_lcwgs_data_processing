@@ -84,7 +84,7 @@ Make a README.md file to track your work within this directory. Make directories
 ```
 cd /archive/carpenterlab/pire/pire_<Genus_species>_lcwgs/GenErode_<Spp>_20k
 
-mkdir config historical modern reference gerp_outgroups mitochondria
+mkdir config historical modern reference gerp_outgroups mitochondria logs
 ```
 
 All sequencing data and reference genomes have to be within their respective subdirectdory in the main analysis directory. This includes SSL, test lanes, and LCWGS data. Count those files then copy them to the appropriate subdirectories. Don't include Undetermined\*.fq.gz files. Below is an example for *Lethrinus variegatus* from Pandanon (Pnd). Adjust accordingly.

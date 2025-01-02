@@ -87,6 +87,11 @@ cd /archive/carpenterlab/pire/pire_<Genus_species>_lcwgs/GenErode_<Spp>_20k
 mkdir config historical modern reference gerp_outgroups mitochondria logs
 ```
 
+Copy the GenErode scripts `run_GenErode.sbatch` and `run_GenErode_unlock.sbatch` to your analysis directory (GenErode_Spp_20k).
+```
+cp home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_wahab/run_GenErode*.sbatch /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/ 
+```
+
 All sequencing data and reference genomes have to be within their respective subdirectdory in the main analysis directory. This includes SSL, test lanes, and LCWGS data. Count those files then copy them to the appropriate subdirectories. Don't include Undetermined\*.fq.gz files. Below is an example for *Lethrinus variegatus* from Pandanon (Pnd). Adjust accordingly.
 
 #### Historical
@@ -147,7 +152,7 @@ ls /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/GenErode_Lva_20k/m
 
 #### Reference
 
-Use the 20k version (scaffolds > 20kbp) of the best reference genome that was used for probe development and mkBAM. 
+Use the 20k version (scaffolds > 20kbp) of the best reference genome that was used for probe development and mapping. 
 
 If there is no 20k reference genome, create it. First copy the best reference genome (e.g. `scaffolds.fasta`) to the `GenErode_Spp_20k/reference` directory.
 
@@ -167,20 +172,56 @@ cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_Wahab
 
 Identify the ~30 closest relatives of your species with chromosome-level genomes. These species' genomes will be your gerp_outgroups. Start by checking the closest relatives of your species in the [Phylogenetic classification of bony fishes](https://github.com/philippinespire/pire_ssl_data_processing/blob/main/scripts/Betancur2017_families.pdf) by Betancur et al (2017). You can check the `GenErode_Spp_20k/gerp_outgroups/` directories of other species to see if the genomes of your outgroup species have already been downloaded and renamed. If there aren't enough relevant genomes already on the HPC, then you'll have to download them from [Genbank](https://www.ncbi.nlm.nih.gov/datasets/genome/). Start by searching for the genus, family, then order of your species. Make sure they are chromosome-level genomes. 
 
-<details><summary>downloaded outgroup genomes</summary>
+<details><summary>available outgroup genomes</summary>
 
 ```
-# incertae sedis between Istiophoriformes and Carangiformes
-/archive/carpenterlab/pire/pire_sphyraena_obtusata_lcwgs/GenErode_Sob_20k/gerp_outgroups
-
-# incertae sedis between Atheriniformes and Mugiliformes
+# Ambassis buruensis: Family - incertae sedis between Atheriniformes and Mugiliformes (33)
 /archive/carpenterlab/pire/pire_ambassis_buruensis_lcwgs/GenErode_Abu_20k/gerp_outgroups
 
-# Spariformes
-/archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/GenErode_Lva_20k/gerp_outgroups
+# Chromis viridis: Family - Pomacentridae (30)
+/archive/carpenterlab/pire/pire_chromis_viridis_lcwgs/2nd_sequencing_run/GenErode/gerp_outgroups
 
-# Syngnathiformes
+# Corythoichthys haematopterus: Family - Syngnathiformes (33)
 /archive/carpenterlab/pire/pire_corythoichthys_haematopterus_lcwgs/GenErode_Cha_20k/gerp_outgroups
+
+# Dascyllus aruanus: Family - Pomacentridae (30)
+/archive/carpenterlab/pire/pire_dascyllus_aruanus_lcwgs/2nd_sequencing_run/GenErode/gerp_outgroups
+
+# Gerres oyena: Family - Gerreidae (34)
+/archive/carpenterlab/pire/pire_gerres_oyena_lcwgs/1st_sequencing_run/GenErode_Goy_20k/gerp_outgroups
+
+# Hypoatherina temminckii: Family - Atherinidae ()
+/archive/carpenterlab/pire/pire_hypoatherina_temminckii_lcwgs/GenErode_Hte_20k/gerp_outgroups
+
+# Lethrinus variegatus: Family - Spariformes (31)
+/archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/GenErode_Lva_20k/gerp_outgroups 
+
+# Ostorhinchus chrysopomus: Family - Apogonidae (32)
+/archive/carpenterlab/pire/pire_ostorhinchus_chrysopomus_lcwgs/GenErode_Och/gerp_outgroups
+
+# Parupeneus barberinus: Family - Mullidae (31)
+/archive/carpenterlab/pire/pire_parupeneus_barberinus_lcwgs/GenErode_Pbb/gerp_outgroups
+
+# Pseudanthias squamipinnis: Family - Serranidae/Anthiadidae (27)
+/archive/carpenterlab/pire/pire_pseudanthias_squamipinnis_lcwgs/2nd_sequencing_run/GenErode/gerp_outgroups
+
+# Sphaeramia nematoptera: Family - Apogonidae (27)
+/archive/carpenterlab/pire/pire_sphaeramia_nematoptera_lcwgs/3rd_sequencing_run/GenErode/gerp_outgroups
+
+# Sphaeramia orbicularis: Family - Apogonidae ()
+/archive/carpenterlab/pire/pire_sphaeramia_orbicularis_lcwgs/GenErode_Sor_20k/gerp_outgroups
+
+# Sphyraena obtusata: Family - incertae sedis between Istiophoriformes and Carangiformes (35)
+/archive/carpenterlab/pire/pire_sphyraena_obtusata_lcwgs/GenErode_Sob_20k/gerp_outgroups
+
+# Stethojulis interrupta: Family - Labridae (37)
+/archive/carpenterlab/pire/pire_stethojulis_interrupta_lcwgs/1st_sequencing_run/GenErode_Sin_20k/gerp_outgroups
+
+# Taeniamia zosterophora: Family - Apogonidae (31)
+/archive/carpenterlab/pire/pire_taeniamia_zosterophora_lcwgs/2nd_sequencing_run/GenErode_20k_2runs_2/gerp_outgroups
+
+# Zenarchopterus dispar: Family - Zenarchopteridae (31)
+/archive/carpenterlab/pire/pire_zenarchopterus_dispar_lcwgs/GenErode_Zdi_4/gerp_outgroups
 ```
 
 </p>
@@ -412,7 +453,8 @@ Upload `speciesnames.txt` to [TimeTree of Life](https://timetree.org/) using the
 ```
 mv speciesnames.nwk gerp_tree.nwk
 ```
-Replace your Genus_species in `gerp_tree.nwk` with the name of the reference genome, which should be `reference.denovoSSL.Spp20k.fasta`: 
+
+Replace your `Genus_species` in `gerp_tree.nwk` with the name of the reference genome, which should be `reference.denovoSSL.Spp20k.fasta`.
 ```
 sed -i 's/Genus_species/reference.denovoSSL.Spp20k.fasta/g' gerp_tree.nwk
 ```
@@ -597,14 +639,7 @@ Edit the `*historical_samples.txt` and `*modern_samples.txt` files to reflect yo
 
 ### 4. Run GenErode
 
-#### Run the pipeline
-
-Copy `run_GenErode.sbatch` and `run_GenErode_unlock.sbatch` to your analysis folder (GenErode_Spp_20k).
-```
-cp home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_Wahab/*sbatch /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/ 
-```
-
-Move to this folder and run with 
+Move to your species' GenErode_Spp_20k directory and run the GenErode script `run_GenErode.sbatch`. 
 ```
 sbatch run_GenErode.sbatch
 ```
@@ -620,33 +655,41 @@ sbatch run_GenErode_unlock.sbatch
 
 ### 5. Check results
 
-**Modern Input Files**
+**Count the number of Modern input samples: \*.fq.gz**
 ```
-# counts the number of unique modern individuals
 find /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/modern -maxdepth 1 -type f -name 'Spp-CPnd_*' -printf '%f\n' | cut -c 10-12 | sort | uniq | wc -l
 ```
 
-**Modern Output Files**
+**Count the number of Modern output files: \*.merged.rmdup.merged.realn.bam**
 ```
-# counts the number of modern output files
 ls /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/results/modern/mapping/reference.denovoSSL.Spp20k/*.merged.rmdup.merged.realn.bam | wc -l
 ```
 
-**Historical Input Files**
+**Count the number of Modern output files: \*.merged.rmdup.merged.realn.bai**
 ```
-# counts the number of unique historical individuals
+ls /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/results/modern/mapping/reference.denovoSSL.Spp20k/*.merged.rmdup.merged.realn.bai | wc -l
+```
+
+**Count the number of Historical input samples: \*.fq.gz**
+```
 find /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/historical -maxdepth 1 -type f -name 'Spp-APnd_*' -printf '%f\n' | cut -c 10-12 | sort | uniq | wc -l
 ```
 
-**Historical Output Files**
+**Count the number of Historical output files: \*.merged.rmdup.merged.realn.bam**
 ```
-# counts the number of historical output files
 ls /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/results/historical/mapping/reference.denovoSSL.Spp20k/*.merged.rmdup.merged.realn.rescaled.bam | wc -l
+```
+
+**Count the number of Historical output files: \*.merged.rmdup.merged.realn.bai**
+```
+ls /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/results/historical/mapping/reference.denovoSSL.Spp20k/*.merged.rmdup.merged.realn.rescaled.bai | wc -l
 ```
 
 **GERP Scores File**
 ```
 ls /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/results/gerp/reference.denovoSSL.Spp20k.ancestral.rates.gz
 ```
+
+If all output has been created, then GenErode has successfully run. Move on to the next step in the pipeline. Note that each input sample should have 1 `\*.merged.rmdup.merged.realn.rescaled.bam` and 1 `\*.merged.rmdup.merged.realn.rescaled.bai` file.
 
 </details>

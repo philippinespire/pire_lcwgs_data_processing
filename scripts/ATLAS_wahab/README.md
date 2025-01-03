@@ -112,6 +112,8 @@ Modify the last line of the `atlas_recal_readuntilbeds_array.sbatch` script to r
 crun.atlas atlas --task estimateErrors --bam ${sample_name}.merged.rmdup.merged.realn.bam --fasta ${REFLOC} --regions gerp_15.merge.nosingle.bed,gerp_10.merge.nosingle.bed,gerp_05.merge.nosingle.bed --readUpToDepth 10
 ```
 
+Check the outputs in the recal directory as the files run. Currently, ATLAS can get hung up on some files, particularly high-depth files and contemporary sequencing data. If there is no change in the \*.out log file for a long time you might want to cancel the job and start it again.
+
 Run ATLAS recalibration with `atlas_recal_readuntilbeds_array.bash` on modern samples.
 ```
 # change directory to your ATLAS_Spp directory
@@ -123,15 +125,20 @@ bash atlas_recal_readuntilbeds_array.bash [directory with .bam files] [reference
 bash atlas_recal_readuntilbeds_array.bash /archive/carpenterlab/pire/pire_species_genus_lcwgs/GenErode_Spp_20k/results/modern/mapping/reference.denovoSSL.Spp20k /archive/carpenterlab/pire/pire_species_genus_lcwgs/GenErode_Spp_20k/reference/reference.denovoSSL.Spp20k.fasta  /archive/carpenterlab/pire/pire_species_genus_lcwgs/ATLAS_Spp/recal
 ```
 
-Check the outputs in the recal directory as the files run. Currently, ATLAS can get hung up on some files, particularly high-depth files and contemporary sequencing data. If there is no change in the \*.out log file for a long time you might want to cancel the job and start it again.
-
 Run ATLAS recalibration with `atlas_recal_readuntilbeds_array.bash` on historical samples.
 ```
 bash atlas_recal_readuntilbeds_array.bash [directory with .bam files] [reference genome location w/ filename] [output directory]
 
 # historical run
-bash atlas_recal_readuntilbeds_array.bash /archive/carpenterlab/pire/pire_species_genus_lcwgs/GenErode_Spp_20k/results/historical/mapping/reference.denovoSSL.Spp20k /archive/carpenterlab/pire/pire_species_genus_lcwgs/GenErode_Spp_20k/reference/reference.denovoSSL.Spp20k.fasta  /archive/carpenterlab/pire/pire_species_genus_lcwgs/ATLAS_Spp/recal
+bash atlas_recal_readuntilbeds_array.bash /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/results/historical/mapping/reference.denovoSSL.Spp20k /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/reference/reference.denovoSSL.Spp20k.fasta  /archive/carpenterlab/pire/pire_genus_species_lcwgs/ATLAS_Spp/recal
 ```
+
+</details>
+
+
+<details><summary>4. Recalibration Results</summary>
+
+### 4. Recalibration Results
 
 The ATLAS recalibration output files are the ATLAS theta input files. There should be the same number of recalibration input files (GenErode output files) as recalibration output files. 
 * `Spp[AC]Site\*.merged.rmdup.merged.realn.bam`
@@ -140,9 +147,9 @@ The ATLAS recalibration output files are the ATLAS theta input files. There shou
 </details>
 
 
-<details><summary>4. Run Theta</summary>
+<details><summary>5. Run Theta</summary>
 
-### 4. Run Theta
+### 5. Run Theta
 
 The ATLAS theta step will estimate theta for both historical and modern samples using the whole `\*merged.rmdup.merged.realn.bam` files from the recalibration step. It also performs downsampling. This step also requires the `\*.merged.rmdup.merged.realn_RGInfo.json` files as input. 
 
@@ -163,15 +170,21 @@ bash atlas_theta_albrecal_array.bash [directory with recalibrated output files] 
 bash atlas_theta_albrecal_array.bash /archive/carpenterlab/pire/pire_genus_species_lcwgs/ATLAS_Spp/recal /archive/carpenterlab/pire/pire_genus_species_lcwgs/ATLAS_Spp/theta
 ```
 
+</details>
+
+
+<details><summary>6. Theta Results</summary>
+
+### 6. Theta Results
+
 Check the outputs in the theta directory as the files run. The ATLAS theta output files (`\*theta.txt.gz`) estimate theta and will be wrangled and visualized in the next step to evaluate theta. There should be the same number of theta output files as theta input files (ATLAS recalibtration output files). 
 * `Spp[AC]Site\*.theta.txt.gz`
 
 </details>
 
+<details><summary>7. Cleanup</summary>
 
-<details><summary>5. Cleanup</summary>
-
-### 5. Cleanup
+### 7. Cleanup
 
 Clean up ATLAS_Spp directory. 
 ```
@@ -190,9 +203,9 @@ mv *.bed beds/
 </details>
 
 
-<details><summary>6. Wrangle & Visualize Theta</summary>
+<details><summary>8. Wrangle & Visualize Theta</summary>
 
-### 6. Wrangle & Visualize Theta
+### 8. Wrangle & Visualize Theta
 
 The `wrangle_plot_theta_template.R` script wrangles and visualizes the `\*theta.txt.gz` output files from the ATLAS theta step. These files should be in the `ATLAS_Spp/theta` directory and are the input files for this script. This can be run on your personal computer by downloading the `\*theta.txt.gz` files. Alternatively, this script can be run through the RStudio Server on [ODU RCC OnDemand](https://ondemand.wahab.hpc.odu.edu/). If you use OnDemand, create an RStudio interactive session and navigate to this directory (`ATLAS_Spp/scripts`).
 

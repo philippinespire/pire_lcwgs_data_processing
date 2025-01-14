@@ -9,7 +9,9 @@
 
 enable_lmod
 module load container_env bwa
+crun.bwa bwa
 module load container_env samtools
+crun.samtools samtools
 module load container_env atlas/20240503
 export SINGULARITY_BIND=/home/e1garcia
 

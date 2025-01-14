@@ -163,6 +163,9 @@ era_labels <- era_sample_sizes %>%
 names(era_labels) <- era_sample_sizes$Era
 
 #### VISUALIZE THETA DATA ####
+
+options(bitmapType = "cairo") #line prevents issues when ROnDemand uses X11 display
+
 # boxplot of theta
 plot_theta <- theta_data %>% 
   ggplot(aes(

@@ -32,6 +32,7 @@ if (!dir.exists(outDir)) {
 spp_code="Lva"
 
 # change your site_code (e.g. Pnd, Gal, Mvi)
+# if your Albatross & Contemporary sites are different, put site code from Albatross
 site_code="Pnd"
 
 # do not change the user-defined variables below

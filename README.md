@@ -205,6 +205,12 @@ Our preferred method for mapping historical and contemporary datasets is now to 
 
 See the [instructions for running GenErode on Wahab](https://github.com/philippinespire/pire_lcwgs_data_processing/tree/main/scripts/GenErode_wahab) for more details.
 
+---
+
+</p>
+</details>
+
+
 <details><summary>8. (Optional) Correct for damage and calculate theta using ATLAS </summary>
 <p>
 
@@ -219,9 +225,10 @@ Instructions and scripts used to run ATLAS can be found [here](https://github.co
 </p>
 </details>
 
----
+<details><summary>9. Estimate diversity, divergence and selection using ANGSD. </summary>
+<p>
 
-## 8. Estimate diversity, divergence and selection using ANGSD.
+  ## 9. Estimate diversity, divergence and selection using ANGSD.
 
 Currently the preferred method for conducting downstream analyses on PIRE lcwgs datasets.
 
@@ -238,4 +245,14 @@ Coming soon!
 </p>
 </details>
 
+<details><summary>5. (Optional) Filter the binary alignment maps</summary>
+<p>
+
+## 10. (Optional) Extract mitochondrial genomes from lcwgs data using MitoZ.
+
+It may be useful to extract mitochondrial sequences from lcwgs data to confirm species identity. See the [MitoZ](https://github.com/philippinespire/pire_lcwgs_data_processing/tree/main/scripts/MitoZ_wahab) folder for more information.
+
 ---
+
+</p>
+</details>

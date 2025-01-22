@@ -241,7 +241,7 @@ See the [ANGSD_Wahab](https://github.com/philippinespire/pire_lcwgs_data_process
 </p>
 </details>
 
-<details><summary>10. (Optional) Extract mitochondrial genomes from lcwgs data using MitoZ.
+<details><summary>10. (Optional) Extract mitochondrial genomes from lcwgs data using MitoZ.</summary>
 <p>
 
 ## 10. (Optional) Extract mitochondrial genomes from lcwgs data using MitoZ.

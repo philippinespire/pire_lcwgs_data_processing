@@ -234,18 +234,14 @@ Currently the preferred method for conducting downstream analyses on PIRE lcwgs 
 
 [see notes on using angsd and related program on ODU hpcs](angsd_on_wahab_turing.md)
 
-Coming soon!
-
-```bash
-
-```
+See the [ANGSD_Wahab](https://github.com/philippinespire/pire_lcwgs_data_processing/tree/main/scripts/ANGSD_wahab) subdirectory for instructions on using ANGSD.
 
 ---
 
 </p>
 </details>
 
-<details><summary>5. (Optional) Filter the binary alignment maps</summary>
+<details><summary>5. (Optional) Extract mitochondrial genomes from lcwgs data using MitoZ.
 <p>
 
 ## 10. (Optional) Extract mitochondrial genomes from lcwgs data using MitoZ.

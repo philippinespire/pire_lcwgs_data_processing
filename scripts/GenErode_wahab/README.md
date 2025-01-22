@@ -76,7 +76,7 @@ Make a copy of the template folder, renaming it according to your species code (
 ```
 cd /archive/carpenterlab/pire/pire_<Genus_species>_lcwgs/
 
-cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_Wahab/GenErode_templatedir /archive/carpenterlab/pire/pire_<Genus_species>_lcwgs/GenErode_<Spp>_20k
+cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_wahab/GenErode_templatedir /archive/carpenterlab/pire/pire_<Genus_species>_lcwgs/GenErode_<Spp>_20k
 ```
 
 Make a README.md file to track your work within this directory. Make directories within this directory to hold your config file, historical, modern, and reference genome. If you are going to be calculating GERP scores or mapping to a mitochondrial reference panel make folders for those files too.
@@ -167,7 +167,7 @@ perl /home/e1garcia/shotgun_PIRE/REUs/2022_REU/PSMC/scripts/removesmalls.pl 2000
 
 Copy gerp scripts to the species' gerp_outgroups directory.
 ```
-cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_Wahab/gerp_outgroups/*.sh /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/gerp_outgroups/
+cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_wahab/gerp_outgroups/*.sh /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/gerp_outgroups/
 ```
 
 Identify the ~30 closest relatives of your species with chromosome-level genomes. These species' genomes will be your gerp_outgroups. Start by checking the closest relatives of your species in the [Phylogenetic classification of bony fishes](https://github.com/philippinespire/pire_ssl_data_processing/blob/main/scripts/Betancur2017_families.pdf) by Betancur et al (2017). You can check the `GenErode_Spp_20k/gerp_outgroups/` directories of other species to see if the genomes of your outgroup species have already been downloaded and renamed. If there aren't enough relevant genomes already on the HPC, then you'll have to download them from [Genbank](https://www.ncbi.nlm.nih.gov/datasets/genome/). Start by searching for the genus, family, then order of your species. Make sure they are chromosome-level genomes. 
@@ -467,7 +467,7 @@ sed -i 's/Genus_species/reference.denovoSSL.Spp20k.fasta/g' gerp_tree.nwk
 
 Copy config scripts to your species' config directory.
 ```
-cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_Wahab/config/config* /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/config/
+cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_wahab/config/config* /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/config/
 ```
 GenErode uses `config.yaml` to run. It also requires you to make two config files: `modern_samples.txt` and `historical_samples.txt`. These config files are specific to your data. In these config files, each unique sample gets its own line with its unique forward and reverse read files. The R1_fastq_file and R2_fastq_file in the header of these config files correspond to the \*.1.fq.gz and \*.2.fq.gz files that are preceded by a unique sample name.
 
@@ -622,7 +622,7 @@ bash config_modern_samples.sh
 
 #### Edit the config files
 
-Template config files are located in `home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_Wahab/config`.
+Template config files are located in `home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_wahab/config`.
 
 Currently these are the files used to conduct the white rhino reference test run.
 

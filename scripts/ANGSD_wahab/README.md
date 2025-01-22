@@ -4,7 +4,7 @@
 
 Currently, we are using scripts adapted by Kyra Fitz from the Therkildsen Lab's [GitHub](https://github.com/therkildsen-lab) to perform analyses in ANGSD. These scripts were originally used for Kyra's *Taeniamia zosterophora* [project](https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs) and extended to selection analyses and windowed PCA in *Salarias fasciatus* [here](https://github.com/philippinespire/pire_salarias_fasciatus_lcwgs) by Brendan and Mikaela.
 
-This code runs through conducting a selection analysis on Salarias fasciatus and is split into the following sections: 
+Outline of potential analyses using ANGSD: 
   1) Combining sequencing runs
   2) SNP calling
   3) Generating genotype likelihoods and making a beagle.gz file
@@ -13,6 +13,10 @@ This code runs through conducting a selection analysis on Salarias fasciatus and
   6) (Optional) Running winPCA to detect chromosome inversions
   7) Generating Site Allele Frequencies
   8) Calculating FST across the whole genome
+  9) Generate site frequency spectra for each site/era
+  10) Calculate per-site thetas
+  11) Calculate neutrality test statistics
+  12) {additional steps TBD}
 
 ## 1. Create an analysis folder and compile .bam files.
 
@@ -68,8 +72,7 @@ Use the get_beagle.sbatch file to generate a .beagle.gz file containing genotype
 ```
 vi get_beagle.sbatch
 #Makes a new file named 'get_beagle.sbatch' in the angsd_analysis folder. Paste Kyra's get_beagle.sbatch script into this file. Edits include the following: 
-  #Make sure you change the pathway after -anc to the correct reference genome of Salarias fasciatus (-anc /archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/1st_sequencing_run/GenErode_Sfa_full/reference/GCF_902148845.1_fSalaFa1.1_chr1-23_rename.fna). 
-  #Change the list of chromosomes file after -rf to match our output (-rf global_snp_list_depth1_15_notrans.chrs).
+  #Make sure you change the pathway after -anc to the correct reference genome - for Salarias fasciatus, this would be (-anc /archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/1st_sequencing_run/GenErode_Sfa_full/reference/GCF_902148845.1_fSalaFa1.1_chr1-23_rename.fna). 
 
 sbatch get_beagle.sbatch /archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/angsd_analysis/
 
@@ -77,7 +80,7 @@ sbatch get_beagle.sbatch /archive/carpenterlab/pire/pire_salarias_fasciatus_lcwg
 
 ## 4. Running PCANGSD: 
 
-Copy Kyra Fitz's pcangsd_pca.sbatch script (https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs/blob/main/pcangsd_pca.sbatch) and pcangsd_admix.sbatch (https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs/blob/main/pcangsd_admix.sbatch) into new .sbatch files, and adjust the script to fit the *Salarias fasciatus* data. We will be using the beagle.gz file *without inversions and without outliers* (angsd_depth1_15_notrans_noinv_subset.beagle.gz) from here on out, but the steps are the exact same if you use the beagle.gz file with the inversions (angsd_depth1_15_notrans.beagle.gz) or just without the inversions (angsd_depth1_15_notrans_noinv.beagle.gz).
+Copy Kyra Fitz's pcangsd_pca.sbatch script (https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs/blob/main/pcangsd_pca.sbatch) and pcangsd_admix.sbatch (https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs/blob/main/pcangsd_admix.sbatch) into new .sbatch files, and adjust the script to fit your paths and filenames.
 
 ```
 vi pcangsd_pca.sbatch
@@ -101,15 +104,7 @@ sbatch pcangsd_pca_it500_noinv_subset.sbatch /archive/carpenterlab/pire/pire_sal
 sbatch pcangsd_admix_it500_noinv_subset.sbatch /archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/angsd_analysis/
 ```
 
-Once the job is done, download the angsd_analysis/angsd_notrans_snps_pca_it500_noinv_subset.cov, bam_list_all_subset.txt, and angsd_admix_notrans_it500_noinv_subset.admix.2.Q files. These are needed to run the admixture.R and pca.R files. 
-
-```
-scp m1salvad@wahab.hpc.odu.edu:/archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/angsd_analysis/angsd_notrans_snps_pca_it500_noinv_subset.cov C:\Users\salva\Downloads\Sfa_angsd_analysis
-
-scp m1salvad@wahab.hpc.odu.edu:/archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/angsd_analysis/bam_list_all_subset.txt C:\Users\salva\Downloads\Sfa_angsd_analysis
-
-scp m1salvad@wahab.hpc.odu.edu:/archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/angsd_analysis/angsd_admix_notrans_it500_noinv_subset.admix.2.Q C:\Users\salva\Downloads\Sfa_angsd_analysis
-```
+Once the job is done, download the outputs: angsd_analysis/angsd_snps_pca.cov, bam_list.txt, and angsd_admix.2.Q files. These are needed to run the admixture.R and pca.R files. 
 
 Run admixture.R and pca.R files in RStudio to get two plots: 1) admixture proportions and 2) PCA for historical and contemporary individuals. Run the admixture.R plot before the pca.R files. 
 
@@ -134,18 +129,10 @@ Submit the job to the Wahab cluster, specifying the directory.
 ```
 sbatch pcangsd_selection_it500_noinv_subset.sbatch /archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/angsd_analysis/
 ```
-After the job runs, download the following outputs to your personal directory. 
+After the job runs, download the following outputs to your personal directory (examples for Sfa shown here). 
 - angsd_notrans_snps_selection_it500_noinv_subset.selection
 - global_snp_list_depth1_15_notrans.regions
 - angsd_notrans_snps_selection_it500_noinv_subset.sites
-
-```
-scp m1salvad@wahab.hpc.odu.edu:/archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/angsd_analysis/angsd_notrans_snps_selection_it500_noinv_subset.selection C:\Users\salva\Downloads\Sfa_angsd_analysis
-
-scp m1salvad@wahab.hpc.odu.edu:/archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/angsd_analysis/global_snp_list_depth1_15_notrans.regions C:\Users\salva\Downloads\Sfa_angsd_analysis
-
-scp m1salvad@wahab.hpc.odu.edu:/archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/angsd_analysis/angsd_notrans_snps_selection_it500_noinv_subset.sites C:\Users\salva\Downloads\Sfa_angsd_analysis
-```
 
 Run pcangsd_selection_plot_v2.R in RStudio to generate a Manhattan plot and look at SNPs potentially under selection. 
 

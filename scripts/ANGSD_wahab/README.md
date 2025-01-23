@@ -51,7 +51,7 @@ Copy the snp_calling.sbatch script (https://github.com/philippinespire/pire_taen
 - Minimum depth filter should be 1x the number of individuals.
 - Minimum individual filter should be half of the total number of individuals.
 - Maximum depth filter should be 15x the number of individuals.
-- Parameters that stayed the same from the original script are a map quality filter of 30, a minimum allele frequency filter of 0.001, and a SNP p-value of 10-6. 
+- Parameters that stayed the same from the original script are a map quality filter of 30, a minimum allele frequency filter of 0.001, and a SNP p-value of 1e-6. 
 
 ```
 vi snp_calling.sbatch

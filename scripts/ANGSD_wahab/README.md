@@ -250,3 +250,9 @@ Submit the job to the Wahab cluster. Since the script already specifies the dire
 ```
 sbatch fst.sbatch
 ```
+
+Windowed Fst can be calculated in ANGSD based on the output of fst.sbatch wusing the fst_window.sbatch script. Currently the script uses a window size of 50kbp and a step size of 10kbp, though this can be adjusted (however note that this will reduce the number of SNPs per window and potentially increase the "noise" of Fst estimates.
+
+```
+sbatch fst_window.sbatch
+```

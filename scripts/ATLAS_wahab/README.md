@@ -29,11 +29,11 @@ mkdir beds recal theta plots scripts logs
 
 Copy ATLAS scripts to the ATLAS_Spp directory. 
 ```
-cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/ATLAS_wahab/*.sbatch .
+cp /archive/carpenterlab/pire/pire_lcwgs_data_processing/scripts/ATLAS_wahab/*.sbatch .
 
-cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/ATLAS_wahab/*.bash .
+cp /archive/carpenterlab/pire/pire_lcwgs_data_processing/scripts/ATLAS_wahab/*.bash .
 
-cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/ATLAS_wahab/*.R .
+cp /archive/carpenterlab/pire/pire_lcwgs_data_processing/scripts/ATLAS_wahab/*.R .
 ```
 
 </details>

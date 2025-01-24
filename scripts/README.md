@@ -9,7 +9,7 @@
 ## [ANGSD_wahab](https://github.com/philippinespire/pire_lcwgs_data_processing/tree/main/scripts/ANGSD_wahab)
 
 
-## [ATLAS_Wahab](https://github.com/philippinespire/pire_lcwgs_data_processing/tree/main/scripts/ATLAS_wahab)
+## [ATLAS_wahab](https://github.com/philippinespire/pire_lcwgs_data_processing/tree/main/scripts/ATLAS_wahab)
 
 
 ## [GenErode_wahab](https://github.com/philippinespire/pire_lcwgs_data_processing/tree/main/scripts/GenErode_wahab)

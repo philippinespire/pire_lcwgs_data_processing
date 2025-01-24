@@ -8,25 +8,34 @@ It can also do some auxiliary tasks that will be useful for PIRE such as estimat
 
 A road map for using GenErode on Wahab is included below.
 
-### Script:
+<details><summary>Summary</summary>
+
+### Summary
+
+#### Script:
 `run_GenErode.sbatch`
+`run_GenErode_unlock.sbatch`
 
-### Input:
+#### Input:
 
-**Modern & Historical fq_raw Files**
+**Modern & Historical raw \*.fq.gz files**
 
-`<Spp>_<Era><Site>_IndividualID*.fq.gz`
+`<Spp>_<Era><Site>_<Ind>*.fq.gz`
 
 **20k Reference Genome**
 
-`reference.denovoSSL.Spp20k.fasta`
+`reference.denovoSSL.<Spp>20k.fasta` 
+
+or 
+
+`reference.genbank.Spp20k.fasta`
 
 **GERP Outgroups**
 ```
 # dated phylogenetic tree
 gerp_tree.nwk
 
-# ~30 chromosome-level genomes of outgroup species e.g.
+# ~30 chromosome-level genomes of outgroup species. e.g.
 Echeneis_naucrates.fa.gz
 Neostethus_bicornis.fa.gz
 Cynoglossus_semilaevis.fa.gz
@@ -39,23 +48,23 @@ modern_samples.txt
 historical_samples.txt
 ```
 
-### Output (relevant to pipeline):
+#### Output (relevant to pipeline):
 
 **Modern Output Directory**
 
-`GenErode_Spp_20k/results/modern/mapping/reference.denovoSSL.Spp20k/`
+`GenErode_Spp_20k/results/modern/mapping/reference.denovoSSL.<Spp>20k/`
 
 **Modern Output Files**
 
-`SppC<Site><IndID>.merged.rmdup.merged.realn.bam`
+`<Spp>C<Site><Ind>.merged.rmdup.merged.realn.bam`
 
 **Historical Output Directory**
 
-`GenErode_Spp_20k/results/historical/mapping/reference.denovoSSL.Spp20k/`
+`GenErode_Spp_20k/results/historical/mapping/reference.denovoSSL.<Spp>20k/`
 
 **Historical Output Files**
 
-`SppA<Site><IndID>.merged.rmdup.merged.realn.rescaled.bam`
+`<Spp>A<Site><Ind>.merged.rmdup.merged.realn.rescaled.bam`
 
 **GERP Scores Output Directory**
 
@@ -63,36 +72,38 @@ historical_samples.txt
 
 **GERP Scores Output File**
 
-`reference.denovoSSL.Spp20k.ancestral.rates.gz`
+`reference.denovoSSL.<Spp>20k.ancestral.rates.gz`
 
+</details>
 
 <details><summary>1. Set-Up</summary>
 
 ### 1. Set-up
 
-The directory structure and the directory and file naming format is important.  
+The directory structure and file naming format are important.  
 
-Make a copy of the template folder, renaming it according to your species code (Spp) and add "_20k", which is a reference to the 20k reference genome that will be used. 
+Create the GenErode directory structure. Create the GenErode directory according to your species code (Spp) and add "_20k", which is a reference to the 20k reference genome that will be used. Make subdirectories within this GenErode directory to hold the config files, historical \*.fq.gz files, modern \*.fq.gz files, and reference genome. If you are going to be calculating GERP scores or mapping to a mitochondrial reference panel make folders for those files too.
 ```
-cd /archive/carpenterlab/pire/pire_<Genus_species>_lcwgs/
+cd /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/
 
-cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_wahab/GenErode_templatedir /archive/carpenterlab/pire/pire_<Genus_species>_lcwgs/GenErode_<Spp>_20k
+mkdir GenErode_<Spp>_20k
+
+cd /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k
+
+mkdir config historical modern reference gerp_outgroups mitochondria
 ```
 
-Make a README.md file to track your work within this directory. Make directories within this directory to hold your config file, historical, modern, and reference genome. If you are going to be calculating GERP scores or mapping to a mitochondrial reference panel make folders for those files too.
-
+Copy the contents of the template folder to your GenErode directory.
 ```
-cd /archive/carpenterlab/pire/pire_<Genus_species>_lcwgs/GenErode_<Spp>_20k
-
-mkdir config historical modern reference gerp_outgroups mitochondria logs
+cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_wahab/GenErode_templatedir/ /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k
 ```
 
 Copy the GenErode scripts `run_GenErode.sbatch` and `run_GenErode_unlock.sbatch` to your analysis directory (GenErode_Spp_20k).
 ```
-cp home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_wahab/run_GenErode*.sbatch /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/ 
+cp home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_wahab/run_GenErode*.sbatch /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/ 
 ```
 
-All sequencing data and reference genomes have to be within their respective subdirectdory in the main analysis directory. This includes SSL, test lanes, and LCWGS data. Count those files then copy them to the appropriate subdirectories. Don't include Undetermined\*.fq.gz files. Below is an example for *Lethrinus variegatus* from Pandanon (Pnd). Adjust accordingly.
+All sequencing data and reference genomes have to be within their respective subdirectdory in the main analysis directory. This includes lcWGS data, and if applicable SSL data. Count those files then copy them to the appropriate subdirectories. Don't include Undetermined\*.fq.gz files. Consider running this independently for each different site/population of the same species. Below is an example for *Lethrinus variegatus* from Pandanon (Pnd). Adjust accordingly.
 
 #### Historical
 ```
@@ -106,17 +117,11 @@ rsync -a /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/1st_sequenci
 ls /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/2nd_sequencing_run/fq_raw/Lva-APnd*.fq.gz | wc -l
 94
 
-rsync -avh /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/2nd_sequencing_run/fq_raw/Lva-APnd*.fq.gz /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/GenErode_Lva_20k/historical
-
-# 3rd run
-ls /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/3rd_sequencing_run/fq_raw/Lva-APnd*.fq.gz | wc -l
-94
-
-rsync -avh /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/3rd_sequencing_run/fq_raw/Lva-APnd*.fq.gz /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/GenErode_Lva_20k/historical
+rsync -a /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/2nd_sequencing_run/fq_raw/Lva-APnd*.fq.gz /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/GenErode_Lva_20k/historical &
 
 #confirm all files were transferred
 ls /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/GenErode_Lva_20k/historical/Lva-APnd*.fq.gz | wc -l
-282
+188
 ```
 
 #### Modern
@@ -125,7 +130,7 @@ ls /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/GenErode_Lva_20k/h
 ls /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_ssl_data_processing/lethrinus_variegatus/fq_raw_shotgun/Lva-CPnd*fq.gz | wc -l
 6
 
-rsync -avh /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_ssl_data_processing/lethrinus_variegatus/fq_raw_shotgun/ /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/GenErode_Lva_20k/modern
+rsync -a /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_ssl_data_processing/lethrinus_variegatus/fq_raw_shotgun/ /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/GenErode_Lva_20k/modern &
 
 # 1st run
 ls /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/1st_sequencing_run/fq_raw/Lva-CPnd*.fq.gz | wc -l
@@ -137,90 +142,84 @@ rsync -a /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/1st_sequenci
 ls /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/2nd_sequencing_run/fq_raw/Lva-CPnd*.fq.gz | wc -l
 96
 
-rsync -avh /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/2nd_sequencing_run/fq_raw/Lva-CPnd*.fq.gz /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/GenErode_Lva_20k/modern
-
-# 3rd run
-ls /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/3rd_sequencing_run/fq_raw/Lva-CPnd*.fq.gz | wc -l
-96
-
-rsync -avh /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/3rd_sequencing_run/fq_raw/Lva-CPnd*.fq.gz /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/GenErode_Lva_20k/modern
+rsync -a /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/2nd_sequencing_run/fq_raw/Lva-CPnd*.fq.gz /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/GenErode_Lva_20k/modern &
 
 #confirm all files were transferred
 ls /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/GenErode_Lva_20k/modern/Lva-CPnd*.fq.gz | wc -l
-294
+198
 ```
 
 #### Reference
 
-Use the 20k version (scaffolds > 20kbp) of the best reference genome that was used for probe development and mapping. 
+Use the 20k version (scaffolds > 20kbp) of the best reference genome that was used for probe development and mapping (mkBAM_ddocent). However, if probe development and mapping used different reference genomes, then use the reference genome that was used for mapping, unless the reference genome that was used for probe design is significantly better. You should confirm the statistics of the genomes used for probe development and mapping on your species' [SSL page](https://github.com/philippinespire/pire_ssl_data_processing). The best assembly is determined by the following metrics: 1. BUSCO; 2. N50; 3. Genome size completeness; 4. L50; 5. Largest contig.
 
 If there is no 20k reference genome, create it. First copy the best reference genome (e.g. `scaffolds.fasta`) to the `GenErode_Spp_20k/reference` directory.
 
-Create 20k reference genome: `reference.denovoSSL.Spp20k.fasta`
+Create 20k reference genome: `reference.denovoSSL.<Spp>20k.fasta`
 ```
-cd /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/reference
+cd /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/reference
 
-perl /home/e1garcia/shotgun_PIRE/REUs/2022_REU/PSMC/scripts/removesmalls.pl 20000 scaffolds.fasta > reference.denovoSSL.Spp20k.fasta
+perl /home/e1garcia/shotgun_PIRE/REUs/2022_REU/PSMC/scripts/removesmalls.pl 20000 scaffolds.fasta > reference.denovoSSL.<Spp>20k.fasta
 ```
 
 #### GERP Outgroups
 
 Copy gerp scripts to the species' gerp_outgroups directory.
 ```
-cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_wahab/gerp_outgroups/*.sh /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/gerp_outgroups/
+cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_wahab/gerp_outgroups/*.sh /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/gerp_outgroups/
 ```
 
-Identify the ~30 closest relatives of your species with chromosome-level genomes. These species' genomes will be your gerp_outgroups. Start by checking the closest relatives of your species in the [Phylogenetic classification of bony fishes](https://github.com/philippinespire/pire_ssl_data_processing/blob/main/scripts/Betancur2017_families.pdf) by Betancur et al (2017). You can check the `GenErode_Spp_20k/gerp_outgroups/` directories of other species to see if the genomes of your outgroup species have already been downloaded and renamed. If there aren't enough relevant genomes already on the HPC, then you'll have to download them from [Genbank](https://www.ncbi.nlm.nih.gov/datasets/genome/). Start by searching for the genus, family, then order of your species. Make sure they are chromosome-level genomes. 
+Identify the ~30 closest relatives of your species with chromosome-level genomes. These species' genomes need to be in your gerp_outgroups directory. Use the [Phylogenetic classification of bony fishes (Betancur et al 2017)](https://github.com/philippinespire/pire_ssl_data_processing/blob/main/scripts/Betancur2017_families.pdf) to identify your species' Family and Order and its closest relatives. You can check the `GenErode_Spp_20k/gerp_outgroups/` directories of other species to see if the genomes of your species' outgroups have already been downloaded and renamed. If there aren't enough relevant genomes already on the HPC, then you'll have to download them from [Genbank](https://www.ncbi.nlm.nih.gov/datasets/genome/). Start by searching for the genus, family, then order of your species. Make sure they are chromosome-level genomes. 
 
 <details><summary>available outgroup genomes</summary>
 
 ```
-# Ambassis buruensis: Family - incertae sedis between Atheriniformes and Mugiliformes (33)
+# Ambassis buruensis: Family - Ambassidae, Order - Incertae Sedis between Atheriniformes and Mugiliformes (33)
 /archive/carpenterlab/pire/pire_ambassis_buruensis_lcwgs/GenErode_Abu_20k/gerp_outgroups
 
-# Chromis viridis: Family - Pomacentridae (30)
+# Chromis viridis: Family - Pomacentridae, Order - Incertae Sedis between Atheriniformes and Mugiliformes (30)
 /archive/carpenterlab/pire/pire_chromis_viridis_lcwgs/2nd_sequencing_run/GenErode/gerp_outgroups
 
-# Corythoichthys haematopterus: Family - Syngnathiformes (33)
+# Corythoichthys haematopterus: Family - Syngnathidae, Order - Syngnathiformes (33)
 /archive/carpenterlab/pire/pire_corythoichthys_haematopterus_lcwgs/GenErode_Cha_20k/gerp_outgroups
 
-# Dascyllus aruanus: Family - Pomacentridae (30)
+# Dascyllus aruanus: Family - Pomacentridae, Order - Incertae Sedis between Atheriniformes and Mugiliformes (30)
 /archive/carpenterlab/pire/pire_dascyllus_aruanus_lcwgs/2nd_sequencing_run/GenErode/gerp_outgroups
 
-# Gerres oyena: Family - Gerreidae (34)
+# Gerres oyena: Family - Gerreidae, Order Gerreiformes (34)
 /archive/carpenterlab/pire/pire_gerres_oyena_lcwgs/1st_sequencing_run/GenErode_Goy_20k/gerp_outgroups
 
-# Hypoatherina temminckii: Family - Atherinidae ()
+# Hypoatherina temminckii: Family - Atherinidae, Order - Atheriniformes (32)
 /archive/carpenterlab/pire/pire_hypoatherina_temminckii_lcwgs/GenErode_Hte_20k/gerp_outgroups
 
-# Lethrinus variegatus: Family - Spariformes (31)
+# Lethrinus variegatus: Family - Lethrinidae, Order - Spariformes (31)
 /archive/carpenterlab/pire/pire_lethrinus_variegatus_lcwgs/GenErode_Lva_20k/gerp_outgroups 
 
-# Ostorhinchus chrysopomus: Family - Apogonidae (32)
+# Ostorhinchus chrysopomus: Family - Apogonidae, Order - Kurtiformes (32)
 /archive/carpenterlab/pire/pire_ostorhinchus_chrysopomus_lcwgs/GenErode_Och/gerp_outgroups
 
-# Parupeneus barberinus: Family - Mullidae (31)
+# Parupeneus barberinus: Family - Mullidae, Order - Syngnathiformes (31)
 /archive/carpenterlab/pire/pire_parupeneus_barberinus_lcwgs/GenErode_Pbb/gerp_outgroups
 
-# Pseudanthias squamipinnis: Family - Serranidae/Anthiadidae (27)
+# Pseudanthias squamipinnis: Family - Serranidae/Anthiadidae, Order - Perciformes (27)
 /archive/carpenterlab/pire/pire_pseudanthias_squamipinnis_lcwgs/2nd_sequencing_run/GenErode/gerp_outgroups
 
-# Sphaeramia nematoptera: Family - Apogonidae (27)
+# Sphaeramia nematoptera: Family - Apogonidae, Order - Kurtiformes (27)
 /archive/carpenterlab/pire/pire_sphaeramia_nematoptera_lcwgs/3rd_sequencing_run/GenErode/gerp_outgroups
 
-# Sphaeramia orbicularis: Family - Apogonidae ()
+# Sphaeramia orbicularis: Family - Apogonidae, Order - Kurtiformes (31)
 /archive/carpenterlab/pire/pire_sphaeramia_orbicularis_lcwgs/GenErode_Sor_20k/gerp_outgroups
 
-# Sphyraena obtusata: Family - incertae sedis between Istiophoriformes and Carangiformes (35)
+# Sphyraena obtusata: Family - Sphyraenidae, Order - Incertae Sedis between Istiophoriformes and Carangiformes (35)
 /archive/carpenterlab/pire/pire_sphyraena_obtusata_lcwgs/GenErode_Sob_20k/gerp_outgroups
 
-# Stethojulis interrupta: Family - Labridae (37)
+# Stethojulis interrupta: Family - Labridae, Order - Labriformes (37)
 /archive/carpenterlab/pire/pire_stethojulis_interrupta_lcwgs/1st_sequencing_run/GenErode_Sin_20k/gerp_outgroups
 
-# Taeniamia zosterophora: Family - Apogonidae (31)
+# Taeniamia zosterophora: Family - Apogonidae, Order - Kurtiformes (31)
 /archive/carpenterlab/pire/pire_taeniamia_zosterophora_lcwgs/2nd_sequencing_run/GenErode_20k_2runs_2/gerp_outgroups
 
-# Zenarchopterus dispar: Family - Zenarchopteridae (31)
+# Zenarchopterus dispar: Family - Zenarchopteridae, Order - Beloniformes (31)
 /archive/carpenterlab/pire/pire_zenarchopterus_dispar_lcwgs/GenErode_Zdi_4/gerp_outgroups
 ```
 
@@ -234,40 +233,36 @@ All scientific names need an underscore between genus and species (Genus_species
 <details><summary>speciesnames.txt</summary>
 
 ```
-Ambassis_buruensis
-Acanthochromis_polyacanthus
-Amphilophus_citrinellus
-Amphiprion_ocellaris
-Amphiprion_percula
-Astatotilapia_calliptera
-Blennius_ocellaris
-Chelon_labrosus
-Cololabis_saira
-Dascyllus_trimaculatus
-Fundulus_heteroclitus
-Gambusia_affinis
-Gouania_willdenowi
-Kryptolebias_marmoratus
-Lipophrys_pholis
-Maylandia_zebra
-Melanotaenia_boesemani
-Mugil_cephalus
-Nematolebias_whitei
-Neolamprologus_multifasciatus
-Neostethus_bicornis
-Odontesthes_bonariensis
-Oreochromis_aureus
-Oreochromis_niloticus
-Oryzias_curvinotus
-Oryzias_latipes
-Oryzias_melastigma
-Parachromis_managuensis
-Parambassis_ranga
-Petenia_splendida
-Poecilia_reticulata
-Salarias_fasciatus
-Telmatherina_bonti
-Xiphophorus_maculatus
+Lethrinus_variegatus
+Acanthopagrus_latus
+Ammodytes_dubius
+Ammodytes_marinus
+Antennarius_maculatus
+Antennarius_striatus
+Chaetodon_trifascialis
+Cheilinus_undulatus
+Chelmon_rostratus
+Diplodus_puntazzo
+Hyperoplus_immaculatus
+Hyperoplus_lanceolatus
+Karalla_daura
+Labroides_dimidiatus
+Labrus_bergylta
+Labrus_mixtus
+Lagodon_rhomboides
+Lateolabrax_maculatus
+Lutjanus_erythropterus
+Notolabrus_celidotus
+Pagrus_major
+Pao_palembangensis
+Rhomboplites_aurorubens
+Scatophagus_argus
+Sparus_aurata
+Symphodus_melops
+Takifugu_bimaculatus
+Takifugu_rubripes
+Tautogolabrus_adspersus
+Thamnaconus_septentrionalis
 ```
 
 </p>
@@ -278,41 +273,36 @@ Create the file `filenames.txt` with the URLs of each of the genomes of these sp
 <details><summary>filenames.txt</summary>
 
 ```
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/021/347/895/GCF_021347895.1_KAUST_Apoly_ChrSc/GCF_021347895.1_KAUST_Apoly_ChrSc_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/013/435/755/GCA_013435755.1_ASM1343575v1/GCA_013435755.1_ASM1343575v1_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/022/539/595/GCF_022539595.1_ASM2253959v1/GCF_022539595.1_ASM2253959v1_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/022/539/595/GCF_022539595.1_ASM2253959v1/GCF_022539595.1_ASM2253959v1_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/900/246/225/GCF_900246225.1_fAstCal1.2/GCF_900246225.1_fAstCal1.2_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/963/422/515/GCA_963422515.1_fBleOce1.1/GCA_963422515.1_fBleOce1.1_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/963/514/085/GCA_963514085.1_fCheLab1.1/GCA_963514085.1_fCheLab1.1_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/033/807/715/GCF_033807715.1_fColSai1.1/GCF_033807715.1_fColSai1.1_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/024/666/655/GCA_024666655.1_DTR_v1.0/GCA_024666655.1_DTR_v1.0_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/125/445/GCF_011125445.2_MU-UCD_Fhet_4.1/GCF_011125445.2_MU-UCD_Fhet_4.1_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/019/740/435/GCF_019740435.1_SWU_Gaff_1.0/GCF_019740435.1_SWU_Gaff_1.0_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/900/634/775/GCF_900634775.1_fGouWil2.1/GCF_900634775.1_fGouWil2.1_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/649/575/GCF_001649575.2_ASM164957v2/GCF_001649575.2_ASM164957v2_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/963/383/615/GCA_963383615.1_fLipPho2.1/GCA_963383615.1_fLipPho2.1_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/238/955/GCF_000238955.4_M_zebra_UMD2a/GCF_000238955.4_M_zebra_UMD2a_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/017/639/745/GCF_017639745.1_fMelBoe1.pri/GCF_017639745.1_fMelBoe1.pri_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/022/458/985/GCF_022458985.1_CIBA_Mcephalus_1.1/GCF_022458985.1_CIBA_Mcephalus_1.1_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/014/905/685/GCF_014905685.2_NemWhi1/GCF_014905685.2_NemWhi1_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/963/576/455/GCA_963576455.2_fNeoMul1.2/GCA_963576455.2_fNeoMul1.2_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/902/685/375/GCA_902685375.1_fNeoBic2.1/GCA_902685375.1_fNeoBic2.1_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/902/685/375/GCA_902685375.1_fNeoBic2.1/GCA_902685375.1_fNeoBic2.1_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/027/942/865/GCA_027942865.1_fOdoBon6.hap1/GCA_027942865.1_fOdoBon6.hap1_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/027/942/865/GCA_027942865.1_fOdoBon6.hap1/GCA_027942865.1_fOdoBon6.hap1_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/013/358/895/GCF_013358895.1_ZZ_aureus/GCF_013358895.1_ZZ_aureus_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/858/045/GCF_001858045.2_O_niloticus_UMD_NMBU/GCF_001858045.2_O_niloticus_UMD_NMBU_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/023/969/325/GCA_023969325.1_ASM2396932v1/GCA_023969325.1_ASM2396932v1_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/234/675/GCF_002234675.1_ASM223467v1/GCF_002234675.1_ASM223467v1_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/922/805/GCF_002922805.2_ASM292280v2/GCF_002922805.2_ASM292280v2_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/040/437/545/GCA_040437545.1_ASM4043754v1/GCA_040437545.1_ASM4043754v1_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/900/634/625/GCF_900634625.1_fParRan2.1/GCF_900634625.1_fParRan2.1_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/040/437/555/GCA_040437555.1_P_splendida_v1.0/GCA_040437555.1_P_splendida_v1.0_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/633/615/GCF_000633615.1_Guppy_female_1.0_MT/GCF_000633615.1_Guppy_female_1.0_MT_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/902/148/845/GCF_902148845.1_fSalaFa1.1/GCF_902148845.1_fSalaFa1.1_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/933/228/915/GCA_933228915.1_fTelBon1.1/GCA_933228915.1_fTelBon1.1_genomic.fna.gz
-https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/775/205/GCF_002775205.1_X_maculatus-5.0-male/GCF_002775205.1_X_maculatus-5.0-male_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/904/848/185/GCF_904848185.1_fAcaLat1.1/GCF_904848185.1_fAcaLat1.1_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/026/122/265/GCA_026122265.1_UConn_ADub_2022/GCA_026122265.1_UConn_ADub_2022_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/949/987/685/GCA_949987685.1_fAmmMar1.1/GCA_949987685.1_fAmmMar1.1_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/013/358/685/GCA_013358685.1_fAntMac1.pri/GCA_013358685.1_fAntMac1.pri_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/040/054/535/GCA_040054535.1_ASM4005453v1/GCA_040054535.1_ASM4005453v1_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/039/877/785/GCA_039877785.1_fChaTrf1.hap1/GCA_039877785.1_fChaTrf1.hap1_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/018/320/785/GCF_018320785.1_ASM1832078v1/GCF_018320785.1_ASM1832078v1_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/017/976/325/GCF_017976325.1_fCheRos1.pri/GCF_017976325.1_fCheRos1.pri_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/963/678/695/GCA_963678695.2_Dpuntazzo_v2/GCA_963678695.2_Dpuntazzo_v2_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/949/357/725/GCA_949357725.1_fHypImm3.1/GCA_949357725.1_fHypImm3.1_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/026/929/865/GCA_026929865.2_TBG_H_lanceolatus_asm_v1.1/GCA_026929865.2_TBG_H_lanceolatus_asm_v1.1_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/029/224/185/GCA_029224185.1_ASM2922418v1/GCA_029224185.1_ASM2922418v1_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/030/710/495/GCA_030710495.1_ASM3071049v1/GCA_030710495.1_ASM3071049v1_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/963/930/695/GCF_963930695.1_fLabBer1.1/GCF_963930695.1_fLabBer1.1_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/963/584/025/GCF_963584025.1_fLabMix1.1/GCF_963584025.1_fLabMix1.1_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/039/737/535/GCA_039737535.1_Lrho_1.0/GCA_039737535.1_Lrho_1.0_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/031/216/445/GCA_031216445.1_YSFRI_Lmacu_1.1/GCA_031216445.1_YSFRI_Lmacu_1.1_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/020/091/685/GCA_020091685.1_ASM2009168v1/GCA_020091685.1_ASM2009168v1_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/762/535/GCF_009762535.1_fNotCel1.pri/GCF_009762535.1_fNotCel1.pri_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/040/436/345/GCA_040436345.1_Pma_NU_1.0/GCA_040436345.1_Pma_NU_1.0_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/015/343/265/GCA_015343265.1_ASM1534326v1/GCA_015343265.1_ASM1534326v1_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/041/380/415/GCA_041380415.1_vsnapper_v1/GCA_041380415.1_vsnapper_v1_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/020/382/885/GCF_020382885.2_fScaArg1.pri/GCF_020382885.2_fScaArg1.pri_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/900/880/675/GCF_900880675.1_fSpaAur1.1/GCF_900880675.1_fSpaAur1.1_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/947/650/265/GCA_947650265.1_fSymMel2.1/GCA_947650265.1_fSymMel2.1_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/004/026/145/GCA_004026145.2_XU_Tbim_1.0/GCA_004026145.2_XU_Tbim_1.0_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/901/000/725/GCF_901000725.2_fTakRub1.2/GCF_901000725.2_fTakRub1.2_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/020/745/685/GCA_020745685.1_fTauAds1.pri.cur/GCA_020745685.1_fTauAds1.pri.cur_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/823/395/GCA_009823395.1_ASM982339v1/GCA_009823395.1_ASM982339v1_genomic.fna.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/962/446/985/GCA_962446985.1_fXyrNov1.1/GCA_962446985.1_fXyrNov1.1_genomic.fna.gz
 ```
 
 </p>
@@ -413,7 +403,7 @@ Total files listed: $total_files
 Missing files: $missing_files
 ```
 
-The file names of the downloaded genomes will be all of the text after the last forward slash (/) in the URLs. The file names of the downloaded genomes need to be changed to `Genus_species.fa.gz`. This can be done one at a time with a simple `mv` command. Alternatively you can edit the script `rename_genomes.sh` to do it all at once. You can edit this script with the information from your files `speciesnames.txt` and `filenames.txt`. If you have kept the species' names and their URLs in the same order, excluding the first line in `speciesnames.txt` that has your Genus_species, this should be a simple copy and paste. Then just add `mv` before the genome file names and `.fa.gz` at the end of each Genus_species.  
+The file names of the downloaded genomes will be all of the text after the last forward slash (/) in the URLs. The file names of the downloaded genomes need to be changed to `Genus_species.fa.gz`. This can be done one at a time with a simple `mv` command. Alternatively you can edit the script `rename_genomes.sh` to do it all at once. You can edit this script with the information from your files `speciesnames.txt` and `filenames.txt`. If you have kept the species names and their URLs in the same order, excluding the first line in `speciesnames.txt` that has your Genus_species, this should be a simple copy and paste. Then just add `mv` before the genome file names and `.fa.gz` at the end of each Genus_species.  
 
 <details><summary>rename_genomes.sh</summary>
 
@@ -449,33 +439,30 @@ bash rename_genomes.sh
 
 Create a dated phylogenetic tree. 
 
-Upload `speciesnames.txt` to [TimeTree of Life](https://timetree.org/) using the `Choose File` button at the bottom under **Load a List of Species**. The file `speciesnames.txt`  includes all of the gerp_outgroup species. Download the .nwk and .jpg files that TimeTree creates. Upload those to the `GenErode_Spp_20k/gerp_outgroup` directory. Rename the file from `speciesnames.nwk` to `gerp_tree.nwk`.
+Upload `speciesnames.txt` to [TimeTree of Life](https://timetree.org/) using the `Choose File` button at the bottom under **Load a List of Species**. The file `speciesnames.txt`  includes all of the gerp_outgroup species. Download the .nwk and .jpg files that TimeTree creates. Upload those to the `GenErode_Spp_20k/gerp_outgroup` directory. Rename the NEWICK file from `speciesnames.nwk` to `gerp_tree.nwk`.
 ```
 mv speciesnames.nwk gerp_tree.nwk
 ```
 
-Replace your `Genus_species` in `gerp_tree.nwk` with the name of the reference genome, which should be `reference.denovoSSL.Spp20k.fasta`.
+Replace your `Genus_species` in `gerp_tree.nwk` with the name of the reference genome, which should be `reference.denovoSSL.<Spp>20k.fasta`. 
 ```
-sed -i 's/Genus_species/reference.denovoSSL.Spp20k.fasta/g' gerp_tree.nwk
+sed -i 's/Genus_species/reference.denovoSSL.<Spp>20k.fasta/g' gerp_tree.nwk
 ```
 
 </details>
 
-<details><summary>3. Edit config files</summary>
+<details><summary>3. Config Files</summary>
 
-### 3. Edit config files
+### 3. Config Files
 
-Copy config scripts to your species' config directory.
-```
-cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_wahab/config/config* /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/config/
-```
 GenErode uses `config.yaml` to run. It also requires you to make two config files: `modern_samples.txt` and `historical_samples.txt`. These config files are specific to your data. In these config files, each unique sample gets its own line with its unique forward and reverse read files. The R1_fastq_file and R2_fastq_file in the header of these config files correspond to the \*.1.fq.gz and \*.2.fq.gz files that are preceded by a unique sample name.
 
-Each config file has the same header: 
+These 2 config files have the same header: 
 ```
 samplename_index_lane readgroup_id readgroup_platform path_to_R1_fastq_file path_to_R2_fastq_file
 ```
-Example `modern_samples.txt` with 1 sample. 
+
+Example `modern_samples.txt` with 1 sample.
 ```
 samplename_index_lane readgroup_id readgroup_platform path_to_R1_fastq_file path_to_R2_fastq_file
 LvaCPnd001_Ex11A_L2 HJCYVCCX2:2 illumina modern/Lva-CPnd_001-Ex1-1A-lcwgs-2-1.1.fq.gz modern/Lva-CPnd_001-Ex1-1A-lcwgs-2-1.2.fq.gz
@@ -483,7 +470,7 @@ LvaCPnd001_Ex11A_L2 HJCYVCCX2:2 illumina modern/Lva-CPnd_001-Ex1-1A-lcwgs-2-1.1.
 
 samplename: LvaCPnd001
 
-<Spp><Era><Site><IndividualID>
+<Spp><Era><Site><Ind>
 
 index: Ex11A
 
@@ -491,11 +478,11 @@ index: Ex11A
 
 lane: L2
 
-LaneID is not always present in the new file name (\*.fq.gz), but it can be extracted from the old file name in the fq_raw directories for each run, including SSL. This can be done using the `config_generode_old_new_lane.sh` script.
+LaneID is not always present in the new file name (\*.fq.gz), but it can be extracted from the old file names in the fq_raw directories for each run, including SSL. This can be done using the `config_generode_old_new_lane.sh` script.
 
 readgroup_id: HJCYVCCX2:2
 
-Readgroup_ID is located in the first line of each \*.fq.gz file. Each unique sample should have the same readgroup_id in the first line of its \*.1.fq.gz and \*.2.fq.gz files. The readgroup_id is the text between the 3rd and 5th colon (:). 
+Readgroup_ID is located in the first line of each \*.fq.gz file. Each unique sample should have the same readgroup_id in the first line of its \*.1.fq.gz and \*.2.fq.gz files. The readgroup_id is the text between the 3rd and 5th colon (:).
 
 example: `@E00558:814:HJCYVCCX2:2:1101:8410:1502 1:N:0:ACGTTACC+GAGNTACG`
 
@@ -515,12 +502,26 @@ These config files can be manually (painstakingly) created for each species...or
 
 The script `config_generode_old_new_lane.sh` will be used to create the file `old_new_lane_GenErode_Spp_config.log`. This will be used as an input for the scripts `config_modern_samples.sh` and `config_historical_samples.sh`, which will create the files `modern_samples.txt` and `historical_samples.txt`, respectively. Each script should be run in the config directory. Each scripts need to be edited for the user-defined variables: `species` and `Spp`. These scripts require the input file `old_new_lane_GenErode__config.log`, which is created from the bash script `generode_config_old_new_lane.sh`.
 
-1. Identify all `old_new_config.log` files
-
-The `config_generode_old_new_lane.sh` script requires the `old_new_config.log` files from each fq_raw directory that will be used in GenErode.
+1. Copy config scripts to your species' config directory.
 ```
-cd /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/config
+cd /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/config
 
+cp /home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_wahab/config/config* /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/config/
+```
+
+2. Edit the user-defined variables in the scripts `config_generode_old_new_lane.sh`, `config_historical_samples.sh`, `config_modern_samples.sh` to reflect your species. Edit the paths if necessary.
+```
+# User-defined variables for species and species code (Spp).
+# For species use lowercase and an underscore so the directory path can be identified (e.g. lethrinus_variegatus)
+species="genus_species"
+# For Spp, this is the three letter species code. Capitalize the first letter.
+Spp="Spp"
+```
+
+3. Identify all `old_new_config.log` files
+
+The `config_generode_old_new_lane.sh` script requires the `old_new_config.log` files from each fq_raw directory that will be used in GenErode. However, sometimes the files `old_new_config.log` are not present. In that case, they can be either manually created, or manually entered into the config files later. 
+```
 # 1st run
 ls ../../1st_sequencing_run/fq_raw/old_new_filenames.log
 
@@ -530,105 +531,74 @@ ls ../../2nd_sequencing_run/fq_raw/old_new_filenames.log
 # 3rd run # you may only have 2 runs
 ls ../../3rd_sequencing_run/fq_raw/old_new_filenames.log
 
-# SSL. This might be in a different location and it might not have been created. e.g.
+# SSL. This might be in a different location or have a different directory naming structure. This file may not have been created. e.g.
 ls /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_ssl_data_processing/lethrinus_variegatus/fq_raw_shotgun/old_new_config.log
 ```
 
-The SSL files will likely be in 1 of these 3 locations. Check these locations for `old_new_config.log`: 
+The SSL files will likely be in 1 of these 3 locations. Check these locations for the SSL `old_new_config.log` if you are using SSL data: 
 ```
 ls /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_ssl_data_processing/
 ls /archive/carpenterlab/pire/pire_ssl_data_processing/
 ls /home/e1garcia/shotgun_PIRE/pire_ssl_data_processing/
 ```
 
-However sometimes they don't have the file `old_new_config.log`. If this is not present, this can be manually created. e.g.
+4. Run `config_generode_old_new_lane.sh` to create `old_new_lane_GenErode_Spp_config.log`. The file `old_new_lane_GenErode_Spp_config.log` does not have a header, but the columns are `origFileName newFileName lane`.
 ```
-# SSL files
-ls /home/e1garcia/shotgun_PIRE/pire_ssl_data_processing/lethrinus_variegatus/fq_raw_shotgun/*.fq.gz
-Lva-CPnd_006A_L3_1.fq.gz
-Lva-CPnd_006A_L3_2.fq.gz
-Lva-CPnd_006G_L3_1.fq.gz
-Lva-CPnd_006G_L3_2.fq.gz
-Lva-CPnd_006H_L3_1.fq.gz
-Lva-CPnd_006H_L3_2.fq.gz
-
-# newFileNames.txt
-cat /home/e1garcia/shotgun_PIRE/pire_ssl_data_processing/lethrinus_variegatus/fq_raw_shotgun/newFileNames.txt
-Lva-CPnd_006A_L3_
-Lva-CPnd_006G_L3_
-Lva-CPnd_006H_L3_
-
-# origFileNames.txt
-cat /home/e1garcia/shotgun_PIRE/pire_ssl_data_processing/lethrinus_variegatus/fq_raw_shotgun/origFileNames.txt
-LvaC00610A_CKDL220006132-1a-AK6260-7UDI214_HK52YDSX3_L3_
-LvaC0069G_CKDL220006132-1a-AK6881-GC12_HK52YDSX3_L3_
-LvaC0069H_CKDL220006132-1a-AK6881-7UDI246_HK52YDSX3_L3_
-
-nano /home/e1garcia/shotgun_PIRE/pire_ssl_data_processing/lethrinus_variegatus/fq_raw_shotgun/old_new_config.log
-
-LvaC00610A_CKDL220006132-1a-AK6260-7UDI214_HK52YDSX3_L3_1.fq.gz Lva-CPnd_006A_L3_1.fq.gz
-LvaC0069G_CKDL220006132-1a-AK6881-GC12_HK52YDSX3_L3_1.fq.gz     Lva-CPnd_006G_L3_1.fq.gz
-LvaC0069H_CKDL220006132-1a-AK6881-7UDI246_HK52YDSX3_L3_1.fq.gz  Lva-CPnd_006H_L3_1.fq.gz
-LvaC00610A_CKDL220006132-1a-AK6260-7UDI214_HK52YDSX3_L3_2.fq.gz Lva-CPnd_006A_L3_2.fq.gz
-LvaC0069G_CKDL220006132-1a-AK6881-GC12_HK52YDSX3_L3_2.fq.gz     Lva-CPnd_006G_L3_2.fq.gz
-LvaC0069H_CKDL220006132-1a-AK6881-7UDI246_HK52YDSX3_L3_2.fq.gz  Lva-CPnd_006H_L3_2.fq.gz
-```
-
-2. Run `config_generode_old_new_lane.sh`
-
-Once all of the `old_new_config.log` files have been identified, edit user-defined variables in the script `config_generode_old_new_lane.sh`. 
-```
-# User-defined variables for species and species code (Spp).
-# For species use lowercase and an underscore so the directory path can be identified (e.g. lethrinus_variegatus)
-species="lethrinus_variegatus"
-# For Spp, this is the three letter species code. Capitalize the first letter.
-Spp="Lva"
-
-# Define the lcwgs & ssl directory path using the species variable. Edit if necessary. Check SSL. 
-lcwgs_path=$"/archive/carpenterlab/pire/pire_${species}_lcwgs"
-ssl_path=$"/home/e1garcia/shotgun_PIRE/pire_ssl_data_processing/${species}"
-
-# Define the input files. Edit if necessary. Check SSL.
-file1="${lcwgs_path}/1st_sequencing_run/fq_raw/old_new_filenames.log"
-file2="${lcwgs_path}/2nd_sequencing_run/fq_raw/old_new_filenames.log"
-file3="${lcwgs_path}/3rd_sequencing_run/fq_raw/old_new_filenames.log"
-file4="${ssl_path}/fq_raw_shotgun/old_new_filenames.log"
-```
-
-Run `config_generode_old_new_lane.sh` to create `old_new_lane_GenErode_Spp_config.log`. The file `old_new_lane_GenErode_Spp_config.log` does not have a header, but the columns are `origFileName newFileName lane`.
-```
-cd /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Ssp_20k/config
-
 bash generode_config_old_new_lane.sh
 ```
+
 The output will tell you which `old_new_config.log` files were used to create `old_new_lane_GenErode_Spp_config.log`, which will be used by `config_historical_samples.sh` and `config_modern_samples.sh`. 
 
-#### Historical
-run `config_historical_samples.sh`
-```
-bash config_historical_samples.sh
-```
-Output
-```
-Historical samples processing completed. Output saved to historical_samples.txt
-All 141 1.fq.gz and 141 2.fq.gz files were incorporated into historical_samples.txt
-```
-
-#### Modern
-run `config_modern_samples.sh`
+5. Run `config_modern_samples.sh`.
 ```
 bash config_modern_samples.sh
 ```
 
-#### Edit the config files
+Output example:
+```
+Modern samples processing completed. Output saved to modern_samples.txt
+All 99 1.fq.gz and 99 2.fq.gz files were incorporated into modern_samples.txt
+```
+These values should be the same and should be half of the total number of modern \*.fq.gz files in the modern directory. 
 
-Template config files are located in `home/e1garcia/shotgun_PIRE/pire_lcwgs_data_processing/scripts/GenErode_wahab/config`.
+6. Run `config_historical_samples.sh`. 
+```
+bash config_historical_samples.sh
+```
 
-Currently these are the files used to conduct the white rhino reference test run.
+Output example:
+```
+Historical samples processing completed. Output saved to historical_samples.txt
+All 94 1.fq.gz and 94 2.fq.gz files were incorporated into historical_samples.txt
+```
+These values should be the same and should be half of the total number of historical \*.fq.gz files in the historical directory.  
 
-Edit the config.yaml files to reflect the analyses you want to conduct in GenErode.
+7. Run `config_historical_rescaled_samplenames.sh`. This file doesn't need to be edited. It creates the file `historical_rescaled_samplenames.txt`, which can be pasted into line 173 in the `config.yaml` file.
+```
+bash config_historical_rescaled_samplenames.sh
+```
 
-Edit the `*historical_samples.txt` and `*modern_samples.txt` files to reflect your sample information.
+8. Edit `config.yaml` to reflect the analyses you want to conduct in GenErode.
+
+<details><summary>config.yaml example</summary>
+
+```
+line 23: ref_path: "/archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/reference/reference.denovoSSL.<Spp>20k.fasta"
+line 31: historical_samples: "config/historical_samples.txt"
+line 32: modern_samples: "config/modern_samples.txt"
+Line 70: fastq_processing: True
+line 89: map_historical_to_mitogenomes: False
+line 165: historical_bam_mapDamage: True
+line 173: historical_rescaled_samplenames: ["LvaAPnd001","LvaAPnd002","LvaAPnd003"]
+line 446: snpEff: False
+line 455: gtf_path: ""
+line 486: gerp: True
+line 492: gerp_ref_path: "/archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/gerp_outgroups"
+line 501: tree: "/archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/gerp_outgroups/gerp_tree.nwk"
+```
+
+</p>
+</details>
 
 </p>
 </details>
@@ -651,43 +621,43 @@ sbatch run_GenErode_unlock.sbatch
 
 </details>
 
-<details><summary>5. Check results</summary>
+<details><summary>5. Check Results</summary>
 
-### 5. Check results
+### 5. Check Results
 
 **Count the number of Modern input samples: \*.fq.gz**
 ```
-find /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/modern -maxdepth 1 -type f -name 'Spp-CPnd_*' -printf '%f\n' | cut -c 10-12 | sort | uniq | wc -l
+find /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/modern -maxdepth 1 -type f -name '<Spp>-C<Site>_*' -printf '%f\n' | cut -c 10-12 | sort | uniq | wc -l
 ```
 
 **Count the number of Modern output files: \*.merged.rmdup.merged.realn.bam**
 ```
-ls /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/results/modern/mapping/reference.denovoSSL.Spp20k/*.merged.rmdup.merged.realn.bam | wc -l
+ls /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/results/modern/mapping/reference.denovoSSL.<Spp>20k/*.merged.rmdup.merged.realn.bam | wc -l
 ```
 
 **Count the number of Modern output files: \*.merged.rmdup.merged.realn.bai**
 ```
-ls /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/results/modern/mapping/reference.denovoSSL.Spp20k/*.merged.rmdup.merged.realn.bai | wc -l
+ls /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/results/modern/mapping/reference.denovoSSL.<Spp>20k/*.merged.rmdup.merged.realn.bai | wc -l
 ```
 
 **Count the number of Historical input samples: \*.fq.gz**
 ```
-find /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/historical -maxdepth 1 -type f -name 'Spp-APnd_*' -printf '%f\n' | cut -c 10-12 | sort | uniq | wc -l
+find /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/historical -maxdepth 1 -type f -name '<Spp>-A<Site>_*' -printf '%f\n' | cut -c 10-12 | sort | uniq | wc -l
 ```
 
 **Count the number of Historical output files: \*.merged.rmdup.merged.realn.bam**
 ```
-ls /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/results/historical/mapping/reference.denovoSSL.Spp20k/*.merged.rmdup.merged.realn.rescaled.bam | wc -l
+ls /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/results/historical/mapping/reference.denovoSSL.<Spp>20k/*.merged.rmdup.merged.realn.rescaled.bam | wc -l
 ```
 
 **Count the number of Historical output files: \*.merged.rmdup.merged.realn.bai**
 ```
-ls /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/results/historical/mapping/reference.denovoSSL.Spp20k/*.merged.rmdup.merged.realn.rescaled.bai | wc -l
+ls /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/results/historical/mapping/reference.denovoSSL.<Spp>20k/*.merged.rmdup.merged.realn.rescaled.bai | wc -l
 ```
 
 **GERP Scores File**
 ```
-ls /archive/carpenterlab/pire/pire_genus_species_lcwgs/GenErode_Spp_20k/results/gerp/reference.denovoSSL.Spp20k.ancestral.rates.gz
+ls /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/results/gerp/reference.denovoSSL.<Spp>20k.ancestral.rates.gz
 ```
 
 If all output has been created, then GenErode has successfully run. Move on to the next step in the pipeline. Note that each input sample should have 1 `\*.merged.rmdup.merged.realn.rescaled.bam` and 1 `\*.merged.rmdup.merged.realn.rescaled.bai` file.

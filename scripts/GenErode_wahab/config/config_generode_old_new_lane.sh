@@ -5,9 +5,9 @@
 
 # User-defined variables for species and species code (Spp). 
 # For species use lowercase and an underscore so the directory path can be identified (e.g. lethrinus_variegatus)
-species="lethrinus_variegatus"
+species="genus_species"
 # For Spp, this is the three letter species code. Capitalize the first letter.
-Spp="Lva"
+Spp="Spp"
 
 # Define the lcwgs & ssl directory path using the species variable. Edit if necessary. Check SSL.
 lcwgs_path=$"/archive/carpenterlab/pire/pire_${species}_lcwgs"

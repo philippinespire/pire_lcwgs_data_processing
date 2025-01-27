@@ -18,7 +18,9 @@ Outline of potential analyses using ANGSD:
   11) Calculate neutrality test statistics
   12) {additional steps TBD}
 
-## 1. Create an analysis folder and compile .bam files.
+<details><summary> 1. Create an analysis folder and compile .bam files</summary>
+<p>
+## **1. Create an analysis folder and compile .bam files**
 
 Create a folder with an appropriate name (e.g. `angsd_analysis`) within your species' lcwgs processing directory. Copy .bam files to be analyzed to this folder.
 
@@ -26,6 +28,8 @@ You should be using the final GenErode outputs for ANGSD analysis. For Albatross
 
 Ideally you have run GenErode on data across lanes from all individuals, in which case information for each individual will already be merged into one file. If you need to add information from another run or otherwise merge multiple .bam files from the same set of individual, you can use the merge scripts as described in the lcwgs_processing README. The Sfa repo also has an example of a more complicated merge (3 runs).
 
+</p>
+</details>
 ## 2. SNP calling
 
 An initial SNP calling step is used to identify set of SNPs with a reasonable depth that can be assessed across the historic and contemporary samples.

@@ -151,6 +151,11 @@ Once the job is done, download the outputs: angsd_analysis/angsd_snps_pca.cov, b
 Run admixture.R and pca.R files in RStudio to get two plots: 1) admixture proportions and 2) PCA for historical and contemporary individuals. Run the admixture.R plot before the pca.R files. 
 
 --> Once you have run admixture and PCA, if you have individual outliers or evidence of inversions (a "three-stripe" pattern in the PCA) you may want to revisit step #3, removing outlier individuals and/or chromosomes containing inversions (identifiable by running separate PCAs for each chromosome). WinPCA (step #6, still in development) can also help to pinpoint inverted regions.
+</p>
+</details>
+
+<details><summary>5. (Optional) Running PCANGSD for a Selection Scan</summary>
+<p>
 
 ## 5. (Optional) Running PCANGSD for a Selection Scan
 
@@ -178,7 +183,12 @@ After the job runs, download the following outputs to your personal directory (e
 
 Run pcangsd_selection_plot_v2.R in RStudio to generate a Manhattan plot and look at SNPs potentially under selection. 
 
-## 6. (Optional) Running winPCA to detect chromosome inversions (still in testing on Wahab)
+</p>
+</details>
+
+<details><summary>6. (Optional) Running winPCA to detect chromosome inversions (in testing mode on Wahab)</summary>
+<p>
+## 6. (Optional) Running winPCA to detect chromosome inversions (in testing mode on Wahab)
 
 Make sure to install any Python packagedependencies needed for winPCA. 
 ```
@@ -216,7 +226,11 @@ crun.ngsTools winpca pca angsd_depth_1_15_notrans_renamed.beagle.gz chr4:1-27169
 #Chr4:27169852 is chromosome name and size
 #1- is the size of the windows analysis 
 ```
+</p>
+</details>
 
+<details><summary>7. Generating Site Allele Frequencies</summary>
+<p>
 ## 7. Generating Site Allele Frequencies
 
 Make two bam lists: one with only Albatross individuals (ABas) and one with only contemporary individuals (CBas). Use the subsetted bam list because it excludes outlier individuals. 
@@ -275,7 +289,11 @@ sbatch saf_beagle_maf_CBas.sbatch /archive/carpenterlab/pire/pire_salarias_fasci
 
 sbatch saf_beagle_maf_ABas.sbatch /archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/angsd_analysis/
 ```
+</p>
+</details>
 
+<details><summary>8. Calculating FST across the whole genome</summary>
+<p>
 ## 8. Calculating FST across the whole genome
 
 Copy Kyra Fitz's fst.sbatch script (https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs/blob/main/fst.sbatch) into a new .sbatch file (fst.sbatch) within our angsd_analysis directory, and adjust the script to fit the *Salarias fasciatus* data. It will be using .saf.idx files from Step 7's outputs.
@@ -298,3 +316,5 @@ Windowed Fst can be calculated in ANGSD based on the output of fst.sbatch wusing
 ```
 sbatch fst_window.sbatch
 ```
+</p>
+</details>

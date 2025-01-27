@@ -20,6 +20,7 @@ Outline of potential analyses using ANGSD:
 
 <details><summary> 1. Create an analysis folder and compile .bam files</summary>
 <p>
+  
 ## 1. Create an analysis folder and compile .bam files
 
 Create a folder with an appropriate name (e.g. `angsd_analysis`) within your species' lcwgs processing directory. Copy .bam files to be analyzed to this folder.
@@ -51,6 +52,7 @@ Ideally you have run GenErode on data across lanes from all individuals, in whic
 
 <details><summary>2. SNP calling </summary>
 <p>
+
 ## 2. SNP calling
 
 An initial SNP calling step is used to identify set of SNPs with a reasonable depth that can be assessed across the historic and contemporary samples.
@@ -101,6 +103,7 @@ sbatch snp_calling.sbatch /archive/carpenterlab/pire/<your_species_dir>/angsd_an
 
 <details><summary>3. Generating genotype likelihoods and making a beagle.gz file</summary>
 <p>
+  
 ## 3. Generating genotype likelihoods and making a beagle.gz file 
 
 Genotype likelihoods will be used for all downstream analyses (PCA, admixture, estimating diversity, FST, and selection).
@@ -188,6 +191,7 @@ Run pcangsd_selection_plot_v2.R in RStudio to generate a Manhattan plot and look
 
 <details><summary>6. (Optional) Running winPCA to detect chromosome inversions (in testing mode on Wahab)</summary>
 <p>
+  
 ## 6. (Optional) Running winPCA to detect chromosome inversions (in testing mode on Wahab)
 
 Make sure to install any Python packagedependencies needed for winPCA. 
@@ -231,6 +235,7 @@ crun.ngsTools winpca pca angsd_depth_1_15_notrans_renamed.beagle.gz chr4:1-27169
 
 <details><summary>7. Generating Site Allele Frequencies</summary>
 <p>
+  
 ## 7. Generating Site Allele Frequencies
 
 Make two bam lists: one with only Albatross individuals (ABas) and one with only contemporary individuals (CBas). Use the subsetted bam list because it excludes outlier individuals. 
@@ -250,7 +255,6 @@ vi saf_beagle_maf_CBas.sbatch
 ##Make sure to change the output to indicate contemporary sites "-out cbas_sites_notrans"
 #Make sure to change the sites for the SNP list to "-sites global_snp_list_depth1_15_notrans.txt"
 #Make sure to change -rf to the right chromosomes "-rf global_snp_list_depth1_15_notrans.chrs"
-
 
 
 vi saf_beagle_maf_ABas.sbatch
@@ -294,6 +298,7 @@ sbatch saf_beagle_maf_ABas.sbatch /archive/carpenterlab/pire/pire_salarias_fasci
 
 <details><summary>8. Calculating FST across the whole genome</summary>
 <p>
+  
 ## 8. Calculating FST across the whole genome
 
 Copy Kyra Fitz's fst.sbatch script (https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs/blob/main/fst.sbatch) into a new .sbatch file (fst.sbatch) within our angsd_analysis directory, and adjust the script to fit the *Salarias fasciatus* data. It will be using .saf.idx files from Step 7's outputs.
@@ -318,3 +323,8 @@ sbatch fst_window.sbatch
 ```
 </p>
 </details>
+
+9) Generate site frequency spectra for each site/era
+10) Calculate per-site thetas
+11) Calculate neutrality test statistics
+12) {additional steps TBD}

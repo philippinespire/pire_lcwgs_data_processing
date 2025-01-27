@@ -20,16 +20,37 @@ Outline of potential analyses using ANGSD:
 
 <details><summary> 1. Create an analysis folder and compile .bam files</summary>
 <p>
-## **1. Create an analysis folder and compile .bam files**
+## 1. Create an analysis folder and compile .bam files
 
 Create a folder with an appropriate name (e.g. `angsd_analysis`) within your species' lcwgs processing directory. Copy .bam files to be analyzed to this folder.
+```
+cd <your species folder>
+  #navigate to your species folder & make the folder angsd_analysis
+mkdir angsd_analysis
+```
 
 You should be using the final GenErode outputs for ANGSD analysis. For Albatross/historical samples these are the `.merged.rmdup.merged.realn.rescaled.bam` files that have been rescaled to account for historic DNA damage. For contemporary files these are the `.merged.rmdup.merged.realn.bam` files.
 
-Ideally you have run GenErode on data across lanes from all individuals, in which case information for each individual will already be merged into one file. If you need to add information from another run or otherwise merge multiple .bam files from the same set of individual, you can use the merge scripts as described in the lcwgs_processing README. The Sfa repo also has an example of a more complicated merge (3 runs).
+You may use the cp command or parallel module (faster as it copies 40 files at a time) to copy the *bam files
+
+```
+cd <your angsd_analysis folder>
+  #navigates to your angsd_analysis folder
+salloc
+ls <path to historical mapping files from GenErode> | parallel --no-notice -kj 40 cp {} .
+  #copies the *.merged.rmdup.merged.realn.rescaled.bam files from GenErode results, historical mapping to your angsd_analysis folder
+  #parallel is automatically loaded on Wahab but if the previous line doesn't go through, type module load parallel after salloc
+ls <path to contemporary mapping files from GenErode> | parallel --no-notice -kj 40 cp {} .
+  #copies the *.merged.rmdup.merged.realn.bam files from GenErode results, historical mapping to your angsd_analysis folder
+```
+
+Ideally you have run GenErode on data across lanes from all individuals, in which case information for each individual will already be merged into one file. If you need to add information from another run or otherwise merge multiple .bam files from the same set of individual, you can use the merge scripts as described in the lcwgs_processing README. The *Salarias fasciatus* repo also has an example of a more complicated merge (3 runs).
 
 </p>
 </details>
+
+<details><summary>2. SNP calling </summary>
+<p>
 ## 2. SNP calling
 
 An initial SNP calling step is used to identify set of SNPs with a reasonable depth that can be assessed across the historic and contemporary samples.
@@ -51,6 +72,12 @@ module load samtools
 crun samtools index -M *.bam
 ```
 
+Add full pathway for each .bam file for the bam_list_all.txt to the snp_calling.sbatch script so that the server can find the .bam files when running the job later down the line. 
+```
+find <path to your species>/angsd_analysis/*.bam > bam_list_all_fullpath.txt
+  #Searches for all .bam files in the specified directory and write full paths to the file bam_list_all_fullpath.txt
+```
+
 Copy the snp_calling.sbatch script (https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs/blob/main/snp_calling.sbatch) into a new .sbatch file, and adjust the script to fit your data. 
 - Minimum depth filter should be 1x the number of individuals.
 - Minimum individual filter should be half of the total number of individuals.
@@ -58,15 +85,22 @@ Copy the snp_calling.sbatch script (https://github.com/philippinespire/pire_taen
 - Parameters that stayed the same from the original script are a map quality filter of 30, a minimum allele frequency filter of 0.001, and a SNP p-value of 1e-6. 
 
 ```
+cd <your angsd_analysis species folder>
+cp <pathway to lcwgs scripts directory>/snp_calling.sbatch .
+  #copies the snp_calling.sbatch file in to your 
 vi snp_calling.sbatch
-#Makes a new file called snp_calling.sbatch in the angsd_analysis folder. Paste Kyra's snp_calling.sbatch script into this file. Edits are the following: 
-  #Make sure you add the full directory pathway to the .bam text file after -b, so that the server can find the file (-b /archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/angsd_analysis/bam_list_all.txt).
-  #After -b line, add '_fullpath' as part of the name for the bam_list.txt file (bam_list_all_fullpath.txt)
-  #Make sure you change the pathway after -ref to the correct reference genome of Salarias fasciatus   (/archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/1st_sequencing_run/GenErode_Sfa_full/reference/GCF_902148845.1_fSalaFa1.1_chr1-23_rename.fna). 
+  #Makes a new file called snp_calling.sbatch in the angsd_analysis folder. Paste Kyra's snp_calling.sbatch script into this file. Edits are the following: 
+  #Add the full directory pathway to the bam_list_all_fullpath.txt after -b, so that the server can find the file (e.g. -b /archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/angsd_analysis/bam_list_all_fullpath.txt)
+  #Make sure you change the pathway after -ref to the correct reference genome for your species (e.g. /archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/1st_sequencing_run/GenErode_Sfa_full/reference/GCF_902148845.1_fSalaFa1.1_chr1-23_rename.fna)
 
-sbatch snp_calling.sbatch /archive/carpenterlab/pire/[your_species_dir]/angsd_analysis/
+sbatch snp_calling.sbatch /archive/carpenterlab/pire/<your_species_dir>/angsd_analysis/
   #Submits to the Wahab cluster, specifying the directory of the output to the 'angsd_analysis' folder.
 ```
+</p>
+</details>
+
+<details><summary>3. Generating genotype likelihoods and making a beagle.gz file</summary>
+<p>
 ## 3. Generating genotype likelihoods and making a beagle.gz file 
 
 Genotype likelihoods will be used for all downstream analyses (PCA, admixture, estimating diversity, FST, and selection).
@@ -81,7 +115,11 @@ vi get_beagle.sbatch
 sbatch get_beagle.sbatch /archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/angsd_analysis/
 
 ```
+</p>
+</details>
 
+<details><summary>4. Running PCANGSD </summary>
+<p>
 ## 4. Running PCANGSD: 
 
 Copy Kyra Fitz's pcangsd_pca.sbatch script (https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs/blob/main/pcangsd_pca.sbatch) and pcangsd_admix.sbatch (https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs/blob/main/pcangsd_admix.sbatch) into new .sbatch files, and adjust the script to fit your paths and filenames.

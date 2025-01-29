@@ -1,5 +1,9 @@
 # pire_lcwgs_data_processing
 
+```
+/archive/carpenterlab/pire/pire_lcwgs_data_processing
+```
+
 ---
 
 # Steps to Process Your Data

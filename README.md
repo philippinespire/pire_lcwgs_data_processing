@@ -112,7 +112,7 @@ cp locationofrefgenome .
 In-house SSL genomes will contain many small scaffolds that may increase processing time or make processing impossible for some applications (i.e. GenErode). To remove these scaffolds, you can use the [removesmalls.pl](https://github.com/philippinespire/REUs/blob/master/2022_REU/PSMC/scripts/removesmalls.pl) script. We generally remove scaffolds <20kbp in length. This should also remove any mitochondrial scaffolds.
 
 ```
-perl ../scripts/removesmalls.pl 20000 <speciescode>_shotgun_assembly.fa > reference.denovoSSL.<speciescode>20k.fasta
+perl /archive/carpenterlab/pire/pire_lcwgs_data_processing/scripts/removesmalls.pl 20000 <filename of ssl assembly> reference.denovoSSL.<speciescode>20k.fasta
 ```
 
 ---

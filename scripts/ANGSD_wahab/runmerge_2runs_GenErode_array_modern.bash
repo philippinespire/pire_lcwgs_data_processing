@@ -11,8 +11,8 @@ speciescode=$2
 
 mkdir -p ${speciesdir}/mergebams_run1run2_GenErode_modern
 
-ls -1 ${speciesdir}/1st_sequencing_run/GenErode_Sfa_full/results/modern/mapping/GCF_902148845.1_fSalaFa1.1_chr1-23_rename/${speciescode}*.merged.rmdup.merged.realn.bam | xargs -n1 basename | cut -c 1-10 > ${speciesdir}/mergebams_run1run2_GenErode_modern/1strun_samps 
-ls -1 ${speciesdir}/2nd_sequencing_run/GenErode_Sfa_full/results/modern/mapping/GCF_902148845.1_fSalaFa1.1_chr1-23_rename/${speciescode}*.merged.rmdup.merged.realn.bam | xargs -n1 basename | cut -c 1-10 > ${speciesdir}/mergebams_run1run2_GenErode_modern/2ndrun_samps 
+ls -1 ${speciesdir}/1st_sequencing_run/GenErode_*/results/modern/mapping/*/${speciescode}*.merged.rmdup.merged.realn.bam | xargs -n1 basename | cut -c 1-10 > ${speciesdir}/mergebams_run1run2_GenErode_modern/1strun_samps 
+ls -1 ${speciesdir}/2nd_sequencing_run/GenErode_*/results/modern/mapping/*/${speciescode}*.merged.rmdup.merged.realn.bam | xargs -n1 basename | cut -c 1-10 > ${speciesdir}/mergebams_run1run2_GenErode_modern/2ndrun_samps 
 
 comm -1 -2 ${speciesdir}/mergebams_run1run2_GenErode_modern/1strun_samps ${speciesdir}/mergebams_run1run2_GenErode_modern/2ndrun_samps > ${speciesdir}/mergebams_run1run2_GenErode_modern/run1run2_samps.txt 
 comm -2 -3 ${speciesdir}/mergebams_run1run2_GenErode_modern/1strun_samps ${speciesdir}/mergebams_run1run2_GenErode_modern/2ndrun_samps > ${speciesdir}/mergebams_run1run2_GenErode_modern/run1only_samps.txt 
@@ -23,4 +23,4 @@ SCRIPTPATH=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 samps2merge=$( cat ${speciesdir}/mergebams_run1run2_GenErode_modern/run1run2_samps.txt )
 samps2merge=($samps2merge) 
 
-sbatch --array=0-$((${#samps2merge[@]}-1)) $SCRIPTPATH/runmerge_2runs_cssl_array_GenErode_modern.sbatch ${speciesdir} 
+sbatch --array=0-$((${#samps2merge[@]}-1)) $SCRIPTPATH/runmerge_2runs_GenErode_array_modern.sbatch ${speciesdir} 

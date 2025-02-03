@@ -18,11 +18,11 @@ MRGDIR=$2
 mkdir -p ${SPDIR}/${DESTDIR}
 
 while read file; do
-	cp ${SPDIR}/1st_sequencing_run/GenErode_Sfa_full/results/historical/mapping/GCF_902148845.1_fSalaFa1.1_chr1-23_rename/${file}.merged.rmdup.merged.realn.rescaled.ba* ${SPDIR}/${MRGDIR}
+	cp ${SPDIR}/1st_sequencing_run/GenErode_*/results/historical/mapping/*/${file}.merged.rmdup.merged.realn.rescaled.ba* ${SPDIR}/${MRGDIR}
 done < ${SPDIR}/${MRGDIR}/run1only_samps.txt
 
 while read file; do
-	cp ${SPDIR}/2nd_sequencing_run/GenErode_Sfa_full/results/historical/mapping/GCF_902148845.1_fSalaFa1.1_chr1-23_rename/${file}*.merged.rmdup.merged.realn.rescaled.ba* ${SPDIR}/${MRGDIR}
+	cp ${SPDIR}/2nd_sequencing_run/GenErode_*/results/historical/mapping/*/${file}*.merged.rmdup.merged.realn.rescaled.ba* ${SPDIR}/${MRGDIR}
 done < ${SPDIR}/${MRGDIR}/run2only_samps.txt
 
 #cp ${SPDIR}/${MRGDIR}/*-RG* ${SPDIR}/${DESTDIR}

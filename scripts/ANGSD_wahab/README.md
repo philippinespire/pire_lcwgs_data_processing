@@ -108,16 +108,46 @@ sbatch snp_calling.sbatch /archive/carpenterlab/pire/<your_species_dir>/angsd_an
 
 Genotype likelihoods will be used for all downstream analyses (PCA, admixture, estimating diversity, FST, and selection).
 
-Use the get_beagle.sbatch file to generate a .beagle.gz file containing genotype likelihoods for the set of SNPs identified in step 2. 
+Use the get_beagle.sbatch file to generate a .beagle.gz file containing genotype likelihoods for the set of SNPs identified in step 2.  
 
 ```
 vi get_beagle.sbatch
 #Makes a new file named 'get_beagle.sbatch' in the angsd_analysis folder. Paste Kyra's get_beagle.sbatch script into this file. Edits include the following: 
   #Make sure you change the pathway after -anc to the correct reference genome - for Salarias fasciatus, this would be (-anc /archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/1st_sequencing_run/GenErode_Sfa_full/reference/GCF_902148845.1_fSalaFa1.1_chr1-23_rename.fna). 
 
-sbatch get_beagle.sbatch /archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/angsd_analysis/
+sbatch get_beagle.sbatch /archive/carpenterlab/pire/{species_dir}/angsd_analysis/
+```
+
+You will want to get genotype likelihoods for all individuals and all chromosomes / scaffolds in order to run your first iteration of PCANGSD. After examining PCANGSD outputs, you may see evidence of (1) outlier individuals or (2) inversions in the PCA output. (1) will appear as particular Albatross or contemporary individuals that do not cluster with their respective era and/or site in the PCA plot, while (2) will be indicated by a "three-stripe" pattern in the PCA (i.e. individuals in the PCA generally do not cluster by their era or site, but rather show a pattern of three vertical or horizontal stripes).
+
+For case (1), you can create a new `get_beagle_subset.sbatch` file and a `bam_list_subset.txt` file and re-run the get_beagle step.
 
 ```
+cp bam_list.txt bam_list_subset.txt
+# Remove the bam files for the outlier individuals from bam_list_subset.txt
+
+cp get_beagle.sbatch get_beagle_subset.sbatch
+# change -b to bam_list_subset.txt
+# change -out suffix to *_subset.beagle.gz 
+
+sbatch get_beagle_subset.sbatch /archive/carpenterlab/pire/{species_dir}/angsd_analysis/
+```
+
+For case (2), if you do not know which chromosomes or scaffolds contain inversions, you can run step 6 (WinPCA) to identify these. Once the inversions are identified, you can create a new `get_beagle_noinv.sbatch` file and a `global_snp_list_depth1_15_notrans_noinv.chrs` file and re-run the get_beagle step.
+
+```
+cp global_snp_list_depth1_15_notrans.chrs global_snp_list_depth1_15_notrans_noinv.chrs
+# Remove the chromosomes/scaffolds containing inversions from global_snp_list_depth1_15_notrans_noinv.chrs
+
+cp get_beagle.sbatch get_beagle_noinv.sbatch
+# change -rf to global_snp_list_depth1_15_notrans_noinv.chrs
+# change -out suffix to *_noinv.beagle.gz 
+
+sbatch get_beagle_noinv.sbatch /archive/carpenterlab/pire/{species_dir}/angsd_analysis/
+```
+
+And if you have both inversions and outliers you can combine the two steps above.
+
 </p>
 </details>
 
@@ -232,6 +262,13 @@ crun.ngsTools winpca pca angsd_depth_1_15_notrans_renamed.beagle.gz chr4:1-27169
 ```
 </p>
 </details>
+
+To run iteratively over all chromosomes in parallel, you can use the `winPCAv3.sbatch` script. The script will need a .tsv file with two columns (chromosome name and chromosome length) and your beagle.gz file, ideally with outlier individuals already removed. Adjust the #SBATCH --array argument to reflect the number of chromosomes in your reference (1-n) and run from your angsd_analysis directory
+
+```
+sbatch winPCAv3.sbatch
+```
+
 
 <details><summary>7. Generating Site Allele Frequencies</summary>
 <p>

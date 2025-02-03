@@ -179,6 +179,8 @@ sbatch pcangsd_pca_it500_noinv_subset.sbatch /archive/carpenterlab/pire/pire_sal
 sbatch pcangsd_admix_it500_noinv_subset.sbatch /archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/angsd_analysis/
 ```
 
+Check the output files (pcangsd_pca-*.out) - you may see the message "PCAngsd did not converge!". You can try to increase the number of iterations being run by adding an '--it 500', though in our experience with Sfa we still got this message with 500 iterations (even though the RMSE convergence statistic seemed to reach a minimum at the default of 100 and did not really improve with more iterations). Even if the allele frequency estimation step does not converge, in our experience the admixture step will converge.
+
 Once the job is done, download the outputs: angsd_analysis/angsd_snps_pca.cov, bam_list.txt, and angsd_admix.2.Q files. These are needed to run the admixture.R and pca.R files. 
 
 Run admixture.R and pca.R files in RStudio to get two plots: 1) admixture proportions and 2) PCA for historical and contemporary individuals. Run the admixture.R plot before the pca.R files. 
@@ -260,14 +262,15 @@ crun.ngsTools winpca pca angsd_depth_1_15_notrans_renamed.beagle.gz chr4:1-27169
 #Chr4:27169852 is chromosome name and size
 #1- is the size of the windows analysis 
 ```
-</p>
-</details>
 
 To run iteratively over all chromosomes in parallel, you can use the `winPCAv3.sbatch` script. The script will need a .tsv file with two columns (chromosome name and chromosome length) and your beagle.gz file, ideally with outlier individuals already removed. Adjust the #SBATCH --array argument to reflect the number of chromosomes in your reference (1-n) and run from your angsd_analysis directory
 
 ```
 sbatch winPCAv3.sbatch
 ```
+
+</p>
+</details>
 
 
 <details><summary>7. Generating Site Allele Frequencies</summary>

@@ -52,8 +52,8 @@ Ideally you have run GenErode on data across lanes from all individuals, in whic
 #Merge .bam files
 # note you may have to edit paths in some of these scripts
 
-bash runmerge_2runs_cssl_array_GenErode_modern.bash /archive/carpenterlab/pire/{your_species_directory} {3-letter_species_prefix}
-bash runmerge_2runs_cssl_array_GenErode_historical_rescaled.bash /archive/carpenterlab/pire/{your_species_directory} {3-letter_species_prefix}
+bash runmerge_2runs_GenErode_array_modern.bash /archive/carpenterlab/pire/{your_species_directory} {3-letter_species_prefix}
+bash runmerge_2runs_GenErode_array_historical_rescaled.bash /archive/carpenterlab/pire/{your_species_directory} {3-letter_species_prefix}
 
 #Copy unmerged files for runs 1 and 2.
 

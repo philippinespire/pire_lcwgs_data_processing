@@ -4,8 +4,8 @@
 
 Currently, we are using scripts adapted by Kyra Fitz from the Therkildsen Lab's [GitHub](https://github.com/therkildsen-lab) to perform analyses in ANGSD. These scripts were originally used for Kyra's *Taeniamia zosterophora* [project](https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs) and extended to selection analyses and windowed PCA in *Salarias fasciatus* [here](https://github.com/philippinespire/pire_salarias_fasciatus_lcwgs) by Brendan and Mikaela.
 
-Outline of potential analyses using ANGSD: 
-  1) Combining sequencing runs
+Outline of ANGSD pipeline and potential analyses: 
+  1) Create an analysis folder and compile .bam files
   2) SNP calling
   3) Generating genotype likelihoods and making a beagle.gz file
   4) Running PCANGSD: PCA and Admixture Analyses
@@ -24,6 +24,7 @@ Outline of potential analyses using ANGSD:
 ## 1. Create an analysis folder and compile .bam files
 
 Create a folder with an appropriate name (e.g. `angsd_analysis`) within your species' lcwgs processing directory. Copy .bam files to be analyzed to this folder.
+
 ```
 cd <your species folder>
   #navigate to your species folder & make the folder angsd_analysis
@@ -45,7 +46,23 @@ ls <path to contemporary mapping files from GenErode> | parallel --no-notice -kj
   #copies the *.merged.rmdup.merged.realn.bam files from GenErode results, historical mapping to your angsd_analysis folder
 ```
 
-Ideally you have run GenErode on data across lanes from all individuals, in which case information for each individual will already be merged into one file. If you need to add information from another run or otherwise merge multiple .bam files from the same set of individual, you can use the merge scripts as described in the lcwgs_processing README. The *Salarias fasciatus* repo also has an example of a more complicated merge (3 runs).
+Ideally you have run GenErode on data across lanes from all individuals, in which case information for each individual will already be merged into one file. If you need to add information from another run or otherwise merge multiple .bam files from the same set of individual, you can use the merge scripts as described in the lcwgs_processing README. 
+
+```
+#Merge .bam files
+# note you may have to edit paths in some of these scripts
+
+bash runmerge_2runs_cssl_array_GenErode_modern.bash /archive/carpenterlab/pire/{your_species_directory} {3-letter_species_prefix}
+bash runmerge_2runs_cssl_array_GenErode_historical_rescaled.bash /archive/carpenterlab/pire/{your_species_directory} {3-letter_species_prefix}
+
+#Copy unmerged files for runs 1 and 2.
+
+sbatch copyunmerged_modern.sbatch
+sbatch copyunmerged_historical_rescaled.sbatch
+
+```
+
+The *Salarias fasciatus* repo also has an example of a more complicated merge (3 runs).
 
 </p>
 </details>

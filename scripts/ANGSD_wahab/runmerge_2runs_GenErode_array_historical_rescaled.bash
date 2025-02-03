@@ -11,8 +11,8 @@ speciescode=$2
 
 mkdir -p ${speciesdir}/mergebams_run1run2_GenErode_historical_rescaled
 
-ls -1 ${speciesdir}/1st_sequencing_run/GenErode_*/results/historical/mapping/*/${speciescode}*.merged.rmdup.merged.realn.rescaled.bam | xargs -n1 basename | cut -c 1-10 > ${speciesdir}/mergebams_run1run2_GenErode_historical_rescaled/1strun_samps 
-ls -1 ${speciesdir}/2nd_sequencing_run/GenErode_*/results/historical/mapping/*/${speciescode}*.merged.rmdup.merged.realn.rescaled.bam | xargs -n1 basename | cut -c 1-10 > ${speciesdir}/mergebams_run1run2_GenErode_historical_rescaled/2ndrun_samps 
+ls -1 ${speciesdir}/1st_sequencing_run/GenErode_*20k/results/historical/mapping/*/${speciescode}*.merged.rmdup.merged.realn.rescaled.bam | xargs -n1 basename | cut -c 1-10 > ${speciesdir}/mergebams_run1run2_GenErode_historical_rescaled/1strun_samps 
+ls -1 ${speciesdir}/2nd_sequencing_run/GenErode_*20k/results/historical/mapping/*/${speciescode}*.merged.rmdup.merged.realn.rescaled.bam | xargs -n1 basename | cut -c 1-10 > ${speciesdir}/mergebams_run1run2_GenErode_historical_rescaled/2ndrun_samps 
 
 comm -1 -2 ${speciesdir}/mergebams_run1run2_GenErode_historical_rescaled/1strun_samps ${speciesdir}/mergebams_run1run2_GenErode_historical_rescaled/2ndrun_samps > ${speciesdir}/mergebams_run1run2_GenErode_historical_rescaled/run1run2_samps.txt 
 comm -2 -3 ${speciesdir}/mergebams_run1run2_GenErode_historical_rescaled/1strun_samps ${speciesdir}/mergebams_run1run2_GenErode_historical_rescaled/2ndrun_samps > ${speciesdir}/mergebams_run1run2_GenErode_historical_rescaled/run1only_samps.txt 

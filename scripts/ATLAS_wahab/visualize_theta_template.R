@@ -338,7 +338,7 @@ print(plot_perm_test_distribution)
 outFile_plot_perm_test_distribution <- paste0(outDir, "/", spp_code, "_plot_perm_test_distribution", ".png")  
 
 # Save the plot to a file
-ggsave(filename = outFile_plot_perm_test_distribution, plot = plot_perm_test_distribution, width = 9, height = 6)
+ggsave(filename = outFile_plot_perm_test_distribution, plot = plot_perm_test_distribution, width = 6, height = 6)
 
 
 #### STATISTICAL TEST: BAYESIAN MODEL ####
@@ -368,10 +368,10 @@ write.csv(fixef_table, outFile_fixef, row.names = TRUE)
 # ---- 3️⃣ Print & Save Model Summary ----
 bayesian_model_summary <- summary(bayesian_model)
 
+print(bayesian_model_summary)
+
 # Extract summary statistics (as text)
 summary_text <- capture.output(print(bayesian_model_summary))
-
-print(summary_text)
 
 # Define output file
 outFile_bayesian_model_summary <- paste0("../out/", spp_code, "_table_bayesian_model_summary.txt")
@@ -445,7 +445,7 @@ print(plot_bayesian_pp_check)
 outFile_plot_bayesian_pp_check <- paste0(outDir, "/", spp_code, "_plot_bayesian_pp_check", ".png")  
 
 # Save the plot to a file
-ggsave(filename = outFile_plot_bayesian_pp_check, plot = plot_bayesian_pp_check, width = 9, height = 6)
+ggsave(filename = outFile_plot_bayesian_pp_check, plot = plot_bayesian_pp_check, width = 6, height = 6)
 
 
 #### PLOT: Posterior Distribution of Theta Difference ####
@@ -478,4 +478,4 @@ print(posterior_plot)
 outFile_posterior_plot <- paste0(outDir, "/", spp_code, "_posterior_distribution_plot.png")
 
 # Save the plot
-ggsave(filename = outFile_posterior_plot, plot = posterior_plot, width = 9, height = 6, dpi = 300)
+ggsave(filename = outFile_posterior_plot, plot = posterior_plot, width = 6, height = 6, dpi = 300)

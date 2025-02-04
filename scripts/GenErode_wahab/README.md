@@ -650,9 +650,9 @@ find /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/hi
 ls /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/results/historical/mapping/reference.denovoSSL.<Spp>20k/*.merged.rmdup.merged.realn.rescaled.bam | wc -l
 ```
 
-**Count the number of Historical output files: \*.merged.rmdup.merged.realn.bai**
+**Count the number of Historical output files: \*.merged.rmdup.merged.realn.bam.bai**
 ```
-ls /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/results/historical/mapping/reference.denovoSSL.<Spp>20k/*.merged.rmdup.merged.realn.rescaled.bai | wc -l
+ls /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/results/historical/mapping/reference.denovoSSL.<Spp>20k/*.merged.rmdup.merged.realn.rescaled.bam.bai | wc -l
 ```
 
 **GERP Scores File**

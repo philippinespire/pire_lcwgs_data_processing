@@ -1,5 +1,8 @@
 ##PCAngsd Admixture Results##
 
+install.packages("devtools")
+devtools::install_github("royfrancis/pophelper")
+
 library(pophelper) #v.2.3.1
 
 #K=2

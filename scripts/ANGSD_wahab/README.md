@@ -43,7 +43,7 @@ ls <path to historical mapping files from GenErode> | parallel --no-notice -kj 4
   #copies the *.merged.rmdup.merged.realn.rescaled.bam files from GenErode results, historical mapping to your angsd_analysis folder
   #parallel is automatically loaded on Wahab but if the previous line doesn't go through, type module load parallel after salloc
 ls <path to contemporary mapping files from GenErode> | parallel --no-notice -kj 40 cp {} .
-  #copies the *.merged.rmdup.merged.realn.bam files from GenErode results, historical mapping to your angsd_analysis folder
+  #copies the *.merged.rmdup.merged.realn.bam files from GenErode results, contemporary mapping to your angsd_analysis folder
 ```
 
 Ideally you have run GenErode on data across lanes from all individuals, in which case information for each individual will already be merged into one file. If you need to add information from another run or otherwise merge multiple .bam files from the same set of individual, you can use the merge scripts as described in the lcwgs_processing README. 

@@ -7,11 +7,9 @@ mv angsd_depth1_15_notrans.beagle.gz.mafs.gz angsd_depth1_15_notrans_snplist.maf
 mv angsd_depth1_15_notrans.beagle.gz.saf.gz angsd_depth1_15_notrans_snplist.saf.gz
 mv angsd_depth1_15_notrans.beagle.gz.saf.pos.gz angsd_depth1_15_notrans_snplist.saf.pos.gz
 mv angsd_depth1_15_notrans.beagle.gz.saf.idx angsd_depth1_15_notrans_snplist.saf.idx
-
-# Git move files that are tracked with the correct naming pattern
-git mv angsd_depth1_15_notrans.beagle.gz.arg angsd_depth1_15_notrans_snplist.arg
-git mv angsd_depth1_15_notrans.beagle.gz.depthSample angsd_depth1_15_notrans_snplist.depthSample
-git mv angsd_depth1_15_notrans.beagle.gz.depthGlobal angsd_depth1_15_notrans_snplist.depthGlobal
+mv angsd_depth1_15_notrans.beagle.gz.arg angsd_depth1_15_notrans_snplist.arg
+mv angsd_depth1_15_notrans.beagle.gz.depthSample angsd_depth1_15_notrans_snplist.depthSample
+mv angsd_depth1_15_notrans.beagle.gz.depthGlobal angsd_depth1_15_notrans_snplist.depthGlobal
 
 # Git add changes
 git add angsd_depth1_15_notrans_snplist.arg angsd_depth1_15_notrans_snplist.depthSample angsd_depth1_15_notrans_snplist.depthGlobal

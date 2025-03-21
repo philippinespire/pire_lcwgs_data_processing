@@ -18,6 +18,9 @@ Outline of ANGSD pipeline and potential analyses:
   11) Calculate neutrality test statistics
   12) {additional steps TBD}
 
+Draft ANGSD pipeline roadmap (needs to be updated)
+![PIREANGSD03202025](https://github.com/user-attachments/assets/dea17456-78be-403b-9219-0ded9ac50056)
+
 <details><summary> 1. Create an analysis folder and compile .bam files</summary>
 <p>
   

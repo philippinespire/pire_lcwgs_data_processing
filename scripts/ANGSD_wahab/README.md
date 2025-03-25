@@ -5,18 +5,20 @@
 Currently, we are using scripts adapted by Kyra Fitz from the Therkildsen Lab's [GitHub](https://github.com/therkildsen-lab) to perform analyses in ANGSD. These scripts were originally used for Kyra's *Taeniamia zosterophora* [project](https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs) and extended to selection analyses and windowed PCA in *Salarias fasciatus* [here](https://github.com/philippinespire/pire_salarias_fasciatus_lcwgs) by Brendan and Mikaela.
 
 Outline of ANGSD pipeline and potential analyses: 
-  1) Create an analysis folder and compile .bam files
-  2) SNP calling
-  3) Generating genotype likelihoods and making a beagle.gz file
-  4) Running PCANGSD: PCA and Admixture Analyses
-  5) (Optional) Running PCANGSD: Selection Scan
-  6) (Optional) Running winPCA to detect chromosome inversions
-  7) Generating Site Allele Frequencies
-  8) Calculating FST across the whole genome
-  9) Generate site frequency spectra for each site/era
-  10) Calculate per-site thetas
-  11) Calculate neutrality test statistics
-  12) {additional steps TBD}
+  0) Create an analysis folder and compile .bam files
+  1) SNP calling
+  2) Generating genotype likelihoods and making a beagle.gz file
+  3) Running PCANGSD: PCA and Admixture Analyses
+  3a) (Optional) Running PCANGSD: Selection Scan
+  3b) (Optional) Running winPCA to detect chromosome inversions
+  4) Generating Site Allele Frequencies
+  5) Calculating FST across the whole genome
+  6) Generate site frequency spectra for each site/era
+  7) Calculate per-site thetas
+  8) Calculate neutrality test statistics
+  9) Neutrality test
+  10) Genetic Diversity (Pi, theta, Tajima's D)
+  11) Selection scan for neutral SNPS
 
 Draft ANGSD pipeline roadmap (needs to be updated)
 ![PIREANGSD03202025](https://github.com/user-attachments/assets/dea17456-78be-403b-9219-0ded9ac50056)
@@ -24,7 +26,7 @@ Draft ANGSD pipeline roadmap (needs to be updated)
 <details><summary> 1. Create an analysis folder and compile .bam files</summary>
 <p>
   
-## 1. Create an analysis folder and compile .bam files
+## 0. Create an analysis folder and compile .bam files
 
 Create a folder with an appropriate name (e.g. `angsd_analysis`) within your species' lcwgs processing directory. Copy .bam files to be analyzed to this folder.
 
@@ -73,7 +75,7 @@ The *Salarias fasciatus* repo also has an example of a more complicated merge (3
 <details><summary>2. SNP calling </summary>
 <p>
 
-## 2. SNP calling
+## 1. SNP calling
 
 An initial SNP calling step is used to identify set of SNPs with a reasonable depth that can be assessed across the historic and contemporary samples.
 
@@ -124,7 +126,7 @@ sbatch snp_calling.sbatch /archive/carpenterlab/pire/<your_species_dir>/angsd_an
 <details><summary>3. Generating genotype likelihoods and making a beagle.gz file</summary>
 <p>
   
-## 3. Generating genotype likelihoods and making a beagle.gz file 
+## 2. Generating genotype likelihoods and making a beagle.gz file 
 
 Genotype likelihoods will be used for all downstream analyses (PCA, admixture, estimating diversity, FST, and selection).
 
@@ -173,7 +175,7 @@ And if you have both inversions and outliers you can combine the two steps above
 
 <details><summary>4. Running PCANGSD </summary>
 <p>
-## 4. Running PCANGSD: 
+## 3. Running PCANGSD: 
 
 Copy Kyra Fitz's pcangsd_pca.sbatch script (https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs/blob/main/pcangsd_pca.sbatch) and pcangsd_admix.sbatch (https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs/blob/main/pcangsd_admix.sbatch) into new .sbatch files, and adjust the script to fit your paths and filenames.
 
@@ -212,7 +214,7 @@ Run admixture.R and pca.R files in RStudio to get two plots: 1) admixture propor
 <details><summary>5. (Optional) Running PCANGSD for a Selection Scan</summary>
 <p>
 
-## 5. (Optional) Running PCANGSD for a Selection Scan
+## 3a. (Optional) Running PCANGSD for a Selection Scan
 
 If the PCA identifies the historical and contemporary samples as two separate clusters along PC1, you can use PCANGSD to perform a selection scan.
 
@@ -244,7 +246,7 @@ Run pcangsd_selection_plot_v2.R in RStudio to generate a Manhattan plot and look
 <details><summary>6. (Optional) Running winPCA to detect chromosome inversions (in testing mode on Wahab)</summary>
 <p>
   
-## 6. (Optional) Running winPCA to detect chromosome inversions (in testing mode on Wahab)
+## 3b. (Optional) Running winPCA to detect chromosome inversions (in testing mode on Wahab)
 
 Make sure to install any Python packagedependencies needed for winPCA. 
 ```
@@ -293,10 +295,10 @@ sbatch winPCAv3.sbatch
 </details>
 
 
-<details><summary>7. Generating Site Allele Frequencies</summary>
+<details><summary>4. Generating Site Allele Frequencies</summary>
 <p>
   
-## 7. Generating Site Allele Frequencies
+## 4. Generating Site Allele Frequencies
 
 Make two bam lists: one with only Albatross individuals (ABas) and one with only contemporary individuals (CBas). Use the subsetted bam list because it excludes outlier individuals. 
 
@@ -359,7 +361,7 @@ sbatch saf_beagle_maf_ABas.sbatch /archive/carpenterlab/pire/pire_salarias_fasci
 <details><summary>8. Calculating FST across the whole genome</summary>
 <p>
   
-## 8. Calculating FST across the whole genome
+## 5. Calculating FST across the whole genome
 
 Copy Kyra Fitz's fst.sbatch script (https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs/blob/main/fst.sbatch) into a new .sbatch file (fst.sbatch) within our angsd_analysis directory, and adjust the script to fit the *Salarias fasciatus* data. It will be using .saf.idx files from Step 7's outputs.
 
@@ -384,7 +386,10 @@ sbatch fst_window.sbatch
 </p>
 </details>
 
-9) Generate site frequency spectra for each site/era
-10) Calculate per-site thetas
-11) Calculate neutrality test statistics
-12) {additional steps TBD}
+6) Generate site frequency spectra for each site/era
+7) Calculate per-site thetas
+8) Calculate neutrality test statistics
+9) Neutrality test
+10) Genetic Diversity (Pi, theta, Tajima's D)
+11) Selection scan for neutral SNPs
+ {additional steps TBD}

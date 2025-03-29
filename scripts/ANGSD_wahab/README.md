@@ -409,25 +409,25 @@ sbatch fst_window.sbatch
 </p>
 </details>
 
-<details><summary> 10. Neutrality test
+<details><summary> 9. Neutrality test
 </summary>
 <p>
   
-## 10. Neutrality test
+## 9. Neutrality test
 
-<details><summary> 11. Genetic Diversity (Pi, theta, Tajima's D)
+<details><summary> 10. Genetic Diversity (Pi, theta, Tajima's D)
 </summary>
 <p>
   
-## 11. Genetic Diversity (Pi, theta, Tajima's D)
+## 10. Genetic Diversity (Pi, theta, Tajima's D)
 </p>
 </details>
 
-<details><summary> 12. Selection scan for neutral SNPs
+<details><summary> 11. Selection scan for neutral SNPs
  {additional steps TBD}
 </summary>
 <p>
   
-## 12. Selection scan for neutral SNPs
+## 11. Selection scan for neutral SNPs
 </p>
 </details>

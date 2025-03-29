@@ -414,6 +414,8 @@ sbatch fst_window.sbatch
 <p>
   
 ## 9. Neutrality test
+</p>
+</details>
 
 <details><summary> 10. Genetic Diversity (Pi, theta, Tajima's D)
 </summary>

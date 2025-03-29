@@ -9,8 +9,8 @@ Outline of ANGSD pipeline and potential analyses:
   1) SNP calling
   2) Generating genotype likelihoods and making a beagle.gz file
   3) Running PCANGSD: PCA and Admixture Analyses
-  3a) (Optional) Running PCANGSD: Selection Scan
-  3b) (Optional) Running winPCA to detect chromosome inversions
+      3a) (Optional) Running PCANGSD: Selection Scan
+      3b) (Optional) Running winPCA to detect chromosome inversions
   4) Generating Site Allele Frequencies
   5) Calculating FST across the whole genome
   6) Generate site frequency spectra for each site/era
@@ -23,7 +23,7 @@ Outline of ANGSD pipeline and potential analyses:
 Draft ANGSD pipeline roadmap (needs to be updated)
 ![PIREANGSD03202025](https://github.com/user-attachments/assets/dea17456-78be-403b-9219-0ded9ac50056)
 
-<details><summary> 1. Create an analysis folder and compile .bam files</summary>
+<details><summary> 0. Create an analysis folder and compile .bam files</summary>
 <p>
   
 ## 0. Create an analysis folder and compile .bam files
@@ -72,7 +72,7 @@ The *Salarias fasciatus* repo also has an example of a more complicated merge (3
 </p>
 </details>
 
-<details><summary>2. SNP calling </summary>
+<details><summary>1. SNP calling </summary>
 <p>
 
 ## 1. SNP calling
@@ -123,7 +123,7 @@ sbatch snp_calling.sbatch /archive/carpenterlab/pire/<your_species_dir>/angsd_an
 </p>
 </details>
 
-<details><summary>3. Generating genotype likelihoods and making a beagle.gz file</summary>
+<details><summary>2. Generating genotype likelihoods and making a beagle.gz file</summary>
 <p>
   
 ## 2. Generating genotype likelihoods and making a beagle.gz file 
@@ -173,7 +173,7 @@ And if you have both inversions and outliers you can combine the two steps above
 </p>
 </details>
 
-<details><summary>4. Running PCANGSD </summary>
+<details><summary>3. Running PCANGSD </summary>
 <p>
 ## 3. Running PCANGSD: 
 
@@ -211,7 +211,7 @@ Run admixture.R and pca.R files in RStudio to get two plots: 1) admixture propor
 </p>
 </details>
 
-<details><summary>5. (Optional) Running PCANGSD for a Selection Scan</summary>
+<details><summary>3a. (Optional) Running PCANGSD for a Selection Scan</summary>
 <p>
 
 ## 3a. (Optional) Running PCANGSD for a Selection Scan
@@ -243,7 +243,7 @@ Run pcangsd_selection_plot_v2.R in RStudio to generate a Manhattan plot and look
 </p>
 </details>
 
-<details><summary>6. (Optional) Running winPCA to detect chromosome inversions (in testing mode on Wahab)</summary>
+<details><summary>3b. (Optional) Running winPCA to detect chromosome inversions (in testing mode on Wahab)</summary>
 <p>
   
 ## 3b. (Optional) Running winPCA to detect chromosome inversions (in testing mode on Wahab)
@@ -358,7 +358,7 @@ sbatch saf_beagle_maf_ABas.sbatch /archive/carpenterlab/pire/pire_salarias_fasci
 </p>
 </details>
 
-<details><summary>8. Calculating FST across the whole genome</summary>
+<details><summary>5. Calculating FST across the whole genome</summary>
 <p>
   
 ## 5. Calculating FST across the whole genome
@@ -386,10 +386,48 @@ sbatch fst_window.sbatch
 </p>
 </details>
 
-6) Generate site frequency spectra for each site/era
-7) Calculate per-site thetas
-8) Calculate neutrality test statistics
-9) Neutrality test
-10) Genetic Diversity (Pi, theta, Tajima's D)
-11) Selection scan for neutral SNPs
+<details><summary> 6. Generate site frequency spectra for each site or era </summary>
+<p>
+
+## 6. Generate site frequency spectra for each site/era
+</p>
+</details>
+
+<details><summary> 7. Calculate per-site thetas
+</summary>
+<p>
+  
+## 7. Calculate per-site thetas
+</p>
+</details>
+
+<details><summary> 8. Calculate neutrality test statistics
+</summary>
+<p>
+
+## 8. Calculate neutrality test statistics
+</p>
+</details>
+
+<details><summary> 10. Neutrality test
+</summary>
+<p>
+  
+## 10. Neutrality test
+
+<details><summary> 11. Genetic Diversity (Pi, theta, Tajima's D)
+</summary>
+<p>
+  
+## 11. Genetic Diversity (Pi, theta, Tajima's D)
+</p>
+</details>
+
+<details><summary> 12. Selection scan for neutral SNPs
  {additional steps TBD}
+</summary>
+<p>
+  
+## 12. Selection scan for neutral SNPs
+</p>
+</details>

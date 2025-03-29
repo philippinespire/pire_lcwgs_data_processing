@@ -390,6 +390,8 @@ sbatch fst_window.sbatch
 <p>
 
 ## 6. Generate site frequency spectra for each site/era
+
+UNDER CONSTRUCTION - REFER TO SPHAERAMIA NEMATOPTERA GITHUB FOR NOW
 </p>
 </details>
 
@@ -398,6 +400,9 @@ sbatch fst_window.sbatch
 <p>
   
 ## 7. Calculate per-site thetas
+
+UNDER CONSTRUCTION - REFER TO SPHAERAMIA NEMATOPTERA GITHUB FOR NOW
+
 </p>
 </details>
 
@@ -406,6 +411,9 @@ sbatch fst_window.sbatch
 <p>
 
 ## 8. Calculate neutrality test statistics
+
+
+UNDER CONSTRUCTION - REFER TO SPHAERAMIA NEMATOPTERA GITHUB FOR NOW
 </p>
 </details>
 
@@ -414,6 +422,9 @@ sbatch fst_window.sbatch
 <p>
   
 ## 9. Neutrality test
+
+
+UNDER CONSTRUCTION - REFER TO SPHAERAMIA NEMATOPTERA GITHUB FOR NOW
 </p>
 </details>
 
@@ -422,6 +433,9 @@ sbatch fst_window.sbatch
 <p>
   
 ## 10. Genetic Diversity (Pi, theta, Tajima's D)
+
+
+UNDER CONSTRUCTION - REFER TO SPHAERAMIA NEMATOPTERA GITHUB FOR NOW
 </p>
 </details>
 
@@ -431,5 +445,7 @@ sbatch fst_window.sbatch
 <p>
   
 ## 11. Selection scan for neutral SNPs
+
+UNDER CONSTRUCTION - REFER TO SPHAERAMIA NEMATOPTERA GITHUB FOR NOW
 </p>
 </details>

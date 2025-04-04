@@ -391,7 +391,22 @@ sbatch fst_window.sbatch
 
 ## 6. Generate site frequency spectra for each site/era
 
-UNDER CONSTRUCTION - REFER TO SPHAERAMIA NEMATOPTERA GITHUB FOR NOW
+Copy the sfs.sbatch file into your angsd_analysis directory & run it for each population. You need to run the sfs.sbatch file for each population. Each era is considered 1 population. Therefore, if you have 1 site with Albatross & Contemporary individuals, there are 2 populations. For *Sphaeramia nematoptera* for example, since there were 6 populations, the sfs.sbatch file was edited 6 times & ran for each population.
+
+```
+nano sfs.sbatch
+#changes were made to change the file names for the *saf.idx file & the resulting *.sfs file for every population
+crun.angsd realSFS <population specific saf idx file>.saf.idx -P 8 -fold 1 > <enter similar filename for output file>.sfs
+#for example, when sfs.sbatch was ran for S. nematoptera Albatross individuals from Romblon, the script had:
+crun.angsd realSFS arom_sites_notrans_nooutliers.saf.idx -P 8 -fold 1 > arom_notrans_nooutliers.sfs
+```
+
+Each time the sfs.batch was run, the following command was executed:
+```
+#sbatch script outputdir
+sbatch sfs.sbatch /archive/carpenterlab/pire/pire_sphaeramia_nematoptera_lcwgs/angsd_analysis/
+```
+
 </p>
 </details>
 

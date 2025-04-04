@@ -391,7 +391,7 @@ sbatch fst_window.sbatch
 
 ## 6. Generate site frequency spectra for each site/era
 
-Copy the sfs.sbatch file into your angsd_analysis directory & run it for each population. You need to run the sfs.sbatch file for each population. Each era is considered 1 population. Therefore, if you have 1 site with Albatross & Contemporary individuals, there are 2 populations. For *Sphaeramia nematoptera* for example, since there were 6 populations, the sfs.sbatch file was edited 6 times & ran for each population.
+Copy the sfs.sbatch file into your angsd_analysis directory & run it for each population. Each era is considered 1 population. Therefore, if you have 1 site with Albatross & Contemporary individuals, there are 2 populations. For *Sphaeramia nematoptera* for example, since there were 3 sites with an Albatross-Contemporary match, there was a total of 6 populations and the sfs.sbatch file was edited 6 times & ran for each population.
 
 ```
 nano sfs.sbatch

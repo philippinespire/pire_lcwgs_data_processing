@@ -363,7 +363,7 @@ sbatch saf_beagle_maf_ABas.sbatch /archive/carpenterlab/pire/pire_salarias_fasci
   
 ## 5. Calculating FST across the whole genome
 
-Copy Kyra Fitz's fst.sbatch script (https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs/blob/main/fst.sbatch) into a new .sbatch file (fst.sbatch) within our angsd_analysis directory, and adjust the script to fit the *Salarias fasciatus* data. It will be using .saf.idx files from Step 7's outputs.
+Copy Kyra Fitz's fst.sbatch script (https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs/blob/main/fst.sbatch) into a new .sbatch file (fst.sbatch) within our angsd_analysis directory, and adjust the script to fit the *Salarias fasciatus* data. It will be using .saf.idx files from Step 4's outputs.
 
 ```
 vi fst.sbatch
@@ -416,25 +416,49 @@ sbatch sfs.sbatch /archive/carpenterlab/pire/pire_sphaeramia_nematoptera_lcwgs/a
   
 ## 7. Calculate per-site thetas
 
-UNDER CONSTRUCTION - REFER TO SPHAERAMIA NEMATOPTERA GITHUB FOR NOW
+Copied the saf2theta.sbatch file into the angsd_analysis directory & run it for each of the populations. Thus, for 1 site, you'll run twice since Albatross is 1 population & Contemporary is another. 
+
+```
+nano saf2theta.sbatch
+#changes were made to change the file names for the *saf.idx file, the *.sfs file, and the outcome for every population
+#crun.angsd realSFS saf2theta <site>.saf.idx -sfs <site>.sfs -fold 1 -P 8 -outname <site>
+#for example, when saf2theta.sbatch was ran for Contemporary Tawi-tawi, the script was was edited as follows:
+crun.angsd realSFS saf2theta ctaw_sites_notrans.saf.idx -sfs ctaw_notrans.sfs -fold 1 -P 8 -outname ctaw_notrans
+```
+
+The saf2theta.sbatch script was ran as such:
+```
+#sbatch script outputdir
+sbatch saf2theta.sbatch /archive/carpenterlab/pire/pire_<species>_lcwgs/angsd_analysis/
+```
 
 </p>
 </details>
 
-<details><summary> 8. Calculate neutrality test statistics
-</summary>
+<details><summary>8. Neutrality test statistics using the do_stat command</summary>
 <p>
 
-## 8. Calculate neutrality test statistics
+## 8. Neutrality test statistics using the do_stat command
 
+Copied the thetastat.sbatch file into the angsd_analysis directory & ran it for each of the populations. The thetastat.sbatch file was edited for each population.
 
-UNDER CONSTRUCTION - REFER TO SPHAERAMIA NEMATOPTERA GITHUB FOR NOW
+```
+nano thetastat.sbatch
+#the *thetas.idx file was changed
+#crun.angsd thetaStat do_stat <site>.thetas.idx
+#for example, for Albatross Biri, the following line was changed:
+crun.angsd thetaStat do_stat abir_notrans.thetas.idx
+```
+
+The thetastat.sbatch script was run:
+```
+#sbatch script outputdir
+sbatch thetastat.sbatch /archive/carpenterlab/pire/pire_sphaeramia_nematoptera_lcwgs/angsd_analysis/
+```
+
 </p>
 </details>
 
-<details><summary> 9. Neutrality test
-</summary>
-<p>
   
 ## 9. Neutrality test
 

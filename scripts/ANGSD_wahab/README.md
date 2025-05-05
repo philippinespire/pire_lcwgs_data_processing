@@ -184,13 +184,13 @@ vi pcangsd_pca.sbatch
 #Makes a new file named 'pcangsd_pca_it500_noinv_subset.sbatch' in the angsd_analysis folder to indicate a file with 500 iterations and no inversions. Paste Kyra's pcangsd_pca.sbatch script into this file. Edits include the following:
   #Add another argument called "--it 500" to specify 500 iterations.
   #Change the output file to "--out angsd_notrans_snps_pca_it500_noinv_subset"
-  #Change the input file to "--b angsd_depth1_15_notrans_noinv_subset.beagle.gz" to have the genotype likelihood file with no inversions and no outliers.
+  #Change the input file to "-b angsd_depth1_15_notrans_noinv_subset.beagle.gz" to have the genotype likelihood file with no inversions and no outliers.
 
 vi pcangsd_admix.sbatch
 #Makes a new file named 'pcangsd_admix_it500_noinv_subset.sbatch' in the angsd_analysis folder to indicate a file with 500 iterations and no inversions. Paste Kyra's pcangsd_pca.sbatch script into this file. Edits include the following:
   #Add another argument called "--it 500" to specify 500 iterations.
   #Change the output file to "--out angsd_notrans_snps_pca_it500_noinv_subset"
-  #Change the input file to "--b angsd_depth1_15_notrans_noinv_subset.beagle.gz" to have the genotype likelihood file with no inversions and no outliers.
+  #Change the input file to "-b angsd_depth1_15_notrans_noinv_subset.beagle.gz" to have the genotype likelihood file with no inversions and no outliers.
 ```
 
 Submit jobs to the Wahab cluster, specifying the directory.

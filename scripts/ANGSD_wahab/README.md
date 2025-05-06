@@ -16,7 +16,7 @@ Outline of ANGSD pipeline and potential analyses:
   6) Generate site frequency spectra for each site/era
   7) Calculate per-site thetas
   8) Calculate neutrality test statistics
-  9) Neutrality test
+  9) Estimating Effective Population Size (Ne)
   10) Genetic Diversity (Pi, theta, Tajima's D)
   11) Selection scan for neutral SNPS
 
@@ -460,31 +460,42 @@ sbatch thetastat.sbatch /archive/carpenterlab/pire/pire_sphaeramia_nematoptera_l
 </details>
 
   
-## 9. Neutrality test
+## 9. Estimating effective population size (Ne) using Ne_estimation.R and Ne_estimation_neutral.R
+
+##UNDER CONSTRUCTION##
+The *.mafs.gz outputs from Step 4: SAF (saf_beagle_maf.sbatch) will be used for this step.
+
+A revised code developed from Jorde & Ryman 2007 and the NeEstimator manual v.2.1 was used.
+
+Ne_estimation_3sites.R was used to generate Ne estimates for the adapted CMH and adapted Chi-squared selection scan tests.
 
 
-UNDER CONSTRUCTION - REFER TO SPHAERAMIA NEMATOPTERA GITHUB FOR NOW
+Neutral SNPs can be filtered out (Step 11) & the Ne_estimation_neutral.R can be used.
+
+
+
 </p>
 </details>
 
-<details><summary> 10. Genetic Diversity (Pi, theta, Tajima's D)
-</summary>
+<details><summary>10. Analyzing changes in genetic diversity: Watterson's theta, nucleotide diversity (pi), and Tajima's D using the geneticdiversity.R and geneticdiversity_neutral.R scripts.</summary>
 <p>
-  
-## 10. Genetic Diversity (Pi, theta, Tajima's D)
+## 10. Analyzing changes in genetic diversity: Watterson's theta, nucleotide diversity (pi), and Tajima's D using the geneticdiversity.R and geneticdiversity_neutral.R scripts.
 
+##UNDER CONSTRUCTION##
+The geneticdiversity_Sne.R script was created specifically for *Sphaeramia nematoptera* with 6 populations. 
 
-UNDER CONSTRUCTION - REFER TO SPHAERAMIA NEMATOPTERA GITHUB FOR NOW
+The *.thetas.idx.pestPG outputs from calculating per site Theta (Step 7) were used. Watterson's theta and nucleotide diversity were originally plotted against sequencing depth (mean depth per individual) to evaluate any depth based correlations that may be biasing results. This analysis identified that genetic diversity was sensitive to sequencing depth below 3x or above 6x (based on Fitz et al.). Thus, analysis on genetic diversity metrics to the xxx contigs with 3-6x depth. The following statistical analyses for all three metrics were run on this 3-6x depth range (xxx SNPs).
+
+Because the script requires SAF beagle file with all sites together (with a *.pos.gz file extension), I had to go back to making the SAF step (Step 4). Refer to step 4 for this.
+
 </p>
 </details>
 
-<details><summary> 11. Selection scan for neutral SNPs
- {additional steps TBD}
-</summary>
+<details><summary>11. Selection scan to get a list of neutral SNPs</summary>
 <p>
-  
-## 11. Selection scan for neutral SNPs
+## 11. Selection scan to get a list of neutral SNPs
 
-UNDER CONSTRUCTION - REFER TO SPHAERAMIA NEMATOPTERA GITHUB FOR NOW
-</p>
-</details>
+##UNDER CONSTRUCTION##
+The selection_3sites.R script was created specifically for *Sphaeramia nematoptera* with 6 populations.
+For the case of *Sphaeramia nematoptera*, the number of chromosomes changed after filtering. Therefore, a new chromosome list had to be created too. After this step, 
+

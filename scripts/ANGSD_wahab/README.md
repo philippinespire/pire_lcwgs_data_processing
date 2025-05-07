@@ -2,7 +2,7 @@
 
 [ANGSD](https://www.popgen.dk/angsd/index.php/ANGSD) is a software package that can calculate genotype likelihoods from mapped lcwgs data. Along with accessory packages such as [pcangsd](https://www.popgen.dk/software/index.php/PCAngsd) and [realSFS](https://www.popgen.dk/angsd/index.php/RealSFS), ANGSD can be used to perform a number of useful analyses, including estimating population structure, genetic divergence, genetic diversity, and loci potentially under selection.
 
-Currently, we are using scripts adapted by Kyra Fitz from the Therkildsen Lab's [GitHub](https://github.com/therkildsen-lab) to perform analyses in ANGSD. These scripts were originally used for Kyra's *Taeniamia zosterophora* [project](https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs) and extended to selection analyses and windowed PCA in *Salarias fasciatus* [here](https://github.com/philippinespire/pire_salarias_fasciatus_lcwgs) by Brendan and Mikaela.
+Currently, we are using scripts adapted by Kyra Fitz from the Therkildsen Lab's [GitHub](https://github.com/therkildsen-lab) to perform analyses in ANGSD. These scripts were originally used for Kyra's *Taeniamia zosterophora* [project](https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs) and extended to selection analyses and windowed PCA in *Salarias fasciatus* [here](https://github.com/philippinespire/pire_salarias_fasciatus_lcwgs) by Brendan and Mikaela. Some scripts were also adapted by Jem from analyzing *Sphaeramia nematoptera, Dascyllus aruanus, Pseudanthias squamipinnis, Parupeneus barberinus*, and *Pomacentrus brachialis* as some species may have 1 or 3 sites.
 
 Outline of ANGSD pipeline and potential analyses: 
   0) Create an analysis folder and compile .bam files
@@ -459,10 +459,11 @@ sbatch thetastat.sbatch /archive/carpenterlab/pire/pire_sphaeramia_nematoptera_l
 </p>
 </details>
 
+<details><summary>9. Estimating effective population size (Ne) using Ne_estimation.R and Ne_estimation_neutral.R </summary>
+<p>
   
 ## 9. Estimating effective population size (Ne) using Ne_estimation.R and Ne_estimation_neutral.R
 
-##UNDER CONSTRUCTION##
 The *.mafs.gz outputs from Step 4: SAF (saf_beagle_maf.sbatch) will be used for this step.
 
 A revised code developed from Jorde & Ryman 2007 and the NeEstimator manual v.2.1 was used.
@@ -472,30 +473,32 @@ Ne_estimation_3sites.R was used to generate Ne estimates for the adapted CMH and
 
 Neutral SNPs can be filtered out (Step 11) & the Ne_estimation_neutral.R can be used.
 
-
-
 </p>
 </details>
 
 <details><summary>10. Analyzing changes in genetic diversity: Watterson's theta, nucleotide diversity (pi), and Tajima's D using the geneticdiversity.R and geneticdiversity_neutral.R scripts.</summary>
 <p>
+
 ## 10. Analyzing changes in genetic diversity: Watterson's theta, nucleotide diversity (pi), and Tajima's D using the geneticdiversity.R and geneticdiversity_neutral.R scripts.
 
-##UNDER CONSTRUCTION##
-The geneticdiversity_Sne.R script was created specifically for *Sphaeramia nematoptera* with 6 populations. 
+The geneticdiversity.R script can be used for species with only 1 site & 2 populations: Albatross & Contemporary. The geneticdiversity_Sne.R script was created specifically for *Sphaeramia nematoptera* with 6 populations. 
 
 The *.thetas.idx.pestPG outputs from calculating per site Theta (Step 7) were used. Watterson's theta and nucleotide diversity were originally plotted against sequencing depth (mean depth per individual) to evaluate any depth based correlations that may be biasing results. This analysis identified that genetic diversity was sensitive to sequencing depth below 3x or above 6x (based on Fitz et al.). Thus, analysis on genetic diversity metrics to the xxx contigs with 3-6x depth. The following statistical analyses for all three metrics were run on this 3-6x depth range (xxx SNPs).
 
-Because the script requires SAF beagle file with all sites together (with a *.pos.gz file extension), I had to go back to making the SAF step (Step 4). Refer to step 4 for this.
+Because the script requires SAF beagle file with all sites together (with a *.pos.gz file extension), you need to return to the SAF step (Step 4) to make that. Refer to step 4 for this.
 
 </p>
 </details>
 
 <details><summary>11. Selection scan to get a list of neutral SNPs</summary>
 <p>
-## 11. Selection scan to get a list of neutral SNPs
 
-##UNDER CONSTRUCTION##
-The selection_3sites.R script was created specifically for *Sphaeramia nematoptera* with 6 populations.
-For the case of *Sphaeramia nematoptera*, the number of chromosomes changed after filtering. Therefore, a new chromosome list had to be created too. After this step, 
+## 11. Selection scan to get a list of neutral SNPs
+The selection.R script can be used to get a list of neutral SNPs for species with only 1 location. The selection_3sites.R script was created specifically for *Sphaeramia nematoptera* with 6 populations at 3 sites.
+
+For the case of *Sphaeramia nematoptera*, the number of chromosomes changed after filtering. Therefore, a new chromosome list had to be created too. The selection_3sites.R script provides code for that. A new index must be created for the new neutral snp list and it is executed through the the index_snplist.sbatch script. Make sure to execute this after you create your neutral snp list.
+
+```
+sbatch index_snplist.sbatch
+```
 

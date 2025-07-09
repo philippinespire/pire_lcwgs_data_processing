@@ -187,7 +187,7 @@ cp ../dDocentHPC/dDocentHPC.sbatch .
 ```
 Now, we need to edit the scripts:
 ```
-[hpc-0356@wahab-01 mkBAM_ddocent]$ nano config.6.lcwgs
+nano config.6.lcwgs
 
 # within file:
 # change Cutoff1 and Cutoff2 to "genbank" if ncbi or "denovoSSL" if ssl, and "<species code>" as follows:
@@ -202,7 +202,7 @@ Sor             Cutoff2 (integer)                                               
 --------------------------------------------------------------------------------------------------------------->
 ```
 ```
-[hpc-0356@wahab-01 mkBAM_ddocent]$ nano dDocentHPC.sbatch
+nano dDocentHPC.sbatch
 
 # within file:
 # change where the "#" is to load the newest version as follows:

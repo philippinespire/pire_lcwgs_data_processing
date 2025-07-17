@@ -96,7 +96,7 @@ Before embarking upon mapping, it is a good idea to curate your reference genome
 
 For a chromosome scale genome, rename the chromosomes in the FASTA files to be intuitive (chr01, chr01, ...) while retaining the accession number.
 
-For chromosome-scale genomes taken from GenBank, it is a good idea to remove any scaffolds representing the mitochondrial genome first (if any are identified as such– unlikely).
+For chromosome-scale genomes taken from GenBank, it is a good idea to remove any scaffolds representing the mitochondrial genome first (if any are identified as such).
 
 * Example species– Salarias fasciatus
   ```
@@ -121,7 +121,7 @@ In either case of an NCBI genome or an in-house SSL genome, it is highly recomme
 To remove these scaffolds, you can use the `removesmalls.pl` script. We generally remove scaffolds <20kbp in length. This should also remove any mitochondrial scaffolds.
 
 ```
-cp /home/e1garcia/shotgun_PIRE/REUs/2022_REU/PSMC/scripts/removesmalls.pl .
+cp /home/e1garcia/shotgun_PIRE/REUs/2022_REU/PSMC/scripts/removesmalls.pl <directory with reference genome>
 
 #for ssl in-house:
 perl removesmalls.pl 20000 <filename of ssl assembly> > reference.denovoSSL.<speciescode>.20k.fasta
@@ -134,11 +134,11 @@ Now, make sure it worked. Check the length of the filtered assembly, which tells
 ```
 # filtered:
 cat reference.genbank.<speciescode>.20k.fasta | grep "^>" | wc -l
-2841
+(a smaller number)
 
 # original:
 cat reference.genbank.<speciescode>.fasta | grep "^>" | wc -l
-69922
+(a larger number)
 ```
 
 ---
@@ -147,10 +147,10 @@ cat reference.genbank.<speciescode>.fasta | grep "^>" | wc -l
 </details>
 
 
-<details><summary>4. (optional) Map your reads to your reference genome</summary>
+<details><summary>4. (Optional) Map your reads to your reference genome</summary>
 <p>
 
-## 4. (optional) Mapping your reads to your reference genome with dDocent.
+## 4. (Optional) Mapping your reads to your reference genome with dDocent.
 
 To do a simple mapping of reads to the reference, you can use dDocent. Note that our preferred method of mapping for use in downstream analyses is now to use the GenErode pipeline (see below).
 
@@ -226,10 +226,10 @@ sbatch dDocentHPC.sbatch mkBAM config.6.lcwgs
 </details>
 
 
-<details><summary>5. (optional) Filter the binary alignment maps</summary>
+<details><summary>5. (Optional) Filter the binary alignment maps</summary>
 <p>
 
-## 5. (optional) Filter the binary alignment maps
+## 5. Optional) Filter the binary alignment maps
 
 Again, use dDocent.
 
@@ -244,10 +244,10 @@ sbatch dDocentHPC.sbatch fltrBAM config.6.lcwgs
 </details>
 
 
-<details><summary>6. (optional) Summarize Read Mapping Performance</summary>
+<details><summary>6. (Optional) Summarize Read Mapping Performance</summary>
 <p>
 
-## 6. (optional) Summarize Read Mapping Performance / Merge Runs
+## 6. (Optional) Summarize Read Mapping Performance / Merge Runs
 
 See the [process_sequencing_metadata](https://github.com/philippinespire/process_sequencing_metadata) repo for instructions.
 

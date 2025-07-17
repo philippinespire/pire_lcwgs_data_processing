@@ -268,6 +268,8 @@ sbatch ../../pire_fq_gz_processing/mappedReadStats.sbatch mkBAM mkBAM/coverageMa
 </details>
 
 
+</details>
+
 <details><summary>7. Map, filter, assess damage patterns, and calculate GERP scores using GenErode. </summary>
 <p>
 
@@ -300,7 +302,7 @@ Instructions and scripts used to run ATLAS can be found [here](https://github.co
 <details><summary>9. Estimate diversity, divergence and selection using ANGSD. </summary>
 <p>
 
-  ## 9. Estimate diversity, divergence and selection using ANGSD.
+## 9. Estimate diversity, divergence and selection using ANGSD.
 
 Currently the preferred method for conducting downstream analyses on PIRE lcwgs datasets.
 
@@ -324,3 +326,94 @@ It may be useful to extract mitochondrial sequences from lcwgs data to confirm s
 
 </p>
 </details>
+
+<details><summary>#. Uploading Species Data (GEOME, NCBI, FigShare)  </summary>
+
+## #. Uploading Species Data (GEOME, NCBI, FigShare)
+
+We want to make sure that reads and metadata are uploaded to GEOME and NCBI, that final genotype likelihoods are uploaded to FigShare, that all of these datasets are linked from the main readme for a species, and that the repo is made public. 
+
+<details><summary>A. GEOME</summary>
+
+### GEOME
+
+The [Genomic Observatories Metadatabase (GeOMe)](https://geome-db.org/) is a web-based database for capturing and managing metadata for biological samples. GEOME stores our metadata, NCBI stores our fastq files. 
+
+To begin, you need to download a metadata template excel sheet. You can either download the template from the GEOME_Metadata folder on OneDrive, or from [GEOME](https://geome-db.org/workbench/project-overview) (click “Generate Template” on the left-hand taskbar, then select “Philippines PIRE 2023 Template” under “Template Config”). Note: I believe GEOME updated their system, which has caused the worksheet download feature to not work properly. If you see "Samples" as the only worksheet option, it's the wrong sheet.
+
+For a single species, you will, at minimum, need one sheet per era (Albatross/Contemporary). A new spreadsheet will need to be added if multiple years exist amongst eras, and/or if there are multiple sites. For example, Gerres oyena needed 3 metadata spreadsheets– there was only one site, but albatross individuals were collected in 2 different years. Another example is Hmi– 4 metadata sheets were generated as each era had 2 separate sites. If you have multiple runs of the same individuals, these do not need separate sheets.
+
+I will now walk you through how to fill out each column in the spreadsheet, in order.
+
+**`materialSampleID`**
+- This will be the prefix of your fqgz file, and this must match exactly for GEOME to appropriately pair metadata with the associated fastq file. Unfortunately, GEOME does not recognize the character "-" so we will have to rename every one of our fqgz files prior to uploading (we'll do this later) from this format: "Sne-ABir_001" to this: "SneABir001". That being said, we will populate our materialSampleID column with prefixes in that corrected format.
+- An easy way to get those IDs is to go into your sequencing_run/fq_raw directory, and run this (you can add `| grep 'C'` to the end if you want to specify era):
+  - `ls *fq.gz  | cut -c1-12 | uniq | sed 's/[-_]//g'` 
+- If you have multiple runs of the same species, you will need to append a "_lib1", "_lib2", etc. to the end of this ID. Number the libraries based on number of appearances. (Example, Sne Bir appeared in the 4th and 5th sequencing runs, but I would not list the lib as "_lib4 " and "_lib5", but rather 1 and 2 based on the actual number of runs for that site).
+- An easy way to get this is to run (will append lib number to the end of printed output):
+  - `ls *fq.gz | cut -c1-12 | uniq | sed 's/[-_]//g' | sed 's/$/_lib1/'`
+
+**`principalInvestigator`**
+- Kent_Carpenter
+
+**`yearCollected`**
+- You can find this in the `Lot_sheet.xlsx` on OneDrive under the "Date_Collected" column
+
+**`DecimalLatitude`** & **`DecimalLongitude`**
+- Pull from “[Philippine Albatross Collections working copy](https://www.google.com/maps/d/edit?mid=1leLurkYXC3FezrY59AhoU0QTjvi4fsIl&amp;usp=sharing)” Google Map.
+- Click on the collection flag for your site, and copy the lat/long to 3 decimal points.
+
+**`locality`**
+- In the format: Municipality_Province. You can look for this in various sheets, or use google.
+
+**`country`**
+- Philippines
+
+**`genus`**
+- Say your species is Zenarchopterus dispar, genus would be "Zenarchopterus".
+
+**`specificEpithet`**
+ - Say your species is Zenarchopterus dispar, this would be "dispar".
+
+**`lifeStage`**
+- Default to “adult” if you have no other information. It should be noted on the Lot Sheet under the “Notes” column if the specimens are larvae or juveniles.
+
+**`monthCollected`** 
+- List the month as a number (1-12). Found on the Lot Sheet under the “Date_Collected” column.
+
+**`dayCollected`** 
+- List the day as a number (1-31). Found on the Lot Sheet under the “Date_Collected” column.
+
+**`georeferenceProtocol`** 
+- GoogleMaps
+
+**`permitInformation`** 
+- If your contemporary specimens are from Palawan, fill in Palawan Council for Sustainable Development GP# 2022-4(R1).
+- If your specimens are from anywhere else, fill in “NA”.
+
+**`preservative`** 
+- 75% ethanol or DESS. Check the “Storage_solution” column on the Lot Sheet.
+- If it says “EtOH”, record “75% ethanol”.
+- Refers to the solution used to preserve the full specimen.
+
+
+
+
+
+
+
+</details>
+
+<details><summary>B. NCBI</summary>
+
+
+---
+</details>
+
+<details><summary>C. FigShare</summary>
+
+
+---
+</details>
+
+

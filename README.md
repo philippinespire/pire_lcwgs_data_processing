@@ -335,13 +335,18 @@ We want to make sure that reads and metadata are uploaded to GEOME and NCBI, tha
 
 <details><summary>A. GEOME</summary>
 
-### GEOME
+## GEOME
 
 The [Genomic Observatories Metadatabase (GeOMe)](https://geome-db.org/) is a web-based database for capturing and managing metadata for biological samples. GEOME stores our metadata, NCBI stores our fastq files. 
 
 To begin, you need to download a metadata template excel sheet. You can either download the template from the GEOME_Metadata folder on OneDrive, or from [GEOME](https://geome-db.org/workbench/project-overview) (click “Generate Template” on the left-hand taskbar, then select “Philippines PIRE 2023 Template” under “Template Config”). Note: I believe GEOME updated their system, which has caused the worksheet download feature to not work properly. If you see "Samples" as the only worksheet option, it's the wrong sheet.
 
 For a single species, you will, at minimum, need one sheet per era (Albatross/Contemporary). A new spreadsheet will need to be added if multiple years exist amongst eras, and/or if there are multiple sites. For example, Gerres oyena needed 3 metadata spreadsheets– there was only one site, but albatross individuals were collected in 2 different years. Another example is Hmi– 4 metadata sheets were generated as each era had 2 separate sites. If you have multiple runs of the same individuals, these do not need separate sheets.
+
+### Filling out the metadata spreadsheet:
+
+#### Filename format: `<Speciescode>_<Year>_<Municipality>_<Province>_<SeqType>`
+- Example: Sne_1909_Biri_NorthernSamar_lcwgs
 
 I will now walk you through how to fill out each column in the spreadsheet, in order.
 
@@ -357,14 +362,15 @@ I will now walk you through how to fill out each column in the spreadsheet, in o
 - Kent_Carpenter
 
 **`yearCollected`**
-- You can find this in the `Lot_sheet.xlsx` on OneDrive under the "Date_Collected" column
+- You can find this in the [Lot Sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B9E5DA055-65CC-449A-92E1-3537C1B9949D%7D&file=Lot_sheet.xlsx&action=default&mobileredirect=true) on OneDrive under the "Date_Collected" column
 
-**`DecimalLatitude`** & **`DecimalLongitude`**
+**`decimalLatitude`** & **`decimalLongitude`**
 - Pull from “[Philippine Albatross Collections working copy](https://www.google.com/maps/d/edit?mid=1leLurkYXC3FezrY59AhoU0QTjvi4fsIl&amp;usp=sharing)” Google Map.
 - Click on the collection flag for your site, and copy the lat/long to 3 decimal points.
 
 **`locality`**
-- In the format: Municipality_Province. You can look for this in various sheets, or use google.
+- In the format: Municipality_Province. You can look for this in various sheets, or use google. If unsure, ask on Slack.
+- For Albatross individuals collected between 1907-1910, this sheet may be helpful: [ALBATROSS_1907-1910updatedALLrecordsNotations.xlsx](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7BC924AA0F-278E-48EA-A078-5F708220687F%7D&file=ALBATROSS_1907-1910updatedALLrecordsNotations.xlsx&action=default&mobileredirect=true)
 
 **`country`**
 - Philippines
@@ -376,13 +382,13 @@ I will now walk you through how to fill out each column in the spreadsheet, in o
  - Say your species is Zenarchopterus dispar, this would be "dispar".
 
 **`lifeStage`**
-- Default to “adult” if you have no other information. It should be noted on the Lot Sheet under the “Notes” column if the specimens are larvae or juveniles.
+- Default to “adult” if you have no other information. It should be noted on the [Lot Sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B9E5DA055-65CC-449A-92E1-3537C1B9949D%7D&file=Lot_sheet.xlsx&action=default&mobileredirect=true) under the “Notes” column if the specimens are larvae or juveniles.
 
 **`monthCollected`** 
-- List the month as a number (1-12). Found on the Lot Sheet under the “Date_Collected” column.
+- List the month as a number (1-12). Found on the [Lot Sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B9E5DA055-65CC-449A-92E1-3537C1B9949D%7D&file=Lot_sheet.xlsx&action=default&mobileredirect=true) under the “Date_Collected” column.
 
 **`dayCollected`** 
-- List the day as a number (1-31). Found on the Lot Sheet under the “Date_Collected” column.
+- List the day as a number (1-31). Found on the [Lot Sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B9E5DA055-65CC-449A-92E1-3537C1B9949D%7D&file=Lot_sheet.xlsx&action=default&mobileredirect=true) under the “Date_Collected” column.
 
 **`georeferenceProtocol`** 
 - GoogleMaps
@@ -392,12 +398,235 @@ I will now walk you through how to fill out each column in the spreadsheet, in o
 - If your specimens are from anywhere else, fill in “NA”.
 
 **`preservative`** 
-- 75% ethanol or DESS. Check the “Storage_solution” column on the Lot Sheet.
+- 75% ethanol or DESS.
+- Check the “Storage_solution” column on the [Lot Sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B9E5DA055-65CC-449A-92E1-3537C1B9949D%7D&file=Lot_sheet.xlsx&action=default&mobileredirect=true).
 - If it says “EtOH”, record “75% ethanol”.
 - Refers to the solution used to preserve the full specimen.
 
+**`catalogNumber`**
+- The Individual_ID from the [Individual_sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7BD84C712C-816F-420F-82D2-784C244B201D%7D&file=Individual_sheet.xlsx&action=default&mobileredirect=true) (file path: Database/Individual_sheet.xlsx).
+- Example: Aen-AHam_001.
+- If the prefix of your fqgz files follows this format, you could also run this in your fq_raw directory, which is especially useful if you are not working with every individual in a lot.
+  - `ls *fq.gz | cut -c1-12 | uniq`
 
+**`occurrenceRemarks`**
+- Check the notes on the [Lot Sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B9E5DA055-65CC-449A-92E1-3537C1B9949D%7D&file=Lot_sheet.xlsx&action=default&mobileredirect=true) and the Field Notes (file path: Database/Field Collections) to see if there are any comments on the species occurrence.
+- If there are none, fill in “NA”. This field will most likely be filled in with “NA”.
 
+**`voucherCatalogNumber`** 
+- For Albatross individuals, the “New_USNM_Number” found on the [Individual_sheet.xlsx](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7BD84C712C-816F-420F-82D2-784C244B201D%7D&file=Individual_sheet.xlsx&action=default&mobileredirect=true) or the [Biorepository_Smithsonian sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7BE91DB72A-921D-4BD7-B46B-7CA3A6E86196%7D&file=Biorepository_Smithsonian.xlsx&action=default&mobileredirect=true) (file path: Database/Biorepository_Database/Biorepository_Smithsonian.xlsx).
+  - Example: 455096
+- For contemporary individuals, use the contemporary lot number found on the [Lot Sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B9E5DA055-65CC-449A-92E1-3537C1B9949D%7D&file=Lot_sheet.xlsx&action=default&mobileredirect=true) under the “Lot_ID” column.
+  - Example: Bat-2018-004_006
+
+**`identificationRemarks`**
+- Check the notes on the [Lot Sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B9E5DA055-65CC-449A-92E1-3537C1B9949D%7D&file=Lot_sheet.xlsx&action=default&mobileredirect=true) and the Field Notes (file path: Database/Field Collections) to see if there are any comments on identification.
+- If there are none, fill in “NA”.
+
+**`identifiedBy`**
+- Found on the [Lot Sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B9E5DA055-65CC-449A-92E1-3537C1B9949D%7D&file=Lot_sheet.xlsx&action=default&mobileredirect=true) under the “Species_verified” column.
+- List names with an underscore between the first and last name.
+- If there is more than one name, use a space and the pipe operator “|” between each name (the pipe operator is specified to be used in the GEOME FAQs).
+  - Example: Kent_Carpenter | Maddy_Kenton
+
+**`previousIdentifications`** 
+- Check the “Notes” column on the [Lot Sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B9E5DA055-65CC-449A-92E1-3537C1B9949D%7D&file=Lot_sheet.xlsx&action=default&mobileredirect=true) to see if this species was previously identified as something different.
+- If there are no notes to indicate this, fill in “NA”.
+
+**`scientificName`**
+- Format: Genus_species
+  - Example: Zenarchopterus_dispar
+
+**`yearIdentified`**
+- On the [Lot Sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B9E5DA055-65CC-449A-92E1-3537C1B9949D%7D&file=Lot_sheet.xlsx&action=default&mobileredirect=true), look at the column "Species_verified".
+- When there is no date, only the name of the person:
+  - For Contemporary: use the date of collection (under "Date_Collected").
+  - For Albatross: we assume it was IDed at the same time as contemporary, so use the date listed in "Species_verified" for the associated contemporary lot.
+
+**`samplingProtocol`**
+- For Contemporary collections: fill in “marketcollection”.
+- For Albatross collections:
+  - check the site on the “[Philippine Albatross Collections working copy](https://www.google.com/maps/d/edit?mid=1leLurkYXC3FezrY59AhoU0QTjvi4fsIl&amp;usp=sharing)” Google Map. It should contain the notes with the sampling methods.
+    - Examples include “dynamite” and “beachseine”.
+  - If not listed on Google Maps, try this: [Albatross Philippines Expedition Stations(Philippines Expedition).csv](https://drive.google.com/file/d/1CLNuOJJAoEva_7wqxqVX3mDaNFH0cr-r/view?usp=sharing)
+   
+**`fieldNotes`**
+- For Albatross: check for notes in the site on the “[Philippine Albatross Collections working copy](https://www.google.com/maps/d/edit?mid=1leLurkYXC3FezrY59AhoU0QTjvi4fsIl&amp;usp=sharing)” Google Map.
+- For Contemporary: copy or summarize from the field notes (file path: Database/Field Collections) if you are able to access them. Otherwise, ask Brendan, giving him your species name and collection date.
+
+**`tissueID`**
+- This will be the exact same as your first column, `materialSampleID`.
+  - Example: SneABir001_lib2
+- Again, no special charcters will be recognized, so only underscores are allowed.
+
+**`tissueInstitution`**
+- USNM
+
+**`tissueSamplingYear`** 
+- Pull from the “Date_Subsampling” column on the [Extractions_sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B7631F787-D146-4E74-8D67-26C9B7947117%7D&file=Extractions_sheet.xlsx&action=default&mobileredirect=true) (file path: Database/Extractions_sheet.xlsx).
+- Refers to the year the tissue was subsampled.
+
+**`tissueRecordedBy`** 
+- Pull from the “Subsampler” column on the [Extractions_sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B7631F787-D146-4E74-8D67-26C9B7947117%7D&file=Extractions_sheet.xlsx&action=default&mobileredirect=true).
+- List names with an underscore between the first and last name.
+- If there is more than one name, use a space and the pipe operator “|” between each name.
+  - Example: John_Schaefer | David_Baker
+
+**`tissuePreservative`**
+- 95% ethanol
+
+**`tissueRemarks`**
+- Check the “Notes” column on the [Extractions_sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B7631F787-D146-4E74-8D67-26C9B7947117%7D&file=Extractions_sheet.xlsx&action=default&mobileredirect=true).
+- If none, fill in “NA”.
+
+### Uploading to GEOME:
+
+Now that your metadata spreadsheet is complete, we can upload this to GEOME.
+
+#### Creating your fastq text file: 
+
+Before uploading, we need to create a text file with the names of all of our fastq files (1 text file per sheet). The prefix must match what we wrote for our materialSampleID in our spreadsheet. We will be renaming our files later, before we upload the sequences to NCBI, but for now just the intended filenames is fine. 
+
+I find the easiest way to do this is to run a variation of this command in your terminal (in fq_raw):
+```
+ls *fq.gz | awk -F'[-_]' '{print $1 $2 $3 "_lib1-" $4 "-" $5 "-" $6 "-" $7 "-" $8}' 
+```
+You may need to edit it based on how your files are named. 
+- `ls *fq.gz` lists all fastq files in your directory. You can change it to `ls *A*fq.gz` or `ls *C*fq.gz` if you want to specify era
+- `-F'[-_]'` tells `awk` to split each filename using both - and _ as field separators
+- `print` will then manipulate the original filename by changing how each separated field is handled, also adding in the _lib number (if needed)
+  - example: `Och-ACan_001-Ex1-1A-lcwgs-1-1.1.fq.gz`, with that command, becomes `OchACan001_lib1-Ex1-1A-lcwgs-1-1.1.fq.gz`
+  - BUT, if I ran this on `Sne-ATaw_001-Ex1-lcwgs.1.fq.gz`, it would become: `SneATaw001_lib1-Ex1-lcwgs.1.fq.gz---` because I only have 5 fields that are separated by a - or _, not 8
+    - SO, I would edit my command to be: `ls *fq.gz | awk -F'[-_]' '{print $1 $2 $3 "_lib1-" $4 "-" $5}'` to print: `SneATaw001_lib1-Ex1-lcwgs.1.fq.gz`
+
+Another issue you may run in to is that the raw files are not in the fq_raw directory. Sometimes files are deleted by users once processing is complete in an attempt to maximize storage space. In this case, we will just have to redownload the files. Usually these can be found in `/archive/carpenterlab/pire/downloads/<species_name>/<sequencing_run>/fq_raw`, but if the directory is older, it may be in a different location. Check the readme for that run to find out where the files are located.
+
+For example, Sne 2nd sequencing run was missing the raw files. Once I located the raw files, I ran the following to copy them over:
+```
+cp /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/2nd_sequencing_run/fq_raw/*fq.gz /archive/carpenterlab/pire/pire_sphaeramia_nematoptera_lcwgs/2nd_sequencing_run/fq_raw/.
+```
+Then I ran the rename script:
+```
+bash /home/e1garcia/shotgun_PIRE/pire_fq_gz_processing/renameFQGZ.bash Sne_LCWGS-testlane_SequenceNameDecode.tsv rename
+```
+Now I was able to get my fq list, say for albatross:
+```
+ls Sne-A*fq.gz | awk -F'[-_]' '{print $1 $2 $3 "_lib1-" $4 "-" $5 "-" $6 "-" $7 "-" $8}'
+SneABir001_lib1-Ex1-9A-lcwgs-1-1.1.fq.gz
+SneABir001_lib1-Ex1-9A-lcwgs-1-1.2.fq.gz
+SneABir002_lib1-Ex1-9B-lcwgs-1-1.1.fq.gz
+SneABir002_lib1-Ex1-9B-lcwgs-1-1.2.fq.gz
+SneABir003_lib1-Ex1-9C-lcwgs-1-1.1.fq.gz
+SneABir003_lib1-Ex1-9C-lcwgs-1-1.2.fq.gz
+SneABir004_lib1-Ex1-9D-lcwgs-1-1.1.fq.gz
+SneABir004_lib1-Ex1-9D-lcwgs-1-1.2.fq.gz
+SneABir005_lib1-Ex1-9E-lcwgs-1-1.1.fq.gz
+SneABir005_lib1-Ex1-9E-lcwgs-1-1.2.fq.gz
+SneABir006_lib1-Ex1-9F-lcwgs-1-1.1.fq.gz
+SneABir006_lib1-Ex1-9F-lcwgs-1-1.2.fq.gz
+SneABir007_lib1-Ex1-9G-lcwgs-1-1.1.fq.gz
+SneABir007_lib1-Ex1-9G-lcwgs-1-1.2.fq.gz
+SneABir008_lib1-Ex1-9H-lcwgs-1-1.1.fq.gz
+SneABir008_lib1-Ex1-9H-lcwgs-1-1.2.fq.gz
+SneABir009_lib1-Ex1-10A-lcwgs-1-1.1.fq.gz
+SneABir009_lib1-Ex1-10A-lcwgs-1-1.2.fq.gz
+SneABir010_lib1-Ex1-10B-lcwgs-1-1.1.fq.gz
+SneABir010_lib1-Ex1-10B-lcwgs-1-1.2.fq.gz
+SneABir011_lib1-Ex1-10C-lcwgs-1-1.1.fq.gz
+SneABir011_lib1-Ex1-10C-lcwgs-1-1.2.fq.gz
+SneABir012_lib1-Ex1-10D-lcwgs-1-1.1.fq.gz
+SneABir012_lib1-Ex1-10D-lcwgs-1-1.2.fq.gz
+SneABir013_lib1-Ex1-10E-lcwgs-1-1.1.fq.gz
+SneABir013_lib1-Ex1-10E-lcwgs-1-1.2.fq.gz
+SneABir014_lib1-Ex1-10F-lcwgs-1-1.1.fq.gz
+SneABir014_lib1-Ex1-10F-lcwgs-1-1.2.fq.gz
+SneABir015_lib1-Ex1-10G-lcwgs-1-1.1.fq.gz
+SneABir015_lib1-Ex1-10G-lcwgs-1-1.2.fq.gz
+SneABir016_lib1-Ex1-10H-lcwgs-1-1.1.fq.gz
+SneABir016_lib1-Ex1-10H-lcwgs-1-1.2.fq.gz
+SneABir017_lib1-Ex1-11A-lcwgs-1-1.1.fq.gz
+SneABir017_lib1-Ex1-11A-lcwgs-1-1.2.fq.gz
+SneABir018_lib1-Ex1-11B-lcwgs-1-1.1.fq.gz
+SneABir018_lib1-Ex1-11B-lcwgs-1-1.2.fq.gz
+SneABir019_lib1-Ex1-11C-lcwgs-1-1.1.fq.gz
+SneABir019_lib1-Ex1-11C-lcwgs-1-1.2.fq.gz
+SneABir020_lib1-Ex1-11D-lcwgs-1-1.1.fq.gz
+SneABir020_lib1-Ex1-11D-lcwgs-1-1.2.fq.gz
+SneABir021_lib1-Ex1-11E-lcwgs-1-1.1.fq.gz
+SneABir021_lib1-Ex1-11E-lcwgs-1-1.2.fq.gz
+SneABir022_lib1-Ex1-11F-lcwgs-1-1.1.fq.gz
+SneABir022_lib1-Ex1-11F-lcwgs-1-1.2.fq.gz
+SneABir023_lib1-Ex1-11G-lcwgs-1-1.1.fq.gz
+SneABir023_lib1-Ex1-11G-lcwgs-1-1.2.fq.gz
+SneABir024_lib1-Ex1-11H-lcwgs-1-1.1.fq.gz
+SneABir024_lib1-Ex1-11H-lcwgs-1-1.2.fq.gz
+SneABir025_lib1-Ex1-12A-lcwgs-1-1.1.fq.gz
+SneABir025_lib1-Ex1-12A-lcwgs-1-1.2.fq.gz
+SneABir026_lib1-Ex1-12B-lcwgs-1-1.1.fq.gz
+SneABir026_lib1-Ex1-12B-lcwgs-1-1.2.fq.gz
+SneABir027_lib1-Ex1-12C-lcwgs-1-1.1.fq.gz
+SneABir027_lib1-Ex1-12C-lcwgs-1-1.2.fq.gz
+SneABir028_lib1-Ex1-12D-lcwgs-1-1.1.fq.gz
+SneABir028_lib1-Ex1-12D-lcwgs-1-1.2.fq.gz
+```
+Now, paste those filenames into a text file. If you have multiple runs (i.e. _lib1, _lib2, etc) make sure these are included in the file as well.
+- For Mac, you can open TextEdit > New Document > Format > Make Plain text.
+- For PC, paste into an excel sheet, making sure each line contains a single filename > "Save As" > "Text (Tab Delimited)” format).
+
+I'd title the file: `fastq_<metadata spreadsheet name>` to make sure theres no confusion later on.
+- Example: `fastq_Sne_1909_Biri_NorthernSamar_lcwgs`
+
+#### Creating an Expedition:
+
+To start uploading metadata, we need to create the appropriate expedition.
+
+First, make sure you are signed into [GEOME](https://geome-db.org/workbench/project-overview).
+
+Then click on "Project Expeditions" under "Admin" on the left-hand taskbar. Click on "+ Create Expediiton".
+
+Follow our formula for naming the expedition (3 digit species code, year collected, municipality, province, sequencing type; with underscores in between). This should be the same name as your metadata sheet.
+- Example: `Sne_1909_Biri_NorthernSamar_lcwgs`
+- Note: GEOME previously allowed for "-" between words, but has since updated their system. Two-word provinces were written with a dash (Biri_Northern-Samar), but moving forward they should be written as "Biri_NorthernSamar".
+
+Expediton Title and Expedition Code will be the same.
+
+#### Load Data:
+
+Once the expedition has been created, click on "Load Data" in the left-hand taskbar. 
+
+-  **Data Type**: Select...
+  -  Excel Workbook
+  -  Fastq
+
+- **Excel Workbook**: Upload your metadata spreadsheet
+
+- **FASTQ Filenames CSV**: Upload your .txt file
+ 
+- **Library Layout**: Paired End (make sure you have a forward (1.fq.gz) and reverse (2.fq.gz) read for every individual)
+
+- **Library Strategy**:
+  - For LCWGS: select "WGS"
+  - For CSSL: select "Other"
+  - For SSL: select "WGS"
+
+ - **Library Source**: GENOMIC
+
+- **Library Selection**:
+  - For LCWGS: select "other"
+  - For CSSL: select "Reduced Representation"
+  - For SSL: select "size fractionation"
+ 
+- **Platform**: ILLUMINA
+
+- **Instrument Model**: Illumina NovaSeq 6000
+
+- **Protocol Citation or Website**: KAPA HyperPlus Kit
+
+- **Expedition Name**: Select the appropriate expedition.
+
+Now click "Load".
+- You will get errors related to "sex" and "coordinateUncertaintyInMeters". This is okay. Click continue.
+- If you get any other error message, you should make sure everything on your end was correctly inputted.
 
 
 

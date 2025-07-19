@@ -643,6 +643,8 @@ Once your expedition has been properly loaded, track your progress on the [Seque
 </details>
 
 <details><summary>B. NCBI Short Read Archive (SRA)</summary>
+
+### NCBI Short Read Archive (SRA)
 <p>
   
 Now that your metadata has been uploaded to GEOME, we can move on to submitting our reads to NCBI. 
@@ -700,7 +702,7 @@ You can do this however you want, but what has been the easiest for me is as fol
 
 Make sure all files are there, and now we can move to NCBI.
 
-### Creating an NCBI SRA Submission
+#### Creating an NCBI SRA Submission
 
 
 ---

@@ -339,7 +339,7 @@ We want to make sure that reads and metadata are uploaded to GEOME and NCBI, tha
 
 The [Genomic Observatories Metadatabase (GeOMe)](https://geome-db.org/) is a web-based database for capturing and managing metadata for biological samples. GEOME stores our metadata, NCBI stores our fastq files. 
 
-To begin, you need to download a metadata template excel sheet. You can either download the template from the GEOME_Metadata folder on OneDrive, or from [GEOME](https://geome-db.org/workbench/project-overview) (click “Generate Template” on the left-hand taskbar, then select “Philippines PIRE 2023 Template” under “Template Config”). Note: I believe GEOME updated their system, which has caused the worksheet download feature to not work properly. If you see "Samples" as the only worksheet option, it's the wrong sheet.
+To begin, you need to download a metadata template excel sheet. You can either download the template from the GEOME_Metadata folder on OneDrive, or from the [GEOME PIRE Project](https://geome-db.org/workbench/project-overview) (click “Generate Template” on the left-hand taskbar, then select “Philippines PIRE 2023 Template” under “Template Config”). Note: I believe GEOME updated their system, which has caused the worksheet download feature to not work properly. If you see "Samples" as the only worksheet option, it's the wrong sheet.
 
 For a single species, you will, at minimum, need one sheet per era (Albatross/Contemporary). A new spreadsheet will need to be added if multiple years exist amongst eras, and/or if there are multiple sites. For example, Gerres oyena needed 3 metadata spreadsheets– there was only one site, but albatross individuals were collected in 2 different years. Another example is Hmi– 4 metadata sheets were generated as each era had 2 separate sites. If you have multiple runs of the same individuals, these do not need separate sheets.
 
@@ -370,16 +370,18 @@ I will now walk you through how to fill out each column in the spreadsheet, in o
 
 **`locality`**
 - In the format: Municipality_Province. You can look for this in various sheets, or use google. If unsure, ask on Slack.
-- For Albatross individuals collected between 1907-1910, this sheet may be helpful: [ALBATROSS_1907-1910updatedALLrecordsNotations.xlsx](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7BC924AA0F-278E-48EA-A078-5F708220687F%7D&file=ALBATROSS_1907-1910updatedALLrecordsNotations.xlsx&action=default&mobileredirect=true)
+  - For Albatross individuals collected between 1907-1910, this sheet may be helpful: [ALBATROSS_1907-1910updatedALLrecordsNotations.xlsx](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7BC924AA0F-278E-48EA-A078-5F708220687F%7D&file=ALBATROSS_1907-1910updatedALLrecordsNotations.xlsx&action=default&mobileredirect=true)
+- For multi-word municipalities/provinces (i.e. Matnog Bay, Northern Samar, etc), use capital letters to separate the words. Ex: MatnogBay_Sorsogon, Biri_NorthernSamar
+  - GEOME used to allow for dashes (Matnog-Bay_Sorsogon, Biri_Northern-Samar), but has since updated their system.
 
 **`country`**
 - Philippines
 
 **`genus`**
-- Say your species is Zenarchopterus dispar, genus would be "Zenarchopterus".
+- Say your species is Sphaeramia nematoptera, genus would be "Sphaeramia".
 
 **`specificEpithet`**
- - Say your species is Zenarchopterus dispar, this would be "dispar".
+ - Say your species is Sphaeramia nematoptera, this would be "nematoptera".
 
 **`lifeStage`**
 - Default to “adult” if you have no other information. It should be noted on the [Lot Sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B9E5DA055-65CC-449A-92E1-3537C1B9949D%7D&file=Lot_sheet.xlsx&action=default&mobileredirect=true) under the “Notes” column if the specimens are larvae or juveniles.
@@ -417,7 +419,7 @@ I will now walk you through how to fill out each column in the spreadsheet, in o
 - For Albatross individuals, the “New_USNM_Number” found on the [Individual_sheet.xlsx](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7BD84C712C-816F-420F-82D2-784C244B201D%7D&file=Individual_sheet.xlsx&action=default&mobileredirect=true) or the [Biorepository_Smithsonian sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7BE91DB72A-921D-4BD7-B46B-7CA3A6E86196%7D&file=Biorepository_Smithsonian.xlsx&action=default&mobileredirect=true) (file path: Database/Biorepository_Database/Biorepository_Smithsonian.xlsx).
   - Example: 455096
 - For contemporary individuals, use the contemporary lot number found on the [Lot Sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B9E5DA055-65CC-449A-92E1-3537C1B9949D%7D&file=Lot_sheet.xlsx&action=default&mobileredirect=true) under the “Lot_ID” column.
-  - Example: Bat-2018-004_006
+  - Example: SAM-2022_02_10
 
 **`identificationRemarks`**
 - Check the notes on the [Lot Sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B9E5DA055-65CC-449A-92E1-3537C1B9949D%7D&file=Lot_sheet.xlsx&action=default&mobileredirect=true) and the Field Notes (file path: Database/Field Collections) to see if there are any comments on identification.
@@ -427,7 +429,7 @@ I will now walk you through how to fill out each column in the spreadsheet, in o
 - Found on the [Lot Sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B9E5DA055-65CC-449A-92E1-3537C1B9949D%7D&file=Lot_sheet.xlsx&action=default&mobileredirect=true) under the “Species_verified” column.
 - List names with an underscore between the first and last name.
 - If there is more than one name, use a space and the pipe operator “|” between each name (the pipe operator is specified to be used in the GEOME FAQs).
-  - Example: Kent_Carpenter | Maddy_Kenton
+  - Example: Kent_Carpenter | Abner_Bucol
 
 **`previousIdentifications`** 
 - Check the “Notes” column on the [Lot Sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B9E5DA055-65CC-449A-92E1-3537C1B9949D%7D&file=Lot_sheet.xlsx&action=default&mobileredirect=true) to see if this species was previously identified as something different.
@@ -435,18 +437,18 @@ I will now walk you through how to fill out each column in the spreadsheet, in o
 
 **`scientificName`**
 - Format: Genus_species
-  - Example: Zenarchopterus_dispar
+  - Example: Sphaeramia_nematoptera
 
 **`yearIdentified`**
 - On the [Lot Sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B9E5DA055-65CC-449A-92E1-3537C1B9949D%7D&file=Lot_sheet.xlsx&action=default&mobileredirect=true), look at the column "Species_verified".
 - When there is no date, only the name of the person:
   - For Contemporary: use the date of collection (under "Date_Collected").
-  - For Albatross: we assume it was IDed at the same time as contemporary, so use the date listed in "Species_verified" for the associated contemporary lot.
+  - For Albatross: we assume it was IDed at the same time as contemporary, so use the year listed in "Species_verified" for the associated contemporary lot.
 
 **`samplingProtocol`**
 - For Contemporary collections: fill in “marketcollection”.
 - For Albatross collections:
-  - check the site on the “[Philippine Albatross Collections working copy](https://www.google.com/maps/d/edit?mid=1leLurkYXC3FezrY59AhoU0QTjvi4fsIl&amp;usp=sharing)” Google Map. It should contain the notes with the sampling methods.
+  - check the site on the “[Philippine Albatross Collections working copy](https://www.google.com/maps/d/edit?mid=1leLurkYXC3FezrY59AhoU0QTjvi4fsIl&amp;usp=sharing)” Google Map. It may contain the notes with the sampling methods.
     - Examples include “dynamite” and “beachseine”.
   - If not listed on Google Maps, try this: [Albatross Philippines Expedition Stations(Philippines Expedition).csv](https://drive.google.com/file/d/1CLNuOJJAoEva_7wqxqVX3mDaNFH0cr-r/view?usp=sharing)
    
@@ -501,7 +503,7 @@ You may need to edit it based on how your files are named.
 
 Another issue you may run in to is that the raw files are not in the fq_raw directory. Sometimes files are deleted by users once processing is complete in an attempt to maximize storage space. In this case, we will just have to redownload the files. Usually these can be found in `/archive/carpenterlab/pire/downloads/<species_name>/<sequencing_run>/fq_raw`, but if the directory is older, it may be in a different location. Check the readme for that run to find out where the files are located.
 
-For example, Sne 2nd sequencing run was missing the raw files. Once I located the raw files, I ran the following to copy them over:
+For example, Sne 2nd sequencing run was missing the raw files. Once I located the files, I ran the following to copy them over:
 ```
 cp /RC/group/rc_carpenterlab_ngs/shotgun_PIRE/pire_lcwgs_data_processing/sphaeramia_nematoptera/2nd_sequencing_run/fq_raw/*fq.gz /archive/carpenterlab/pire/pire_sphaeramia_nematoptera_lcwgs/2nd_sequencing_run/fq_raw/.
 ```
@@ -582,11 +584,11 @@ To start uploading metadata, we need to create the appropriate expedition.
 
 First, make sure you are signed into [GEOME](https://geome-db.org/workbench/project-overview).
 
-Then click on "Project Expeditions" under "Admin" on the left-hand taskbar. Click on "+ Create Expediiton".
+Then click on "Project Expeditions" under "Admin" on the left-hand taskbar. Click on "+ Create Expedition".
 
-Follow our formula for naming the expedition (3 digit species code, year collected, municipality, province, sequencing type; with underscores in between). This should be the same name as your metadata sheet.
+Follow our formula for naming the expedition (Spp_Year_Municipality_Province_SeqType). This should be the same name as your metadata sheet.
 - Example: `Sne_1909_Biri_NorthernSamar_lcwgs`
-- Note: GEOME previously allowed for "-" between words, but has since updated their system. Two-word provinces were written with a dash (Biri_Northern-Samar), but moving forward they should be written as "Biri_NorthernSamar".
+- Note: GEOME previously allowed for "-" between words, but has since updated their system. Two-word municipality/provinces were written with a dash (Biri_Northern-Samar), but moving forward they should be written as "Biri_NorthernSamar".
 
 Expediton Title and Expedition Code will be the same.
 
@@ -628,12 +630,77 @@ Now click "Load".
 - You will get errors related to "sex" and "coordinateUncertaintyInMeters". This is okay. Click continue.
 - If you get any other error message, you should make sure everything on your end was correctly inputted.
 
+Once everything has been loaded, make sure it looks correct. 
+- Generally, you should only have 1 "Event". Examples for why you might have 2-3 include: different "dayCollected" (usually within a day of one another) and different "decimalLatitude"/"decimalLongitude" (same site code, just slightly different location– usually close by).
+- I would double check any instance where you have more than 1 event. If any of the above examples apply, then all is okay. If they do not, something on your metadata spreadsheet may have been put in wrong. If you dragged cells to autofill portions of your sheet, make sure numbers did not sequentially add.
 
+#### Tracking Progress:
 
+Once your expedition has been properly loaded, track your progress on the [Sequence_info_sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B96577AF0-69E8-48F5-A3BD-0990B8285C27%7D&file=Sequence_info_sheet.xlsx&action=default&mobileredirect=true) (filepath: Database/Sequence_info_sheet.xlsx). Fill out: "Data_Uploaded_By", "GEOME_Expedition_Name", and "GEOME_Expedition_GUID".
+
+---
 
 </details>
 
-<details><summary>B. NCBI</summary>
+<details><summary>B. NCBI Short Read Archive (SRA)</summary>
+<p>
+  
+Now that your metadata has been uploaded to GEOME, we can move on to submitting our reads to NCBI. 
+</p>
+
+#### Renaming and Downloading Raw Files to Your Home Directory:
+
+To prepare for SRA uploading, we need to copy the fq.gz files to our home directory (~) and rename them to match the new prefix we used for `materialSampleID` in our metadata spreadsheet.
+
+You can do this however you want, but what has been the easiest for me is as follows: 
+- Make a directory to hold your fastq files in your home dir:
+  ```
+  mkdir ~/Sne_1909_Biri_NorthernSamar_lcwgs
+  ```
+- Now I prepare for copying and renaming the files. To do this, I make a google sheet.
+  - I paste the names of all my raw files (using `ls Sne-A*gz -1` in the directory with the raw files) into column B
+  - I paste the target filenames in column C (using the fastq .txt file we created earlier).
+  - Then, in column A, I type "cp" and drag it to fill all rows.
+  - Finally, I do a series of Find and Replace(shift+command+h),
+    - I select all content in column C and "Find: SneABir" and "Replace with: ./SneABir"
+    - In column B, (if working with multiple runs), I select all filenames associated with lib1 and "Find: Sne-ABir" and "Replace with: $lib1path/Sne-ABir". Then I do the same for lib2– "Find: Sne-ABir" and "Replace with: $lib2path/Sne-ABir". If it's onlt one run you can just select the whole column and do the same.
+  - Your spreadsheet should look like this:
+  ```
+  |   A   |                      B                          |                      C                     |
+  |-------|-------------------------------------------------|--------------------------------------------|
+  | cp	| $lib1path/Sne-ABir_001-Ex1-9A-lcwgs-1-1.1.fq.gz | ./SneABir001_lib1-Ex1-9A-lcwgs-1-1.1.fq.gz |
+  | cp	| $lib1path/Sne-ABir_001-Ex1-9A-lcwgs-1-1.2.fq.gz | ./SneABir001_lib1-Ex1-9A-lcwgs-1-1.2.fq.gz |
+  [...]
+  | cp	| $lib2path/Sne-ABir_028-Ex1-12D-lcwgs-1-2.1.fq.gz| ./SneABir028_lib2-Ex1-12D-lcwgs-1-2.1.fq.gz |
+  | cp	| $lib2path/Sne-ABir_028-Ex1-12D-lcwgs-1-2.2.fq.gz| ./SneABir028_lib2-Ex1-12D-lcwgs-1-2.2.fq.gz |
+  ```
+- Now in the fastq directory we just made, we'll make a quick script to copy the files over. This script copies each original raw file (using the full path) to the current directory you are in (~/<fastq_dir>) and renames it in the process.
+  - Add `.sh` to the end of your script name
+  - Add `#!/bin/bash` to the first line
+  - Add your lib absolute filepaths
+  - And then paste the contents of your spreadsheet below it
+  ```
+  nano SneABircopyfiles.sh
+
+  #!/bin/bash
+
+  lib1path=/archive/carpenterlab/pire/pire_sphaeramia_nematoptera_lcwgs/2nd_sequencing_run/fq_raw
+  lib2path=/archive/carpenterlab/pire/pire_sphaeramia_nematoptera_lcwgs/3rd_sequencing_run/fq_raw
+
+  cp	$lib1path/Sne-ABir_001-Ex1-9A-lcwgs-1-1.1.fq.gz	        ./SneABir001_lib1-Ex1-9A-lcwgs-1-1.1.fq.gz
+  cp	$lib1path/Sne-ABir_001-Ex1-9A-lcwgs-1-1.2.fq.gz	        ./SneABir001_lib1-Ex1-9A-lcwgs-1-1.2.fq.gz
+  [...]
+  cp	$lib2path/Sne-ABir_028-Ex1-12D-lcwgs-1-2.1.fq.gz	./SneABir028_lib2-Ex1-12D-lcwgs-1-2.1.fq.gz
+  cp	$lib2path/Sne-ABir_028-Ex1-12D-lcwgs-1-2.2.fq.gz	./SneABir028_lib2-Ex1-12D-lcwgs-1-2.2.fq.gz
+  ```
+- Run the script:
+  ```
+  ./SneABircopyfiles.sh
+  ```
+
+Make sure all files are there, and now we can move to NCBI.
+
+### Creating an NCBI SRA Submission
 
 
 ---

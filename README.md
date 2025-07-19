@@ -700,9 +700,67 @@ You can do this however you want, but what has been the easiest for me is as fol
   ./SneABircopyfiles.sh
   ```
 
-Make sure all files are there, and now we can move to NCBI.
+Make sure all files are there, then remove the script:
+```
+ls *gz -1 | wc -l
+112
 
-#### Creating an NCBI SRA Submission
+rm SneABircopyfiles.sh 
+```
+
+#### Downloading files from GEOME:
+
+Go to the [GEOME Project Overview](https://geome-db.org/workbench/project-overview) and find your expedition. 
+
+To the right of the GUID, you'll find a download button. Select "Fastq - SRA Metadata". 
+
+A file called "sra-files" will download to your computer. To avoid any confusion, I recommend renaming it immediately.
+
+#### NCBI SRA Submission:
+
+Go to the [NCBI SRA Submission website](https://submit.ncbi.nlm.nih.gov/subs/sra/), and either log in or create an account. Click the blue "New Submission" button.
+
+Any information for entry boxes not addressed below are not necessary and can be left blank. 
+
+<ins>1> Submitter</ins>
+- Enter your personal information.
+- For UCSC affiliates:
+  - Submitting organization: **University of California, Santa Cruz**
+  - Department: **Ecology and Evolutionary Biology**
+  - Street: **130 McAllister Way**
+  - City: **Santa Cruz**
+  - State: **California**
+  - Postal code: **95060**
+  - Country: **USA**
+ 
+<ins>2> General Info</ins>
+
+* Do you already have a BioProject accession number for this research? **No**
+* Do you already have BioSample accession numbers for these samples? **No**
+* When should this submission be released to the public? **Release on specified date or upon publication, whichever is first**
+* Projected release date: Choose something a few years out, unless you have been told to make the data public now.
+
+<ins>3> Project Info</ins>
+
+* Project title: **Sphaeramia_nematoptera_1909_Biri_NorthernSamar_lcwgs**
+  * Format the project title similarly to the format we use for expedition names, but with the entire species name rather than the 3-digit code
+* Public description: **Low-coverage Whole Genome Sequencing (lcWGS) data for the fish Sphaeramia nematoptera collected in 1909 in Biri, Northern Samar, Philippines.**
+* Relevance: **Evolution**
+* Is your project part of an umbrella project which is already registered with NCBI? **No**
+* External links:
+  * Description: **Philippines PIRE Project: Centennial Genetic and Species Transformations in the Epicenter of Marine Biodiversity**
+  * URL: **https://sites.wp.odu.edu/PIRE/philippines/**
+  
+  [ + Add another link]
+  * Description: **Philippines PIRE Project Metadata**
+  * URL: **https://geome-db.org/workbench/project-overview?projectId=511**
+
+* Select your grants
+ [ + Add grants] > "Enter grants manually"
+  * Grant ID: **OISE-1743711**
+  * Grant title: **Centennial Genetic and Species Transformations in the Epicenter of Marine Biodiversity**
+  * Agency: **National Science Foundation**
+  * Agency abbr.: **NSF**
 
 
 ---

@@ -481,11 +481,11 @@ I will now walk you through how to fill out each column in the spreadsheet, in o
 - Check the “Notes” column on the [Extractions_sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B7631F787-D146-4E74-8D67-26C9B7947117%7D&file=Extractions_sheet.xlsx&action=default&mobileredirect=true).
 - If none, fill in “NA”.
 
-### Uploading to GEOME:
+## Uploading to GEOME:
 
 Now that your metadata spreadsheet is complete, we can upload this to GEOME.
 
-#### Creating your fastq text file: 
+### Creating your fastq text file: 
 
 Before uploading, we need to create a text file with the names of all of our fastq files (1 text file per sheet). The prefix must match what we wrote for our materialSampleID in our spreadsheet. We will be renaming our files later, before we upload the sequences to NCBI, but for now just the intended filenames is fine. 
 
@@ -578,7 +578,7 @@ Now, paste those filenames into a text file. If you have multiple runs (i.e. _li
 I'd title the file: `fastq_<metadata spreadsheet name>` to make sure theres no confusion later on.
 - Example: `fastq_Sne_1909_Biri_NorthernSamar_lcwgs`
 
-#### Creating an Expedition:
+### Creating an Expedition:
 
 To start uploading metadata, we need to create the appropriate expedition.
 
@@ -592,7 +592,7 @@ Follow our formula for naming the expedition (Spp_Year_Municipality_Province_Seq
 
 Expediton Title and Expedition Code will be the same.
 
-#### Load Data:
+### Load Data:
 
 Once the expedition has been created, click on "Load Data" in the left-hand taskbar. 
 
@@ -634,7 +634,7 @@ Once everything has been loaded, make sure it looks correct.
 - Generally, you should only have 1 "Event". Examples for why you might have 2-3 include: different "dayCollected" (usually within a day of one another) and different "decimalLatitude"/"decimalLongitude" (same site code, just slightly different location– usually close by).
 - I would double check any instance where you have more than 1 event. If any of the above examples apply, then all is okay. If they do not, something on your metadata spreadsheet may have been put in wrong. If you dragged cells to autofill portions of your sheet, make sure numbers did not sequentially add.
 
-#### Tracking Progress:
+### Tracking Progress:
 
 Once your expedition has been properly loaded, track your progress on the [Sequence_info_sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B96577AF0-69E8-48F5-A3BD-0990B8285C27%7D&file=Sequence_info_sheet.xlsx&action=default&mobileredirect=true) (filepath: Database/Sequence_info_sheet.xlsx). Fill out: "Data_Uploaded_By", "GEOME_Expedition_Name", and "GEOME_Expedition_GUID".
 
@@ -644,13 +644,13 @@ Once your expedition has been properly loaded, track your progress on the [Seque
 
 <details><summary>B. NCBI Short Read Archive (SRA)</summary>
 
-### NCBI Short Read Archive (SRA)
+## NCBI Short Read Archive (SRA)
 <p>
   
 Now that your metadata has been uploaded to GEOME, we can move on to submitting our reads to NCBI. 
 </p>
 
-#### Renaming and Downloading Raw Files to Your Home Directory:
+### Renaming and Downloading Raw Files to Your Home Directory:
 
 To prepare for SRA uploading, we need to copy the fq.gz files to our home directory (~) and rename them to match the new prefix we used for `materialSampleID` in our metadata spreadsheet.
 
@@ -708,7 +708,7 @@ ls *gz -1 | wc -l
 rm SneABircopyfiles.sh 
 ```
 
-#### Downloading files from GEOME:
+### Downloading files from GEOME:
 
 Go to the [GEOME Project Overview](https://geome-db.org/workbench/project-overview) and find your expedition. 
 
@@ -716,13 +716,13 @@ To the right of the GUID, you'll find a download button. Select "Fastq - SRA Met
 
 A file called "sra-files" will download to your computer. To avoid any confusion, I recommend renaming it immediately.
 
-#### NCBI SRA Submission:
+### NCBI SRA Submission:
 
 Go to the [NCBI SRA Submission website](https://submit.ncbi.nlm.nih.gov/subs/sra/), and either log in or create an account. Click the blue "New Submission" button.
 
 Any information for entry boxes not addressed below are not necessary and can be left blank. 
 
-<ins>1> Submitter</ins>
+<ins>**1> Submitter**</ins>
 - Enter your personal information.
 - For UCSC affiliates:
   - Submitting organization: **University of California, Santa Cruz**
@@ -733,14 +733,14 @@ Any information for entry boxes not addressed below are not necessary and can be
   - Postal code: **95060**
   - Country: **USA**
  
-<ins>2> General Info</ins>
+<ins>**2> General Info**</ins>
 
 * Do you already have a BioProject accession number for this research? **No**
 * Do you already have BioSample accession numbers for these samples? **No**
 * When should this submission be released to the public? **Release on specified date or upon publication, whichever is first**
 * Projected release date: Choose something a few years out, unless you have been told to make the data public now.
 
-<ins>3> Project Info</ins>
+<ins>**3> Project Info**</ins>
 
 * Project title: **Sphaeramia_nematoptera_1909_Biri_NorthernSamar_lcwgs**
   * Format the project title similarly to the format we use for expedition names, but with the entire species name rather than the 3-digit code
@@ -756,11 +756,71 @@ Any information for entry boxes not addressed below are not necessary and can be
   * URL: **https://geome-db.org/workbench/project-overview?projectId=511**
 
 * Select your grants
- [ + Add grants] > "Enter grants manually"
+  
+    [ + Add grants] > "Enter grants manually"
   * Grant ID: **OISE-1743711**
   * Grant title: **Centennial Genetic and Species Transformations in the Epicenter of Marine Biodiversity**
   * Agency: **National Science Foundation**
   * Agency abbr.: **NSF**
+
+<ins>**4> Biosample Type**</ins>
+
+* Select "**Model organism or animal**" under NCBI packages
+
+<ins>5> Biosample Attributes</ins>
+
+* How do you want to provide your BioSample attributes? **Upload a file using Excel or text format (tab-delimited) that includes the attributes for each of your BioSamples**
+- Choose file.
+- Within the `sra-files.zip` folder you downloaded from GEOME, select the **bioSample-attributes.tsv** file.
+  - You will get the following error messages, which you can safely ignore:
+    - "Warning:Submission processing may be delayed due to necessary curator review." (sample names)
+    - "Warning:We will automatically transform the attribute value(s) you provided as follows" (date transformation)
+      - Another special case error message: we have seen cases for users working in marine systems where locality is often based on nearby terrestrial locations, and the SRA responds with a warning that the locality is invalid since it is located in the warning. This particular message may be ignored for marine users where this is intentional.
+  - Any other error messages should be investigated and fixed.
+
+<ins>**6> SRA Metadata**</ins>
+
+* How do you want to provide your metadata? **Upload a file using Excel or text format (tab-delimited)**
+- Within the `sra-files.zip` folder you downloaded from GEOME, select the **sra-metadata.tsv** file.
+  - The following error can be safely ignored:
+    - "Warning:Please describe your library selection in the design description if you choose "other" as a library selection."
+  - Any other error messages should be investigated and fixed.
+ 
+<ins>**7> Files**</ins>
+
+* How do you want to provide files for this submission? **FTP or Aspera Command Line file preload**
+* If this is your first time loading files onto ncbi, <ins>this is how to set up the aspera command line interface:</ins>
+  1. Below the "Select preload folder" blue button, you will see an expandable tab titled "Aspera command line instructions". Click to expand it. You don't need to follow those instructions, but find the "key file" link in step 2 under "Next, upload your data". Download the key file to your computer.
+  2. Once the key file has been downloaded, titled `aspera.open.ssh`, you need to upload it into your home (~) directory. The following command is what worked for me, but you will need to edit your aspera filepath depending on where it downloaded to you device, and replace [hpc-0373] with your wahab username.
+     ```
+     scp ~/Downloads/aspera.openssh hpc-0373@wahab.hpc.odu.edu:~/.
+     ```
+  3. Now, log back into wahab, and get a node (type `salloc` in your terminal).
+  4. Load the aspera module: `module load container_env aspera-cli`
+  5. Find the path to the Aspera ascp executable by running: `crun.aspera-cli ascli config ascp show`. You will need to note the path to the ascp file, which should look like this: `/home/hpc-0373/.aspera/sdk/ascp`
+  6. Now, find the command listed in step 3, under "Next, upload your data". It should look something like this:
+     ```
+     ascp -i <path/to/key_file> -QT -l100m -k1 -d <path/to/folder/containing files> subasp@upload.ncbi.nlm.nih.gov:uploads/gmazzei_ucsc.edu_ExrXy7CA
+     ```
+      * You will replace `ascp` with the ascp path we just got,
+      * `<path/to/key_file>` with the absolute path to the `aspera.open.ssh` file we uploaded to our home dir,
+      * and the `<path/to/folder/containing files>` to the path to the folder holding our renamed fastq files.
+        * Note: in the future, the only thing you will need to change in this command is the `<path/to/folder/containing files>`. Everything else will always be the same.
+    It should look something like this:
+     ```
+     /home/hpc-0373/.aspera/sdk/ascp -i /home/hpc-0373/aspera.openssh -QT -l100m -k1 -d /home/hpc-0373/Sne_1909_Biri_Northern-Samar_lcwgs subasp@upload.ncbi.nlm.nih.gov:uploads/gmazzei_ucsc.edu_ExrXy7CA
+     ```
+* If aspera has already been set up, or you've completed the instructions above, you're ready to run the command provided by NCBI to upload your data. You will begin to see your files upload.
+    ```
+    [hpc-0373@wahab-01 ~]$ /home/hpc-0373/.aspera/sdk/ascp -i /home/hpc-0373/aspera.openssh -QT -l100m -k1 -d /home/hpc-0373/Sne_1909_Biri_Northern-Samar_lcwgs subasp@upload.ncbi.nlm.nih.gov:uploads/gmazzei_ucsc.edu_ExrXy7CA
+    SneABir021_lib2-Ex1-11E-lcwgs-1-2.1.fq.gz                                 100%  502MB 97.3Mb/s    00:46    
+    SneABir016_lib1-Ex1-10H-lcwgs-1-1.2.fq.gz                                 100%  221MB 97.3Mb/s    01:05    
+    SneABir015_lib1-Ex1-10G-lcwgs-1-1.2.fq.gz                                 100%  227MB 97.3Mb/s    01:25    
+    SneABir006_lib2-Ex1-9F-lcwgs-1-2.2.fq.gz                                  100%   91MB 97.3Mb/s    01:33    
+    SneABir008_lib1-Ex1-9H-lcwgs-1-1.2.fq.gz                                   42%   21MB 97.2Mb/s    00:02 ETA
+    ```
+* Once your files have all uploaded, you can go back to the SRA submission page and click the blue "Select preload folder" button. You should see your folder name here. Note: it takes about 10 minutes for files to appear on NCBI. 
+
 
 
 ---

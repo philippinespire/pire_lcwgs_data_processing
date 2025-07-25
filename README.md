@@ -327,9 +327,9 @@ It may be useful to extract mitochondrial sequences from lcwgs data to confirm s
 </p>
 </details>
 
-<details><summary>#. Uploading Species Data (GEOME, NCBI, FigShare)  </summary>
+<details><summary>11. Uploading Species Data (GEOME, NCBI, FigShare)  </summary>
 
-## #. Uploading Species Data (GEOME, NCBI, FigShare)
+## 11. Uploading Species Data (GEOME, NCBI, FigShare)
 
 We want to make sure that reads and metadata are uploaded to GEOME and NCBI, that final genotype likelihoods are uploaded to FigShare, that all of these datasets are linked from the main readme for a species, and that the repo is made public. 
 
@@ -832,6 +832,11 @@ Any information for entry boxes not addressed below are not necessary and can be
 Like with GEOME, track your progress on the [Sequence_info_sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B96577AF0-69E8-48F5-A3BD-0990B8285C27%7D&file=Sequence_info_sheet.xlsx&action=default&mobileredirect=true) (filepath: Database/Sequence_info_sheet.xlsx). Fill out: "NCBI_Bioproject_Accession_Number", "NCBI_Project_Title", and "NCBI_Data_Public?" (likely no).
 
 **Now you have successfully uploaded your data to NCBI/GEOME!**
+
+You can safely remove the folder housing your renamed files from your home directory.
+```
+[hpc-0373@wahab-01 ~]$ rm -rf Sne_1909_Biri_Northern-Samar_lcwgs/
+```
 
 ---
 </details>

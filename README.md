@@ -770,7 +770,6 @@ Any information for entry boxes not addressed below are not necessary and can be
 <ins>5> Biosample Attributes</ins>
 
 * How do you want to provide your BioSample attributes? **Upload a file using Excel or text format (tab-delimited) that includes the attributes for each of your BioSamples**
-- Choose file.
 - Within the `sra-files.zip` folder you downloaded from GEOME, select the **bioSample-attributes.tsv** file.
   - You will get the following error messages, which you can safely ignore:
     - "Warning:Submission processing may be delayed due to necessary curator review." (sample names)
@@ -799,18 +798,18 @@ Any information for entry boxes not addressed below are not necessary and can be
   4. Load the aspera module: `module load container_env aspera-cli`
   5. Find the path to the Aspera ascp executable by running: `crun.aspera-cli ascli config ascp show`. You will need to note the path to the ascp file, which should look like this: `/home/hpc-0373/.aspera/sdk/ascp`
   6. Now, find the command listed in step 3, under "Next, upload your data". It should look something like this:
-     ```
-     ascp -i <path/to/key_file> -QT -l100m -k1 -d <path/to/folder/containing files> subasp@upload.ncbi.nlm.nih.gov:uploads/gmazzei_ucsc.edu_ExrXy7CA
-     ```
+
+     `ascp -i <path/to/key_file> -QT -l100m -k1 -d <path/to/folder/containing files> subasp@upload.ncbi.nlm.nih.gov:uploads/gmazzei_ucsc.edu_ExrXy7CA`
+
       * You will replace `ascp` with the ascp path we just got,
       * `<path/to/key_file>` with the absolute path to the `aspera.open.ssh` file we uploaded to our home dir,
       * and the `<path/to/folder/containing files>` to the path to the folder holding our renamed fastq files.
         * Note: in the future, the only thing you will need to change in this command is the `<path/to/folder/containing files>`. Everything else will always be the same.
     It should look something like this:
-     ```
-     /home/hpc-0373/.aspera/sdk/ascp -i /home/hpc-0373/aspera.openssh -QT -l100m -k1 -d /home/hpc-0373/Sne_1909_Biri_Northern-Samar_lcwgs subasp@upload.ncbi.nlm.nih.gov:uploads/gmazzei_ucsc.edu_ExrXy7CA
-     ```
-* If aspera has already been set up, or you've completed the instructions above, you're ready to run the command provided by NCBI to upload your data. You will begin to see your files upload.
+
+      `/home/hpc-0373/.aspera/sdk/ascp -i /home/hpc-0373/aspera.openssh -QT -l100m -k1 -d /home/hpc-0373/Sne_1909_Biri_Northern-Samar_lcwgs subasp@upload.ncbi.nlm.nih.gov:uploads/gmazzei_ucsc.edu_ExrXy7CA`
+     
+* If aspera has already been set up, or you've completed the instructions above, you're ready to run the command provided by NCBI to upload your data (see step vi. above on how to edit your command). You will begin to see your files upload.
     ```
     [hpc-0373@wahab-01 ~]$ /home/hpc-0373/.aspera/sdk/ascp -i /home/hpc-0373/aspera.openssh -QT -l100m -k1 -d /home/hpc-0373/Sne_1909_Biri_Northern-Samar_lcwgs subasp@upload.ncbi.nlm.nih.gov:uploads/gmazzei_ucsc.edu_ExrXy7CA
     SneABir021_lib2-Ex1-11E-lcwgs-1-2.1.fq.gz                                 100%  502MB 97.3Mb/s    00:46    
@@ -819,9 +818,20 @@ Any information for entry boxes not addressed below are not necessary and can be
     SneABir006_lib2-Ex1-9F-lcwgs-1-2.2.fq.gz                                  100%   91MB 97.3Mb/s    01:33    
     SneABir008_lib1-Ex1-9H-lcwgs-1-1.2.fq.gz                                   42%   21MB 97.2Mb/s    00:02 ETA
     ```
-* Once your files have all uploaded, you can go back to the SRA submission page and click the blue "Select preload folder" button. You should see your folder name here. Note: it takes about 10 minutes for files to appear on NCBI. 
+    * Files will not upload if your computer shuts off. If your connection breaks, simply rerun the command and it will pick up where it left off.
+* Once your files have all uploaded, you can go back to the SRA submission page and click the blue "Select preload folder" button. You should see your folder name here. (Note: it takes about 10 minutes for files to appear on NCBI.) 
+* Click Continue. If any files are missing, you will be notified.
 
+<ins>**8> Review and Submit**</ins>
 
+* Make sure everything looks good and you are ready to submit!
+* Within a few minutes, you should recieve an email notifying you that your submission has been successfully registered with the BioProject Database. It will also contain your BioProject ID, which you can also find on your [NCBI Submission Portal](https://submit.ncbi.nlm.nih.gov/subs/sra/), under status (begins with PRJNA).
+
+### Tracking Progress:
+
+Like with GEOME, track your progress on the [Sequence_info_sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B96577AF0-69E8-48F5-A3BD-0990B8285C27%7D&file=Sequence_info_sheet.xlsx&action=default&mobileredirect=true) (filepath: Database/Sequence_info_sheet.xlsx). Fill out: "NCBI_Bioproject_Accession_Number", "NCBI_Project_Title", and "NCBI_Data_Public?" (likely no).
+
+**Now you have successfully uploaded your data to NCBI/GEOME!**
 
 ---
 </details>

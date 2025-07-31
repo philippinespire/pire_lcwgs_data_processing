@@ -339,11 +339,13 @@ We want to make sure that reads and metadata are uploaded to GEOME and NCBI, tha
 
 The [Genomic Observatories Metadatabase (GeOMe)](https://geome-db.org/) is a web-based database for capturing and managing metadata for biological samples. GEOME stores our metadata, NCBI stores our fastq files. 
 
+<details><summary>I. Filling out the metadata spreadsheet</summary>
+  
+### Filling out the metadata spreadsheet:
+
 To begin, you need to download a metadata template excel sheet. You can either download the template from the GEOME_Metadata folder on OneDrive, or from the [GEOME PIRE Project](https://geome-db.org/workbench/project-overview) (click “Generate Template” on the left-hand taskbar, then select “Philippines PIRE 2023 Template” under “Template Config”). Note: I believe GEOME updated their system, which has caused the worksheet download feature to not work properly. If you see "Samples" as the only worksheet option, it's the wrong sheet.
 
 For a single species, you will, at minimum, need one sheet per era (Albatross/Contemporary). A new spreadsheet will need to be added if multiple years exist amongst eras, and/or if there are multiple sites. For example, Gerres oyena needed 3 metadata spreadsheets– there was only one site, but albatross individuals were collected in 2 different years. Another example is Hmi– 4 metadata sheets were generated as each era had 2 separate sites. If you have multiple runs of the same individuals, these do not need separate sheets.
-
-### Filling out the metadata spreadsheet:
 
 #### Filename format: `<Speciescode>_<Year>_<Municipality>_<Province>_<SeqType>`
 - Example: Sne_1909_Biri_NorthernSamar_lcwgs
@@ -372,7 +374,7 @@ I will now walk you through how to fill out each column in the spreadsheet, in o
 - In the format: Municipality_Province. You can look for this in various sheets, or use google. If unsure, ask on Slack.
   - For Albatross individuals collected between 1907-1910, this sheet may be helpful: [ALBATROSS_1907-1910updatedALLrecordsNotations.xlsx](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7BC924AA0F-278E-48EA-A078-5F708220687F%7D&file=ALBATROSS_1907-1910updatedALLrecordsNotations.xlsx&action=default&mobileredirect=true)
 - For multi-word municipalities/provinces (i.e. Matnog Bay, Northern Samar, etc), use capital letters to separate the words. Ex: MatnogBay_Sorsogon, Biri_NorthernSamar
-  - GEOME used to allow for dashes (Matnog-Bay_Sorsogon, Biri_Northern-Samar), but has since updated their system.
+  - GEOME used to allow for hyphens/dashes (Matnog-Bay_Sorsogon, Biri_Northern-Samar), but has since updated their system.
 
 **`country`**
 - Philippines
@@ -481,13 +483,13 @@ I will now walk you through how to fill out each column in the spreadsheet, in o
 - Check the “Notes” column on the [Extractions_sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B7631F787-D146-4E74-8D67-26C9B7947117%7D&file=Extractions_sheet.xlsx&action=default&mobileredirect=true).
 - If none, fill in “NA”.
 
-## Uploading to GEOME:
+</details>
 
-Now that your metadata spreadsheet is complete, we can upload this to GEOME.
+<details><summary>II. Creating your fastq text file</summary>
 
 ### Creating your fastq text file: 
 
-Before uploading, we need to create a text file with the names of all of our fastq files (1 text file per sheet). The prefix must match what we wrote for our materialSampleID in our spreadsheet. We will be renaming our files later, before we upload the sequences to NCBI, but for now just the intended filenames is fine. 
+Before uploading to GEOME, we need to create a text file with the names of all of our fastq files (1 text file per sheet). The prefix must match what we wrote for our materialSampleID in our spreadsheet. We will be renaming our files later, before we upload the sequences to NCBI, but for now just the intended filenames is fine. 
 
 I find the easiest way to do this is to run a variation of this command in your terminal (in fq_raw):
 ```
@@ -578,6 +580,10 @@ Now, paste those filenames into a text file. If you have multiple runs (i.e. _li
 I'd title the file: `fastq_<metadata spreadsheet name>` to make sure theres no confusion later on.
 - Example: `fastq_Sne_1909_Biri_NorthernSamar_lcwgs`
 
+</details>
+
+<details><summary>III. Creating an Expedition</summary>
+
 ### Creating an Expedition:
 
 To start uploading metadata, we need to create the appropriate expedition.
@@ -588,9 +594,13 @@ Then click on "Project Expeditions" under "Admin" on the left-hand taskbar. Clic
 
 Follow our formula for naming the expedition (Spp_Year_Municipality_Province_SeqType). This should be the same name as your metadata sheet.
 - Example: `Sne_1909_Biri_NorthernSamar_lcwgs`
-- Note: GEOME previously allowed for "-" between words, but has since updated their system. Two-word municipality/provinces were written with a dash (Biri_Northern-Samar), but moving forward they should be written as "Biri_NorthernSamar".
+- Note: GEOME previously allowed for "-" between words, but has since updated their system. Two-word municipality/provinces were written with a hyphen (Biri_Northern-Samar), but moving forward they should be written as "Biri_NorthernSamar".
 
 Expediton Title and Expedition Code will be the same.
+
+</details>
+
+<details><summary>IV. Load Data to GEOME</summary>
 
 ### Load Data:
 
@@ -634,9 +644,17 @@ Once everything has been loaded, make sure it looks correct.
 - Generally, you should only have 1 "Event". Examples for why you might have 2-3 include: different "dayCollected" (usually within a day of one another) and different "decimalLatitude"/"decimalLongitude" (same site code, just slightly different location– usually close by).
 - I would double check any instance where you have more than 1 event. If any of the above examples apply, then all is okay. If they do not, something on your metadata spreadsheet may have been put in wrong. If you dragged cells to autofill portions of your sheet, make sure numbers did not sequentially add.
 
+</details>
+
+<details><summary>V. Tracking Progress</summary>
+
 ### Tracking Progress:
 
-Once your expedition has been properly loaded, track your progress on the [Sequence_info_sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B96577AF0-69E8-48F5-A3BD-0990B8285C27%7D&file=Sequence_info_sheet.xlsx&action=default&mobileredirect=true) (filepath: Database/Sequence_info_sheet.xlsx). Fill out: "Data_Uploaded_By", "GEOME_Expedition_Name", and "GEOME_Expedition_GUID".
+Once your expedition has been properly loaded, track your progress on the [Sequence_info_sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B96577AF0-69E8-48F5-A3BD-0990B8285C27%7D&file=Sequence_info_sheet.xlsx&action=default&mobileredirect=true) (filepath: Database/Sequence_info_sheet.xlsx). 
+
+Fill out: "Data_Uploaded_By", "GEOME_Expedition_Name", and "GEOME_Expedition_GUID".
+
+</details>
 
 ---
 
@@ -647,8 +665,10 @@ Once your expedition has been properly loaded, track your progress on the [Seque
 ## NCBI Short Read Archive (SRA)
 <p>
   
-Now that your metadata has been uploaded to GEOME, we can move on to submitting our reads to NCBI. 
+Now that your metadata has been uploaded to GEOME, we can move on to submitting our reads to the [NCBI SRA](https://www.ncbi.nlm.nih.gov/sra/docs/). 
 </p>
+
+<details><summary>I. Renaming and Downloading Raw Files to Your Home Directory</summary>
 
 ### Renaming and Downloading Raw Files to Your Home Directory:
 
@@ -707,6 +727,9 @@ ls *gz -1 | wc -l
 
 rm SneABircopyfiles.sh 
 ```
+</details>
+
+<details><summary>II. Downloading files from GEOME</summary>
 
 ### Downloading files from GEOME:
 
@@ -715,6 +738,10 @@ Go to the [GEOME Project Overview](https://geome-db.org/workbench/project-overvi
 To the right of the GUID, you'll find a download button. Select "Fastq - SRA Metadata". 
 
 A file called "sra-files" will download to your computer. To avoid any confusion, I recommend renaming it immediately.
+
+</details>
+
+<details><summary>III. NCBI SRA Submission</summary>
 
 ### NCBI SRA Submission:
 
@@ -827,9 +854,15 @@ Any information for entry boxes not addressed below are not necessary and can be
 * Make sure everything looks good and you are ready to submit!
 * Within a few minutes, you should recieve an email notifying you that your submission has been successfully registered with the BioProject Database. It will also contain your BioProject ID, which you can also find on your [NCBI Submission Portal](https://submit.ncbi.nlm.nih.gov/subs/sra/), under status (begins with PRJNA).
 
+</details>
+
+<details><summary>IV. Tracking Progress</summary>
+
 ### Tracking Progress:
 
-Like with GEOME, track your progress on the [Sequence_info_sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B96577AF0-69E8-48F5-A3BD-0990B8285C27%7D&file=Sequence_info_sheet.xlsx&action=default&mobileredirect=true) (filepath: Database/Sequence_info_sheet.xlsx). Fill out: "NCBI_Bioproject_Accession_Number", "NCBI_Project_Title", and "NCBI_Data_Public?" (likely no).
+Like with GEOME, track your progress on the [Sequence_info_sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B96577AF0-69E8-48F5-A3BD-0990B8285C27%7D&file=Sequence_info_sheet.xlsx&action=default&mobileredirect=true) (filepath: Database/Sequence_info_sheet.xlsx). 
+
+Fill out: "NCBI_Bioproject_Accession_Number", "NCBI_Project_Title", and "NCBI_Data_Public?" (likely no).
 
 **Now you have successfully uploaded your data to NCBI/GEOME!**
 
@@ -837,6 +870,7 @@ You can safely remove the folder housing your renamed files from your home direc
 ```
 [hpc-0373@wahab-01 ~]$ rm -rf Sne_1909_Biri_Northern-Samar_lcwgs/
 ```
+</details>
 
 ---
 </details>

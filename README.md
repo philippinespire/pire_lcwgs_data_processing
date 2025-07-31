@@ -428,8 +428,8 @@ I will now walk you through how to fill out each column in the spreadsheet, in o
 **`identifiedBy`**
 - Found on the [Lot Sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B9E5DA055-65CC-449A-92E1-3537C1B9949D%7D&file=Lot_sheet.xlsx&action=default&mobileredirect=true) under the “Species_verified” column.
 - List names with an underscore between the first and last name.
-- If there is more than one name, use a space and the pipe operator “|” between each name (the pipe operator is specified to be used in the GEOME FAQs).
-  - Example: Kent_Carpenter | Abner_Bucol
+  - If there is more than one name, use a space and the pipe operator “|” between each name (the pipe operator is specified to be used in the GEOME FAQs).
+    - Example: Kent_Carpenter | Abner_Bucol
 
 **`previousIdentifications`** 
 - Check the “Notes” column on the [Lot Sheet](https://olddominion.sharepoint.com/:x:/r/sites/CarpenterMolecularLab/_layouts/15/Doc.aspx?sourcedoc=%7B9E5DA055-65CC-449A-92E1-3537C1B9949D%7D&file=Lot_sheet.xlsx&action=default&mobileredirect=true) to see if this species was previously identified as something different.
@@ -597,8 +597,8 @@ Expediton Title and Expedition Code will be the same.
 Once the expedition has been created, click on "Load Data" in the left-hand taskbar. 
 
 -  **Data Type**: Select...
-  -  Excel Workbook
-  -  Fastq
+    -  Excel Workbook
+    -  Fastq
 
 - **Excel Workbook**: Upload your metadata spreadsheet
 

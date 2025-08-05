@@ -43,7 +43,17 @@ You may use the cp command or parallel module (faster as it copies 40 files at a
 ```
 cd <your angsd_analysis folder>
   #navigates to your angsd_analysis folder
-salloc
+salloc -c 40
+
+# use soft links with absolute paths to save space
+ln -s <absolute path to historical mapping files from GenErode>/*rescaled.bam .
+ln -s <absolute path to contemporary mapping files from GenErode>/*realn.bam .
+
+# example for the soft link creation
+# ln -s /archive/carpenterlab/pire/pire_ostorhinchus_chrysopomus_lcwgs/GenErode_Och_20k/results/historical/mapping/reference.denovoSSL.Och.20k/*rescaled.bam .
+# ln -s /archive/carpenterlab/pire/pire_ostorhinchus_chrysopomus_lcwgs/GenErode_Och_20k/results/modern/mapping/reference.denovoSSL.Och.20k/*realn.bam .
+
+# old instructions to copy bam files, don't follow, goto next step
 ls <path to historical mapping files from GenErode> | parallel --no-notice -kj 40 cp {} .
   #copies the *.merged.rmdup.merged.realn.rescaled.bam files from GenErode results, historical mapping to your angsd_analysis folder
   #parallel is automatically loaded on Wahab but if the previous line doesn't go through, type module load parallel after salloc
@@ -89,11 +99,15 @@ ls *.bam > bam_list_all.txt
 Generate an index for all .bam files, which will provide a supplementary index file (.bai) for each .bam file. 
 
 ```
-salloc 
+salloc -c 40
 
 module load samtools
 
-crun samtools index -M *.bam
+# screen runs the command in a new terminal and continues until it finishes.
+# https://www.geeksforgeeks.org/linux-unix/screen-command-in-linux-with-examples/
+# to get out of the screen terminal, type `ctrl-a` first, then the `d` key
+# use chatgpt to learn how to track progress
+screen crun samtools index -M -@40 *.bam
 ```
 
 Add full pathway for each .bam file for the bam_list_all.txt to the snp_calling.sbatch script so that the server can find the .bam files when running the job later down the line. 

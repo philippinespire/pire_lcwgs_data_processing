@@ -119,7 +119,7 @@ find <absolute path to your species>/angsd_analysis/*.bam > bam_list_all_fullpat
 ```
 
 Copy the snp_calling.sbatch script (https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs/blob/main/snp_calling.sbatch) into a new .sbatch file, and adjust the script to fit your data. 
-- update the paths to the `bam_list_all.txt` and reference genome
+- update the paths to the `bam_list_all.txt` and reference genome `../GenErode_*_20k/reference/reference.*.20k.fasta`
 - Minimum depth filter should be 1x the number of individuals. If there's 1 bam per individual, then `ls *bam | wc -l`
 - Maximum depth filter should be 15x the number of individuals.
 - Minimum individual filter should be half of the total number of individuals.

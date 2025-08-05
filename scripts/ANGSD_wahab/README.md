@@ -110,9 +110,11 @@ module load samtools
 screen crun samtools index -M -@40 *.bam
 ```
 
-Add full pathway for each .bam file for the bam_list_all.txt to the snp_calling.sbatch script so that the server can find the .bam files when running the job later down the line. 
+Add an absolute path for each .bam file for the bam_list_all.txt to the snp_calling.sbatch script so that the server can find the .bam files when running the job later down the line. 
+
 ```
-find <path to your species>/angsd_analysis/*.bam > bam_list_all_fullpath.txt
+# run from your `angsd_analysis` dir
+find <absolute path to your species>/angsd_analysis/*.bam > bam_list_all_fullpath.txt
   #Searches for all .bam files in the specified directory and write full paths to the file bam_list_all_fullpath.txt
 ```
 

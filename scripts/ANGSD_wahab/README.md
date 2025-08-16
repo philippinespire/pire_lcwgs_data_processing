@@ -162,6 +162,13 @@ Run your script
 sbatch snp_calling.sbatch /archive/carpenterlab/pire/<your_species_dir>/angsd_analysis/
   #Submits to the Wahab cluster, specifying the directory of the output to the 'angsd_analysis' folder.
 ```
+
+when done, check output for errors
+
+```bash
+grep -E "error|warn|fail|not found|skipping" -i angsd_snp-*.out || echo "No obvious warnings"
+```
+
 </p>
 </details>
 
@@ -174,12 +181,18 @@ Genotype likelihoods will be used for all downstream analyses (PCA, admixture, e
 
 Use the get_beagle.sbatch file to generate a .beagle.gz file containing genotype likelihoods for the set of SNPs identified in step 2.  
 
-```
+```bash
 vi get_beagle.sbatch
 #Makes a new file named 'get_beagle.sbatch' in the angsd_analysis folder. Paste Kyra's get_beagle.sbatch script into this file. Edits include the following: 
   #Make sure you change the pathway after -anc to the correct reference genome - for Salarias fasciatus, this would be (-anc /archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/1st_sequencing_run/GenErode_Sfa_full/reference/GCF_902148845.1_fSalaFa1.1_chr1-23_rename.fna). 
 
 sbatch get_beagle.sbatch /archive/carpenterlab/pire/{species_dir}/angsd_analysis/
+```
+
+when done, check output for errors
+
+```bash
+grep -E "error|warn|fail|not found|skipping" -i angsd_beagle-*.out || echo "No obvious warnings"
 ```
 
 You will want to get genotype likelihoods for all individuals and all chromosomes / scaffolds in order to run your first iteration of PCANGSD. After examining PCANGSD outputs, you may see evidence of (1) outlier individuals or (2) inversions in the PCA output. (1) will appear as particular Albatross or contemporary individuals that do not cluster with their respective era and/or site in the PCA plot, while (2) will be indicated by a "three-stripe" pattern in the PCA (i.e. individuals in the PCA generally do not cluster by their era or site, but rather show a pattern of three vertical or horizontal stripes).

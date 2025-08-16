@@ -144,7 +144,19 @@ vi snp_calling.sbatch
   #Makes a new file called snp_calling.sbatch in the angsd_analysis folder. Paste Kyra's snp_calling.sbatch script into this file. Edits are the following: 
   #Add the full directory pathway to the bam_list_all_fullpath.txt after -b, so that the server can find the file (e.g. -b /archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/angsd_analysis/bam_list_all_fullpath.txt)
   #Make sure you change the pathway after -ref to the correct reference genome for your species (e.g. /archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/1st_sequencing_run/GenErode_Sfa_full/reference/GCF_902148845.1_fSalaFa1.1_chr1-23_rename.fna)
+```
 
+check that the values are updated correctly
+
+```
+# values should be this (assumes you ran the commands to populate these vars above)
+printf "N=%d  minInd=%d  minDepth=%d  maxDepth=%d\n" "$N" "$minInd" "$minDepth" "$maxDepth"
+
+# in the snp_calling.sbatch
+grep -E '(^|\s)-(b|ref|minInd|setMinDepth|setMaxDepth|minMapQ|minMaf|SNP_pval)\b' snp_calling.sbatch
+```
+
+```
 sbatch snp_calling.sbatch /archive/carpenterlab/pire/<your_species_dir>/angsd_analysis/
   #Submits to the Wahab cluster, specifying the directory of the output to the 'angsd_analysis' folder.
 ```

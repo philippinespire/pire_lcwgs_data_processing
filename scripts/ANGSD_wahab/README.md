@@ -91,14 +91,14 @@ An initial SNP calling step is used to identify set of SNPs with a reasonable de
 
 First make a list of all .bam files from the historical and modern specimens.
 
-```
+```bash
 ls *.bam > bam_list_all.txt
   #Puts all the .bam files as a list into a text file 
 ```
 
 Generate an index for all .bam files, which will provide a supplementary index file (.bai) for each .bam file. 
 
-```
+```bash
 salloc -c 40
 
 module load samtools
@@ -112,7 +112,7 @@ screen crun samtools index -M -@40 *.bam
 
 Add an absolute path for each .bam file for the bam_list_all.txt to the snp_calling.sbatch script so that the server can find the .bam files when running the job later down the line. 
 
-```
+```bash
 # run from your `angsd_analysis` dir
 find <absolute path to your species>/angsd_analysis/*.bam > bam_list_all_fullpath.txt
   #Searches for all .bam files in the specified directory and write full paths to the file bam_list_all_fullpath.txt
@@ -136,7 +136,7 @@ printf "N=%d  minInd=%d  minDepth=%d  maxDepth=%d\n" "$N" "$minInd" "$minDepth" 
 - Minimum individual filter should be half of the total number of individuals.
 - Parameters that stayed the same from the original script are a map quality filter of 30, a minimum allele frequency filter of 0.001, and a SNP p-value of 1e-6. 
 
-```
+```bash
 cd <your angsd_analysis species folder>
 cp <pathway to lcwgs scripts directory>/snp_calling.sbatch .
   #copies the snp_calling.sbatch file in to your 
@@ -148,7 +148,7 @@ vi snp_calling.sbatch
 
 check that the values are updated correctly
 
-```
+```bash
 # values should be this (assumes you ran the commands to populate these vars above)
 printf "N=%d  minInd=%d  minDepth=%d  maxDepth=%d\n" "$N" "$minInd" "$minDepth" "$maxDepth"
 
@@ -156,7 +156,9 @@ printf "N=%d  minInd=%d  minDepth=%d  maxDepth=%d\n" "$N" "$minInd" "$minDepth" 
 grep -E '(^|\s)-(b|ref|minInd|setMinDepth|setMaxDepth|minMapQ|minMaf|SNP_pval)\b' snp_calling.sbatch
 ```
 
-```
+Run your script
+
+```bash
 sbatch snp_calling.sbatch /archive/carpenterlab/pire/<your_species_dir>/angsd_analysis/
   #Submits to the Wahab cluster, specifying the directory of the output to the 'angsd_analysis' folder.
 ```

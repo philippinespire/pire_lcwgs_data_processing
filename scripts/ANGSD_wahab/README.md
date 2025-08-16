@@ -121,6 +121,7 @@ find <absolute path to your species>/angsd_analysis/*.bam > bam_list_all_fullpat
 Copy the snp_calling.sbatch script (https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs/blob/main/snp_calling.sbatch) into a new .sbatch file, and adjust the script to fit your data. 
 
 ```bash
+# calculate the values to populate the snp_calling.sbatch script
 bash
 N=$(wc -l < bam_list_all_fullpath.txt)
 minInd=$(( (N+1)/2 ))     # ceil(N/2)

@@ -260,6 +260,8 @@ Check the output files (pcangsd_pca-*.out) - you may see the message "PCAngsd di
 
 Once the job is done, download the outputs: angsd_analysis/angsd_snps_pca.cov, bam_list.txt, and angsd_admix.2.Q files. These are needed to run the admixture.R and pca.R files. 
 
+you can run Rstudio on Wahab using [OnDemand](https://ondemand.wahab.hpc.odu.edu/)
+
 Run admixture.R and pca.R files in RStudio to get two plots: 1) admixture proportions and 2) PCA for historical and contemporary individuals. Run the admixture.R plot before the pca.R files. 
 
 --> Once you have run admixture and PCA, if you have individual outliers or evidence of inversions (a "three-stripe" pattern in the PCA) you may want to revisit step #3, removing outlier individuals and/or chromosomes containing inversions (identifiable by running separate PCAs for each chromosome). WinPCA (step #6, still in development) can also help to pinpoint inverted regions.

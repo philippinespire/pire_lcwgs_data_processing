@@ -859,6 +859,9 @@ Any information for entry boxes not addressed below are not necessary and can be
 * Make sure everything looks good and you are ready to submit!
 * Within a few minutes, you should recieve an email notifying you that your submission has been successfully registered with the BioProject Database. It will also contain your BioProject ID, which you can also find on your [NCBI Submission Portal](https://submit.ncbi.nlm.nih.gov/subs/sra/), under status (begins with PRJNA).
 
+**ERRORS:** It may happen that a few days after you submit your data, you may be notified that some of your files were corrupted and could not be processed. To fix this, you need to create a new directory specifically for these re-uploads in your home dir, and redownload each file that was corrupted into it. Files should be downloaded from its earliest source, so wherever it was stored immediately off of the sequencer– not from the fq_raw directory. Each file should be renamed to exactly match what was uploaded to NCBI. Once these files are copied+renamed, rerun the aspera command, replacing your directory name with your new one containing the re-uploads. Select this folder within the SRA Submission, and resubmit.
+
+
 </details>
 
 <details><summary>IV. Tracking Progress</summary>

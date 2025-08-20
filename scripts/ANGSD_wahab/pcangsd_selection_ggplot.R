@@ -112,8 +112,6 @@ df <- df %>%
     color_key = if_else(pval_fdr_sig, "sig", as.character(chr))
   )
 
-
-
 # ------------------------------- MANHATTAN PLOT ---------------------------------
 # Build cumulative base for "chromosome-wise" x positions
 chr_order <- df %>%

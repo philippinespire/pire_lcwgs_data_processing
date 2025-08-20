@@ -355,8 +355,9 @@ I will now walk you through how to fill out each column in the spreadsheet, in o
 **`materialSampleID`**
 - This will be the prefix of your fqgz file, and this must match exactly for GEOME to appropriately pair metadata with the associated fastq file. Unfortunately, GEOME does not recognize the character "-" so we will have to rename every one of our fqgz files prior to uploading (we'll do this later) from this format: "Sne-ABir_001" to this: "SneABir001". That being said, we will populate our materialSampleID column with prefixes in that corrected format.
 - An easy way to get those IDs is to go into your sequencing_run/fq_raw directory, and run this (you can add `| grep 'C'` to the end if you want to specify era):
-  - `ls *fq.gz  | cut -c1-12 | uniq | sed 's/[-_]//g'` 
-- If you have multiple runs of the same species, you will need to append a "_lib1", "_lib2", etc. to the end of this ID. Number the libraries based on number of appearances. (Example, Sne Bir appeared in the 4th and 5th sequencing runs, but I would not list the lib as "_lib4 " and "_lib5", but rather 1 and 2 based on the actual number of runs for that site).
+  - `ls *fq.gz  | cut -c1-12 | uniq | sed 's/[-_]//g'`
+  - If you do not have the fqgz files in your fq_raw directory, or there is no fq_raw directory, you can modify the search by either changing *fq.gz to a different suffix and/or changing into a different directory that has your file names present
+- <ins>If you have multiple runs of the same species, you will need to append a "_lib1", "_lib2", etc. to the end of this ID.</ins> Number the libraries based on number of appearances. (Example, Sne Bir appeared in the 4th and 5th sequencing runs, but I would not list the lib as "_lib4 " and "_lib5", but rather 1 and 2 based on the actual number of runs for that site).
 - An easy way to get this is to run (will append lib number to the end of printed output):
   - `ls *fq.gz | cut -c1-12 | uniq | sed 's/[-_]//g' | sed 's/$/_lib1/'`
 
@@ -400,6 +401,10 @@ I will now walk you through how to fill out each column in the spreadsheet, in o
 **`permitInformation`** 
 - If your contemporary specimens are from Palawan, fill in Palawan Council for Sustainable Development GP# 2022-4(R1).
 - If your specimens are from anywhere else, fill in “NA”.
+
+**`tissueType`** 
+- "muscle"
+- Unless otherwise stated
 
 **`preservative`** 
 - 75% ethanol or DESS.
@@ -456,7 +461,7 @@ I will now walk you through how to fill out each column in the spreadsheet, in o
    
 **`fieldNotes`**
 - For Albatross: check for notes in the site on the “[Philippine Albatross Collections working copy](https://www.google.com/maps/d/edit?mid=1leLurkYXC3FezrY59AhoU0QTjvi4fsIl&amp;usp=sharing)” Google Map.
-- For Contemporary: copy or summarize from the field notes (file path: Database/Field Collections) if you are able to access them. Otherwise, ask Brendan, giving him your species name and collection date.
+- For Contemporary: copy or summarize from the field notes (file path: Database/Field Collections) if you are able to access them. Otherwise, ask the project owner, giving them the species name and collection date.
 
 **`tissueID`**
 - This will be the exact same as your first column, `materialSampleID`.

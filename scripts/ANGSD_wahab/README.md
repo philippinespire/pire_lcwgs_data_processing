@@ -290,7 +290,7 @@ Submit the job to the Wahab cluster, specifying the directory.
 ```
 sbatch pcangsd_selection_it500_noinv_subset.sbatch /archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/angsd_analysis/
 ```
-After the job runs, download the following outputs to your personal directory (examples for Sfa shown here). 
+After the job runs, download the following outputs to your personal directory (examples for Sfa shown here) or you can run Rstudio on Wahab using [OnDemand](https://ondemand.wahab.hpc.odu.edu/). 
 - angsd_notrans_snps_selection_it500_noinv_subset.selection
 - global_snp_list_depth1_15_notrans.regions
 - angsd_notrans_snps_selection_it500_noinv_subset.sites

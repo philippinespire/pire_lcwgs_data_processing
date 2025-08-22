@@ -337,7 +337,7 @@ We want to make sure that reads and metadata are uploaded to GEOME and NCBI, tha
 
 ## GEOME
 
-The [Genomic Observatories Metadatabase (GeOMe)](https://geome-db.org/) is a web-based database for capturing and managing metadata for biological samples. GEOME stores our metadata, NCBI stores our raw fastq files. 
+The [Genomic Observatories Metadatabase (GeOMe)](https://geome-db.org/) is a web-based database for capturing and managing metadata for biological samples. 
 
 <details><summary>I. Filling out the metadata spreadsheet</summary>
   
@@ -670,7 +670,7 @@ Fill out: "Data_Uploaded_By", "GEOME_Expedition_Name", and "GEOME_Expedition_GUI
 ## NCBI Sequence Read Archive (SRA)
 <p>
   
-Now that your metadata has been uploaded to GEOME, we can move on to submitting our reads to the [NCBI SRA](https://www.ncbi.nlm.nih.gov/sra/docs/). 
+Now that your metadata has been uploaded to GEOME, we can move on to submitting our raw reads to the [NCBI SRA](https://www.ncbi.nlm.nih.gov/sra/docs/). 
 </p>
 
 <details><summary>I. Renaming and Downloading Raw Files to Your Home Directory</summary>

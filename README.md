@@ -690,7 +690,7 @@ You can do this however you want, but what has been the easiest for me is as fol
   - Then, in column A, I type "cp" and drag it to fill all rows.
   - Finally, I do a series of Find and Replace(shift+command+h),
     - I select all content in column C and "Find: SneABir" and "Replace with: ./SneABir"
-    - In column B, (if working with multiple runs), I select all filenames associated with lib1 and "Find: Sne-ABir" and "Replace with: $lib1path/Sne-ABir". Then I do the same for lib2– "Find: Sne-ABir" and "Replace with: $lib2path/Sne-ABir". If it's onlt one run you can just select the whole column and do the same.
+    - In column B, (if working with multiple runs), I select all filenames associated with lib1 and "Find: Sne-ABir" and "Replace with: $lib1path/Sne-ABir". Then I do the same for lib2– "Find: Sne-ABir" and "Replace with: $lib2path/Sne-ABir". If it's only one run you can just select the whole column and do the same.
   - Your spreadsheet should look like this:
   ```
   |   A   |                      B                          |                      C                     |
@@ -703,7 +703,7 @@ You can do this however you want, but what has been the easiest for me is as fol
   ```
 - Now in the fastq directory we just made, we'll make a quick script to copy the files over. This script copies each original raw file (using the full path) to the current directory you are in (~/<fastq_dir>) and renames it in the process.
   - Add `.sh` to the end of your script name
-  - Add `#!/bin/bash` to the first line
+  - Add a shebang `#!/bin/bash` to the first line
   - Add your lib absolute filepaths
   - And then paste the contents of your spreadsheet below it
   ```

@@ -452,6 +452,14 @@ Submit the job to the Wahab cluster. Since the script already specifies the dire
 sbatch fst.sbatch
 ```
 
+Interpreting results: the last line of the SLURM `*.out` file should look something like this
+
+```
+        -> FST.Unweight[nObs:2801580]:0.062338 Fst.Weight:0.095324
+```
+
+There were 2801580 SNPs.  The unweighted FST is 0.062 and the weighted is 0.095
+
 Windowed Fst can be calculated in ANGSD based on the output of fst.sbatch wusing the fst_window.sbatch script. Currently the script uses a window size of 50kbp and a step size of 10kbp, though this can be adjusted (however note that this will reduce the number of SNPs per window and potentially increase the "noise" of Fst estimates.
 
 ```

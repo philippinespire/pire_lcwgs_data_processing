@@ -462,14 +462,14 @@ If you have more than 2 population samples to compare, then
 
 1. If you have not already, make a bamlist file for each of the populations using the `make_bamlists.R` script. [Wahab Ondemand](https://ondemand.wahab.hpc.odu.edu/)
 2. If you have not already, repeat the rest of step 4 above for each population
-3. If you have not already, repeat step 5 above for each pairwise population comparison using [`fst2.sbatch`](fst2.sbatch) as follows:
+3. If you have not already, repeat step 5 above for each pairwise population comparison using [`fst2.sbatch`](fst2.sbatch) (copy to your `angsd_analysis` dir) as follows:
 
 ```bash
 # replace pop1_sites_notrans and pop2_sites_notrans with the names used for your *.saf* files
 sbatch fst2.sbatch pop1_sites_notrans pop2_sites_notrans
 ```
 
-Sliding Window PW FST can be run as follows for each pair of pops
+Sliding Window PW FST can be run as follows for each pair of pops with [`fst2.sbatch`](fst2_window.sbatch) (copy to your `angsd_analysis` dir)
 
 ```bash
 # replace pop1_sites_notrans and pop2_sites_notrans with the names used for your *.saf* files

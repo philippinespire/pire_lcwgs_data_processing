@@ -19,8 +19,8 @@ export SINGULARITY_BIND=/home/e1garcia
 SAFDIR=${1:-/archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/angsd_analysis/} 
 THREADS=${2:-8} # Number of parallel threads to use, default value is 8.
 EXTRA_ARG=${3:-''} # Extra arguments for the SFS estimation step, default value is ''
-POP1=${4:-abas_sites_notrans}
-POP2=${5:-cbas_sites_notrans}
+POP1=${4:-historical_sites_notrans}
+POP2=${5:-contemp_sites_notrans}
 
 cd $SAFDIR
 

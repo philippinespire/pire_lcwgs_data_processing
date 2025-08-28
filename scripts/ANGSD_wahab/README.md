@@ -460,9 +460,21 @@ sbatch fst_window.sbatch
 
 If you have more than 2 population samples to compare, then 
 
-1. make a bamlist file for each of the populations using the `make_bamlists.R` script. [Wahab Ondemand](https://ondemand.wahab.hpc.odu.edu/)
-2. repeat step 4 above for each population
-3. 
+1. If you have not already, make a bamlist file for each of the populations using the `make_bamlists.R` script. [Wahab Ondemand](https://ondemand.wahab.hpc.odu.edu/)
+2. If you have not already, repeat the rest of step 4 above for each population
+3. If you have not already, repeat step 5 above for each pairwise population comparison using [`fst2.sbatch`](fst2.sbatch) as follows:
+
+```bash
+# replace pop1_sites_notrans and pop2_sites_notrans with the names used for your *.saf* files
+sbatch fst2.sbatch pop1_sites_notrans pop2_sites_notrans
+```
+
+Sliding Window PW FST can be run as follows for each pair of pops
+
+```bash
+# replace pop1_sites_notrans and pop2_sites_notrans with the names used for your *.saf* files
+sbatch fst2_window.sbatch pop1_sites_notrans pop2_sites_notrans
+```
 
 </p>
 </details>

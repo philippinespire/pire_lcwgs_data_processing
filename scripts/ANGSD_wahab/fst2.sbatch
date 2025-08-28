@@ -17,10 +17,10 @@ export SINGULARITY_BIND=/home/e1garcia
 
 #This script generates a number of files, so creating a new directory and copying the .saf.idx files into it.
 
-SAFDIR=${1:-/archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/angsd_analysis/} 
-THREADS=${2:-32} # Number of parallel threads to use, default value is 32.  Must also update --cpus-per-task=32 above
-POP1=${3:-pop1_sites_notrans}
-POP2=${4:-pop2_sites_notrans}
+POP1=${1:-pop1_sites_notrans}
+POP2=${2:-pop2_sites_notrans}
+THREADS=${3:-32} # Number of parallel threads to use, default value is 32.  Must also update --cpus-per-task=32 above
+SAFDIR=${4:-.} 
 EXTRA_ARG=${5:-''} # Extra arguments for the SFS estimation step, default value is ''
 
 

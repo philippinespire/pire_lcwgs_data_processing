@@ -32,7 +32,7 @@ cd $SAFDIR
  crun.angsd realSFS fst print $POP1'_'$POP2'.alpha_beta.fst.idx' > $POP1'_'$POP2'.alpha_beta.txt'
  awk 'BEGIN{OFS="\t"} $4>0 {print $0, $3/$4}' $POP1'_'$POP2'.alpha_beta.txt' > $POP1'_'$POP2'.fst'
  crun.angsd realSFS fst stats2 ${POP1}_${POP2}.alpha_beta.fst.idx -win 1 -step 1 \
-  > ${POP1}_${POP2}.sites.fst.txt
+  > ${POP1}_${POP2}.sites.fst
 
  # Estimating average Fst in angsd
  crun.angsd realSFS fst stats $POP1'_'$POP2'.alpha_beta.fst.idx' > $POP1'_'$POP2'.average_fst.txt'

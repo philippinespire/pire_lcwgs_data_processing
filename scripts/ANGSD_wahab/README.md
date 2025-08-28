@@ -458,7 +458,7 @@ Interpreting results: the last line of the SLURM `*.out` file should look someth
         -> FST.Unweight[nObs:2801580]:0.062338 Fst.Weight:0.095324
 ```
 
-There were 2801580 SNPs.  The unweighted FST is 0.062 and the weighted is 0.095
+There were 2801580 SNPs.  The unweighted FST is 0.062 (average FST across all SNPs) and the weighted is 0.095 (sum of *S*ubpop var component / sum of *T*otal variance).   
 
 Windowed Fst can be calculated in ANGSD based on the output of fst.sbatch wusing the fst_window.sbatch script. Currently the script uses a window size of 50kbp and a step size of 10kbp, though this can be adjusted (however note that this will reduce the number of SNPs per window and potentially increase the "noise" of Fst estimates.
 

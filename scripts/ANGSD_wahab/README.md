@@ -357,11 +357,28 @@ sbatch winPCAv3.sbatch
   
 ## 4. Generating Site Allele Frequencies
 
-Make two bam lists: one with only Albatross individuals (ABas) and one with only contemporary individuals (CBas). Use the subsetted bam list because it excludes outlier individuals. 
+Make two bam lists: one with only Albatross individuals (AXxx) and one with only contemporary individuals (CXxx). Use the subsetted bam list because it excludes outlier individuals. 
+
+Make a bamlist file for the historical and contemp libraries as well as each of the populations by copying the [`make_bamlists.R`](make_bamlists.R) script to your `angsd_analysis` dir then open it in [Wahab Ondemand](https://ondemand.wahab.hpc.odu.edu/)
+
+You will need to update the User Defined Variables in the `make_bamlists.R` script to match your bam file nameing.  The variables below are for `/archive/carpenterlab/pire/pire_ostorhinchus_chrysopomus_lcwgs/angsd_analysis`
+
+```R
+#### User Defined Variables ####
+
+qfile_path   <- "angsd_admix_notrans.admix.2.Q"
+bamlist_path <- "bam_list_all.txt"
+historical_pattern <- "^OchA"    # regex that selects all historical libraries
+contemp_pattern <- "^OchC"       # regex that selects all contemp libraries
+all_pattern <- "^Och[AC]"        # regex that selects all libraries
+```
+
+Run the script and it will create the bam list files.  If you are having trouble, you can use the bash code below to create bam list files.  Note that you have to repalce the "CBas" and "ABas" with regex that selects the libraries you want to put into a group
 
 ```
-grep "CBas" bam_list_all_subset.txt > bam_list_all_subset_CBas.txt
-grep "ABas" bam_list_all_subset.txt > bam_list_all_subset_ABas.txt
+#only run this if you couldn't get the make_bamlists.R script to work
+grep "CBas" bam_list_all_subset.txt > bam_list_CBas.txt
+grep "ABas" bam_list_all_subset.txt > bam_list_ABas.txt
 ```
 
 Copy Kyra Fitz's saf_beagle_maf.sbatch script (https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs/blob/main/saf_beagle_maf.sbatch) into two new .sbatch files (saf_beagle_maf_ABas.sbatch for Albatross saf_beagle_maf_CBas.sbatch for contemporary), and adjust the script to fit the *Salarias fasciatus* data.
@@ -426,8 +443,8 @@ Copy Kyra Fitz's fst.sbatch script (https://github.com/philippinespire/pire_taen
 vi fst.sbatch
 #Make sure to first paste Kyra’s script
 #Make sure to change the SAF directory into our angsd_analysis folder: SAFDIR=${1:-/archive/carpenterlab/pire/pire_salarias_fasciatus_lcwgs/angsd_analysis/}
-#Make sure to change population 1 to "abas_sites_notrans"
-#Make sure to change population 2 to "cbas_sites_notrans"
+#Make sure to change population 1 to "historical_sites_notrans"
+#Make sure to change population 2 to "contemp_sites_notrans"
 ```
 
 Submit the job to the Wahab cluster. Since the script already specifies the directory for the output, you do not have to specify the directory when submitting the job. The output should be angsd_fst-######.out. 
@@ -440,6 +457,13 @@ Windowed Fst can be calculated in ANGSD based on the output of fst.sbatch wusing
 ```
 sbatch fst_window.sbatch
 ```
+
+If you have more than 2 population samples to compare, then 
+
+1. make a bamlist file for each of the populations using the `make_bamlists.R` script. [Wahab Ondemand](https://ondemand.wahab.hpc.odu.edu/)
+2. repeat step 4 above for each population
+3. 
+
 </p>
 </details>
 

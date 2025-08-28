@@ -477,6 +477,12 @@ If you have more than 2 population samples to compare, then
 sbatch fst2.sbatch pop1_sites_notrans pop2_sites_notrans
 ```
 
+4. Query all global PW FST:
+
+```bash
+grep . *average_fst.txt
+```
+
 Sliding Window PW FST can be run as follows for each pair of pops with [`fst2.sbatch`](fst2_window.sbatch) (copy to your `angsd_analysis` dir)
 
 ```bash

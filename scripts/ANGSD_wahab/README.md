@@ -476,6 +476,21 @@ Sliding Window PW FST can be run as follows for each pair of pops with [`fst2.sb
 sbatch fst2_window.sbatch pop1_sites_notrans pop2_sites_notrans
 ```
 
+Finally, you will be interested in comparing the groups (k) from your admixture analysis if they are not the same as the comparisons you have done already.  The [`make_bamlists.R`](make_bamlists.R) script reads in the admixture analysis results to aid you in creating bamlists.  You need to uncomment the user defined variables and modify them for your species and libraries.  These were for `/archive/carpenterlab/pire/pire_ostorhinchus_chrysopomus_lcwgs/angsd_analysis`.
+
+```r
+# Vars for parsing population group affiliation from admixure model
+Uncomment these var and the commented code below and customize for your species.
+historical_p1_out <- "bam_list_p1_historical.txt"
+historical_p2_out <- "bam_list_p2_historical.txt"
+contemp_p2_out <- "bam_list_p2_contemp.txt"
+assign_thresh <- 0.9
+```
+
+You will also need to uncomment the code at the end of the [`make_bamlists.R`](make_bamlists.R) script.  This code makes bam lists for historical pop 1, historical pop2, and contemporary pop2.  You may have more or different groupings that you want to compare and will have to modify the code provided.
+
+After that, run steps 4 and 5 to obtain saf and fst
+
 </p>
 </details>
 

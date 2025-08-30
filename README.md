@@ -508,7 +508,9 @@ You may need to edit it based on how your files are named.
   - BUT, if I ran this on `Sne-ATaw_001-Ex1-lcwgs.1.fq.gz`, it would become: `SneATaw001_lib1-Ex1-lcwgs.1.fq.gz---` because I only have 5 fields that are separated by a - or _, not 8
     - SO, I would edit my command to be: `ls *fq.gz | awk -F'[-_]' '{print $1 $2 $3 "_lib1-" $4 "-" $5}'` to print: `SneATaw001_lib1-Ex1-lcwgs.1.fq.gz`
 
-Another issue you may run in to is that the raw files are not in the fq_raw directory. Sometimes files are deleted by users once processing is complete in an attempt to maximize storage space. In this case, we will just have to redownload the files. Usually these can be found in `/archive/carpenterlab/pire/downloads/<species_name>/<sequencing_run>/fq_raw`, but if the directory is older, it may be in a different location. Check the readme for that run to find out where the files are located.
+An issue you may run in to is that the raw files are not in the fq_raw directory. Sometimes files are deleted by users once processing is complete in an attempt to maximize storage space. In this case, it might be easiest to skip to the B. NCBI "Step I. Renaming and Downloading Raw Files to Your Home Directory" and working with that dir instead of fq_raw.
+
+(Optional) Another workaround would be to redownload the files into fq_raw. Usually these can be found in `/archive/carpenterlab/pire/downloads/<species_name>/<sequencing_run>/fq_raw`, but if the directory is older, it may be in a different location. Check the readme for that run to find out where the files are located.
 
 For example, Sne 2nd sequencing run was missing the raw files. Once I located the files, I ran the following to copy them over:
 ```

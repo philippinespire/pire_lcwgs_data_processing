@@ -331,9 +331,9 @@ It may be useful to extract mitochondrial sequences from lcwgs data to confirm s
 
 ## 11. Uploading Species Data (GEOME, NCBI, FigShare)
 
-We want to make sure that reads and metadata are uploaded to GEOME and NCBI, that final genotype likelihoods are uploaded to FigShare, that all of these datasets are linked from the main readme for a species, and that the repo is made public. 
+We want to make sure that reads and metadata are uploaded to GEOME and NCBI, that final genotype likelihoods are uploaded to Github/Zenodo, that all of these datasets are linked from the main readme for a species, and that the repo is made public. 
 
-<details><summary>A. GEOME</summary>
+<details><summary>A. Uploading Metadata to GEOME</summary>
 
 ## GEOME
 
@@ -667,7 +667,7 @@ Fill out: "Data_Uploaded_By", "GEOME_Expedition_Name", and "GEOME_Expedition_GUI
 
 </details>
 
-<details><summary>B. NCBI Sequence Read Archive (SRA)</summary>
+<details><summary>B. Uploading Raw Files to the NCBI Sequence Read Archive (SRA)</summary>
 
 ## NCBI Sequence Read Archive (SRA)
 <p>
@@ -885,7 +885,18 @@ You can safely remove the folder housing your renamed files from your home direc
 ---
 </details>
 
-<details><summary>C. FigShare</summary>
+<details><summary>C. Uploading Genotype Likelihoods to Zenodo</summary>
+
+## Zenodo
+
+[Zenodo](https://zenodo.org/) is an online repository that we will use to store genotype likelihood files that are too large for Github. For smaller files, GitHub remains the preferred storage method.
+
+
+
+
+
+
+
 
 
 ---

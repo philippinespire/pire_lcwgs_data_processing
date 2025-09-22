@@ -327,9 +327,9 @@ It may be useful to extract mitochondrial sequences from lcwgs data to confirm s
 </p>
 </details>
 
-<details><summary>11. Uploading Species Data (GEOME, NCBI, FigShare)  </summary>
+<details><summary>11. Uploading Species Data (GEOME, NCBI, Zenodo)  </summary>
 
-## 11. Uploading Species Data (GEOME, NCBI, FigShare)
+## 11. Uploading Species Data (GEOME, NCBI, Zenodo)
 
 We want to make sure that reads and metadata are uploaded to GEOME and NCBI, that the genome used for mapping is on NCBI, that final genotype likelihoods are uploaded to Github/Zenodo, that all of these datasets are linked from the main readme for a species, and that the repo is made public. 
 

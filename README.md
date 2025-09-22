@@ -1044,10 +1044,11 @@ Once everything has been filled out, you can click the green "Publish" button.
 
 In either case of file upload to Github or Zenodo, we need to link to this dataset in the main README for the species. 
 
-Navigate to Github and find your species README. (ex: https://github.com/philippinespire/pire_atherinomorus_duodecimalis_lcwgs/blob/main/README.md)
+Navigate to Github and find your species README.
 
 In it, add a link to either the file on github:
   - ex: https://github.com/philippinespire/pire_atherinomorus_duodecimalis_lcwgs/blob/main/ANGSD_Adu_Dba/angsd_depth1_15_notrans.beagle.gz
+
 Or the Zenodo DOI:
   - ex: XXXX
 

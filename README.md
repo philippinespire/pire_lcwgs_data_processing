@@ -885,19 +885,177 @@ You can safely remove the folder housing your renamed files from your home direc
 ---
 </details>
 
-<details><summary>C. Uploading Genotype Likelihoods to Zenodo</summary>
+<details><summary>C. Uploading Genotype Likelihoods to Github or Zenodo</summary>
 
-## Zenodo
+## Uploading Genotype Likelihoods
 
 [Zenodo](https://zenodo.org/) is an online repository that we will use to store genotype likelihood files that are too large for Github. For smaller files, GitHub remains the preferred storage method.
 
+### Getting Started:
+
+First, locate your genotype likelihood file. This will be the `angsd_depth1_15_notrans.beagle.gz` file generated during the ANGSD pipeline.
+```
+(model)
+cd /archive/carpenterlab/pire/pire_<species_name>_lcwgs/<ANGSD_directory>
+ls angsd_depth1_15_notrans.beagle.gz
+
+(example)
+[hpc-0373@wahab-01 ~]$ cd /archive/carpenterlab/pire/pire_atherinomorus_duodecimalis_lcwgs/ANGSD_Adu_Dba
+[hpc-0373@wahab-01 ANGSD_Adu_Dba]$ ls angsd_depth1_15_notrans.beagle.gz
+angsd_depth1_15_notrans.beagle.gz
+```
+
+Next, check the file size. If it is under 100M = We will upload to Github. If it is over 100M = We will upload to Zenodo. 
+```
+(model)
+ls -lh angsd_depth1_15_notrans.beagle.gz
+
+(example)
+[hpc-0373@wahab-01 ANGSD_Adu_Dba]$ ls -lh angsd_depth1_15_notrans.beagle.gz
+-rw-r--r-- 1 hpc-0373 carpenter 2.4M May  1 20:24 angsd_depth1_15_notrans.beagle.gz
+```
+
+Click on the applicable route based on your file size.
+
+<details><summary>Uploading to Github:</summary>
+
+### Uploading to Github (files <100M):
+
+First, move to the species directory and open the `.gitignore` file:
+```
+(model)
+cd /archive/carpenterlab/pire/pire_<species_name>_lcwgs
+nano .gitignore
+
+(example)
+[hpc-0373@wahab-01 ANGSD_Adu_Dba]$ cd ..
+[hpc-0373@wahab-01 pire_atherinomorus_duodecimalis_lcwgs]$ nano .gitignore
+```
+
+Now, we want to add a negation rule to make an exception for this specific beagle file. At the end of the `.gitignore` file, comment out what you are doing, and then paste the beagle filepath (starting from your current dir) following an "!":
+```
+(model)
+# Allow genotype likelihood file to be tracked
+!<angsd_dir>/angsd_depth1_15_notrans.beagle.gz
+
+(example)
+# Allow genotype likelihood file to be tracked
+!ANGSD_Adu_Dba/angsd_depth1_15_notrans.beagle.gz
+```
+
+Track the changes made to the gitignore file:
+```
+git pull
+git add .gitignore
+git commit -m "adding exception rule to gitignore for genotype likelihood file"
+git push
+```
+Now, track the beagle file:
+```
+git add ANGSD_Adu_Dba/angsd_depth1_15_notrans.beagle.gz
+git commit -m "tracking genotype likelihood file"
+git push
+```
+Check your github repo to make sure the file was uploaded. If so, you're all set.
+
+</details>
+
+<details><summary>Uploading to Zenodo:</summary>
+
+### Uploading to Zenodo (files >100M):
+
+For larger files, we will download them  to our local device, upload them to Zenodo, and track this info on the species repo. 
+
+First, note the absolute filepath to your genotype likelihood file:
+```
+(model)
+/archive/carpenterlab/pire/pire_<species_name>_lcwgs/<angsd_dir>/angsd_depth1_15_notrans.beagle.gz
+
+(example)
+/archive/carpenterlab/pire/pire_zenarchopterus_dispar_lcwgs/angsd_analysis/angsd_depth1_15_notrans.beagle.gz
+```
+
+Now we are going to download this to our device, adding the species code to the downloaded file name:
+```
+(model)
+logout
+scp <usrname>@wahab.hpc.odu.edu:<file path> <destination path>/<Spp>_angsd_depth1_15_notrans.beagle.gz
+
+(example)
+[hpc-0373@wahab-01 angsd_analysis]$ logout
+Connection to wahab.hpc.odu.edu closed.
+(base) Giannas-Laptop:~ giannamazzei$ scp hpc-0373@wahab.hpc.odu.edu:/archive/carpenterlab/pire/pire_zenarchopterus_dispar_lcwgs/angsd_analysis/angsd_depth1_15_notrans.beagle.gz ~/Desktop/Zdi_angsd_depth1_15_notrans.beagle.gz
+```
+
+Next, go to [Zenodo](https://zenodo.org/).
+* For new/returning users, click "Log In" in the upper right corner. Choose "Sign In with GitHub".
+* Once registered/signed in, click the plus sign "+" icon in the upper right by your username and choose "New Upload".
+* Click "Upload Files" and choose the beagle file you just downloaded to your computer.
+
+### Filling out identifying information:
+
+<ins>**Basic Information:**</ins>
+
+- Digital Object Identifier- Do you already have a DOI for this upload? **No, I need one**
+- Resource type: **Dataset**
+- Title: **_Species name_ Beagle File**
+  - ex. Zenarchopterus dispar Beagle File
+- Publicaton Date: **Current date**
+- Creators: **Add Creator**
+  - Organization
+    - "Search for an organization by name, identifier, or affiliation..."
+      - Search for the university you are associated with. In my case, that is **University of California, Santa Cruz**.
+    - Role: **Project Member**
+- Description: **Beagle file for analysis of adaptation and changes in genetic diversity in ANGSD over the last century in the fish _Species name_ caught in the Philippines.**
+
+<ins>**Recommended Information:**</ins>
+
+- Keywords and Subjects: **temporal genomics**
+
+<ins>**Funding:**</ins>
+
+- "+ Add Custom"
+  - Funder: **US National Science Foundation**
+  - Number: **OISE-1743711**
+  - Title: **Centennial Genetic and Species Transformations in the Epicenter of Marine Biodiversity**
+
+<ins>**Related works:**</ins>
+
+- Relation: **Is part of**
+- Identifier: **https://sites.wp.odu.edu/PIRE/philippines/**
+- Scheme: **URL**
+- Resource Type: **Other**
+
+<ins>**Software:**</ins>
+
+- Repository URL: **github URL**
+  - ex. https://github.com/philippinespire/pire_zenarchopterus_dispar_lcwgs
+
+### Publishing:
+
+Once everything has been filled out, you can click the green "Publish" button.
+
+[Still working on instructions]
 
 
+</details>
 
+### Tracking Progress:
 
+In either case of file upload to Github or Zenodo, we need to link to this dataset in the main README for the species. 
 
+Navigate to Github and find your species README. (ex: https://github.com/philippinespire/pire_atherinomorus_duodecimalis_lcwgs/blob/main/README.md)
 
+In it, add a link to either the file on github:
+  - ex: https://github.com/philippinespire/pire_atherinomorus_duodecimalis_lcwgs/blob/main/ANGSD_Adu_Dba/angsd_depth1_15_notrans.beagle.gz
+Or the Zenodo DOI:
+  - ex: XXXX
 
+Finally, make sure this README is public.
+
+Now you have successfully uploaded and tracked your genotype likelihood file(s)!
+  
+[Still working on instructions]
 
 ---
 </details>

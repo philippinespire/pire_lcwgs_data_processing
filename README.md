@@ -997,16 +997,23 @@ Next, go to [Zenodo](https://zenodo.org/).
 <ins>**Basic Information:**</ins>
 
 - Digital Object Identifier- Do you already have a DOI for this upload? **No, I need one**
+  - Click "Get One Now"
 - Resource type: **Dataset**
-- Title: **_Species name_ Beagle File**
+- Title: **-Species name- Beagle File**
   - ex. Zenarchopterus dispar Beagle File
 - Publicaton Date: **Current date**
 - Creators: **Add Creator**
-  - Organization
-    - "Search for an organization by name, identifier, or affiliation..."
-      - Search for the university you are associated with. In my case, that is **University of California, Santa Cruz**.
-    - Role: **Project Member**
-- Description: **Beagle file for analysis of adaptation and changes in genetic diversity in ANGSD over the last century in the fish _Species name_ caught in the Philippines.**
+  - In this section, you will first add the lead researcher who ran the bioinformatics pipeline.
+    - Family Name: **Last Name**
+    - Given Name: **First Name**
+    - Affiliations: **University**
+    - Role: **Data Curator**
+  - Now, you will add information for the following people. You can manually add this information, or use the "Search for persons by name, identifier, or affiliation..." search bar. If you use the search feature, you will need to update the university affiliation for Malin and Brendan.
+    - **Kent Carpenter, Old Dominion University, ORCID 0000-0003-3618-1811**
+    - **Malin Pinsky, University of California Santa Cruz, ORCID 0000-0002-8523-8952**
+    - **Christopher E Bird, Texas A&M Corpus Christi, ORCID 0000-0003-0228-3318**
+    - **Brendan Reid, University of California Santa Cruz, ORCID 0000-0003-4063-3956**
+- Description: **Beagle file of genotype likelihoods produced by ANGSD from samples of -Species name- from the Philippines.**
 
 <ins>**Recommended Information:**</ins>
 
@@ -1019,12 +1026,10 @@ Next, go to [Zenodo](https://zenodo.org/).
   - Number: **OISE-1743711**
   - Title: **Centennial Genetic and Species Transformations in the Epicenter of Marine Biodiversity**
 
-<ins>**Related works:**</ins>
-
-- Relation: **Is part of**
-- Identifier: **https://sites.wp.odu.edu/PIRE/philippines/**
-- Scheme: **URL**
-- Resource Type: **Other**
+- "+ Add Custom"
+  - Funder: **US National Science Foundation**
+  - Number: **DEB-2343787**
+  - Title: **Collaborative Research: The Albatross Re-Collection Project for a Century of Genomic Change in the Tropics**
 
 <ins>**Software:**</ins>
 
@@ -1034,9 +1039,6 @@ Next, go to [Zenodo](https://zenodo.org/).
 ### Publishing:
 
 Once everything has been filled out, you can click the green "Publish" button.
-
-[Still working on instructions]
-
 
 </details>
 
@@ -1051,13 +1053,11 @@ In it, add a link to either the file on github:
   - ex: https://github.com/philippinespire/pire_atherinomorus_duodecimalis_lcwgs/blob/main/ANGSD_Adu_Dba/angsd_depth1_15_notrans.beagle.gz
 
 Or the Zenodo DOI:
-  - ex: XXXX
+  - ex: https://doi.org/10.5281/zenodo.17172692
 
 Finally, make sure this README is public.
 
-Now you have successfully uploaded and tracked your genotype likelihood file(s)!
-  
-[Still working on instructions]
+Now you have successfully uploaded and tracked your genotype likelihood file!
 
 ---
 </details>

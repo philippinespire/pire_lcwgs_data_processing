@@ -353,7 +353,7 @@ For a single species, you will, at minimum, need one sheet per era (Albatross/Co
 I will now walk you through how to fill out each column in the spreadsheet, in order.
 
 **`materialSampleID`**
-- This will be the prefix of your fqgz file, and this must match exactly for GEOME to appropriately pair metadata with the associated fastq file. Unfortunately, GEOME does not recognize the character "-" so we will have to rename every one of our fqgz files prior to uploading (we'll do this later) from this format: "Sne-ABir_001" to this: "SneABir001". That being said, we will populate our materialSampleID column with prefixes in that corrected format.
+- This will be the prefix of your fqgz file, and this must match exactly for GEOME to appropriately pair metadata with the associated fastq file. Unfortunately, GEOME does not recognize the character "-" so we will have to rename every one of our fqgz files prior to uploading (we'll do this later) from this format: "Sne-ABir_001-Ex1" to this: "SneABir001Ex1". That being said, we will populate our materialSampleID column with prefixes in that corrected format.
 - An easy way to get those IDs is to go into your sequencing_run/fq_raw directory, and run this (you can add `| grep 'C'` to the end if you want to specify era):
   - `ls *fq.gz  | cut -c1-12 | uniq | sed 's/[-_]//g'`
   - If you do not have the fqgz files in your fq_raw directory, or there is no fq_raw directory, you can modify the search by either changing *fq.gz to a different suffix and/or changing into a different directory that has your file names present

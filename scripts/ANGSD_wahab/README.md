@@ -624,6 +624,12 @@ For the case of *Sphaeramia nematoptera*, the number of chromosomes changed afte
 ```
 sbatch indexneutralsnps.sbatch
 ```
+</p>
+</details>
+
+<details><summary>11. Creating 2dSFS files for momi2</summary>
+<p>
+  
 ## 12. Creating 2dSFS files for momi2
 
 The script convert2momi2.sbatch creats 2dSFS files for each site, which combines the Albatross & Contemporary *.saf.idx files. This script was ran 6 times to process neutral snps & all snps at each of the 3 sites. The 2dSFS files will be copied to the (momi2)[https://github.com/philippinespire/pire_sphaeramia_nematoptera_lcwgs/tree/main/momi2] analysis folder later.
@@ -633,3 +639,6 @@ sbatch convert2momi2.sbatch
 ```
 
 Details on the demographic modeling downstream, which used these 2dSFS files can be found in (momi2)[https://github.com/philippinespire/pire_sphaeramia_nematoptera_lcwgs/tree/main/momi2]
+
+</p>
+</details>

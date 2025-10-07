@@ -616,9 +616,9 @@ Because the script requires SAF beagle file with all sites together (with a *.po
 <p>
 
 ## 11. Selection scan to get a list of neutral SNPs
-The selection.R script can be used to get a list of neutral SNPs for species with only 1 location. The selection_3sites.R script was created specifically for *Sphaeramia nematoptera* with 6 populations at 3 sites.
+The selection.R script can be used to get a list of neutral SNPs for species with only 1 location. The selection_Sne.R script was created specifically for *Sphaeramia nematoptera* with 6 populations at 3 sites.
 
-For the case of *Sphaeramia nematoptera*, the number of chromosomes changed after filtering. Therefore, a new chromosome list had to be created too. The selection_3sites.R script provides code for that. A new index must be created for the new neutral snp list and it is executed through the the index_snplist.sbatch script. Make sure to execute this after you create your neutral snp list.
+For the case of *Sphaeramia nematoptera*, the number of chromosomes changed after filtering. Therefore, a new chromosome list had to be created too. The selection_Sne.R script provides code for that. A new index must be created for the new neutral snp list and it is executed through the the index_snplist.sbatch script. Make sure to execute this after you create your neutral snp list.
 
 ```
 sbatch index_snplist.sbatch

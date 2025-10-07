@@ -18,7 +18,8 @@ Outline of ANGSD pipeline and potential analyses:
   8) Calculate neutrality test statistics
   9) Estimating Effective Population Size (Ne)
   10) Genetic Diversity (Pi, theta, Tajima's D)
-  11) Selection scan for neutral SNPS
+  11) Selection scan for neutral SNPs
+  12) Creating 2dSFS files for momi2
 
 Draft ANGSD pipeline roadmap (needs to be updated)
 ![PIREANGSD03202025](https://github.com/user-attachments/assets/dea17456-78be-403b-9219-0ded9ac50056)
@@ -623,4 +624,12 @@ For the case of *Sphaeramia nematoptera*, the number of chromosomes changed afte
 ```
 sbatch indexneutralsnps.sbatch
 ```
+## 12. Creating 2dSFS files for momi2
 
+The script convert2momi2.sbatch creats 2dSFS files for each site, which combines the Albatross & Contemporary *.saf.idx files. This script was ran 6 times to process neutral snps & all snps at each of the 3 sites. The 2dSFS files will be copied to the (momi2)[https://github.com/philippinespire/pire_sphaeramia_nematoptera_lcwgs/tree/main/momi2] analysis folder later.
+
+```
+sbatch convert2momi2.sbatch
+```
+
+Details on the demographic modeling downstream, which used these 2dSFS files can be found in (momi2)[https://github.com/philippinespire/pire_sphaeramia_nematoptera_lcwgs/tree/main/momi2]

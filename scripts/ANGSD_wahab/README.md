@@ -627,7 +627,7 @@ sbatch indexneutralsnps.sbatch
 </p>
 </details>
 
-<details><summary>11. Creating 2dSFS files for momi2</summary>
+<details><summary>12. Creating 2dSFS files for momi2</summary>
 <p>
   
 ## 12. Creating 2dSFS files for momi2

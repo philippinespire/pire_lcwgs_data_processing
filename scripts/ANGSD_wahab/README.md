@@ -622,7 +622,8 @@ The selection.R script can be used to get a list of neutral SNPs for species wit
 For the case of *Sphaeramia nematoptera*, the number of chromosomes changed after filtering. Therefore, a new chromosome list had to be created too. The selection_Sne.R script provides code for that. A new index must be created for the new neutral snp list and it is executed through the the indexneutralsnps.sbatch  script. Make sure to execute this after you create your neutral snp list.
 
 ```
-sbatch indexneutralsnps.sbatch
+#sbatch <script> <outdirectory & should be the same location with *.chrs file>
+sbatch indexneutralsnps.sbatch .
 ```
 </p>
 </details>

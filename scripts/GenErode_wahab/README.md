@@ -8,6 +8,8 @@ It can also do some auxiliary tasks that will be useful for PIRE such as estimat
 
 A road map for using GenErode on Wahab is included below.
 
+**GERP scores** analysis was traditionally performed to rescale bases with ATLAS. This is no longer the default. Rescaling is now done with MapDamage, which is also included in the GenErode pipeline (2025). Running GERP is therefore **optional**.
+
 <details><summary>Summary</summary>
 
 ### Summary
@@ -30,7 +32,7 @@ or
 
 `reference.genbank.Spp20k.fasta`
 
-**GERP Outgroups**
+**GERP Outgroups (Optional)**
 ```
 # dated phylogenetic tree
 gerp_tree.nwk
@@ -162,7 +164,7 @@ cd /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/refe
 perl /home/e1garcia/shotgun_PIRE/REUs/2022_REU/PSMC/scripts/removesmalls.pl 20000 scaffolds.fasta > reference.denovoSSL.<Spp>20k.fasta
 ```
 
-#### GERP Outgroups
+#### GERP Outgroups (Optional)
 
 Copy gerp scripts to the species' gerp_outgroups directory.
 ```
@@ -435,7 +437,7 @@ bash rename_genomes.sh
 
 <details><summary>2. Get Newick tree</summary>
 
-### 2. Get Newick tree
+### 2. Get Newick tree (Optional)
 
 Create a dated phylogenetic tree. 
 
@@ -592,7 +594,7 @@ line 165: historical_bam_mapDamage: True
 line 173: historical_rescaled_samplenames: ["LvaAPnd001","LvaAPnd002","LvaAPnd003"]
 line 446: snpEff: False
 line 455: gtf_path: ""
-line 486: gerp: True
+line 486: gerp: False
 line 492: gerp_ref_path: "/archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/gerp_outgroups"
 line 501: tree: "/archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/gerp_outgroups/gerp_tree.nwk"
 ```
@@ -623,7 +625,17 @@ sbatch run_GenErode_unlock.sbatch
 
 <details><summary>5. Check Results</summary>
 
-### 5. Check Results
+### 5. Check if run successfully finished.
+
+**Check log files**
+
+If a run successfully finishes, there will be no error messages in the log file.
+
+**Check MultiQC files**
+
+If a subworkflow (e.g. trimming, mapping, indel realigning) successfully finished, a MultiQC file will be generated. The MultiQC files are located under the /stats/ directories.
+
+e.g. `results/historical/trimming/stats`.
 
 **Count the number of Modern input samples: \*.fq.gz**
 ```
@@ -655,11 +667,31 @@ ls /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/resu
 ls /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/results/historical/mapping/reference.denovoSSL.<Spp>20k/*.merged.rmdup.merged.realn.rescaled.bam.bai | wc -l
 ```
 
-**GERP Scores File**
+**GERP Scores File (Optional)**
 ```
 ls /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/results/gerp/reference.denovoSSL.<Spp>20k.ancestral.rates.gz
 ```
 
 If all output has been created, then GenErode has successfully run. Move on to the next step in the pipeline. Note that each input sample should have 1 `\*.merged.rmdup.merged.realn.rescaled.bam` and 1 `\*.merged.rmdup.merged.realn.rescaled.bai` file.
+
+## 6. Check output: QC checks
+
+The pipeline may have successfully finished, but how did the samples actually perform? Check the files below to assess sample and mapping quality.
+
+**Mapping statistics**
+`results/historical/mapping/reference/stats/bams_indels_realigned`
+
+- <sample>.merged.rmdup.merged.realn.bam.qualimap/: folder with mapping statistics, including insert size, coverage across the genome, average coverage per contig, etc.
+- <sample>.merged.rmdup.merged.realn.repma.Q30.bam.dpstats.txt: file containing average genome-wide coverage after filtering for MQ (mapping quality) 30 and masking repeat regions
+- <sample>.merged.rmdup.merged.realn.repma.Q30.bam.dp.hist.pdf: coverage histogram
+- <sample>.merged.rmdup.merged.realn.bam.stats.txt: file containing number of mapped reads.
+
+**DNA damage**
+`results/historical/mapping/reference/stats/bams_rescaled`
+
+- <sample>.merged.rmdup.merged.realn.bam.mapDamage: folder containing mapDamage statistics, including fragmentmisincroporation plots and damage rates.
+
+**Fastq statistics**
+`results/historical/trimming/stats`
 
 </details>

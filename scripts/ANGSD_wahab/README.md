@@ -233,6 +233,10 @@ And if you have both inversions and outliers you can combine the two steps above
 <p>
 ## 3. Running PCANGSD: 
 
+**Update** Analyses based on population structure are sensitive to rare alleles. More stringent MAF (minimum allele frequency) filters should be used for these. 
+As a rule of thumb, change the MAF value to the equivalent of 5 alleles per population. E.g. if a population consists of 50 individuals, MAF = 0.1.
+These values can be tweaked based on the species and populations.
+
 Copy Kyra Fitz's pcangsd_pca.sbatch script (https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs/blob/main/pcangsd_pca.sbatch) and pcangsd_admix.sbatch (https://github.com/philippinespire/pire_taeniamia_zosterophora_lcwgs/blob/main/pcangsd_admix.sbatch) into new .sbatch files, and adjust the script to fit your paths and filenames.
 
 ```

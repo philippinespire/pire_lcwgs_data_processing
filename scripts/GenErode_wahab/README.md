@@ -623,7 +623,7 @@ sbatch run_GenErode_unlock.sbatch
 
 </details>
 
-<details><summary>5. Check Results</summary>
+<details><summary>5. Check Results - 1. Did the run successfully finish?</summary>
 
 ### 5. Check if run successfully finished.
 
@@ -673,6 +673,10 @@ ls /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/resu
 ```
 
 If all output has been created, then GenErode has successfully run. Move on to the next step in the pipeline. Note that each input sample should have 1 `\*.merged.rmdup.merged.realn.rescaled.bam` and 1 `\*.merged.rmdup.merged.realn.rescaled.bai` file.
+
+</details>
+
+<details><summary>6. Check Results - 2. Sample statistics and QC </summary>
 
 ## 6. Check output: QC checks
 

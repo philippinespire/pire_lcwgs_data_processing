@@ -284,7 +284,7 @@ See the [instructions for running GenErode on Wahab](https://github.com/philippi
 </p>
 </details>
 
-<details><summary>(Optional) Trim raw contemporary reads and map and filter using GenErode-like settings </summary>
+<details><summary>8.(Optional) Trim raw contemporary reads and map and filter using GenErode-like settings </summary>
 <p>
 
 ## 8. (Optional) Trim raw contemporary reads and map and filter using GenErode-like settings
@@ -299,7 +299,7 @@ See the [instructions for running the trimming workflow on Wahab](https://github
 </details>
 
 
-<details><summary>8. (Optional) Correct for damage and calculate theta using ATLAS </summary>
+<details><summary>9. (Optional) Correct for damage and calculate theta using ATLAS </summary>
 <p>
 
 ## 9. (Optional) Correct for damage and calculate theta using ATLAS
@@ -313,7 +313,7 @@ Instructions and scripts used to run ATLAS can be found [here](https://github.co
 </p>
 </details>
 
-<details><summary>9. Estimate diversity, divergence and selection using ANGSD. </summary>
+<details><summary>10. Estimate diversity, divergence and selection using ANGSD. </summary>
 <p>
 
 ## 10. Estimate diversity, divergence and selection using ANGSD.
@@ -329,7 +329,7 @@ See the [ANGSD_Wahab](https://github.com/philippinespire/pire_lcwgs_data_process
 </p>
 </details>
 
-<details><summary>10. (Optional) Extract mitochondrial genomes from lcwgs data using MitoZ.</summary>
+<details><summary>11. (Optional) Extract mitochondrial genomes from lcwgs data using MitoZ.</summary>
 <p>
 
 ## 11. (Optional) Extract mitochondrial genomes from lcwgs data using MitoZ.

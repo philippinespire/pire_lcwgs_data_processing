@@ -284,11 +284,25 @@ See the [instructions for running GenErode on Wahab](https://github.com/philippi
 </p>
 </details>
 
+<details><summary>(Optional) Trim raw contemporary reads and map and filter using GenErode-like settings </summary>
+<p>
+
+## 8. (Optional) Trim raw contemporary reads and map and filter using GenErode-like settings
+
+Differences in read length between contemporary and historical samples can bias downstream results, even when using BWA aln for short and BWA mem for long reads. The trimming workflow accounts for these biases by trimming all contemporary reads to the same length as the average samples.
+
+See the [instructions for running the trimming workflow on Wahab](https://github.com/philippinespire/pire_lcwgs_data_processing/tree/main/scripts/Trimming_wahab) for more details.
+
+---
+
+</p>
+</details>
+
 
 <details><summary>8. (Optional) Correct for damage and calculate theta using ATLAS </summary>
 <p>
 
-## 8. (Optional) Correct for damage and calculate theta using ATLAS
+## 9. (Optional) Correct for damage and calculate theta using ATLAS
 
 [ATLAS](https://atlaswiki.netlify.app/getting_started) is a software package designed specifically for working with low-coverage historical DNA. Our initial experiments with ATLAS were promising but subsequent analyses across a large number of datasets indicated that it might still be difficult to compare Albatross and contemporary results and to interpret ATLAS's estimates of theta, as there were clear depth-theta relationships that were not corrected in the contemporary datasets.
 
@@ -302,7 +316,7 @@ Instructions and scripts used to run ATLAS can be found [here](https://github.co
 <details><summary>9. Estimate diversity, divergence and selection using ANGSD. </summary>
 <p>
 
-## 9. Estimate diversity, divergence and selection using ANGSD.
+## 10. Estimate diversity, divergence and selection using ANGSD.
 
 Currently the preferred method for conducting downstream analyses on PIRE lcwgs datasets.
 
@@ -318,9 +332,9 @@ See the [ANGSD_Wahab](https://github.com/philippinespire/pire_lcwgs_data_process
 <details><summary>10. (Optional) Extract mitochondrial genomes from lcwgs data using MitoZ.</summary>
 <p>
 
-## 10. (Optional) Extract mitochondrial genomes from lcwgs data using MitoZ.
+## 11. (Optional) Extract mitochondrial genomes from lcwgs data using MitoZ.
 
-It may be useful to extract mitochondrial sequences from lcwgs data to confirm species identity. See the [MitoZ](https://github.com/philippinespire/pire_lcwgs_data_processing/tree/main/scripts/MitoZ_wahab) folder for more information.
+It may be useful to extract mitochondrial sequences from lcwgs data to confirm species identity or for further analysis. See the [MitoZ](https://github.com/philippinespire/pire_lcwgs_data_processing/tree/main/scripts/MitoZ_wahab) folder for more information.
 
 ---
 
@@ -329,7 +343,7 @@ It may be useful to extract mitochondrial sequences from lcwgs data to confirm s
 
 <details><summary>11. Uploading Species Data (GEOME, NCBI, Zenodo)  </summary>
 
-## 11. Uploading Species Data (GEOME, NCBI, Zenodo)
+## 12. Uploading Species Data (GEOME, NCBI, Zenodo)
 
 We want to make sure that reads and metadata are uploaded to GEOME and NCBI, that the genome used for mapping is on NCBI, that final genotype likelihoods are uploaded to Github/Zenodo, that all of these datasets are linked from the main readme for a species, and that the repo is made public. 
 

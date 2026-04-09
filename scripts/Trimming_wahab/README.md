@@ -13,7 +13,9 @@ These pipelines are still actively being developed.
 To install a template of the repository use the following command:
 
 ```bash
-git clone https://github.com/mariannedehasque/nf-pipelines
+
+git clone https://github.com/mariannedehasque/nf-pipelines.git
+
 ```
 
 This will install the following directories:

@@ -289,7 +289,7 @@ See the [instructions for running GenErode on Wahab](https://github.com/philippi
 
 ## 8. (Optional) Trim raw contemporary reads and map and filter using GenErode-like settings
 
-Differences in read length between contemporary and historical samples can bias downstream results, even when using BWA aln for short and BWA mem for long reads. The trimming workflow accounts for these biases by trimming all contemporary reads to the same length as the average samples.
+Differences in read length between contemporary and historical samples can bias downstream results, even when using BWA aln for short and BWA mem for long reads. The trimming workflow accounts for these biases by trimming all contemporary reads to the same average length as the historical samples.
 
 See the [instructions for running the trimming workflow on Wahab](https://github.com/philippinespire/pire_lcwgs_data_processing/tree/main/scripts/Trimming_wahab) for more details.
 

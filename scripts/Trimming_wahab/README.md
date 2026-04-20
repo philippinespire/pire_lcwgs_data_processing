@@ -33,6 +33,8 @@ nf-pipelines/
 
 The nextflow pipelines will install custom packages through conda. For this to work on WAHAB HPC, the installation of a personal conda installation is necessary. Installation instruction for miniconda (my personal favorite) and how to use it can be found [here](https://www.anaconda.com/docs/getting-started/miniconda/main).
 
+Note that you need to be in the *bash* shell to activate conda environments installed with miniconda. To to this, simply type `bash` in the command line on the WAHAB HPC.
+
 # Before running the pipelines
 
 To calculate the average readlength for bamfiles, the following scripts can be used on the WAHAB cluster:

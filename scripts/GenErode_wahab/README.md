@@ -794,4 +794,11 @@ These metrics are important to report as metadata in publications and to determi
 - collect_stats_modern.sh
 - calculate.awk (called by collect_stats scripts)
 
+**Example output**
+
+| SAMPLENAME | total_seqs | total_mapped | total_uniq | total_MQ25 | endogenous | complexity | grr | total_cov | read_min | read_max | read_median | read_mean |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| SdA0605708AWGSZ | 458713 | 69361 | 64173 | 50365 | 0.15121 | 0.92520 | 0.10980 | 0.02332 | 31 | 269 | 81 | 87.31 |
+| SdA0609312EWGSZ | 5.446e+06 | 791050 | 675387 | 588302 | 0.14525 | 0.85379 | 0.10802 | 0.32385 | 31 | 269 | 96 | 102.33 |
+| SdA0608411DWGSZ | 7.293e+06 | 361942 | 303596 | 259758 | 0.04963 | 0.83880 | 0.03562 | 0.15671 | 31 | 269 | 106 | 112.01 |
 

@@ -623,79 +623,175 @@ sbatch run_GenErode_unlock.sbatch
 
 </details>
 
-<details><summary>5. Check Results - 1. Did the run successfully finish?</summary>
+<details><summary>5. Results Validation</summary>
 
-### 5. Check if run successfully finished.
+### 5. Results Validation
 
-**Check log files**
+Before proceeding, verify that the pipeline finished correctly and all expected files were generated.
 
-If a run successfully finishes, there will be no error messages in the log file.
+#### Files to check
+* **Log Files:** Check for "Pipeline completed successfully" or any error messages in the `.out` and `.err` files.
+* **MultiQC:** Ensure reports are generated in `results/*/stats/` directories (e.g., `results/historical/trimming/stats`).
+* **File Counts:** Verify that the number of input samples matches the number of output BAM/BAI files.
 
-**Check MultiQC files**
+#### Verification Commands
+**Modern Samples**
+```bash
+# Count Inputs
+find ./modern -maxdepth 1 -type f -name '<Spp>-C<Site>_*' | cut -c 10-12 | sort | uniq | wc -l
 
-If a subworkflow (e.g. trimming, mapping, indel realigning) successfully finished, a MultiQC file will be generated. The MultiQC files are located under the /stats/ directories.
+# Count Outputs (.bam and .bai)
+ls results/modern/mapping/*/*.merged.rmdup.merged.realn.bam | wc -l
+ls results/modern/mapping/*/*.merged.rmdup.merged.realn.bai | wc -l
 
-e.g. `results/historical/trimming/stats`.
-
-**Count the number of Modern input samples: \*.fq.gz**
-```
-find /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/modern -maxdepth 1 -type f -name '<Spp>-C<Site>_*' -printf '%f\n' | cut -c 10-12 | sort | uniq | wc -l
-```
-
-**Count the number of Modern output files: \*.merged.rmdup.merged.realn.bam**
-```
-ls /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/results/modern/mapping/reference.denovoSSL.<Spp>20k/*.merged.rmdup.merged.realn.bam | wc -l
-```
-
-**Count the number of Modern output files: \*.merged.rmdup.merged.realn.bai**
-```
-ls /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/results/modern/mapping/reference.denovoSSL.<Spp>20k/*.merged.rmdup.merged.realn.bai | wc -l
 ```
 
-**Count the number of Historical input samples: \*.fq.gz**
-```
-find /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/historical -maxdepth 1 -type f -name '<Spp>-A<Site>_*' -printf '%f\n' | cut -c 10-12 | sort | uniq | wc -l
-```
+**Historical Samples**
 
-**Count the number of Historical output files: \*.merged.rmdup.merged.realn.bam**
-```
-ls /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/results/historical/mapping/reference.denovoSSL.<Spp>20k/*.merged.rmdup.merged.realn.rescaled.bam | wc -l
-```
+```bash
+# Count Inputs
+find ./historical -maxdepth 1 -type f -name '<Spp>-A<Site>_*' | cut -c 10-12 | sort | uniq | wc -l
 
-**Count the number of Historical output files: \*.merged.rmdup.merged.realn.bam.bai**
-```
-ls /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/results/historical/mapping/reference.denovoSSL.<Spp>20k/*.merged.rmdup.merged.realn.rescaled.bam.bai | wc -l
+# Count Outputs (Rescaled .bam and .bai)
+ls results/historical/mapping/*/*.merged.rmdup.merged.realn.rescaled.bam | wc -l
+ls results/historical/mapping/*/*.merged.rmdup.merged.realn.rescaled.bam.bai | wc -l
 ```
 
 **GERP Scores File (Optional)**
-```
-ls /archive/carpenterlab/pire/pire_<genus_species>_lcwgs/GenErode_<Spp>_20k/results/gerp/reference.denovoSSL.<Spp>20k.ancestral.rates.gz
+
+```bash
+ls results/gerp/*.ancestral.rates.gz
 ```
 
-If all output has been created, then GenErode has successfully run. Move on to the next step in the pipeline. Note that each input sample should have 1 `\*.merged.rmdup.merged.realn.rescaled.bam` and 1 `\*.merged.rmdup.merged.realn.rescaled.bai` file.
 
 </details>
 
-<details><summary>6. Check Results - 2. Sample statistics and QC </summary>
+<details><summary>6. Check Results: QC Summary </summary>
 
-## 6. Check output: QC checks
+## 6. Check Results: QC Summary
 
 The pipeline may have successfully finished, but how did the samples actually perform? Check the files below to assess sample and mapping quality.
 
-**Mapping statistics**
-`results/historical/mapping/reference/stats/bams_indels_realigned`
-
-- <sample>.merged.rmdup.merged.realn.bam.qualimap/: folder with mapping statistics, including insert size, coverage across the genome, average coverage per contig, etc.
-- <sample>.merged.rmdup.merged.realn.repma.Q30.bam.dpstats.txt: file containing average genome-wide coverage after filtering for MQ (mapping quality) 30 and masking repeat regions
-- <sample>.merged.rmdup.merged.realn.repma.Q30.bam.dp.hist.pdf: coverage histogram
-- <sample>.merged.rmdup.merged.realn.bam.stats.txt: file containing number of mapped reads.
-
-**DNA damage**
-`results/historical/mapping/reference/stats/bams_rescaled`
-
-- <sample>.merged.rmdup.merged.realn.bam.mapDamage: folder containing mapDamage statistics, including fragmentmisincroporation plots and damage rates.
-
-**Fastq statistics**
-`results/historical/trimming/stats`
+| Analysis Type | Location of Results | Key Metric to Check |
+| :--- | :--- | :--- |
+| **Mapping Stats** | `results/*/mapping/*/stats/bams_indels_realigned` | `.qualimap/`: Check coverage and insert size |
+| **Filtered Coverage** | `results/*/mapping/*/stats/bams_indels_realigned` | `.repma.Q30.bam.dpstats.txt`: Average depth |
+| **DNA Damage** | `results/historical/mapping/*/stats/bams_rescaled` | `.mapDamage/`: Look for damage plots |
+| **Trimming Stats** | `results/*/trimming/stats` | `multiqc_report.html`: Check adapter removal |
+| **Ancestral Rates** | `results/gerp/` | `.ancestral.rates.gz`: Verify file exists |
 
 </details>
+
+<details><summary>7. Additional QC checks</summary>
+
+## 7. Additional QC checks
+
+Below are scripts and commands to perform additional QC checks. It is strongly recommended to run these scripts to better assess the quality and sequencing efficiency of different samples. Additional metrics include:
+
+- Average readlength
+- Average genome-wide coverage
+- [AMBER](https://github.com/tvandervalk/AMBER) plots
+- Sequencing efficiency
+
+### Average readlength
+
+```bash
+
+docker=/cm/shared/containers/docker
+samtools_image=$docker/biocontainers-samtools:v1.9-4-deb_cv1.sif
+
+DIR=/path/to/output/directory
+INPUT_BAM=/path/to/bamfile
+NAME=<sample ID>
+BED=/path/to/reference.repma.bed
+
+echo $NAME
+
+mkdir -p $DIR/results
+
+date
+
+echo "Calculating depth..."
+
+singularity exec $samtools_image samtools depth -a -Q 30 -q 25 $INPUT_BAM > $DIR/results/${NAME}.Q25.bam.dp
+awk '{{sum+=$3}} END {{ print sum/NR }}' $DIR/results/${NAME}.Q25.bam.dp > $DIR/results/${NAME}.Q25.bam.dpstats.txt
+
+```
+### Average genome-wide coverage
+
+```bash
+
+docker=/cm/shared/containers/docker
+samtools_image=$docker/biocontainers-samtools:v1.9-4-deb_cv1.sif
+
+DIR=/path/to/output/directory
+INPUT_BAM=/path/to/bamfile
+NAME=<sample ID>
+BED=/path/to/reference.repma.bed
+
+echo $NAME
+
+mkdir -p $DIR/results
+
+echo "Calculating average read length..."
+
+singularity exec $samtools_image samtools view -h -q 25 -L $BED $INPUT_BAM	| grep -v '@' | awk '{print length($10)}'|  awk '{ total += $1; count++ } END { print total/count }' > $DIR/results/${NAME}.Q25.avRL.txt
+
+```
+### AMBER plots
+
+#### Create conda environment (only first time)
+
+```bash
+#Activate bash
+bash
+
+#Create AMBER environment
+conda create -n amber -c conda-forge -c bioconda pysam matplotlib numpy
+```
+
+>Important for WAHAB HPC: AMBER installation and activation is easiest with a personal conda environment. Installation instruction for miniconda (my personal favorite) and how to use it can be found [here](https://www.anaconda.com/docs/getting-started/miniconda/main)
+
+#### Running AMBER
+
+```bash
+#!/bin/bash -le
+#SBATCH --job-name=AMBER
+#SBATCH -o bamqc-%A_%a.out
+#SBATCH --cpus-per-task=4
+
+source ~/.bashrc
+conda activate AMBER_environment
+
+AMBER=/archive/carpenterlab/pire/softwares/AMBER/AMBER
+REFERENCE=/path/to/reference.fasta
+
+echo "Running AMBER..."
+
+date
+
+#Adding MD tags and filtering for MQ25
+singularity exec $samtools_image samtools calmd -b $INPUT_BAM $REFERENCE > $DIR/data/$NAME.merged.rmdup.merged.realn.tags.bam
+singularity exec $samtools_image samtools view -bq 25 $DIR/data/$NAME.merged.rmdup.merged.realn.tags.bam > $DIR/data/$NAME.merged.rmdup.merged.realn.tags.MQ25.bam
+
+#Create input file for AMBER
+echo -e "${NAME}\t$DIR/data/${NAME}.merged.rmdup.merged.realn.tags.MQ25.bam" > $DIR/data/${NAME}.amber_input_MQ25.txt
+
+#run AMBER
+crun.conda -p ~/envs/AMBER python3 $AMBER --bamfiles $DIR/data/${NAME}.amber_input_MQ25.txt --output $DIR/results/$NAME.amber_MQ25
+
+# Cleanup
+rm $DIR/data/${NAME}.amber_input_MQ25.txt
+rm $DIR/data/$NAME.merged.rmdup.merged.realn.tags.MQ25.bam
+rm $DIR/data/$NAME.merged.rmdup.merged.realn.tags.bam
+```
+### Sequencing efficiency
+
+The scripts below are used to calculate endogenous content, complexity, coverage,and sequencing efficiency.
+These metrics are important to report as metadata in publications and to determine sequencing effort after screening runs.
+
+- collect_stats.sh
+- collect_stats_modern.sh
+- calculate.awk (called by collect_stats scripts)
+
+

@@ -16,6 +16,12 @@
 
 Within your species repository, follow the [pire_fq_gz_processing steps linked here](https://github.com/philippinespire/pire_fq_gz_processing), then return here and continue.
 
+After finishing the fq.gz preprocessing and are satisfied with the results delete the intermediate fq.gz file in:
+- `./fq_fp1`
+- `./fq_fp1_clmp`
+- `./fq_fp1_clmp_fp2`
+- `./fq_fp1_clmp_fp2_fqscrn`
+This will leave the raw reads and the finalized processed reads in the folder
 ---
 
 </p>

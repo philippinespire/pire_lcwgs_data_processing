@@ -4,6 +4,9 @@
 /archive/carpenterlab/pire/pire_lcwgs_data_processing
 ```
 ---
+## Documentation
+
+Documentation has now moved to the [wiki page](https://github.com/philippinespire/pire_lcwgs_data_processing/wiki/Overview). Check this first before reading all the steps to process your data.
 
 ## Steps to Process Your Data
 

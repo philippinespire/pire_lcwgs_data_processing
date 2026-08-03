@@ -4,10 +4,8 @@
 /archive/carpenterlab/pire/pire_lcwgs_data_processing
 ```
 ---
-## Introduction
-The lcWGS is still under active development, even after 4 years! Much of the documentation is therefore outdated or can feel very overwhelming. On this page you will find the latest recommendations on how to run the workflow.
-
 ## Workflow steps
+The lcWGS is still under active development, even after 4 years! Much of the documentation is therefore outdated or can feel very overwhelming. In this section you will find the latest recommendations on how to run the workflow.
 
 ### 1. Data pre-processing
 This step is no longer necessary, unless you are running MitoZ.
@@ -28,7 +26,7 @@ Under construction.
 * **July 2026:** Switched standard mapping protocol to `nf-trim-generode` for both historical and modern data, instead of using Generode.
 
 ## Tutorials and detailed documentation
-More documentation, including best practices has now moved to the [wiki page](https://github.com/philippinespire/pire_lcwgs_data_processing/wiki/Overview). Check this first before reading all the steps to process your data.
+More documentation, including best practices has now moved to the [wiki page](https://github.com/philippinespire/pire_lcwgs_data_processing/wiki/Overview).
 
 ---
 
@@ -37,7 +35,7 @@ More documentation, including best practices has now moved to the [wiki page](ht
 > [!WARNING]
 > **Archived Documentation (July 2026)**
 > The step-by-step instructions below are no longer actively maintained. They are preserved here purely for historical reference and reproducing older analyses.
-> **For active projects, please use the updated pipelines linked in the [Wiki Overview Page](https://github.com/philippinespire/pire_lcwgs_data_processing/wiki/Overview).**
+> **For active projects, please use the updated pipelines at the top of this page**
 
 
 <details><summary>1. Complete fq.gz Pre-processing</summary>

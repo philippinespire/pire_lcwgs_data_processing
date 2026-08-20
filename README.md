@@ -5,7 +5,7 @@
 ```
 ---
 ## Workflow steps
-The lcWGS is still under active development, even after 4 years! Much of the documentation is therefore outdated or can feel very overwhelming. In this section you will find the latest recommendations on how to run the workflow.
+The lcWGS is still under active development, even after 4 years! Much of the documentation is therefore outdated and/or can feel very overwhelming. In this section you will find the latest recommendations on how to run the workflow.
 
 ### 1. Data pre-processing
 This step is no longer necessary, unless you are running MitoZ.
@@ -16,13 +16,14 @@ We use the [nf-trim-generode pipeline](https://github.com/philippinespire/nf-pip
 
 ### 3. Calculating diversity metrics
 
-We use the [nf-angsd-diversity pipeline](https://github.com/philippinespire/nf-pipelines/tree/main/nf-angsd-diversity) to calculate diversity metrics and perform population structure analyses.
+We use the [nf-angsd-selection pipeline](https://github.com/philippinespire/nf-pipelines/tree/main/nf-angsd-selection) to perform selection scans, calculate diversity metrics, and perform population structure analyses.
 
 ### 4. Performing selection scans
 
 Under construction.
 
 ## Recent Updates and Changelog
+* **August 2026:** Switched from `nf-angsd-diversity` to `nf-angsd-selection` to perform selection scans, calculate diversity metrics, and perform population structure analyses. Major changes include the use of all sites to calculate the site frequency spectrum and correcting bugs in the LD pruning step.
 * **July 2026:** Switched standard mapping protocol to `nf-trim-generode` for both historical and modern data, instead of using Generode.
 
 ## Tutorials and detailed documentation
